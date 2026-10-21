@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><TargetFramework>net10.0</TargetFramework><OutputType>Exe</OutputType><Nullable>enable</Nullable></PropertyGroup><ItemGroup><ProjectReference Include="../../shared/KeEv.Sim/KeEv.Sim.csproj"/><Compile Include="../Adapter.cs" Link="Adapter.cs"/></ItemGroup></Project>

@@ -1,0 +1,75 @@
+NEXT STOP, LITTLE SHOP — CLOUD WEB FIRST
+W0 PORTABILITY PROOF + W1 FIRST PLAYABLE GRAYBOX
+
+Continue with my currently selected model/settings. Complete this as an implementation task, not only a plan.
+
+WHY AND AUTHORIZATION
+I am using a company computer and cannot use a local development environment. I want to play the Web version soon while preserving reusable resources for the later Unity Android/iOS game. Work entirely in the cloud. Do not require my Local Driver, local folders, Unity, Android SDK or Xcode. Cloud package installation/build tools are allowed within the available permissions. Do not estimate my Work usage percentage.
+
+INPUTS
+Unpack the attached Next_Stop_Little_Shop_Web_First_2026-10-21.zip. Read:
+1. 00_README_zh-HK.txt.
+2. The full source_bible/Next_Stop_Little_Shop_Game_Bible_v0.1.docx, including Part II P1–P10; the Markdown Bible is only a summary. The extracted full text is available for search. Inspect the original visual references when assessing art.
+3. 01_WEB_FIRST_ADDENDUM_v1.0.txt.
+4. 03_ROADMAP_AND_ACCEPTANCE.txt and 04_SOURCES_AND_PROVENANCE.txt.
+
+The Bible baseline is 2026-10-03. Keep its originals unchanged. The addendum authorizes the Web technical path, not a gameplay or art redesign. Preserve the native Unity+C#+URP direction as a later integration target. Do not rerun a local Unity availability gate as a prerequisite for this task. If these named inputs genuinely cannot be accessed, identify the missing input rather than inventing a different Bible.
+
+IMPLEMENT W0, THEN CONTINUE DIRECTLY INTO W1
+
+A. SHARED CORE AND REUSABLE CONTENT
+Use Babylon.js/TypeScript for the Web 3D presentation and a small HTML/React interface where useful. Separate content, simulation, presentation and platform adapters. Use stable IDs and versioned engine-neutral content/save records; do not encode the game state in Babylon/React objects.
+
+Prefer the Bible's pure C# KeEv.Sim core, constrained to a Unity-compatible API/language surface (netstandard2.1-compatible candidate), with a separate modern .NET browser-WASM adapter. Keep JSExport, browser APIs, serializer/runtime dependencies and engine types out of the shared core.
+
+Run a bounded cloud C#→WASM proof: one small economy operation must match its explicit expected result in headless .NET and in the browser. Record payload/startup and actual hosting compatibility. Limit toolchain setup/diagnosis to one normal setup plus one targeted correction, approximately 20 minutes of active setup/diagnosis; this is not the time budget for the whole task.
+
+If a real blocker remains, continue with an isolated TypeScript prototype simulation using the same content/numeric contract and golden fixtures. Mark it PORT_REQUIRED_FOR_UNITY and explain the blocker. Missing Unity/native tooling is expected and must not trigger this fallback. Do not pretend the fallback is shared C#, create an untested C# mirror, or maintain two independently evolving full economies. Do not make me install local tools to unblock the Web prototype.
+
+B. FIRST PLAYABLE — EXACT BIBLE GRAYBOX SCOPE
+Build one Ikebukuro Lifestyle Select Shop with approximately 10 Offerings, one placeholder staff, one supplier and generic customers. Follow Part II P2: true 3D cubes/capsules/simple fixtures, tutorial only, static world, placeholder audio, core P&L, one test set and a basic reveal. No pet in this MVP. Misaki/Ren/Momo, all 36 Offerings, the seven story beats and full rain/day/night belong to later slice work.
+
+Provide a real loop: stock purchasing → inventory → shelf/display assignment → pricing → customer activity and sale → cash/stock/cost updates → understandable P&L → another management decision. It must be interactive and stateful, not a visual mockup or admin dashboard. Keep the world prominent, the 35–45-degree curated camera and limited zoom/rotation, and usable mouse/touch controls.
+
+Use authored data where provided. If exact item records or balance values are missing, implement clearly marked provisional fixtures/configuration without presenting them as approved canon or researched cultural facts. Preserve all six quality tiers and the separate Unique tag in the schema; do not add Masterpiece drops.
+
+C. ECONOMY, TIME AND PERSISTENCE
+Follow Bible P5's deterministic calculation order, stacking groups/caps and explanation breakdown. Use integer normalized economic units and fixed-point/basis-point effects. Map to local currency for display; no live FX. Define safe C#/JS numeric serialization and rounding. Keep stock purchases/cash movement distinct from costs consumed by sales and period expenses; do not double-count costs or label sales as profit.
+
+Preserve real one day = game one day and Tokyo city-local time. Provide a clearly labelled optional sandbox/test-clock mode so a day can be demonstrated promptly. Test-clock saves must be separate from normal saves and ineligible for future live rankings. Do not silently turn this into a short-day game or promise prototype saves will transfer to production accounts.
+
+Implement versioned save/reload and a deterministic aggregate resume/offline calculation with an idempotent settlement watermark. Commit the economic state and watermark atomically, and protect against concurrent stale-tab writes. Repeated reload must not pay the same interval twice. Carry rounding remainders and verify that one 60-minute settlement matches two 30-minute settlements with the same inputs. Handle invalid imports, clock rollback and interrupted persistence explicitly. Local prototype time is not server-authoritative: leave trusted online time, cloud accounts, shared world and leaderboard gates pending.
+
+Economy must not depend on FPS, visible NPC count, render quality, tab visibility or device speed. Handle background/resume using elapsed-time rules rather than assuming browser timers keep running.
+
+D. ASSET PORTABILITY AND WEB OPTIMIZATION
+Preserve editable/source assets and generation recipes; generate Web derivatives separately. Keep stable asset IDs and provenance/licence records. Do not overwrite the only original with a compressed export.
+
+Export at least one representative reusable shop fixture and one tiny generic skinned test fixture to glTF 2.0/GLB. The latter must have at least two bones, normalized skin weights and a named skeletal animation clip; rigid object movement alone is insufficient. Keep units, pivots, axes, skeleton/clip names and material inputs documented; use the conservative common feature subset in the addendum. Reload the exports independently of the original construction code and validate them. A test fixture is not an approved production character or an in-story pet.
+
+Retain texture/audio/font masters and source metadata. Record which resources can be reused and which Web UI/shader/animation-controller/platform integrations need adaptation. Unity import, URP appearance and Android/iOS verification remain NOT TESTED until actually performed.
+
+Use measured Web optimizations such as derived compression, staged loading, shared meshes/LOD and reduced optional effect cost. Do not change the economy, progression, story or art direction to obtain FPS. Record actual download size, load behaviour and frame timing in the tested environment. A narrow viewport or cloud GPU is not a real phone test.
+
+E. LANGUAGE AND PRODUCT RULES
+Use the current product title 下一站・小店物語 / Next Stop, Little Shop. KeEv Games is the publisher; the player's business is player-created. Externalize implemented UI text for zh-HK/en/ja/th/zh-CN and follow the frozen fonts/tabular numbers. Native-level translation/title review remains pending where not performed.
+
+Preserve the Bible's free-completable core and monetisation/social red lines. Do not add payments, ads, gacha, energy, streak penalties, premium currency, a battle pass, subscription, trading or public chat to this task. No paid service/asset purchase is required or authorized.
+
+F. VERIFICATION AND DELIVERY
+Build the small Economy Replay Tool and Content Validator required by the Bible; simple scripts are sufficient. Verify meaningful behaviours: purchase/sale conservation and exactly-once updates; deterministic replay; caps/order/P&L; save roundtrip and invalid-version handling; repeated offline settlement; normal/test save isolation; and identical economic results across render quality/FPS/background scenarios. Test browser interaction, refresh/resume, loading, resize/touch layout and exported-asset reimport. Use actual logs/results; do not fabricate pass counts, screenshots or device testing.
+
+Deploy a private playable cloud preview using the available supported hosting workflow. Keep the original source, assets and reproducible build instructions accessible as a checkpoint/archive. Do not stop at an architecture report when implementation is possible. Do not publicly launch the commercial game or add a paid dependency.
+
+Return:
+1. Playable URL, actual access setting and a short Chinese play guide.
+2. What W0 and W1 actually implemented and tested.
+3. C# shared-core result or the exact TS fallback limitation.
+4. Source checkpoint/archive, pinned dependencies, build/test instructions, asset/content manifest and portability status.
+5. Actual Web measurements and explicitly pending Unity/native/mobile/online gates.
+6. Provisional data/balance/art/language choices, genuine blockers and the next recommended gate.
+7. A short cleanup record.
+
+Clean only disposable build caches, failed temporary exports and redundant debugging files. Keep all required source, lockfiles, tests, fixtures, licences, masters, generators and future shared assets, even if W1 does not load them yet. Exclude credentials/session data from the handoff.
+
+Proceed autonomously within this defined scope. Complete unaffected work if a real tool/access limitation blocks one part, and report that exact limitation. Stop after the W0+W1 gate, ready for review; do not expand into full Tokyo production.

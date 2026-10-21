@@ -1,0 +1,1 @@
+{"id":"layout.graybox.1","units":"metres","axes":"right handed, Y up, Z forward","approval_status":"placeholder","displays":[{"id":"display.1","position":[-2,0,-1.5]},{"id":"display.2","position":[0.1,0,-0.1]},{"id":"display.3","position":[-2,0,1.1]}],"counter":{"asset_id":"fixture.shop-counter","position":[2.6,0.08,-1.5],"scale":[1.5,1,1.2]}}

@@ -1,0 +1,2 @@
+event_id,character,locale,type,prompt_spec,file,loudness_target,loop_flag
+ui.sale,generic,neutral,placeholder_sfx,"Generator: 660 Hz sine, 0.2 s sin-squared envelope, 24 kHz mono 16-bit PCM",assets/masters/sale.wav,"Peak <= -25 dBFS; perceived loudness not yet audited",false

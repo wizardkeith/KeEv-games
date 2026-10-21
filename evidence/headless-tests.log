@@ -1,0 +1,15 @@
+PASS purchase not expensed
+PASS golden 60-minute explicit expected P&L
+PASS 60 equals 30+30
+PASS repeated settlement
+PASS duplicate command once
+PASS aggregate group then cap
+PASS half even
+PASS reject negative quantity
+PASS clock rollback rejected
+PASS invalid pricing rejected
+PASS supplier discount capped at 20 percent
+PASS save roundtrip
+PASS future version rejected
+PASS test and normal ineligible prototype modes
+RESULT 14 passed

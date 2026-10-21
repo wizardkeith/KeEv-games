@@ -1,0 +1,41 @@
+# 下一站・小店物語 / Next Stop, Little Shop
+
+Private W0+W1 graybox by KeEv Games. The player names their own business. This checkpoint implements the ten-item management loop for review and stops before full Tokyo content production.
+
+## Run and verify
+
+Node 24.19.0 was used. Runtime and development dependencies are exact in package.json and package-lock.json.
+
+```bash
+npm ci
+npm test
+npm run validate
+npm run asset-check
+npm run replay
+npm run build
+```
+
+`dist/` is the static deployment directory. Serve it through an ordinary HTTPS static host with WebGL2, IndexedDB and ES modules. There is no server or paid service dependency. No user-side SDK or native environment is needed to play the deployed Site. The game uses local browser storage, not cloud accounts.
+
+Procedural source and lossless masters are retained in `tools/assets.mjs` and `assets/masters/`. `npm run assets` regenerates the GLBs and WAV. Fonts are already supplied: rebuilding the game does not download fonts. To regenerate derived font subsets, run `python tools/fonts.py` with Python 3.12 and fonttools 4.61.1; original downloaded TTF masters and OFL licences remain intact. The derivative TTFs avoid an unavailable optional Brotli encoder. The source master is not overwritten by web optimization.
+
+## First play
+
+1. Enter a shop name and optional company/brand and mark.
+2. Choose sandbox test clock for a prompt demonstration; it has its own save and cannot enter rankings.
+3. Buy five notebooks and five pencils. Pick display 1, place notebooks; pick display 2, place pencils. You can change shelf assignment and prices from the display panel.
+4. Open the shop, then advance an hour. Read the report: stock purchases affect cash/inventory; only sold inventory is expensed. Wages, rent and operating costs are distinct.
+5. Restock, change prices, try the desk test set and reveal the zero-stat paper sample after a first sale. No payment or random loot exists.
+
+Real time uses Tokyo 10:00–20:00 provisional business hours, with one real day = one game day. The static visual world does not follow day/night yet. Sandbox clock advances only through explicit controls. The original normal save is preserved when switching modes. Prototype saves are not promised to migrate to production accounts. Export/import is in Settings. Unknown save versions are rejected without replacing good data.
+
+## Evidence and limitations
+
+Read docs/HANDOFF.md and docs/CONTRACT.md. `evidence/` contains actual test/build/validator output. The active simulation is `src/core/simulation.ts`, classified **PORT_REQUIRED_FOR_UNITY**. C# headless proof passed, but the browser-WASM build failed with an MSBuild task-host error after one correction. `proof/csharp-headless/` is frozen evidence, not a second maintained economy and not active Web source. Its fourteen tests can be rerun with .NET 10.0.402:
+
+```bash
+cd proof/csharp-headless
+dotnet run --project adapters/Headless -c Release -- test
+```
+
+No browser startup, interactive browser journey, screenshot, FPS or phone/native benchmark was performed: the required managed control-browser capability is missing. GLBs were independently reloaded in Babylon NullEngine; this is not rendered visual or Unity verification. Inspect the private deployment before accepting the W1 experience. No commercial launch has been performed.

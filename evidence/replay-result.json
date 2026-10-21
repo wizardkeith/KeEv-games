@@ -1,0 +1,270 @@
+{
+  "fixture": "one-hour-v1",
+  "config": {
+    "initialCash": 5000,
+    "rentPerHour": 20,
+    "operatingPerHour": 10,
+    "baseDemandPerHour": 6,
+    "capacityPerHour": 18,
+    "conversionBp": 10000,
+    "demandCapBp": 3000,
+    "discountCapBp": 2000,
+    "openHour": 10,
+    "closeHour": 20,
+    "currency": "JPY",
+    "yenPerUnit": 10,
+    "salaryPerHour": 30,
+    "discountBp": 0,
+    "setPieces": [
+      "off.notebook",
+      "off.pencil"
+    ],
+    "setBonusBp": 1000,
+    "offerings": [
+      {
+        "id": "off.notebook",
+        "key": "notebook",
+        "cost": 40,
+        "suggestedPrice": 80,
+        "color": "#bca8cc",
+        "quality": "Standard",
+        "unique": false,
+        "category": "stationery",
+        "set_tags": [
+          "set.graybox-desk"
+        ],
+        "region": "tokyo",
+        "supplier": "supplier.graybox",
+        "affixes": [],
+        "demand_tags": [
+          "generic"
+        ],
+        "story_ref": "tutorial.offerings",
+        "approval_status": "provisional"
+      },
+      {
+        "id": "off.pencil",
+        "key": "pencil",
+        "cost": 10,
+        "suggestedPrice": 25,
+        "color": "#d5ba78",
+        "quality": "Standard",
+        "unique": false,
+        "category": "stationery",
+        "set_tags": [
+          "set.graybox-desk"
+        ],
+        "region": "tokyo",
+        "supplier": "supplier.graybox",
+        "affixes": [],
+        "demand_tags": [
+          "generic"
+        ],
+        "story_ref": "tutorial.offerings",
+        "approval_status": "provisional"
+      },
+      {
+        "id": "off.mug",
+        "key": "mug",
+        "cost": 70,
+        "suggestedPrice": 130,
+        "color": "#dfc9a2",
+        "quality": "Standard",
+        "unique": false,
+        "category": "lifestyle",
+        "set_tags": [],
+        "region": "tokyo",
+        "supplier": "supplier.graybox",
+        "affixes": [],
+        "demand_tags": [
+          "generic"
+        ],
+        "story_ref": "tutorial.offerings",
+        "approval_status": "provisional"
+      },
+      {
+        "id": "off.tea",
+        "key": "tea",
+        "cost": 35,
+        "suggestedPrice": 75,
+        "color": "#93a998",
+        "quality": "Standard",
+        "unique": false,
+        "category": "tea",
+        "set_tags": [],
+        "region": "tokyo",
+        "supplier": "supplier.graybox",
+        "affixes": [],
+        "demand_tags": [
+          "generic"
+        ],
+        "story_ref": "tutorial.offerings",
+        "approval_status": "provisional"
+      },
+      {
+        "id": "off.cookie",
+        "key": "cookie",
+        "cost": 20,
+        "suggestedPrice": 45,
+        "color": "#cc9a78",
+        "quality": "Standard",
+        "unique": false,
+        "category": "snacks",
+        "set_tags": [],
+        "region": "tokyo",
+        "supplier": "supplier.graybox",
+        "affixes": [],
+        "demand_tags": [
+          "generic"
+        ],
+        "story_ref": "tutorial.offerings",
+        "approval_status": "provisional"
+      },
+      {
+        "id": "off.tote",
+        "key": "tote",
+        "cost": 80,
+        "suggestedPrice": 150,
+        "color": "#c7b7a0",
+        "quality": "Standard",
+        "unique": false,
+        "category": "travel",
+        "set_tags": [],
+        "region": "tokyo",
+        "supplier": "supplier.graybox",
+        "affixes": [],
+        "demand_tags": [
+          "generic"
+        ],
+        "story_ref": "tutorial.offerings",
+        "approval_status": "provisional"
+      },
+      {
+        "id": "off.card",
+        "key": "card",
+        "cost": 15,
+        "suggestedPrice": 35,
+        "color": "#b9c3d8",
+        "quality": "Standard",
+        "unique": false,
+        "category": "gifts",
+        "set_tags": [],
+        "region": "tokyo",
+        "supplier": "supplier.graybox",
+        "affixes": [],
+        "demand_tags": [
+          "generic"
+        ],
+        "story_ref": "tutorial.offerings",
+        "approval_status": "provisional"
+      },
+      {
+        "id": "off.towel",
+        "key": "towel",
+        "cost": 45,
+        "suggestedPrice": 90,
+        "color": "#9abdb6",
+        "quality": "Standard",
+        "unique": false,
+        "category": "lifestyle",
+        "set_tags": [],
+        "region": "tokyo",
+        "supplier": "supplier.graybox",
+        "affixes": [],
+        "demand_tags": [
+          "generic"
+        ],
+        "story_ref": "tutorial.offerings",
+        "approval_status": "provisional"
+      },
+      {
+        "id": "off.tray",
+        "key": "tray",
+        "cost": 55,
+        "suggestedPrice": 110,
+        "color": "#bb957b",
+        "quality": "Standard",
+        "unique": false,
+        "category": "lifestyle",
+        "set_tags": [],
+        "region": "tokyo",
+        "supplier": "supplier.graybox",
+        "affixes": [],
+        "demand_tags": [
+          "generic"
+        ],
+        "story_ref": "tutorial.offerings",
+        "approval_status": "provisional"
+      },
+      {
+        "id": "off.vase",
+        "key": "vase",
+        "cost": 90,
+        "suggestedPrice": 170,
+        "color": "#9b94b3",
+        "quality": "Standard",
+        "unique": false,
+        "category": "decor",
+        "set_tags": [],
+        "region": "tokyo",
+        "supplier": "supplier.graybox",
+        "affixes": [],
+        "demand_tags": [
+          "generic"
+        ],
+        "story_ref": "tutorial.offerings",
+        "approval_status": "provisional"
+      }
+    ]
+  },
+  "epoch": 1767229200000,
+  "commands": [
+    {
+      "id": "purchase",
+      "kind": "buy",
+      "itemId": "off.notebook",
+      "quantity": 10
+    },
+    {
+      "id": "display",
+      "kind": "display",
+      "itemId": "off.notebook",
+      "slot": 0
+    },
+    {
+      "id": "open",
+      "kind": "open"
+    },
+    {
+      "id": "hour",
+      "kind": "settle",
+      "target": 1767232800000
+    }
+  ],
+  "expected": {
+    "cash": 5020,
+    "purchases": 400,
+    "stock": 4,
+    "bookCost": 160,
+    "sales": 480,
+    "cogs": 240,
+    "salary": 30,
+    "rent": 20,
+    "operating": 10,
+    "net": 180,
+    "units": 6
+  },
+  "actual": {
+    "cash": 5020,
+    "purchases": 400,
+    "stock": 4,
+    "bookCost": 160,
+    "sales": 480,
+    "cogs": 240,
+    "salary": 30,
+    "rent": 20,
+    "operating": 10,
+    "net": 180,
+    "units": 6
+  }
+}

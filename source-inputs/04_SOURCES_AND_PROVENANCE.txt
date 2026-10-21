@@ -1,0 +1,67 @@
+SOURCES AND PROVENANCE
+Prepared 2026-10-21 (Asia/Hong_Kong)
+
+OWNER DIRECTION
+The current conversation authorizes cloud-only Web-first work to allow development from a company computer, preserving resources for later Android/iOS, following the Bible and applying necessary Web optimization. The owner requested this handoff and prompt for another ChatGPT Work task. No game implementation or native verification has been performed by creating this handoff.
+
+AUTHORITATIVE PROJECT INPUTS
+Title: 下一站・小店物語 / Next Stop, Little Shop
+Game Bible v0.1 + Tokyo Vertical Slice Production Spec
+Current baseline printed in both files: 2026-10-03.
+
+Original full document:
+source_bible/Next_Stop_Little_Shop_Game_Bible_v0.1.docx
+Size: 7,820,916 bytes
+SHA-256: cf0ec172cec1295cb8172f5c48608ba314ccdbdd3ba6727cb6216211c2a45f66
+
+Original summary:
+source_bible/Next_Stop_Little_Shop_Game_Bible_v0.1.md
+Size: 7,554 bytes
+SHA-256: 0d9ef359d1aa8c14f2a1191c3ca8ebbde83299ce48f6ead465211502f8c1d0fd
+
+Both originals are included unchanged. The full-text derivative is extracted from DOCX paragraph text for search; it omits visual layout/images and must not overrule the originals. The addendum, prompt, roadmap and this index are newly authored technical guidance; they are not an older approved Bible revision.
+
+OFFICIAL TECHNICAL REFERENCES
+
+1. OpenAI — Use ChatGPT (cloud and local work)
+https://learn.chatgpt.com/docs/use-chatgpt
+Supports a managed cloud Work environment. Actual tool availability, permissions and runtime capabilities must still be checked in the task doing the build.
+
+2. OpenAI — Sites
+https://learn.chatgpt.com/docs/sites
+Supports hosted web apps/games. This is not evidence that this game's hosting, access rules or workload capacity have already been tested.
+
+3. Babylon.js — Engine specifications
+https://www.babylonjs.com/specifications/
+Supports browser-native 3D rendering and its scene/animation/material capabilities. It does not certify the game's art quality or device performance.
+
+4. Babylon.js — glTF exporter
+https://doc.babylonjs.com/features/featuresDeepDive/Exporters/glTFExporter
+Documents interchange exports of scene/geometry/animation/texture data and supported features. Exporting does not automatically translate gameplay, custom shaders or platform code.
+
+5. Unity glTFast — Editor Import (6.20 documentation consulted)
+https://docs.unity3d.com/Packages/com.unity.cloud.gltfast@6.20/manual/ImportEditor.html
+Documents importing .gltf/.glb into Unity asset components/prefabs. Record the actual selected Unity/importer version during the later native gate rather than treating this reference version as a tested project dependency.
+
+6. Unity glTFast — Features
+https://docs.unity3d.com/Packages/com.unity.cloud.gltfast@6.20/manual/features.html
+Documents feature limits and animation/material integration caveats. The first sample's conservative four-influence skinning requirement is an engineering choice based on this documented import subset.
+
+7. Microsoft — .NET WebAssembly Browser App / JS interop
+https://learn.microsoft.com/en-us/aspnet/core/client-side/dotnet-interop/wasm-browser-app?view=aspnetcore-10.0
+Documents running .NET libraries from JavaScript without requiring Blazor. Does not prove that the next Work cloud environment has the SDK/workload or that this game's integration/startup budget will pass.
+
+8. Unity — API compatibility levels for .NET
+https://docs.unity3d.com/6000.0/Documentation/Manual/dotnet-profile-support.html
+Supports the .NET Standard compatibility boundary and explains limits for other assemblies/AOT. A modern host-only WebAssembly adapter is not the same as the portable shared library.
+
+9. MDN — Page Visibility API
+https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
+Documents background rendering/timer restrictions. Hence elapsed-time simulation and background/resume must be explicit.
+
+10. MDN — Storage quotas and eviction criteria
+https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria
+Explains browser storage lifecycle. Prototype persistence is not equivalent to a permanent cloud account save.
+
+EVIDENCE LIMITS
+These sources establish available techniques and compatibility boundaries. They do not establish that any new game code/assets have been created, that a GLB has been imported into Unity, that C# has passed in the next cloud environment, or that Android/iOS performance targets are met. W0/W1 must produce its own evidence. No reuse percentage, delivery duration, native pass result or final asset licence has been fabricated.

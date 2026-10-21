@@ -1,0 +1,11 @@
+  Determining projects to restore...
+  Restored /workspace/sites/next-stop-little-shop-w1/adapters/Headless/Headless.csproj (in 119 ms).
+  Restored /workspace/sites/next-stop-little-shop-w1/shared/KeEv.Sim/KeEv.Sim.csproj (in 32.8 sec).
+  KeEv.Sim -> /workspace/sites/next-stop-little-shop-w1/shared/KeEv.Sim/bin/Release/netstandard2.1/KeEv.Sim.dll
+  Headless -> /workspace/sites/next-stop-little-shop-w1/adapters/Headless/bin/Release/net10.0/Headless.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:36.21

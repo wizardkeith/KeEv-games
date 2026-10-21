@@ -1,0 +1,263 @@
+{
+  "version": "w1-provisional-1",
+  "qualityTiers": [
+    "Standard",
+    "Select",
+    "Premium",
+    "Signature",
+    "Prestige",
+    "Masterpiece"
+  ],
+  "uniqueTagSeparate": true,
+  "region": "tokyo",
+  "district": "ikebukuro",
+  "supplier": {
+    "id": "supplier.graybox",
+    "provisional": true,
+    "discountBp": 0
+  },
+  "staff": {
+    "id": "staff.graybox",
+    "abilities": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "salaryPerHour": 30,
+    "provisional": true,
+    "locale": "ja",
+    "role_mastery": 0,
+    "traits": [],
+    "story_state": "tutorial",
+    "voice_manifest": []
+  },
+  "config": {
+    "initialCash": 5000,
+    "rentPerHour": 20,
+    "operatingPerHour": 10,
+    "baseDemandPerHour": 6,
+    "capacityPerHour": 18,
+    "conversionBp": 10000,
+    "demandCapBp": 3000,
+    "discountCapBp": 2000,
+    "openHour": 10,
+    "closeHour": 20,
+    "currency": "JPY",
+    "yenPerUnit": 10
+  },
+  "set": {
+    "id": "set.graybox-desk",
+    "pieces": [
+      "off.notebook",
+      "off.pencil"
+    ],
+    "demandBonusBp": 1000,
+    "provisional": true
+  },
+  "offerings": [
+    {
+      "id": "off.notebook",
+      "key": "notebook",
+      "cost": 40,
+      "suggestedPrice": 80,
+      "color": "#bca8cc",
+      "quality": "Standard",
+      "unique": false,
+      "category": "stationery",
+      "set_tags": [
+        "set.graybox-desk"
+      ],
+      "region": "tokyo",
+      "supplier": "supplier.graybox",
+      "affixes": [],
+      "demand_tags": [
+        "generic"
+      ],
+      "story_ref": "tutorial.offerings",
+      "approval_status": "provisional"
+    },
+    {
+      "id": "off.pencil",
+      "key": "pencil",
+      "cost": 10,
+      "suggestedPrice": 25,
+      "color": "#d5ba78",
+      "quality": "Standard",
+      "unique": false,
+      "category": "stationery",
+      "set_tags": [
+        "set.graybox-desk"
+      ],
+      "region": "tokyo",
+      "supplier": "supplier.graybox",
+      "affixes": [],
+      "demand_tags": [
+        "generic"
+      ],
+      "story_ref": "tutorial.offerings",
+      "approval_status": "provisional"
+    },
+    {
+      "id": "off.mug",
+      "key": "mug",
+      "cost": 70,
+      "suggestedPrice": 130,
+      "color": "#dfc9a2",
+      "quality": "Standard",
+      "unique": false,
+      "category": "lifestyle",
+      "set_tags": [],
+      "region": "tokyo",
+      "supplier": "supplier.graybox",
+      "affixes": [],
+      "demand_tags": [
+        "generic"
+      ],
+      "story_ref": "tutorial.offerings",
+      "approval_status": "provisional"
+    },
+    {
+      "id": "off.tea",
+      "key": "tea",
+      "cost": 35,
+      "suggestedPrice": 75,
+      "color": "#93a998",
+      "quality": "Standard",
+      "unique": false,
+      "category": "tea",
+      "set_tags": [],
+      "region": "tokyo",
+      "supplier": "supplier.graybox",
+      "affixes": [],
+      "demand_tags": [
+        "generic"
+      ],
+      "story_ref": "tutorial.offerings",
+      "approval_status": "provisional"
+    },
+    {
+      "id": "off.cookie",
+      "key": "cookie",
+      "cost": 20,
+      "suggestedPrice": 45,
+      "color": "#cc9a78",
+      "quality": "Standard",
+      "unique": false,
+      "category": "snacks",
+      "set_tags": [],
+      "region": "tokyo",
+      "supplier": "supplier.graybox",
+      "affixes": [],
+      "demand_tags": [
+        "generic"
+      ],
+      "story_ref": "tutorial.offerings",
+      "approval_status": "provisional"
+    },
+    {
+      "id": "off.tote",
+      "key": "tote",
+      "cost": 80,
+      "suggestedPrice": 150,
+      "color": "#c7b7a0",
+      "quality": "Standard",
+      "unique": false,
+      "category": "travel",
+      "set_tags": [],
+      "region": "tokyo",
+      "supplier": "supplier.graybox",
+      "affixes": [],
+      "demand_tags": [
+        "generic"
+      ],
+      "story_ref": "tutorial.offerings",
+      "approval_status": "provisional"
+    },
+    {
+      "id": "off.card",
+      "key": "card",
+      "cost": 15,
+      "suggestedPrice": 35,
+      "color": "#b9c3d8",
+      "quality": "Standard",
+      "unique": false,
+      "category": "gifts",
+      "set_tags": [],
+      "region": "tokyo",
+      "supplier": "supplier.graybox",
+      "affixes": [],
+      "demand_tags": [
+        "generic"
+      ],
+      "story_ref": "tutorial.offerings",
+      "approval_status": "provisional"
+    },
+    {
+      "id": "off.towel",
+      "key": "towel",
+      "cost": 45,
+      "suggestedPrice": 90,
+      "color": "#9abdb6",
+      "quality": "Standard",
+      "unique": false,
+      "category": "lifestyle",
+      "set_tags": [],
+      "region": "tokyo",
+      "supplier": "supplier.graybox",
+      "affixes": [],
+      "demand_tags": [
+        "generic"
+      ],
+      "story_ref": "tutorial.offerings",
+      "approval_status": "provisional"
+    },
+    {
+      "id": "off.tray",
+      "key": "tray",
+      "cost": 55,
+      "suggestedPrice": 110,
+      "color": "#bb957b",
+      "quality": "Standard",
+      "unique": false,
+      "category": "lifestyle",
+      "set_tags": [],
+      "region": "tokyo",
+      "supplier": "supplier.graybox",
+      "affixes": [],
+      "demand_tags": [
+        "generic"
+      ],
+      "story_ref": "tutorial.offerings",
+      "approval_status": "provisional"
+    },
+    {
+      "id": "off.vase",
+      "key": "vase",
+      "cost": 90,
+      "suggestedPrice": 170,
+      "color": "#9b94b3",
+      "quality": "Standard",
+      "unique": false,
+      "category": "decor",
+      "set_tags": [],
+      "region": "tokyo",
+      "supplier": "supplier.graybox",
+      "affixes": [],
+      "demand_tags": [
+        "generic"
+      ],
+      "story_ref": "tutorial.offerings",
+      "approval_status": "provisional"
+    }
+  ],
+  "discovery": {
+    "id": "discovery.graybox-sample",
+    "quality": "Select",
+    "unique": true,
+    "stats": 0,
+    "provisional": true,
+    "story_ref": "tutorial.sample"
+  }
+}

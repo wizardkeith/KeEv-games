@@ -1,0 +1,148 @@
+NEXT STOP, LITTLE SHOP — WEB-FIRST TECHNICAL ADDENDUM v1.0
+Issued: 2026-10-21, Asia/Hong_Kong
+Applies to: cloud-only Web development and future Android/iOS reuse.
+
+1. AUTHORITY AND PURPOSE
+
+The owner has authorized a cloud-only Web version so development can proceed from a company computer without local development access. The owner wants to play soon and preserve useful work for the later Android/iOS game.
+
+The frozen source is Game Bible v0.1 + Tokyo Vertical Slice Production Spec, baseline 2026-10-03. Read the full DOCX, including Part II P1–P10 and the visual references. The short Markdown file is a summary. This addendum introduces a Web implementation path and portability requirements; it does not replace gameplay, art, content, economy, monetisation or narrative decisions. Keep the originals unchanged. If an unresolved source conflict would change a frozen design decision, flag that narrow conflict and complete unaffected work.
+
+The native direction remains Unity + C# + URP. A Web gate does not pass the original Unity toolchain, URP, mobile performance or native release gates. “2.5D” is the curated presentation of a true 3D world, not authorization to flatten the world to sprites.
+
+W0 and W1 below are new Web task labels mapped to the Bible's technical spike, deterministic core, graybox MVP and initial save/time work. They are not renamed or retrospectively completed native phases.
+
+2. SHARED SOURCE AND PLATFORM BOUNDARIES
+
+Keep four clear boundaries, using a small project rather than a speculative framework:
+• Shared content: stable IDs, schemas, item/staff/supplier/set/story/world records, localisation, configuration and golden fixtures.
+• Shared assets: editable source files, interchange exports, raw texture/audio masters, generation recipes and provenance/licence records.
+• Shared simulation candidate: KeEv.Sim, a pure deterministic C# library compatible with the selected Unity target's language/API surface.
+• Platform adapters: Web rendering/UI/input/storage/WASM bridge now; Unity rendering/UI/input/storage and store integration later.
+
+Babylon.js + TypeScript is the Web presentation candidate. React/HTML/CSS may implement menus and reports, but must not own the economy or serialize the game as a React/Babylon object graph. Use WebGL2 as the broad initial rendering target where supported; WebGPU may be optional and must not become a new prerequisite without evidence. Use current supported packages, pin actual versions and preserve lockfiles.
+
+Do not create a large empty Unity project or claim a native build. Maintain an explicit native integration checklist. The user's existing native source, if actually supplied, must be inspected and preserved; otherwise do not pretend it exists.
+
+3. PREFERRED C# CORE AND BOUNDED WEBASSEMBLY PROOF
+
+Prefer genuinely sharing the Bible's C# simulation rather than authoring a large Web-only economy and promising an automatic conversion later.
+
+Candidate boundary:
+• KeEv.Sim: netstandard2.1-compatible API surface and Unity-compatible C# language/features; no UnityEngine, Babylon, DOM, JSExport, browser I/O, modern host-only dependencies or ambient system time.
+• A separate modern .NET browser-WASM adapter: JavaScript interop, serialization and runtime bootstrapping.
+• A headless .NET test/replay harness: deterministic fixtures.
+
+The exact SDK/workload must be checked in the actual cloud environment. A modern .NET WASM adapter is not itself a Unity-compatible assembly. Keep its APIs outside the shared core. Avoid runtime code generation and other dependencies that would obstruct later IL2CPP/AOT execution.
+
+W0 should prove one small economic operation, its state transition and its report breakdown in both headless .NET and the real browser WASM build. Measure load payload/startup and verify hosting of the required files. Call the core on commands or batched logical steps, not separately for every mesh on every animation frame.
+
+Keep toolchain setup/diagnosis bounded: one normal supported setup plus one evidence-led correction, with an approximately 20-minute active setup/diagnosis budget. This is not a time limit on the whole task. Never attempt to bypass cloud permissions, install software on the user's computer, or turn the task into repeated SDK experiments.
+
+If an actual SDK/workload/hosting or unacceptable integration blocker remains, proceed with an isolated TypeScript prototype simulation adapter using the same content, numeric rules, commands and golden-result fixtures. Record the exact blocker and classify that code as PORT_REQUIRED_FOR_UNITY. This fallback preserves asset/data progress and early playability; it does not achieve C# source sharing. Missing Unity/native tooling or pending native verification is expected and is not a reason to trigger the fallback. Do not maintain two independently evolving full economies or create an untested C# mirror to claim reuse. Revisit the core decision before expanding substantially beyond the small MVP.
+
+Statuses must distinguish:
+• C# source candidate created.
+• Headless build/tests verified.
+• Browser WASM parity verified.
+• Unity import/compilation pending or verified.
+• Android/iOS IL2CPP/device execution pending or verified.
+
+4. CONTENT, NUMERIC AND SAVE CONTRACTS
+
+Use stable IDs independent of names, locale strings, file paths, engine object IDs and array positions. Follow Bible Part II P4. Preserve the six quality tiers Standard, Select, Premium, Signature, Prestige and Masterpiece; Unique is a separate tag. Support future Masterpiece records structurally without adding Masterpiece drops to the Tokyo slice.
+
+Use integer normalized economic units as required by Bible §§6 and 22. Display local currency through explicit deterministic mappings; do not introduce live FX. Percentages use fixed-point/basis-point-style integers. Specify rounding, overflow bounds, ordering and serialization. Do not coerce arbitrary C# 64-bit values to unsafe JavaScript numbers; constrain and validate a documented safe range or serialize them losslessly. Finance tests must use explicit expected values rather than floating tolerance that hides drift.
+
+Keep commands, snapshots, time inputs and random/event state explicit. The core must not use uncontrolled random numbers, Date.now, frame delta, device speed or rendered customer counts as economic authority.
+
+Implement the applicable stages of Bible P5 in their authored order:
+Base demand → local world/district context → Offering modifiers → staff → equipment → set/synergy → event modifiers → capacity constraints → conversion/average spend → sales → variable costs → staff/rent/operating costs → net profit → ratings/report explanations.
+
+Aggregate a stacking group before applying its cap. Preserve the explanation breakdown. General affixes must not become unrestricted net-profit multipliers. Unimplemented stages are explicit neutral stages, not invented gameplay.
+
+The Bible does not supply every final Offering record or balance value. Use the authored identities where present. Necessary missing values may be conservative provisional configuration/test fixtures with clear provenance and review status. Do not describe invented item histories, culture claims, rates or balance as researched or frozen canon.
+
+Distinguish inventory purchasing/cash movement from cost consumed by sales and from period expenses. Document the provisional cost-flow policy if the Bible does not specify it. A purchase must not be expensed twice, and Sales must not be presented as Profit. This is a game model; no real-world accounting system or live finance service is required.
+
+Persist at least schema/content/simulation versions, mode, stable entity references, inventory, balances, layout references, elapsed-time settlement watermark, deterministic event/random state and implemented tutorial/discovery progress. Use logical data rather than a serialized browser scene. Keep an explicit incompatibility/migration policy; importing an unknown version must not silently reset or corrupt the current save.
+
+5. SOURCE ASSET AND INTERCHANGE CONTRACT
+
+For every retained asset, record a stable ID, category, authoring source, interchange export, runtime derivative, generation recipe if applicable, source/provenance, licence or rights evidence, dimensions/units as applicable, content approval status and per-platform validation status.
+
+Content approval (placeholder/provisional/approved) and technical validation (not tested/passed/failed) are separate fields. A Web-tested placeholder is not approved production art. Never mark native import or device performance passed without that test.
+
+3D models and scenes:
+• Preserve the best editable source actually available. For procedurally authored work, retain the generator, parameters and asset export; do not invent a .blend source that was never created.
+• Produce glTF 2.0/GLB interchange exports with compatible material inputs. A Babylon scene-construction script alone is not a shared mesh asset.
+• Document real units, scale, axes, handedness conversion, pivots, attachment points and skeleton conventions. Prefer metre-based glTF conventions; handle engine conversion in the importer, not by destructive mirroring of masters.
+• Preserve separate logical layout/entity data; avoid exporting the whole game as one inseparable mesh or scene.
+• For the initial skinned interoperability fixture, include at least two bones, normalized skin weights and a named skeletal animation clip; moving an entire rigid object alone does not exercise this route. Use a conservative supported feature subset, including no more than four joint influences per vertex. Keep bind pose/skeleton data and record root-motion expectations and attachment sockets.
+• Do not require production character modelling for W1. A generic clearly labelled animated test fixture is sufficient to exercise export/reimport; it is not Misaki, Ren or Momo.
+• Validate the interchange asset and reload it from file in a clean viewer/scene. Record warnings. A validator/Web reimport proves those checks only, not Unity acceptance.
+
+Textures and materials:
+• Retain original/high-quality textures and individual material channel inputs. Record colour-space, alpha, normal-map and channel-packing conventions.
+• Produce Web compression/downscaling/atlases as derivatives. Preserve mapping back to the source files.
+• Keep engine-neutral material intent/parameters and visual reference information for toon skin, environment PBR, outlines and lighting.
+• Babylon shader/node graphs, particles, post-processing and URP equivalents require platform work. Do not promise identical rendering from file import.
+
+Audio, UI art and fonts:
+• Keep original/lossless audio where it exists, plus loop points/event metadata; create Web/mobile encodings separately. Do not label an up-converted lossy file a recovered lossless master.
+• Retain image/vector sources, original fonts and licence files. A Web SVG/CSS implementation may need a native texture/UI adaptation.
+• Follow the five-locale typography baseline: Plus Jakarta Sans, Noto Sans HK, Noto Sans JP, Noto Sans Thai and Noto Sans SC; numeric UI uses tabular figures.
+• Confirm that chosen asset licences permit intended Web and mobile use. Record unknown rights honestly and keep uncertain material out of production distribution. No paid asset/service purchase is authorized by this prompt.
+
+Optimization must generate a derivative, never overwrite the only master. Source assets and uncompressed exports need not be shipped in the browser download, but must survive in the reproducible source checkpoint/archive.
+
+6. REAL TIME, OFFLINE AND ONLINE BOUNDARIES
+
+Preserve real one day = game one day and city-local schedules (Tokyo uses Asia/Tokyo). W1 has a static visual world; static visuals do not authorize accelerated canonical time.
+
+Provide an optional explicitly labelled sandbox/test-clock mode to demonstrate a full day promptly. Use separate saves, mode labels and eligibility flags. Never silently move a test-clock save into the future live economy. Explain that prototype saves are not promised to migrate to production accounts.
+
+Offline calculation must be an aggregate calculation from a valid snapshot, elapsed interval and event state, using the same economic rules. It must be idempotent: an already-settled interval cannot be paid again. Commit the resulting economic state and settlement watermark atomically; prevent concurrent tabs from overwriting a newer state, for example with a single-writer rule or version-checked transaction. Carry rounding/fractional remainders explicitly so an equivalent interval split into multiple settlements gives the same economic result. Verify one 60-minute interval against two consecutive 30-minute intervals with identical commands/event state. Document handling of clock rollback, invalid time, long elapsed periods and interrupted persistence. Provisional technical clamps are not new frozen progression/balance rules.
+
+The local prototype clock is not authoritative. Future trusted time, world state, account saves, rankings, social visibility and entitlements require server validation. Do not fabricate a server or simulate leaderboard entries as if live. Define small boundaries for future services without implementing speculative infrastructure now.
+
+The Bible's later weather is climate-informed server-simulated shared state, with a reproducible World State ID. It is not a requirement for a live real-world weather API.
+
+7. WEB OPTIMIZATION WITHOUT GAMEPLAY CHANGES
+
+The same simulation state and command/time/event inputs must produce the same economic result regardless of frame rate, render quality, visible crowd, window size, tab visibility or device speed. Rendered NPCs are a presentation of activity; dropping decorative NPCs is not permission to reduce actual sales or opportunities.
+
+Allowed techniques include compressed derived textures/meshes/audio, staged loading, shared meshes/instancing, LOD, reduced optional reflections/shadow cost/particles/post-processing, adaptive render resolution and sensible audio activation. Choose techniques from measured needs; do not implement every possible optimization before the first playable.
+
+Preserve responsive input, readable characters and UI, the true 3D world, curated camera, story triggers, economy, set effects and fairness. Follow the eventual 30 Quality / 60 Smooth / Auto direction, with 60 targeted only where supported by actual device measurements. A mode label or a capped loop is not performance evidence.
+
+Handle loading progress, WebGL failure/context loss where practical, resize, touch, tab background/resume and browser audio activation. Keep UI text out of baked textures. Load only needed font/asset subsets while retaining original source files.
+
+8. EXACT W1 SCOPE
+
+Use Part II P2, not the final slice manifest:
+• One Ikebukuro-context Lifestyle Select Shop.
+• Approximately 10 Offering records, one placeholder staff, one supplier and generic customers.
+• True 3D cubes/capsules/simple reusable fixtures with a 35–45-degree curated view and limited zoom/rotation.
+• Tutorial only; inventory, display, pricing, purchase, sales, cost/profit explanation, basic set test and basic reveal.
+• A static world and placeholder audio.
+• Save/reload and initial real-time/offline prototype mechanism.
+• No pet, final named-character story, full weather, full social, payments or final-art production.
+
+Build a small Economy Replay Tool and Content Validator as required by §30. Command-line tools are sufficient. Do not build another management dashboard just to host these tools.
+
+The player creates their business identity. KeEv Games is the developer/publisher. Do not import the separate KeEv online-store template, real products or checkout configuration into this game.
+
+9. NON-NEGOTIABLE PRODUCT RULES
+
+Preserve all Bible red lines, including free-completable core content; no paid gacha/random loot, paid power ceiling, energy gates, player trading, public free-form chat at launch, login-streak punishment, premium currency, launch subscription/battle pass, forced ads or rewarded ads. Cosmetic payments do not raise system-ranking ceilings. Quality settings cannot create paid visual quality advantages.
+
+Maintain all five locale IDs and an externalized text architecture. Implement complete strings for the small shipped UI; native-level language/naming review remains a separately identified gate. Do not label draft Japanese/Thai content certified.
+
+10. DELIVERY AND CLEANUP
+
+Deliver a private hosted playable preview when supported, a reproducible source checkpoint/archive, actual build/test evidence, the asset/content manifest and a short handoff. Use the available Site/hosting workflow without requiring a new paid service. Follow applicable platform permissions; do not bypass an access block. If a genuine preview/browser capability is missing, finish unaffected work and identify the precise unresolved deliverable.
+
+Keep original sources, lockfiles, build instructions, tests, golden fixtures, data, licences, editable masters, generators and reusable assets even if not yet loaded by W1. Remove only proven-disposable caches, obsolete temporary exports and redundant debug evidence. Keep enough evidence to assess this gate. Exclude credentials and session material from archives.
+
+Stop after W0+W1 and provide its real outcome. Later full-slice, Unity-import and mobile gates remain open until tested.

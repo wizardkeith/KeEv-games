@@ -1,0 +1,107 @@
+NEXT STOP, LITTLE SHOP — WEB ROADMAP AND ACCEPTANCE
+2026-10-21 | Companion to the Web-first addendum
+
+1. PHASE ORDER
+
+W0 — Cloud and portability proof (run together with W1)
+Outcome: verified usable cloud toolchain, a small core-path result, stable content IDs/schema, and representative 3D export/reimport evidence.
+Do not make missing Unity/Android/Xcode/local access a blocker. Distinguish C# headless success, browser-WASM success and native validation. Use the documented bounded fallback only when necessary.
+
+W1 — First playable graybox (current implementation task)
+Outcome: one interactive shop with the Bible P2 small scope and initial persistence/time handling. It is meant to test the management loop. It is not final art or the completed Tokyo slice.
+Scope: ~10 Offerings, 1 placeholder staff, 1 supplier, generic customers, no pet, tutorial only, static world, placeholder audio, a test set/basic reveal and understandable P&L.
+Deliver a private URL and recoverable source. Review this gate before substantial content growth.
+
+W2 — Strengthen the reusable gameplay foundation
+Extend and verify the approved save/time/offline behaviour, layout/smart-snap/lock/save-layout, equipment, quality/build/set/discovery framework and content-only expansion. Where W1 used a TS fallback, resolve the long-term core-sharing decision before implementing a large second economy. Do not postpone a known duplication problem until full content production.
+The exact W2 prompt should be based on W1 evidence; this file is a roadmap, not automatic authorization to implement W2 now.
+
+W3 — Authored Tokyo content and character/asset pipeline
+Implement the full Bible manifest in sequence: 36 Offerings; Misaki and Ren; suppliers 山田生活商店、月見文具所、星野菓子舖; customers 佐藤先生、Ayaka、近藤太太; Momo the calico cat; 雨夜小店 and 春日文具角 complete sets; 昭和暖木 teaser; 雨夜玻璃小燈 Prestige discovery; seven opening beats.
+Do not introduce named characters/pet earlier than their authored story states merely to show an animation test.
+
+W4 — Living World, presentation, audio and slice experience
+Build the approved day/dusk/night/rain experience, visual identity, character animation, audio layers/voice pipeline, collection/narrative/QoL and five-locale UI. Preserve shared simulated weather/world state design. Measure Web load/render budgets on actual target devices when available.
+
+W5 — Formal online functions and live-economy authority
+Add genuine accounts/cloud saves/trusted time/shared world/snapshots/privacy/social/rankings and later entitlement services as needed. Do not expose untrusted prototype balances as authoritative rankings. Reconcile the local-first prototype with the final server authority contract. Payments require their own properly scoped task and are not authorized by W0/W1.
+
+N0 — Native import and C# parity sample (when a suitable environment exists)
+Import the same source assets into the selected Unity/URP version; verify scale, axes, pivots, skeletons, animation clips/material inputs and representative shader adaptation. Compile the shared C# source in Unity and run the same fixture results. Record actual Unity, package and build settings. Retain any differences rather than adjusting the shared expected output to conceal them.
+This sample can run before Web content production finishes when the environment becomes available. It does not require waiting for a whole-game rewrite.
+
+N1 — Android/iOS integration and device gates
+Integrate platform UI/input/storage, URP materials/lighting, animation controllers, audio/import settings and any required native services. Execute actual IL2CPP/device/performance tests and platform build/release work. A Web URL, responsive layout, WASM run or valid GLB is not proof that this gate passed.
+
+Final Tokyo Slice gate
+Use all eight original gates: Gameplay, Economy, Retention Fantasy, Character, Discovery, Visual, Performance and Content Pipeline. The content pipeline must support adding Offering #37 without programmer code changes. Only the actual required gates can authorize Tokyo full production; W1 is not that gate.
+
+2. W0/W1 EVIDENCE CHECKLIST
+
+A. Source and scope
+• Full Bible read and original hashes retained.
+• Technical extension identified; frozen design untouched.
+• Provisional fixtures and future content distinguished.
+• No unsupported claim that native source already exists or native gates passed.
+
+B. Core and economy
+• Use an explicit expected-result fixture covering a purchase, sale, cost breakdown and final inventory/balance.
+• Reject invalid quantities and actions; no negative stock, duplicate command payout or double-expensed purchases.
+• Verify applicable modifier aggregation/cap/order rules.
+• Fixed snapshot + WorldState + logical interval/event/random state gives the same result on repeated replay.
+• Verify cross-runtime parity for the C# path when available. If the fallback is used, document its actual scope and code-to-port status.
+• Verify numeric bounds, rounding and lossless serialization on any boundary used.
+• Compare at least two render settings/update schedules and a background/resume scenario while keeping economic inputs constant.
+
+C. Save/time
+• Reload preserves inventory, finances, layout and implemented tutorial/discovery/set state.
+• Already-settled elapsed time cannot pay out twice, including after a reload.
+• Economic state and settlement watermark commit atomically; a crash cannot persist just one. Guard against concurrent stale-tab overwrites.
+• One 60-minute settlement equals two consecutive 30-minute settlements under identical commands/event inputs, with explicit rounding/fractional remainder carry.
+• Interrupted/invalid save data produces a recoverable error; current good data is not silently destroyed.
+• Define a minimal supported version/migration fixture and reject unsupported newer versions safely.
+• Test mode and normal mode use separate namespaces and are labelled clearly.
+• Record rollback/long-gap policy; do not invent final balance caps.
+• Keep online/server-authoritative and production-save migration claims pending.
+
+D. Assets
+• At least one shop fixture plus a generic skinned interchange fixture (at least two bones, normalized weights and a named skeletal clip) is exported and reloaded from its files.
+• Preserve generator/authoring source, textures and required companion files.
+• Validate glTF/GLB and inspect orientation, pivots, materials and named animation in the available viewer.
+• Record source rights/provenance without inventing a licence.
+• Native status remains not tested unless actual Unity evidence exists.
+• Web optimization leaves the source master intact.
+
+E. Browser/user experience
+• Actual browser opens the hosted or local development build available to the cloud worker.
+• A user can complete a real stock/display/sale/report decision sequence.
+• Verify loading/error messages, input, panel readability, resize and narrow/touch layout.
+• Check console/network failures, persistence after refresh and background/resume.
+• Record browser/version/viewport and GPU/acceleration mode if known.
+• Measure actual payload/loading/frame behaviour without presenting cloud hardware as a phone benchmark.
+• Only save screenshots as user-facing deliverables when appropriate/authorized; routine visual checks can remain internal with a text evidence summary.
+
+F. Rebuild and handoff
+• Source archive/checkpoint contains actual code, content, assets, licences, lockfiles and commands.
+• A current handoff identifies what's done, partial, provisional and blocked.
+• Cleanup preserves anything needed for future shared use or rebuilding.
+• No tokens/keys/session files in the distributable source archive.
+
+3. STATUS VOCABULARY
+
+Report each gate as PASS / PARTIAL / BLOCKED / NOT TESTED with a short evidence reference. Do not turn NOT TESTED into PASS because the technology is theoretically compatible.
+
+Maintain separate asset fields for:
+• approval_status: placeholder / provisional / approved;
+• source_retained: actual path and hash;
+• web_validation: not_tested / passed / failed;
+• unity_import: not_tested / passed / failed;
+• android_validation and ios_validation: not_tested / passed / failed;
+• portability_class: shared_data / shared_source_candidate / interchange_asset / platform_adapter / temporary;
+• known_adaptation: concrete material/controller/UI/import work still needed.
+
+4. THE OWNER'S REVIEW
+
+Keith should first open the URL and confirm that buying/displaying/selling and viewing the result feel understandable, that refresh does not lose the run, and that the world/camera suit the intended game. This is a product review, not a substitute for implementation tests.
+
+The next implementation prompt should be derived from the real handoff/source review. Do not issue a chain of assumed-success prompts or pre-label the full slice accepted.

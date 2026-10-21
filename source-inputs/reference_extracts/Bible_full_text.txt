@@ -1,0 +1,779 @@
+下一站・小店物語
+Next Stop, Little Shop
+GAME BIBLE v0.1  +  TOKYO VERTICAL SLICE PRODUCTION SPEC
+Current baseline · 2026-10-03
+
+Core fantasy
+由一間屬於自己的小店開始，建立穩定事業與被動收入；認識員工、熟客、供應商與城市，逐步成為真正的老闆，最終獲得自由去旅行、看世界，並把旅途與回憶留在自己建立的全球商業版圖裡。
+
+Document control
+Item
+Current baseline
+Traditional Chinese title
+下一站・小店物語
+English title
+Next Stop, Little Shop
+Japanese title
+次の街へ ～小さなお店物語～
+Thai title
+ร้านเล็ก ณ จุดหมายถัดไป
+Simplified Chinese title
+下一站・小店物语
+Supported launch locales
+zh-HK / en / ja / th / zh-CN
+Developer / publisher identity
+KeEv Games (outside the fiction; not the player's company)
+Player entity
+Player-created company / shop names, logo and identity
+Target platforms
+Apple App Store / Google Play; architecture should remain portable
+Primary engine direction
+Unity + C# + URP; deterministic simulation core separated from presentation
+Visual identity
+KeEv Living Diorama: stylized full 3D + anime-toon chibi characters + curated 2.5D presentation
+Monetisation
+Free-to-play; direct-purchase cosmetics / optional content; no paid gacha and no paid power ceiling
+
+Non-negotiable design principles
+The player is the founder. KeEv is the developer/publisher, not the in-game company.
+Cozy first: playing more gives more experiences, but playing less must not be punished.
+No paid gacha / loot boxes / profit boosters / friendship boosters / paid extra requests / energy gates.
+Core story, core regions, core collection, Masterpiece items and core gameplay remain fully completable for free.
+New content expands the world horizontally; old cities, staff and items must not be invalidated by power creep.
+Local culture, commercial attributes, festivals and district characteristics require research before being encoded as gameplay.
+All economy-affecting modifiers must be deterministic, capped, explainable, replayable and test-covered.
+Appearance, collection, social display and multiple build identities are long-term retention and monetisation pillars.
+
+Contents
+1 Player fantasy & identity
+2 Core gameplay loop
+3 Real-time living schedule
+4 Regions / cities / districts
+5 Shop type system
+6 Store management & P&L
+7 Offering system
+8 Discovery / treasure system
+9 Quality tiers
+10 Builds / sets / synergies
+11 Equipment / furniture / decoration
+12 Staff system
+13 Supplier network
+14 Customer system
+15 Mission / quest system
+16 Collection / Journey Book
+17 Achievements / titles
+18 Pets / offline companion
+19 Living World
+20 Story architecture
+21 One-tap recommendation / QoL
+22 Economy & difficulty curve
+23 Free-player experience
+24 Monetisation
+25 Daily / weekly / events / World Journal
+26 Social / visits / likes / leaderboards
+27 Music / SFX / voice
+28 Visual Art Bible
+29 Tokyo vertical slice
+30 Production & technical blueprint
+31 V1.0 launch scope
+32 Long-term roadmap
+Appendix A localisation & naming
+Appendix B visual references
+Appendix C launch red lines
+1. Player fantasy & identity
+玩家是一位喜愛旅行、希望追夢並建立被動收入的普通人。遊戲的成長不是從『小店戰力』變成『企業戰力』，而是從親力親為的店主，成為可以信任團隊、擁有跨城市事業並自由旅行的創辦人。
+開局由玩家自訂公司名、Logo、店名與個人身份；所有分店屬於玩家自己的 entity。
+最終目標不是破關，而是達成財務自由後仍能持續旅行、收藏、裝修、經營、追故事與建立世界。
+旅行模式中玩家可寄明信片給員工；員工會以自身性格回覆，成為長期情感線。
+Global progression: 店員兼老闆 → 多店店主 → 區域經營者 → 國際品牌創辦人 → 自由旅人。
+Frozen rules
+• KeEv / 雪歌伊不作為玩家的 in-game 公司名。• 財務自由是一個重大故事 milestone，不是遊戲結束。
+
+2. Core gameplay loop
+遊戲支援 5、15、30、60 分鐘都能獲得完整感；核心是『看看世界 → 做幾個決定 → 經營 → 發現 → 收集 → 認識人 → 成長 → 離開 → 再回來』。
+5 分鐘：看世界變化、收離線結果、處理 1 個小事件、可選文化小問答。
+15 分鐘：補貨、排班、陳列、簡單店務決策。
+30 分鐘：Build / Set、人物故事、任務、圖鑑。
+60 分鐘：城市探索、深入管理、裝修、收藏、Photo / Zen View。
+Daily 不做 streak 懲罰；多玩可得到更多體驗，但少玩不會被懲罰。
+Frozen rules
+• Daily 是邀請，不是功課。• 玩家離開後商店繼續營業。
+
+3. Real-time schedule
+現實 1 日 = 遊戲 1 日；城市按自己的當地時間運作。玩家在香港晚上 9 點，可同時看到東京 10 點、曼谷 8 點等不同城市狀態。
+營業時間由店種決定；關門後仍可做報告、裝修、Build、排班與圖鑑。
+星期、時段、季節會改變客群與需求，但幅度克制。
+離線營運是核心被動收入；重大故事、解鎖與關係突破仍需玩家親自參與。
+長時間無登入不會導致辭職、倒店或 streak loss；回歸時以 While You Were Away 摘要呈現。
+Frozen rules
+• Server time authoritative；手機時間只作暫時顯示／離線估算。
+
+4. Regions, cities & districts
+Region 定義為城市／都會區，而非整個國家。每個 Region 最多 10 間商店，並由 3–5 個具辨識度、經研究的代表性商圈組成。
+東京優先研究新宿、池袋、澀谷、銀座、淺草等知名地區；其他城市同樣優先具代表性、玩家熟悉的商圈。
+城市 Attribute 必須按真實商業／客群／文化資料研究後再轉為 gameplay，避免刻板印象。
+正常解鎖：地區累計淨盈利 + 核心 Region Story；平均約 2–4 星期。
+付費可直接解鎖任何已推出 Region，但只是跳過解鎖門檻，不送進度／Staff／Supplier Friendship／Masterpiece。
+未解鎖地區可預覽其 Boutique，但不能購買該區專屬付費內容。
+長期新城市優先由玩家一帳號一票投票決定；無足夠投票時由開發方決定。
+設旅行護照、城市 Stamp、首次抵達演出與後期 Global HQ。
+Frozen rules
+• New Region 必須是新內容包，不是換皮地圖。• 新城市盡量反向連動舊城市。
+
+5. Shop type system
+底層使用共用經營引擎，上層分五個 Business Archetype，再以 Specialization、城市、商圈、設備、商品、員工與 Set 形成大量差異。
+Retail：Lifestyle、Snacks & Gifts、Beauty、Stationery、Hardware 等。
+Food & Café：Café、Bakery/Dessert、Quick Service、各類餐飲。
+Lifestyle Services：Beauty、Salon、Spa、Wellness 等。
+Professional Services：Accounting / Business Services、Legal、Consulting、Design、IT 等。
+Leisure & Experience：Workshop、書店 Café、桌遊、Gallery、體驗店等，較適合 post-launch。
+支援 Rebrand / 轉型；共用家具與設備；同一商圈可形成 Business Synergy。
+Frozen rules
+• 東京 Vertical Slice 只驗證 Retail + Food/Café architecture；不一次做齊所有類型。
+
+6. Store management & P&L
+玩家看得懂『為什麼今天賺／蝕』比看懂會計科目更重要。每店每日核心為收入 − 商品／服務成本 − 人工 − 租金 − 營運成本 ± 小事件 = 淨盈利。
+Daily Shop Report 顯示收入、主要成本、盈利／虧損、同比與原因。
+Revenue 由 Traffic、Conversion、Average Spend 等構成；客多不代表一定賺。
+玩家可定價，但提供建議價與一鍵定價；高價會提升 margin、降低轉換等。
+Inventory 簡化；支援 Auto Restock；Food 類可有適量損耗。
+高階 Staff / Equipment 有更高成本，防止『最高品質必定最優』。
+Random small events 有收入／開支／選擇，但不會一擊摧毀幾日盈利。
+每店另有 Profitability、Reputation、Customer Happiness、Staff Happiness、Identity 等指標與評分。
+世界事件、天氣、Build、Set 可以互相影響，但所有 effect 都要可追蹤。
+Frozen rules
+• 金額使用整數 monetary units；百分比使用 deterministic fixed-point / basis-point 類表示。• Modifier calculation order 固定，effect typed、capped、auditable、replayable。
+
+7. Offering system
+Retail 商品、食物／飲品、生活服務及專業服務包都使用共用 Offering framework。每個 Offering 同時有文化身份、商業價值、Build 價值與收藏故事。
+Identity：Region、Category、Supplier、Artwork、Story、Set、Collection ID。
+Business：入貨／成本、建議售價、需求、尺寸、周轉、季節、客群。
+Build：Affix、情境 Trait、Synergy Tag、Set linkage。
+同一 Base Offering 可有不同品質版本；圖鑑記最高取得品質，但不要求收齊所有 random roll。
+需求可受季節、城市、跨境物流影響；輸出要合理可解釋。
+Supplier 會影響品質 potential、Hidden Catalogue 與專屬版本。
+Tokyo Vertical Slice 先做約 30–50 個 Offering，正式 slice baseline 為約 36。
+Frozen rules
+• 高品質的價值來自玩法身份與故事，不只是數字放大。
+
+8. Discovery / treasure system
+把 Diablo 式『未知 → 鑑定 → 稀有度 → 詞綴 → Build』心理轉化為做生意、旅行、識人與探索中的意外發現。
+來源包括 Supplier sample、城市探索、熟客／員工 Lead、Story reward、Hidden event。
+神秘物品以 ??? / Potential 呈現，逐層 Reveal；動畫高級克制，不做抽卡／賭場風。
+同名高品質物品可有不同 roll，但 roll range 不宜過闊，避免強迫瘋狂刷。
+Named Unique 以固定故事與身份為重；有些 Unique 可完全 0 Stats。
+城市擁有自己文化準確的 Discovery Pool；這是系統核心魅力。
+付費商城完全無 random loot；看見什麼就買到什麼。
+重複設備可保留給其他店、出售或 trade-in；不做廉價『五合一』合成。
+Frozen rules
+• No paid random loot.• 最珍貴的物品通常應有一個值得記住的故事。
+
+9. Quality tiers
+品質使用商業世界語言，不使用 RPG 的 Normal / Magic / Legendary。
+Standard｜標準：可靠基本盤。
+Select｜精選：開始有 1 個 Affix。
+Premium｜優質：正式進入 Build，通常 2 Affix。
+Signature｜招牌：開始有地方／情境 Identity Trait。
+Prestige｜名品：稀有 Build 核心，通常 3 Affix + contextual trait。
+Masterpiece｜臻品：具 strategy-shaping 的 Unique Effect；不是金色 Prestige。
+Unique｜唯一：身份 Tag，不是第七階；可出現在 Prestige / Masterpiece 或純 Story Item。
+Frozen rules
+• Masterpiece 長期保持最高核心品質；不做 Masterpiece EX / Mythic 等無止境 power creep。• 高 Tier 代表 potential，不代表自動 best-in-slot。
+
+10. Builds, sets & synergies
+Build 回答的不是『點樣賺最多』，而是『我想開一間什麼性格的店』。可追盈利、熟客、Cozy、文化、夜間、精品、高周轉、天氣等不同方向。
+四層：Item Affix + Named Set + Synergy Tags + Business Strategy。
+Named Set 可使用 2/4、3/4、4/4；支援 2+2 混搭，不強迫全套。
+Set pieces 必須有一致 Visual DNA：材質、形狀、色彩、文化 motif、lighting。
+完整 Set 可解鎖獨特 Ambient / Visual / Audio effect；效果要克制。
+員工用 Team Synergy；Food 用 Pairing；Retail 用 Basket 等行業化名稱。
+Build 可提升 Comfort、Visual Appeal、Cultural Identity、Customer Happiness、Staff Happiness 等，並支援不同排行榜。
+同類 modifier 要加總 + cap；直接 Net Profit multiplier 極少甚至不用。
+Frozen rules
+• Set 外觀必須真的『像一套』。• 數值適中，Build 主要增加 identity 而不是破壞經濟。
+
+11. Equipment, furniture & decoration
+店鋪空間分 Functional Layer 與 Style Layer。夠細緻、可自訂，但不做裝修工程 simulator。
+八類：Interior、Furniture、Display、Equipment、Lighting、Decoration、Storefront、Backroom。
+Furniture 多影響 Comfort、Stay Time、Visual Harmony；Equipment 多影響 workflow、quality、efficiency。
+店舖空間評分：Visual Appeal、Comfort、Efficiency、Cultural Identity、Brand Identity。
+Layout 有適度營運影響，但避免 pathfinding hell；使用 Interaction Zone + Smart Snap + Auto Align。
+支援 Lock、Save Layout、Seasonal Layout、Undo。
+Cosmetic / functional 部分分離，支援 appearance override，避免玩家因 stats 被迫放棄喜愛外觀。
+完整 Set 啟動 Harmony：材質／燈色／FX 可做細微統一。
+Social 可按『舒服／好靚／地方特色／創意』等理由 Like。
+Frozen rules
+• 免費玩家也能整出極美的店；付費提供更多藝術選擇，而不是畫質特權。
+
+12. Staff system
+員工是角色、經營資源、Build 元素、故事人物與 cosmetic collection target，而不是人形裝備。
+五核心能力：Service、Expertise、Efficiency、Insight、Leadership。
+Talent Grade 沿用商業品質語彙，但代表技能配置稀有度，不代表人的『高低等』。
+招聘 No Gacha；先看姓名、能力、Trait、薪金、背景再決定。
+成長：Work Experience + Role Mastery + Trust / Relationship；不做 Lv.99 戰力膨脹。
+Day-1 Staff 必須長期可用；高 Grade 不是必然替換舊員工。
+有排班與 Staff Happiness，但不做 Tamagotchi 式懲罰。
+當地語言短 Voice + 字幕；主要 Staff 有更多情境語音與故事。
+Skin / Outfit 主要 0 Profit Stats，可解鎖 animation / pose / harmony。
+Paid Staff 為 side-grade / personality / story choice，不能壟斷最高經營能力。
+Frozen rules
+• 角色感情不能被 power creep 淘汰。
+
+13. Supplier network
+Supplier 是人物、貨源與全球網絡，不是單純折扣 menu。三類：Local / Regional / International。
+Profile 指標：Price、Quality、Reliability、Variety、Capacity、Local Identity、Discovery Potential。
+Partnership I–V 升得慢；最高階應以月為尺度，而不是一週刷滿。
+大量購買只能提供少量 Partnership；真正成長靠長期合作、故事、固定 Request、誠信與合作項目。
+高 Partnership 的真正價值是 Hidden Catalogue、Priority Stock、Exclusive Craft Line、Collaboration、Story，而非超大折扣。
+Supplier Request / Partnership Opportunity 使用 server-wide 固定日期／週期；合資格玩家同時有機會，避免 individual RNG 不公平。
+跨城市 supplier 會建立 supply network；新 Region 可重新改變舊城市。
+Collaboration 可讓玩家選少量設計方向，產生不同商品 variant。
+長期可有退休／傳承，但不讓內容永久消失。
+Frozen rules
+• Supplier-related discounts capped；不讓 stacking 將成本打至零。
+
+14. Customer system
+人流令商店運作，熟客令商店有性格，故事人物令玩家有回憶。
+五層：一般客人、回訪客、熟客、Named Customer、Special Visitor。
+普通客程序化，以 Local / Tourist / Office Worker / Student / Family 等 tags 驅動，但比例需按地區 research。
+關係自然形成，不用不停點 Talk +5；重要 customer 有 persistent Memory State。
+熟客提供輕量價值，例如回訪、耐性、推薦；Named Customer 最大價值是故事、Discovery 與世界感。
+核心故事人物 deterministic 出現，不用低概率 RNG；時間／天氣秘密只用於 optional content。
+Build 要『看得到客人反應』，例如座位選擇、對白、停留、商品偏好。
+人物可跨城市重逢，形成全球 continuity。
+People We Met 記錄第一次相遇、喜好、共同回憶、故事進度。
+Frozen rules
+• 課金不增加 Story NPC 出現率。
+
+15. Mission / quest system
+任務不是待辦清單，而是世界邀請玩家參與的事情。
+七類：Daily、World Moments、Customer Story、Staff Story、Supplier Request、Region Story、Hidden Quest。
+Daily 全帳號每日最多 3 個，輕量、自然完成；無 streak。
+World Moments 可完全沒有 Quest UI，例如店外一隻貓、雨傘被遺下。
+Supplier Request 按 server-wide window；付費不能買額外 request。
+Region Story 為主線，約 7–8 Chapters；重要 Progress 不靠 RNG。
+Hidden Quest 真正 hidden；不鎖 main progression，可送 story / title / cosmetic。
+文化問答是學習，不是考試；答錯不懲罰。
+Reward 可是故事、Discovery、文化、收藏、外觀、Memory；有些故事完成可刻意 0 material reward。
+Frozen rules
+• Seasonal story 可復刻／再遇；核心 story 永久。
+
+16. Collection / Journey Book
+圖鑑定位為玩家整個商業與旅行人生的紀錄，而不是 item checklist。
+KeEv Journey Book / 旅商誌包含 Offering、Shop Collection、People、Suppliers、Regions、Culture Notes、Memories、Masterpiece Archive。
+每個 entry 有 Seen → Acquired → Understood → Complete 等階段。
+Random roll 不影響 Core Collection 100%；圖鑑只記最高品質與重要 variant。
+Rare item 記錄首次發現日期、城市、來源與目前擺放地點。
+Masterpiece Archive 有大圖、Story、取得歷史與『陪伴這間店多少天』等純情感紀錄。
+Named Unique 預設 protected，避免誤售。
+完整 Set 可解鎖 Design Page：材料、motif、design philosophy、完整插畫／detail preview。這是可直接實作的資料驅動內容頁。
+Core Collection 免費 100%；Paid Boutique Collection 獨立，不阻礙 Core completion。
+Postcards、Photo Memories、Journey Gallery 可作 Global HQ / Social display。
+Frozen rules
+• Collection reward 以展示／回憶為主，不用大幅 power。
+
+17. Achievements & titles
+成就是『記住玩家怎樣玩過這個世界』，不是另一張 300 項 checklist。
+類別：Business、Travel/Region、People、Discovery、Design。
+Title 永遠 0 Stats；玩家自由展示，不被數值逼迫用某個稱號。
+Hidden Achievement 在觸發前完全隱藏。
+重要 Reward 偏向 Title、Profile Frame、HQ Decoration、Unique Cosmetic、Memory / Illustration。
+Seasonal leaderboard award 只提供展示價值，不提供永久 power。
+支援多種排行榜方向：Profit、Customer Love、Happiness、Visual、Culture、Comfort、Collection、Likes。
+Achievement Showcase 可顯示最多數個代表性成就。
+Frozen rules
+• Paid cosmetic 不直接提高 system leaderboard scoring ceiling。
+
+18. Pets & offline companion
+Pet 是陪伴、Cozy visual 和 Routine offline helper，不是付費自動爆機工具。
+所有玩家會有免費 Momo，並可由故事／成就再取得其他免費 pet。
+Paid Pet 直接購買、No Gacha；差異是 species、personality、story、animation、outfit、side-grade trait。
+只可同時有 1 隻 Active Helper；買多隻不疊 offline power。
+可處理巡店、低風險提醒、普通材料等 routine；不能完成 Daily / Story / Supplier / Region progression。
+Pet Affection 解鎖動作、睡姿、聲音、pose、staff interaction，不加 power。
+Pet furniture / outfit 是自然 cosmetic revenue；寵物會真正使用家具。
+Pet 會跟 Living World 互動：雨天望窗、冬天找暖位、春天追花瓣、深夜去睡。
+Frozen rules
+• 重要故事仍等玩家親自回來。
+
+19. Living World
+每個城市按自己的當地時間、calendar、research-backed climate profile、server-wide simulated weather、local festivals 及 world events 運作。
+World State layer：Local Time、Calendar、Weather、Season、Festival、World Event。
+同一城市所有玩家共享同一 server weather / event state，避免 RNG 造成經濟／排行不公平。
+採『真實氣候邏輯 × server 模擬天氣』，不是即時真實 weather API。
+日夜光線可按日期／latitude 算 approximate sunrise/sunset。
+Weather 要看得到、聽得到、玩得到，但經濟影響幅度 moderate。
+不同城市有自己的季節模型；熱帶城市不硬套春夏秋冬。
+節慶視覺／聲音／對白需文化準確；Christmas 不等於強行下雪。
+Build Ambient Effect 要 context-aware；冬天的春日套裝不能讓整條街突然櫻花滿開。
+重大現實災害不做 live gamification。
+支援 Full / Reduced / Minimal Ambient Effects、Reduce Motion 等 accessibility / performance 選項。
+Frozen rules
+• World State ID 可重現，以便 bug replay / economy verification。
+
+20. Story architecture
+故事四層：Global Player Story、Region Story、Character Story、Small Moments。Cozy 是底色；感動、開心、鼓勵、感恩、黑暗、精彩、幽默都存在，但要有節奏。
+主線不是打敗反派，而是從第一間小店走到財務自由與自由旅行。
+每個 Region 像一季新劇；城市故事需以當地生活／商業／文化研究為素材，不換皮。
+角色故事可以跨多年，Day-1 Staff 長期成長。
+幽默來自人物性格與日常，不在感動場面打斷氣氛。
+採 Soft Branching：影響對白、Memory、部分 reward / event 走向，但不做 72 結局 production explosion。
+Region Story modular，因為玩家城市順序可不同。
+重要 NPC 記得過去選擇；世界事件有後續記憶。
+Global Story 不設終結，重大 milestone 後以『旅程仍在繼續』返回世界。
+Frozen rules
+• Narrative theme: 賺錢讓你走得更遠，而遇見的人令旅程值得記住。
+
+21. One-tap recommendation & QoL
+一鍵推薦是可解釋的助手，不是『最高戰力』按鈕。玩家先定義想要什麼樣的店，系統再幫他減少繁瑣計算。
+目標可選：穩健盈利、高周轉、熟客、Cozy、設計、文化、精品、員工友善、Balanced。
+流程：Recommend → Preview → Explain → Apply → Undo。
+可 Lock item / staff / appearance / entire theme，避免推薦系統拆掉玩家喜愛設計。
+尊重 Set completion、Visual Harmony、Cosmetic Override。
+後期 Management by Exception：只突出少量需要留意的店。
+Store Manager Policy 可自動處理小排班／restock 等 routine，不碰 major story、Masterpiece、重大 build 決定。
+核心 QoL 全部免費。
+第一版使用 deterministic recommendation engine，而不是 opaque AI；可測試、可重現、可 debug。
+Frozen rules
+• Casual 玩家可以相信推薦；研究型玩家可以挑戰推薦。
+
+22. Economy & difficulty curve
+Region progression 的速度要由成熟度自然形成，而不是硬 time gate。目標是正常玩家約 2–4 星期解鎖下一 Region。
+Casual 5–15 min/day：約 24–30 日；一般 20–30 min/day：約 18–24 日；優化型高手：約 14–18 日（初始 balance target）。
+Region requirement 使用 Lifetime Regional Net Profit + Core Region Story；不要求現金餘額，避免投資裝修反而拖慢進度。
+使用 Capacity + Diminishing Returns；一間店接近 capacity 後，再堆 traffic 不會無限增長。
+同商圈大量同 specialization 可有輕量 Market Saturation，鼓勵多樣化。
+Typed modifier caps 控制 Traffic / Conversion / Average Spend / Discount 等。
+底層使用 normalized economic unit，顯示層再換成當地貨幣；不讓真實 FX 破壞 balance。
+後期 money sinks：HQ、renovation、supplier collaboration、staff development、logistics、restoration、community project。
+Cash flow 困難不 Game Over；有 recovery / diagnosis / supplier relief 等柔性機制。
+Business / Collection / Relationship 是三條不同長期進度。
+Frozen rules
+• 玩家變有錢應換來更多自由，而不是更多零。
+
+23. Free-player experience
+免費玩家得到完整遊戲；付費玩家得到更多選擇、藝術、角色喜好、個人化與旅程順序自由。
+所有 Region 可免費正常解鎖；Paid Early Access 只跳門檻。
+免費玩家可取得所有 Quality，包括 Masterpiece / Named Unique。
+所有有 gameplay effect 的 Core Set 都有免費途徑。
+Core Collection 免費可 100%；Paid Boutique collection 獨立。
+完整 Staff / Pet / QoL / Living World / Story / Leaderboard 都可免費使用。
+付費 Staff / Pet 是 side-grade / cosmetic / story-rich，不提高競爭 power ceiling。
+Earned Story Items Never Sold。
+季節世界本身免費；Premium 只賣 cosmetic extension。
+Frozen rules
+• Free Completion Guarantee.• Gameplay Effect Parity.• Story Integrity.• Core Collection Integrity.• No Paid Power Ceiling.
+
+24. Monetisation
+Free-to-play + Direct Purchase Boutique。商城要讓玩家『想買』，不是『不買就痛苦』。
+主要收入：Interior / Exterior Collections、Staff Outfits、Pets / Pet Cosmetics、Optional Premium Characters、Storefront / Background、Early Region Access、Music / Photo / Profile Cosmetics、Artist / Brand Collaboration。
+Launch 不做 Premium Currency；直接顯示平台當地貨幣價格。
+Launch 不做 Battle Pass、Subscription、Forced Ads、Rewarded Ads；後續只按營運數據再評估。
+Bundle 支援 ownership-aware discount；已有 item 不重複收費。
+Premium Set 的價值是完整 art direction、lighting、animation、ambient detail，而不是更多 particles / stats。
+商店 UX 像 Boutique，不像 casino；有 preview / try-on / wishlist。
+Paid Region Access = 買旅行自由，不是買完成包。
+Frozen rules
+• 永遠不賣 Profit Booster、Masterpiece Booster、Partnership Booster、Energy、Paid Extra Request、Paid Gacha / Loot Box、Paid Leaderboard Multiplier。
+
+25. Daily, weekly, events & World Journal
+玩家登入因為想知道『今日世界發生什麼』，不是害怕錯過獎勵。
+Daily Pulse：全帳號每日最多 3 個輕量 optional task。
+World Journal：每日世界狀態、城市小事、rumour、Discovery hint、foreshadowing。
+Weekly Thread：每週 1 條較完整的小故事／城市內容，不要求七日連續登入。
+Seasonal / World Event：真正改變城市 ambience、NPC、story，而不是 battle pass。
+Shared Opportunity Calendar：Supplier Request / 部分 progress opportunity server-wide。
+Missed opportunities 可輪替／catch up；季節內容會復刻。
+World Events 會被世界記住，不會活動結束後完全失憶。
+Region vote 一 account 一票，付費不增加票數。
+Push notification 極克制，不做『Momo 想你』式情緒勒索。
+Frozen rules
+• No Login Streak.• No unique item locked to one calendar-day login.
+
+26. Social, visits & leaderboards
+Social 是 asynchronous cozy showcase network：展示、欣賞、搵靈感，而不是 PvP 壓力場。
+Friends / Follow、Read-only Shop Visit、Like + reason、Inspiration bookmark、Achievement Showcase。
+訪客只能看、inspect、like、向 pet say hi；完全不改 economy。
+Launch 不做自由公開 chat；使用 preset reactions / guest book，降低 moderation。
+Item inspect 顯示免費 acquisition method 或 Boutique collection；不 hard sell。
+Leaderboards：Profitability、Customer Love、Happiness、Comfort、Design、Culture、Core Collection、Visitor Likes。
+Profit 排行按 Region / Archetype / Season 正規化，避免老玩家／大店永遠壓倒新玩家。
+Design score 主要看 harmony、layout、theme consistency、cultural fit；Paid item 不自帶高 score。
+Like 防刷；新店有 Hidden Gem / New Shop 曝光。
+No player-to-player trading / money / equipment gifting。
+Shop snapshot 使用 layout IDs / positions / skins / metadata，server-authoritative rankings。
+Frozen rules
+• 排行獎勵只給展示／身份，0 Power。
+
+27. Music, SFX & voice
+音訊不是 BGM + click，而是城市聲音身份、adaptive music、environmental sound、character voice 與 narrative silence。
+每城市有可辨識 Main Theme；地方元素要研究後克制融入現代 Cozy 音樂，不做 stereotype soundtrack。
+Adaptive layers：Base、Time、Weather、Business、Festival、Set、Story。
+重要 Story 用『關鍵句 Voice + 文字』，不追求全劇情 full voice。
+Staff 使用人物所在地／設定的自然語言；字幕跟 UI language；需 native-level naturalness / pronunciation / register QA。
+Voice line 要 variants + cooldown，避免 NPC 鸚鵡病。
+Pet / UI / Discovery SFX 柔和克制；Masterpiece 有 signature cue，但不是 jackpot。
+重要情感場面減少 ambience / random voice，保留 silence。
+Audio settings 分 Music / Ambience / Voice / UI / Weather，並支援 voice frequency。
+目前已有 ElevenLabs Starter；可用作 Voice / SFX / Music prototype pipeline，ChatGPT Work 負責 script、batching、naming、manifest、QA 與整合。
+Frozen rules
+• 正式大量 production 前重新核對當時 API quota / terms / commercial rights。
+
+28. Visual Art Bible
+KeEv Living Diorama：真正 3D 世界 + curated 2.5D presentation；角色採柔和 anime toon / cel-shaded 皮膚，環境用 soft stylized PBR。
+Full 3D simulation + 35–45° curated isometric / 2.5D camera；有限 zoom / rotate，保持構圖。
+角色約 3.5–4 頭身 Q 版；toon skin、簡潔陰影、anime eyes、少量 hair secondary motion。
+人物可用極幼 / context outline；不採戰鬥遊戲的硬黑線與高 contrast。
+環境 / furniture 用 soft stylized PBR；食物需更『好食』，可有 steam / gloss 等小動畫。
+前、中、後景、DoF、parallax、foreground occlusion、light shafts / particles 形成 miniature depth。
+Lighting 是高優先投資：暖內冷外、雨夜反射、黃昏、節慶小燈、樹影等。
+UI 70–80% 畫面留給世界；支援 Zen View 與 Photo Mode。
+30 FPS Quality / 60 FPS Smooth / Auto；先犧牲遠景粒子／reflection，不犧牲角色與操作。
+免費與付費使用同一畫質；Premium 的高級感來自更完整 art direction，而不是畫質特權。
+Frozen rules
+• Performance budget 從 Art Bible 第一天開始做。
+
+29. Tokyo Vertical Slice
+第一個真正 playable slice：Tokyo → Ikebukuro，一間 Lifestyle Select Shop，驗證 gameplay、emotion、discovery、visual、performance 與 cosmetic value。
+1 Region / 1 district / 1 main shop / 7 opening story beats。
+核心 Staff：Misaki、Ren；Pet：Momo；3 suppliers；3 named customers。
+約 36 Offerings；2 完整 core sets + 1 incomplete teaser set。
+第一件 memorable Prestige：雨夜玻璃小燈。
+Day / dusk / night + clear / rain；Daily Pulse、World Journal、1 Weekly Thread。
+基本 P&L、Profit explanation、One-Tap Recommend、30/60/Auto。
+Visual：KeEv Living Diorama + anime-toon chibi。
+Slice 實際掉落可到 Prestige，但 Masterpiece data model / save schema 第一日已支援。
+Frozen rules
+• Vertical Slice 是 GO / NO-GO gate，不是自動進入 full production。
+
+Tokyo Vertical Slice: seven opening beats
+Beat
+Key content
+Day 1 · 第一盞燈
+第一店開門；Misaki；基本銷售、P&L、第一次小盈利。
+Day 2 · 選物的味道
+山田生活商店；補貨、Local Offering、Supplier。
+Day 3 · 比數字快一步的人
+Ren；排班、人工、效率；理解 Sales ≠ Profit。
+Day 4 · 雨天的店
+Living World 首次完整展示；雨聲、暖內冷外、需求改變。
+Day 5 · 總會有人再回來
+佐藤先生回訪；Customer Memory；Momo 開始出現。
+Day 6 · 有故事的東西
+Prestige Discovery；雨夜玻璃小燈；第一個收藏故事。
+Day 7 · 明天也會開門吧
+Weekly Thread 收尾；Momo 加入；第一週回顧。
+
+30. Production & technical blueprint
+技術基準：Unity + C# + URP。最重要架構原則是 deterministic simulation core 與 3D presentation 分離。
+`KeEv.Sim`：需求、客流、銷售、成本、modifier、P&L；純 C#、可 headless 測試。
+`KeEv.Content`：商品、staff、supplier、set、story、region data。
+`KeEv.World`：時間、climate、weather、event state。
+`KeEv.Shop`：layout、inventory、equipment、furniture。
+`KeEv.Actors`：staff、customers、pets。
+`KeEv.Narrative`：quest、dialogue、memory、story state。
+`KeEv.Presentation`：3D、camera、animation、VFX；`KeEv.Audio` / `KeEv.UI` / `KeEv.Save` / `KeEv.Online` / `KeEv.Commerce` 分離。
+所有 content object 使用 stable IDs；新 region 以 data pack / addressable assets 加入，不修改 Tokyo hardcoded code。
+Live visual simulation 與 offline aggregate business simulation 分離。
+Local-first prototype；backend 之後用介面抽象 `ICloudSaveService` / `IWorldStateService` / `ILeaderboardService` / `IEntitlementService`。
+初步 backend 可採 Supabase/PostgreSQL + server functions，但不得直接耦合 provider。
+Frozen rules
+• MVP 先灰盒，證明 loop 好玩再大量製作 3D asset。• Economy Replay Tool 與 Content Validator 列為 internal must-have。
+
+Production sequence
+Technical spike：URP、toon shader、curated camera、mobile 30/60fps proof。
+Deterministic simulation core + unit / golden tests。
+Graybox shop MVP：10 Offerings、1 Staff、1 Supplier，完整開店→打烊→P&L loop。
+Save / real-time / offline simulation。
+Layout / equipment / smart snap / lock / save layout。
+Quality / Build / Set / Discovery framework。
+Living World day/night/rain + World State。
+Character pipeline：Misaki / Ren / generic NPC / Momo。
+Final Ikebukuro shop art、lighting、shader、weather、quality modes。
+Audio factory：ElevenLabs assets + manifest + normalize / loop / QA。
+Narrative、Collection、QoL、一鍵推薦。
+Vertical Slice QA gate；過 gate 才進 Tokyo full production。
+Vertical Slice acceptance gates
+Gate
+Acceptance
+Gameplay
+20–40 分鐘核心 loop 仍有『再玩一日』動機。
+Economy
+所有 P&L 可 explain / replay；同 state 重跑結果一致。
+Retention fantasy
+玩家想再回店、想開第二間／下一城市。
+Character
+Misaki / Ren / Momo 至少有角色令人記得。
+Discovery
+Prestige reveal 有期待感而非普通 UI popup。
+Visual
+白天、雨天黃昏、夜晚三個狀態都成立。
+Performance
+Target devices Quality 30 穩定；合適裝置 Smooth 60 成立。
+Content pipeline
+新增第 37 件 Offering 不需 programmer 改 code。
+
+31. V1.0 launch scope
+V1.0 target 是有完整世界感但不失控。目標 3 Regions：Tokyo / Hong Kong / Bangkok；品質 gate 優先於城市數量。
+每 Region 約 4 個具辨識度商圈；每 Region 上限 10 店。
+4 Archetype architecture：Retail、Food & Café、Lifestyle Services、Professional Services；Experience post-launch。若品質受影響，Professional 可延至 V1.1。
+約 10–12 Specializations。
+全 V1 約 200 Base Offerings；約 18 Named Staff；16–18 Named Customers；約 15 Suppliers。
+約 18–22 Named Sets；完整品質至 Masterpiece；每 Region 少量 Named Unique / Story Masterpiece。
+約 3 free pets + 2 premium pets。
+每 Region 約 7–8 Main Chapters + Character / Supplier / Customer arcs。
+Living World core framework 完整；全年所有節慶可按真實日曆逐步 live update，不要求 launch day 全部完成。
+Social Lite：Friends / Visit / Like / basic ranking / showcase。
+Launch Boutique 少而靚：每區 1–2 premium interior collections、少量 outfits / pets / small cosmetics、最多 1–2 premium staff。
+Launch locales：zh-HK / en / ja / th / zh-CN。
+Frozen rules
+• 若第三 Region 未過 quality gate，寧願兩個完整城市先 launch，再免費更新第三城市。• Region 數量是 target；品質是 gate。
+
+32. Long-term roadmap
+長期採 horizontal expansion：世界愈來愈大，而不是裝備數字愈來愈大。
+Launch → V1.1：先看數據、修 balance / QoL / performance；約 4–6 週後再啟動首次 Next Region Vote。
+Year 1：2–3 個由玩家需求主導的新 Region、Experience archetype、Global HQ 初版、更多跨城市故事。
+Year 2：更深 cross-region builds、travel destinations、supplier network、social exhibition、artist / brand collaboration。
+Year 3+：舊城市 refresh、角色人生進展、玩家歷史展示、更多世界連結。
+新 Region = 新 build vocabulary，不是更高 Tier。
+Masterpiece 長期保持最高核心 quality；Day-1 Staff 長期 viable。
+舊城市定期加商圈、人物、supplier、set、story、world event，避免一次性地圖。
+Seasonal content 累積並復刻；新玩家可補，老玩家有新小故事／cosmetic。
+大型城市投票低頻、每 account 一票；creative direction / balance 仍由開發方負責。
+Endgame = ownership、collection、design、relationships、travel、memories、HQ，而不是 raid / PvP power treadmill。
+Frozen rules
+• Expansion > Power Creep.• New Region reconnects old Regions.• World remembers history.• Endgame = ownership & memories.
+
+PART II — Tokyo Vertical Slice Production Spec
+本部分把 #29–#30 轉成可以交給 ChatGPT Work / Codex / Unity 開發流程的實作規格。
+P1. Slice objective
+證明核心 loop：入貨 → 陳列 → 客人 → 銷售 → 成本 → P&L → Build / Discovery → 第二日。
+證明一個城市的視覺／音訊 identity、雨夜治癒感及角色情感線。
+證明 data-driven content、deterministic economy、offline aggregate simulation、30/60fps modes 可成立。
+證明 cosmetic / set visual value 足以支撐日後 Boutique，而不依靠 paid power。
+P2. MVP vs final slice
+Area
+Graybox MVP
+Vertical Slice Complete
+Graphics
+Cube / capsule / placeholder
+KeEv Living Diorama final-look sample
+Offerings
+~10
+36
+Staff
+1 placeholder
+Misaki + Ren
+Supplier
+1
+3
+Customers
+Generic
+Generic + 3 named
+Pet
+None
+Momo
+Story
+Tutorial only
+7 opening beats
+P&L
+Core formulas
+Polished report + explanation
+Sets
+Test set
+2 complete + 1 teaser
+Discovery
+Basic reveal
+Prestige story reveal
+Living World
+Static
+Day/dusk/night + rain
+Audio
+Placeholder
+Adaptive prototype + key voice / SFX
+Goal
+Is it fun?
+Does it feel like a product?
+
+P3. Slice content manifest
+Shop: 1 modular Ikebukuro Lifestyle Select Shop shell.
+Offerings: 36 total across snacks/tea, drinks, stationery, lifestyle goods, gifts/travel, decorative high-perception goods.
+Staff: Misaki (service / regulars / cozy) and Ren (efficiency / inventory / cost awareness).
+Suppliers: 山田生活商店、月見文具所、星野菓子舖。
+Named customers: 佐藤先生、Ayaka、近藤太太。
+Pet: Momo（三花貓）。
+Sets: 雨夜小店 4/4、春日文具角 4/4、昭和暖木 2/4–3/4 teaser。
+Prestige discovery: 雨夜玻璃小燈。
+P4. Core data contracts (conceptual)
+Entity
+Minimum stable fields
+Offering
+id, region, category, supplier, quality, cost, suggested_price, demand_tags, affixes, set_tags, story_ref
+Staff
+id, locale, abilities[5], traits, salary, role_mastery, story_state, voice_manifest
+Supplier
+id, coverage, profile, partnership, catalogue, hidden_catalogue, request_schedule
+Shop
+id, region, district, archetype, specialization, layout, inventory, staff_roster, build_goal, ratings
+Modifier
+source_id, type, scope, value, stacking_group, cap, order
+WorldState
+region, time_block, calendar, season, weather, festival, world_event, state_id
+StoryState
+story_id, chapter, flags, memories, choices
+Entitlement
+account_id, product_id, store_source, owned, restored_at
+
+P5. Deterministic calculation order
+Recommended calculation pipeline
+Base demand → local world / district context → offering modifiers → staff → equipment → set / synergy → event modifiers → capacity constraints → conversion / average spend → sales → variable costs → staff / rent / operating costs → net profit → ratings / report explanations.
+
+同類 modifier 先按 stacking group 聚合，再套 cap。
+直接 Net Profit % modifier 不作一般 affix；優先修改 demand / traffic / conversion / spend / cost / efficiency。
+Daily report 保存 effect breakdown，供 UI 說明與 bug replay。
+同一 Shop Snapshot + WorldState + seed / deterministic event state 必須可得到相同結果。
+P6. Art asset budget
+Asset family
+Slice target
+Main shop modular shell
+1
+Ikebukuro street / exterior module set
+1 set
+Base furniture / equipment
+~20–25
+Named set pieces
+~10
+Offerings 3D / icon assets
+36
+Named staff 3D
+2
+Named customer 3D
+3
+Supplier portrait / profile art
+3
+Generic customer base models
+~6–8 + variants
+Pet
+Momo ×1
+Main 2D portraits
+~8
+Reusable character animations
+~15–20
+Pet animations
+~8–12
+Weather VFX
+Clear + Rain
+Lighting presets
+Day / Dusk / Night
+
+P7. Audio factory
+`audio_manifest.csv` 作 source of truth：event_id, character, locale, type, prompt/spec, file, loudness target, loop flag。
+ChatGPT Work 負責台詞與 voice bible、語言 QA checklist、batch request、命名、missing-file validation、import metadata。
+ElevenLabs Starter 先用於 slice voice / SFX / music prototype；正式 production 前重新檢查 quota / API / commercial terms。
+Adaptive Tokyo music 最少拆 Base / Night / Rain / Story / Set texture layers；每次只啟用有限 layer budget。
+P8. Performance & device modes
+Feature
+Quality 30
+Smooth 60
+Target
+Stable 30fps
+Stable 60fps on suitable devices
+Shadows
+Higher
+Medium / adaptive
+Crowd
+Higher detail
+Adaptive LOD / density
+Reflections
+Higher
+Reduced update frequency
+Weather particles
+Full
+Adaptive
+Post / DoF
+Higher
+Optimized
+Character animation
+Full
+Full
+UI / input
+Full
+Full
+
+P9. QA / test minimum
+Unit tests：modifier stacking、caps、P&L、inventory、pricing、salary、supplier discount、quality roll ranges。
+Golden tests：固定 ShopSnapshot / WorldState 的整日 simulation 結果。
+Save migration tests：stable IDs、schema version、content update compatibility。
+Performance tests：lower Android / mid Android / high Android / older supported iPhone / current high-end iPhone。
+Localization tests：five locales，text overflow、font fallback、tabular figures、RTL not required at V1。
+Audio tests：missing event、wrong locale、loop click、over-loud SFX、voice cooldown。
+Visual tests：Rain / Night / Set FX / Reduce Motion / minimal FX。
+Content validation：duplicate ID、broken references、missing localization、set pieces、story refs、audio refs、modifier cap violations。
+P10. GO / NO-GO
+GO — Tokyo Full Production
+只有 Gameplay、Economy、Retention Fantasy、Character、Discovery、Visual、Performance、Content Pipeline 八個 Gate 全部通過，才進入 Tokyo full production。核心 Gate 不過，先修 slice，不以『加更多內容』掩蓋問題。
+
+
+Appendix A — Localised product titles
+Locale
+Current title
+Status note
+zh-HK
+下一站・小店物語
+Current source title
+en
+Next Stop, Little Shop
+Current international title
+ja
+次の街へ ～小さなお店物語～
+Native-level naming review before store launch
+th
+ร้านเล็ก ณ จุดหมายถัดไป
+Native-level naming review before store launch
+zh-CN
+下一站・小店物语
+Simplified localisation
+
+Typography baseline
+Locale / use
+Target family
+English / Latin UI
+Plus Jakarta Sans
+Traditional Chinese
+Noto Sans HK
+Japanese
+Noto Sans JP
+Thai
+Noto Sans Thai
+Simplified Chinese
+Noto Sans SC
+Financial / numeric UI
+UI family + tabular numerals
+
+Appendix B — Visual references
+The following references define direction only. The final game must be original and should not reproduce specific copyrighted characters, locations or proprietary designs.
+
+Reference A — stylised 3D diorama / warm isometric shop-space feeling
+
+Reference B — anime / toon skin shading direction; final game should be softer and more healing
+
+Early concept board — shop management / collection / regional expansion mood reference
+
+Appendix C — Launch red lines / explicit non-goals
+No paid gacha / loot box / premium random pet / random paid equipment.
+No mandatory paid subscription / battle pass at launch.
+No forced interstitial / banner ads in the core experience.
+No energy system or paid waiting skip that gates normal play.
+No direct permanent profit multiplier sold for money.
+No paid supplier request frequency / partnership acceleration.
+No player-to-player trading / RMT economy at launch.
+No public free-form chat at launch.
+No region built from stereotypes without research.
+No Masterpiece+/Mythic tier power creep.
+No Day-1 staff obsolescence.
+No login-streak punishment or unique one-day missable reward.
+No situation where paying is required to reach 100% Core Collection.
+No situation where cosmetic spend directly raises the system leaderboard scoring ceiling.
+End-state vision
+What the game should feel like after years of play
+玩家由一間小店出發，幾年後擁有多個城市、多間各有性格的店、長期合作的員工與供應商、熟客與故事、Masterpiece 與明信片。打開第一間店時，仍然能看到最初的角色、同一隻寵物、熟悉的燈光與自己一路留下的回憶。Endgame 不是戰力，而是 ownership、自由與歷史。

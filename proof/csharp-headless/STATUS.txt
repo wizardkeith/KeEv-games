@@ -1,0 +1,9 @@
+FROZEN W0 EXPERIMENT — not the active Web economy.
+.NET 10.0.402, netstandard2.1 C# 8 core. Headless build and 14 explicit tests passed.
+Browser WASM publish failed with MSB4216 ComputeWasmBuildAssets / MSB4027 MetadataLoadContext.
+One correction setting DOTNET_ROOT and PATH was attempted, same failure.
+No browser parity, no WASM runtime payload, no Unity verification.
+This experiment is retained for diagnosis. It must not evolve as a second live economy.
+The sole active W1 economy is src/core/simulation.ts (PORT_REQUIRED_FOR_UNITY).
+Before W2 expansion choose one long-term core and retire/replace the other.
+Project references inside this frozen directory remain relative and buildable.
