@@ -1,0 +1,10 @@
+{
+  "all_absent": {
+    "next-stop-little-shop-art-review": true,
+    "shop.art-review": true,
+    "VITE_ART_REVIEW": true,
+    "__ui-review375": true
+  },
+  "ordinary_production_build": true,
+  "review_wrapper_absent": true
+}

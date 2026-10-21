@@ -1,11 +1,12 @@
+// Frozen W1.1A1 exporter inputs; current art candidate uses tools/art-w1_1b.ts.
 // Rebuild refined W1.1A1 interchange masters without a browser, Blender or Unity.
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 // @ts-expect-error Upstream gltf-validator ships JavaScript without declarations.
 import validator from 'gltf-validator';
-import {grouped} from '../src/art/geometry';
-import {materialSpec,materialRenderState} from '../src/art/materials';
-import {palette,productRecipe,plantRecipe,displayRecipe,counterRecipe,personRecipe,roomRecipe,type Part} from '../src/art/recipes';
+import {grouped} from '../assets/authoring/w1_1a1/source_snapshot/src/art/geometry';
+import {materialSpec,materialRenderState} from '../assets/authoring/w1_1a1/source_snapshot/src/art/materials';
+import {palette,productRecipe,plantRecipe,displayRecipe,counterRecipe,personRecipe,roomRecipe,type Part} from '../assets/authoring/w1_1a1/source_snapshot/src/art/recipes';
 import {catalog} from '../src/core/contracts';
 const assets=[...catalog.offerings.map(o=>({id:o.id,name:o.key,recipe:productRecipe(o.id,o.color)})),{id:'fixture.shop-counter.w1_1a1',name:'counter-w1_1a1',recipe:counterRecipe()},{id:'display.w1_1a1',name:'display-w1_1a1',recipe:displayRecipe()},{id:'decoration.plant.w1_1a1',name:'plant-w1_1a1',recipe:plantRecipe()},{id:'staff.graybox',name:'generic-staff-w1_1a1',recipe:personRecipe(palette.lavender)},{id:'layout.graybox.1',name:'room-w1_1a1',recipe:roomRecipe()}];
 function glb(name:string,recipe:Part[]){

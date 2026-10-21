@@ -1,0 +1,18 @@
+BJS - [01:39:15]: Babylon.js v8.32.0 - Null engine
+BJS - [01:39:15]: Babylon.js v8.32.0 - Null engine
+BJS - [01:39:15]: Babylon.js v8.32.0 - Null engine
+BJS - [01:39:15]: Babylon.js v8.32.0 - Null engine
+BJS - [01:39:15]: Babylon.js v8.32.0 - Null engine
+✔ authored sRGB decodes once to linear light, preserving black, white, low segment and alpha (2.183302ms)
+✔ all actual candidate GLBs contain correctly decoded factors and original semantic alpha/sidedness (3.333393ms)
+✔ curated frame envelope projects inside the real Babylon RH camera for Zen, normal and panel viewports (49.303645ms)
+✔ resting display products use the authored table surface with millimetre clearance, not a floating offset (25.161052ms)
+✔ accepted W1.1A1 master/Web bytes and frozen authoring sources remain intact (1.931799ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 715.155685

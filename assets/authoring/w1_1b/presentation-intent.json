@@ -1,0 +1,93 @@
+{
+  "intent": {
+    "id": "living-diorama.w1_1b",
+    "key": {
+      "color": "#FFE5C2",
+      "intensity": 1.75,
+      "direction": [
+        0.78,
+        -0.82,
+        0.22
+      ],
+      "position": [
+        -8,
+        8,
+        -2
+      ]
+    },
+    "fill": {
+      "color": "#EDF1FA",
+      "ground": "#AA9A8B",
+      "intensity": 0.72
+    },
+    "shadow": {
+      "size": 1024,
+      "normalBias": 0.008,
+      "bias": 0.0005,
+      "darkness": 0.18
+    },
+    "floorY": 0.079,
+    "fixtureBaseY": 0.08,
+    "actorBaseY": 0.065,
+    "displaySurfaceY": 1.0725,
+    "restingGap": 0.001,
+    "framingHull": [
+      [
+        -5,
+        -0.42,
+        -4
+      ],
+      [
+        -5,
+        -0.42,
+        4
+      ],
+      [
+        5,
+        -0.42,
+        -4
+      ],
+      [
+        5,
+        -0.42,
+        4
+      ],
+      [
+        -4.58,
+        3.5,
+        -3.38
+      ],
+      [
+        -4.58,
+        3.5,
+        3.38
+      ],
+      [
+        4.55,
+        3.5,
+        3.38
+      ],
+      [
+        2.6,
+        1.5,
+        -2.45
+      ]
+    ],
+    "target": [
+      0.85,
+      0.85,
+      -0.85
+    ],
+    "cameraMargin": 0.94,
+    "framingGuard": 1.001,
+    "preferredDistanceScale": 0.88
+  },
+  "colorSpace": "Hex authoring in sRGB, IEC piecewise decode once to linear PBR baseColorFactor; alpha never gamma-converted.",
+  "portable": "Palette, linear factors, roles, dimensions, framing hull, ground plane and key/fill relationship are portable intent. Babylon intensities, PCF modes, bias and scene exposure are adapter-specific; URP/native needs visual calibration.",
+  "quality": {
+    "high": "1024 PCF medium",
+    "low": "1024 PCF low, existing alternate refresh and 1.5 hardware scaling"
+  },
+  "effects": "Existing effect IDs, pool and presentation lifecycles preserved; no new lights/textures/render targets/postprocess.",
+  "verification": "Source/export/headless only; after appearance pending a real WebGL image."
+}

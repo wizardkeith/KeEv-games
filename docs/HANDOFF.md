@@ -1,53 +1,54 @@
-# W1.1A1 — focused UI refinement
+# W1.1B 集中3D美術候選 — 交接
 
-2026-10-22（香港）。依同日 Visual Review and Work Prompt 執行，延續已接受 W1.1A1 Closeout；來源修正仍封存，不重開 A1／A2／F1–F3 或新增故事、經濟與特效。**3D 視覺待確認**。
+2026-10-22（香港）。延續已驗收UI v6及W1.1A1 Closeout；本輪只完善既有靜態小店呈現。**真正BEFORE已看；已完成source候選，AFTER觀感待真實畫面確認。**
 
-Site：appgprj_6ad82a08ed2881918ebcc2dd206a122d
+同一Site：appgprj_6ad82a08ed2881918ebcc2dd206a122d
 URL：https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site
 
-開始前以正式 source helper 核對最新 canonical commit 為 `6c42daeae2246275bc98553b774fe800c068cc32`，Site version 5／public／policy revision 2，沒有其後工作被覆蓋。本輪實際 source commit、Site version 及部署結果由交付檔所附 `DELIVERY_RECEIPT.json` 記錄。回執是 commit 後的交付 metadata，不聲稱它已在相同 Git commit 內。
+開始前正式source helper核對canonical為b093c50fa13cfca80c8b10fdfd96e716114a2d7d，Site v6／public／policy revision2，tracked tree clean，沒有較新工作被覆蓋。最終source commit、Site version及部署結果見交付包內真正的DELIVERY_RECEIPT.json；這是commit後產生的交付metadata，不冒稱已在同一Git commit內。
 
-## 改動與理由
+## 本輪處理
 
-1. 入貨：收緊目錄與數量／目的架上方留白，移除重複的目的架說明；每件成本／本次總額並排，入貨後現金仍在動作之前。購買與上架分開、保留商品所在卡片、數量／總額及目標架標籤，沒有全局固定購買列。原 52dvh 手機 drawer、底部導航位置、主要字體及 44px 操作目標不變。
-2. 玩家文案：五語「灰盒供應商」改為一般入貨目錄；沒有創造正式供應商身份。技術移植標記留在 README／CONTRACT 等開發文件；「關於此試作」保留本機存檔／正式帳戶轉移未保證、美術／數值／翻譯待審等玩家限制。
-3. 手記：保留溫暖標題與完成內文；先顯示入貨／欣賞小店，之後只顯示一次本地化 Select 品質、獨立 Unique 標記，以及「教學樣本 · 無經營加成 · 非正式故事物品」。沒有更改品質 ID、Unique tag、0 stats 或存檔含義。
-4. 定價／陳列：新增情境專用五語字串「儲存售價」「取消改價」「收起陳列」，共用 apply／cancel／clear 未改；原商品仍在存貨說明保留。動作 handler 不變。Standard 商品品質也使用共用本地化顯示字串。
+| BEFORE問題 | 來源候選改動 |
+|---|---|
+| 整體灰淡，牆／木／人物明度相近 | materials.ts統一sRGB→linear PBR色彩轉換，runtime與新版GLB同步；recipes.ts分開暖木地板、桌面、支撐及頭髮／皮膚／圍裙色塊 |
+| 接觸層次弱 | 查出桌腳／櫃身底部實際離地約14.1cm，延伸原有支撐至地面；鞋底、盆栽及商品落點使用地板／桌面基準。既有1024陰影調低偏移，標準用PCF medium，簡約回到原低成本路徑 |
+| 商品／人物細、留白較多 | direction.ts收近及重新平衡焦點；aspect1.6半徑15.8→14.3298545，約9.3%收近。保留有限角度／zoom及原viewport避讓，依完整房間邊界保護窄屏構圖 |
+| 材質識別不清 | 保留原有木／紙／布／陶roughness與透明面政策，透過正確線性色彩、色階、光線與接觸改善；沒有重開杯口／杯把／提帶修復 |
 
-只更改 src/ui/panels.ts、src/style.css、五語 JSON 與對應作者文案 rows；其餘為文件、附件與實際證據。src/main.ts、world、core、storage、presentation、schema2／ts-w1-2、內容 ID、catalog、所有原始資源／歷史 masters／authoring、測試及 lockfile 不變。未重匯出 GLB，未重新開啟封存的資產證明工作。
+詳細設計、數值與可攜／引擎專用界線見docs/ART_W1_1B.md。新assets/authoring/w1_1b/presentation-intent.json保存色彩、光源關係、構圖邊界、地面及降級意圖。沒有新增光源、貼圖、後製、天氣、步行、正式角色或故事；既有FX常數／生命週期／Minimal／Reduce Motion保留。
 
-## 實際驗證
+## 已看過的真正畫面
 
-- 原有 **57 tests PASS，0 fail／skip／cancelled**；沒有為純間距／文案新增重複實作的測試。
-- content validator PASS：10 商品、五語各 174 keys、六品質階與獨立 Unique 不變。新增 6 個顯示 key；supplier／revealed 為原 key 文案更新。
-- TypeScript／正常 production build PASS；原有大 chunk warning 保留。
-- 目視比較 managed Chrome 電腦版 1363×936 與 375×780 CSS iframe 的修改前後入貨／手記。這是 CSS viewport，並非手機實機或觸控效能驗收。
-- 五語均在 scrollTop=0 時完整顯示首件購買按鈕；實測 buy bottom=680.875、panel bottom=701 CSS px，按鈕高44px，頁面沒有橫向溢出。五語完成卡後續操作亦在首屏內。
-- 目視保存的窄屏截圖為 zh-HK、EN、TH；JA／zh-CN 以實際 DOM 文案與座標核對，不把錯時合成的畫面冒充指定面板截圖。
-- 數量0：invalid 與對應錯誤說明、禁用購買、焦點留在同一 input。數量1000：不足現金提示¥348,600；之後還原5。Tab 數量→目的架、Escape 關閉並返回入貨導航焦點、PageDown 讓面板 scrollTop>0（觀察131）正常。雲端原生 wheel wrapper 未推動 iframe，沒有據此宣稱手機觸控測試。
-- 改價草稿900→取消後回800，現價仍800。完成卡「入貨」開入貨面板，「欣賞小店」進 Zen 並可返回。未執行入貨、銷售、清架、改價提交、匯入或重置；沿用既有隔離審查進度，顯示現金一直¥51,400。未觸碰正式玩家 DB。
-- 新的正常 production 移除 QA wrapper、review DB/key 與編譯開關；審查頁只由 VITE_ART_REVIEW=1 的本地 build 產生。正式 build 不包含測試頁。
+成功開啟三張原PNG：Zen、入貨與已上架畫面；亦查看原MP4在12s及18s的抽幀。不是完整逐幀播放／GPU測量。原PNG與兩幀保存在evidence/art_2026_10_22/before/，before-evidence.json保存來源、hash及影片參照。影片19.866633秒、1862×1206、錄製30fps；錄製fps不代表遊戲fps。
 
-## 視覺證據界線
+因此，不再說「沒有3D證據」。本輪after仍未目視：最終候選的支援managed Chrome預覽再次回報Error: WebGL not supported（2026-10-21T17:39:44.751Z，即香港2026-10-22 01:39）。正常fallback UI可用，沿用隔離審查進度¥51,400，沒有操作經濟、匯入／重置、改玩家DB或注入假庫存。
 
-本輪 QA 仍回報 `Error: WebGL not supported`，更新 UI 的錯誤時間為 2026-10-21T16:45:05.251Z（香港2026-10-22 00:45）。截圖只證明 UI，並不是小店3D實拍、光影／材質／動效驗收或FPS。未以空白 canvas、NullEngine 或AI圖替代。
+## 真正完成的驗證
 
-因此本輪不調整3D構圖、光影、材質、人物及特效。Bible §9／20／28／29，以及原ART／VFX規格仍是後續依據。沒有要求安裝軟件、Unity、driver或更改公司安全設定。
+- **62 tests PASS，0 fail／skip／cancelled**。原57具名案例保留，新增5個：IEC色彩轉換／alpha、實際GLB factor一致性、Babylon RH鏡頭投影、家具／人物／商品實際落點、歷史資源／來源hash。
+- 鏡頭測試用真實Babylon view/projection矩陣，在5種viewport與每種231個yaw／beta取樣檢查房間邊界；這是headless數學驗證，不是實拍構圖、遮擋或選取舒適度驗收。
+- 現行runtime材質工廠與獨立匯入GLB保持一致；原杯口／杯把射線案例繼續讀已接受的W1.1A1 GLB，未刪去原測試。
+- 新15個GLB共503,072bytes；Khronos結構檢查0errors／0warnings；NullEngine獨立匯入15個、77個材質政策通過。這些不是3D觀感或native驗收。
+- content validator PASS：10商品、五語各174keys、品質及Unique含義不變。TypeScript／正常production build PASS；原有大chunk warning保留。
+- source inventory：空店mesh分組173→174、滿陳列233→234；材質身份64→66；opaque caster分組144→146／204→206。頂點／三角形數不變；新燈／貼圖／render target均0。只是來源成本盤點，並非GPU／draw calls／FPS。
+- 主程式／boot、UI v6、五語、字型、core、storage、時間、catalog、schema2／ts-w1-2、玩家進度及package/lockfile完全不變。scope-preservation.json記錄範圍。
 
-## 下一份最少3D取樣
+## 資源與可重建來源
 
-同一公開網址、平時看得見3D的瀏覽器及現有進度即可，不必重置或額外買貨：
+完整可回復來源、交換素材及資源歷史保存在同一Site canonical Git checkpoint。新15masters：assets/masters/w1_1b/；15相同public交換副本：public/assets/w1_1b/；manifest保存hash／sRGB／linear factors／材質意圖。runtime依然使用共用recipes建立場景，不新增GLB下載依賴。
 
-A. 更多→欣賞小店：窗邊、地板、櫃台及三架的 Zen 全景。
-B. 選架2，再開入貨／店務：正常操作畫面，方便時用平時手機。
-C. 有限縮放：兩三款已有商品與通用人物近鏡，含受光及陰影面。
+舊W1.1／W1.1A／W1.1A1素材、manifests及證據不變。已接受W1.1A1的精確recipes／materials／geometry／world／exporter來源另存assets/authoring/w1_1a1/source_snapshot/，帶原commit及hash。舊exporter改為明確讀凍結來源，避免今後誤用新色票覆寫舊masters。
 
-只方便一張先傳A；短片可選。附裝置／瀏覽器、畫質、最少特效及系統減少動態狀態。若只見「3D未能啟動」，回傳提示即可。既有 docs/W1_1A_Visual_Check_zh-HK.md 的路徑繼續有效。
+Node24＋原lockfile：npm ci → npm test → npm run validate → npm run build。
+本輪交換檔：node --import tsx tools/art-w1_1b.ts。
+獨立匯入：node tools/validate-art-w1_1b.mjs。
+Unity／URP、Android／iOS仍需adapter及裝置驗證；沒有換引擎或要求安裝native工具。
 
-## 來源與交付
+## 發佈及下一份畫面
 
-完整可重建來源由同一 Site canonical Git checkpoint 保存；重建：Node24 + 原 lockfile，npm ci → npm test → npm run validate → npm run build。原來源／資源歷史與上一輪完整來源ZIP保留，沒有重製封存的 Closeout 證明包。
+沿用同一public Site及網址，不搬移／重設玩家存檔。交付證據包附真正部署回執、目前manifest／intent、實際測試及before參照；它是本輪報告包，完整source由canonical Git保存，不重製封存Closeout證明包。ZIP完整關閉後用正常reader核對CRC／完整清單／各項hash，再提供大小與SHA256。
 
-本輪交付是 UI handoff／實際測試結果與修改前後畫面證據；ZIP包含本輪真正部署回執。採完整關閉 writer 後正常 ZIP reader 的 CRC／清單檢查，再提供實際大小與 SHA256，不交付尚未寫完的ZIP。
+候選after最少比較：用平時能看3D的原網址、相同進度／viewport／畫質，拍一張Zen全景及一張架2＋入貨／店務。盡量維持before角度；不需要重新買貨或重置。先看亮暗細節、腳底／商品落點、全店入鏡與人物色塊；方便才補一次普通互動短片看既有FX。沒有錄影前不再加強特效。
 
-上一輪 accepted handoff 逐byte封存於 docs/HANDOFF_W1_1A1_Closeout_Archived.md；回退點為 version5／6c42daeae2246275bc98553b774fe800c068cc32，只回退程式，不回退玩家進度或更改 public。此輪 UI 範圍完成後停止；3D精修等待真正畫面判斷。
+回退點：v6／b093c50fa13cfca80c8b10fdfd96e716114a2d7d，只回退程式，不回退存檔或更改public。已驗收UI交接完整封存在docs/HANDOFF_UI_v6_Archived.md。這輪候選完成後停在after觀感門檻，不自動展開故事、全面重設計或新內容。

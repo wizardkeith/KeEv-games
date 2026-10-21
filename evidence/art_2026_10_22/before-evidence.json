@@ -1,0 +1,48 @@
+[
+  {
+    "input": "image(2).png",
+    "retained": "evidence/art_2026_10_22/before/zen.png",
+    "sha256": "0b9ea76447cf51a2e1bdf95db0e19a011d3a53f95ba208c31d342521efce8913",
+    "library_file_id": "libfile_108f1f24e7a48191acf0e1e2bf1f0a11",
+    "viewed": true
+  },
+  {
+    "input": "image(3).png",
+    "retained": "evidence/art_2026_10_22/before/stock.png",
+    "sha256": "74dc212964152678fad4d6b5336f8616642037aa22d4aef6103954ca26b1ffd3",
+    "library_file_id": "libfile_14bfc0458f4881918e4acd16991df01c",
+    "viewed": true
+  },
+  {
+    "input": "image(4).png",
+    "retained": "evidence/art_2026_10_22/before/stocked.png",
+    "sha256": "f3fd7297eedfe98a8f96c825bbb95bc902bd6b452122e9d7f3d6aad36ff2cf3a",
+    "library_file_id": "libfile_6055a12473f08191a42b88a350496263",
+    "viewed": true
+  },
+  {
+    "input": "video-t12.png",
+    "retained": "evidence/art_2026_10_22/before/video-t12.png",
+    "sha256": "966aa247f4f1773c56ffa6420e2afa3c50693ae0d67c1ff55c50278a3d4c7c8f",
+    "library_file_id": null,
+    "viewed": true
+  },
+  {
+    "input": "video-t18.png",
+    "retained": "evidence/art_2026_10_22/before/video-t18.png",
+    "sha256": "cbab7bfa13887118531521924db4fbc026b0ade04d559c5ac0aad7b54af5b8a0",
+    "library_file_id": null,
+    "viewed": true
+  },
+  {
+    "input": "20261021-1708-03.4453037.mp4",
+    "library_file_id": "libfile_64f031dd3a088191b0f9d75e6d99f80d",
+    "sha256": "abb21d7186537e01d6fec06e56ec138f49999bcb3fb844425e2a858fd1e7f1cc",
+    "durationSeconds": 19.866633,
+    "width": 1862,
+    "height": 1206,
+    "recordingFrameRate": "30/1; NOT game FPS",
+    "viewed": "Extracted frames at 12s and 18s, not full playback/frame-by-frame review",
+    "retention": "Original video remains in the provided file history; no duplicate 22MB Git copy."
+  }
+]

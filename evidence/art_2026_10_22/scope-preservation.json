@@ -1,0 +1,17 @@
+{
+  "baseline": "b093c50fa13cfca80c8b10fdfd96e716114a2d7d",
+  "unchanged_paths": [
+    "src/main.ts",
+    "src/ui",
+    "src/style.css",
+    "src/content",
+    "src/core",
+    "src/platform",
+    "src/presentation",
+    "package.json",
+    "package-lock.json"
+  ],
+  "historical_assets": "Original W1.1/W1.1A/W1.1A1 bytes preserved; regression tests verify manifests and frozen source hashes.",
+  "old_test_change": "Existing actual-runtime material parity case now reads the current w1_1b manifest; every prior named test retained, old geometry ray cases still read accepted w1_1a1 GLB.",
+  "source_snapshot": "assets/authoring/w1_1a1/source_snapshot/PROVENANCE.json"
+}

@@ -47,3 +47,7 @@ Current 15 masters total 495,332 bytes; the three new public derivatives total 1
 ## Verification boundary
 
 Five focused tests and the original eight art tests pass. The root task owns complete original-43/core/storage/presentation regressions, build/deployment, and F1–F3 lifecycle changes. NullEngine is not a real WebGL render. Actual cup appearance, transparency under lighting, camera composition, touch, Unity/URP/native imports and device performance remain NOT TESTED here. The source geometry, material intent and GLBs remain reusable; renderer/platform adapters and visual validation are still required.
+
+## Historical status — 2026-10-22
+
+This accepted source/asset correction is frozen. Its exact geometry/material/recipe/exporter/world sources are now additionally preserved under assets/authoring/w1_1a1/source_snapshot with canonical b093c50fa13cfca80c8b10fdfd96e716114a2d7d provenance. The old exporter uses those frozen inputs. Current rendering/interchange color interpretation is refined separately in docs/ART_W1_1B.md; no mug topology, transparency sidedness, alpha or PBR roughness policy was reopened. The actual-runtime parity regression follows the current export while original geometry ray cases and historical byte checks remain retained.

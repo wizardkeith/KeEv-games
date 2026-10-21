@@ -1,0 +1,107 @@
+[
+  {
+    "id": "off.notebook",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "bytes": 21492
+  },
+  {
+    "id": "off.pencil",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "bytes": 14448
+  },
+  {
+    "id": "off.mug",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "bytes": 21304
+  },
+  {
+    "id": "off.tea",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "bytes": 9644
+  },
+  {
+    "id": "off.cookie",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "bytes": 23432
+  },
+  {
+    "id": "off.tote",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "bytes": 25672
+  },
+  {
+    "id": "off.card",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "bytes": 14112
+  },
+  {
+    "id": "off.towel",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "bytes": 10284
+  },
+  {
+    "id": "off.tray",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "bytes": 20408
+  },
+  {
+    "id": "off.vase",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "bytes": 15516
+  },
+  {
+    "id": "fixture.shop-counter.w1_1b",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "bytes": 31052
+  },
+  {
+    "id": "display.w1_1b",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "bytes": 36364
+  },
+  {
+    "id": "decoration.plant.w1_1b",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "bytes": 45088
+  },
+  {
+    "id": "staff.graybox",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "bytes": 103816
+  },
+  {
+    "id": "layout.graybox.1",
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0,
+    "bytes": 110424
+  }
+]

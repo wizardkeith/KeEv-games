@@ -1,0 +1,12 @@
+{
+  "canonical_commit": "b093c50fa13cfca80c8b10fdfd96e716114a2d7d",
+  "files": {
+    "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
+    "src/art/materials.ts": "855dd3bde18210726aabd89c472ef286b083dd2dc2d076157e5eb4b2e8131f91",
+    "src/art/recipes.ts": "f4a7d0754002c2244739013b25742471c26c57e8aa243876c8e1ee16cd9b5fcd",
+    "src/world.ts": "0b8cc7bc07d14c86e3d99a1e3604babcd6b3bcfdeb269dacec3ab809ad391a3e",
+    "tools/art-w1_1.ts": "76678e9f791fe7d985045393f96fcebe872fd85e27eb99966342de48939c0684",
+    "tools/validate-art-w1_1a1.mjs": "3f7ed0d9a8fce12b3a0747f008bcf2d1c5ccdef1e8bae865634b5cf06f930120"
+  },
+  "rebuild": "Original W1.1A1 exporter + these exact source files and unchanged catalog/contracts/lockfile at the recorded canonical commit."
+}

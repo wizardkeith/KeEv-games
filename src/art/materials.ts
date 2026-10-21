@@ -16,8 +16,14 @@ const specifications:Record<MaterialRole,MaterialSpec>={
  ink:{id:'mat.printed-ink.v1',roughness:.90,metallic:0,ior:1.45,alphaMode:'OPAQUE',doubleSided:false,note:'Printed marks and tiny facial features.'}
 };
 export function materialSpec(role:MaterialRole='paint'):Readonly<MaterialSpec>{return specifications[role];}
-export function materialIdentity(role:MaterialRole,color:string,alpha=1){const s=materialSpec(role);return `${s.id}:${color.toUpperCase()}:${alpha}:r${s.roughness}:m${s.metallic}:ior${s.ior}:${s.alphaMode}:ds${Number(s.doubleSided)}`;}
+export function materialIdentity(role:MaterialRole,color:string,alpha=1){const s=materialSpec(role);return `${s.id}:${color.toUpperCase()}:${alpha}:r${s.roughness}:m${s.metallic}:ior${s.ior}:${s.alphaMode}:ds${Number(s.doubleSided)}:linear-srgb-v2`;}
+// Hex palettes are authored in sRGB; PBR factors use linear-light RGB in both engines.
+// IEC 61966-2-1 transfer, without engine-specific approximate gamma or renderer state.
+export function linearColor(hex:string):[number,number,number]{
+ if(!/^#[0-9a-f]{6}$/i.test(hex))throw Error('invalid authored sRGB color');
+ return [1,3,5].map(i=>{const c=parseInt(hex.slice(i,i+2),16)/255;return c<=.04045?c/12.92:Math.pow((c+.055)/1.055,2.4);}) as [number,number,number];
+}
 // Shared neutral adapter contract: renderer/exporter map these explicit values.
 export function materialRenderState(role:MaterialRole,color:string,alpha=1){
- const s=materialSpec(role);return {materialId:materialIdentity(role,color,alpha),roughness:s.roughness,metallic:s.metallic,indexOfRefraction:s.ior,alpha,alphaBlend:s.alphaMode==='BLEND'||alpha<1,doubleSided:s.doubleSided,backFaceCulling:!s.doubleSided,twoSidedLighting:s.doubleSided};
+ const s=materialSpec(role);return {materialId:materialIdentity(role,color,alpha),baseColorLinear:linearColor(color),colorEncoding:'linear-from-authored-srgb',roughness:s.roughness,metallic:s.metallic,indexOfRefraction:s.ior,alpha,alphaBlend:s.alphaMode==='BLEND'||alpha<1,doubleSided:s.doubleSided,backFaceCulling:!s.doubleSided,twoSidedLighting:s.doubleSided};
 }
