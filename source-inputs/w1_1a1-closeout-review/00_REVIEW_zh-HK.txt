@@ -1,0 +1,126 @@
+《下一站・小店物語》W1.1A1 獨立審核
+2026-10-21 · Asia/Hong_Kong
+
+結論
+主要 A1／A2／F1–F3 修正的原重現路徑通過，原經營、存檔、素材和資產可重建性保持完整。可維持目前公開試玩。
+另有一個 P3、首次 world 載入期間的既有過時呈現細位，適合下次小修收尾；不是金錢／庫存／獎勵重複提交。
+收到的 source ZIP 已截斷，不能作完整 checkpoint。我已從精確 canonical commit 重新匯出完整來源包並驗證；沒有改遊戲、重新發佈或改 public。
+真正 WebGL 光影、動態、透明排序、手機觸控及裝置效能仍未驗收。
+
+一、基準與網站
+
+- Project：appgprj_6ad82a08ed2881918ebcc2dd206a122d。
+- URL：https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site
+- 本次獨立取得的 Site metadata：active，latest version 4，public，policy revision 2。
+- 最新 canonical source：2da2ca394bd2e1c0d3ec65d6e0f712b21a5294c4，與另附 handoff 完全吻合。
+- 起點 W1.1A：8296c3251b0a7bfd43221781ba7241319891f396。
+- HANDOFF_W1_1A1_2026-10-21.md 與 .txt 逐 byte 相同。
+- 本次來源檢查使用正式 canonical source。收到的 partial ZIP 只用於完整性和來源對照，沒有假設它已完整。
+- 本次沒有 commit、push、部署、修改 application source 或玩家正常／沙盒進度。
+
+二、交付 ZIP 缺陷與已完成的補救
+
+收到的 Next_Stop_Little_Shop_W1_1A1_Source_2026-10-21.zip：
+- 26,832,651 bytes。
+- SHA256：4d480241a88645c9acb124b7e20625eb90643186381b74084a13186bf6076648。
+- 一般 ZIP reader 報 BadZipFile；沒有 central directory／end-of-central-directory。
+- EOF 停在 source-inputs/source_bible/ 的 local record 之後。
+- 能從完整 local records 讀回 248 個檔案及47個目錄，每個檔案 CRC 正確；248個檔案全部與 canonical 相同。
+- Canonical 有334個 tracked files；這份副本缺86個，包括31個src、7個tests、16個tools、31個source-inputs及tsconfig.json。
+- 不能只重建 ZIP 索引後便稱為完整修復；後半部檔案確實不存在於收到的副本。
+- 未能判斷截斷發生於原始打包、上載或傳送哪一步；不將原因歸咎於使用者。
+
+已完成補救：
+Next_Stop_Little_Shop_W1_1A1_Source_Complete_2026-10-21.zip
+由精確 commit 匯出全部334個 tracked files，逐檔與已審核來源相同。正常 ZIP CRC、完整檔案hash及manifest核對通過。
+另附使用者原始 HANDOFF、明確標示來源的 DELIVERY_RECEIPT.json、重新打包說明及 SHA256 manifest。
+Canonical 本身不追蹤 DELIVERY_RECEIPT.json；該檔是審核者由使用者提供的實際回執段落整理，並非原Git檔案或新部署回執。
+完整來源包未修改上述commit的任何tracked file，也不包含安裝依賴、build output、Git認證資料或玩家存檔。
+精確包大小／SHA256見 reviewer_evidence/repaired-source-archive.json。
+
+三、獨立執行結果
+
+- npm ci --ignore-scripts --offline：成功，沿用原精確lockfile，26個packages。
+- npm test：7個test files全部成功。此環境按檔案摘要，因此再各自以獨立Node process執行，保留fake IndexedDB隔離並核對具名案例。
+- 55 tests：55 pass、0 fail、0 skipped、0 cancelled。原43＋art新增5＋presentation新增7。
+- npm run validate：errors=[]；10 Offerings、5 locales、每語言168 keys、六品質階級與獨立Unique。
+- npm run build：TypeScript與production build成功，既有>500kB chunk warning仍保留。
+- 新15個GLB masters：495,332 bytes；全部manifest hash吻合；Khronos零errors／warnings。
+- 新art測試執行實際runtime material factory及GLB重新匯入；獨立review probe再核對3個glass＋2個mug ceramic材質。
+- 普通production dist有95個檔案；沒有review DB/key、VITE_ART_REVIEW、QA頁標記或tests/tools/evidence/source-inputs目錄。
+- 全部驗證後 canonical git status 仍乾淨。
+
+四、A1／A2：已修正
+
+A1 陶杯
+- 杯沿採用與內外壁相同的12段邊界，連接完整壁厚。
+- 原缺口射線 [.112,1,0] 向下，現命中杯沿 y=.243227243m，舊版會落到杯底約.03m。
+- 獨立60個角度×3個壁厚位置共180個樣本全部命中頂部杯沿；中央射線仍到內底y=.033500001m，沒有封死杯口。
+- 把手改成XY平面有端蓋的C形管；上下y=.070/.180m實際三角形交集均包含杯身表面，各有約.005688483m壁內重疊。
+- source／實際GLB交點最大誤差分別7.50e-9／2.61e-8m；把手孔保留，未深入杯腔。此為實體接觸，並非聲稱已焊接成單一拓撲。
+
+A2 材質
+- shared materialRenderState明確提供身份、alpha mode、backFaceCulling、twoSidedLighting；runtime／exporter共用。
+- 全部76個GLB材質中，3個glass為雙面，另73個維持單面；沒有一律改雙面。
+- 實際world.material()抽取執行與GLB重新匯入的代表材質，顏色、alpha、roughness、metallic、alpha blend及雙面設定一致。
+- IOR仍是已披露限制：runtime glass1.45，一般GLB import1.5；GLB只有extras.iorIntent，沒有KHR_materials_ior。日後native adapter仍須處理，符合本輪原定範圍。
+
+五、F1–F3與診斷：原主要重現通過
+
+F1 正常啟動後的pending commit
+run在await前捕捉presentation epoch。committed先消費／去重真正事件，再檢查hidden與epoch；world入口另防hidden／disposed。
+hidden時才resolve及hide→resume之後才resolve的原重現均抑制瞬時FX／聲音；交易正常提交一次。
+
+F2 Reveal／Skip
+共用vfx.reveal.duration；UI deadline會明確取消scene clock；自然完成、取消、替代與靜態政策亦通知UI。
+舊timer有epoch／reveal-state guard，50ms dt clamp保留；Low／Minimal／Reduce Motion／場景不可用的主要呈現政策一致。
+新增測試涵蓋受控慢幀、timer、替代、skip、取消及scene不可用；這不是實際GPU動畫測試。
+
+F3 貨架目標
+click時捕捉不可變slot，command、成功文字和run使用同一目標；projector再從真正填入商品的changed shelf推導FX。
+架2操作pending時選架3，實際結果與通知／FX仍指架2；selection保留架3。
+
+診斷
+worldReady／worldAvailable代表目前可用；worldEverReady與startupMs保留歷史。context-loss主處理亦會取消呈現並清理world。
+
+六、P3非阻塞備註：首次world載入期間的visibility窗口
+
+來源：src/main.ts boot()，約136–140行。
+UI先draw並可操作，接著await createWorld；main的visibilitychange listener要等world完成才註冊。
+
+獨立有限probe步驟：
+1. 世界還在載入，玩家發出可能帶來成交的操作，結果延後交付。
+2. 玩家hidden，再返回visible。
+3. world完成載入；之後操作結果才送回。
+
+觀察：載入期間visibility listeners=0、epoch=0；hide→resume後epoch仍0；結果交付時FX1次、audio1次。
+真實Saves／fake IndexedDB結果revision4→5，只售5件，沒有重複交易。這是過時呈現，沒有新經濟失敗。
+相同listener位置在W1.1A已存在，屬既有startup-only殘留，不稱為本輪新回歸。
+最小修正是讓presentation cancellation listener在UI可操作前接好，正常resume仍需state/Saves就緒；避免重複註冊。不需要改Core、Saves或世界架構。
+此項可作下一次局部收尾，不要求撤下目前公開試玩或重開整套美術。
+
+七、保存與可重建性
+
+- 125個protected files獨立重新列出並逐byte核對，全數與W1.1A相同：core4、content7、storage1、package/lock/tsconfig3、fixture1、舊masters45、舊public assets33、fonts5、原source inputs18、原authoring8。
+- 原5個tests檔案（43案例）完整保留；舊C# proof11檔未改。
+- 四份asset manifests共94個實際master/Web hash檢查通過；review-input manifest的19檔亦全部吻合。
+- 五個W1.1A frozen source直接對照baseline Git blobs，完全相同。
+- 在獨立副本實際執行舊source snapshot exporter：15/15舊masters逐byte重建相同，491,144bytes。
+- 同法執行W1.1A1 exporter：15/15新masters逐byte相同，495,332bytes，只生成3個public derivatives，159,624bytes。
+- Canonical baseline→HEAD：10 modified、72 added、0 deleted；修改集中在美術、呈現、exporter及文件。沒有改經濟、故事、依賴、schema或存檔規則。
+
+八、本次瀏覽器證據界線
+
+重新建置compile-only隔離review版本，用支援的預覽方式打開。再次取得Error: WebGL not supported。
+該隔離review DB已有W1.1A1測試完成進度；本次只檢查設定、手記及reload，沒有重建／覆寫這份fixture。
+觀察現金¥51,400、Tokyo11:00、完成卡可用，沒有Skip；reload後金額與完成卡仍保留。
+沒有重跑handoff的命名→入貨→上架→售出→reveal整個流程；該完整流程仍屬實作者提供證據。
+沒有取得真正3D畫面、實體觸控、GPU context-loss、OS減少動態或FPS；沒有以NullEngine／mock tests替代這些驗收。
+預覽已停止、review分頁已關閉；未操作公開Site的玩家存檔。
+
+九、下一步
+
+可以接受本輪主要來源修正，保存完整checkpoint。下次如繼續Work，使用01_WORK_CLOSEOUT_PROMPT_zh-HK.txt只處理startup visibility細位與完整交付，不重做已通過A1/A2或原F1–F3案例。
+真正美術觀感下一步可用Zen全景、架2＋面板、商品／角色近鏡及10–15秒動效短片評估。仍以Bible的chill／治癒／溫暖／精緻方向為準。
+
+本包附獨立證據、測試記錄與可重現probe；不含玩家存檔、瀏覽器截圖或認證資料。

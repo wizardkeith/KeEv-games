@@ -1,6 +1,6 @@
 # 下一站・小店物語 / Next Stop, Little Shop
 
-W1.1A1 narrow art / VFX lifecycle correction candidate by KeEv Games. The player names their own business. This checkpoint improves the ten-item management loop and preserves the original Bible. It stops before full Tokyo content production.
+W1.1A1 source closeout candidate (startup visibility P3) by KeEv Games. The player names their own business. This checkpoint improves the ten-item management loop and preserves the original Bible. It stops before full Tokyo content production.
 
 ## Run and verify
 
@@ -45,3 +45,5 @@ Browser DOM/IndexedDB walkthrough and CSS viewport checks are recorded in docs/H
 Snapshot schema 2 / simulation ts-w1-2 migrates valid v1 data without resetting saves. Read docs/MIGRATION_W1_1.md and docs/RECOVERY_W1_1.md. W1.1A1 preserves W1.1A art, W1.1 economy and saves. Additional art source: src/art/, src/ui/thumbnails.ts; 15 original reusable GLB masters and Web copies; see docs/ART_W1_1A1.md and docs/VFX_W1_1A.md. Regenerate/export with `node --import tsx tools/art-w1_1.ts`; independently import with `node tools/validate-art-w1_1a1.mjs`. Native Unity/URP and Android/iOS adapters remain pending.
 
 For safe local visual review, build with `VITE_ART_REVIEW=1 npm run build`; it uses a separate QA database and mode/draft/locale/presentation keys. Never overwrite an existing sandbox to stage screenshots. Rebuild with ordinary `npm run build` before packaging production. The review switch is compile-only; production has no review query hook. See docs/W1_1A_Visual_Check_zh-HK.md for the three optional follow-up views.
+
+Source corrections are closed after the startup visibility fix. Original art/economy scope remains frozen; 3D visual confirmation is still pending. Delivery ZIP creation/closed-reader source verification is implemented in tools/checkpoint.py; see the current handoff and its actual publication receipt.

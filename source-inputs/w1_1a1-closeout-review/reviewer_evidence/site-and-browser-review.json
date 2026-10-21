@@ -1,0 +1,46 @@
+{
+  "reviewDate": "2026-10-21",
+  "reportTimezone": "Asia/Hong_Kong",
+  "site": {
+    "projectId": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+    "url": "https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site",
+    "status": "active",
+    "latestVersion": 4,
+    "access": "public",
+    "accessPolicyRevision": 2,
+    "metadataUpdatedAt": "2026-10-21T11:23:32.016952+00:00",
+    "source": "read-only native Site metadata"
+  },
+  "source": {
+    "canonicalCommit": "2da2ca394bd2e1c0d3ec65d6e0f712b21a5294c4",
+    "matchesProvidedHandoff": true,
+    "retrievedWith": "supported Sites source opening workflow; read-only checkout",
+    "pushOrDeploy": false,
+    "trackedWorkingTreeCleanAfterChecks": true
+  },
+  "browser": {
+    "target": "compile-only isolated art-review build, separate output directory, supported preview",
+    "rendered3D": false,
+    "consoleError": "Error: WebGL not supported",
+    "fixture": "existing isolated W1.1A1 review DB, not modified or recreated by reviewer",
+    "initial": {
+      "cash": 51400,
+      "tokyoTime": "11:00",
+      "revisionShownInSettings": 6,
+      "minimalFX": false
+    },
+    "observations": [
+      "Settings and journal are usable while renderer fails",
+      "Previously completed reveal result card visible",
+      "No Skip control in completed-result view",
+      "After browser reload cash/time unchanged and completed-result card still visible"
+    ],
+    "freshBuyDisplaySaleRevealCycleRepeated": false,
+    "realTouchOrFPSVerified": false,
+    "realGPUContextLossVerified": false,
+    "normalPlayerDataTouched": false,
+    "reviewTabClosed": true,
+    "previewStopped": true
+  },
+  "receiptBoundary": "Deployment ID/status/timestamp in rebuilt receipt are explicitly transcribed from the user-provided handoff; canonical commit and current public/version metadata were independently checked."
+}

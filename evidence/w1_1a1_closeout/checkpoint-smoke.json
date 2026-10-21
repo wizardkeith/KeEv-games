@@ -1,0 +1,15 @@
+{
+  "source_commit": "2da2ca394bd2e1c0d3ec65d6e0f712b21a5294c4",
+  "filename": "closeout-checkpoint-smoke.zip",
+  "size_bytes": 34886941,
+  "sha256": "6f5b3fba2c42aab61978ddaf79edd983b26a5dc0315f174473e54e494dd36539",
+  "tracked_files": 334,
+  "entries": 338,
+  "crc": "PASS",
+  "entry_list": "PASS",
+  "every_git_blob_sha256": "PASS",
+  "source_manifest": "SOURCE_MANIFEST.sha256",
+  "deployment_receipt": "DELIVERY_RECEIPT.json",
+  "metadata_origin": "Receipt from actual Sites calls after source commit; final handoff adds publication details. Both are delivery metadata, not Git blobs.",
+  "method": "Closed ZIP writer, normal ZipFile reader: full CRC, exact entry set and every canonical Git blob SHA256. Atomic rename after validation; archive is not modified afterward."
+}

@@ -1,0 +1,16 @@
+✔ ellipsoid normals are perpendicular to both true nonuniform surface tangents (7.163572ms)
+✔ tapered elliptical cylinder normals include slope and cross-section scale (1.102175ms)
+✔ elliptically stretched torus uses inverse-transpose normals (2.295065ms)
+✔ rotation preserves tangent-normal orthogonality and unit normals (1.516907ms)
+✔ product curves and hollow mug have finite unit normals and correctly oriented nondegenerate triangles (23.982175ms)
+✔ same-color different semantic materials remain distinct in grouping (0.805649ms)
+✔ generic semantic pivots flatten to exactly the static recipe without lost parts (1.564898ms)
+✔ previous W1.1 GLB master and Web bytes remain unchanged (2.112821ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 51.326528

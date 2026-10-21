@@ -1,0 +1,1810 @@
+{
+  "schema": "w1.1a1-independent-a1a2.v1",
+  "generatedAt": "2026-10-21T11:48:52.509Z",
+  "project": "/workspace/scratch/e8a3235ec1f0/review_w1_1a1/canonical",
+  "commit": "2da2ca394bd2e1c0d3ec65d6e0f712b21a5294c4",
+  "scope": "Known A1/A2 risks only. Actual canonical source geometry, actual GLB vertices with imported transforms, and AST-extracted real runtime material factory. Source/math/NullEngine evidence, NOT rendered WebGL appearance, native compatibility or performance.",
+  "sources": [
+    {
+      "file": "src/art/geometry.ts",
+      "sha256": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8"
+    },
+    {
+      "file": "src/art/recipes.ts",
+      "sha256": "f4a7d0754002c2244739013b25742471c26c57e8aa243876c8e1ee16cd9b5fcd"
+    },
+    {
+      "file": "src/art/materials.ts",
+      "sha256": "855dd3bde18210726aabd89c472ef286b083dd2dc2d076157e5eb4b2e8131f91"
+    },
+    {
+      "file": "src/world.ts",
+      "sha256": "0b8cc7bc07d14c86e3d99a1e3604babcd6b3bcfdeb269dacec3ab809ad391a3e"
+    },
+    {
+      "file": "tools/art-w1_1.ts",
+      "sha256": "76678e9f791fe7d985045393f96fcebe872fd85e27eb99966342de48939c0684"
+    }
+  ],
+  "assets": [
+    {
+      "id": "off.mug",
+      "file": "assets/masters/w1_1a1/mug.glb",
+      "sha256": "cb3c59c5627d56ef6dbcc6d21b97a175393b038affd5174edf13ab3e85b27a41",
+      "manifestHashMatches": true
+    },
+    {
+      "id": "fixture.shop-counter.w1_1a1",
+      "file": "assets/masters/w1_1a1/counter-w1_1a1.glb",
+      "sha256": "4602da938fde3b8dbbc5a3ec5a5bb64007c51729e1ddb3c3d8c004e39ec54cef",
+      "manifestHashMatches": true
+    },
+    {
+      "id": "layout.graybox.1",
+      "file": "assets/masters/w1_1a1/room-w1_1a1.glb",
+      "sha256": "77ebd30600952ee370e20f598ee6f8a4c0202e54335d0dd654aa3d46ee0ca71a",
+      "manifestHashMatches": true
+    }
+  ],
+  "mug": {
+    "units": "metres",
+    "oldReproduction": {
+      "origin": [
+        0.112,
+        1,
+        0
+      ],
+      "direction": [
+        0,
+        -1,
+        0
+      ],
+      "sourceFirstY": 0.2432272413359522,
+      "importedFirstY": 0.24322724342346191,
+      "sameCount": true,
+      "maxAbsoluteError": 6.606663993657946e-9
+    },
+    "center": {
+      "sourceFirstY": 0.033500000000000196,
+      "importedFirstY": 0.03350000083446503,
+      "sameCount": true,
+      "maxAbsoluteError": 8.34464830568038e-10
+    },
+    "rim": {
+      "sampleCount": 180,
+      "minImportedFirstY": 0.23829089776350398,
+      "maxImportedFirstY": 0.24322724342346225,
+      "allSealWallBand": true,
+      "maxSourceImportError": 6.5251968273116745e-9,
+      "samples": [
+        {
+          "angleDegrees": 2.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090044837675,
+          "sameCount": true,
+          "maxAbsoluteError": 5.5319232528106e-9
+        },
+        {
+          "angleDegrees": 2.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 5.699927752012002e-9
+        },
+        {
+          "angleDegrees": 2.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829089814810056,
+          "sameCount": true,
+          "maxAbsoluteError": 3.893422917400358e-9
+        },
+        {
+          "angleDegrees": 8.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829089975562223,
+          "sameCount": true,
+          "maxAbsoluteError": 5.7574369716206775e-9
+        },
+        {
+          "angleDegrees": 8.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 8.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829089939634507,
+          "sameCount": true,
+          "maxAbsoluteError": 2.8619643321903254e-9
+        },
+        {
+          "angleDegrees": 14.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343803,
+          "importedFirstY": 0.23829089943937076,
+          "sameCount": true,
+          "maxAbsoluteError": 5.977777162158304e-9
+        },
+        {
+          "angleDegrees": 14.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602811545601e-9
+        },
+        {
+          "angleDegrees": 14.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829090061595337,
+          "sameCount": true,
+          "maxAbsoluteError": 4.081572635428188e-9
+        },
+        {
+          "angleDegrees": 20.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343803,
+          "importedFirstY": 0.23829089965946826,
+          "sameCount": true,
+          "maxAbsoluteError": 5.751610077098235e-9
+        },
+        {
+          "angleDegrees": 20.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.24322724133595197,
+          "importedFirstY": 0.2432272434234617,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602811545601e-9
+        },
+        {
+          "angleDegrees": 20.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090149012366,
+          "sameCount": true,
+          "maxAbsoluteError": 4.955742705092803e-9
+        },
+        {
+          "angleDegrees": 26.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343803,
+          "importedFirstY": 0.2382908998842329,
+          "sameCount": true,
+          "maxAbsoluteError": 5.061156604924122e-9
+        },
+        {
+          "angleDegrees": 26.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.24322724133595197,
+          "importedFirstY": 0.2432272434234617,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602811545601e-9
+        },
+        {
+          "angleDegrees": 26.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090183254797,
+          "sameCount": true,
+          "maxAbsoluteError": 5.978730732714155e-9
+        },
+        {
+          "angleDegrees": 32.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829090021481947,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872531489397147e-9
+        },
+        {
+          "angleDegrees": 32.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602589500996e-9
+        },
+        {
+          "angleDegrees": 32.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829090083240811,
+          "sameCount": true,
+          "maxAbsoluteError": 5.4901199142420865e-9
+        },
+        {
+          "angleDegrees": 38.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829090021481947,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872531489397147e-9
+        },
+        {
+          "angleDegrees": 38.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 38.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090083240823,
+          "sameCount": true,
+          "maxAbsoluteError": 5.4901199142420865e-9
+        },
+        {
+          "angleDegrees": 44.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438118,
+          "importedFirstY": 0.23829090021481947,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872531489397147e-9
+        },
+        {
+          "angleDegrees": 44.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796023674563912e-9
+        },
+        {
+          "angleDegrees": 44.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090083240823,
+          "sameCount": true,
+          "maxAbsoluteError": 5.490120136286691e-9
+        },
+        {
+          "angleDegrees": 50.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438162,
+          "importedFirstY": 0.23829090021481947,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872529713040308e-9
+        },
+        {
+          "angleDegrees": 50.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.24322724133595186,
+          "importedFirstY": 0.2432272434234618,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796023674563912e-9
+        },
+        {
+          "angleDegrees": 50.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438018,
+          "importedFirstY": 0.23829090083240756,
+          "sameCount": true,
+          "maxAbsoluteError": 5.490120136286691e-9
+        },
+        {
+          "angleDegrees": 56.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438162,
+          "importedFirstY": 0.23829090021481947,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872529713040308e-9
+        },
+        {
+          "angleDegrees": 56.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.24322724133595186,
+          "importedFirstY": 0.2432272434234618,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796023674563912e-9
+        },
+        {
+          "angleDegrees": 56.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438018,
+          "importedFirstY": 0.23829090083240756,
+          "sameCount": true,
+          "maxAbsoluteError": 5.490120136286691e-9
+        },
+        {
+          "angleDegrees": 62.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090033299938,
+          "sameCount": true,
+          "maxAbsoluteError": 4.564877031931758e-9
+        },
+        {
+          "angleDegrees": 62.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602589500996e-9
+        },
+        {
+          "angleDegrees": 62.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090144795229,
+          "sameCount": true,
+          "maxAbsoluteError": 6.525196716289372e-9
+        },
+        {
+          "angleDegrees": 68.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090102575368,
+          "sameCount": true,
+          "maxAbsoluteError": 4.491372829207307e-9
+        },
+        {
+          "angleDegrees": 68.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602589500996e-9
+        },
+        {
+          "angleDegrees": 68.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829090019970844,
+          "sameCount": true,
+          "maxAbsoluteError": 6.181631317936365e-9
+        },
+        {
+          "angleDegrees": 74.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090134200615,
+          "sameCount": true,
+          "maxAbsoluteError": 4.8076251868423014e-9
+        },
+        {
+          "angleDegrees": 74.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602811545601e-9
+        },
+        {
+          "angleDegrees": 74.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829089898010059,
+          "sameCount": true,
+          "maxAbsoluteError": 5.395111024597554e-9
+        },
+        {
+          "angleDegrees": 80.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090112190843,
+          "sameCount": true,
+          "maxAbsoluteError": 4.587527469013253e-9
+        },
+        {
+          "angleDegrees": 80.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602811545601e-9
+        },
+        {
+          "angleDegrees": 80.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438018,
+          "importedFirstY": 0.23829089810592874,
+          "sameCount": true,
+          "maxAbsoluteError": 4.176844425884951e-9
+        },
+        {
+          "angleDegrees": 86.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090089714378,
+          "sameCount": true,
+          "maxAbsoluteError": 5.035643679818236e-9
+        },
+        {
+          "angleDegrees": 86.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602811545601e-9
+        },
+        {
+          "angleDegrees": 86.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438018,
+          "importedFirstY": 0.23829089776350398,
+          "sameCount": true,
+          "maxAbsoluteError": 2.932745379879975e-9
+        },
+        {
+          "angleDegrees": 92.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829090044837686,
+          "sameCount": true,
+          "maxAbsoluteError": 5.531923474855205e-9
+        },
+        {
+          "angleDegrees": 92.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359523,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 92.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829089814810067,
+          "sameCount": true,
+          "maxAbsoluteError": 2.3862797293716653e-9
+        },
+        {
+          "angleDegrees": 98.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829089975562223,
+          "sameCount": true,
+          "maxAbsoluteError": 5.757437193665282e-9
+        },
+        {
+          "angleDegrees": 98.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359523,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 98.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829089939634507,
+          "sameCount": true,
+          "maxAbsoluteError": 2.861964221168023e-9
+        },
+        {
+          "angleDegrees": 104.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829089943937087,
+          "sameCount": true,
+          "maxAbsoluteError": 5.977777384202909e-9
+        },
+        {
+          "angleDegrees": 104.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359523,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602811545601e-9
+        },
+        {
+          "angleDegrees": 104.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.2382909006159536,
+          "sameCount": true,
+          "maxAbsoluteError": 4.08157274645049e-9
+        },
+        {
+          "angleDegrees": 110.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829089965946892,
+          "sameCount": true,
+          "maxAbsoluteError": 5.751610521187445e-9
+        },
+        {
+          "angleDegrees": 110.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359523,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602811545601e-9
+        },
+        {
+          "angleDegrees": 110.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.2382908965343813,
+          "importedFirstY": 0.23829090149012366,
+          "sameCount": true,
+          "maxAbsoluteError": 4.955742372025895e-9
+        },
+        {
+          "angleDegrees": 116.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438051,
+          "importedFirstY": 0.23829089988423302,
+          "sameCount": true,
+          "maxAbsoluteError": 5.061157049013332e-9
+        },
+        {
+          "angleDegrees": 116.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359523,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602811545601e-9
+        },
+        {
+          "angleDegrees": 116.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.2382908965343813,
+          "importedFirstY": 0.23829090183254775,
+          "sameCount": true,
+          "maxAbsoluteError": 5.978731287825667e-9
+        },
+        {
+          "angleDegrees": 122.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090021481947,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872531378374845e-9
+        },
+        {
+          "angleDegrees": 122.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 122.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090083240811,
+          "sameCount": true,
+          "maxAbsoluteError": 5.490120136286691e-9
+        },
+        {
+          "angleDegrees": 128.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090021481947,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872531378374845e-9
+        },
+        {
+          "angleDegrees": 128.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 128.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090083240823,
+          "sameCount": true,
+          "maxAbsoluteError": 5.490120025264389e-9
+        },
+        {
+          "angleDegrees": 134.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090021481902,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872531378374845e-9
+        },
+        {
+          "angleDegrees": 134.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279601812344879e-9
+        },
+        {
+          "angleDegrees": 134.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829090083240811,
+          "sameCount": true,
+          "maxAbsoluteError": 5.490120802420506e-9
+        },
+        {
+          "angleDegrees": 140.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090021481902,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872531267352542e-9
+        },
+        {
+          "angleDegrees": 140.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.24322724133595197,
+          "importedFirstY": 0.2432272434234618,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279601812344879e-9
+        },
+        {
+          "angleDegrees": 140.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829090083240756,
+          "sameCount": true,
+          "maxAbsoluteError": 5.490120802420506e-9
+        },
+        {
+          "angleDegrees": 146.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090021481902,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872531267352542e-9
+        },
+        {
+          "angleDegrees": 146.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.24322724133595197,
+          "importedFirstY": 0.2432272434234618,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279601812344879e-9
+        },
+        {
+          "angleDegrees": 146.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829090083240756,
+          "sameCount": true,
+          "maxAbsoluteError": 5.490120802420506e-9
+        },
+        {
+          "angleDegrees": 152.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090033299938,
+          "sameCount": true,
+          "maxAbsoluteError": 4.56487714295406e-9
+        },
+        {
+          "angleDegrees": 152.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359523,
+          "importedFirstY": 0.2432272434234618,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602589500996e-9
+        },
+        {
+          "angleDegrees": 152.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090144795217,
+          "sameCount": true,
+          "maxAbsoluteError": 6.525196716289372e-9
+        },
+        {
+          "angleDegrees": 158.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090102575368,
+          "sameCount": true,
+          "maxAbsoluteError": 4.491372829207307e-9
+        },
+        {
+          "angleDegrees": 158.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359523,
+          "importedFirstY": 0.2432272434234618,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602589500996e-9
+        },
+        {
+          "angleDegrees": 158.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090019970833,
+          "sameCount": true,
+          "maxAbsoluteError": 6.181631428958667e-9
+        },
+        {
+          "angleDegrees": 164.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.2382909013420066,
+          "sameCount": true,
+          "maxAbsoluteError": 4.807625741953814e-9
+        },
+        {
+          "angleDegrees": 164.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359523,
+          "importedFirstY": 0.2432272434234618,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796027005232986e-9
+        },
+        {
+          "angleDegrees": 164.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.2382908989801007,
+          "sameCount": true,
+          "maxAbsoluteError": 5.3951115797090665e-9
+        },
+        {
+          "angleDegrees": 170.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090112190887,
+          "sameCount": true,
+          "maxAbsoluteError": 4.587528024124765e-9
+        },
+        {
+          "angleDegrees": 170.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346225,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796027005232986e-9
+        },
+        {
+          "angleDegrees": 170.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438107,
+          "importedFirstY": 0.23829089810592974,
+          "sameCount": true,
+          "maxAbsoluteError": 4.176844980996464e-9
+        },
+        {
+          "angleDegrees": 176.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090089714422,
+          "sameCount": true,
+          "maxAbsoluteError": 5.035643457773631e-9
+        },
+        {
+          "angleDegrees": 176.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346225,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796027005232986e-9
+        },
+        {
+          "angleDegrees": 176.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438107,
+          "importedFirstY": 0.2382908977635051,
+          "sameCount": true,
+          "maxAbsoluteError": 2.93274604601379e-9
+        },
+        {
+          "angleDegrees": 182.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829090044837686,
+          "sameCount": true,
+          "maxAbsoluteError": 5.531923474855205e-9
+        },
+        {
+          "angleDegrees": 182.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359523,
+          "importedFirstY": 0.2432272434234618,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602589500996e-9
+        },
+        {
+          "angleDegrees": 182.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829089814810056,
+          "sameCount": true,
+          "maxAbsoluteError": 2.3862798403939678e-9
+        },
+        {
+          "angleDegrees": 188.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829089975562212,
+          "sameCount": true,
+          "maxAbsoluteError": 5.7574369716206775e-9
+        },
+        {
+          "angleDegrees": 188.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359523,
+          "importedFirstY": 0.2432272434234618,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602589500996e-9
+        },
+        {
+          "angleDegrees": 188.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829089939634507,
+          "sameCount": true,
+          "maxAbsoluteError": 2.861964221168023e-9
+        },
+        {
+          "angleDegrees": 194.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343815,
+          "importedFirstY": 0.23829089943937098,
+          "sameCount": true,
+          "maxAbsoluteError": 5.977777162158304e-9
+        },
+        {
+          "angleDegrees": 194.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359523,
+          "importedFirstY": 0.2432272434234618,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796027005232986e-9
+        },
+        {
+          "angleDegrees": 194.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090061595348,
+          "sameCount": true,
+          "maxAbsoluteError": 4.081572635428188e-9
+        },
+        {
+          "angleDegrees": 200.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343815,
+          "importedFirstY": 0.2382908996594686,
+          "sameCount": true,
+          "maxAbsoluteError": 5.7516109652766545e-9
+        },
+        {
+          "angleDegrees": 200.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.24322724133595208,
+          "importedFirstY": 0.24322724342346203,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796027005232986e-9
+        },
+        {
+          "angleDegrees": 200.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438063,
+          "importedFirstY": 0.23829090149012355,
+          "sameCount": true,
+          "maxAbsoluteError": 4.955742927137408e-9
+        },
+        {
+          "angleDegrees": 206.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343815,
+          "importedFirstY": 0.23829089988423324,
+          "sameCount": true,
+          "maxAbsoluteError": 5.061157493102542e-9
+        },
+        {
+          "angleDegrees": 206.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.24322724133595208,
+          "importedFirstY": 0.24322724342346203,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796027005232986e-9
+        },
+        {
+          "angleDegrees": 206.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438063,
+          "importedFirstY": 0.23829090183254786,
+          "sameCount": true,
+          "maxAbsoluteError": 5.978731509870272e-9
+        },
+        {
+          "angleDegrees": 212.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090021481947,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872531267352542e-9
+        },
+        {
+          "angleDegrees": 212.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602589500996e-9
+        },
+        {
+          "angleDegrees": 212.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438107,
+          "importedFirstY": 0.23829090083240811,
+          "sameCount": true,
+          "maxAbsoluteError": 5.4901199142420865e-9
+        },
+        {
+          "angleDegrees": 218.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090021481947,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872531378374845e-9
+        },
+        {
+          "angleDegrees": 218.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 218.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.238290900832408,
+          "sameCount": true,
+          "maxAbsoluteError": 5.4901199142420865e-9
+        },
+        {
+          "angleDegrees": 224.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343814,
+          "importedFirstY": 0.23829090021481947,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872531378374845e-9
+        },
+        {
+          "angleDegrees": 224.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796031446125085e-9
+        },
+        {
+          "angleDegrees": 224.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090083240811,
+          "sameCount": true,
+          "maxAbsoluteError": 5.490120802420506e-9
+        },
+        {
+          "angleDegrees": 230.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343814,
+          "importedFirstY": 0.23829090021481947,
+          "sameCount": true,
+          "maxAbsoluteError": 4.8725308232633324e-9
+        },
+        {
+          "angleDegrees": 230.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.24322724133595253,
+          "importedFirstY": 0.2432272434234618,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796031446125085e-9
+        },
+        {
+          "angleDegrees": 230.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.2382908965343814,
+          "importedFirstY": 0.23829090083240756,
+          "sameCount": true,
+          "maxAbsoluteError": 5.490120802420506e-9
+        },
+        {
+          "angleDegrees": 236.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343814,
+          "importedFirstY": 0.23829090021481947,
+          "sameCount": true,
+          "maxAbsoluteError": 4.8725308232633324e-9
+        },
+        {
+          "angleDegrees": 236.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.24322724133595253,
+          "importedFirstY": 0.2432272434234618,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796031446125085e-9
+        },
+        {
+          "angleDegrees": 236.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.2382908965343814,
+          "importedFirstY": 0.23829090083240756,
+          "sameCount": true,
+          "maxAbsoluteError": 5.490120802420506e-9
+        },
+        {
+          "angleDegrees": 242.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090033299927,
+          "sameCount": true,
+          "maxAbsoluteError": 4.564877031931758e-9
+        },
+        {
+          "angleDegrees": 242.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796027005232986e-9
+        },
+        {
+          "angleDegrees": 242.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090144795206,
+          "sameCount": true,
+          "maxAbsoluteError": 6.5251968273116745e-9
+        },
+        {
+          "angleDegrees": 248.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090102575357,
+          "sameCount": true,
+          "maxAbsoluteError": 4.4913726071627025e-9
+        },
+        {
+          "angleDegrees": 248.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796027005232986e-9
+        },
+        {
+          "angleDegrees": 248.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090019970822,
+          "sameCount": true,
+          "maxAbsoluteError": 6.181631428958667e-9
+        },
+        {
+          "angleDegrees": 254.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343804,
+          "importedFirstY": 0.23829090134200615,
+          "sameCount": true,
+          "maxAbsoluteError": 4.807625741953814e-9
+        },
+        {
+          "angleDegrees": 254.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 254.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829089898010059,
+          "sameCount": true,
+          "maxAbsoluteError": 5.395111357664462e-9
+        },
+        {
+          "angleDegrees": 260.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343804,
+          "importedFirstY": 0.23829090112190843,
+          "sameCount": true,
+          "maxAbsoluteError": 4.587528024124765e-9
+        },
+        {
+          "angleDegrees": 260.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 260.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829089810592907,
+          "sameCount": true,
+          "maxAbsoluteError": 4.176844758951859e-9
+        },
+        {
+          "angleDegrees": 266.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343804,
+          "importedFirstY": 0.23829090089714378,
+          "sameCount": true,
+          "maxAbsoluteError": 5.035643235729026e-9
+        },
+        {
+          "angleDegrees": 266.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 266.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829089776350443,
+          "sameCount": true,
+          "maxAbsoluteError": 2.9327457129468826e-9
+        },
+        {
+          "angleDegrees": 272.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829090044837686,
+          "sameCount": true,
+          "maxAbsoluteError": 5.531923363832902e-9
+        },
+        {
+          "angleDegrees": 272.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346203,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 272.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829089814810056,
+          "sameCount": true,
+          "maxAbsoluteError": 2.3862797293716653e-9
+        },
+        {
+          "angleDegrees": 278.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829089975562223,
+          "sameCount": true,
+          "maxAbsoluteError": 5.7574369716206775e-9
+        },
+        {
+          "angleDegrees": 278.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346203,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 278.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829089939634507,
+          "sameCount": true,
+          "maxAbsoluteError": 2.861964221168023e-9
+        },
+        {
+          "angleDegrees": 284.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343814,
+          "importedFirstY": 0.23829089943937054,
+          "sameCount": true,
+          "maxAbsoluteError": 5.977777162158304e-9
+        },
+        {
+          "angleDegrees": 284.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346203,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 284.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829090061595348,
+          "sameCount": true,
+          "maxAbsoluteError": 4.08157274645049e-9
+        },
+        {
+          "angleDegrees": 290.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343814,
+          "importedFirstY": 0.23829089965946848,
+          "sameCount": true,
+          "maxAbsoluteError": 5.7516111873212594e-9
+        },
+        {
+          "angleDegrees": 290.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.24322724133595242,
+          "importedFirstY": 0.2432272434234618,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 290.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.2382908965343814,
+          "importedFirstY": 0.23829090149012377,
+          "sameCount": true,
+          "maxAbsoluteError": 4.955742372025895e-9
+        },
+        {
+          "angleDegrees": 296.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343814,
+          "importedFirstY": 0.2382908998842327,
+          "sameCount": true,
+          "maxAbsoluteError": 5.0611577151471465e-9
+        },
+        {
+          "angleDegrees": 296.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.24322724133595242,
+          "importedFirstY": 0.2432272434234618,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 296.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.2382908965343814,
+          "importedFirstY": 0.23829090183254786,
+          "sameCount": true,
+          "maxAbsoluteError": 5.97873095475876e-9
+        },
+        {
+          "angleDegrees": 302.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090021481947,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872531489397147e-9
+        },
+        {
+          "angleDegrees": 302.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359523,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 302.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090083240823,
+          "sameCount": true,
+          "maxAbsoluteError": 5.490120025264389e-9
+        },
+        {
+          "angleDegrees": 308.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090021481947,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872531378374845e-9
+        },
+        {
+          "angleDegrees": 308.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359523,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796024784786937e-9
+        },
+        {
+          "angleDegrees": 308.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829090083240811,
+          "sameCount": true,
+          "maxAbsoluteError": 5.4901199142420865e-9
+        },
+        {
+          "angleDegrees": 314.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438118,
+          "importedFirstY": 0.23829090021481902,
+          "sameCount": true,
+          "maxAbsoluteError": 4.87253160041945e-9
+        },
+        {
+          "angleDegrees": 314.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359523,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796029225679035e-9
+        },
+        {
+          "angleDegrees": 314.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829090083240823,
+          "sameCount": true,
+          "maxAbsoluteError": 5.490121690598926e-9
+        },
+        {
+          "angleDegrees": 320.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438118,
+          "importedFirstY": 0.23829090021481902,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872531267352542e-9
+        },
+        {
+          "angleDegrees": 320.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359523,
+          "importedFirstY": 0.2432272434234618,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796029225679035e-9
+        },
+        {
+          "angleDegrees": 320.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438018,
+          "importedFirstY": 0.23829090083240756,
+          "sameCount": true,
+          "maxAbsoluteError": 5.490121690598926e-9
+        },
+        {
+          "angleDegrees": 326.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438118,
+          "importedFirstY": 0.23829090021481902,
+          "sameCount": true,
+          "maxAbsoluteError": 4.872531267352542e-9
+        },
+        {
+          "angleDegrees": 326.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359523,
+          "importedFirstY": 0.2432272434234618,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796029225679035e-9
+        },
+        {
+          "angleDegrees": 326.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438018,
+          "importedFirstY": 0.23829090083240756,
+          "sameCount": true,
+          "maxAbsoluteError": 5.490121690598926e-9
+        },
+        {
+          "angleDegrees": 332.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090033299927,
+          "sameCount": true,
+          "maxAbsoluteError": 4.564876920909455e-9
+        },
+        {
+          "angleDegrees": 332.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.24322724133595208,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602589500996e-9
+        },
+        {
+          "angleDegrees": 332.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090144795229,
+          "sameCount": true,
+          "maxAbsoluteError": 6.525196716289372e-9
+        },
+        {
+          "angleDegrees": 338.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.23829089653438085,
+          "importedFirstY": 0.23829090102575368,
+          "sameCount": true,
+          "maxAbsoluteError": 4.491372829207307e-9
+        },
+        {
+          "angleDegrees": 338.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.24322724133595208,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.279602589500996e-9
+        },
+        {
+          "angleDegrees": 338.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829090019970833,
+          "sameCount": true,
+          "maxAbsoluteError": 6.181631428958667e-9
+        },
+        {
+          "angleDegrees": 344.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343815,
+          "importedFirstY": 0.2382909013420057,
+          "sameCount": true,
+          "maxAbsoluteError": 4.807624187641579e-9
+        },
+        {
+          "angleDegrees": 344.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.24322724133595208,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796027005232986e-9
+        },
+        {
+          "angleDegrees": 344.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438096,
+          "importedFirstY": 0.23829089898010059,
+          "sameCount": true,
+          "maxAbsoluteError": 5.395110913575252e-9
+        },
+        {
+          "angleDegrees": 350.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343815,
+          "importedFirstY": 0.23829090112190798,
+          "sameCount": true,
+          "maxAbsoluteError": 4.587526469812531e-9
+        },
+        {
+          "angleDegrees": 350.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 3.2796027005232986e-9
+        },
+        {
+          "angleDegrees": 350.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.23829089810592885,
+          "sameCount": true,
+          "maxAbsoluteError": 4.176844314862649e-9
+        },
+        {
+          "angleDegrees": 356.7,
+          "fraction": 0.1,
+          "sourceFirstY": 0.2382908965343815,
+          "importedFirstY": 0.23829090089714322,
+          "sameCount": true,
+          "maxAbsoluteError": 5.0356431247067235e-9
+        },
+        {
+          "angleDegrees": 356.7,
+          "fraction": 0.5,
+          "sourceFirstY": 0.2432272413359522,
+          "importedFirstY": 0.24322724342346191,
+          "sameCount": true,
+          "maxAbsoluteError": 6.196841484396032e-9
+        },
+        {
+          "angleDegrees": 356.7,
+          "fraction": 0.9,
+          "sourceFirstY": 0.23829089653438074,
+          "importedFirstY": 0.2382908977635041,
+          "sameCount": true,
+          "maxAbsoluteError": 3.791585823087473e-9
+        }
+      ]
+    },
+    "contacts": [
+      {
+        "y": 0.07,
+        "bodySurfaceX": 0.1175,
+        "closedHandlePairs": true,
+        "handleIntervals": [
+          {
+            "entry": 0.11181151729038222,
+            "exit": 0.14164141407695907,
+            "containsBodySurface": true
+          },
+          {
+            "entry": 0.16835387714280506,
+            "exit": 0.22100535764906562,
+            "containsBodySurface": false
+          }
+        ],
+        "contactOverlap": 0.005688482709617776,
+        "sourceWholeMugHits": [
+          0.09849999999999999,
+          0.11181151729038222,
+          0.1175,
+          0.14164141407695907,
+          0.16835387714280506,
+          0.22100535764906562
+        ],
+        "importedWholeMugHits": [
+          0.09849999845027924,
+          0.11181152114426492,
+          0.11749999970197679,
+          0.14164142052702905,
+          0.16835388463929107,
+          0.22100535509499872
+        ],
+        "sameCount": true,
+        "maxAbsoluteError": 7.496486015279302e-9
+      },
+      {
+        "y": 0.18,
+        "bodySurfaceX": 0.1175,
+        "closedHandlePairs": true,
+        "handleIntervals": [
+          {
+            "entry": 0.11181151729038225,
+            "exit": 0.1416414140769591,
+            "containsBodySurface": true
+          },
+          {
+            "entry": 0.1683538771428051,
+            "exit": 0.2210053576490656,
+            "containsBodySurface": false
+          }
+        ],
+        "contactOverlap": 0.005688482709617748,
+        "sourceWholeMugHits": [
+          0.09849999999999999,
+          0.11181151729038225,
+          0.1175,
+          0.1416414140769591,
+          0.1683538771428051,
+          0.2210053576490656
+        ],
+        "importedWholeMugHits": [
+          0.09849999845027924,
+          0.11181152181822349,
+          0.11749999970197679,
+          0.14164140068423145,
+          0.16835385108085582,
+          0.22100535743542093
+        ],
+        "sameCount": true,
+        "maxAbsoluteError": 2.6061949265354656e-8
+      }
+    ],
+    "handle": {
+      "minX": 0.10262340056427421,
+      "innerRadius": 0.0985,
+      "staysOutsideCavity": true,
+      "apertureSourceHits": [],
+      "apertureImportedHits": [],
+      "apertureClear": true,
+      "contactInterpretation": "Shallow intersecting ceramic volumes at two separate heights; no welded-topology claim."
+    }
+  },
+  "materials": {
+    "runtimeFactoryLine": 33,
+    "rows": [
+      {
+        "assetId": "off.mug",
+        "role": "ceramic",
+        "runtime": {
+          "name": "mat.satin-ceramic.v1:#DFC9A2:1:r0.34:m0:ior1.5:OPAQUE:ds0",
+          "albedo": [
+            0.8745098039215686,
+            0.788235294117647,
+            0.6352941176470588
+          ],
+          "alpha": 1,
+          "roughness": 0.34,
+          "metallic": 0,
+          "alphaBlend": false,
+          "backFaceCulling": true,
+          "twoSidedLighting": false,
+          "indexOfRefraction": 1.5
+        },
+        "imported": {
+          "name": "mat.satin-ceramic.v1:#DFC9A2:1:r0.34:m0:ior1.5:OPAQUE:ds0",
+          "albedo": [
+            0.8745098039215686,
+            0.788235294117647,
+            0.6352941176470588
+          ],
+          "alpha": 1,
+          "roughness": 0.34,
+          "metallic": 0,
+          "alphaBlend": false,
+          "backFaceCulling": true,
+          "twoSidedLighting": false,
+          "indexOfRefraction": 1.5
+        },
+        "commonFieldsEqual": true,
+        "authoredDoubleSided": false,
+        "sharedDoubleSided": false,
+        "iorIntent": 1.5,
+        "hasIorExtension": false
+      },
+      {
+        "assetId": "off.mug",
+        "role": "ceramic",
+        "runtime": {
+          "name": "mat.satin-ceramic.v1:#FFF7E9:1:r0.34:m0:ior1.5:OPAQUE:ds0",
+          "albedo": [
+            1,
+            0.9686274509803922,
+            0.9137254901960784
+          ],
+          "alpha": 1,
+          "roughness": 0.34,
+          "metallic": 0,
+          "alphaBlend": false,
+          "backFaceCulling": true,
+          "twoSidedLighting": false,
+          "indexOfRefraction": 1.5
+        },
+        "imported": {
+          "name": "mat.satin-ceramic.v1:#FFF7E9:1:r0.34:m0:ior1.5:OPAQUE:ds0",
+          "albedo": [
+            1,
+            0.9686274509803922,
+            0.9137254901960784
+          ],
+          "alpha": 1,
+          "roughness": 0.34,
+          "metallic": 0,
+          "alphaBlend": false,
+          "backFaceCulling": true,
+          "twoSidedLighting": false,
+          "indexOfRefraction": 1.5
+        },
+        "commonFieldsEqual": true,
+        "authoredDoubleSided": false,
+        "sharedDoubleSided": false,
+        "iorIntent": 1.5,
+        "hasIorExtension": false
+      },
+      {
+        "assetId": "fixture.shop-counter.w1_1a1",
+        "role": "glass",
+        "runtime": {
+          "name": "mat.quiet-glass.v1:#8AADA5:0.9:r0.18:m0:ior1.45:BLEND:ds1",
+          "albedo": [
+            0.5411764705882353,
+            0.6784313725490196,
+            0.6470588235294118
+          ],
+          "alpha": 0.9,
+          "roughness": 0.18,
+          "metallic": 0,
+          "alphaBlend": true,
+          "backFaceCulling": false,
+          "twoSidedLighting": true,
+          "indexOfRefraction": 1.45
+        },
+        "imported": {
+          "name": "mat.quiet-glass.v1:#8AADA5:0.9:r0.18:m0:ior1.45:BLEND:ds1",
+          "albedo": [
+            0.5411764705882353,
+            0.6784313725490196,
+            0.6470588235294118
+          ],
+          "alpha": 0.9,
+          "roughness": 0.18,
+          "metallic": 0,
+          "alphaBlend": true,
+          "backFaceCulling": false,
+          "twoSidedLighting": true,
+          "indexOfRefraction": 1.5
+        },
+        "commonFieldsEqual": true,
+        "authoredDoubleSided": true,
+        "sharedDoubleSided": true,
+        "iorIntent": 1.45,
+        "hasIorExtension": false
+      },
+      {
+        "assetId": "layout.graybox.1",
+        "role": "glass",
+        "runtime": {
+          "name": "mat.quiet-glass.v1:#BCCAC8:0.65:r0.18:m0:ior1.45:BLEND:ds1",
+          "albedo": [
+            0.7372549019607844,
+            0.792156862745098,
+            0.7843137254901961
+          ],
+          "alpha": 0.65,
+          "roughness": 0.18,
+          "metallic": 0,
+          "alphaBlend": true,
+          "backFaceCulling": false,
+          "twoSidedLighting": true,
+          "indexOfRefraction": 1.45
+        },
+        "imported": {
+          "name": "mat.quiet-glass.v1:#BCCAC8:0.65:r0.18:m0:ior1.45:BLEND:ds1",
+          "albedo": [
+            0.7372549019607844,
+            0.792156862745098,
+            0.7843137254901961
+          ],
+          "alpha": 0.65,
+          "roughness": 0.18,
+          "metallic": 0,
+          "alphaBlend": true,
+          "backFaceCulling": false,
+          "twoSidedLighting": true,
+          "indexOfRefraction": 1.5
+        },
+        "commonFieldsEqual": true,
+        "authoredDoubleSided": true,
+        "sharedDoubleSided": true,
+        "iorIntent": 1.45,
+        "hasIorExtension": false
+      },
+      {
+        "assetId": "layout.graybox.1",
+        "role": "glass",
+        "runtime": {
+          "name": "mat.quiet-glass.v1:#D6E5DC:0.16:r0.18:m0:ior1.45:BLEND:ds1",
+          "albedo": [
+            0.8392156862745098,
+            0.8980392156862745,
+            0.8627450980392157
+          ],
+          "alpha": 0.16,
+          "roughness": 0.18,
+          "metallic": 0,
+          "alphaBlend": true,
+          "backFaceCulling": false,
+          "twoSidedLighting": true,
+          "indexOfRefraction": 1.45
+        },
+        "imported": {
+          "name": "mat.quiet-glass.v1:#D6E5DC:0.16:r0.18:m0:ior1.45:BLEND:ds1",
+          "albedo": [
+            0.8392156862745098,
+            0.8980392156862745,
+            0.8627450980392157
+          ],
+          "alpha": 0.16,
+          "roughness": 0.18,
+          "metallic": 0,
+          "alphaBlend": true,
+          "backFaceCulling": false,
+          "twoSidedLighting": true,
+          "indexOfRefraction": 1.5
+        },
+        "commonFieldsEqual": true,
+        "authoredDoubleSided": true,
+        "sharedDoubleSided": true,
+        "iorIntent": 1.45,
+        "hasIorExtension": false
+      }
+    ],
+    "allCommonFieldsMatch": true,
+    "iorLimit": "IOR intentionally remains extras-only in GLB; imported glass IOR 1.5 differs from runtime intent 1.45. Existing documented native-adapter limitation, excluded from common-field parity gate."
+  },
+  "applicationSourceModified": false,
+  "renderedWebGLEvidence": false
+}

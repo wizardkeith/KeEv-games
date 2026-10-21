@@ -1,0 +1,7 @@
+{
+  "scope": "ordinary production build only; compile-only QA output is in a separate review directory",
+  "productionFiles": 95,
+  "qaMarkerHits": [],
+  "prohibitedDirectoryHits": [],
+  "trackedStatus": ""
+}

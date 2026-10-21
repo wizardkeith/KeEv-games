@@ -1,0 +1,14 @@
+{
+  "filename": "Next_Stop_Little_Shop_W1_1A1_Source_Complete_2026-10-21.zip",
+  "bytes": 34896778,
+  "sha256": "290a85ce4b7eb29f815631fde337b0814eefa17dc1f4ae3770c8a1408fca2392",
+  "canonicalCommit": "2da2ca394bd2e1c0d3ec65d6e0f712b21a5294c4",
+  "canonicalFilesVerified": 334,
+  "totalEntries": 400,
+  "totalFiles": 338,
+  "crc": "pass",
+  "perFileHashes": "pass",
+  "applicationSourceChanged": false,
+  "siteDeployedByReviewer": false,
+  "receiptProvenance": "Reviewer reconstruction from attached handoff, plus clearly separated current Site observation"
+}

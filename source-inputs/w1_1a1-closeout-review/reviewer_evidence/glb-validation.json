@@ -1,0 +1,127 @@
+{
+  "scope": "Independent format/hash validation only; no rendered WebGL or device-performance evidence",
+  "count": 15,
+  "totalBytes": 495332,
+  "rows": [
+    {
+      "id": "off.notebook",
+      "file": "assets/masters/w1_1a1/notebook.glb",
+      "bytes": 21036,
+      "hashMatches": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "off.pencil",
+      "file": "assets/masters/w1_1a1/pencil.glb",
+      "bytes": 14012,
+      "hashMatches": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "off.mug",
+      "file": "assets/masters/w1_1a1/mug.glb",
+      "bytes": 21128,
+      "hashMatches": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "off.tea",
+      "file": "assets/masters/w1_1a1/tea.glb",
+      "bytes": 9288,
+      "hashMatches": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "off.cookie",
+      "file": "assets/masters/w1_1a1/cookie.glb",
+      "bytes": 23152,
+      "hashMatches": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "off.tote",
+      "file": "assets/masters/w1_1a1/tote.glb",
+      "bytes": 25228,
+      "hashMatches": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "off.card",
+      "file": "assets/masters/w1_1a1/card.glb",
+      "bytes": 13764,
+      "hashMatches": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "off.towel",
+      "file": "assets/masters/w1_1a1/towel.glb",
+      "bytes": 10112,
+      "hashMatches": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "off.tray",
+      "file": "assets/masters/w1_1a1/tray.glb",
+      "bytes": 20232,
+      "hashMatches": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "off.vase",
+      "file": "assets/masters/w1_1a1/vase.glb",
+      "bytes": 15340,
+      "hashMatches": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "fixture.shop-counter.w1_1a1",
+      "file": "assets/masters/w1_1a1/counter-w1_1a1.glb",
+      "bytes": 29364,
+      "hashMatches": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "display.w1_1a1",
+      "file": "assets/masters/w1_1a1/display-w1_1a1.glb",
+      "bytes": 35956,
+      "hashMatches": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "decoration.plant.w1_1a1",
+      "file": "assets/masters/w1_1a1/plant-w1_1a1.glb",
+      "bytes": 44656,
+      "hashMatches": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "staff.graybox",
+      "file": "assets/masters/w1_1a1/generic-staff-w1_1a1.glb",
+      "bytes": 102932,
+      "hashMatches": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "id": "layout.graybox.1",
+      "file": "assets/masters/w1_1a1/room-w1_1a1.glb",
+      "bytes": 109132,
+      "hashMatches": true,
+      "errors": 0,
+      "warnings": 0
+    }
+  ]
+}

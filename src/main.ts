@@ -129,14 +129,16 @@ document.addEventListener('keydown',e=>{
  if(e.key==='Tab'&&document.querySelector('.modalshade')){const focusables=Array.from(document.querySelectorAll<HTMLElement>('.modal button:not(:disabled),.modal input'));const first=focusables[0],last=focusables.at(-1);if(e.shiftKey&&document.activeElement===first){last?.focus();e.preventDefault();}else if(!e.shiftKey&&document.activeElement===last){first?.focus();e.preventDefault();}}
 });
 function resume(){
- if(!state||mode!=='normal'||document.hidden||busy||['stale','storage','long_gap'].includes(u.blocking))return;
+ if(!state||!saves||mode!=='normal'||document.hidden||busy||['stale','storage','long_gap'].includes(u.blocking))return;
  const now=Date.now();if(now-state.watermark>=60000||now<state.lastWallTime||u.blocking==='rollback')void run(async()=>{state=await saves.settle(state,now,now);});
 }
 async function boot(){
+ // Record cancellation before any awaited startup work or actionable UI.
+ document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelFeedback();draw();}else resume();});window.addEventListener('focus',resume);
  const core=await loadCore();saves=new Saves(await database(artReview?"next-stop-little-shop-art-review-w1_1a1":"next-stop-little-shop-w1"),core);state=await saves.loadOrCreate(mode,mode==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());u.draft=draftFor(mode,state,draftPrefix);draw();readyMs=performance.now()-started;
  try{const {createWorld}=await import('./world');world=await createWorld(canvas,n=>{u.slot=n;openPanel('shelves');},finishReveal);world.update(state);world.layout(!!u.panel);worldReadyMs=performance.now()-started;}catch(e){console.error(e);u.worldFailed=true;}
  draw();if(!state.shopName)document.getElementById('shop-name')?.focus();
- document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelFeedback();draw();}else resume();});window.addEventListener('focus',resume);setInterval(resume,10000);resume();
+ setInterval(resume,10000);resume();
  canvas.addEventListener('world-error',()=>{cancelFeedback();world?.dispose();world=undefined;u.worldFailed=true;draw();});
  Object.assign(window,{littleShopDiagnostics:()=>({core:'PORT_REQUIRED_FOR_UNITY',artReview,uiReadyMs:readyMs,startupMs:worldReadyMs,worldReady:!!world&&!u.worldFailed,worldEverReady:worldReadyMs!==null,worldAvailable:!!world&&!u.worldFailed,world:world?.metrics(),userAgent:navigator.userAgent,resources:performance.getEntriesByType('resource').map(e=>({name:e.name,duration:e.duration,transferSize:(e as PerformanceResourceTiming).transferSize,encodedBodySize:(e as PerformanceResourceTiming).encodedBodySize}))})});
 }

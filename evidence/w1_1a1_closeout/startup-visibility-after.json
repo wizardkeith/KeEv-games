@@ -1,0 +1,38 @@
+{
+  "kind": "observational-source-boundary",
+  "acceptancePassClaim": false,
+  "browser": false,
+  "webgl": false,
+  "source": {
+    "repo": "/workspace/sites/next-stop-little-shop-w1",
+    "mainSha256": "4ff85316bdea49342cb28d6a819b495b8666e671921e36d7121d477484b7fa18"
+  },
+  "runtime": {
+    "node": "v24.19.0",
+    "typescript": "5.9.3"
+  },
+  "description": "An in-flight command begins while the first world is still loading; hide and resume occur before main registers visibility handlers; world readiness then precedes delivery of the successful commit.",
+  "boundary": {
+    "real": "Extracted actual boot/run/committed/cancelFeedback/finishReveal/resume, real core/projector/Saves, fake IndexedDB",
+    "mocked": "World module factory/readiness and renderer methods, document/window/canvas event targets, DOM draw, audio, timers, clock metadata",
+    "limitations": "No GPU, browser visibility scheduling, actual render, playback or performance evidence. This checks source control-flow wiring, not a new economic failure."
+  },
+  "beforeHide": {
+    "worldAvailable": false,
+    "visibilityListeners": 1,
+    "epoch": 0
+  },
+  "afterResumeEpoch": 1,
+  "afterBootVisibilityListeners": 1,
+  "observation": {
+    "documentHidden": false,
+    "fxCalls": 0,
+    "audioPlays": 0,
+    "drawCalls": 5,
+    "beforeRevision": 4,
+    "storedRevision": 5,
+    "beforeSales": 0,
+    "storedSales": 5
+  },
+  "interpretation": "Visibility listeners are installed only after createWorld resolves. In this startup window hide/resume does not increment the presentation epoch, so the late committed result can start one transient and one audio request after returning. The subscription placement also exists in W1.1A; this is a residual startup edge, not a newly introduced regression or duplicated economic commit."
+}

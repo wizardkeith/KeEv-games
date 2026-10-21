@@ -1,0 +1,45 @@
+《下一站・小店物語》W1.1A1 後續局部收尾
+
+繼續同一Site／現有Work，不另開網站。以最新canonical為準，保留所有比2da2ca394bd2e1c0d3ec65d6e0f712b21a5294c4更新的工作。
+Site：https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site
+Project：appgprj_6ad82a08ed2881918ebcc2dd206a122d
+審核基準：W1.1A1／version4，public／policy revision2。
+
+先讀00_REVIEW_zh-HK.txt與reviewer_evidence/startup-visibility.json。
+W1.1A1主要A1/A2/F1–F3重現已獨立確認通過：55測試、15個新GLB、125 protected files及新舊masters實際可重建均通過。保留這些成果，不重開美術、經濟、故事或平台架構。
+
+一、只修首次world載入期間的visibility細位
+
+src/main.ts boot目前先draw開放UI，再await createWorld，之後才註冊main visibilitychange。
+在這段窗口發出操作→pending→hidden→visible→world ready→操作結果交付，epoch沒有記錄hidden，可能播1次過時FX／audio。交易本身正確，只提交一次。
+這是既有startup-only殘留，P3；不要稱作新的金錢bug。
+
+要求：
+1. 在UI可操作前完成presentation visibility cancellation的註冊；normal resume／settle仍須state與Saves就緒，不能因提前註冊引入未初始化存取。
+2. 不重複註冊listener；若拆成不同職責，確保一次hidden只做一致的呈現取消。
+3. 保留正常提交、event消費／去重、hidden／epoch防禦、world入口防禦及完成卡。不得重跑交易補聲畫。
+4. 保留世界載入失敗時的可用UI及已修的Skip政策。
+5. 先以所附startup-visibility.mts重現；加入1–2個真正覆蓋boot事件接線的deferred-world regression cases，包含hide→visible後才交付結果，以及hidden後world失敗。斷言state只提交一次、FX/audio0次；原正常可見完成仍可回饋。
+6. Probe只是observational capture，exit0不表示缺陷已修；應以改後有意義的acceptance assertion驗證。
+
+二、保留
+
+原schema2／ts-w1-2、normal／sandbox keys、CAS／command dedup／migration、經濟規則、P&L、復業、十款商品、五語言、Select＋Unique＋0stats樣本、原資產與來源歷史、品質／最少特效／減少動態政策。
+不升級依賴、不新增FX種類／光源／後製、不新增正式故事／角色／天氣。
+保持public、同一網址及現有玩家進度；回退程式不得回退玩家存檔。
+
+三、交付完整性修正
+
+審核者收到的原source ZIP只有26,832,651bytes，缺結尾索引及86個tracked files。已另外從精確commit補回完整Source_Complete包，這不表示公開runtime有缺檔。
+下一次交付必須等ZIP寫入及關閉完成後才上載。用正常ZIP reader重新打開、驗證CRC／entry list，核對所有tracked source、tests、tools、tsconfig、Bible及素材都在包內。
+提供包大小及SHA256；不要只檢查檔名、local-header或把partial files重包。
+部署後的receipt如不屬於source commit，要在交付中明確標記來源；HANDOFF所引用的DELIVERY_RECEIPT.json必須實際存在，數值與實際部署一致。
+Source checkpoint排除node_modules、快取、build output、認證資料及玩家存檔；保留可重建source、tests、assets、原Bible及必要證據。
+
+四、完成方式
+
+完成這個局部修正，跑原55 cases＋新回歸、內容驗證與production build；確認QA keys沒有進入production。
+本輪不改asset source，毋須重複生成／版本化全部GLB或重跑不相關的大量驗收。
+有source改動才更新同一public Site並交付真實commit／version／結果；單純補交完整來源包不要製造空的部署版本。
+WebGL如可用，檢查startup hide/resume及既有完成流程；如仍不可用，清楚標示實際視覺待確認，完成其餘驗證與交付。
+此任務完成後封存這輪來源修正，保留3D視覺待確認，不展開另一輪全面美化或內容開發。

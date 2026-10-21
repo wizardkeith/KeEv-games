@@ -1,0 +1,14 @@
+BJS - [19:48:31]: Babylon.js v8.32.0 - Null engine
+✔ mug rim shares both wall boundaries and seals the full polygonal annulus while leaving cavity open (71.719176ms)
+✔ mug handle has measured upper/lower surface contacts and an unobstructed opening without entering cavity (8.675231ms)
+✔ capped handle arc keeps finite unit normals, correct cap planes and nondegenerate winding (1.087492ms)
+✔ actual runtime material adapter and independent GLB import agree on sidedness and common PBR state (151.497184ms)
+✔ published W1.1A masters/manifests remain intact and exact authoring source is frozen (2.88497ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 253.128026

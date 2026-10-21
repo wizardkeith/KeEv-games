@@ -1,0 +1,13 @@
+✔ feedback follows actual commits; load/import/mode/duplicate never replay rewards (4.626174ms)
+✔ support is distinct from sales and remains one feedback after repeated commands (0.535344ms)
+✔ presentation clock has one bounded effect, skip/hidden/dispose prevent backlog and replay (0.929335ms)
+✔ static customer anchors clear display/counter bounds and survive all visibility policies (0.817237ms)
+✔ art review DB is isolated from both player slots; default database and CAS preserved (10.472699ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 21.611257
