@@ -3,7 +3,11 @@ import {FeedbackProjector} from './presentation/feedback';
 import {vfx} from './presentation/config';
 import {readPreferences,savePreferences} from './presentation/preferences';
 import {icon} from './ui/icons';
+import {day1View,emptyStory,type StoryRecord,type BeatId,type StoryAction} from './narrative/day1';
+import {day1Text} from './narrative/day1-copy';
+import {day1Card} from './ui/day1';
 const artReview=import.meta.env.VITE_ART_REVIEW==='1',modeKey=artReview?'shop.art-review.mode':'shop.mode',draftPrefix=artReview?'shop.art-review.draft.':'shop.w1.draft.';
+const reviewDatabase=import.meta.env.VITE_DAY1_REVIEW==='1'?'next-stop-little-shop-day1-review':'next-stop-little-shop-art-review-w1_1a1';
 const presentationStorageKey=artReview?'shop.art-review.presentation.v1':'shop.presentation.v1';
 const feedback=new FeedbackProjector();
 let presentationEpoch=0;
@@ -15,12 +19,28 @@ import {commandId,draftFor,storeDraft,type UI} from './ui/session';
 const app=document.querySelector<HTMLDivElement>('#app')!,canvas=document.querySelector<HTMLCanvasElement>('#world')!;
 let mode:Mode=artReview?'sandbox':localStorage.getItem(modeKey)==='sandbox'?'sandbox':'normal';
 let state:Snapshot,saves:Saves,busy=false,world:Awaited<ReturnType<typeof import('./world')['createWorld']>>|undefined;
+let story:StoryRecord|undefined,storyBusy=false,storyReplay=false;
 const u:UI={panel:'',slot:0,zen:false,quality:'auto',sound:false,minimalFX:readPreferences(presentationStorageKey).minimalFX,feedbackKind:'',revealFx:false,reportDay:'',rename:false,draft:{quantity:'5',prices:{},shop:'',company:'',logo:'◇'},formError:'',formField:'',notice:'',blocking:'',worldFailed:false};
 let focusReturn:HTMLElement|null=null,readyMs:number|null=null,worldReadyMs:number|null=null,noticeTimer:ReturnType<typeof setTimeout>|undefined,revealTimer:ReturnType<typeof setTimeout>|undefined;
 const started=performance.now(),saleSound=new Audio('/assets/sale.wav');saleSound.volume=.12;
 function download(data:string,name:string){const url=URL.createObjectURL(new Blob([data],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function notice(text:string){u.notice=text;clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>{u.notice='';draw();},6500);}
 function actionButton(key:string,action:string,extra='',primary=false){return button(t(key),action,extra,primary,busy);}
+async function syncStory(){const snapshot=state;try{const loaded=await saves.readStory(snapshot);if(state===snapshot)story=loaded;}catch{/* Narrative failure never blocks an intact economic save. */if(state===snapshot)story=emptyStory(snapshot);}}
+async function storyAction(beat:BeatId,action:StoryAction){
+ if(storyBusy||busy)return false;storyBusy=true;const snapshot=state,epoch=presentationEpoch;draw();
+ try{let updated=await saves.markStory(snapshot,beat,action);if(state!==snapshot||epoch!==presentationEpoch)return false;
+  if(action==='skip')updated=await saves.markStory(snapshot,beat,'dismiss');
+  if(state!==snapshot||epoch!==presentationEpoch)return false;
+  if(updated.unsupported){notice(day1Text(locale,'storyUnavailable'));return false;}
+  story=updated;storyReplay=false;
+  if(action==='skip')cancelFeedback();
+  if(action==='dismiss')cancelFeedback();
+  if(action==='read'&&beat==='welcome'&&!document.hidden)world?.gesture('greet');
+  return true;
+ }catch{/* A newer import/settlement owns the save; never retry an old story write. */await syncStory();return false;}
+ finally{storyBusy=false;draw();if(state===snapshot&&!document.hidden){if(action==='dismiss'||action==='skip')document.querySelector<HTMLButtonElement>('button[data-panel="journal"]')?.focus({preventScroll:true});else document.querySelector<HTMLButtonElement>('#day1-story .day1-actions button')?.focus({preventScroll:true});}}
+}
 function nextAction(){
  if(recoveryPreview(state).eligible)return {text:'recoveryTitle',label:'recoveryTitle',panel:'stock'};
  const n=state.tutorial;
@@ -34,8 +54,8 @@ function draw(){
  render(app,`<header class="top"><div class="brand"><div class="brand-title"><span class="mark">${esc(state.logo)}</span><h1>${esc(state.shopName||t('welcome'))}</h1></div><p>${esc(t('subtitle'))}</p><div class="shop-context"><span class="statusdot ${trading(state)?'':'closed'}"></span>${esc(t(status))}<span class="mode-badge">${esc(t(mode==='sandbox'?'sandboxShort':'normalShort'))}</span></div></div><div class="balance"><small>${esc(t('cash'))}</small><strong>${money(state.cash)}</strong><span>${esc(date(state.watermark))} · Tokyo</span></div></header>
  <div class="world-note" ${u.worldFailed?'':'hidden'}><span>◇</span><p>${esc(t('noWebGL'))}</p></div>
  ${!world&&!u.worldFailed?`<p class="world-loading">${esc(t('worldPreparing'))}</p>`:''}
- ${!state.revealed&&!u.zen?`<section class="next-card" aria-label="${esc(t('nextStep'))}"><span class="eyebrow">${esc(t('nextStep'))}</span><p>${esc(t(next.text))}</p>${actionButton(next.label,next.text==='nextSale'&&mode==='sandbox'?'advance':'panel',next.text==='nextSale'&&mode==='sandbox'?'data-minutes="60"':`data-panel="${next.panel}"`)}</section>`:''}
- ${u.panel?`<aside id="drawer" class="sidebar" role="dialog" aria-modal="false" aria-labelledby="panel-title"><header class="panelhead"><h2 id="panel-title" tabindex="-1">${esc(t(u.panel))}</h2><button data-action="hide" class="closepanel" aria-label="${esc(t('closePanel'))}">×</button></header><div class="panelbody" id="panelbody">${panelContent(state,u,busy)}</div></aside>`:''}
+ ${!u.zen&&!u.panel?recoveryPreview(state).eligible||!story?`<section class="next-card" aria-label="${esc(t('nextStep'))}"><span class="eyebrow">${esc(t('nextStep'))}</span><p>${esc(t(next.text))}</p>${actionButton(next.label,next.text==='nextSale'&&mode==='sandbox'?'advance':'panel',next.text==='nextSale'&&mode==='sandbox'?'data-minutes="60"':`data-panel="${next.panel}"`)}</section>`:day1Card(state,story,{locale,itemName:id=>t(catalog.offerings.find(o=>o.id===id)?.key??id),money},busy||storyBusy,storyReplay):''}
+ ${u.panel?`<aside id="drawer" class="sidebar" role="dialog" aria-modal="false" aria-labelledby="panel-title"><header class="panelhead"><h2 id="panel-title" tabindex="-1">${esc(t(u.panel))}</h2><button data-action="hide" class="closepanel" aria-label="${esc(t('closePanel'))}">×</button></header><div class="panelbody" id="panelbody">${panelContent(state,u,busy||storyBusy,story)}</div></aside>`:''}
  <div class="shop-controls"><span class="clock-note">${esc(t(mode==='sandbox'?'sandboxNote':'normalNote'))}</span><div class="control-actions">${actionButton(state.open?'close':'open','open','',true)}${mode==='sandbox'?actionButton('advance60','advance','data-minutes="60"'):actionButton('demo','mode')}</div></div>
  <nav class="dock" aria-label="${esc(t('navShelves'))}">${[['shelves','navShelves'],['stock','navStock'],['report','navReport'],['journal','navJournal'],['settings','more']].map(([p,label])=>`<button data-action="panel" data-panel="${p}" aria-pressed="${u.panel===p}">${icon(p)}<span>${esc(t(label))}</span></button>`).join('')}</nav>
  <p class="camera-hint">${esc(t('camera'))}</p>
@@ -53,7 +73,7 @@ function committed(previous:Snapshot,current:Snapshot,cause:string,targetSlot:nu
  // Consume every real committed delta even when its presentation became stale.
  const event=feedback.project(previous,current,cause,targetSlot);if(!event)return;
  clearTimeout(revealTimer);u.revealFx=false;u.feedbackKind=event.kind;
- if(event.sold>0){let text=t('sold')+' '+event.sold;const empty=catalog.offerings.filter(o=>previous.inventory[o.id].stock>0&&current.inventory[o.id].stock===0);if(empty.length)text+=' · '+empty.map(o=>t(o.key)).join(', ')+' '+t('soldOut');notice(event.kind==='support'?text+' · '+t('supportReceived'):text);}
+ if(event.sold>0){let text=t('sold')+' '+event.sold;const empty=catalog.offerings.filter(o=>previous.inventory[o.id].stock>0&&current.inventory[o.id].stock===0);if(empty.length)text+=' · '+empty.map(o=>t(o.key)).join(', ')+' '+t('soldOut');text+=' · '+day1Text(locale,'misaki')+': '+day1Text(locale,'sale');notice(event.kind==='support'?text+' · '+t('supportReceived'):text);}
  if(document.hidden||epoch!==presentationEpoch)return;
  const started=world?.feedback(event)===true;
  if(event.kind==='reveal'&&started){u.revealFx=true;revealTimer=setTimeout(()=>{if(epoch!==presentationEpoch||!u.revealFx)return;world?.skip();finishReveal();},vfx.reveal.duration);}
@@ -69,13 +89,13 @@ async function run(action:()=>Promise<void>,field='general',success?:()=>void,ca
  // Lock this intent synchronously, before the first await. Double clicks are
  // discarded rather than turned into a queue of fresh purchasing commands.
  if(busy)return;busy=true;u.formError='';u.formField='';draw();const previous=state,epoch=presentationEpoch;
- try{await action();u.blocking='';committed(previous,state,cause,targetSlot,epoch);success?.();}catch(e){fail(e,field);}finally{busy=false;storeDraft(mode,u.draft,draftPrefix);draw();}
+ try{await action();u.blocking='';committed(previous,state,cause,targetSlot,epoch);await syncStory();success?.();}catch(e){fail(e,field);}finally{busy=false;storeDraft(mode,u.draft,draftPrefix);draw();}
 }
 async function act(kind:string,data:Partial<Command>={}){state=await saves.command(state,{id:commandId(),kind,...data},mode==='normal'?Date.now():state.watermark,Date.now());}
 function openPanel(p:string,source?:HTMLElement){if(source)focusReturn=source;const changed=u.panel!==p;u.panel=p;u.formError='';draw();if(changed){const body=document.getElementById('panelbody');if(body)body.scrollTop=0;}document.getElementById('panel-title')?.focus({preventScroll:true});}
 function closePanel(){u.panel='';u.formError='';draw();focusReturn?.focus({preventScroll:true});}
 async function switchMode(next:Mode){
- storeDraft(mode,u.draft,draftPrefix);const loaded=await saves.loadOrCreate(next,next==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());mode=next;state=loaded;u.draft=draftFor(mode,state,draftPrefix);u.rename=false;u.reportDay='';u.slot=0;u.formError='';u.notice='';localStorage.setItem(modeKey,mode);cancelFeedback();
+ storeDraft(mode,u.draft,draftPrefix);const loaded=await saves.loadOrCreate(next,next==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());mode=next;state=loaded;storyReplay=false;u.draft=draftFor(mode,state,draftPrefix);u.rename=false;u.reportDay='';u.slot=0;u.formError='';u.notice='';localStorage.setItem(modeKey,mode);cancelFeedback();
 }
 app.addEventListener('input',e=>{
  const input=e.target as HTMLInputElement;switch(input.id){case 'qty':u.draft.quantity=input.value;break;case 'shop-name':u.draft.shop=input.value;break;case 'company-name':u.draft.company=input.value;break;case 'shop-logo':u.draft.logo=input.value;break;default:if(input.dataset.priceId)u.draft.prices[input.dataset.priceId]=input.value;}
@@ -97,6 +117,18 @@ app.addEventListener('submit',e=>{
 });
 app.addEventListener('click',e=>{
  const target=(e.target as Element).closest<HTMLButtonElement>('button[data-action]');if(!target||target.disabled)return;const a=target.dataset.action!,id=target.dataset.id!,n=Number(target.dataset.slot??u.slot);
+ if(a.startsWith('story-')){
+  const beat=(target.dataset.beat??'welcome') as BeatId;
+  if(a==='story-read'||a==='story-skip'||a==='story-dismiss'){void storyAction(beat,a==='story-read'?'read':a==='story-skip'?'skip':'dismiss');return;}
+  if(a==='story-report-read'){void storyAction('report','read').then(ok=>{if(ok){closePanel();document.getElementById('day1-heading')?.focus({preventScroll:true});}});return;}
+  if(a==='story-replay'){void storyAction('welcome','reopen').then(ok=>{if(ok){storyReplay=true;closePanel();document.querySelector<HTMLButtonElement>('#day1-story button[data-action="story-read"]')?.focus({preventScroll:true});}});return;}
+  if(a==='story-report'){u.reportDay=day1View(state,story??emptyStory(state)).day;openPanel('report',target);return;}
+  if(a==='story-journal'){openPanel('journal',target);return;}
+  if(a==='story-stock'){openPanel('stock',target);return;}
+  if(a==='story-shelves'){openPanel('shelves',target);return;}
+  if(a==='story-settings'){openPanel('settings',target);return;}
+  if(a==='story-sandbox'){void run(async()=>{state=await saves.settle(state,state.watermark+15*60000,Date.now());},'general',undefined,'advance');return;}
+ }
  if(a==='panel'){openPanel(target.dataset.panel!,target);return;}if(a==='hide'){closePanel();return;}
  if(a==='select-slot'){u.slot=n;draw();return;}if(a==='stock-slot'){u.slot=n;openPanel('stock',target);return;}
  if(a==='skip-reveal'){cancelFeedback();draw();return;}
@@ -109,7 +141,7 @@ app.addEventListener('click',e=>{
  void run(async()=>{
   switch(a){
    case 'buy':{const q=Number(u.draft.quantity);if(!u.draft.quantity.trim()||!Number.isSafeInteger(q)||q<1||q>1000)throw Error('quantity');const o=catalog.offerings.find(x=>x.id===id)!;if(state.cash<purchaseCost(o.cost)*q){u.formField=field;throw Error('cash');}await act('buy',{itemId:id,quantity:q});notice(t(o.key)+' ×'+q+' · '+t('bought'));break;}
-   case 'display':if(state.inventory[id].stock===0)throw Error('displayEmptyError');await act('display',{itemId:id,slot:n});notice(t('placed')+' '+(n+1)+' · '+t('replacedNote'));break;
+   case 'display':{if(state.inventory[id].stock===0)throw Error('displayEmptyError');const oldSlot=state.shelves.indexOf(id);await act('display',{itemId:id,slot:n});notice(oldSlot>=0&&oldSlot!==n?day1Text(locale,'moveShelf',{from:oldSlot+1,to:n+1}):t('placed')+' '+(n+1)+' · '+t('replacedNote'));break;}
    case 'price':{const raw=u.draft.prices[id]??String(state.inventory[id].price*10),price=Number(raw)/10;if(!raw.trim()||!Number.isSafeInteger(price)||price<1||price>100000)throw Error('price');await act('price',{itemId:id,price});delete u.draft.prices[id];notice(t('priceSaved'));break;}
    case 'clear':await act('clear',{slot:n});break;
    case 'open':await act('open');break;
@@ -135,7 +167,7 @@ function resume(){
 async function boot(){
  // Record cancellation before any awaited startup work or actionable UI.
  document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelFeedback();draw();}else resume();});window.addEventListener('focus',resume);
- const core=await loadCore();saves=new Saves(await database(artReview?"next-stop-little-shop-art-review-w1_1a1":"next-stop-little-shop-w1"),core);state=await saves.loadOrCreate(mode,mode==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());u.draft=draftFor(mode,state,draftPrefix);draw();readyMs=performance.now()-started;
+ const core=await loadCore();saves=new Saves(await database(artReview?reviewDatabase:"next-stop-little-shop-w1"),core);state=await saves.loadOrCreate(mode,mode==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());u.draft=draftFor(mode,state,draftPrefix);await syncStory();draw();readyMs=performance.now()-started;
  try{const {createWorld}=await import('./world');world=await createWorld(canvas,n=>{u.slot=n;openPanel('shelves');},finishReveal);world.update(state);world.layout(!!u.panel);worldReadyMs=performance.now()-started;}catch(e){console.error(e);u.worldFailed=true;}
  draw();if(!state.shopName)document.getElementById('shop-name')?.focus();
  setInterval(resume,10000);resume();

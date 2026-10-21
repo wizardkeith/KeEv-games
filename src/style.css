@@ -44,3 +44,16 @@ button{transition:background-color 160ms ease,border-color 160ms ease,box-shadow
 .sample-details{border-top:1px solid #d8c8df;padding-top:10px}
 .sample-tags{display:flex;gap:6px;flex-wrap:wrap}
 .completion .sample-details p{font-size:12px;line-height:1.65;margin:7px 0 0}
+
+/* Day 1: one quiet, dismissible conversation; never cover an open drawer. */
+.day1-card{width:300px;max-height:calc(100dvh - 330px);overflow:auto;overscroll-behavior:contain}
+.day1-meta{display:flex;gap:8px;align-items:center;justify-content:space-between}
+.day1-meta>button{font-size:12px;padding:6px 8px;flex:none}
+.day1-card h2{font-size:16px;margin:4px 0 0;font-weight:650}
+.day1-card p{line-height:1.7;overflow-wrap:anywhere}
+.day1-card small{display:block;color:var(--muted);margin-top:8px;line-height:1.6}
+.day1-actions{display:flex;flex-wrap:wrap;gap:8px}.day1-actions>*{flex:1 1 auto;min-width:0}
+.day1-memory p,.day1-report p{overflow-wrap:anywhere;font-size:14px;line-height:1.75}
+.day1-memory h3{margin-top:7px}
+@media(max-width:720px){.day1-card{width:min(290px,calc(100% - 24px));max-height:min(32dvh,270px);bottom:calc(193px + env(safe-area-inset-bottom))}.day1-card p{font-size:13px}.day1-meta .eyebrow{letter-spacing:.04em}.day1-actions button{font-size:12px}}
+@media(max-height:650px){.day1-card{max-height:30dvh;font-size:13px}.day1-card h2{font-size:14px}.day1-card p{margin:4px 0 8px}}

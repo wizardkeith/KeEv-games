@@ -1,0 +1,356 @@
+《下一站・小店物語》
+Day 1「第一盞燈」範圍審查及實作指令
+2026-10-22（香港）
+
+審查對象：
+Next_Stop_Little_Shop_Day1_Minimum_Playable_Scope_2026-10-22(1).txt
+
+結論：GO。接受最小範圍，將下列實作澄清直接併入開發，下一次交付應為可玩的Day 1候選。
+本文件是審查與下一輪執行指令，不代表Day 1已經實作、部署或通過實際3D驗收。
+本次沒有修改遊戲、部署或操作玩家資料。
+
+
+一、可以直接照做的方向
+
+原規格已經足夠清楚，不需要再寫一輪大型scope，亦不需要重開W1.1B美術驗收。
+
+保留：
+1. 已接受的W1.1B／v7美術、UI v6、經營規則、正常／沙盒進度、原62具名案例及全部歷史資產。
+2. Day 1只做：Misaki候選、短招呼、自由選物／上架、真實首售、P&L解說、溫柔記憶點。
+3. 使用現有10商品、generic顧客及已接受的回饋流程。36商品、Ren排班、Momo、雨景、後續七日及native繼續按Bible分期。
+4. 「第一盞燈」可以用現有暖光與開店記憶作象徵，不提前把Day 6 Prestige「雨夜玻璃小燈」當作本輪獎勵。
+5. Misaki service／regulars／cozy是Bible已定方向；外觀、具體台詞及表情屬本輪創作提案。可以同一輪先完成設計卡，再實作可辨識候選，不用等另一輪逐項批准。
+6. 保留staff.graybox經濟身份，新增Misaki呈現身份及明確binding，不以generic模型改名冒稱正式角色系統完成。
+7. 故事已讀資料分開存，經濟Snapshot保持權威；正常時間模型、售價、需求、成本及reveal gate保持不變。
+8. 無法渲染WebGL時，仍完成可部署候選和可做的驗證，如實列出新畫面待確認，延續原來交付方式。
+
+Bible依據：
+- 第20節：Small Moments、人物性格、soft branching與記憶。
+- 第28節：真正3D＋curated 2.5D、柔和anime-toon角色、soft stylized PBR及效能預算。
+- 第29節Day 1：第一店開門、Misaki、基本銷售、P&L、第一次小盈利。
+- Part II P1：入貨→陳列→客人→銷售→成本→P&L。
+- Part II P2：Graybox MVP與完整Tokyo Slice有分階段內容。
+- Part II P3：Misaki是service／regulars／cozy；Ren是efficiency／inventory／cost awareness。
+
+
+二、四項要直接補入實作的澄清
+
+A. 顧客瀏覽與成交回饋必須分開
+
+原規格第四節節拍4：
+「顧客及收據演出對應實際committed eventSequence增量。」
+
+第八節D：
+「實際結算後才有顧客／收據／角色回應。」
+
+以上寫法容易令實作者將所有顧客鎖在首宗售出之後，倒轉玩家見到的因果。
+目前v7在trading=true、尚未售出時，已有瀏覽顧客；Low只是減少數量。
+
+實作時改為：
+- 顧客出現／瀏覽：沿用開店設定、Tokyo 10:00–20:00及畫質條件，首售前可以出現。
+- 售出收據、售後Misaki反應及完成交易文案：只由成功提交的售出增量觸發。
+- 一般idle、招呼及瀏覽不代表成交，也不能扣庫存／加現金。
+- 快進或離線聚合使用一次摘要，不把多件售出排隊補播成逐客成交。
+- eventSequence目前累計售出件數，沒有具名顧客／逐筆交易身份；不得據此編造「某位顧客買了某件商品」的歷史。
+- 不需要因這個澄清新增pathfinding、完整步行或交易ledger。
+
+來源：
+src/presentation/poses.ts：customerVisible。
+src/world.ts：render loop中的trading判斷。
+src/presentation/feedback.ts：FeedbackProjector。
+src/core/simulation.ts：售出時eventSequence += n。
+
+
+B. 純故事已讀／略過不能改動經營Snapshot
+
+原規格選用sidecar是合理的；要補清楚寫入方法。
+目前Saves.write每次都會把核心revision改成「舊本地revision＋1」，
+即使compute回傳的其餘資料完全相同，仍會造成一筆新的核心版本。
+
+因此：
+- 已讀、略過、收起、重看等純故事操作，只寫sidecar。
+- 在同一個serialized IndexedDB readwrite transaction讀最新validated Snapshot及最新sidecar，
+  按需要核對core revision／資格，合併單調的已處理beat IDs。
+- 不用Saves.write做無內容的核心寫入，不呼叫core command／settle來記已讀。
+- 整個核心Snapshot保持相同，包括revision、commandIds、watermark、lastWallTime、
+  cash、inventory、reports及其他欄位。
+- 多分頁要在transaction內讀最新sidecar後合併，不能用記憶體中的舊整份物件覆蓋另一分頁的新標記。
+- 有真正經濟command才按原本交易方式更新核心；若同時需要故事更新，就保留原規格的一次原子提交。
+- 略過／收起只影響故事呈現，不把未發生的首售、盈利或reveal標成經濟達成。
+
+無需因這些單調已讀標記另建大型sync框架或強制新增storyRevision。
+
+來源：src/platform/storage.ts，Saves.write。
+
+
+C. 小盈利必須對應正在顯示的真實報表與時間
+
+原規格堅持net > 0才叫小盈利，方向正確；還要避免將已讀旗標當成現時盈利證明。
+
+- 畫面顯示「截至Tokyo某時，該日淨盈利為……」，不要把日中數字冒稱全日最終盈利。
+- sidecar中的「已確認盈利報表日期」只作閱讀／回顧參照。
+- 目前的金額、正負及文案，重新從validated Snapshot的對應report推導。
+- 同日之後可以因成本而變負；已讀beat不代表現時report.net仍大於零。
+- 舊玩家可以回顧故事，但不能靠已讀旗標憑空重建一個不存在的歷史盈利數字。
+- 如目前net <= 0，如實顯示成本及可繼續經營，不發免費錢或隱藏加成去硬造正利。
+
+本階段不用新增不可變財務事件帳本。
+
+
+D. 5–10分鐘限定為沙盒快速體驗／主動操作目標
+
+原規格已經註明是目標而非承諾，建議在執行指令也明確保留：
+
+- 沙盒：用現有快進，目標在約5–10分鐘主動操作內完成一段體驗；最後以實測報時間。
+- 正常模式：跟現實時鐘與營業段，可先選物、上架、看招呼，再離開及續玩。
+- 不承諾時段外登入後5–10分鐘就一定首售／正利。
+- 不因想縮短demo而改需求率、成本、時鐘或暗送資源。
+- 下面提供一條已重現的固定測試路線，實作者可以直接用作驗收依據。
+
+
+三、固定沙盒路線：已用原有核心驗證可行
+
+方法：
+本次只用v7原有核心在記憶體內執行固定情境，沒有瀏覽器、IndexedDB、正常存檔或用戶沙盒寫入。
+這證明經濟流程可行；沒有宣稱新Misaki、故事controller或3D演出已完成。
+
+測試起點：
+- 獨立新測試進度，不重置用戶目前沙盒。
+- Tokyo 2026-10-21 10:00，與現有新沙盒起點一致。
+- 初始現金¥50,000。
+- 空存貨、空報表、需求及成本餘數為0。
+- 買茶包5件，每件成本¥350，合計¥1,750。
+- 放入任一現有陳列架，保持建議售價¥750。
+- 設定開店，使用現有＋15分鐘。
+
+截至10:15的實際結果：
+已售：1件
+銷售收入：¥750
+已售商品成本：¥350
+人工：¥70
+租金：¥50
+營運支出：¥20
+當日截至此刻淨盈利：＋¥260
+剩餘存貨：4件
+存貨帳面成本：¥1,400
+現金：¥48,860
+eventSequence：1
+核心reveal command：可以成功執行。
+
+計算：
+¥750 − ¥350 − ¥70 − ¥50 − ¥20 ＝ ＋¥260。
+
+同一初始情境直接＋60分鐘：
+- 已售5件、收入¥3,750、COGS ¥1,750。
+- 人工¥300、租金¥200、營運¥100。
+- 淨盈利＋¥1,400；現金¥51,400；剩餘存貨0。
+- FeedbackProjector輸出一個sold:5摘要；reload則不補播。
+
+另外核對：
+- ＋9分鐘：尚未售出，reveal仍被鎖。
+- ＋10分鐘：首件售出，reveal開放。
+- 凌晨02:55起計＋15分鐘：沒有銷售，只計租金，reveal仍被鎖。
+- 鉛筆5件、建議價¥250、相同新起點＋15分鐘：亦可有真實正淨利＋¥10。
+
+茶包只是一條固定驗收路線，不能變成玩家唯一可行的故事選擇。
+用戶現有沙盒可能已有租金、報表及餘數，結果不必與上述全新測試起點相同。
+此處「reveal可以成功」只指現有核心資格；真正3D開啟演出仍需要候選畫面。
+
+
+四、其餘細節：一併處理即可
+
+1. import已有本地revision保護
+現有Saves.import透過Saves.write，會以本地舊revision＋1提交，並不直接相信匯入檔的revision。
+保留這個性質；import與該mode的sidecar清理／重建一起原子提交，
+舊的延遲回呼及presentation epoch不能把匯入前進度重新寫回。
+不需要僅為現有import另外發明runId／generation架構。
+
+2. v7沒有現成的玩家sandbox reset按鈕
+原規格「import與sandbox重設路徑」改讀為：
+「import，以及若將來／獨立測試fixture存在的reset路徑」。
+今輪用獨立測試DB即可，無須新增玩家重設功能。
+
+3. 不假設現有validator會拒絕所有未知欄位
+它會檢查已知必需欄位，但不是完整unknown-key白名單。
+故事資料不得塞進核心是本輪架構規則，不能誤以為已由舊validator全面強制。
+無需為此另做全面驗證器重構。
+
+4. sidecar失效不能拖垮經營存檔
+缺失／損壞的已知v1故事資料可以重建導覽；
+未支援的較新版本安全忽略，保留原資料，避免當成壞檔覆寫。
+現有raw Snapshot匯出繼續相容，介面用玩家看得懂的話交代故事閱讀位置會重新整理。
+
+5. 五語和新角色仍需要本輪實作成果
+key數相同不代表翻譯自然；新文案要讀過、長字串要在介面檢查。
+新角色要有可辨識輪廓、比例、衣著及表情，不能只有換名／換色。
+不需要另開角色設計審批輪，直接在同一輪完成可編輯設計與可玩候選。
+
+6. 一個具體Small Moment
+讓Misaki對玩家當下選物或開店處境有一句短反應，收尾手記呼應這個情境。
+具體內容屬本輪創作提案，不宣稱是Bible原句。
+沒有保存某項歷史選擇就不要假裝永久記得；本最小版本可依當前已驗證狀態呈現。
+
+
+五、本次審查證據
+
+本次實際完成：
+- 完整閱讀19,162bytes的範圍附件。
+- 核對附件引用的W1.1B驗收文件SHA256，與現有驗收檔一致。
+- 透過Site服務核對仍為active／v7／public／policy revision2。
+- 已保存v7來源仍為503ce1dfc22d369cc512084c1a4db9aa2930885c。
+- 讀取本地對應commit的乾淨source，核對Bible、storage、core、main及presentation。
+- 執行有限度原核心情境，證明首售／正利／reveal可行，以及快進摘要與reload不補播。
+- 沒有重跑完整62案例或build；本次沒有遊戲改動，既有通過結果只作已接受基線。
+- 沒有製作新角色、Day1 runtime、新3D畫面、新Site version或新部署。
+
+附件SHA256：
+a511594e78b0513023cf9ecf9ec1a2ce648033152a123d614bb808d4a000450d
+
+附件引用的W1.1B驗收檔SHA256：
+1cb640c9fcf1f781b1964d721147797ca7fa6415cc4a3c2366b6881ff9ebd155
+
+內部情境結果：
+/workspace/scratch/e8a3235ec1f0/review_day1_scope_2026_10_22/economy-feasibility.json
+跨Work工作區交接以本文件列出的固定條件及結果為準，不假設可直接讀取這個內部路徑。
+
+
+六、下一輪應交付甚麼
+
+下一份交付應包含：
+- 真正可玩的Day1候選，沿用同一public Site。
+- 一個Misaki獨立3D候選、兩種可讀表情、短招呼及售後回應。
+- 短對話／引導、真實首售、P&L正負分支、手記記憶點及小樣本入口。
+- 可恢復的故事閱讀進度，與經營存檔互不污染。
+- 五語內容、窄屏及鍵盤／觸控操作。
+- 實際source commit、Site version、部署結果及本輪測試。
+- 新素材authoring／交換資產與歷史保存。
+- 真正看過的畫面、未能驗收的畫面及裝置範圍清楚分開。
+
+不用再先交一份「Day1將會怎樣做」的純規格；所需澄清可以直接在實作中落實。
+
+
+七、交給ChatGPT Work的完整執行指令
+
+【開始可複製內容】
+
+請繼續同一《下一站・小店物語》Work任務，開始實作Day1「第一盞燈」最小可玩候選。
+這一輪要交付可玩的程式、角色與故事呈現，並更新同一public Site。
+
+先讀：
+1. Next_Stop_Little_Shop_Day1_Minimum_Playable_Scope_2026-10-22(1).txt
+2. 本文件第1–6節
+3. canonical Bible全文第20、28、29節與Part II P1–P4。
+
+原範圍方向接受，本文件澄清優先。不需要再停在另一份純規格或等待逐項設計批准。
+依Bible及本輪邊界自行完成例行實作與美術選擇，將新增角色外觀／台詞標作本次創作提案。
+
+A. 起點與保留
+- 同一Site：
+  appgprj_6ad82a08ed2881918ebcc2dd206a122d
+  https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site
+- 已接受v7基線：
+  503ce1dfc22d369cc512084c1a4db9aa2930885c
+- 開始先核對最新canonical及Site狀態；若有後續工作，接續最新來源，不覆寫／回退。
+- 保留public、網址、正常／沙盒進度、UI v6、W1.1B色階／接觸／構圖、
+  所有已接受的經營／存檔／生命週期修復、歷史資產與原62具名測試保護語義。
+- 經濟schema2／ts-w1-2、需求、價格、成本、營業時段、現實時鐘保持原規則。
+- staff.graybox繼續是現有經濟身份；Misaki用獨立呈現身份及明確binding。
+
+B. 實作範圍
+- 一個Misaki可辨識3D角色候選：先做設計卡，再做可編輯模型／材質來源及交換檔；
+  柔和anime-toon、約3.5–4頭身，平靜／微笑兩種可讀表情；
+  一個短招呼及一個售後回應，可原位呈現。
+- 一份data-driven Day1 beats／五語台詞／手記，使用stable IDs。
+- 一個可收起／略過／重看的短對話與引導元件，沿用現有UI及操作。
+- 自由選物、真實上架、營業、首售、P&L正負分支與一個具體Small Moment。
+- 一個局部柔光焦點，優先利用既有光源／材質／構圖，保留全店層次。
+- 沿用現有reveal資格及小樣本；不將Day6 Prestige燈提前當作獎勵。
+- 保留Minimal／Reduce Motion／Low；靜態亦能理解及完成流程。
+- 不擴展至全套七日、36商品、Ren、Momo、雨景、native、完整步行或新經濟系統。
+
+C. 修正顧客／成交的因果
+- 營業時段內顧客可在首售前出現及瀏覽，沿用trading／quality規則。
+- 成交收據與Misaki售後回應才依成功提交的eventSequence增量觸發。
+- eventSequence是售出件數，不是具名交易ledger；不要編造某位顧客買了某件商品。
+- 快進聚合是一個摘要，reload／import／mode切換不補播新成交。
+- 動畫永遠不觸發核心交易，保留已接受的取消與deferred-world行為。
+
+D. 故事sidecar的最小寫入合約
+- 使用既有saves store中的獨立versioned story record，normal／sandbox分開。
+- 純已讀／略過／收起只更新sidecar，不經Saves.write做空經濟寫入。
+- serialized transaction內讀最新validated Snapshot及最新sidecar，
+  按需要核對core revision／資格，合併已處理IDs，避免多分頁遺失更新。
+- 純故事操作不得改任何核心Snapshot欄位，包括revision、commandIds、
+  watermark、lastWallTime、cash、inventory及reports。
+- 真正經濟command若需同步故事更新，一次原子提交，核心結果與無story時一致。
+- import與該mode sidecar清理／重建同一交易；保留本地revision單調遞增。
+- 舊回呼／epoch不能把匯入前故事進度寫回，不影響另一mode。
+- 壞／缺失v1 sidecar可重建；未知較新version安全忽略並保留。
+- 原raw Snapshot備份相容，清楚交代故事閱讀位置不在舊格式備份內。
+- v7沒有玩家sandbox reset功能，本輪毋須新增；新情境用獨立測試資料。
+
+E. 盈利與時間文案
+- 正淨利按真實validated report.net判斷，顯示Tokyo日期及「截至」時間。
+- 已讀盈利beat／記錄日期不代表現在仍為正利；每次顯示金額都讀現行report。
+- 負利分支如實講成本，可收起／續玩；支援金、單筆毛利及現金增加不當淨利。
+- 5–10分鐘只係沙盒快速體驗／主動操作目標，正常模式遵守真實時間。
+- 舊玩家以回顧語氣承認已有進度，不重買、不重給、不假裝剛剛完成首售。
+
+F. 固定驗收路線
+在獨立新測試進度，Tokyo2026-10-21 10:00、初始¥50,000、
+空存貨／報表及零餘數：
+買茶包5件（每件¥350），一架陳列，建議售價¥750，開店，＋15分鐘。
+預期：1件售出、收入¥750、COGS ¥350、人工¥70、租金¥50、
+營運¥20、net＋¥260、存貨4、帳面成本¥1,400、現金¥48,860、
+eventSequence1，reveal可成功。
+這是固定測試fixture，不重置用戶現有normal／sandbox，不強迫玩家只選茶包。
+
+同一初始狀態直接＋60分鐘：
+5件售出、收入¥3,750、COGS ¥1,750、人工¥300、租金¥200、
+營運¥100、net＋¥1,400，生成一次sold5摘要。
+先驗證現有核心即可，毋須等使用者另錄影片才開始Day1實作。
+
+G. 有意義的驗證
+- 保留原62具名案例及其保護語義，重跑content validator／TypeScript／production build。
+- 新增最小必要測試，覆蓋：
+  1. 相同核心commands／timestamps，有無story時核心Snapshot一致；
+     純故事操作連revision等欄位都完全不變。
+  2. 兩分頁已讀IDs合併、commit失敗、舊callback跨import不回寫。
+  3. 缺失／壞sidecar、舊schema2正常／沙盒載入及mode隔離。
+  4. 首售前／後、正利／負利、同日由正轉負、時段外、
+     無庫存／不足現金、已reveal／舊進度分支。
+  5. trading=true且eventSequence0仍有一般瀏覽顧客；
+     銷售反應只由成功提交的新增售出觸發。
+  6. hide→resume／deferred-world／Minimal／Reduce Motion／Low與Skip，
+     新角色短動作取消語義同既有回饋一致。
+  7. 五語keys／插值、文字語氣、鍵盤焦點返回、長字串及窄屏操作。
+  8. 新角色真實資產與export parity、法線／透明政策、歷史hash保存；
+     如真的有rig才做實際骨架／clip測試。
+- 不為未改動範圍另開無關全面修補。
+
+H. 美術及可攜交付
+- 保存角色設計、可編輯幾何／材質、export recipe、GLB、stable IDs、
+  尺寸／朝向／pivot／hash／權利來源。
+- 如採程序動作就明確標示，不冒稱完整skeletal pipeline。
+- 用正常全景及有側欄畫面檢查輪廓／表情／比例／落地與光線；
+  頭部近看漂亮但正常遊玩看不清楚，仍需要調整呈現。
+- 一句角色反應與手記呼應實際玩家情境，營造可記住的小片段。
+- 新創作不得冒稱Bible已明定髮型、服裝、逐句台詞或未實作的長期記憶。
+
+I. 發佈與交接
+- 完成實作和驗證後，push實際source commit、保存新version、部署同一public Site，
+  核對最終狀態；不要只交另一份計劃。
+- 若支援預覽仍WebGL不可用，完成候選及可做的驗證，再按既有方式部署，
+  列清新角色／Day1／售出／小樣本哪些畫面待用戶實拍確認。
+  不能用NullEngine、GLB結構或錄製fps冒稱GPU視覺／效能。
+- 已接受W1.1B基線不因新畫面待確認而重新變成未驗收。
+- 交付HANDOFF：實作內容、source／version／部署回執、實際測試、
+  資產及可重建來源、已見／未見畫面、後續範圍。
+- 完整來源留在同一canonical Git；報告ZIP如有提供，關閉後驗CRC／hash。
+  無需為本次spec補字另造整包歷史source。
+- 將W1.1B AFTER後續驗收補註及503,056bytes勘誤併入今次正常交接。
+
+請開始實作，直到交付可玩的Day1候選及清楚的實際驗證結果。
+
+【結束可複製內容】
+

@@ -1,0 +1,826 @@
+{
+  "version": "day1-misaki-v1",
+  "identity": {
+    "id": "actor.misaki.day1.v1",
+    "economicBinding": "staff.graybox",
+    "name": "Misaki",
+    "version": 1,
+    "role": "service / regulars / cozy",
+    "appearance": "original Day 1 proposal; not a prescribed Bible character sheet",
+    "floor": 0.015,
+    "height": 1.48,
+    "headHeight": 0.4
+  },
+  "units": "metres",
+  "axes": "right handed, +Y up; scene +Z forward convention, authored actor face -Z matches existing world yaw adapter",
+  "pivot": "local shoes bottom=.015; runtime actorBaseY=.065 gives floor+.001",
+  "recipe": "src/art/misaki.ts",
+  "exportCommand": "node --import tsx tools/export-misaki.ts",
+  "sourceSha256": {
+    "src/art/misaki.ts": "3c55e0a6f3075d394c5d2efcd5bfae0781d78adefd53a5339874c6cc525527e7",
+    "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
+    "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
+    "src/art/recipes.ts": "c20e2d9819bd5a60678c8e006318882a5ad10dcb290c228d71816add11b7dfef",
+    "tools/export-misaki.ts": "769dd339befc62e442d5371b483b3ff3da602bd60ca1ed4dd9ea8acbbb977a8e"
+  },
+  "palette": {
+    "hair": "#57443D",
+    "hairLight": "#725447",
+    "skin": "#E7BA9D",
+    "cheek": "#D7978F",
+    "ink": "#433B40",
+    "iris": "#756651",
+    "cardigan": "#688879",
+    "cuff": "#91AA98",
+    "apron": "#F1E5CF",
+    "seam": "#C9B89D",
+    "skirt": "#84708B",
+    "shoe": "#5C5050",
+    "pin": "#C6AF77",
+    "cream": "#FFF6E8"
+  },
+  "animation": {
+    "type": "procedural rigid part rotation; no skeleton / skins / embedded clips",
+    "sampler": "misakiPose(kind,progress)",
+    "rootMotion": false,
+    "expressions": "two authored head recipes; runtime toggles head nodes",
+    "owner": "presentation clock owns hide/skip/import/mode/quality cancellation"
+  },
+  "rights": "Original project procedural geometry and design; no external model, texture or audio licence introduced",
+  "visualStatus": "structure/export/source parity checked; actual new 3D appearance and native material calibration require real rendering",
+  "assets": [
+    {
+      "id": "actor.misaki.day1.v1.calm",
+      "expression": "calm",
+      "file": "assets/masters/day1/misaki-calm-v1.glb",
+      "web": "public/assets/day1/misaki-calm-v1.glb",
+      "bytes": 270328,
+      "sha256": "f61a3dd54935f4c88c6d341e2b2c7c07311bff4e58c84ddb40697343cc811b05",
+      "parts": [
+        {
+          "id": "body",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "groups": [
+            {
+              "materialId": "mat.woven-fabric.v1:#84708B:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#84708B",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#688879:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#688879",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#91AA98:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#91AA98",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#F1E5CF:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#F1E5CF",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#C9B89D:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#C9B89D",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#FFF6E8:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#FFF6E8",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#5C5050:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#5C5050",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#433B40:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#433B40",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.soft-skin.v1:#E7BA9D:1:r0.83:m0:ior1.4:OPAQUE:ds0:linear-srgb-v2",
+              "role": "skin",
+              "color": "#E7BA9D",
+              "alpha": 1,
+              "id": "mat.soft-skin.v1",
+              "roughness": 0.83,
+              "metallic": 0,
+              "ior": 1.4,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Soft simple skin intent; not a completed toon shader or subsurface pipeline."
+            },
+            {
+              "materialId": "mat.soft-paint.v1:#C6AF77:1:r0.84:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2",
+              "role": "paint",
+              "color": "#C6AF77",
+              "alpha": 1,
+              "id": "mat.soft-paint.v1",
+              "roughness": 0.84,
+              "metallic": 0,
+              "ior": 1.5,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Calm painted surfaces and packaging."
+            }
+          ]
+        },
+        {
+          "id": "head",
+          "pivot": [
+            0,
+            1.08,
+            0
+          ],
+          "groups": [
+            {
+              "materialId": "mat.soft-skin.v1:#E7BA9D:1:r0.83:m0:ior1.4:OPAQUE:ds0:linear-srgb-v2",
+              "role": "skin",
+              "color": "#E7BA9D",
+              "alpha": 1,
+              "id": "mat.soft-skin.v1",
+              "roughness": 0.83,
+              "metallic": 0,
+              "ior": 1.4,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Soft simple skin intent; not a completed toon shader or subsurface pipeline."
+            },
+            {
+              "materialId": "mat.matte-hair.v1:#57443D:1:r0.79:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2",
+              "role": "hair",
+              "color": "#57443D",
+              "alpha": 1,
+              "id": "mat.matte-hair.v1",
+              "roughness": 0.79,
+              "metallic": 0,
+              "ior": 1.5,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Soft sculpted hair silhouette with restrained highlight."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#F1E5CF:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#F1E5CF",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.matte-hair.v1:#725447:1:r0.79:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2",
+              "role": "hair",
+              "color": "#725447",
+              "alpha": 1,
+              "id": "mat.matte-hair.v1",
+              "roughness": 0.79,
+              "metallic": 0,
+              "ior": 1.5,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Soft sculpted hair silhouette with restrained highlight."
+            },
+            {
+              "materialId": "mat.soft-paint.v1:#C6AF77:1:r0.84:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2",
+              "role": "paint",
+              "color": "#C6AF77",
+              "alpha": 1,
+              "id": "mat.soft-paint.v1",
+              "roughness": 0.84,
+              "metallic": 0,
+              "ior": 1.5,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Calm painted surfaces and packaging."
+            },
+            {
+              "materialId": "mat.soft-paint.v1:#FFF6E8:1:r0.84:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2",
+              "role": "paint",
+              "color": "#FFF6E8",
+              "alpha": 1,
+              "id": "mat.soft-paint.v1",
+              "roughness": 0.84,
+              "metallic": 0,
+              "ior": 1.5,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Calm painted surfaces and packaging."
+            },
+            {
+              "materialId": "mat.printed-ink.v1:#433B40:1:r0.9:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "ink",
+              "color": "#433B40",
+              "alpha": 1,
+              "id": "mat.printed-ink.v1",
+              "roughness": 0.9,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Printed marks and tiny facial features."
+            },
+            {
+              "materialId": "mat.printed-ink.v1:#756651:1:r0.9:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "ink",
+              "color": "#756651",
+              "alpha": 1,
+              "id": "mat.printed-ink.v1",
+              "roughness": 0.9,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Printed marks and tiny facial features."
+            },
+            {
+              "materialId": "mat.printed-ink.v1:#FFF6E8:1:r0.9:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "ink",
+              "color": "#FFF6E8",
+              "alpha": 1,
+              "id": "mat.printed-ink.v1",
+              "roughness": 0.9,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Printed marks and tiny facial features."
+            },
+            {
+              "materialId": "mat.soft-skin.v1:#D7978F:1:r0.83:m0:ior1.4:OPAQUE:ds0:linear-srgb-v2",
+              "role": "skin",
+              "color": "#D7978F",
+              "alpha": 1,
+              "id": "mat.soft-skin.v1",
+              "roughness": 0.83,
+              "metallic": 0,
+              "ior": 1.4,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Soft simple skin intent; not a completed toon shader or subsurface pipeline."
+            },
+            {
+              "materialId": "mat.printed-ink.v1:#D7978F:1:r0.9:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "ink",
+              "color": "#D7978F",
+              "alpha": 1,
+              "id": "mat.printed-ink.v1",
+              "roughness": 0.9,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Printed marks and tiny facial features."
+            }
+          ]
+        },
+        {
+          "id": "arm-left",
+          "pivot": [
+            -0.21,
+            1.08,
+            0
+          ],
+          "groups": [
+            {
+              "materialId": "mat.woven-fabric.v1:#688879:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#688879",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#91AA98:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#91AA98",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.soft-skin.v1:#E7BA9D:1:r0.83:m0:ior1.4:OPAQUE:ds0:linear-srgb-v2",
+              "role": "skin",
+              "color": "#E7BA9D",
+              "alpha": 1,
+              "id": "mat.soft-skin.v1",
+              "roughness": 0.83,
+              "metallic": 0,
+              "ior": 1.4,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Soft simple skin intent; not a completed toon shader or subsurface pipeline."
+            }
+          ]
+        },
+        {
+          "id": "arm-right",
+          "pivot": [
+            0.21,
+            1.08,
+            0
+          ],
+          "groups": [
+            {
+              "materialId": "mat.woven-fabric.v1:#688879:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#688879",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#91AA98:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#91AA98",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.soft-skin.v1:#E7BA9D:1:r0.83:m0:ior1.4:OPAQUE:ds0:linear-srgb-v2",
+              "role": "skin",
+              "color": "#E7BA9D",
+              "alpha": 1,
+              "id": "mat.soft-skin.v1",
+              "roughness": 0.83,
+              "metallic": 0,
+              "ior": 1.4,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Soft simple skin intent; not a completed toon shader or subsurface pipeline."
+            }
+          ]
+        }
+      ],
+      "validation": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 0
+      }
+    },
+    {
+      "id": "actor.misaki.day1.v1.smile",
+      "expression": "smile",
+      "file": "assets/masters/day1/misaki-smile-v1.glb",
+      "web": "public/assets/day1/misaki-smile-v1.glb",
+      "bytes": 246948,
+      "sha256": "b6c1ba01ac8c697f6230f745e86ceceefd47abd8af14eedc00e62aef72541283",
+      "parts": [
+        {
+          "id": "body",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "groups": [
+            {
+              "materialId": "mat.woven-fabric.v1:#84708B:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#84708B",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#688879:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#688879",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#91AA98:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#91AA98",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#F1E5CF:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#F1E5CF",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#C9B89D:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#C9B89D",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#FFF6E8:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#FFF6E8",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#5C5050:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#5C5050",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#433B40:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#433B40",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.soft-skin.v1:#E7BA9D:1:r0.83:m0:ior1.4:OPAQUE:ds0:linear-srgb-v2",
+              "role": "skin",
+              "color": "#E7BA9D",
+              "alpha": 1,
+              "id": "mat.soft-skin.v1",
+              "roughness": 0.83,
+              "metallic": 0,
+              "ior": 1.4,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Soft simple skin intent; not a completed toon shader or subsurface pipeline."
+            },
+            {
+              "materialId": "mat.soft-paint.v1:#C6AF77:1:r0.84:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2",
+              "role": "paint",
+              "color": "#C6AF77",
+              "alpha": 1,
+              "id": "mat.soft-paint.v1",
+              "roughness": 0.84,
+              "metallic": 0,
+              "ior": 1.5,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Calm painted surfaces and packaging."
+            }
+          ]
+        },
+        {
+          "id": "head",
+          "pivot": [
+            0,
+            1.08,
+            0
+          ],
+          "groups": [
+            {
+              "materialId": "mat.soft-skin.v1:#E7BA9D:1:r0.83:m0:ior1.4:OPAQUE:ds0:linear-srgb-v2",
+              "role": "skin",
+              "color": "#E7BA9D",
+              "alpha": 1,
+              "id": "mat.soft-skin.v1",
+              "roughness": 0.83,
+              "metallic": 0,
+              "ior": 1.4,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Soft simple skin intent; not a completed toon shader or subsurface pipeline."
+            },
+            {
+              "materialId": "mat.matte-hair.v1:#57443D:1:r0.79:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2",
+              "role": "hair",
+              "color": "#57443D",
+              "alpha": 1,
+              "id": "mat.matte-hair.v1",
+              "roughness": 0.79,
+              "metallic": 0,
+              "ior": 1.5,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Soft sculpted hair silhouette with restrained highlight."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#F1E5CF:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#F1E5CF",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.matte-hair.v1:#725447:1:r0.79:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2",
+              "role": "hair",
+              "color": "#725447",
+              "alpha": 1,
+              "id": "mat.matte-hair.v1",
+              "roughness": 0.79,
+              "metallic": 0,
+              "ior": 1.5,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Soft sculpted hair silhouette with restrained highlight."
+            },
+            {
+              "materialId": "mat.soft-paint.v1:#C6AF77:1:r0.84:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2",
+              "role": "paint",
+              "color": "#C6AF77",
+              "alpha": 1,
+              "id": "mat.soft-paint.v1",
+              "roughness": 0.84,
+              "metallic": 0,
+              "ior": 1.5,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Calm painted surfaces and packaging."
+            },
+            {
+              "materialId": "mat.soft-paint.v1:#FFF6E8:1:r0.84:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2",
+              "role": "paint",
+              "color": "#FFF6E8",
+              "alpha": 1,
+              "id": "mat.soft-paint.v1",
+              "roughness": 0.84,
+              "metallic": 0,
+              "ior": 1.5,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Calm painted surfaces and packaging."
+            },
+            {
+              "materialId": "mat.printed-ink.v1:#433B40:1:r0.9:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "ink",
+              "color": "#433B40",
+              "alpha": 1,
+              "id": "mat.printed-ink.v1",
+              "roughness": 0.9,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Printed marks and tiny facial features."
+            },
+            {
+              "materialId": "mat.soft-skin.v1:#D7978F:1:r0.83:m0:ior1.4:OPAQUE:ds0:linear-srgb-v2",
+              "role": "skin",
+              "color": "#D7978F",
+              "alpha": 1,
+              "id": "mat.soft-skin.v1",
+              "roughness": 0.83,
+              "metallic": 0,
+              "ior": 1.4,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Soft simple skin intent; not a completed toon shader or subsurface pipeline."
+            }
+          ]
+        },
+        {
+          "id": "arm-left",
+          "pivot": [
+            -0.21,
+            1.08,
+            0
+          ],
+          "groups": [
+            {
+              "materialId": "mat.woven-fabric.v1:#688879:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#688879",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#91AA98:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#91AA98",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.soft-skin.v1:#E7BA9D:1:r0.83:m0:ior1.4:OPAQUE:ds0:linear-srgb-v2",
+              "role": "skin",
+              "color": "#E7BA9D",
+              "alpha": 1,
+              "id": "mat.soft-skin.v1",
+              "roughness": 0.83,
+              "metallic": 0,
+              "ior": 1.4,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Soft simple skin intent; not a completed toon shader or subsurface pipeline."
+            }
+          ]
+        },
+        {
+          "id": "arm-right",
+          "pivot": [
+            0.21,
+            1.08,
+            0
+          ],
+          "groups": [
+            {
+              "materialId": "mat.woven-fabric.v1:#688879:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#688879",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.woven-fabric.v1:#91AA98:1:r0.94:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2",
+              "role": "fabric",
+              "color": "#91AA98",
+              "alpha": 1,
+              "id": "mat.woven-fabric.v1",
+              "roughness": 0.94,
+              "metallic": 0,
+              "ior": 1.45,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Matte woven intent; seams/folds are geometry, no generated texture."
+            },
+            {
+              "materialId": "mat.soft-skin.v1:#E7BA9D:1:r0.83:m0:ior1.4:OPAQUE:ds0:linear-srgb-v2",
+              "role": "skin",
+              "color": "#E7BA9D",
+              "alpha": 1,
+              "id": "mat.soft-skin.v1",
+              "roughness": 0.83,
+              "metallic": 0,
+              "ior": 1.4,
+              "alphaMode": "OPAQUE",
+              "doubleSided": false,
+              "note": "Soft simple skin intent; not a completed toon shader or subsurface pipeline."
+            }
+          ]
+        }
+      ],
+      "validation": {
+        "errors": 0,
+        "warnings": 0,
+        "infos": 0
+      }
+    }
+  ]
+}

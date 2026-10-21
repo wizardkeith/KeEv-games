@@ -1,0 +1,54 @@
+{
+  "baseline": "503ce1dfc22d369cc512084c1a4db9aa2930885c",
+  "protectedFiles": 179,
+  "changedProtectedFiles": [],
+  "baselineNamedTests": 62,
+  "tests": [
+    {
+      "file": "tests/art-w1_1a.test.ts",
+      "namedTests": 8,
+      "namesAndAssertionsUnchanged": true
+    },
+    {
+      "file": "tests/art-w1_1a1.test.ts",
+      "namedTests": 5,
+      "namesAndAssertionsUnchanged": true
+    },
+    {
+      "file": "tests/art-w1_1b.test.ts",
+      "namedTests": 5,
+      "namesAndAssertionsUnchanged": true
+    },
+    {
+      "file": "tests/economy.test.ts",
+      "namedTests": 17,
+      "namesAndAssertionsUnchanged": true
+    },
+    {
+      "file": "tests/presentation-w1_1a.test.ts",
+      "namedTests": 5,
+      "namesAndAssertionsUnchanged": true
+    },
+    {
+      "file": "tests/presentation-w1_1a1.test.ts",
+      "namedTests": 7,
+      "namesAndAssertionsUnchanged": true
+    },
+    {
+      "file": "tests/startup-visibility.test.ts",
+      "namedTests": 2,
+      "namesAndAssertionsUnchanged": true
+    },
+    {
+      "file": "tests/storage.test.ts",
+      "namedTests": 1,
+      "namesAndAssertionsUnchanged": true
+    },
+    {
+      "file": "tests/w1_1.test.ts",
+      "namedTests": 12,
+      "namesAndAssertionsUnchanged": true
+    }
+  ],
+  "pass": true
+}

@@ -1,3 +1,5 @@
+import {day1Text} from '../src/narrative/day1-copy';
+import {Day1GestureClock} from '../src/presentation/day1';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -24,7 +26,7 @@ function saleFixture(){let s=core.create('sandbox',epoch);s=apply(s,'buy',{itemI
 function deferred<T>(){let resolve!:(x:T)=>void;const promise=new Promise<T>(r=>resolve=r);return {promise,resolve};}
 function boundary(state= saleFixture()){
  const timers=new Map<number,{fn:()=>void;ms:number}>(),clock=new FeedbackClock(),notices:string[]=[],errors:unknown[]=[];let timerId=0,plays=0,fxCalls=0;
- const c:any={state,clock,vfx,motionAllowed,feedback:new FeedbackProjector(),catalog,presentationEpoch:0,busy:false,mode:'sandbox',draftPrefix:'qa.',disposed:false,effectiveQuality:'high',quality:'auto',frames:[],last:undefined,minimalFX:false,reduced:{matches:false},document:{hidden:false},revealTimer:undefined,u:{slot:1,sound:true,minimalFX:false,revealFx:false,feedbackKind:'',draft:{},formError:'',formField:'',blocking:''},draw:()=>{},storeDraft:()=>{},fail:(e:unknown)=>errors.push(e),notice:(s:string)=>notices.push(s),t:(key:string)=>key,commandId:()=>`integration-${++id}`,clearTimeout:(n:number)=>timers.delete(n),setTimeout:(fn:()=>void,ms:number)=>{timers.set(++timerId,{fn,ms});return timerId;},saleSound:{currentTime:0,play:()=>{plays++;return Promise.resolve();}},onFeedbackEnd:()=>c.finishReveal(),setQuality:(q:string)=>c.effectiveQuality=q};
+ const c:any={state,clock,gestureClock:new Day1GestureClock(),syncStory:async()=>{},day1Text,locale:'en',vfx,motionAllowed,feedback:new FeedbackProjector(),catalog,presentationEpoch:0,busy:false,mode:'sandbox',draftPrefix:'qa.',disposed:false,effectiveQuality:'high',quality:'auto',frames:[],last:undefined,minimalFX:false,reduced:{matches:false},document:{hidden:false},revealTimer:undefined,u:{slot:1,sound:true,minimalFX:false,revealFx:false,feedbackKind:'',draft:{},formError:'',formField:'',blocking:''},draw:()=>{},storeDraft:()=>{},fail:(e:unknown)=>errors.push(e),notice:(s:string)=>notices.push(s),t:(key:string)=>key,commandId:()=>`integration-${++id}`,clearTimeout:(n:number)=>timers.delete(n),setTimeout:(fn:()=>void,ms:number)=>{timers.set(++timerId,{fn,ms});return timerId;},saleSound:{currentTime:0,play:()=>{plays++;return Promise.resolve();}},onFeedbackEnd:()=>c.finishReveal(),setQuality:(q:string)=>c.effectiveQuality=q};
  vm.createContext(c);vm.runInContext(script,c);const realFeedback=c.world.feedback;c.world.feedback=(e:unknown)=>{fxCalls++;return realFeedback(e);};
  const click=(action:string,data:Record<string,string>={})=>{c.clickHandler({target:{closest:()=>({disabled:false,dataset:{action,...data}})}});return c.lastRun as Promise<void>;};
  const reveal=()=>{const before=c.state;c.state=apply(before,'reveal');c.committed(before,c.state,'reveal',1,c.presentationEpoch);return c.state as Snapshot;};

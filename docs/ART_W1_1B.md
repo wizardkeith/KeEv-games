@@ -47,7 +47,7 @@ Selection, settling, receipt, sample opening, dust, fixed customer local motions
 - Current command: node --import tsx tools/art-w1_1b.ts.
 -15 current masters under assets/masters/w1_1b/, and15 exact public derivatives under public/assets/w1_1b/.
 - assets/authoring/w1_1b/manifest.json includes hashes, semantic PBR values, authored sRGB and linear factors; presentation-intent.json retains lighting/framing/ground/quality intent and native limits.
--15 GLBs total503,072bytes, zero Khronos errors/warnings. This is file size, not observed download size. The runtime still generates meshes from the shared recipes and does not request these GLBs.
+-15 GLBs total503,056bytes, zero Khronos errors/warnings. This is file size, not observed download size. The runtime still generates meshes from the shared recipes and does not request these GLBs.
 - Original W1.1, W1.1A and W1.1A1 outputs remain byte-identical. Exact accepted W1.1A1 geometry/material/recipe/world/exporter/validator source is frozen under assets/authoring/w1_1a1/source_snapshot/ with canonical commit/hash provenance. tools/art-w1_1.ts now imports those historical inputs so its command cannot silently overwrite accepted masters with current colors.
 - No external artwork, model, texture, font or licence was introduced. Original project procedural source and reusable engine-neutral exchange geometry remain.
 
@@ -64,3 +64,6 @@ UI v6, five-language174keys, fonts, main/boot, core, storage, time, catalog, sch
 Supported managed Chrome QA still reports Error: WebGL not supported (recorded in evidence/art_2026_10_22/webgl-errors.json). Its fallback UI loads the existing isolated review progress, cash¥51,400. No player DB, transaction, import/reset or fake stock was used for imagery. Thus: real BEFORE evidence has been viewed; current AFTER source candidate is complete, but AFTER appearance and actual effect rhythm remain pending. No blank canvas, AI image, NullEngine result or recording framerate is offered as a rendered result.
 
 Publish this candidate to the same public Site. Compare the same owner progress, viewport, quality and camera angle in Zen plus one shelf2 operation view; no re-buy/reset needed. Evaluate brightness/detail, support contacts, entire framing and hair/skin/apron first. If practical, one short ordinary interaction recording can later assess existing FX. Native Unity/URP/Android/iOS remain separate adapter/device gates.
+
+
+Acceptance addendum (2026-10-22): subsequent user AFTER video completed the independent scoped desktop static3D review; W1.1B/v7 accepted. Historical pending wording describes production time only. Correct master total is503,056bytes; assets/manifest were already correct. See current HANDOFF for new Day1 candidate limits.

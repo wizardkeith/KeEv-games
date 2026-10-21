@@ -1,54 +1,62 @@
-# W1.1B 集中3D美術候選 — 交接
+# Day 1「第一盞燈」可玩候選 — HANDOFF
+2026-10-22（香港）
 
-2026-10-22（香港）。延續已驗收UI v6及W1.1A1 Closeout；本輪只完善既有靜態小店呈現。**真正BEFORE已看；已完成source候選，AFTER觀感待真實畫面確認。**
+同一 Site：appgprj_6ad82a08ed2881918ebcc2dd206a122d
+https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site
+起點 canonical main：503ce1dfc22d369cc512084c1a4db9aa2930885c；v7／active／public／policy2。沒有覆蓋後續工作。
+最終 source commit、saved version、部署及 archive hash 見交付包內實際 DELIVERY_RECEIPT.json。該回執是 commit 後產生的交付 metadata，不冒稱存在同一 source commit。
 
-同一Site：appgprj_6ad82a08ed2881918ebcc2dd206a122d
-URL：https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site
+## 已實作
+- 獨立 Misaki 3D 候選：不對稱 bob、側髮結／葉形髮夾、sage 外衣、米色長圍裙、plum 裙及平底鞋。約3.66頭身／高1.48m，平靜與微笑真實表情幾何。短招呼、售後程序動作，沒有根節點滑動。不是 generic 改名／換色。actor.misaki.day1.v1 明確綁定 staff.graybox；經濟 roster、薪酬／能力不變。
+- 五語 Day1 台詞／手記，各52新 keys；原各174 keys 不變。可收起／略過／重看；自由選物→上架→開店→真實首售→P&L→溫柔手記。茶包／其他選物的反應依目前實際狀態，不假裝記得未保存的歷史選擇。
+- P&L 重新讀取正在顯示的 validated report，附 Tokyo「截至」日期／時間；正／負分支不依舊盈利已讀旗標。舊玩家用回顧語氣，不重給資源或強迫重買。
+- 顧客依 trading／quality 在首售前可以瀏覽。售出摘要／Misaki 售後回應才跟 committed eventSequence 增量；多件快進是一次摘要，reload／import／mode 不補播。沒有具名顧客交易 ledger 或虛構指定客人購買某商品。
+- 收銀枱新增暖色迎賓紙卡，利用局部材質及非常低 emissive 作焦點；沒有新增燈、陰影貼圖、粒子、bloom、render target。實際柔光觀感待 GPU 畫面。
+- 同商品換架提示具體 from／to，原 display 規則不變。原 reveal 資格及零經營加成小樣本保留，沒有 Day6 Prestige 燈獎勵。
 
-開始前正式source helper核對canonical為b093c50fa13cfca80c8b10fdfd96e716114a2d7d，Site v6／public／policy revision2，tracked tree clean，沒有較新工作被覆蓋。最終source commit、Site version及部署結果見交付包內真正的DELIVERY_RECEIPT.json；這是commit後產生的交付metadata，不冒稱已在同一Git commit內。
+## 存檔／生命週期
+獨立 story.day1.v1.<mode>.<shopId> 記錄，使用原 IndexedDB saves store。
+純 read／skip／dismiss／reopen 在 serialized transaction 讀最新 validated Snapshot 與 sidecar，合併單調 IDs；不經 Saves.write，不呼叫 core command／settle，不改任何核心欄位，連 revision／commandIds／watermark／lastWallTime 亦完全不變。
+所有經濟資格由 Snapshot 推導；schema2／ts-w1-2、時鐘、營業段、需求、價格及成本不改。
+import 與故事清理一次原子提交，仍用本地舊 revision＋1；舊 callback 不能恢復匯入前標記。缺失／壞v1可重建，未支援較新版本忽略並保留。normal／sandbox 隔離，沒有新增玩家 reset 功能。
+raw Snapshot 備份相容，UI 說明故事閱讀位置匯入後重新整理。
+Hidden／Skip／Minimal／Reduce Motion／Low／mode／import 取消新短動作，單一容量、不排隊；首次 deferred-world 不補播。
 
-## 本輪處理
+## 實際測試
+npm test：80具名 PASS，0 FAIL／cancelled／skipped。
+保留原62案例名稱與所有 assert 呼叫原文；兩份既有 VM fixtures 只補新 runtime bindings。
+新增18：storage7、art5、copy3、實際 main／world presentation boundary3。
+覆蓋核心 Snapshot 完整一致、純故事零核心寫入、多連線合併、import 原子 rollback／本地revision／舊回呼、壞／未來 sidecar、mode隔離、茶包固定路線、鉛筆自由選擇、時段外、同日正轉負、售前瀏覽、手勢取消、目前報表及安全文字。
+content validator PASS：10商品、5語各174 baseline keys；另5×52 Day1 keys 對齊／插值 PASS。
+TypeScript／Sites production build PASS；原 large chunk warning 保留，不當作效能通過。
+Misaki exporter：2 GLB共517,276bytes；Khronos 0errors／0warnings；實際 vertex／normal／indices／pivot／linear material parity、Babylon獨立匯入、曲面繞序／比例／落點通過。這不是GPU視覺驗收。
+preservation：179個受保護檔案與v7一致；原core／catalog／baseline五語／recipes／materials／direction／歷史資產與package／lockfile保持。
+證據：evidence/day1/；完整原測試與歷史證據保留。
 
-| BEFORE問題 | 來源候選改動 |
-|---|---|
-| 整體灰淡，牆／木／人物明度相近 | materials.ts統一sRGB→linear PBR色彩轉換，runtime與新版GLB同步；recipes.ts分開暖木地板、桌面、支撐及頭髮／皮膚／圍裙色塊 |
-| 接觸層次弱 | 查出桌腳／櫃身底部實際離地約14.1cm，延伸原有支撐至地面；鞋底、盆栽及商品落點使用地板／桌面基準。既有1024陰影調低偏移，標準用PCF medium，簡約回到原低成本路徑 |
-| 商品／人物細、留白較多 | direction.ts收近及重新平衡焦點；aspect1.6半徑15.8→14.3298545，約9.3%收近。保留有限角度／zoom及原viewport避讓，依完整房間邊界保護窄屏構圖 |
-| 材質識別不清 | 保留原有木／紙／布／陶roughness與透明面政策，透過正確線性色彩、色階、光線與接觸改善；沒有重開杯口／杯把／提帶修復 |
+## 真正看過的介面
+Supported cloud browser、獨立review build／DB；沒有操作公開站玩家存檔。
+實際命名→買茶包5→架1→開店→＋15分鐘→報表→手記→盈利節拍→reload保留→reveal→重看／收起。
+截至Tokyo10:15：售出1、收入¥750、COGS¥350、人工¥70、租金¥50、營運¥20、net¥260、現金¥48,860、存貨帳面¥1,400。符合固定新測試起點。
+320×820 CSS iframe：五語故事／重看，body scrollWidth＝clientWidth＝320、card width290；繁中操作最少44px。泰文長段可讀；重看焦點到故事繼續，Return可繼續，收起回手記導航。不是手機實機／觸控硬體驗收。
+連續玩家主動操作時間未量測；5–10分鐘仍為沙盒設計目標，不把工具或編碼時間當遊玩時長。
 
-詳細設計、數值與可攜／引擎專用界線見docs/ART_W1_1B.md。新assets/authoring/w1_1b/presentation-intent.json保存色彩、光源關係、構圖邊界、地面及降級意圖。沒有新增光源、貼圖、後製、天氣、步行、正式角色或故事；既有FX常數／生命週期／Minimal／Reduce Motion保留。
+## 3D 視覺待確認
+W1.1B靜態3D已由後續用戶AFTER影片完成獨立驗收，沒有重新變成待驗收。
+本輪預覽實際回報 Error: WebGL not supported；UI／經營／故事流程已看過。
+新Misaki輪廓／正常全景表情、局部暖色焦點、招呼／售後3D動作、小樣本3D開啟仍待真實畫面。
+沒有以NullEngine、GLB validator、camera矩陣或錄製fps冒稱GPU畫面／效能；Android／iOS／URP、手機30／60FPS均未驗收。
 
-## 已看過的真正畫面
+簡單回傳：同一網址進沙盒，不重置正常存檔。正常全景＋有側欄各一張；另錄約30–90秒，拍招呼／目前選物、日間售出摘要、P&L「截至」時間及手記／小樣本。時段外可用原快進進Tokyo10:00–20:00；舊玩家可由手記重看，不需為劇情重買。既有沙盒累積租金／餘數不同，不應硬套全新fixture的¥260。
 
-成功開啟三張原PNG：Zen、入貨與已上架畫面；亦查看原MP4在12s及18s的抽幀。不是完整逐幀播放／GPU測量。原PNG與兩幀保存在evidence/art_2026_10_22/before/，before-evidence.json保存來源、hash及影片參照。影片19.866633秒、1862×1206、錄製30fps；錄製fps不代表遊戲fps。
+## 可重建來源
+完整 source checkpoint 留同一 canonical Git；報告ZIP是交接／新資源／證據包，不冒稱包含整包歷史source。
+Node24／原lockfile：npm ci → npm test → npm run validate → npm run build。
+角色重匯：node --import tsx tools/export-misaki.ts。
+保留核對：node --import tsx tools/day1-preservation.ts。
+新設計卡 docs/MISAKI_DAY1_DESIGN.md；作者來源 src/art/misaki.ts、day1-focus.ts；程序姿態 misakiPose＋src/presentation/day1.ts；交換資產 assets/masters/day1、public/assets/day1；manifest／hash／權利來源 assets/authoring/day1。
+Metres／RH／+Y up／+Z forward，人物面朝-Z、地面pivot；無骨架／embedded clips的聲稱。程序動作及URP材質／光影仍需native adapter與實機校準。
+外觀／逐句台詞是今次原創提案；Bible只定service／regulars／cozy等定位，不能冒稱完整正式staff系統完成。
 
-因此，不再說「沒有3D證據」。本輪after仍未目視：最終候選的支援managed Chrome預覽再次回報Error: WebGL not supported（2026-10-21T17:39:44.751Z，即香港2026-10-22 01:39）。正常fallback UI可用，沿用隔離審查進度¥51,400，沒有操作經濟、匯入／重置、改玩家DB或注入假庫存。
+W1.1B正常交接補註：15masters真實容量503,056bytes，原503,072屬文字誤差；檔案／manifest原本正確。歷史HANDOFF封存docs/HANDOFF_W1_1B_Archived.md；後續用戶影片完成該輪AFTER評審。
+未擴展Day2 suppliers／Ren／Momo／雨景／36商品／七日全套／native。下一步先收新角色／演出真實畫面。
 
-## 真正完成的驗證
-
-- **62 tests PASS，0 fail／skip／cancelled**。原57具名案例保留，新增5個：IEC色彩轉換／alpha、實際GLB factor一致性、Babylon RH鏡頭投影、家具／人物／商品實際落點、歷史資源／來源hash。
-- 鏡頭測試用真實Babylon view/projection矩陣，在5種viewport與每種231個yaw／beta取樣檢查房間邊界；這是headless數學驗證，不是實拍構圖、遮擋或選取舒適度驗收。
-- 現行runtime材質工廠與獨立匯入GLB保持一致；原杯口／杯把射線案例繼續讀已接受的W1.1A1 GLB，未刪去原測試。
-- 新15個GLB共503,072bytes；Khronos結構檢查0errors／0warnings；NullEngine獨立匯入15個、77個材質政策通過。這些不是3D觀感或native驗收。
-- content validator PASS：10商品、五語各174keys、品質及Unique含義不變。TypeScript／正常production build PASS；原有大chunk warning保留。
-- source inventory：空店mesh分組173→174、滿陳列233→234；材質身份64→66；opaque caster分組144→146／204→206。頂點／三角形數不變；新燈／貼圖／render target均0。只是來源成本盤點，並非GPU／draw calls／FPS。
-- 主程式／boot、UI v6、五語、字型、core、storage、時間、catalog、schema2／ts-w1-2、玩家進度及package/lockfile完全不變。scope-preservation.json記錄範圍。
-
-## 資源與可重建來源
-
-完整可回復來源、交換素材及資源歷史保存在同一Site canonical Git checkpoint。新15masters：assets/masters/w1_1b/；15相同public交換副本：public/assets/w1_1b/；manifest保存hash／sRGB／linear factors／材質意圖。runtime依然使用共用recipes建立場景，不新增GLB下載依賴。
-
-舊W1.1／W1.1A／W1.1A1素材、manifests及證據不變。已接受W1.1A1的精確recipes／materials／geometry／world／exporter來源另存assets/authoring/w1_1a1/source_snapshot/，帶原commit及hash。舊exporter改為明確讀凍結來源，避免今後誤用新色票覆寫舊masters。
-
-Node24＋原lockfile：npm ci → npm test → npm run validate → npm run build。
-本輪交換檔：node --import tsx tools/art-w1_1b.ts。
-獨立匯入：node tools/validate-art-w1_1b.mjs。
-Unity／URP、Android／iOS仍需adapter及裝置驗證；沒有換引擎或要求安裝native工具。
-
-## 發佈及下一份畫面
-
-沿用同一public Site及網址，不搬移／重設玩家存檔。交付證據包附真正部署回執、目前manifest／intent、實際測試及before參照；它是本輪報告包，完整source由canonical Git保存，不重製封存Closeout證明包。ZIP完整關閉後用正常reader核對CRC／完整清單／各項hash，再提供大小與SHA256。
-
-候選after最少比較：用平時能看3D的原網址、相同進度／viewport／畫質，拍一張Zen全景及一張架2＋入貨／店務。盡量維持before角度；不需要重新買貨或重置。先看亮暗細節、腳底／商品落點、全店入鏡與人物色塊；方便才補一次普通互動短片看既有FX。沒有錄影前不再加強特效。
-
-回退點：v6／b093c50fa13cfca80c8b10fdfd96e716114a2d7d，只回退程式，不回退存檔或更改public。已驗收UI交接完整封存在docs/HANDOFF_UI_v6_Archived.md。這輪候選完成後停在after觀感門檻，不自動展開故事、全面重設計或新內容。

@@ -1,0 +1,13 @@
+{
+  "dateHongKong": "2026-10-22",
+  "environment": "Supported Sites managed preview, cloud Chrome, static review build",
+  "testOnlyDatabase": "next-stop-little-shop-day1-review",
+  "productionPlayerSlotsOperated": false,
+  "webGL": {"available": false, "observedConsoleError": "Error: WebGL not supported", "actualNew3DVisualAcceptance": "PENDING"},
+  "actualUIFlow": ["create named independent sandbox at Tokyo10:00", "read Misaki welcome", "buy tea5 for1750JPY", "display shelf1", "open", "explicit +15minutes", "view P&L", "acknowledge report", "read current-tea memory", "read live-positive profit beat", "reload retains story", "reveal existing zero-stat sample", "replay and dismiss"],
+  "observedAtTokyo1015": {"sold":1,"salesJPY":750,"cogsJPY":350,"salaryJPY":70,"rentJPY":50,"operatingJPY":20,"netJPY":260,"cashJPY":48860,"bookCostJPY":1400},
+  "storyAndReveal": "actual UI controls reached completion; no new3D animation claim",
+  "narrowLayout": {"method":"320x820 CSS iframe in same supported browser, not physical device", "localesObserved":["zh-HK","en","ja","th","zh-CN"],"bodyClientWidth":320,"bodyScrollWidth":320,"storyCardWidth":290,"zhHKControlMinHeight":44,"thaiCardHeight":200.984375,"thaiReplayedText":"current existing-sales welcome, no invented new sale","focusAfterReplay":"story-read","keyboardReturn":"moves from replay welcome to completed story","focusAfterDismiss":"journal navigation"},
+  "timing": "Continuous player active-time was not measured; 5–10minutes remains a sandbox design target. Tool/coding delays are not player time.",
+  "notVerified": ["Misaki GPU appearance and normal-view expressions","new local counter focus","greeting/sale gestures in actual3D","sample opening in actual3D","GPU FPS/frame time","physical phone/touch hardware","Android/iOS/URP"]
+}

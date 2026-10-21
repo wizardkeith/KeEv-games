@@ -21,6 +21,9 @@ import {artDirection,curatedRadius} from './art/direction';
 import {FeedbackClock,motionAllowed,vfx} from './presentation/config';
 import type {Feedback} from './presentation/feedback';
 import {customerPoses,customerVisible,browsePose} from './presentation/poses';
+import {misakiParts,misakiIdentity,misakiPose} from './art/misaki';
+import {Day1GestureClock} from './presentation/day1';
+import {counterFocusRecipe} from './art/day1-focus';
 
 export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>void,onFeedbackEnd:()=>void=()=>{}){
  const engine=new Engine(canvas,true,{preserveDrawingBuffer:false,stencil:true,adaptToDeviceRatio:false});
@@ -37,6 +40,8 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  model('room.modular',roomRecipe(),undefined,undefined,false);
  const roomMeshes=scene.meshes.filter(m=>m.name.startsWith('room.'));for(const m of roomMeshes){m.receiveShadows=true;const material=m.material as PBRMaterial;if(material.alpha===1&&[palette.wood,palette.cream,palette.dark].includes(m.metadata?.authoredColor))shadow.addShadowCaster(m);}
  const counter=model('fixture.shop-counter.w1_1',counterRecipe());counter.position.set(...layoutData.counter.position as [number,number,number]);
+ const focus=model('day1.counter.welcome-card',counterFocusRecipe());focus.position.set(2.55,1.111,-1.76);
+ for(const mesh of focus.getChildMeshes()){const m=mesh.material as PBRMaterial;m.emissiveColor=Color3.FromArray(linearColor('#DAB57B')).scale(.035);}
  const registerPlant=model('counter.plant',plantRecipe(.38));registerPlant.position.set(2.0,1.111,-1.45);
  for(const [x,z,scale] of [[-3.9,2.6,1.15],[-4.05,-1.6,.9],[1.2,2.95,.52]]){const plant=model('plant.original',plantRecipe(scale));plant.position.set(x,scale===.52?1.5235:artDirection.fixtureBaseY,z);}
  for(let row=0;row<2;row++)for(let i=0;i<8;i++){const item=catalog.offerings[(i+row*3)%catalog.offerings.length];const stock=model(`back.display.${row}.${item.id}`,productRecipe(item.id,item.color));stock.position.set(-2.95+i*.55,1.47+.105/2+row*.76+artDirection.restingGap,2.84);stock.scaling.setAll(.85);}
@@ -46,8 +51,10 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
   const rim=model(`${d.id}.selected`,[{shape:'round',size:[1.68,.035,1.05],at:[0,.10,0],color:'#B59AC8',radius:.016,alpha:.62}],undefined,i,false);rim.position.set(d.position[0],0,d.position[2]);for(const mesh of rim.getChildMeshes()){highlights.push(mesh as Mesh);mesh.setEnabled(false);}
   const products=new TransformNode(`${d.id}.products`,scene);products.position.set(d.position[0],artDirection.displaySurfaceY+artDirection.restingGap,d.position[2]);productRoots.push(products);
  }
- function actor(name:string,color:string){const root=new TransformNode(name,scene),parts=new Map<string,TransformNode>();for(const part of personParts(color)){const local=part.recipe.map(p=>({...p,at:p.at.map((v,i)=>v-part.pivot[i]) as [number,number,number]}));const node=model(`${name}.${part.id}`,local,root);node.position.set(...part.pivot);parts.set(part.id,node);}return {root,parts};}
- const staff=actor('staff.generic',palette.staff);staff.root.position.set(2.6,artDirection.actorBaseY,-2.45);staff.root.rotation.y=-.35;
+ function actor(name:string,color:string,recipe=personParts(color)){const root=new TransformNode(name,scene),parts=new Map<string,TransformNode>();for(const part of recipe){const local=part.recipe.map(p=>({...p,at:p.at.map((v,i)=>v-part.pivot[i]) as [number,number,number]}));const node=model(`${name}.${part.id}`,local,root);node.position.set(...part.pivot);parts.set(part.id,node);}return {root,parts};}
+ const staff=actor(misakiIdentity.id,palette.staff,misakiParts('calm'));staff.root.metadata=misakiIdentity;staff.root.position.set(2.6,artDirection.actorBaseY,-2.45);staff.root.rotation.y=-.35;
+ const smile=misakiParts('smile').find(p=>p.id==='head')!;
+ const smileHead=model(`${misakiIdentity.id}.head.smile`,smile.recipe.map(p=>({...p,at:p.at.map((v,i)=>v-smile.pivot[i]) as [number,number,number]})),staff.root);smileHead.position.set(...smile.pivot);smileHead.setEnabled(false);
  const customers=[actor('customer.decorative.1',palette.customerSage),actor('customer.decorative.2',palette.customerRose)];
  customers.forEach((c,i)=>{const p=customerPoses[i];c.root.position.set(p.x,p.y+artDirection.actorBaseY-.09,p.z);c.root.rotation.y=p.yaw;c.root.setEnabled(false);});
  const parcel=model('discovery.graybox-sample',[
@@ -65,7 +72,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  revealProxy.setEnabled(false);
  const dustRoot=new TransformNode('fx.window.dust.pool',scene),dust:TransformNode[]=[];
  for(let i=0;i<vfx.dust.capacity;i++){const mote=model(`fx.dust.${i}`,[{shape:'box',size:[vfx.dust.size,vfx.dust.size,.002],at:[0,0,0],color:'#F9EACD',alpha:vfx.dust.maxOpacity,role:'paper'}],dustRoot,undefined,false);for(const m of mote.getChildMeshes()){m.receiveShadows=false;(m as Mesh).billboardMode=Mesh.BILLBOARDMODE_ALL;}dust.push(mote);}
- const clock=new FeedbackClock();let minimalFX=false,ambientTime=0,selectionTime:number=vfx.selection.duration;
+ const clock=new FeedbackClock(),gestureClock=new Day1GestureClock();let minimalFX=false,ambientTime=0,selectionTime:number=vfx.selection.duration;
  let state:Snapshot|undefined,quality='auto',effectiveQuality='high',zen=false,panelOpen=false,selectedSlot=-1,disposed=false;
  let frames:number[]=[],last:number|undefined,visibleSamples=0,qualityCheckedAt=0;let readyAt=0,composition='';
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
@@ -84,7 +91,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  scene.onPointerPick=(_,pick)=>{const n=pick.pickedMesh?.metadata?.slot;if(typeof n==='number')onSlot(n);};
  const contextLost=()=>canvas.dispatchEvent(new CustomEvent('world-error'));
  canvas.addEventListener('webglcontextlost',contextLost);window.addEventListener('resize',resize);const observer=new ResizeObserver(resize);observer.observe(canvas);
- function finishFeedback(){const reveal=clock.active?.kind==='reveal';clock.cancel();if(reveal)onFeedbackEnd();}
+ function finishFeedback(){const reveal=clock.active?.kind==='reveal';clock.cancel();gestureClock.cancel();if(reveal)onFeedbackEnd();}
  function advanceFeedback(dt:number){if(disposed||document.hidden||!motionAllowed({low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches})){finishFeedback();return;}const reveal=clock.active?.kind==='reveal';clock.step(dt);if(reveal&&!clock.active)onFeedbackEnd();}
  const visibility=()=>{last=undefined;if(document.hidden)finishFeedback();};document.addEventListener('visibilitychange',visibility);
  resize();await scene.whenReadyAsync();readyAt=performance.now();
@@ -94,6 +101,9 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
   if(quality==='auto'&&frames.length>=90&&now-qualityCheckedAt>3000){const sorted=[...frames].sort((a,b)=>a-b);const p75=sorted[Math.floor(sorted.length*.75)];if(p75>35&&effectiveQuality!=='low')setQuality('low');qualityCheckedAt=now;}
   const policy={low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches},animate=motionAllowed(policy);
   advanceFeedback(dt);selectionTime=animate?Math.min(vfx.selection.duration,selectionTime+dt):vfx.selection.duration;
+  gestureClock.step(dt,policy,document.hidden);const gesture=gestureClock.active,pose=gesture?misakiPose(gesture.kind,gesture.elapsed/gesture.duration):{headTilt:0,armLeft:0,armRight:0};
+  staff.parts.get('head')!.setEnabled(!gesture);smileHead.setEnabled(!!gesture);staff.parts.get('head')!.rotation.z=pose.headTilt;smileHead.rotation.z=pose.headTilt;
+  staff.parts.get('arm-left')!.rotation.z=pose.armLeft;staff.parts.get('arm-right')!.rotation.z=pose.armRight;
   const hour=state?new Date(state.watermark+9*3600000).getUTCHours():0;const trading=!!state?.open&&hour>=config.openHour&&hour<config.closeHour;
   customers.forEach((c,i)=>{c.root.setEnabled(customerVisible(i,trading,policy.low));const pose=browsePose(i,now,animate);c.parts.get('head')!.rotation.y=pose.headYaw;c.parts.get('arm-right')!.rotation.z=pose.armAngle;});
   highlights.forEach((m,i)=>{m.visibility=i===selectedSlot?(.62+.18*(1-selectionTime/vfx.selection.duration)):0;});
@@ -108,9 +118,10 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
   zen(value:boolean){zen=value;resize();},layout(value:boolean){panelOpen=value;resize();},
   selected(slot:number){if(selectedSlot!==slot){selectedSlot=slot;selectionTime=0;}highlights.forEach((m,i)=>m.setEnabled(i===slot));},
   minimal(value:boolean){minimalFX=value;if(value)finishFeedback();},
-  feedback(event:Feedback){finishFeedback();if(disposed||document.hidden)return false;clock.start(event.kind,event.slot,{low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches});return !!clock.active;},
+  feedback(event:Feedback){finishFeedback();if(disposed||document.hidden)return false;const policy={low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches};clock.start(event.kind,event.slot,policy);if(event.sold>0)gestureClock.start('sale',policy);return !!clock.active;},
+  gesture(kind:'greet'){finishFeedback();if(disposed)return false;return gestureClock.start(kind,{low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches},document.hidden);},
   skip(){finishFeedback();},
-  metrics(){return {artDirection:artDirection.id,readyAtMs:readyAt,quality,effectiveQuality,adaptivePolicy:'auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged',minimalFX,reducedMotion:reduced.matches,feedback:clock.active?.kind??null,materials:scene.materials.length,dustCapacity:vfx.dust.capacity,customerRoots:customers.map(c=>({position:c.root.position.asArray(),enabled:c.root.isEnabled()})),selectedSlot,visibleSamples,frameSamplesMs:[...frames],fps:frames.length?1000/(frames.reduce((a,b)=>a+b,0)/frames.length):null,meshes:scene.meshes.length,activeMeshes:scene.getActiveMeshes().length,renderer:engine.getGlInfo(),viewport:[canvas.width,canvas.height],cameraViewport:camera.viewport};},
+  metrics(){return {presentationActor:misakiIdentity,gesture:gestureClock.active?.kind??null,artDirection:artDirection.id,readyAtMs:readyAt,quality,effectiveQuality,adaptivePolicy:'auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged',minimalFX,reducedMotion:reduced.matches,feedback:clock.active?.kind??null,materials:scene.materials.length,dustCapacity:vfx.dust.capacity,customerRoots:customers.map(c=>({position:c.root.position.asArray(),enabled:c.root.isEnabled()})),selectedSlot,visibleSamples,frameSamplesMs:[...frames],fps:frames.length?1000/(frames.reduce((a,b)=>a+b,0)/frames.length):null,meshes:scene.meshes.length,activeMeshes:scene.getActiveMeshes().length,renderer:engine.getGlInfo(),viewport:[canvas.width,canvas.height],cameraViewport:camera.viewport};},
   dispose(){finishFeedback();disposed=true;clock.dispose();observer.disconnect();window.removeEventListener('resize',resize);document.removeEventListener('visibilitychange',visibility);canvas.removeEventListener('webglcontextlost',contextLost);engine.stopRenderLoop();scene.dispose();engine.dispose();}
  };
 }

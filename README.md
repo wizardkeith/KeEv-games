@@ -1,3 +1,7 @@
+# Day1 candidate (2026-10-22)
+
+Misaki, The First Light story and separate reading progress are implemented. The same public Site and economic saves remain in use. See docs/HANDOFF.md for actual results and new3D visual limits. Rebuild character: node --import tsx tools/export-misaki.ts.
+
 # 下一站・小店物語 / Next Stop, Little Shop
 
 W1.1B focused 3D art candidate (2026-10-22), extending accepted UI v6 and W1.1A1 closeout by KeEv Games. The player names their own business. This checkpoint improves the ten-item management loop and preserves the original Bible. It stops before full Tokyo content production.
