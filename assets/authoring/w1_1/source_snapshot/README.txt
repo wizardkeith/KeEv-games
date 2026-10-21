@@ -1,0 +1,1 @@
+Frozen W1.1 authoring source from canonical commit f48dc15030fd89af0fe99e00f890ba204bdc0185. Original 15 masters and manifest are unchanged. Run this source in the complete W1.1 checkpoint with its original imports/lockfile; the active authoring tools now produce W1.1A under separate versioned paths.

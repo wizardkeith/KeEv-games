@@ -1,22 +1,22 @@
 {
   "method": "Local production artifact byte counts; gzip level 9 calculated locally. NOT an actual browser download or hosting compression claim.",
-  "totalBytes": 3634471,
-  "totalGzipBytes": 1449141,
+  "totalBytes": 4183538,
+  "totalGzipBytes": 1588367,
   "files": [
     {
-      "file": "dist/assets/basisTextureLoader-DixiyQWM.js",
+      "file": "dist/assets/basisTextureLoader-BJvO7vEO.js",
       "bytes": 8209,
       "gzipBytes": 3247
     },
     {
-      "file": "dist/assets/clipPlaneFragment-CHnk7z0M.js",
+      "file": "dist/assets/clipPlaneFragment-CTAabJ6U.js",
       "bytes": 1207,
       "gzipBytes": 336
     },
     {
-      "file": "dist/assets/clipPlaneVertex-BQyfG0yq.js",
+      "file": "dist/assets/clipPlaneVertex-DdKKdHMU.js",
       "bytes": 14119,
-      "gzipBytes": 2382
+      "gzipBytes": 2383
     },
     {
       "file": "dist/assets/counter.glb",
@@ -24,129 +24,129 @@
       "gzipBytes": 647
     },
     {
-      "file": "dist/assets/dds-Bih4Gwha.js",
+      "file": "dist/assets/dds-n0LA2iFi.js",
       "bytes": 9225,
-      "gzipBytes": 3482
+      "gzipBytes": 3481
     },
     {
-      "file": "dist/assets/ddsTextureLoader-twBE0V4w.js",
+      "file": "dist/assets/ddsTextureLoader-jl1hLD0L.js",
       "bytes": 1289,
       "gzipBytes": 629
     },
     {
-      "file": "dist/assets/depth.fragment-9XFPpHSA.js",
+      "file": "dist/assets/depth.fragment-CqSv7AiD.js",
       "bytes": 1288,
-      "gzipBytes": 570
+      "gzipBytes": 573
     },
     {
-      "file": "dist/assets/depth.vertex-C9uuJQck.js",
+      "file": "dist/assets/depth.vertex-Chhj7Dys.js",
       "bytes": 2057,
       "gzipBytes": 772
     },
     {
-      "file": "dist/assets/depthBoxBlur.fragment-CavPRs8M.js",
+      "file": "dist/assets/depthBoxBlur.fragment-BZXYVscf.js",
       "bytes": 740,
-      "gzipBytes": 438
+      "gzipBytes": 440
     },
     {
-      "file": "dist/assets/depthBoxBlur.fragment-Dq09RbHL.js",
+      "file": "dist/assets/depthBoxBlur.fragment-CAqsXv25.js",
       "bytes": 561,
-      "gzipBytes": 372
+      "gzipBytes": 373
     },
     {
-      "file": "dist/assets/dumpTools-LK68zjvW.js",
+      "file": "dist/assets/dumpTools-kBjrhkmx.js",
       "bytes": 3211,
-      "gzipBytes": 1540
+      "gzipBytes": 1542
     },
     {
-      "file": "dist/assets/envTextureLoader-BW2IPDR7.js",
+      "file": "dist/assets/envTextureLoader-BQrOLAdI.js",
       "bytes": 6794,
-      "gzipBytes": 2899
+      "gzipBytes": 2897
     },
     {
-      "file": "dist/assets/exrTextureLoader-DsypP-aU.js",
+      "file": "dist/assets/exrTextureLoader-DbFAcbyQ.js",
       "bytes": 15556,
-      "gzipBytes": 5818
+      "gzipBytes": 5819
     },
     {
-      "file": "dist/assets/hdrTextureLoader-Cvis_ZXa.js",
+      "file": "dist/assets/hdrTextureLoader-CkFpAcO_.js",
       "bytes": 2458,
       "gzipBytes": 1186
     },
     {
-      "file": "dist/assets/helperFunctions-CpGO_SQn.js",
+      "file": "dist/assets/helperFunctions-BaRoA9tT.js",
       "bytes": 5304,
-      "gzipBytes": 1775
+      "gzipBytes": 1776
     },
     {
-      "file": "dist/assets/helperFunctions-Dy-xZo7L.js",
+      "file": "dist/assets/helperFunctions-CRRhoD_W.js",
       "bytes": 5711,
-      "gzipBytes": 1894
+      "gzipBytes": 1893
     },
     {
-      "file": "dist/assets/iesTextureLoader-BHYadw9d.js",
+      "file": "dist/assets/iesTextureLoader-ClHPYlRQ.js",
       "bytes": 2727,
       "gzipBytes": 1180
     },
     {
-      "file": "dist/assets/index-CWjUIOLe.css",
-      "bytes": 12948,
-      "gzipBytes": 3612
+      "file": "dist/assets/index-B_GHC_Oy.js",
+      "bytes": 91678,
+      "gzipBytes": 36051
     },
     {
-      "file": "dist/assets/index-Cn4LEpRv.js",
-      "bytes": 87119,
-      "gzipBytes": 34005
+      "file": "dist/assets/index-Doz1X_6A.css",
+      "bytes": 14353,
+      "gzipBytes": 3991
     },
     {
-      "file": "dist/assets/instancesDeclaration-CI0za7sd.js",
+      "file": "dist/assets/instancesDeclaration-BVqRXPx0.js",
       "bytes": 998,
       "gzipBytes": 333
     },
     {
-      "file": "dist/assets/kernelBlur.fragment-7msUGPv6.js",
-      "bytes": 2698,
-      "gzipBytes": 800
-    },
-    {
-      "file": "dist/assets/kernelBlur.fragment-BbULJK8M.js",
+      "file": "dist/assets/kernelBlur.fragment-Cwqai8jK.js",
       "bytes": 2127,
-      "gzipBytes": 715
+      "gzipBytes": 716
     },
     {
-      "file": "dist/assets/kernelBlur.vertex-CCKTXSdr.js",
-      "bytes": 933,
-      "gzipBytes": 476
+      "file": "dist/assets/kernelBlur.fragment-DfZIfylU.js",
+      "bytes": 2698,
+      "gzipBytes": 803
     },
     {
-      "file": "dist/assets/kernelBlur.vertex-DsRp5e7C.js",
+      "file": "dist/assets/kernelBlur.vertex-Dunx5ioR.js",
       "bytes": 790,
-      "gzipBytes": 437
+      "gzipBytes": 438
     },
     {
-      "file": "dist/assets/kernelBlurVaryingDeclaration-CTJGsGif.js",
+      "file": "dist/assets/kernelBlur.vertex-qt-25x1N.js",
+      "bytes": 933,
+      "gzipBytes": 478
+    },
+    {
+      "file": "dist/assets/kernelBlurVaryingDeclaration-CD-JBNel.js",
       "bytes": 180,
-      "gzipBytes": 161
+      "gzipBytes": 163
     },
     {
-      "file": "dist/assets/kernelBlurVaryingDeclaration-jPB7SP0H.js",
+      "file": "dist/assets/kernelBlurVaryingDeclaration-Dth97D0g.js",
       "bytes": 170,
-      "gzipBytes": 154
+      "gzipBytes": 155
     },
     {
-      "file": "dist/assets/ktxTextureLoader-DIWw1gwL.js",
+      "file": "dist/assets/ktxTextureLoader-_2sS1tS2.js",
       "bytes": 15826,
       "gzipBytes": 4626
     },
     {
-      "file": "dist/assets/logDepthDeclaration-B5uciFmN.js",
+      "file": "dist/assets/logDepthDeclaration-CeEgsKQZ.js",
       "bytes": 14120,
       "gzipBytes": 4784
     },
     {
-      "file": "dist/assets/logDepthDeclaration-C24-QzNc.js",
+      "file": "dist/assets/logDepthDeclaration-DQsaA6EY.js",
       "bytes": 15700,
-      "gzipBytes": 4918
+      "gzipBytes": 4919
     },
     {
       "file": "dist/assets/mesh.vertexData.functions-ayNlGC5K.js",
@@ -154,84 +154,84 @@
       "gzipBytes": 494
     },
     {
-      "file": "dist/assets/meshUboDeclaration-Bbd9IWJg.js",
+      "file": "dist/assets/meshUboDeclaration-B2ZGV8WZ.js",
       "bytes": 561,
       "gzipBytes": 314
     },
     {
-      "file": "dist/assets/meshUboDeclaration-UBOLQD15.js",
+      "file": "dist/assets/meshUboDeclaration-QRuW1mW-.js",
       "bytes": 557,
-      "gzipBytes": 308
+      "gzipBytes": 310
     },
     {
-      "file": "dist/assets/packingFunctions-Dewcpi2Y.js",
+      "file": "dist/assets/packingFunctions-tuMl3YXf.js",
       "bytes": 521,
-      "gzipBytes": 288
+      "gzipBytes": 287
     },
     {
-      "file": "dist/assets/pass.fragment-CHtENmha.js",
-      "bytes": 479,
-      "gzipBytes": 315
-    },
-    {
-      "file": "dist/assets/pass.fragment-D-ibI8mf.js",
+      "file": "dist/assets/pass.fragment-CWxfzwDo.js",
       "bytes": 345,
-      "gzipBytes": 268
+      "gzipBytes": 269
     },
     {
-      "file": "dist/assets/passCube.fragment-C1HKvrN0.js",
+      "file": "dist/assets/pass.fragment-eC-mBRBs.js",
+      "bytes": 479,
+      "gzipBytes": 316
+    },
+    {
+      "file": "dist/assets/passCube.fragment-CPsrgxMW.js",
       "bytes": 850,
-      "gzipBytes": 371
+      "gzipBytes": 372
     },
     {
-      "file": "dist/assets/passCube.fragment-CTiwP1kE.js",
+      "file": "dist/assets/passCube.fragment-DeXz55c-.js",
       "bytes": 1159,
-      "gzipBytes": 420
+      "gzipBytes": 421
     },
     {
-      "file": "dist/assets/pbr.fragment-DfhHBMUl.js",
+      "file": "dist/assets/pbr.fragment-CPD1NEoo.js",
       "bytes": 213799,
-      "gzipBytes": 38542
+      "gzipBytes": 38541
     },
     {
-      "file": "dist/assets/pbr.fragment-YiCoF6mz.js",
+      "file": "dist/assets/pbr.fragment-KzKUcDhp.js",
       "bytes": 204966,
-      "gzipBytes": 37992
+      "gzipBytes": 37994
     },
     {
-      "file": "dist/assets/pbr.vertex-CcJnU-SL.js",
+      "file": "dist/assets/pbr.vertex-BgcnYCve.js",
       "bytes": 22337,
-      "gzipBytes": 4264
+      "gzipBytes": 4268
     },
     {
-      "file": "dist/assets/pbr.vertex-CdQK2ZPB.js",
+      "file": "dist/assets/pbr.vertex-C1Z4NEm7.js",
       "bytes": 23924,
-      "gzipBytes": 4703
+      "gzipBytes": 4701
     },
     {
-      "file": "dist/assets/postprocess.vertex-CdGc5VW7.js",
+      "file": "dist/assets/postprocess.vertex-BRnp71VO.js",
       "bytes": 611,
-      "gzipBytes": 374
+      "gzipBytes": 376
     },
     {
-      "file": "dist/assets/rgbdDecode.fragment-Bx5Run6W.js",
-      "bytes": 576,
-      "gzipBytes": 365
-    },
-    {
-      "file": "dist/assets/rgbdDecode.fragment-z_2kVCCI.js",
+      "file": "dist/assets/rgbdDecode.fragment-C6cIww0I.js",
       "bytes": 441,
       "gzipBytes": 323
     },
     {
-      "file": "dist/assets/rgbdEncode.fragment-8QCTba5h.js",
-      "bytes": 433,
-      "gzipBytes": 316
+      "file": "dist/assets/rgbdDecode.fragment-T0s-QvbE.js",
+      "bytes": 576,
+      "gzipBytes": 367
     },
     {
-      "file": "dist/assets/rgbdEncode.fragment-PIc0EhMC.js",
+      "file": "dist/assets/rgbdEncode.fragment-B6loGtUN.js",
       "bytes": 567,
-      "gzipBytes": 357
+      "gzipBytes": 359
+    },
+    {
+      "file": "dist/assets/rgbdEncode.fragment-BiM99ZPc.js",
+      "bytes": 433,
+      "gzipBytes": 317
     },
     {
       "file": "dist/assets/sale.wav",
@@ -239,34 +239,34 @@
       "gzipBytes": 7806
     },
     {
-      "file": "dist/assets/shadowMap.fragment-B41RCuBp.js",
+      "file": "dist/assets/shadowMap.fragment-BBjzO4dY.js",
       "bytes": 3060,
-      "gzipBytes": 1076
+      "gzipBytes": 1077
     },
     {
-      "file": "dist/assets/shadowMap.fragment-D6qaxxD-.js",
+      "file": "dist/assets/shadowMap.fragment-DqP_WeTo.js",
       "bytes": 3691,
-      "gzipBytes": 1195
+      "gzipBytes": 1197
     },
     {
-      "file": "dist/assets/shadowMap.vertex--HCi_JK1.js",
-      "bytes": 4362,
-      "gzipBytes": 1388
-    },
-    {
-      "file": "dist/assets/shadowMap.vertex-BQgxByji.js",
+      "file": "dist/assets/shadowMap.vertex-Baz9Hjgc.js",
       "bytes": 4451,
       "gzipBytes": 1437
     },
     {
-      "file": "dist/assets/shadowMapFragmentSoftTransparentShadow-BUl-Eqsj.js",
-      "bytes": 432,
-      "gzipBytes": 305
+      "file": "dist/assets/shadowMap.vertex-DviGRO8o.js",
+      "bytes": 4362,
+      "gzipBytes": 1389
     },
     {
-      "file": "dist/assets/shadowMapFragmentSoftTransparentShadow-D6FO_CpK.js",
+      "file": "dist/assets/shadowMapFragmentSoftTransparentShadow-CIOY3P1h.js",
+      "bytes": 432,
+      "gzipBytes": 304
+    },
+    {
+      "file": "dist/assets/shadowMapFragmentSoftTransparentShadow-HF5dne3J.js",
       "bytes": 397,
-      "gzipBytes": 285
+      "gzipBytes": 286
     },
     {
       "file": "dist/assets/skin-test.glb",
@@ -274,9 +274,9 @@
       "gzipBytes": 992
     },
     {
-      "file": "dist/assets/tgaTextureLoader-TN_2GF33.js",
+      "file": "dist/assets/tgaTextureLoader-BCoGkX1C.js",
       "bytes": 3556,
-      "gzipBytes": 1394
+      "gzipBytes": 1393
     },
     {
       "file": "dist/assets/w1_1/card.glb",
@@ -354,29 +354,104 @@
       "gzipBytes": 4483
     },
     {
-      "file": "dist/assets/world-BDEKUYmo.js",
-      "bytes": 1242174,
-      "gzipBytes": 307952
+      "file": "dist/assets/w1_1a/card.glb",
+      "bytes": 13576,
+      "gzipBytes": 3647
+    },
+    {
+      "file": "dist/assets/w1_1a/cookie.glb",
+      "bytes": 23008,
+      "gzipBytes": 5608
+    },
+    {
+      "file": "dist/assets/w1_1a/counter-w1_1a.glb",
+      "bytes": 29036,
+      "gzipBytes": 4510
+    },
+    {
+      "file": "dist/assets/w1_1a/display-w1_1a.glb",
+      "bytes": 35704,
+      "gzipBytes": 5851
+    },
+    {
+      "file": "dist/assets/w1_1a/generic-staff-w1_1a.glb",
+      "bytes": 102436,
+      "gzipBytes": 20842
+    },
+    {
+      "file": "dist/assets/w1_1a/mug.glb",
+      "bytes": 20500,
+      "gzipBytes": 4748
+    },
+    {
+      "file": "dist/assets/w1_1a/notebook.glb",
+      "bytes": 20796,
+      "gzipBytes": 4236
+    },
+    {
+      "file": "dist/assets/w1_1a/pencil.glb",
+      "bytes": 13772,
+      "gzipBytes": 2318
+    },
+    {
+      "file": "dist/assets/w1_1a/plant-w1_1a.glb",
+      "bytes": 44404,
+      "gzipBytes": 17156
+    },
+    {
+      "file": "dist/assets/w1_1a/room-w1_1a.glb",
+      "bytes": 108432,
+      "gzipBytes": 18898
+    },
+    {
+      "file": "dist/assets/w1_1a/tea.glb",
+      "bytes": 9092,
+      "gzipBytes": 1796
+    },
+    {
+      "file": "dist/assets/w1_1a/tote.glb",
+      "bytes": 24988,
+      "gzipBytes": 5915
+    },
+    {
+      "file": "dist/assets/w1_1a/towel.glb",
+      "bytes": 10016,
+      "gzipBytes": 2519
+    },
+    {
+      "file": "dist/assets/w1_1a/tray.glb",
+      "bytes": 20136,
+      "gzipBytes": 3970
+    },
+    {
+      "file": "dist/assets/w1_1a/vase.glb",
+      "bytes": 15248,
+      "gzipBytes": 4638
+    },
+    {
+      "file": "dist/assets/world-Y6v1DtdQ.js",
+      "bytes": 1251277,
+      "gzipBytes": 311105
     },
     {
       "file": "dist/fonts/NotoSansHK.ttf",
-      "bytes": 344736,
-      "gzipBytes": 243232
+      "bytes": 357952,
+      "gzipBytes": 251950
     },
     {
       "file": "dist/fonts/NotoSansJP.ttf",
-      "bytes": 341916,
-      "gzipBytes": 238751
+      "bytes": 354672,
+      "gzipBytes": 246604
     },
     {
       "file": "dist/fonts/NotoSansSC.ttf",
-      "bytes": 397572,
-      "gzipBytes": 281882
+      "bytes": 410788,
+      "gzipBytes": 291016
     },
     {
       "file": "dist/fonts/NotoSansThai.ttf",
-      "bytes": 108820,
-      "gzipBytes": 73673
+      "bytes": 112488,
+      "gzipBytes": 74925
     },
     {
       "file": "dist/fonts/PlusJakartaSans.ttf",
@@ -386,7 +461,7 @@
     {
       "file": "dist/index.html",
       "bytes": 685,
-      "gzipBytes": 487
+      "gzipBytes": 490
     }
   ],
   "loading": "HTML/UI first, dynamic world module, file-based GLB, font by selected locale. Skin fixture retained but not loaded by game.",

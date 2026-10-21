@@ -1,0 +1,56 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> next-stop-little-shop-w1@0.1.1 test
+> node --import tsx --test tests/*.test.ts
+
+✔ ellipsoid normals are perpendicular to both true nonuniform surface tangents (4.819523ms)
+✔ tapered elliptical cylinder normals include slope and cross-section scale (0.781123ms)
+✔ elliptically stretched torus uses inverse-transpose normals (2.97156ms)
+✔ rotation preserves tangent-normal orthogonality and unit normals (2.24584ms)
+✔ product curves and hollow mug have finite unit normals and correctly oriented nondegenerate triangles (24.633997ms)
+✔ same-color different semantic materials remain distinct in grouping (0.501853ms)
+✔ generic semantic pivots flatten to exactly the static recipe without lost parts (1.41943ms)
+✔ previous W1.1 GLB master and Web bytes remain unchanged (2.463597ms)
+✔ explicit golden purchase → display → sale → P&L (5.168137ms)
+✔ stock cash and inventory book value conserve; purchase is not expense (1.554122ms)
+✔ duplicate purchase command exactly once (0.399419ms)
+✔ one 60-minute settlement equals two 30-minute settlements (1.387802ms)
+✔ fractional demand, salary and rent remainder carry across arbitrary splits (1.506822ms)
+✔ repeated offline settlement / reload has no second payout (1.681764ms)
+✔ deterministic replay repeated 10 times (9.703804ms)
+✔ render/FPS/background schedules have identical economic authority (10.5332ms)
+✔ modifier group aggregates before cap and half-even is exact (0.157005ms)
+✔ invalid actions reject atomically and cannot produce negative stock (2.57869ms)
+✔ future and old schema fail without mutating current save (1.214533ms)
+✔ numeric bounds, invalid references and unsafe imports rejected (1.038248ms)
+✔ rollback and long gaps fail explicitly (1.181062ms)
+✔ Tokyo schedule: closed hours have rent but no sales/wages (0.525899ms)
+✔ test set, discovery and six tiers remain separate from Unique (0.777397ms)
+✔ inventory unit cost rounding preserves total cost on final sale (1.197377ms)
+✔ conversion cannot exceed capacity even at minimum prices (1.136045ms)
+✔ feedback follows actual commits; load/import/mode/duplicate never replay rewards (5.806575ms)
+✔ support is distinct from sales and remains one feedback after repeated commands (0.67265ms)
+✔ presentation clock has one bounded effect, skip/hidden/dispose prevent backlog and replay (1.233891ms)
+✔ static customer anchors clear display/counter bounds and survive all visibility policies (0.918348ms)
+✔ art review DB is isolated from both player slots; default database and CAS preserved (17.380651ms)
+✔ IDB atomic CAS, interruption, import validation, reload and mode isolation (24.089341ms)
+✔ A1 cheap demand cannot transfer into an expensive sale (4.953435ms)
+✔ A1 reverse change, no-op and reload/split intervals obey the price policy (2.61814ms)
+✔ A2 free recovery reconciles cash, preserves P&L and permits a new sale (17.769414ms)
+✔ A2 eligibility requires insufficient purchasing cash AND no sellable stock (0.184447ms)
+✔ A2 repeated episodes may recover after later actual losses, without deleting debt (5.851692ms)
+✔ A3 every numeric field rejects coercible/malformed numbers (7.061739ms)
+✔ A3 recovery grant numeric records and references reject malformed values (1.454603ms)
+✔ A4 full ledger still settles and duplicate ordinary IDs remain no-op (123.064306ms)
+✔ A7 free-choice tutorial uses actual stocked display and retained milestones (2.324133ms)
+✔ v1 normal and sandbox migrate without losing identity, cash, inventory or history (1.336436ms)
+✔ IDB malformed import preserves original good save and v1 import migrates atomically (15.54104ms)
+✔ IDB concurrent different recovery IDs cannot receive duplicate grants; reload preserved (15.799163ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 577.994485

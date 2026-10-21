@@ -1,0 +1,21 @@
+{
+  "method": "Local dist artifact bytes and independently calculated gzip-9; not initial load/actual transfer/startup/FPS",
+  "before": {
+    "commit": "f48dc15030fd89af0fe99e00f890ba204bdc0185",
+    "rawBytes": 3634471,
+    "gzipBytes": 1449141
+  },
+  "after": {
+    "rawBytes": 4183538,
+    "gzipBytes": 1588367
+  },
+  "delta": {
+    "rawBytes": 549067,
+    "gzipBytes": 139226
+  },
+  "notes": [
+    "Includes retained old and new GLBs; runtime uses source geometry, not all GLBs",
+    "Includes updated five-locale font subsets; no font master changed",
+    "No FPS/GPU memory/actual transfer or native result exists"
+  ]
+}

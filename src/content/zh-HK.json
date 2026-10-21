@@ -163,5 +163,8 @@
   "emptyReport": "這一日暫未有交易。",
   "language": "語言",
   "identityError": "請填寫店名（1–32 字）、公司名（最多 32 字）及標記（最多 4 字）。",
-  "displayEmptyError": "請先入貨，再把商品放上貨架。"
+  "displayEmptyError": "請先入貨，再把商品放上貨架。",
+  "minimalFX": "最少特效",
+  "minimalFXNote": "只保留穩定提示，關閉微塵、角色小動作及短暫 3D 特效。設定只保存在此裝置，不影響經營。",
+  "skipReveal": "略過開箱動效"
 }

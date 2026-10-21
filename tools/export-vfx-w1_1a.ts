@@ -1,0 +1,2 @@
+import fs from 'node:fs';import {vfx} from '../src/presentation/config';
+fs.writeFileSync('assets/authoring/w1_1a/vfx.json',JSON.stringify({version:'w1.1a-vfx-candidate',source:'src/presentation/config.ts + feedback.ts + src/world.ts',license:'Project-original, see LICENSE',native:'Neutral parameters/triggers reusable; Unity URP materials/pools/time/input adapters and Android/iOS appearance NOT TESTED',audio:'Existing original sale.wav, opt-in, playback volume .12; no new audio',effects:vfx},null,2));

@@ -163,5 +163,8 @@
   "emptyReport": "No activity recorded for this day yet.",
   "language": "Language",
   "identityError": "Enter a shop name (1–32 characters), company (up to 32) and mark (up to 4).",
-  "displayEmptyError": "Buy stock before placing goods on a display."
+  "displayEmptyError": "Buy stock before placing goods on a display.",
+  "minimalFX": "Minimal effects",
+  "minimalFXNote": "Keep steady cues; disable dust, small character motions and brief 3D effects. Saved on this device only; shop rules stay the same.",
+  "skipReveal": "Skip opening animation"
 }

@@ -10,3 +10,10 @@
 
 /* Readable long locale labels retain full controls at the smallest widths. */
 @media(max-width:720px){.dock button{font-size:12px}.brand p,.shop-context,.balance>span,.clock-note{font-size:12px}.mode-badge{font-size:11px}.drawer-open .world-note{opacity:.65;max-height:none;overflow:visible;top:25%;padding:10px}.drawer-open .world-note>span{display:none}.drawer-open .world-note p{margin:0}}
+
+/* W1.1A: quiet line icons, material-cued thumbnails and instant input feedback. */
+.nav-icon{width:23px;height:23px;flex:none;margin-bottom:2px}.thumbnail{background:linear-gradient(145deg,#fffdf8,#f2e8dc);border:1px solid #e9dfd2;border-radius:12px;box-shadow:inset 0 1px 0 #fff,0 2px 5px #63452e08;padding:3px}
+button{transition:background-color 160ms ease,border-color 160ms ease,box-shadow 160ms ease}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #9775ab;outline-offset:3px}.product-card,.shelf-card{box-shadow:0 2px 8px #60452905}.shelf-card.selected{border-color:#b09bbd;box-shadow:0 0 0 1px #bda7ca33}.sidebar{animation:panel-arrive 180ms ease-out}.message{animation:message-arrive 180ms ease-out;border-left-width:4px}.feedback-sale{border-color:#92a58e}.feedback-stock{border-color:#b49b77}.feedback-support,.feedback-reveal{border-color:#b59ac8}.completion.revealing .sample-icon{animation:sample-open 1100ms ease-out 1}.completion.revealing{border:1px solid #cbb6d4}
+@keyframes panel-arrive{from{opacity:.65;translate:0 5px}to{opacity:1;translate:0 0}}@keyframes message-arrive{from{opacity:.5;translate:0 3px}to{opacity:1;translate:0 0}}@keyframes sample-open{0%{opacity:.5;transform:scale(.96)}40%,100%{opacity:1;transform:scale(1)}}
+.minimal-fx *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+@media(prefers-reduced-motion:reduce){.sidebar,.message,.completion.revealing .sample-icon{animation:none}}

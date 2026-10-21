@@ -163,5 +163,8 @@
   "emptyReport": "这一天暂未有交易。",
   "language": "语言",
   "identityError": "请填写店名（1–32 字）、公司名（最多 32 字）及标记（最多 4 字）。",
-  "displayEmptyError": "请先进货，再把商品放上货架。"
+  "displayEmptyError": "请先进货，再把商品放上货架。",
+  "minimalFX": "最少特效",
+  "minimalFXNote": "只保留稳定提示，关闭微尘、角色小动作及短暂 3D 特效。设置仅保存在此设备，不影响经营。",
+  "skipReveal": "跳过开箱动效"
 }

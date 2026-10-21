@@ -1,0 +1,205 @@
+{
+  "method": "Observed through supported cloud browser, 780px-high CSS iframe; read-only element measurements after locale and width changes. Not physical device or 3D proof.",
+  "rows": [
+    {
+      "lang": "zh-HK",
+      "width": 320,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 58,
+      "minNavHeight": 54,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "zh-HK",
+      "width": 375,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 69,
+      "minNavHeight": 54,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "zh-HK",
+      "width": 430,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 80,
+      "minNavHeight": 54,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "zh-HK",
+      "width": 1200,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 74,
+      "minNavHeight": 58.390625,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "en",
+      "width": 320,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 58,
+      "minNavHeight": 54,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "en",
+      "width": 375,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 69,
+      "minNavHeight": 54,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "en",
+      "width": 430,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 80,
+      "minNavHeight": 54,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "en",
+      "width": 1200,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 74,
+      "minNavHeight": 58.390625,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "ja",
+      "width": 320,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 58,
+      "minNavHeight": 54,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "ja",
+      "width": 375,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 69,
+      "minNavHeight": 54,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "ja",
+      "width": 430,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 80,
+      "minNavHeight": 54,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "ja",
+      "width": 1200,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 74,
+      "minNavHeight": 58.390625,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "th",
+      "width": 320,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 58,
+      "minNavHeight": 54,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "th",
+      "width": 375,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 69,
+      "minNavHeight": 54,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "th",
+      "width": 430,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 80,
+      "minNavHeight": 54,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "th",
+      "width": 1200,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 74,
+      "minNavHeight": 58.390625,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "zh-CN",
+      "width": 320,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 58,
+      "minNavHeight": 54,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "zh-CN",
+      "width": 375,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 69,
+      "minNavHeight": 54,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "zh-CN",
+      "width": 430,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 80,
+      "minNavHeight": 54,
+      "hasMinimal": true,
+      "icons": 5
+    },
+    {
+      "lang": "zh-CN",
+      "width": 1200,
+      "overflow": false,
+      "panelInside": true,
+      "minNavWidth": 74,
+      "minNavHeight": 58.390625,
+      "hasMinimal": true,
+      "icons": 5
+    }
+  ]
+}

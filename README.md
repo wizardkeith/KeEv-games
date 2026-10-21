@@ -1,6 +1,6 @@
 # 下一站・小店物語 / Next Stop, Little Shop
 
-Private W1.1 chill art / UX review candidate by KeEv Games. The player names their own business. This checkpoint improves the ten-item management loop and preserves the original Bible. It stops before full Tokyo content production.
+W1.1A chill art / lightweight VFX review candidate by KeEv Games. The player names their own business. This checkpoint improves the ten-item management loop and preserves the original Bible. It stops before full Tokyo content production.
 
 ## Run and verify
 
@@ -38,8 +38,10 @@ cd proof/csharp-headless
 dotnet run --project adapters/Headless -c Release -- test
 ```
 
-Browser DOM/IndexedDB walkthrough and CSS viewport checks are recorded in docs/HANDOFF.md and evidence/w1_1/. The supported cloud browser reports WebGL not supported, so actual 3D appearance, FPS and physical-device/native testing remain unverified. GLB validation / NullEngine import is structural evidence only. This is an art review candidate, not a commercial launch.
+Browser DOM/IndexedDB walkthrough and CSS viewport checks are recorded in docs/HANDOFF.md and evidence/w1_1a/. The supported cloud browser reports WebGL not supported, so actual 3D appearance, FPS and physical-device/native testing remain unverified. GLB validation / NullEngine import is structural evidence only. This is an art review candidate, not a commercial launch.
 
-## W1.1 source and compatibility
+## Source and compatibility
 
-Snapshot schema 2 / simulation ts-w1-2 migrates valid v1 data without resetting saves. Read docs/MIGRATION_W1_1.md and docs/RECOVERY_W1_1.md. Additional art source: src/art/, src/ui/thumbnails.ts; 15 original reusable GLB masters and Web copies; see docs/ART_W1_1.md. Regenerate/export with `node --import tsx tools/art-w1_1.ts`; independently import with `node tools/validate-art-w1_1.mjs`. Native Unity/URP and Android/iOS adapters remain pending.
+Snapshot schema 2 / simulation ts-w1-2 migrates valid v1 data without resetting saves. Read docs/MIGRATION_W1_1.md and docs/RECOVERY_W1_1.md. W1.1A preserves W1.1 economy and saves. Additional art source: src/art/, src/ui/thumbnails.ts; 15 original reusable GLB masters and Web copies; see docs/ART_W1_1A.md and docs/VFX_W1_1A.md. Regenerate/export with `node --import tsx tools/art-w1_1.ts`; independently import with `node tools/validate-art-w1_1a.mjs`. Native Unity/URP and Android/iOS adapters remain pending.
+
+For safe local visual review, build with `VITE_ART_REVIEW=1 npm run build`; it uses a separate QA database and mode/draft/locale/presentation keys. Never overwrite an existing sandbox to stage screenshots. Rebuild with ordinary `npm run build` before packaging production. The review switch is compile-only; production has no review query hook. See docs/W1_1A_Visual_Check_zh-HK.md for the three optional follow-up views.

@@ -1,6 +1,6 @@
 import {Core, type Snapshot, type Mode, type Command} from '../core/contracts';
 const key=(mode:Mode)=>`shop.w1.${mode}`;
-export function database():Promise<IDBDatabase>{return new Promise((resolve,reject)=>{const r=indexedDB.open('next-stop-little-shop-w1',1);r.onupgradeneeded=()=>r.result.createObjectStore('saves');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(new Error('storage'));});}
+export function database(name="next-stop-little-shop-w1"):Promise<IDBDatabase>{return new Promise((resolve,reject)=>{const r=indexedDB.open(name,1);r.onupgradeneeded=()=>r.result.createObjectStore('saves');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(new Error('storage'));});}
 export class Saves {
  constructor(readonly db:IDBDatabase,readonly core:Core){}
  read(mode:Mode):Promise<Snapshot|undefined>{return new Promise((resolve,reject)=>{const tx=this.db.transaction('saves','readonly');let data:Snapshot|undefined;const r=tx.objectStore('saves').get(key(mode));r.onsuccess=()=>data=r.result;tx.oncomplete=()=>{try{resolve(data?this.core.validate(data):undefined);}catch(e){reject(e);}};tx.onerror=()=>reject(new Error('storage'));});}
