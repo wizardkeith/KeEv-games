@@ -1,0 +1,39 @@
+✔ F1 deferred actual Saves result after hidden cancellation commits once without FX/audio or resume replay (22.551935ms)
+✔ F1 world feedback rejects hidden/disposed callers independently of the UI guard (1.818129ms)
+✔ F2 slow frames retain Skip until shared UI deadline synchronously cancels scene; normal completion also clears UI (5.265415ms)
+✖ F2 skip, replacement, hidden/mode cancellation and failed scene preserve committed reveal without orphaned Skip (10.982036ms)
+✔ F2 Low, Auto downgrade, Minimal and Reduce Motion use identical static completion policy (8.029554ms)
+✔ F3 actual display click captures shelf 2 across deferred Saves while selection changes to shelf 3 (5.616101ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 890.810992
+
+✖ failing tests:
+
+test at tests/presentation-w1_1a1.test.ts:4:5582
+✖ F2 skip, replacement, hidden/mode cancellation and failed scene preserve committed reveal without orphaned Skip (10.982036ms)
+  AssertionError [ERR_ASSERTION]: cancelled reveal timer cannot cancel replacement
+  + actual - expected
+  
+  + undefined
+  - 'stock'
+  
+      at TestContext.<anonymous> (/workspace/sites/next-stop-little-shop-w1/tests/presentation-w1_1a1.test.ts:61:47)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'stock',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

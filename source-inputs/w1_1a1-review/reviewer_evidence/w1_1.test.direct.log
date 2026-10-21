@@ -1,0 +1,20 @@
+✔ A1 cheap demand cannot transfer into an expensive sale (10.178312ms)
+✔ A1 reverse change, no-op and reload/split intervals obey the price policy (2.300824ms)
+✔ A2 free recovery reconciles cash, preserves P&L and permits a new sale (18.859155ms)
+✔ A2 eligibility requires insufficient purchasing cash AND no sellable stock (0.333861ms)
+✔ A2 repeated episodes may recover after later actual losses, without deleting debt (6.167099ms)
+✔ A3 every numeric field rejects coercible/malformed numbers (9.46432ms)
+✔ A3 recovery grant numeric records and references reject malformed values (1.567373ms)
+✔ A4 full ledger still settles and duplicate ordinary IDs remain no-op (123.464207ms)
+✔ A7 free-choice tutorial uses actual stocked display and retained milestones (1.036476ms)
+✔ v1 normal and sandbox migrate without losing identity, cash, inventory or history (1.107703ms)
+✔ IDB malformed import preserves original good save and v1 import migrates atomically (11.033035ms)
+✔ IDB concurrent different recovery IDs cannot receive duplicate grants; reload preserved (15.861955ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 208.914941

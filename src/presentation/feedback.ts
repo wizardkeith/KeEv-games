@@ -13,9 +13,10 @@ export class FeedbackProjector {
   const sold=Math.max(0,after.eventSequence-before.eventSequence);
   const bought=after.purchases-before.purchases;
   const support=after.recovery.total-before.recovery.total;
-  const displayed=after.shelves.some((id,i)=>id!==before.shelves[i]);
+  const displaySlot=after.shelves.findIndex((id,i)=>!!id&&id!==before.shelves[i]);
+  const displayed=displaySlot>=0;
   const kind:FeedbackKind|undefined=!before.revealed&&after.revealed&&cause==='reveal'?'reveal':support>0&&cause==='recover'?'support':sold>0?'sale':bought>0&&cause==='buy'?'stock':displayed&&cause==='display'?'display':undefined;
-  return kind?{id,kind,sold,units:kind==='sale'?sold:kind==='stock'?Object.keys(after.inventory).reduce((n,id)=>n+Math.max(0,after.inventory[id].stock-before.inventory[id].stock),0):0,slot}:undefined;
+  return kind?{id,kind,sold,units:kind==='sale'?sold:kind==='stock'?Object.keys(after.inventory).reduce((n,id)=>n+Math.max(0,after.inventory[id].stock-before.inventory[id].stock),0):0,slot:kind==='display'?displaySlot:slot}:undefined;
  }
  reset(){this.seen.clear();}
  get retainedIds(){return this.seen.size;}

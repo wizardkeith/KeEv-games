@@ -1,0 +1,49 @@
+{
+  "scope": "Sanitized reviewer notes from current Site metadata and isolated supported preview; not deployed-WebGL or device-performance evidence.",
+  "reviewDate": "2026-10-21",
+  "reportTimezone": "Asia/Hong_Kong",
+  "site": {
+    "projectId": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+    "url": "https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site",
+    "status": "active",
+    "latestVersion": 3,
+    "access": "public",
+    "accessPolicyRevision": 2,
+    "metadataUpdatedAt": "2026-10-21T10:26:50.640209+00:00",
+    "source": "Read-only Site metadata call; no Site mutation during this review."
+  },
+  "providedSource": {
+    "commitFromReceipt": "8296c3251b0a7bfd43221781ba7241319891f396",
+    "archive": "Next_Stop_Little_Shop_W1_1A_Source_2026-10-21.zip",
+    "sha256": "97da3094f47374c2a8a99297435ec084d87d914124cf1f9236b95f664259246b"
+  },
+  "browser": {
+    "target": "compile-only isolated art-review build using supported Sites preview",
+    "webglResult": "WebGL not supported",
+    "rendered3D": false,
+    "minimalFXPreference": {
+      "initial": true,
+      "changedTo": false,
+      "afterReload": false,
+      "restoredTo": true
+    },
+    "isolatedFixtureUnchanged": {
+      "cash": 52490,
+      "displayTime": "12:00",
+      "revision": 9
+    },
+    "normalPlayerDataTouched": false,
+    "fullResponsiveMatrixRepeated": false,
+    "physicalTouchOrFPSVerified": false,
+    "previewStoppedAndTabClosed": true
+  },
+  "tests": {
+    "testFiles": 5,
+    "namedCases": 43,
+    "passed": 43,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "method": "npm test, then each of the five test files in a separate Node process to expose named case counts and retain IndexedDB isolation."
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "scope": "Source byte comparison and ordinary production output inspection",
+  "unchanged": [
+    {
+      "path": "src/core/contracts.ts",
+      "identical": true,
+      "sha256": "49858d8dacb33592a12584574feb920268893422b3df66f07b23d1b8c7909d8d"
+    },
+    {
+      "path": "src/core/simulation.ts",
+      "identical": true,
+      "sha256": "6677c50e89c4d8345041ea75bdac01d3252236c23b51309a72417f3314b7fbe8"
+    },
+    {
+      "path": "src/core/validation.ts",
+      "identical": true,
+      "sha256": "7ce8068f6a0288f29e736aebf11d11f1627d5748208d6fc00cb4859ce57063f6"
+    },
+    {
+      "path": "src/core/recovery.ts",
+      "identical": true,
+      "sha256": "63829734eb20eeb12898793887c05cd5714a8a2c4fcc6f2d7a91dc2e3e7b4254"
+    },
+    {
+      "path": "package.json",
+      "identical": true,
+      "sha256": "1b99157e34d9e0ce5c47cac21e7bc493862167bbd007105630f56e687b239e21"
+    },
+    {
+      "path": "package-lock.json",
+      "identical": true,
+      "sha256": "7bd5969eb654de64436e28a8f1da44aba42e3452fea31334224195107d5b4096"
+    },
+    {
+      "path": "tsconfig.json",
+      "identical": true,
+      "sha256": "24d2580db242b67215785f999d816f690b0fa209159e67dfed65b630bca6036d"
+    },
+    {
+      "path": "src/content/catalog.json",
+      "identical": true,
+      "sha256": "da87299143bb23e12c8c708d77232b97b229c423ffc89ef79449d6b02c970937"
+    },
+    {
+      "path": "src/content/layout.json",
+      "identical": true,
+      "sha256": "be6add3214958370cf4a59d4e7e0fb4ef351ba5c2159057882befda06bb1ce97"
+    },
+    {
+      "path": "fixtures/golden-one-hour.json",
+      "identical": true,
+      "sha256": "aa9334778d50770469c75392eea4604aaada8940d072a6011ce6431d8c7e6032"
+    },
+    {
+      "path": "docs/CONTRACT.md",
+      "identical": true,
+      "sha256": "468560a9a53cf87b719bfda1e52b6045fb717c8e124e6fc55f406afc6d670cf0"
+    }
+  ],
+  "preserved_assets": [
+    {
+      "category": "assets/masters",
+      "original_count": 30,
+      "preserved_count": 30,
+      "changed": [],
+      "missing": []
+    },
+    {
+      "category": "public/assets",
+      "original_count": 18,
+      "preserved_count": 18,
+      "changed": [],
+      "missing": []
+    },
+    {
+      "category": "source-inputs",
+      "original_count": 17,
+      "preserved_count": 17,
+      "changed": [],
+      "missing": []
+    }
+  ],
+  "production_file_count": 92,
+  "production_review_marker_hits": []
+}

@@ -1,0 +1,9 @@
+BJS - [19:05:19]: Babylon.js v8.32.0 - Null engine
+{
+  "output": "/workspace/sites/next-stop-little-shop-w1/source-inputs/w1_1a1-review/reviewer_evidence/art-review.json",
+  "rimGap": true,
+  "handleDisjoint": true,
+  "glassMaterials": 3,
+  "sidednessMismatch": true,
+  "renderedVisualEvidence": false
+}

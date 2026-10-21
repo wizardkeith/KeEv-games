@@ -1,0 +1,1 @@
+Frozen reconstructable W1.1A authoring source at canonical commit 8296c3251b0a7bfd43221781ba7241319891f396. Preserve directory structure and run exporter within that full source checkpoint (catalog/contracts/lockfile are unchanged). Original masters, Web copies, manifests and evidence remain authoritative and unchanged. Active exporter now writes W1.1A1 versioned outputs.

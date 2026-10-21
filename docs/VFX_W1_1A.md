@@ -28,3 +28,11 @@ The Minimal effects preference uses `shop.presentation.v1` only. It is not a Sna
 Engine-neutral IDs, durations, colors, cap and policy are exported to `assets/authoring/w1_1a/vfx.json`. Unity/native needs clock/pool/input/audio/URP adapters, physical-device testing and separate visual approval. C# experiment remains frozen, PORT_REQUIRED_FOR_UNITY; no native implementation or compatibility claim is made.
 
 Capability references (implementation uses installed Babylon 8.32.0 APIs): https://doc.babylonjs.com/features/featuresDeepDive/particles/ and https://doc.babylonjs.com/features/featuresDeepDive/mesh/glowLayer/ . This candidate deliberately uses finite geometry pools and local emissive material without a GlowLayer pass.
+
+## W1.1A1 lifecycle correction (supersedes the timer-only completion description above)
+
+A presentation epoch is captured before awaiting a live Saves operation. Committed deltas are still consumed/deduplicated while hidden or after cancellation, but no transient world/audio call starts for that stale epoch. The world entry independently rejects hidden/disposed events. Static summaries can remain; economy commands are never replayed.
+
+Reveal UI starts only if the real world accepts a motion-allowed effect. The shared `vfx.reveal.duration` deadline now explicitly cancels the scene, then completes the UI; natural completion/cancel/replacement/Low/Minimal/reduced likewise notifies UI completion. An obsolete timeout checks its epoch and current reveal state before touching a replacement. The 50ms frame clamp stays. If WebGL fails or context is lost, completion is immediate without an orphaned Skip. Existing worldReady now means currently available; worldEverReady and worldAvailable are explicit, retaining historical startupMs.
+
+The display click captures its immutable slot before awaiting. The successful text uses that slot, and display feedback additionally derives its filled changed shelf from the committed snapshots. Selection remains freely changeable. No-op/failed/duplicate commands do not add a display effect. Original effect IDs, pool sizes, queue0, durations, quality policies and economic priority are unchanged. New tests: tests/presentation-w1_1a1.test.ts; evidence/w1_1a1.

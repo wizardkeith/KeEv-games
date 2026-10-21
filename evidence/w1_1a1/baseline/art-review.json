@@ -1,0 +1,304 @@
+{
+  "schema": "w1.1a-focused-art-review.v1",
+  "generatedAt": "2026-10-21T11:05:19.401Z",
+  "project": "/workspace/sites/next-stop-little-shop-w1",
+  "scope": "Read-only source geometry, actual static GLB triangles and Babylon NullEngine material reimport. NOT a rendered WebGL visual test; no camera, lighting appearance, animation smoothness or native-device claim.",
+  "method": {
+    "runtimeMaterial": "AST-extract the actual materials cache declaration and material() function from src/world.ts; transpile and execute that function with the project Babylon version. No hard-coded substitute adapter.",
+    "runtimeAdapterLine": 33,
+    "runtimeCacheLine": 32,
+    "ray": "Double-sided Moller-Trumbore intersections; actual GLB vertices transformed by their imported node world matrices.",
+    "bounds": "Source mesh vertex AABBs; positive X separation proves disconnection, overlapping AABBs alone would not prove attachment.",
+    "exitCode": "Zero means capture completed, not that findings passed."
+  },
+  "versions": {
+    "node": "v24.19.0",
+    "babylon": "8.32.0"
+  },
+  "sources": [
+    {
+      "file": "src/art/geometry.ts",
+      "sha256": "3cc4021dd3cdad55dd4656b83c6870d9282c4ecbcd0f82f3698cef7f2762278b"
+    },
+    {
+      "file": "src/art/recipes.ts",
+      "sha256": "95d4063c0cd4011068b439a496540f2202650b0a8d60a26b3ccf642462829a4a"
+    },
+    {
+      "file": "src/art/materials.ts",
+      "sha256": "aa6c8fbf38b2344ec486d3435b07af0087103922f63e638f01d91b4ae47ec5b8"
+    },
+    {
+      "file": "src/world.ts",
+      "sha256": "782e2d1fe3b6666d4a71c623c162a23dee9878ed5d9d0781dbd06ca2824f0e48"
+    },
+    {
+      "file": "tools/art-w1_1.ts",
+      "sha256": "04e165eaec32de7b5e14f43bafad7cc781b65f5a4c59f613147580b7be94d95d"
+    }
+  ],
+  "assets": [
+    {
+      "id": "off.mug",
+      "file": "assets/masters/w1_1a/mug.glb",
+      "sha256": "a89356583b9e07f76c8419f57d08393fc4d89b8272329b0a5a99e37e264a7d17"
+    },
+    {
+      "id": "fixture.shop-counter.w1_1a",
+      "file": "assets/masters/w1_1a/counter-w1_1a.glb",
+      "sha256": "58e5cef53fb60bff7c364e478a71018aab31804f1c7027b83335a31f22fa8a7d"
+    },
+    {
+      "id": "layout.graybox.1",
+      "file": "assets/masters/w1_1a/room-w1_1a.glb",
+      "sha256": "fb30caebe52c5e58bce3e23a6099b43d61c53fec43135c0b50ebb582cf7f929d"
+    }
+  ],
+  "mug": {
+    "units": "metres",
+    "outerBounds": {
+      "min": [
+        -0.1175,
+        0,
+        -0.1175
+      ],
+      "max": [
+        0.1175,
+        0.235,
+        0.1175
+      ]
+    },
+    "innerBounds": {
+      "min": [
+        -0.0985,
+        0.030000000000000013,
+        -0.0985
+      ],
+      "max": [
+        0.0985,
+        0.235,
+        0.0985
+      ]
+    },
+    "rimBounds": {
+      "min": [
+        -0.108,
+        0.22547372055837117,
+        -0.108
+      ],
+      "max": [
+        0.108,
+        0.2445262794416288,
+        0.108
+      ]
+    },
+    "handleBounds": {
+      "min": [
+        0.12957660624134118,
+        0.053500000000000006,
+        -0.0725
+      ],
+      "max": [
+        0.1564233937586588,
+        0.1985,
+        0.0725
+      ]
+    },
+    "rim": {
+      "rayOrigin": [
+        0.112,
+        1,
+        0
+      ],
+      "rayDirection": [
+        0,
+        -1,
+        0
+      ],
+      "rayPointWithinAuthoredWallBand": true,
+      "outerMinusRimMaxX": 0.009499999999999995,
+      "sourceHits": [
+        {
+          "label": "recipe.part.2",
+          "triangle": 36,
+          "distance": 0.97,
+          "hitY": 0.030000000000000027
+        },
+        {
+          "label": "recipe.part.2",
+          "triangle": 24,
+          "distance": 1,
+          "hitY": 0
+        }
+      ],
+      "actualGlbHits": [
+        {
+          "label": "mug.material0",
+          "triangle": 60,
+          "distance": 0.9700000006705524,
+          "hitY": 0.029999999329447635
+        },
+        {
+          "label": "mug.material0",
+          "triangle": 48,
+          "distance": 1,
+          "hitY": 0
+        }
+      ],
+      "sourceFirstHitNearRim": false,
+      "provenRimGapAtProbe": true,
+      "limits": "One specific rim point. A later topology redesign requires inspecting the probe point; this is not a general watertightness validator."
+    },
+    "handle": {
+      "authoredTurn": [
+        0,
+        0,
+        1.5707963267948966
+      ],
+      "minimumPositiveXSeparation": 0.012076606241341187,
+      "provenDisjointAlongX": true,
+      "history": "The same handle orientation/separation class was present in W1.1 per the prior source review. This probe measures the current candidate only; do not label it a new W1.1A regression."
+    }
+  },
+  "materials": {
+    "rows": [
+      {
+        "assetId": "fixture.shop-counter.w1_1a",
+        "file": "assets/masters/w1_1a/counter-w1_1a.glb",
+        "materialId": "mat.quiet-glass.v1:#8AADA5:0.9",
+        "role": "glass",
+        "runtime": {
+          "albedo": [
+            0.5411764705882353,
+            0.6784313725490196,
+            0.6470588235294118
+          ],
+          "alpha": 0.9,
+          "roughness": 0.18,
+          "metallic": 0,
+          "indexOfRefraction": 1.45,
+          "backFaceCulling": true,
+          "twoSidedLighting": false,
+          "needsAlphaBlending": true,
+          "transparencyMode": null
+        },
+        "glbImported": {
+          "albedo": [
+            0.5411764705882353,
+            0.6784313725490196,
+            0.6470588235294118
+          ],
+          "alpha": 0.9,
+          "roughness": 0.18,
+          "metallic": 0,
+          "indexOfRefraction": 1.5,
+          "backFaceCulling": false,
+          "twoSidedLighting": true,
+          "needsAlphaBlending": true,
+          "transparencyMode": 2
+        },
+        "glbAuthored": {
+          "doubleSided": true,
+          "iorIntent": 1.45,
+          "iorExtension": null
+        },
+        "commonPbrValuesEqual": true,
+        "sidednessEqual": false,
+        "iorEqual": false
+      },
+      {
+        "assetId": "layout.graybox.1",
+        "file": "assets/masters/w1_1a/room-w1_1a.glb",
+        "materialId": "mat.quiet-glass.v1:#BCCAC8:0.65",
+        "role": "glass",
+        "runtime": {
+          "albedo": [
+            0.7372549019607844,
+            0.792156862745098,
+            0.7843137254901961
+          ],
+          "alpha": 0.65,
+          "roughness": 0.18,
+          "metallic": 0,
+          "indexOfRefraction": 1.45,
+          "backFaceCulling": true,
+          "twoSidedLighting": false,
+          "needsAlphaBlending": true,
+          "transparencyMode": null
+        },
+        "glbImported": {
+          "albedo": [
+            0.7372549019607844,
+            0.792156862745098,
+            0.7843137254901961
+          ],
+          "alpha": 0.65,
+          "roughness": 0.18,
+          "metallic": 0,
+          "indexOfRefraction": 1.5,
+          "backFaceCulling": false,
+          "twoSidedLighting": true,
+          "needsAlphaBlending": true,
+          "transparencyMode": 2
+        },
+        "glbAuthored": {
+          "doubleSided": true,
+          "iorIntent": 1.45,
+          "iorExtension": null
+        },
+        "commonPbrValuesEqual": true,
+        "sidednessEqual": false,
+        "iorEqual": false
+      },
+      {
+        "assetId": "layout.graybox.1",
+        "file": "assets/masters/w1_1a/room-w1_1a.glb",
+        "materialId": "mat.quiet-glass.v1:#D6E5DC:0.16",
+        "role": "glass",
+        "runtime": {
+          "albedo": [
+            0.8392156862745098,
+            0.8980392156862745,
+            0.8627450980392157
+          ],
+          "alpha": 0.16,
+          "roughness": 0.18,
+          "metallic": 0,
+          "indexOfRefraction": 1.45,
+          "backFaceCulling": true,
+          "twoSidedLighting": false,
+          "needsAlphaBlending": true,
+          "transparencyMode": null
+        },
+        "glbImported": {
+          "albedo": [
+            0.8392156862745098,
+            0.8980392156862745,
+            0.8627450980392157
+          ],
+          "alpha": 0.16,
+          "roughness": 0.18,
+          "metallic": 0,
+          "indexOfRefraction": 1.5,
+          "backFaceCulling": false,
+          "twoSidedLighting": true,
+          "needsAlphaBlending": true,
+          "transparencyMode": 2
+        },
+        "glbAuthored": {
+          "doubleSided": true,
+          "iorIntent": 1.45,
+          "iorExtension": null
+        },
+        "commonPbrValuesEqual": true,
+        "sidednessEqual": false,
+        "iorEqual": false
+      }
+    ],
+    "anySidednessMismatch": true,
+    "iorNote": "ART_W1_1A.md explicitly documents IOR in extras as adapter intent, not a KHR_materials_ior extension. Record the differing imported default without misrepresenting it as a hidden claim. The sidedness mismatch is the actionable parity issue.",
+    "transparencyNote": "A null runtime transparencyMode can still produce alpha blending; compare needsAlphaBlending rather than treating different mode enum values as a defect."
+  },
+  "applicationFilesModified": false,
+  "renderedVisualEvidence": false
+}

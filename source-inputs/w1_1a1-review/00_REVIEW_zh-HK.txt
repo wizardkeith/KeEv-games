@@ -1,0 +1,93 @@
+《下一站・小店物語》W1.1A 獨立審核
+2026-10-21 · Asia/Hong_Kong
+
+結論
+本輪主要美術實作與兩項上一輪修正已落地，原有經濟、存檔和素材保存檢查通過。可以保留目前公開試玩候選。
+仍有陶杯幾何、玻璃雙面設定，以及三個特效生命週期問題，建議做一次範圍有限的 W1.1A1 修正。
+這些問題未顯示會重複交易、改壞金額／庫存或重發獎勵；但不宜將本輪標成完整美術／動效驗收通過。
+真正 WebGL 畫面、動畫觀感、觸控和裝置 FPS 仍待實際確認。
+
+審核基準
+- 同一 Site：appgprj_6ad82a08ed2881918ebcc2dd206a122d。
+- URL：https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site
+- Site metadata 獨立核對：active，latest version 3，public，policy revision 2。
+- 使用者已明確確認自行發佈並設為 public；後續以 public 為準。
+- 提供的 source commit：8296c3251b0a7bfd43221781ba7241319891f396。
+- ZIP：Next_Stop_Little_Shop_W1_1A_Source_2026-10-21.zip。
+- ZIP SHA256：97da3094f47374c2a8a99297435ec084d87d914124cf1f9236b95f664259246b。
+- 兩份 .md／.txt HANDOFF 逐 byte 相同。
+- 本次沒有修改／部署遊戲，也沒有更改 public 設定或玩家存檔。
+
+一、獨立驗證結果
+
+1. npm ci --ignore-scripts --offline：成功，以原有 lockfile 安裝。
+2. npm test：成功。此環境輸出五個 test files，故再每檔以獨立 Node process 執行，確認 43 個具名案例：43 pass、0 fail、0 skipped、0 cancelled。
+   art 8；economy 17；presentation 5；storage 1；W1.1 12。
+3. npm run validate：10 Offerings、5 locales、各168 keys、6品質階級、Unique 獨立；errors=[]。
+4. npm run build：TypeScript 與 Vite production build 通過。原有大 chunk warning 仍存在，沒有調高門檻掩蓋。
+5. 新15個 GLB：491,144 bytes；manifest hash 全吻合；Khronos zero errors／warnings；全部成功以 Babylon NullEngine 匯入。這只是格式／結構／匯入驗證。
+6. 重新啟動隔離的 compile-only art-review build，用支援的雲端瀏覽器操作：UI 可用，WebGL 再次回報 WebGL not supported。
+7. UI 實測最少特效：由開改關，reload 後仍為關；沙盒現金 ¥52,490、時間12:00、revision9 保持不變。完成後還原原先開啟設定。這是隔離 review DB，不是玩家正常／沙盒存檔。
+8. 沒有重跑 handoff 的全部20個responsive cases或完整經營瀏覽器流程；這些仍是實作者提供的證據。沒有取得真正3D渲染、實體手機或FPS證據。
+
+二、保存與來源對照通過
+
+與上輪 W1.1 checkpoint 比較：
+- src/core 四個檔案、package.json、lockfile、tsconfig、catalog、layout、golden fixture 和 CONTRACT 全部相同。
+- storage 唯一修改是 database() 可注入名稱；預設仍是原 DB，CAS／command／settle／import 路徑相同。
+- 5語言原有165 keys未改；每語言新增3個呈現控制keys。
+- 原30個 masters、18個 public assets、17個原始 source-inputs 全部保持hash。
+- 三份 asset manifests 共76次檔案／hash核對吻合。
+- 普通 dist 92個檔案沒有 review DB/key、VITE_ART_REVIEW、QA頁字串；沒有把tools/evidence/tests/source-inputs夾入發佈目錄。
+- Minimal FX 保存於 presentation preference，不寫Snapshot。原 normal／sandbox slots、schema2及經濟修正保留。
+
+三、上輪兩個問題已真正修正
+
+1. Normals：非等比橢球、錐度橢圓柱及拉伸 torus 已作正確比例處理、正規化與繞序校正。獨立解析切線比對，新normal與切線的dot約為0（浮點誤差級）。
+2. Reduce Motion 顧客：兩個root在任何動畫政策之前已設定不同固定位置，動畫只改局部頭／手；不再於原點重疊。中立pose經pivot adapter的2,340頂點與原形一致，最大誤差2.22e-16 m。
+
+四、需要局部修正
+
+A1｜陶杯杯沿／把手
+來源：src/art/recipes.ts 的 off.mug。
+外殼半徑.1175m；杯沿torus最大半徑.108m。實際三角形射線從[.112,1,0]向下，首先命中底部y=.03，杯沿沒有封合此段杯壁厚度。
+把手實際minX=.129576606m，杯身maxX=.1175m，至少隔開約.01208m；環面方向亦不形成合理的杯身接點。把手同類問題在舊W1.1已存在，不能稱為新回歸。
+需要連接內外杯壁的rim，及有兩個合理接點的把手；保留中間空杯口。實際畫面中的顯眼程度未驗。
+
+A2｜透明材質雙面設定
+來源：src/world.ts material()、src/art/materials.ts、tools/art-w1_1.ts。
+Runtime沿用backFaceCulling=true／twoSidedLighting=false；GLB exporter對alpha<1寫doubleSided=true，實際NullEngine重匯後為false／true。
+主要顏色、alpha、roughness、metallic與幾何是同步的；完整材質設定仍有這個差異。需要把雙面意圖放入共同spec並兩邊明確適配。
+IOR另有已記錄限制：GLB只保留extras.iorIntent，一般匯入器仍用預設1.5；不要把這項既有、已披露限制當成未披露新bug或要求全面換材質管線。
+
+F1｜隱藏分頁後才完成的commit會重新啟動FX／聲音
+來源：src/main.ts committed()／visibility handler；src/world.ts visibility／feedback入口。
+若操作仍pending，hidden handler先取消效果，稍後commit resolve，committed()仍呼叫world.feedback及saleSound。
+獨立原函數邊界probe結果：hidden=true；activeAfterCommit='sale'；soundPlays=1。hidden render loop直接return，這段新啟動FX可留待回來才播放。
+需要在commit後記錄真實事件，但hidden時不啟動瞬時聲畫；不得取消或重做真正交易。
+
+F2｜Skip的UI timer與3D clock不同步
+來源：src/main.ts固定1100ms UI timer；src/presentation/config.ts每幀最多50ms；src/ui/panels.ts Skip條件。
+在100ms一幀時，1200ms wall time後UI已清除reveal flag，scene卻只累積600／1100ms，包裹仍播而Skip已消失。
+需要共用演出生命週期，或UI結束時同步取消scene；保持所有結果先提交。Low／Minimal／reduced的UI與3D政策一併統一。
+
+F3｜上架效果可能指錯貨架
+來源：src/main.ts display action／committed(...u.slot)；src/presentation/feedback.ts。
+架2的display command等待保存時，玩家仍可點世界架3改selection；commit正確改架2，但feedback與成功通知讀當下u.slot，可能指架3。
+實際projector probe：changedShelfIndices=[1]，selectionAtCommit=2，feedbackSlot=2（zero-based）。
+需要捕捉指令發起時不可變target slot，或從已提交transition推導；不要因此鎖死鏡頭或全部選擇操作。
+
+以上F1–F3是來源函數／純呈現mock邊界重現，不是WebGL實測。原5個presentation tests通過，但未涵蓋這三個integration競態。
+
+較低優先度交接備註
+context lost後worldReadyMs保留，diagnostics的worldReady只代表曾ready，未反映目前world已dispose。若順手修正，分開「曾ready」與「目前可用」；若未修，交接須註明。UI fallback本身存在，未發現因此丟存檔。
+
+五、下一步
+
+使用01_FIX_PROMPT_zh-HK.txt做W1.1A1窄修正，保留目前美術方向與全部既有成果。
+毋須重開整套美術、經濟核心、完整天氣／晝夜、正式角色或故事。公開試玩可保持；public是使用者已確認的設定。
+真正觀感仍需Zen全景、架2＋面板、商品／角色近景；如有短片可觀察動效。這些不影響先修來源已確認問題。
+
+來源與證據
+提供的W1.1A source／HANDOFF／Visual Check；獨立工具執行；同一Site metadata；隔離preview瀏覽器觀察。
+本包包含必要log、observational probes及結果，未包含使用者存檔、瀏覽器截圖、憑證或完整source副本。

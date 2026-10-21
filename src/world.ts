@@ -16,12 +16,12 @@ import {catalog,config,type Snapshot} from './core/contracts';
 import layoutData from './content/layout.json';
 import {palette,roomRecipe,displayRecipe,counterRecipe,personRecipe,personParts,productRecipe,plantRecipe,type Part} from './art/recipes';
 import {grouped} from './art/geometry';
-import {materialSpec,type MaterialRole} from './art/materials';
+import {materialRenderState,type MaterialRole} from './art/materials';
 import {FeedbackClock,motionAllowed,vfx} from './presentation/config';
 import type {Feedback} from './presentation/feedback';
 import {customerPoses,customerVisible,browsePose} from './presentation/poses';
 
-export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>void){
+export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>void,onFeedbackEnd:()=>void=()=>{}){
  const engine=new Engine(canvas,true,{preserveDrawingBuffer:false,stencil:true,adaptToDeviceRatio:false});
  const scene=new Scene(engine);scene.useRightHandedSystem=true;scene.clearColor=Color4.FromHexString('#F4EFE8FF');
  const camera=new ArcRotateCamera('curated.40deg',-Math.PI/4,50*Math.PI/180,18,new Vector3(0,1,0),scene);
@@ -30,7 +30,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  const sun=new DirectionalLight('static window sunlight',new Vector3(.85,-.5,.12),scene);sun.position.set(-8,5,-2);sun.diffuse=Color3.FromHexString('#FFE1B0');sun.intensity=1.85;sun.shadowMinZ=.1;sun.shadowMaxZ=35;
  const shadow=new ShadowGenerator(1024,sun);shadow.usePercentageCloserFiltering=true;shadow.filteringQuality=ShadowGenerator.QUALITY_LOW;shadow.bias=.001;shadow.normalBias=.025;shadow.darkness=.28;
  const materials=new Map<string,PBRMaterial>();
- function material(hex:string,alpha=1,role:MaterialRole='paint'){const spec=materialSpec(role),key=spec.id+hex+alpha;let m=materials.get(key);if(!m){m=new PBRMaterial(key,scene);m.albedoColor=Color3.FromHexString(hex);m.roughness=spec.roughness;m.metallic=spec.metallic;m.indexOfRefraction=spec.ior;m.environmentIntensity=.5;m.alpha=alpha;materials.set(key,m);}return m;}
+ function material(hex:string,alpha=1,role:MaterialRole='paint'){const spec=materialRenderState(role,hex,alpha),key=spec.materialId;let m=materials.get(key);if(!m){m=new PBRMaterial(key,scene);m.albedoColor=Color3.FromHexString(hex);m.roughness=spec.roughness;m.metallic=spec.metallic;m.indexOfRefraction=spec.indexOfRefraction;m.environmentIntensity=.5;m.alpha=spec.alpha;m.transparencyMode=spec.alphaBlend?PBRMaterial.PBRMATERIAL_ALPHABLEND:PBRMaterial.PBRMATERIAL_OPAQUE;m.backFaceCulling=spec.backFaceCulling;m.twoSidedLighting=spec.twoSidedLighting;materials.set(key,m);}return m;}
  function model(name:string,recipe:Part[],parent?:TransformNode,slot?:number,cast=true){const root=new TransformNode(name,scene);if(parent)root.parent=parent;for(const [i,g] of grouped(recipe).entries()){const mesh=new Mesh(`${name}.material${i}`,scene);const data=new VertexData();data.positions=g.geometry.positions;data.normals=g.geometry.normals;data.indices=g.geometry.indices;data.applyToMesh(mesh);mesh.material=material(g.color,g.alpha,g.role);mesh.parent=root;mesh.receiveShadows=true;mesh.isPickable=slot!==undefined;if(slot!==undefined)mesh.metadata={slot};if(cast&&g.alpha===1)shadow.addShadowCaster(mesh);}return root;}
  // All surfaces are actual geometry with reusable authoring recipes; no backdrop illusion.
  model('room.modular',roomRecipe(),undefined,undefined,false);
@@ -83,14 +83,16 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  scene.onPointerPick=(_,pick)=>{const n=pick.pickedMesh?.metadata?.slot;if(typeof n==='number')onSlot(n);};
  const contextLost=()=>canvas.dispatchEvent(new CustomEvent('world-error'));
  canvas.addEventListener('webglcontextlost',contextLost);window.addEventListener('resize',resize);const observer=new ResizeObserver(resize);observer.observe(canvas);
- const visibility=()=>{last=undefined;if(document.hidden)clock.cancel();};document.addEventListener('visibilitychange',visibility);
+ function finishFeedback(){const reveal=clock.active?.kind==='reveal';clock.cancel();if(reveal)onFeedbackEnd();}
+ function advanceFeedback(dt:number){if(disposed||document.hidden||!motionAllowed({low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches})){finishFeedback();return;}const reveal=clock.active?.kind==='reveal';clock.step(dt);if(reveal&&!clock.active)onFeedbackEnd();}
+ const visibility=()=>{last=undefined;if(document.hidden)finishFeedback();};document.addEventListener('visibilitychange',visibility);
  resize();await scene.whenReadyAsync();readyAt=performance.now();
  engine.runRenderLoop(()=>{
   if(disposed||document.hidden){last=undefined;return;}
   const now=performance.now(),dt=last===undefined?0:Math.max(0,Math.min(vfx.policy.maxDt,now-last));if(last!==undefined){const sample=now-last;if(sample>0&&sample<250){frames.push(sample);visibleSamples++;if(frames.length>180)frames.shift();}}last=now;
   if(quality==='auto'&&frames.length>=90&&now-qualityCheckedAt>3000){const sorted=[...frames].sort((a,b)=>a-b);const p75=sorted[Math.floor(sorted.length*.75)];if(p75>35&&effectiveQuality!=='low')setQuality('low');qualityCheckedAt=now;}
   const policy={low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches},animate=motionAllowed(policy);
-  if(!animate)clock.cancel();clock.step(dt);selectionTime=animate?Math.min(vfx.selection.duration,selectionTime+dt):vfx.selection.duration;
+  advanceFeedback(dt);selectionTime=animate?Math.min(vfx.selection.duration,selectionTime+dt):vfx.selection.duration;
   const hour=state?new Date(state.watermark+9*3600000).getUTCHours():0;const trading=!!state?.open&&hour>=config.openHour&&hour<config.closeHour;
   customers.forEach((c,i)=>{c.root.setEnabled(customerVisible(i,trading,policy.low));const pose=browsePose(i,now,animate);c.parts.get('head')!.rotation.y=pose.headYaw;c.parts.get('arm-right')!.rotation.z=pose.armAngle;});
   highlights.forEach((m,i)=>{m.visibility=i===selectedSlot?(.62+.18*(1-selectionTime/vfx.selection.duration)):0;});
@@ -101,13 +103,13 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  });
  return {
   update(s:Snapshot){state=s;parcel.setEnabled(!s.revealed);for(let i=0;i<3;i++){const id=s.shelves[i],item=s.inventory[id],o=catalog.offerings.find(o=>o.id===id),count=Math.min(4,item?.stock??0);const key=`${id}:${count}`;if(shelfContents[i]===key)continue;shelfContents[i]=key;for(const child of [...productRoots[i].getChildren()]){if(child instanceof TransformNode)for(const mesh of child.getChildMeshes())shadow.removeShadowCaster(mesh);child.dispose(false);}if(!o)continue;for(let k=0;k<count;k++){const object=model(`${layoutData.displays[i].id}.${id}.${k}`,productRecipe(id,o.color),productRoots[i],i);object.position.set((k%2-.5)*.60,k%2===0?.006:0,(Math.floor(k/2)-.5)*.38);object.rotation.y=[-.07,.04,.025,-.045][k];object.scaling.setAll(id==='off.pencil'?1.05:.82);}}resize();},
-  quality(q:string){quality=q;frames=[];last=undefined;setQuality(q==='low'?'low':'high');},
+  quality(q:string){quality=q;frames=[];last=undefined;setQuality(q==='low'?'low':'high');if(q==='low')finishFeedback();},
   zen(value:boolean){zen=value;resize();},layout(value:boolean){panelOpen=value;resize();},
   selected(slot:number){if(selectedSlot!==slot){selectedSlot=slot;selectionTime=0;}highlights.forEach((m,i)=>m.setEnabled(i===slot));},
-  minimal(value:boolean){minimalFX=value;if(value)clock.cancel();},
-  feedback(event:Feedback){clock.start(event.kind,event.slot,{low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches});},
-  skip(){clock.cancel();},
+  minimal(value:boolean){minimalFX=value;if(value)finishFeedback();},
+  feedback(event:Feedback){finishFeedback();if(disposed||document.hidden)return false;clock.start(event.kind,event.slot,{low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches});return !!clock.active;},
+  skip(){finishFeedback();},
   metrics(){return {readyAtMs:readyAt,quality,effectiveQuality,adaptivePolicy:'auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged',minimalFX,reducedMotion:reduced.matches,feedback:clock.active?.kind??null,materials:scene.materials.length,dustCapacity:vfx.dust.capacity,customerRoots:customers.map(c=>({position:c.root.position.asArray(),enabled:c.root.isEnabled()})),selectedSlot,visibleSamples,frameSamplesMs:[...frames],fps:frames.length?1000/(frames.reduce((a,b)=>a+b,0)/frames.length):null,meshes:scene.meshes.length,activeMeshes:scene.getActiveMeshes().length,renderer:engine.getGlInfo(),viewport:[canvas.width,canvas.height],cameraViewport:camera.viewport};},
-  dispose(){disposed=true;clock.dispose();observer.disconnect();window.removeEventListener('resize',resize);document.removeEventListener('visibilitychange',visibility);canvas.removeEventListener('webglcontextlost',contextLost);engine.stopRenderLoop();scene.dispose();engine.dispose();}
+  dispose(){finishFeedback();disposed=true;clock.dispose();observer.disconnect();window.removeEventListener('resize',resize);document.removeEventListener('visibilitychange',visibility);canvas.removeEventListener('webglcontextlost',contextLost);engine.stopRenderLoop();scene.dispose();engine.dispose();}
  };
 }

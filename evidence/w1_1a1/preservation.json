@@ -1,0 +1,6 @@
+{
+  "baseline": "8296c3251b0a7bfd43221781ba7241319891f396",
+  "protectedFiles": 125,
+  "mismatches": [],
+  "scope": "All prior core/content/schema/data/storage source, package/lock/typescript config, masters/public assets/fonts/original inputs and authoring files. Added version paths do not overwrite old files."
+}

@@ -2,7 +2,7 @@
 // Engine-neutral recipes feed both runtime meshes and versioned interchange GLBs.
 import type {MaterialRole} from './materials';
 export type V3 = [number,number,number];
-export interface Part {shape:'box'|'round'|'sphere'|'cylinder'|'torus';size:V3;at:V3;color:string;role?:MaterialRole;turn?:V3;radius?:number;top?:number;alpha?:number;open?:boolean;inside?:boolean;}
+export interface Part {shape:'box'|'round'|'sphere'|'cylinder'|'torus';size:V3;at:V3;color:string;role?:MaterialRole;turn?:V3;radius?:number;top?:number;alpha?:number;open?:boolean;inside?:boolean;segments?:number;arc?:[number,number];}
 export const palette={cream:'#F0E6D8',wood:'#B78E67',edge:'#D6B58E',dark:'#735B48',lavender:'#BDA9CC',sage:'#7B9783',ivory:'#FFF7E9',clay:'#C28F73',ink:'#443B3C'};
 const p=(shape:Part['shape'],size:V3,at:V3,color:string,extra:Partial<Part>={}):Part=>({shape,size,at,color,role:'paint',...extra});
 const round=(size:V3,at:V3,color:string,radius=.035,role:MaterialRole='wood')=>p('round',size,at,color,{radius,role});
@@ -27,8 +27,8 @@ export function productRecipe(id:string,color=palette.lavender):Part[]{
   p('cylinder',[.197,.205,.197],[0,.1325,0],palette.ivory,{top:1,open:true,inside:true,role:'ceramic'}),
   p('cylinder',[.235,.030,.235],[0,.015,0],color,{top:1,role:'ceramic'}),
   p('cylinder',[.195,.003,.195],[0,.032,0],palette.ivory,{top:1,role:'ceramic'}),
-  p('torus',[.216,.022,.216],[0,.235,0],palette.ivory,{role:'ceramic'}),
-  p('torus',[.145,.031,.145],[.143,.126,0],color,{turn:[0,0,Math.PI/2],role:'ceramic'})];
+  p('torus',[.235,.019,.235],[0,.235,0],palette.ivory,{role:'ceramic',segments:12}),
+  p('torus',[.178,.028,.165],[.155,.125,0],color,{turn:[Math.PI/2,0,0],arc:[-2.2,2.2],segments:28,role:'ceramic'})];
  case 'off.tote':return [
   round([.32,.285,.095],[0,.147,0],color,.026,'fabric'),
   p('torus',[.19,.025,.19],[0,.30,-.028],palette.edge,{turn:[Math.PI/2,0,0],role:'fabric'}),

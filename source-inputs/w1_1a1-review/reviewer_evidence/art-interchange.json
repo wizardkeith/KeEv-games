@@ -1,0 +1,140 @@
+{
+  "scope": "Structural GLB validation and NullEngine import only; no rendering evidence",
+  "results": [
+    {
+      "id": "off.notebook",
+      "bytes": 20796,
+      "hash_matches": true,
+      "errors": 0,
+      "warnings": 0,
+      "meshes": 6,
+      "materials": 5
+    },
+    {
+      "id": "off.pencil",
+      "bytes": 13772,
+      "hash_matches": true,
+      "errors": 0,
+      "warnings": 0,
+      "meshes": 6,
+      "materials": 5
+    },
+    {
+      "id": "off.mug",
+      "bytes": 20500,
+      "hash_matches": true,
+      "errors": 0,
+      "warnings": 0,
+      "meshes": 3,
+      "materials": 2
+    },
+    {
+      "id": "off.tea",
+      "bytes": 9092,
+      "hash_matches": true,
+      "errors": 0,
+      "warnings": 0,
+      "meshes": 5,
+      "materials": 4
+    },
+    {
+      "id": "off.cookie",
+      "bytes": 23008,
+      "hash_matches": true,
+      "errors": 0,
+      "warnings": 0,
+      "meshes": 4,
+      "materials": 3
+    },
+    {
+      "id": "off.tote",
+      "bytes": 24988,
+      "hash_matches": true,
+      "errors": 0,
+      "warnings": 0,
+      "meshes": 6,
+      "materials": 5
+    },
+    {
+      "id": "off.card",
+      "bytes": 13576,
+      "hash_matches": true,
+      "errors": 0,
+      "warnings": 0,
+      "meshes": 5,
+      "materials": 4
+    },
+    {
+      "id": "off.towel",
+      "bytes": 10016,
+      "hash_matches": true,
+      "errors": 0,
+      "warnings": 0,
+      "meshes": 3,
+      "materials": 2
+    },
+    {
+      "id": "off.tray",
+      "bytes": 20136,
+      "hash_matches": true,
+      "errors": 0,
+      "warnings": 0,
+      "meshes": 3,
+      "materials": 2
+    },
+    {
+      "id": "off.vase",
+      "bytes": 15248,
+      "hash_matches": true,
+      "errors": 0,
+      "warnings": 0,
+      "meshes": 3,
+      "materials": 2
+    },
+    {
+      "id": "fixture.shop-counter.w1_1a",
+      "bytes": 29036,
+      "hash_matches": true,
+      "errors": 0,
+      "warnings": 0,
+      "meshes": 8,
+      "materials": 7
+    },
+    {
+      "id": "display.w1_1a",
+      "bytes": 35704,
+      "hash_matches": true,
+      "errors": 0,
+      "warnings": 0,
+      "meshes": 6,
+      "materials": 5
+    },
+    {
+      "id": "decoration.plant.w1_1a",
+      "bytes": 44404,
+      "hash_matches": true,
+      "errors": 0,
+      "warnings": 0,
+      "meshes": 6,
+      "materials": 5
+    },
+    {
+      "id": "staff.graybox",
+      "bytes": 102436,
+      "hash_matches": true,
+      "errors": 0,
+      "warnings": 0,
+      "meshes": 11,
+      "materials": 10
+    },
+    {
+      "id": "layout.graybox.1",
+      "bytes": 108432,
+      "hash_matches": true,
+      "errors": 0,
+      "warnings": 0,
+      "meshes": 16,
+      "materials": 15
+    }
+  ]
+}

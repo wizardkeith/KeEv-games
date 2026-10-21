@@ -1,0 +1,69 @@
+{
+  "baselineCommit": "8296c3251b0a7bfd43221781ba7241319891f396",
+  "before": {
+    "empty": {
+      "meshes": 173,
+      "materialIdentities": 64,
+      "vertices": 23434,
+      "triangles": 27744,
+      "stockedTop3": [],
+      "method": "count authored material groups/vertices/indices, including disabled pool/crowd. Not renderer measurements; excludes GPU passes and runtime material clones."
+    },
+    "worstStocked": {
+      "meshes": 233,
+      "materialIdentities": 64,
+      "vertices": 28378,
+      "triangles": 32736,
+      "stockedTop3": [
+        "off.notebook",
+        "off.pencil",
+        "off.tote"
+      ],
+      "method": "count authored material groups/vertices/indices, including disabled pool/crowd. Not renderer measurements; excludes GPU passes and runtime material clones."
+    }
+  },
+  "after": {
+    "empty": {
+      "meshes": 173,
+      "materialIdentities": 64,
+      "vertices": 23450,
+      "triangles": 27756,
+      "stockedTop3": [],
+      "method": "count authored material groups/vertices/indices, including disabled pool/crowd. Not renderer measurements; excludes GPU passes and runtime material clones."
+    },
+    "worstStocked": {
+      "meshes": 233,
+      "materialIdentities": 64,
+      "vertices": 28394,
+      "triangles": 32748,
+      "stockedTop3": [
+        "off.notebook",
+        "off.pencil",
+        "off.tote"
+      ],
+      "method": "count authored material groups/vertices/indices, including disabled pool/crowd. Not renderer measurements; excludes GPU passes and runtime material clones."
+    }
+  },
+  "vfxBudget": {
+    "poolMeshes": 12,
+    "dust": 8,
+    "receipt": 1,
+    "revealProxy": 3,
+    "maxConcurrentMajor": 1,
+    "queue": 0,
+    "newLights": 0,
+    "renderTargets": 0,
+    "shadowCasters": 0,
+    "textures": 0,
+    "dynamicTextures": 0,
+    "extraTextureBytes": 0
+  },
+  "notMeasured": [
+    "draw calls",
+    "GPU memory",
+    "actual frame time",
+    "FPS",
+    "physical device",
+    "visible appearance"
+  ]
+}

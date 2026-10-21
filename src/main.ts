@@ -1,10 +1,12 @@
 import './style.css';
 import {FeedbackProjector} from './presentation/feedback';
+import {vfx} from './presentation/config';
 import {readPreferences,savePreferences} from './presentation/preferences';
 import {icon} from './ui/icons';
 const artReview=import.meta.env.VITE_ART_REVIEW==='1',modeKey=artReview?'shop.art-review.mode':'shop.mode',draftPrefix=artReview?'shop.art-review.draft.':'shop.w1.draft.';
 const presentationStorageKey=artReview?'shop.art-review.presentation.v1':'shop.presentation.v1';
 const feedback=new FeedbackProjector();
+let presentationEpoch=0;
 import {catalog,type Mode,type Snapshot,type Command} from './core/contracts';
 import {recoveryPreview,purchaseCost} from './core/recovery';import {loadCore} from './platform/loader';import {database,Saves} from './platform/storage';
 import {t,esc,money,date,locale,setLocale,trading} from './ui/copy';
@@ -45,12 +47,17 @@ function draw(){
  if(activeId&&document.activeElement?.id!==activeId){const replacement=document.getElementById(activeId) as HTMLInputElement|null;if(replacement){replacement.focus({preventScroll:true});if(start!==null&&start!==undefined)try{replacement.setSelectionRange(start,end??start);}catch{}}}
  world?.minimal(u.minimalFX);world?.update(state);world?.selected(u.slot);world?.layout(!!u.panel&&!u.zen);world?.zen(u.zen);
 }
-function cancelFeedback(){world?.skip();clearTimeout(revealTimer);u.revealFx=false;u.feedbackKind='';}
-function committed(previous:Snapshot,current:Snapshot,cause:string){
- const event=feedback.project(previous,current,cause,u.slot);if(!event)return;clearTimeout(revealTimer);u.revealFx=false;
- u.feedbackKind=event.kind;world?.feedback(event);
- if(event.kind==='reveal'&&!u.minimalFX&&!matchMedia('(prefers-reduced-motion: reduce)').matches){u.revealFx=true;clearTimeout(revealTimer);revealTimer=setTimeout(()=>{u.revealFx=false;draw();},1100);}
- if(event.sold>0){let text=t('sold')+' '+event.sold;const empty=catalog.offerings.filter(o=>previous.inventory[o.id].stock>0&&current.inventory[o.id].stock===0);if(empty.length)text+=' · '+empty.map(o=>t(o.key)).join(', ')+' '+t('soldOut');notice(event.kind==='support'?text+' · '+t('supportReceived'):text);if(u.sound){saleSound.currentTime=0;void saleSound.play().catch(()=>{});}}
+function finishReveal(){clearTimeout(revealTimer);if(u.revealFx){u.revealFx=false;draw();}}
+function cancelFeedback(){presentationEpoch++;world?.skip();finishReveal();u.feedbackKind='';}
+function committed(previous:Snapshot,current:Snapshot,cause:string,targetSlot:number,epoch:number){
+ // Consume every real committed delta even when its presentation became stale.
+ const event=feedback.project(previous,current,cause,targetSlot);if(!event)return;
+ clearTimeout(revealTimer);u.revealFx=false;u.feedbackKind=event.kind;
+ if(event.sold>0){let text=t('sold')+' '+event.sold;const empty=catalog.offerings.filter(o=>previous.inventory[o.id].stock>0&&current.inventory[o.id].stock===0);if(empty.length)text+=' · '+empty.map(o=>t(o.key)).join(', ')+' '+t('soldOut');notice(event.kind==='support'?text+' · '+t('supportReceived'):text);}
+ if(document.hidden||epoch!==presentationEpoch)return;
+ const started=world?.feedback(event)===true;
+ if(event.kind==='reveal'&&started){u.revealFx=true;revealTimer=setTimeout(()=>{if(epoch!==presentationEpoch||!u.revealFx)return;world?.skip();finishReveal();},vfx.reveal.duration);}
+ if(event.sold>0&&u.sound){saleSound.currentTime=0;void saleSound.play().catch(()=>{});}
 }
 function fail(e:unknown,field='general'){
  const code=e instanceof Error?e.message:'invalid';
@@ -58,11 +65,11 @@ function fail(e:unknown,field='general'){
  u.formField=field;u.formError=t(code==='cash'?'cashError':code==='price'?'priceError':code==='quantity'?'quantityError':code==='identity'?'identityError':code);
  if(u.formError===code&&!['command_limit','recovery_ineligible','discovery_locked'].includes(code))u.formError=t('invalid');
 }
-async function run(action:()=>Promise<void>,field='general',success?:()=>void,cause='settle'){
+async function run(action:()=>Promise<void>,field='general',success?:()=>void,cause='settle',targetSlot=u.slot){
  // Lock this intent synchronously, before the first await. Double clicks are
  // discarded rather than turned into a queue of fresh purchasing commands.
- if(busy)return;busy=true;u.formError='';u.formField='';draw();const previous=state;
- try{await action();u.blocking='';committed(previous,state,cause);success?.();}catch(e){fail(e,field);}finally{busy=false;storeDraft(mode,u.draft,draftPrefix);draw();}
+ if(busy)return;busy=true;u.formError='';u.formField='';draw();const previous=state,epoch=presentationEpoch;
+ try{await action();u.blocking='';committed(previous,state,cause,targetSlot,epoch);success?.();}catch(e){fail(e,field);}finally{busy=false;storeDraft(mode,u.draft,draftPrefix);draw();}
 }
 async function act(kind:string,data:Partial<Command>={}){state=await saves.command(state,{id:commandId(),kind,...data},mode==='normal'?Date.now():state.watermark,Date.now());}
 function openPanel(p:string,source?:HTMLElement){if(source)focusReturn=source;const changed=u.panel!==p;u.panel=p;u.formError='';draw();if(changed){const body=document.getElementById('panelbody');if(body)body.scrollTop=0;}document.getElementById('panel-title')?.focus({preventScroll:true});}
@@ -102,7 +109,7 @@ app.addEventListener('click',e=>{
  void run(async()=>{
   switch(a){
    case 'buy':{const q=Number(u.draft.quantity);if(!u.draft.quantity.trim()||!Number.isSafeInteger(q)||q<1||q>1000)throw Error('quantity');const o=catalog.offerings.find(x=>x.id===id)!;if(state.cash<purchaseCost(o.cost)*q){u.formField=field;throw Error('cash');}await act('buy',{itemId:id,quantity:q});notice(t(o.key)+' ×'+q+' · '+t('bought'));break;}
-   case 'display':if(state.inventory[id].stock===0)throw Error('displayEmptyError');await act('display',{itemId:id,slot:u.slot});notice(t('placed')+' '+(u.slot+1)+' · '+t('replacedNote'));break;
+   case 'display':if(state.inventory[id].stock===0)throw Error('displayEmptyError');await act('display',{itemId:id,slot:n});notice(t('placed')+' '+(n+1)+' · '+t('replacedNote'));break;
    case 'price':{const raw=u.draft.prices[id]??String(state.inventory[id].price*10),price=Number(raw)/10;if(!raw.trim()||!Number.isSafeInteger(price)||price<1||price>100000)throw Error('price');await act('price',{itemId:id,price});delete u.draft.prices[id];notice(t('priceSaved'));break;}
    case 'clear':await act('clear',{slot:n});break;
    case 'open':await act('open');break;
@@ -115,7 +122,7 @@ app.addEventListener('click',e=>{
    case 'catchup':state=await saves.settle(state,Math.min(Date.now(),state.watermark+86400000),Date.now());break;
    case 'retry':if(mode==='normal')state=await saves.settle(state,Date.now(),Date.now());else state=(await saves.read(mode))!;break;
   }
- },field,undefined,a);
+ },field,undefined,a,n);
 });
 document.addEventListener('keydown',e=>{
  if(e.key==='Escape'){if(u.rename){u.rename=false;draw();}else if(state?.shopName)closePanel();}
@@ -126,11 +133,11 @@ function resume(){
  const now=Date.now();if(now-state.watermark>=60000||now<state.lastWallTime||u.blocking==='rollback')void run(async()=>{state=await saves.settle(state,now,now);});
 }
 async function boot(){
- const core=await loadCore();saves=new Saves(await database(artReview?"next-stop-little-shop-art-review-w1_1a":"next-stop-little-shop-w1"),core);state=await saves.loadOrCreate(mode,mode==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());u.draft=draftFor(mode,state,draftPrefix);draw();readyMs=performance.now()-started;
- try{const {createWorld}=await import('./world');world=await createWorld(canvas,n=>{u.slot=n;openPanel('shelves');});world.update(state);world.layout(!!u.panel);worldReadyMs=performance.now()-started;}catch(e){console.error(e);u.worldFailed=true;}
+ const core=await loadCore();saves=new Saves(await database(artReview?"next-stop-little-shop-art-review-w1_1a1":"next-stop-little-shop-w1"),core);state=await saves.loadOrCreate(mode,mode==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());u.draft=draftFor(mode,state,draftPrefix);draw();readyMs=performance.now()-started;
+ try{const {createWorld}=await import('./world');world=await createWorld(canvas,n=>{u.slot=n;openPanel('shelves');},finishReveal);world.update(state);world.layout(!!u.panel);worldReadyMs=performance.now()-started;}catch(e){console.error(e);u.worldFailed=true;}
  draw();if(!state.shopName)document.getElementById('shop-name')?.focus();
  document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelFeedback();draw();}else resume();});window.addEventListener('focus',resume);setInterval(resume,10000);resume();
- canvas.addEventListener('world-error',()=>{world?.dispose();world=undefined;u.worldFailed=true;draw();});
- Object.assign(window,{littleShopDiagnostics:()=>({core:'PORT_REQUIRED_FOR_UNITY',artReview,uiReadyMs:readyMs,startupMs:worldReadyMs,worldReady:worldReadyMs!==null,world:world?.metrics(),userAgent:navigator.userAgent,resources:performance.getEntriesByType('resource').map(e=>({name:e.name,duration:e.duration,transferSize:(e as PerformanceResourceTiming).transferSize,encodedBodySize:(e as PerformanceResourceTiming).encodedBodySize}))})});
+ canvas.addEventListener('world-error',()=>{cancelFeedback();world?.dispose();world=undefined;u.worldFailed=true;draw();});
+ Object.assign(window,{littleShopDiagnostics:()=>({core:'PORT_REQUIRED_FOR_UNITY',artReview,uiReadyMs:readyMs,startupMs:worldReadyMs,worldReady:!!world&&!u.worldFailed,worldEverReady:worldReadyMs!==null,worldAvailable:!!world&&!u.worldFailed,world:world?.metrics(),userAgent:navigator.userAgent,resources:performance.getEntriesByType('resource').map(e=>({name:e.name,duration:e.duration,transferSize:(e as PerformanceResourceTiming).transferSize,encodedBodySize:(e as PerformanceResourceTiming).encodedBodySize}))})});
 }
 boot().catch(e=>{console.error(e);app.innerHTML=`<main class="boot"><h2>${esc(t('loadError'))}</h2><p>${esc(t('recovery'))}</p><button id="raw">${esc(t('rawExport'))}</button></main>`;document.getElementById('raw')!.onclick=()=>{if(!saves)return;const tx=saves.db.transaction('saves','readonly'),r=tx.objectStore('saves').get('shop.w1.'+mode);r.onsuccess=()=>download(JSON.stringify(r.result,null,2),'little-shop-raw-recovery.json');};});

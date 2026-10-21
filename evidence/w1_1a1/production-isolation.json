@@ -1,0 +1,5 @@
+{
+  "reviewStringsFound": false,
+  "qaPagesFound": false,
+  "scope": "Production dist recursive text scan; source review build is compile-only and uses an isolated QA database, not player slots."
+}

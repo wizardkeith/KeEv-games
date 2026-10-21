@@ -1,0 +1,15 @@
+✔ F1 deferred actual Saves result after hidden cancellation commits once without FX/audio or resume replay (21.881272ms)
+✔ F1 world feedback rejects hidden/disposed callers independently of the UI guard (2.011639ms)
+✔ F2 slow frames retain Skip until shared UI deadline synchronously cancels scene; normal completion also clears UI (5.791498ms)
+✔ F2 skip, replacement, hidden/mode cancellation and failed scene preserve committed reveal without orphaned Skip (9.067912ms)
+✔ F2 Low, Auto downgrade, Minimal and Reduce Motion use identical static completion policy (9.101332ms)
+✔ F3 actual display click captures shelf 2 across deferred Saves while selection changes to shelf 3 (6.109171ms)
+✔ diagnostics separate historical world readiness from current availability after context loss (7.561841ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 970.601291

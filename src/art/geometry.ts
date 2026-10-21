@@ -23,8 +23,9 @@ export function geometry(p:Part):Geometry {
   for(let j=0;j<cols;j++){tri(j,j+cols+1,j+1);tri(j+1,j+cols+1,j+cols+2);}
   if(!p.open)for(let y=0;y<2;y++){const c=vertex(0,(y-.5)*h,0,0,y?1:-1,0);const ring=[];for(let j=0;j<=cols;j++){const a=j*2*Math.PI/cols;ring.push(vertex(Math.cos(a)*w/2*(y?top:1),(y-.5)*h,Math.sin(a)*d/2*(y?top:1),0,y?1:-1,0));}for(let j=0;j<cols;j++)tri(c,ring[j],ring[j+1]);}
  }else{
-  const cols=20,rows=6,r=(w-h)/2,t=h/2;for(let i=0;i<=cols;i++){const a=i*2*Math.PI/cols;for(let j=0;j<=rows;j++){const b=j*2*Math.PI/rows,n=[Math.cos(a)*Math.cos(b),Math.sin(b),Math.sin(a)*Math.cos(b)];vertex(Math.cos(a)*(r+t*Math.cos(b)),t*Math.sin(b),Math.sin(a)*(r+t*Math.cos(b))*d/w,n[0],n[1],n[2]*w/d);}}
+  const cols=p.segments??20,rows=6,r=(w-h)/2,t=h/2,start=p.arc?.[0]??0,sweep=(p.arc?.[1]??2*Math.PI)-start;for(let i=0;i<=cols;i++){const a=start+i*sweep/cols;for(let j=0;j<=rows;j++){const b=j*2*Math.PI/rows,n=[Math.cos(a)*Math.cos(b),Math.sin(b),Math.sin(a)*Math.cos(b)];vertex(Math.cos(a)*(r+t*Math.cos(b)),t*Math.sin(b),Math.sin(a)*(r+t*Math.cos(b))*d/w,n[0],n[1],n[2]*w/d);}}
   for(let i=0;i<cols;i++)for(let j=0;j<rows;j++){const a=i*(rows+1)+j,b=a+rows+1;tri(a,b,a+1);tri(a+1,b,b+1);}
+  if(p.arc)for(const end of [0,cols]){const a=start+end*sweep/cols,sign=end===0?-1:1,n:V3=[-Math.sin(a)*sign,0,Math.cos(a)*w/d*sign],center=vertex(Math.cos(a)*r,0,Math.sin(a)*r*d/w,...n),ring:number[]=[];for(let j=0;j<=rows;j++){const old=(end*(rows+1)+j)*3;ring.push(vertex(g.positions[old],g.positions[old+1],g.positions[old+2],...n));}for(let j=0;j<rows;j++)tri(center,ring[j],ring[j+1]);}
  }
  const rotate=(vec:number[],turn:V3)=>{let [x,y,z]=vec;for(let axis=0;axis<3;axis++){const a=turn[axis],c=Math.cos(a),s=Math.sin(a);if(axis===0)[y,z]=[y*c-z*s,y*s+z*c];if(axis===1)[x,z]=[x*c+z*s,-x*s+z*c];if(axis===2)[x,y]=[x*c-y*s,x*s+y*c];}return [x,y,z];};
  for(let i=0;i<g.positions.length;i+=3){const a=rotate(g.positions.slice(i,i+3),p.turn??[0,0,0]),n=rotate(g.normals.slice(i,i+3),p.turn??[0,0,0]);for(let k=0;k<3;k++){g.positions[i+k]=a[k]+p.at[k];g.normals[i+k]=n[k];}}

@@ -1,0 +1,86 @@
+{
+  "title": "W1.1A VFX observational source-boundary probes",
+  "generatedAt": "2026-10-21T10:57:27.372Z",
+  "repository": "/workspace/scratch/e8a3235ec1f0/review_w1_1a/candidate",
+  "runtime": "v24.19.0",
+  "scope": "Read-only application-source inspection and Node observations. Real core/FeedbackProjector/FeedbackClock plus extracted original main.ts functions at explicitly mocked presentation boundaries. NOT a browser, WebGL, animation-rendering, FPS, GPU-disposal or physical-device test.",
+  "acceptanceMeaning": "Exit 0 only means observations were collected. This script does not assert the defects are fixed and does not turn old defective outputs into passing acceptance results.",
+  "sourceHashes": {
+    "src/main.ts": "4b27bdea6353ac9a1c54755c8cc82ee309fbf34d268d122c4d6b5165507ead1c",
+    "src/world.ts": "782e2d1fe3b6666d4a71c623c162a23dee9878ed5d9d0781dbd06ca2824f0e48",
+    "src/presentation/feedback.ts": "7040f5b247ad26f0774bfc1e08ce9c175a1f0b5a87781a1ac52584ca44fa9eef",
+    "src/presentation/config.ts": "0a0b168849ade119d3cd83af6d5f5c28c5efb8930f2afbc89d245e3358b1da44"
+  },
+  "fixture": {
+    "mode": "sandbox",
+    "startUtc": "2026-10-21T01:00:00.000Z",
+    "item": "off.notebook",
+    "quantity": 5,
+    "displaySlotZeroBased": 1,
+    "settlementMinutes": 60,
+    "reportedRevealDurationMs": 1100
+  },
+  "mockedBoundaries": [
+    "world calls use the real FeedbackClock instead of a renderer",
+    "document.hidden",
+    "matchMedia(reduced=false)",
+    "setTimeout/clearTimeout recorded without real waiting",
+    "draw is a no-op",
+    "notice strings collected",
+    "audio play requests counted, no audio device used"
+  ],
+  "observations": [
+    {
+      "id": "F1-hidden-commit-race",
+      "description": "A live commit completes after the page-hidden cancellation.",
+      "status": "observed",
+      "sequence": [
+        "document.hidden=true",
+        "cancelFeedback()",
+        "successful save result reaches committed()"
+      ],
+      "hidden": true,
+      "activeAfterCommit": "sale",
+      "soundPlays": 1,
+      "collectedNotices": [
+        "sold 5 · notebook soldOut"
+      ],
+      "originalObservation": "A sale transient is active and one sound playback is requested while hidden.",
+      "intendedRepair": "Consume the committed event without starting transient FX/audio while hidden; preserve any useful aggregate result separately."
+    },
+    {
+      "id": "F2-reveal-clock-desync",
+      "description": "The UI wall-clock reveal timer ends before the clamped scene clock.",
+      "status": "observed",
+      "simulatedWallMs": 1200,
+      "frameIntervalMs": 100,
+      "uiTimerMs": 1100,
+      "uiRevealFlag": false,
+      "active3DEffect": "reveal",
+      "sceneElapsedMs": 600,
+      "sceneDurationMs": 1100,
+      "originalObservation": "UI reveal/Skip flag is false while the reveal clock remains active at 600/1100 ms.",
+      "intendedRepair": "Keep the Skip control and scene completion on the same presentation lifecycle, or explicitly finish/cancel the scene when the UI timer expires."
+    },
+    {
+      "id": "F3-mutable-display-target",
+      "description": "Current selection changes while a display command is awaiting commit.",
+      "status": "observed",
+      "actualChangedShelfIndices": [
+        1
+      ],
+      "selectionAtCommit": 2,
+      "feedbackSlot": 2,
+      "kind": "display",
+      "indices": "Zero-based: actual shelf 1 means player-facing shelf 2; current selection 2 means player-facing shelf 3.",
+      "originalObservation": "The committed shelf is index 1, but the feedback target is index 2.",
+      "intendedRepair": "Use the immutable target captured for the successful display command or derive the intended committed target, rather than the later UI selection."
+    }
+  ],
+  "limitations": [
+    "F1 models the exact ordering of hidden cancellation then successful in-flight commit; it does not measure real IDB race frequency.",
+    "F2 simulates 100 ms frame intervals and invokes the actual recorded UI callback; it does not claim a measured device frame rate.",
+    "F3 verifies the actual projector target argument mismatch; it does not claim a rendered shelf animation was observed.",
+    "Application source, normal/sandbox user saves and the production Site are not modified."
+  ]
+}

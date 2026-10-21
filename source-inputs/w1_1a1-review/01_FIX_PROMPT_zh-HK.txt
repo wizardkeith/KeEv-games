@@ -1,0 +1,93 @@
+《下一站・小店物語》W1.1A1 — 陶杯、材質一致性與特效生命週期小修
+直接接續目前W1.1A，完成實作、驗證及同一Site候選更新。
+
+一、基準與範圍
+
+Site：https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site
+Project：appgprj_6ad82a08ed2881918ebcc2dd206a122d
+審核基準source：8296c3251b0a7bfd43221781ba7241319891f396；Site version3。
+使用者已明確確認Site公開，metadata為public／policy revision2。保留public，不恢復舊私密設定，不另建Site。開始前核對最新canonical source；若已有較新工作，保留並在其上處理。
+
+讀取本包00_REVIEW_zh-HK.txt、reviewer_probes及observations，再讀目前HANDOFF、ART_W1_1A、VFX_W1_1A、CONTRACT和原Bible。
+獨立審核確認43個具名測試、內容驗證、production build、15個GLB結構／重匯通過；原經濟／資料／存檔和舊資源保持完整。保留這些成果。
+這輪只修下面A1、A2、F1–F3，以及直接相關的政策／診斷一致性。不要重做美術、改架構、升級引擎或擴展正式故事／角色／天氣。維持chill、治癒、溫暖、精緻的方向。
+
+二、A1 陶杯幾何修正
+
+src/art/recipes.ts的off.mug目前：
+- 外殼半徑.1175m，杯沿最大半徑.108m；部分杯壁厚度未被rim封合。
+- 把手minX約.129576606m > 杯身maxX.1175m，至少相隔.01208m；舊版已存在同類把手問題。
+
+請局部改杯形：
+1. 以合理杯沿真正連接內外壁，保留中間空杯口與可見內壁／杯底。
+2. 把手有合理方向、開口及上下兩個杯身接點；避免漂浮、穿進杯腔或整圈遮住杯口。
+3. 檢查normal、winding、退化三角形；不要用封死杯口或假2D圖替代。
+4. 商品ID、價格、庫存、貨架規則不變；必要時同步杯縮圖及GLB。
+5. 測試杯口中央射線仍入杯腔、杯沿區域射線命中杯沿、把手接點實際接觸杯身。AABB相交本身不能證明兩個接點合理。
+原observational probe包含固定source點作缺口示例；修正後請測幾何意義，不只是針對那一條射線加一小塊補丁。
+
+三、A2 透明材質的共同設定
+
+目前runtime與GLB的顏色／alpha／roughness／metallic相同，但雙面設定不同：runtime backFaceCulling=true、twoSidedLighting=false；GLB doubleSided=true，重匯後變false／true。
+
+1. 在shared material specification明確定義相關材質是否雙面，runtime及exporter讀同一意圖。依幾何與美術目的決定，不一律把全部材質設雙面。
+2. 確保material grouping/key包含會影響渲染的重要身份，不誤合併不同設定。
+3. 重匯受影響GLB，檢查JSON與實際獨立import結果；Khronos零error/warning並不能單獨證明adapter一致。
+4. IOR目前只在extras保存，沒有KHR_materials_ior，屬已披露限制。本輪可以維持並清楚記錄native adapter要求，不因這點擴建整套shader管線。
+5. 原W1.1與已發佈W1.1A master、manifest及可重建來源須保留；新修訂用明確版本輸出，不覆寫歷史權威資源。避免把所有歷史資產不必要地複製進runtime下載清單。
+
+四、F1 pending commit在hidden之後完成
+
+重現：發出Saves操作→Promise尚未完成→分頁hidden並cancelFeedback→Promise resolve→committed()重新啟動world.feedback及saleSound。
+
+要求：
+- 真實交易仍正常提交、保存；只抑制過時瞬時聲畫。
+- 在呈現邊界檢查現在visibility，或用清楚的presentation lifecycle token；hidden commit仍被消費／去重，回來不追播舊動畫／聲音。
+- world.feedback入口作合理防禦，避免任一晚到事件繞過取消。
+- 需要回顧結果時可以保留合併文字摘要；不要重跑command、發獎或逐筆重播。
+- 加入「deferred Saves Promise於hidden取消之後才resolve」的integration測試，核對沒有FX／audio呼叫、state只提交一次、回來不再播；不要只重複測clock.step(hidden=true)。
+
+五、F2 Reveal UI／scene生命週期一致
+
+目前UI用固定1100ms wall timer，scene clock每幀最多50ms；在100ms frame interval下，UI的Skip先消失而scene仍播。
+
+要求：
+1. 讓同一呈現生命週期決定演出完成與Skip可用性；或UI結束時明確同步取消scene。保持dt clamp，不能為掩蓋問題移除防大跳保護。
+2. Duration從共用vfx.reveal.duration取值，避免兩邊各自hardcode。
+3. 只要可跳過的演出仍在播放，Skip就必須可用；skip只結束呈現，已提交reveal與完成卡保留。
+4. Low、Minimal FX、系統Reduce Motion採一致靜態完成政策；目前Low只有3D停止而UI仍播的差異一併處理。
+5. WebGL啟動失敗／context lost時正常呈現完成結果，不能留下失去作用的Skip或等待不存在場景。
+6. 測試慢幀、正常幀、timer先到、effect被另一事件取代、skip、hidden、模式切換、scene失敗；不重發或撤回獎勵。
+7. 若修改context-loss診斷，將worldEverReady與當前worldAvailable分開；保留ready時間作歷史量測，不把曾ready誤報成現在可渲染。
+
+六、F3 上架目標與選中狀態分離
+
+重現：架2發出上架→保存pending時選架3→commit實際修改架2，但通知／FX以完成時u.slot=架3為目標。
+
+要求：
+- 捕捉command發起時的不可變target slot，沿用於command、成功文字及feedback；或者從真實已提交shelf transition可靠推導目標。
+- 保留玩家目前selection，不把畫面硬跳回原架，也不要鎖死全部相機／選擇操作。
+- FX與通知必須指向真正受影響架；no-op、失敗或重複command不新增錯誤動畫。
+- 保留原單一主要FX與事件合併優先次序。若同次有成交，依現有policy合併；不憑空補發上架或成交。
+- 加deferred commit測試：指令架2，await期間selection改架3；結果與通知／FX仍正確指架2，selection可繼續為架3。
+
+七、保存、驗證與交付
+
+保留schema2／ts-w1-2、normal／sandbox DB與keys、CAS、command dedup、migration、免費復業支援、P&L、草稿／focus／scroll、五語言、十款商品、Select＋獨立Unique＋0 stats樣本。
+新增中文文案如有需要，同步五語言及字型子集；不要引入未審故事或真實商業數據。
+不增加本輪FX種類／數量／光源／後製預算；維持有限pool、queue0、Low／Auto、隱藏分頁與dispose政策。
+
+測試先重現已確認問題，再以少量有意義的回歸測試覆蓋修正；保留原43 cases，報告新總數與逐名結果。執行內容驗證、受影響asset hash／GLB結構與獨立import、production build。
+核對production build沒有review DB/key/QA頁；browser QA只用compile-only隔離fixture，保護現有玩家normal及sandbox。
+
+本次再次檢查支援的WebGL preview能力。可渲染時，核對杯口／把手、透明材質、慢幀Skip、hidden／resume、快速轉架；用同fixture／相機／viewport／品質作對比。
+若仍WebGL not supported，照常完成上述來源／數學／生命週期／DOM／build驗證及同一Site候選更新；清楚標「3D視覺待確認」。不要求使用者安裝driver／Unity或改公司安全設定；不以NullEngine當真實渲染。
+
+沿用同一public Site，交付：
+- 真正source commit、新Site version、部署結果與同一URL。
+- A1、A2、F1–F3逐項實作／測試結果，未完成項目及原因。
+- 可重建source checkpoint、資源版本／來源、必要測試及證據；排除node_modules、快取、憑證、玩家存檔。
+- 實際取得的3D畫面與動態；取得不到則如實列待確認。
+- 更新handoff及回退點，保留public設定；回退程式不回退玩家進度。
+
+請直接完成這次小修，不停留在計畫，也不啟動下一個大型內容階段。

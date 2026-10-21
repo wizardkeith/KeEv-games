@@ -1,0 +1,74 @@
+
+> next-stop-little-shop-w1@0.1.1 build
+> tsc --noEmit && vite build --outDir /workspace/scratch/e8a3235ec1f0/review_w1_1a/runtime_review/dist
+
+vite v7.1.12 building for production...
+transforming...
+✓ 544 modules transformed.
+rendering chunks...
+computing gzip size...
+../runtime_review/dist/index.html                                                     0.69 kB │ gzip:   0.49 kB
+../runtime_review/dist/assets/index-Doz1X_6A.css                                     14.35 kB │ gzip:   4.00 kB
+../runtime_review/dist/assets/kernelBlurVaryingDeclaration-CEfjKcbQ.js                0.17 kB │ gzip:   0.16 kB
+../runtime_review/dist/assets/kernelBlurVaryingDeclaration-DvjPkKrm.js                0.18 kB │ gzip:   0.16 kB
+../runtime_review/dist/assets/pass.fragment-mh0B7h19.js                               0.35 kB │ gzip:   0.27 kB
+../runtime_review/dist/assets/shadowMapFragmentSoftTransparentShadow-DLjf38-W.js      0.40 kB │ gzip:   0.29 kB
+../runtime_review/dist/assets/shadowMapFragmentSoftTransparentShadow-D1--IHLv.js      0.43 kB │ gzip:   0.31 kB
+../runtime_review/dist/assets/rgbdEncode.fragment-C0Ao6sCA.js                         0.43 kB │ gzip:   0.32 kB
+../runtime_review/dist/assets/rgbdDecode.fragment-oLfrcRoG.js                         0.44 kB │ gzip:   0.32 kB
+../runtime_review/dist/assets/pass.fragment-COH3n9Lo.js                               0.48 kB │ gzip:   0.32 kB
+../runtime_review/dist/assets/packingFunctions-Df_YIPQw.js                            0.52 kB │ gzip:   0.29 kB
+../runtime_review/dist/assets/meshUboDeclaration-CF3NLAb5.js                          0.56 kB │ gzip:   0.31 kB
+../runtime_review/dist/assets/depthBoxBlur.fragment-DMRG5nl4.js                       0.56 kB │ gzip:   0.37 kB
+../runtime_review/dist/assets/meshUboDeclaration-6pJArydt.js                          0.56 kB │ gzip:   0.31 kB
+../runtime_review/dist/assets/rgbdEncode.fragment-DJ1u-JCK.js                         0.57 kB │ gzip:   0.36 kB
+../runtime_review/dist/assets/rgbdDecode.fragment-r_CzFI4_.js                         0.58 kB │ gzip:   0.37 kB
+../runtime_review/dist/assets/postprocess.vertex-DaZljmXu.js                          0.61 kB │ gzip:   0.37 kB
+../runtime_review/dist/assets/depthBoxBlur.fragment-DQJ-zy9l.js                       0.74 kB │ gzip:   0.44 kB
+../runtime_review/dist/assets/kernelBlur.vertex-BMBcb3uf.js                           0.79 kB │ gzip:   0.44 kB
+../runtime_review/dist/assets/passCube.fragment-DWRpOvFP.js                           0.85 kB │ gzip:   0.37 kB
+../runtime_review/dist/assets/kernelBlur.vertex-CgQ_jUzu.js                           0.93 kB │ gzip:   0.48 kB
+../runtime_review/dist/assets/mesh.vertexData.functions-ayNlGC5K.js                   0.96 kB │ gzip:   0.49 kB
+../runtime_review/dist/assets/instancesDeclaration-D28nu2EA.js                        1.00 kB │ gzip:   0.34 kB
+../runtime_review/dist/assets/passCube.fragment-C8wfBoOF.js                           1.16 kB │ gzip:   0.42 kB
+../runtime_review/dist/assets/clipPlaneFragment-BRWThofs.js                           1.21 kB │ gzip:   0.34 kB
+../runtime_review/dist/assets/depth.fragment-BOwO1G0e.js                              1.29 kB │ gzip:   0.57 kB
+../runtime_review/dist/assets/ddsTextureLoader-DPqVb355.js                            1.29 kB │ gzip:   0.63 kB
+../runtime_review/dist/assets/depth.vertex-Q3S4qDVA.js                                2.06 kB │ gzip:   0.77 kB
+../runtime_review/dist/assets/kernelBlur.fragment-B4RqIGUF.js                         2.13 kB │ gzip:   0.72 kB
+../runtime_review/dist/assets/hdrTextureLoader-CZfCJ9AA.js                            2.46 kB │ gzip:   1.19 kB
+../runtime_review/dist/assets/kernelBlur.fragment-BXRxsXS-.js                         2.70 kB │ gzip:   0.80 kB
+../runtime_review/dist/assets/iesTextureLoader-Clz9NQg-.js                            2.73 kB │ gzip:   1.19 kB
+../runtime_review/dist/assets/shadowMap.fragment-TfdTZYx-.js                          3.06 kB │ gzip:   1.08 kB
+../runtime_review/dist/assets/dumpTools-C_dKNEZT.js                                   3.21 kB │ gzip:   1.54 kB
+../runtime_review/dist/assets/tgaTextureLoader-DFRVmZJ7.js                            3.56 kB │ gzip:   1.39 kB
+../runtime_review/dist/assets/shadowMap.fragment-Bb19x6uE.js                          3.69 kB │ gzip:   1.20 kB
+../runtime_review/dist/assets/shadowMap.vertex-BHk3hxB6.js                            4.36 kB │ gzip:   1.39 kB
+../runtime_review/dist/assets/shadowMap.vertex-C8OhMjt5.js                            4.45 kB │ gzip:   1.44 kB
+../runtime_review/dist/assets/helperFunctions-C0ny_RHa.js                             5.30 kB │ gzip:   1.78 kB
+../runtime_review/dist/assets/helperFunctions-DgW2beSw.js                             5.71 kB │ gzip:   1.89 kB
+../runtime_review/dist/assets/envTextureLoader-Pi7_V6IB.js                            6.79 kB │ gzip:   2.90 kB
+../runtime_review/dist/assets/basisTextureLoader-oiBJbQlm.js                          8.21 kB │ gzip:   3.25 kB
+../runtime_review/dist/assets/dds-C40cqhTq.js                                         9.23 kB │ gzip:   3.48 kB
+../runtime_review/dist/assets/clipPlaneVertex-DZB47SLl.js                            14.12 kB │ gzip:   2.40 kB
+../runtime_review/dist/assets/logDepthDeclaration-BOAm0OC9.js                        14.12 kB │ gzip:   4.79 kB
+../runtime_review/dist/assets/exrTextureLoader-CIIuieyj.js                           15.56 kB │ gzip:   5.82 kB
+../runtime_review/dist/assets/logDepthDeclaration-BUV45HS1.js                        15.70 kB │ gzip:   4.93 kB
+../runtime_review/dist/assets/ktxTextureLoader-DsQiDpT8.js                           15.83 kB │ gzip:   4.63 kB
+../runtime_review/dist/assets/pbr.vertex-vU_gWjdQ.js                                 22.34 kB │ gzip:   4.28 kB
+../runtime_review/dist/assets/pbr.vertex-9REnhCWJ.js                                 23.92 kB │ gzip:   4.72 kB
+../runtime_review/dist/assets/index-B-R3-XQ5.js                                      91.69 kB │ gzip:  36.08 kB
+../runtime_review/dist/assets/pbr.fragment-BzsP8Uko.js                              204.97 kB │ gzip:  38.14 kB
+../runtime_review/dist/assets/pbr.fragment-C3V60-XS.js                              213.80 kB │ gzip:  38.72 kB
+../runtime_review/dist/assets/world-lLNMyREs.js                                   1,251.28 kB │ gzip: 312.63 kB
+✓ built in 3.34s
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+(!) outDir /workspace/scratch/e8a3235ec1f0/review_w1_1a/runtime_review/dist is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

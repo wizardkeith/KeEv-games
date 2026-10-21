@@ -1,0 +1,25 @@
+✔ explicit golden purchase → display → sale → P&L (7.945198ms)
+✔ stock cash and inventory book value conserve; purchase is not expense (1.270968ms)
+✔ duplicate purchase command exactly once (1.312871ms)
+✔ one 60-minute settlement equals two 30-minute settlements (1.123376ms)
+✔ fractional demand, salary and rent remainder carry across arbitrary splits (1.473973ms)
+✔ repeated offline settlement / reload has no second payout (2.52408ms)
+✔ deterministic replay repeated 10 times (3.927146ms)
+✔ render/FPS/background schedules have identical economic authority (11.018162ms)
+✔ modifier group aggregates before cap and half-even is exact (0.314211ms)
+✔ invalid actions reject atomically and cannot produce negative stock (2.266563ms)
+✔ future and old schema fail without mutating current save (1.091939ms)
+✔ numeric bounds, invalid references and unsafe imports rejected (0.831048ms)
+✔ rollback and long gaps fail explicitly (0.841964ms)
+✔ Tokyo schedule: closed hours have rent but no sales/wages (0.396005ms)
+✔ test set, discovery and six tiers remain separate from Unique (0.768403ms)
+✔ inventory unit cost rounding preserves total cost on final sale (1.268615ms)
+✔ conversion cannot exceed capacity even at minimum prices (1.409846ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 50.159749
