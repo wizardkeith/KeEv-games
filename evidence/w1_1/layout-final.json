@@ -1,0 +1,205 @@
+{
+  "method": "Clickable label is the checkbox hit target; CSS iframe viewports, not physical devices",
+  "results": [
+    {
+      "lang": "zh-HK",
+      "overflow": false,
+      "width": 320,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "en",
+      "overflow": false,
+      "width": 320,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "ja",
+      "overflow": false,
+      "width": 320,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "th",
+      "overflow": false,
+      "width": 320,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "zh-CN",
+      "overflow": false,
+      "width": 320,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "zh-HK",
+      "overflow": false,
+      "width": 375,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "en",
+      "overflow": false,
+      "width": 375,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "ja",
+      "overflow": false,
+      "width": 375,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "th",
+      "overflow": false,
+      "width": 375,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "zh-CN",
+      "overflow": false,
+      "width": 375,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "zh-HK",
+      "overflow": false,
+      "width": 430,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "en",
+      "overflow": false,
+      "width": 430,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "ja",
+      "overflow": false,
+      "width": 430,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "th",
+      "overflow": false,
+      "width": 430,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "zh-CN",
+      "overflow": false,
+      "width": 430,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "zh-HK",
+      "overflow": false,
+      "width": 768,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "en",
+      "overflow": false,
+      "width": 768,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "ja",
+      "overflow": false,
+      "width": 768,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "th",
+      "overflow": false,
+      "width": 768,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "zh-CN",
+      "overflow": false,
+      "width": 768,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "zh-HK",
+      "overflow": false,
+      "width": 1200,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "en",
+      "overflow": false,
+      "width": 1200,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "ja",
+      "overflow": false,
+      "width": 1200,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "th",
+      "overflow": false,
+      "width": 1200,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    },
+    {
+      "lang": "zh-CN",
+      "overflow": false,
+      "width": 1200,
+      "clipped": 0,
+      "minWidth": 44,
+      "minHeight": 44
+    }
+  ]
+}

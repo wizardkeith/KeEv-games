@@ -1,0 +1,12 @@
+{
+  "method": "Local production artifact byte counts; gzip level 9 calculated locally. NOT an actual browser download or hosting compression claim.",
+  "before": {
+    "totalBytes": 3648577,
+    "totalGzipBytes": 1377609
+  },
+  "after": {
+    "totalBytes": 3634471,
+    "totalGzipBytes": 1449141
+  },
+  "note": "Same directory byte-count/gzip9 method. All deployment files, including retained interchange copies. Fonts/PBR shading changed. Not actual transfer or startup."
+}

@@ -1,36 +1,57 @@
-# W0 and W1 handoff
+# W1.1 — Chill / healing shop review candidate
 
-Implemented private graybox candidate for owner review. W0 and W1 are **PARTIAL**, because genuine browser verification and browser-WASM parity are not available. They are not accepted full Tokyo-slice or native gates.
+Date: 2026-10-21 (Asia/Hong_Kong). **PARTIAL / art review candidate**, not final Tokyo-slice acceptance. The original Game Bible v0.1, Part II and three original visual references remain the baseline and are retained unchanged. The W1.1 package is retained in source-inputs/w1_1-review.
 
-| Gate | Result | Evidence |
-|---|---|---|
-| Original Bible and scope | PASS | Unchanged DOCX/MD hashes match supplied provenance; full text and three visual references inspected. Originals in source-inputs. |
-| C# source candidate and headless | PASS, frozen experiment | netstandard2.1, C# 8; .NET SDK 10.0.402/runtime 10.0.13; 14 tests, zero build warnings/errors. proof/csharp-headless and headless-tests.log. |
-| C# browser WASM | BLOCKED | MSB4216 ComputeWasmBuildAssets task host could not connect/run, then MSB4027 disposed MetadataLoadContext. Normal setup plus one DOTNET_ROOT/PATH correction, same result. No repeated SDK experiments. |
-| Live Web simulation | PASS in headless tests | Isolated TypeScript PORT_REQUIRED_FOR_UNITY; same golden numeric result. No C# active-source-sharing claim. |
-| Economy/save tests | PASS | 18 TypeScript tests, including IDB transaction/CAS with fake-indexeddb, interval splits, duplicate commands, reload, mode separation, rollback, future/old version rejection, price/capacity and conservation. This is not a browser IDB test. |
-| Content/localization | PASS structural only | 10 Offerings, five locales, 108 keys each, six tiers and separate Unique tag. Validator output retained. Native-level language review pending. |
-| GLB portability proof | PASS structural/headless | Counter and two-bone skinned block, GentleWave clip, normalized weights; Khronos validator zero errors/zero warnings. Independent file import in Babylon NullEngine. Advisory bufferView.target hints retained. |
-| Visual browser play | NOT TESTED | Required control-browser skill is missing from managed environment. Did not start an unsupported preview/browser route. No screenshot or fabricated browser pass. |
-| Real device/native/Unity/URP | NOT TESTED | No Unity import, mobile installation, IL2CPP, physical touch test or 30/60 FPS claim. |
-| Online/live economy | NOT IMPLEMENTED | Local browser save/clock, no trusted time/accounts/shared world/leaderboards. |
+## Site and preservation
 
-## Implemented player loop
+Continue the same project `appgprj_6ad82a08ed2881918ebcc2dd206a122d` at https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site. Inspected canonical source was commit `182a7a427d95f609f488a0c626937be294fbd329`, saved Site version 1. Its existing custom access was owner-only (one allowed owner, no other users/groups/external visitors); this task does not modify that policy. The actual new saved version, deployment result and source commit are in the delivery receipt accompanying this checkpoint. No clone or new origin is created.
 
-True 3D modular shop with floor/walls, reusable imported counter, three interactive displays, one generic staff and decorative generic customers. Curated camera elevation 35–45°, bounded orbit/zoom and pointer/touch input support. Buy one of ten provisional Offering fixtures, hold inventory, assign displays, change price, open/pause, accrue deterministic sales, read Tokyo daily P&L, restock/reprice. Desk test set and deterministic basic zero-stat discovery. Static environment and original quiet cue. Player-defined shop/company/mark. Five externalized localized interfaces, bundled licensed original fonts and web subsets, tabular numerals, responsive CSS and reduced-motion preference. Actual resize/overflow/touch behavior remains unverified.
+The original IndexedDB name/store, normal/sandbox keys and meanings are preserved. Schema 2 / simulation ts-w1-2 strictly migrates valid v1; no reset. Identity, mark, cash, inventory, shelf IDs, prices/costs, reports, earned tutorial/reveal flags and timestamps survive. Only old fractional demand resets once because v1 had no price provenance. See MIGRATION_W1_1.md. Damaged/unknown imports reject before replacement. Original browser test saves were backed up outside source, then restored after synthetic scenario testing; no runtime save is packaged.
 
-The loop has no pet, Misaki/Ren, seven-beat story, final 36-item slice, weather, payments, ads, gacha, energy, streak loss, chat or trading. KeEv Games is publisher only. World is prominent and panels can be hidden or Zen mode selected. Data, balance, generic fixture names/art and translations are provisional; no authored cultural/history claims have been invented.
+## What changed
 
-## Measurements
+A real 3D art candidate now has an actual window opening, cream walls, warm wood boards, softened counter and open-leg display tables, register, physical price-card holders, small plants, original recognizable geometry for all ten items and a softer generic staff silhouette. Window-direction light and filtered furniture/wall shadows are implemented. Selected display uses a lavender rim. Curated 35–45° camera viewport adapts to available UI space. No image/video/CSS shop substitute, new named character, pet, weather or formal story was added.
 
-Production artifact measurements are in evidence/web-measurements.json. They are local byte counts and calculated gzip equivalents, not an observed network download. The world module was narrowed from full glTF index import to the required 2.0 loader, reducing the largest module from about 1.90 MB / 468 kB gzip to about 1.45 MB / 353 kB gzip before final edits. Fonts are derived subsets while 38 MB of original masters remain retained. App UI loads before the dynamic 3D module, optional locale fonts load when needed, low-quality mode reduces render resolution and decorative crowd; economy is unchanged. No compression was applied destructively. Vite still reports a >500 kB chunk warning; no artificial threshold suppression.
+Player shop name is the main title; cash is the single main number. Warm ivory panels open on demand, with five short navigation entries and all settings/language/mode/Zen controls reachable. Stock cards show thumbnails, unit/total cost, quantity, cash after purchase, deficit and exact target shelf. Price drafts have apply/cancel. A small keyed DOM patcher retains actual input nodes/focus/selection/scroll during settlements; drafts persist separately per mode in sessionStorage, including across reload. Explicit panel changes start at the panel top. Escape closes the drawer and restores focus to its invoking navigation button.
 
-Actual transferred size, cold/warm startup, frame time, renderer/GPU, browser/version, physical touch/mobile measurements and visual material/skin deformation remain **NOT TESTED**. The optional window.littleShopDiagnostics() function can collect real runtime resource/frame samples on an available browser; no samples are invented here. WASM payload/startup/hosting MIME compatibility are unmeasurable because the WASM build did not complete.
+Shelf world-click, empty-shelf Stock, selectors and product-card actions use one slot. A synchronous pending guard rejects duplicate click intents rather than queueing purchases. Committed sales/sold-out and sample completion generate one feedback event; automatic settlement uses the same delta path. Audio remains opt-in; reduced motion is respected. The free-choice tutorial follows actual inventory/display/open/sale predicates, retains milestones after stock sells out and ends with a clear completion card. Notebook+pencil is an optional test set. Trading status uses Tokyo hours AND the open flag. Selected-day P&L is separated from current cash/inventory/funding and latest parameters.
 
-## Reuse and next gate
+Price changes reset that item's fractional demand; identical-price no-op retains it. Strict type/safe-integer/range validation covers all numeric snapshot fields, reports, expense/demand remainders and recovery fields. Settlement ignores the ordinary command ledger's ID set/limit and uses its watermark; ordinary command dedup, 100,000-ID ceiling and CAS remain. No IDs are pruned. Form errors do not freeze auto settlement; stale/storage/rollback/long-gap have separate recovery paths.
 
-Content IDs/configuration/locales, normalized numeric contract, golden fixtures, layout data, procedural generation source, GLB geometry/skin/clip, original font/audio files and rights records are retained. They are engine-neutral data or interchange candidates. Active TS economy needs port/replacement; web UI/CSS/input/IndexedDB, Babylon materials/lighting and animation/platform controllers require Unity adapters. The C# proof is frozen, not maintained as a second full economy. Before expanding content, resolve the long-term single-core decision, finish genuine browser walkthrough and save/resume checks, and review owner experience. Then define W2 from evidence. Do not treat this gate as approval for full Tokyo production.
+Free reopening support is explicit and provisional. An empty shop that cannot buy even one cheapest item can receive a separately recorded grant bringing cash to 1,410 units (¥14,100), including its debt, then buy five pencils. Historic P&L is untouched; support is not sales, profit, sale events or unlock credit. Eligibility is rechecked atomically; CAS/dedup prevents repeat or concurrent duplicate grants. Repeated actual loss episodes can qualify again; rent continues. See RECOVERY_W1_1.md for exact rules and risks.
 
-## Cleanup
+## Actual verification
 
-Removed failed C# bin/obj build products from the source checkpoint; retained diagnostic build logs, tested source, inputs, exact lockfile, manifests, fonts/licences, masters, fixture generators, tests and expected results. Optional Brotli font export failed before creating a final derivative; substituted actual subset TTFs and retained source. No credentials, browser sessions or user runtime saves are in the deliverable. Deployment build output and installed dependencies are reproducible and excluded from source control/archive. No user input files were deleted or modified.
+| Check | Result / evidence |
+|---|---|
+| Baseline | Original 18 tests PASS; all four review probes reproduced defects before edits. evidence/w1_1/baseline |
+| Current core/storage | **30 tests PASS, 0 fail, 0 skipped**: original 18 plus 12 targeted cases. evidence/w1_1/tests.log |
+| Migration | Both synthetic v1 mode fixtures preserve fields; malformed imports retain good IDB save. Concurrent different-ID support claims yield one grant. Full ledger still settles, even with an ID collision with an ordinary command. |
+| Content | 10 Offerings; five locales ×165 keys; six tiers, Unique separate. Structural PASS; native-language review pending. |
+| Original assets | Counter/skinned fixture validation and independent reimport PASS. New 15 GLBs: Khronos zero errors/warnings; all independently reloaded in Babylon NullEngine. This is NOT rendering/native proof. |
+| TypeScript / production build | PASS. Existing >500 kB chunk warning retained; threshold not raised. |
+| Browser controls / IDB | Supported cloud browser on the actual production build. Full synthetic new-shop→buy5 notebooks→shelf2→price800JPY→open→advance1h→report→restock→reveal→reload PASS. Cash51400, sales4000, COGS2000, salary300, rent200, operating100, net1400 JPY after the first hour. |
+| Draft / errors | Normal clock17:32→17:34 retained unsubmitted980JPY and focused price input; reload retained990JPY draft. Cash error at17:34 did not stop clock17:35. Shelf2 assignment left shelf1 unchanged. |
+| Recovery UI | Eleven-day zero-stock fixture showed −¥2800 cash, ¥16900 support preview →¥14100. Claim→five pencils→display→open→sale completed; cash¥14250, support shown separately, historical rent retained. |
+| Real two-tab CAS | Stale second sandbox tab write rejected with reload/export actions; newer state not overwritten. |
+| Responsive | 25 CSS iframe cases:320/375/430/768/1200 × five locales, no horizontal document/control clipping. Final clickable input/button/select/checkbox-label targets ≥44px. Not physical phones. |
+| Keyboard | Drawer label corrected; Escape/focus return observed. Identity modal has labels and focus trap. Full assistive-technology audit not performed. |
+| WebGL | **BLOCKED: Error: WebGL not supported** in this cloud browser. UI/storage continue. No actual 3D composition/material/shadow/animation/FPS screenshots or passes. |
+
+The command-ID adapter uses crypto.randomUUID when available and cryptographic getRandomValues UUID otherwise, supporting HTTP preview as well as HTTPS. Browser tests did not substitute a different simulation or patch source to bypass an environment restriction. The iframe QA wrapper only changes CSS viewport width; it is kept in tools for reproduction and excluded from deployment. UI-only screenshots are explicitly labelled NOT 3D.
+
+## Measurement and portability
+
+Same local production file-count / gzip9 method: W1 3,648,577 raw /1,377,609 calculated gzip bytes; W1.1 actual counts are in evidence/web-measurements.json and evidence/w1_1/size-comparison.json (approximately3.63MB raw /1.45MB calculated gzip). Not observed network transfer, cold/warm startup or FPS. PBR shaders and expanded font subsets affect the gzip composition; no threshold suppression or destructive compression.
+
+UI-ready and world-ready timestamps are fixed when ready, with world startup null if WebGL fails. Frame samples exclude hidden-tab and interrupted ≥250ms intervals. Auto starts high and reduces resolution/shadow refresh/decorative crowd only after90 visible samples with p75>35ms. No target FPS or device performance claimed; economy remains frame/quality independent.
+
+Reusable source includes stable content/config/locales/contracts/golden fixtures, pure geometry recipes, 15 GLB masters/exports, matching vector thumbnail source, original fonts/audio/rig-test fixture, provenance/licences and hashes. See ART_W1_1.md and assets/authoring/w1_1. Babylon PBR/shadows/camera/input, HTML/CSS, IndexedDB and platform controllers require native adapters. Generic staff is static, not a newly certified skeletal pipeline.
+
+The TypeScript economy remains the sole active core and **PORT_REQUIRED_FOR_UNITY**. The prior14-test C# headless proof remains frozen, not rerun or updated. C# browser WASM remains previously blocked by MSB4216/MSB4027; no new parity claim. Unity/URP/IL2CPP/Android/iOS/physical touch/mobile keyboard and online trusted time/accounts/leaderboards remain NOT TESTED / NOT IMPLEMENTED as applicable. Balance, art and translations remain provisional. No payment, ad or paid recovery was added.
+
+## Delivery / next gate
+
+Source checkpoint retains original inputs, lockfile, tests, synthetic legacy fixtures, asset authoring/masters/licences and evidence. Installed dependencies/build output/caches/credentials/user saves are excluded. Original W0/W1 handoff is archived, not deleted. See CHANGELOG_W1_1.md for cleanup.
+
+Use the playable candidate now. A short3-minute visual checklist is in VISUAL_CHECK_zh-HK.md; it is not a prerequisite for this implementation. Next bounded gate: actual WebGL visual/composition/touch QA and owner experience review, then the single-core decision before large content expansion. No36-item/full seven-beat Tokyo production approval is implied.

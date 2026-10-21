@@ -1,0 +1,155 @@
+下一站・小店物語 — W1 審查
+2026-10-21
+
+一、結論
+
+可以明顯改善，而且不需要推翻 Bible 或 Web-first 路線。目前是一個已有經濟、存檔與操作骨架的灰盒；最有價值的下一步，是把它整理成一間有個性、容易讀懂、第一輪就有滿足感的小店。
+
+建議 W1.1 同時完成三件事：
+1. 以暖木、奶油色、薰衣草紫及柔和光影建立統一美術方向。
+2. 讓世界成為主畫面，店務面板按需打開；縮短「看見問題 → 作決定 → 看見結果」的路徑。
+3. 修復已重現的操作、價格、現金流及存檔驗證問題。
+
+W1.1 完成後再進正式故事內容。現在一次加入 36 商品、天氣、寵物及完整七日故事，會令新的內容建立在未收妥的操作與核心規則上。
+
+二、實際審查了甚麼
+
+來源：提供的 source ZIP、HANDOFF(1).md、source 內 docs/HANDOFF.md、docs/CONTRACT.md、完整 Bible text、程式、資產 manifest、測試。
+Site metadata：同一 project，version 1，active，custom access。沒有將線上 bundle 與 ZIP 逐位元比對。
+
+重新執行：
+- npm ci --ignore-scripts：完成，使用原 lockfile。
+- npm test：通過。測試共有 17 個 economy case 及 1 個 storage case；這個 Node runner 的主輸出按檔案顯示兩項，不代表只測兩件事。
+- npm run validate：通過；10 商品、五語各 108 keys、六級品質、Unique 獨立標籤。這只是結構驗證，未做母語級翻譯審校。
+- npm run asset-check：零 errors／warnings，保留 advisory hints。
+- npm run build：通過。最大 world chunk 約 1,452.95 kB 原始／352.97 kB gzip 等值，仍有 >500 kB chunk 提示。這是 build 大小，未當作真實網絡傳輸量或載入時間。
+- 四個額外核心 probe：確認負現金死路、調價需求餘額問題、數字字串驗證漏洞、command ledger 邊界問題。
+- 隔離瀏覽器 UI／IndexedDB：確認錯架、草稿遺失、錯誤凍結結算、窄屏裁切；完成沙盒買貨、上架、營業、結算、揭示、reload／模式切換的 smoke walkthrough。
+
+重要限制：審查用雲端瀏覽器沒有 WebGL；原遊戲的實際 3D 視覺與效能未測。HTTP preview 缺 crypto.randomUUID，測試副本只替換 command-ID 產生並加入診斷；經濟與 UI 邏輯未更改。正式 Site 是 HTTPS，不能把這個 preview 限制當成線上 Site 的已確認缺陷。320／375 測試使用瀏覽器內的固定 CSS 寬度 iframe，不是實體手機／原生 App 測試。
+
+三、美術與操作方向
+
+建議風格：日式生活選物店的微縮模型。奶油牆面、暖木家具、薰衣草紫互動重點，輔以鼠尾草綠植物及少量暖金細節。高級感來自材質、燈光、留白、清楚層次及克制動作。
+
+世界：
+- 保留真正 3D 和 Bible 的 35–45 度構圖；固定角度範圍及有限旋轉／縮放。
+- 先改善窗光、柔和接觸陰影、地板／櫃檯輪廓和商品辨識度。
+- 書本有書脊、鉛筆有長形輪廓、杯有把手、布袋有提帶。商品 UI 與貨架物件一致。
+- 把手、邊角、標牌、收銀機、小植物等少量有用途的細節，比大量粒子更有效。
+- 角色可逐步朝 3.5–4 頭身柔和 chibi 改善；現有 generic staff 仍然是 generic fixture，不擅自變成 Misaki 或 Ren。
+
+介面：
+- 主標題是玩家的店名；遊戲名為次要品牌，KeEv Games 留在 about／credits。
+- 頂部保留現金、真正營業狀態、東京時間及目前模式。日收入／淨盈利放入結算，避免常駐三組 KPI 壓過店舖。
+- 待機時盡量讓世界佔 70–80%；詳細操作用可收起側欄／底部面板。
+- 手機用短標籤導航，設定／語言／Zen 放容易找到的更多選單；不靠把全部文字縮成 9–10px 解決。
+- 每次只給一個「下一步」提示。完成後換成具體結果，而不是仍顯示同一段教學。
+- 入貨卡要顯示商品、現有庫存、單價、數量、總成本、買完現金及目標貨架。
+- 已佔用貨架的替換需說明原商品仍留庫存；錯誤顯示在相關欄位，讓玩家知道怎樣修正。
+
+四、已確認問題及優先次序
+
+P1 = 直接影響正常遊玩／經濟可信度，W1.1 完成前處理。
+P2 = 操作／資料一致性問題，與同一輪介面重做一併修復。
+這次未發現足以宣稱整個 Site 不可用的 P0；也沒有替未測部分宣稱通過。
+
+F01｜P1｜空店長期扣租後無法復業
+來源：src/core/simulation.ts 的 buy 及 settle；src/content/catalog.json；docs/CONTRACT.md。
+重現：新正常存檔，保持關店、零存貨，結算 11 日。現金由 5,000 normalized units 變成 -280（顯示 -¥2,800），租金累計 5,280；連最低價的鉛筆 1 支都買不到。
+影響：沒有庫存便不能出售賺錢；目前也沒有可用 recovery 指令。雖然沒有 Game Over 畫面，實際形成無法繼續經營的狀態。
+Bible 根據：§3 長期離線不倒店；§22 cash-flow difficulty 有 recovery／diagnosis／supplier relief。
+處理：做最小免費復業流程，標示暫定規則，保留歷史損益；支援額另行記錄，不當銷售或盈利進度。不要只將負數顯示為 0，也不要要求玩家重開／刪存檔。完整平衡數值不是本次審查已批准的正式設計。
+
+F02｜P1｜調價前後共用需求餘額，可異常放大銷售
+來源：src/core/simulation.ts price 與 demandRemainder。
+重現：一件 notebook，上架開店，價格 81 units（¥810）經過 10 分鐘留下 592,560 的需求餘額；改為 100,000 units（¥1,000,000），結算至第 165 分鐘，竟售出一件、收入 100,000。相同時段一直維持高價則零成交。
+影響：較低價累積的成交進度轉成高價成交，破壞定價取捨。
+處理：在真正價格改變時採一致、明確的新價格需求政策；本 gate 建議清除該商品的 fractional demand remainder。完全相同價格的 no-op 不清除。更新 simulation contract／version／遷移與 split interval regression，不能只限制 UI 輸入。
+
+F03｜P1｜玩家選架 2，實際上架到架 1
+來源：src/main.ts shelvesPanel 空架的「入貨」沒有帶 data-slot；panel handler 只切 panel；display 使用全域 slot。
+瀏覽器重現：notebook 在架 1；點空架 2 的入貨；選擇器仍是 1；pencil 上架後取代架 1，架 2 留空。
+處理：世界選中、UI target、按鈕文案及 command slot 使用同一份選擇狀態；所有入口測架 1／2／3。替換說明不能掩蓋錯目標問題。
+
+F04｜P1｜自動結算清除編輯中草稿
+來源：src/main.ts draw 用 app.innerHTML 全量重建；queue settle 後 draw。
+瀏覽器重現：售價欄 250，輸入未提交 990，下一次自動結算後返回 250，焦點回 body。
+影響：玩家可能輸錯價格、失去店名／數量輸入，正在操作時畫面不穩。
+處理：分離持久 simulation state 與 UI draft state，做保留 focus／selection／scroll 的局部更新；取消／套用有清楚邊界。不要為保留輸入而停掉經濟結算。
+
+F05｜P1｜普通表單錯誤令自動結算停住
+來源：src/main.ts notify 把所有錯誤設成 errorCode，resume 遇任何 errorCode 都 return。
+瀏覽器重現：正常模式入貨數量 1000 造成 cash error；東京時計保持 16:03、現金 ¥45,470。其後成功暫停營業，時計才更新到 16:08、現金 ¥45,440，警告消失。
+處理：cash／quantity／price 是可修正表單錯誤，不應停止正常時間；stale save、clock rollback、long gap、存檔無法寫入分別有保護及恢復動作。rollback 的重試應能在時鐘趕上後恢復。
+
+F06｜P1｜五語在窄屏有導航不可見
+來源：src/style.css 的固定 dock／小字；瀏覽器 DOM bounds 及 screenshot。
+重現：320 CSS px，English Settings 右界 360、Zen 388；Japanese 最後按鈕右界 343；Thai 最後兩項 336／364。English 在 375 仍裁掉右界 388 的控制。body 無提供可發現的橫向捲動。
+處理：重新編排導航與長字串；保留完整可操作入口、正常字級和觸控目標。五語逐一驗收，不能只看中文桌面畫面。
+
+F07｜P2｜匯入的數字字串通過驗證
+來源：src/core/simulation.ts safeNumbers／validate；src/platform/storage.ts import。
+重現：將 notebook.stock 設為字串 "10"，驗證及匯入成功；再買一件，stock 變成字串 "101"，reload 仍接受。
+處理：每個 numeric field 先驗 typeof number、Number.isSafeInteger、欄位範圍，再計算；拒絕 string／null／boolean／array，不隱式 coercion，不覆蓋上一份好存檔。這是 malformed import 的具體問題，並非所有正常存檔都已壞。
+
+F08｜P2｜滿 command ledger 連 settlement 也被拒
+來源：src/core/simulation.ts apply 在判斷 kind 前檢查長度 <100000；settle 本來不新增 commandId。
+重現：100,000 個合法唯一 IDs 的存檔通過 validate，settle 卻回 command_limit。
+處理：僅會新增 ledger entry 的 command 套用上限；settlement 按 watermark 保持可用及 idempotent。不靜默清除 ledger 以換取通過。
+
+F09｜P2｜教學文案與完成條件不一致
+來源：src/main.ts progress、五語 tutorial 文案、simulation buy/display/open。
+重現：只買 notebook、未買 pencil，已跳到教兩種商品上架；只上架 notebook 又前進到定價／開門。
+處理：選定一種規則：提示精確要求 notebook＋pencil，就用實際 inventory／shelves predicates；或容許自由選商品，就把文案改成相符的自由路線。不能只按任何一次 buy/display 就算完成。揭示後要有完成收尾。
+
+F10｜P2｜營業狀態顯示與交易時段不一致
+來源：src/main.ts 和 world.ts 用 state.open 顯示／動畫；simulation 另檢查東京 10–20 點。
+處理：區分「已設定開店」、「目前營業中」、「非營業時段」、「手動休息」。3D 顧客是表現，不能令玩家誤以為已成交。
+
+F11｜P2｜歷史日報混入目前資料
+來源：src/main.ts reportPanel 選指定 r，但 state.breakdown、累計 purchases、目前 inventory 仍來自現在。
+處理：選定日期的收入／成本／淨利要同一期間；目前庫存、累計採購、目前參數明確分區及標示。沒有歷史 breakdown 就不要偽裝成當日資料。
+
+F12｜P2｜回饋與無障礙不足
+來源：src/main.ts drawer close aria 使用 close=暫停營業、全量 draw、discovery panel、act／settle；world.ts parcel。
+處理：關閉面板有正確可讀名稱；modal focus／Escape、keyboard、44px 主要操作區；成功 toast、首筆成交、售罄及揭樣本的反應由真實已提交 state delta 觸發。自動結算也要產生正確回饋，避免只在某些手動 action 播音效。聲音由玩家啟用，reduced-motion 降低動作。
+
+五、第一輪玩法應如何改善
+
+建議沙盒可在約 5–10 分鐘內走完一個完整循環，這是產品目標，尚未經新手研究驗證。
+身份與模式 → 看見空店 → 選商品及預算 → 指定架上架 → 看懂定價 → 開店 → 第一宗真實成交 → 簡明 P&L → 補貨決定 → 揭教學樣本與完成卡。
+
+正常模式保留現實時間與東京時區，不為了示範而偷偷加速。新手清楚知道沙盒可快進、正常／沙盒有兩份獨立進度。
+每個操作有可見後果：現金變化、貨架商品、庫存數量及一次輕微回饋。不要加假的固定獲利動畫，亦不要把裝飾 NPC 步行直接當交易。
+最值得做的教學不是更多文字，而是讓玩家看到一個小決定的差別。報告先說「賣出多少、成本多少、剩下多少」，細節再展開。
+收入 ≠ 盈利；入貨扣現金並增加庫存，只有已售商品成本進入該次損益。未售存貨不能再扣一次費用。
+
+六、劇情審視：保留七段骨架，改善演出
+
+現有 W1 明確沒有正式七日故事，這是灰盒範圍，不是少做了已承諾 W1 內容。後續依 Bible §29：
+Day 1 第一盞燈：Misaki、第一店開門、第一次小盈利。讓玩家實際做完第一筆生意，再用簡短人物回應收束。
+Day 2 選物的味道：山田生活商店、補貨、Local Offering、供應商。用選物取向建立玩家店舖個性；不是一開始塞滿供應商系統說明。
+Day 3 比數字快一步的人：Ren、人工、效率、Sales ≠ Profit。讓兩種合理經營取向成立，不把 Ren 寫成唯一正確答案。
+Day 4 雨天的店：暖內冷外、雨聲、需求改變。天氣先是可感受的事件，再用報告解釋結果。
+Day 5 總會有人再回來：佐藤先生回訪、Customer Memory；三花貓 Momo 開始出現。讓回訪認出之前的小選擇。
+Day 6 有故事的東西：Prestige 雨夜玻璃小燈、第一個收藏故事。以物件細節、留白、短故事呈現，不做抽獎 jackpot。
+Day 7 明天也會開門吧：Weekly Thread 收尾、Momo 加入、第一週回顧。回顧玩家自己的店名、經營與相遇，留下繼續回來的理由。
+
+以上為演出建議，不是新增的 canon 對白、年齡、人物身世或固定數值。Momo 不提前成為開局寵物；紙品樣本不升格成雨夜玻璃小燈。七段不是連續七日登入任務，不用錯過永久失去內容。
+較完整的商品客群差異、推薦系統、人物 soft branching、顧客記憶放後續 gate，先把首輪循環做好。
+
+七、Web 優化與後續 App 重用
+
+保留 engine-neutral 商品／故事／語言資料、stable IDs、數值 contract、golden fixtures、GLB、貼圖原檔、音訊、字體授權與生成 source。Web 圖片壓縮、atlas、subset、gzip 是衍生檔，不能覆寫 master。
+Web UI/CSS、輸入、IndexedDB、Babylon 光影與 controller 不會自動成為 Unity／Android／iOS 程式。設計規格和大部分素材可延續；呈現與平台部分仍要接線、調校和驗證。CSS 示意本身也不是可交付的 3D 模型。
+W1 唯一 active economy 是 TypeScript。原 C# proof 已 frozen，而且 schema／conversion 等存在差別；不能同時當作兩個已一致的核心。
+W1.1 可以先改善體驗；大幅擴展內容前，需完成 bounded 的單核心決策／C# WASM 或後續移植方案與 parity gate。此包沒有替該技術決策宣稱通過。
+先修量度：startupMs 應記錄真正 ready 時點；隱藏分頁時間不能污染 frame metric；Auto quality 要有真實行為或誠實改標籤。先量度再設定可靠 FPS／payload 目標，不編造效能成績。
+
+八、建議驗收與交付
+
+先通過核心回歸，再測完整入貨→上架→定價→營業→成交→P&L→揭示；驗證原 normal／sandbox 存檔保留。
+桌面與 320／375／768 等寬度、五語導航、草稿保留、模式、錯誤恢復、keyboard／reduced-motion 都需要實際瀏覽器 evidence。
+有 WebGL 的環境才能通過 3D 視覺及效能 gate。若環境仍缺 WebGL，照常完成可測部分，但最終列 PARTIAL，不宣稱原生／Unity／實機通過。
+更新同一 Site、保留原 audience；交付 source checkpoint、完整 HANDOFF、變更清單、未測項目及資產來源。詳細執行指令見 02_W1_1_WORK_PROMPT.txt。

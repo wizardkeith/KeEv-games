@@ -1,0 +1,275 @@
+{
+  "reviewDate": "2026-10-21",
+  "source": {
+    "zip": "Next_Stop_Little_Shop_W0_W1_Source_2026-10-21.zip",
+    "sha256": "4657259fe75717dce76099d2a7964d88ad6f1364f1514b4ccf05cea95bfbfaf1",
+    "site": "https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site",
+    "projectId": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+    "siteMetadata": {
+      "version": 1,
+      "active": true,
+      "accessMode": "custom"
+    },
+    "deployedBundleComparedByteForByte": false,
+    "productionSiteModifiedByReview": false,
+    "baselineSourceComparison": {
+      "filesCompared": 15,
+      "allIdentical": true
+    }
+  },
+  "verification": [
+    {
+      "check": "npm ci --ignore-scripts",
+      "result": "PASS",
+      "scope": "Original lockfile; dependencies in isolated review workspace."
+    },
+    {
+      "check": "npm test",
+      "result": "PASS",
+      "namedEconomyCases": 17,
+      "namedStorageCases": 1,
+      "scope": "Headless Node / fake-indexeddb; not browser or native proof."
+    },
+    {
+      "check": "npm run validate",
+      "result": "PASS",
+      "offerings": 10,
+      "locales": 5,
+      "keysPerLocale": 108,
+      "qualityTiers": 6,
+      "uniqueIsSeparateTag": true,
+      "scope": "Structural coverage; native language review not performed."
+    },
+    {
+      "check": "npm run asset-check",
+      "result": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "advisoryHintsRetained": true,
+      "scope": "glTF validation and headless import, not rendered or Unity/native proof."
+    },
+    {
+      "check": "npm run build",
+      "result": "PASS",
+      "worldChunkRawKB": 1452.95,
+      "worldChunkCalculatedGzipKB": 352.97,
+      "chunkSizeWarningRetained": true,
+      "scope": "Build measurements, not observed transferred bytes or startup performance."
+    }
+  ],
+  "coreReproductions": [
+    {
+      "probe": "closed-empty-shop-eleven-days",
+      "cash": -280,
+      "stock": 0,
+      "rent": 5280,
+      "buyCheapest": {
+        "accepted": false,
+        "error": "cash"
+      }
+    },
+    {
+      "probe": "price-remainder-transfer",
+      "before": {
+        "stock": 1,
+        "remainder": 592560,
+        "sales": 0
+      },
+      "changed": {
+        "cash": 104796,
+        "units": 1,
+        "sales": 100000
+      },
+      "fixedHighPrice": {
+        "cash": 4796,
+        "units": 0,
+        "sales": 0
+      }
+    },
+    {
+      "probe": "numeric-string-import",
+      "validationAccepted": true,
+      "stockAfterBuyingOne": "101",
+      "stockType": "string",
+      "bookCost": 440,
+      "cash": 4960,
+      "reloadAccepted": true
+    },
+    {
+      "probe": "full-ledger-settle",
+      "validation": {
+        "accepted": true,
+        "value": true
+      },
+      "settle": {
+        "accepted": false,
+        "error": "command_limit"
+      }
+    }
+  ],
+  "browserEnvironment": {
+    "surface": "Supported managed cloud preview and cloud browser",
+    "originalPreviewWebGL": "Error: WebGL not supported",
+    "originalHttpCommandIdFailure": "crypto.randomUUID is unavailable in this HTTP preview; confirmed in caught runtime error",
+    "isolatedAdapter": "Test copy uses crypto.getRandomValues-based reviewer command IDs; adds diagnostic logging and viewport wrapper only.",
+    "economyOrUiRulesChangedForProbes": false,
+    "limitations": [
+      "No original 3D render/material/animation/FPS verification",
+      "No real physical mobile/touch or native build test",
+      "No byte-for-byte deployed bundle comparison",
+      "IDB smoke walkthrough uses isolated command-ID adapter",
+      "320/375 are CSS iframe viewport tests, not physical phones",
+      "Actual multi-tab CAS not tested in browser; existing fake-indexeddb test passes"
+    ]
+  },
+  "browserObservations": [
+    {
+      "id": "B01",
+      "finding": "Wrong shelf target",
+      "steps": [
+        "Put notebook on shelf 1",
+        "Choose Stock from empty shelf 2",
+        "Stock selector remains 1",
+        "Buy/display pencil"
+      ],
+      "observed": "Pencil replaces shelf 1; shelf 2 remains empty",
+      "relatedSource": "src/main.ts shelvesPanel/bind"
+    },
+    {
+      "id": "B02",
+      "finding": "Draft price erased on automatic settlement",
+      "initialPriceJPY": 250,
+      "unsubmittedDraftJPY": 990,
+      "afterAutoSettleJPY": 250,
+      "focusAfter": "body",
+      "relatedSource": "src/main.ts draw/queue"
+    },
+    {
+      "id": "B03",
+      "finding": "Form error stops automatic settlement",
+      "error": "cash",
+      "before": {
+        "displayTimeTokyo": "16:03",
+        "cashJPY": 45470
+      },
+      "whileErrorRemained": "Displayed time/cash unchanged across elapsed minutes",
+      "afterSuccessfulPause": {
+        "displayTimeTokyo": "16:08",
+        "cashJPY": 45440
+      },
+      "relatedSource": "src/main.ts notify/resume"
+    },
+    {
+      "id": "B04",
+      "finding": "Tutorial advances before described actions complete",
+      "observed": [
+        "Buying notebook only advances text to displaying both notebook and pencil",
+        "Displaying notebook only advances to pricing/opening"
+      ],
+      "relatedSource": "src/core/simulation.ts tutorial; src/main.ts progress"
+    },
+    {
+      "id": "B05",
+      "finding": "Narrow navigation clipped",
+      "measurements": [
+        {
+          "widthCssPx": 320,
+          "locale": "en",
+          "settingsRight": 360,
+          "zenRight": 388
+        },
+        {
+          "widthCssPx": 375,
+          "locale": "en",
+          "zenRight": 388
+        },
+        {
+          "widthCssPx": 320,
+          "locale": "ja",
+          "lastButtonRight": 343
+        },
+        {
+          "widthCssPx": 320,
+          "locale": "th",
+          "lastTwoButtonsRight": [
+            336,
+            364
+          ]
+        }
+      ],
+      "method": "DOM bounds and internal screenshot; body overflow did not expose clipped controls"
+    },
+    {
+      "id": "B06",
+      "finding": "Sandbox first loop completed in isolated adapter build",
+      "scenario": {
+        "notebookPurchased": 5,
+        "costPerItemJPY": 400,
+        "pricePerItemJPY": 800,
+        "fastForwardMinutes": 60
+      },
+      "result": {
+        "cashJPY": 51400,
+        "salesJPY": 4000,
+        "cogsJPY": 2000,
+        "salaryJPY": 300,
+        "rentJPY": 200,
+        "operatingJPY": 100,
+        "netJPY": 1400,
+        "unitsSold": 5,
+        "remainingNotebookStock": 0
+      },
+      "revealCompleted": true,
+      "reloadAndModeSwitch": "Normal progress retained; switching back to sandbox restored financial state and revealed flag.",
+      "scope": "Real browser DOM/IndexedDB smoke, not full original 3D validation"
+    },
+    {
+      "id": "B07",
+      "finding": "Mode context unclear despite isolation",
+      "observed": "Switching to sandbox presents new identity setup; normal save preserved. Reload defaults to normal, sandbox can be restored by switching."
+    },
+    {
+      "id": "B08",
+      "finding": "Drawer close accessible label says pause shop",
+      "source": "src/main.ts closepanel uses t(close); zh-HK close is pause business"
+    }
+  ],
+  "conceptValidation": {
+    "purpose": "Interactive UI composition and purchasing/report explanation only, not a game build",
+    "uiLanguage": "zh-HK",
+    "originalGameSourceUsedForConcept": false,
+    "checks": [
+      "JavaScript syntax",
+      "DOM id/label references",
+      "Desktop screenshot inspection",
+      "320 CSS px iframe layout inspection",
+      "Purchase 5 pencils updates 50200 to 49700 JPY",
+      "Display changes selected shelf 2 to pencil",
+      "Report preserves labelled fixed-hour example",
+      "Projected cash: notebook 48200 JPY, pencil 49700 JPY at initial state"
+    ],
+    "runtimeHooksOrNetwork": false,
+    "original3DVisualAcceptance": false,
+    "nativeTest": false
+  },
+  "notRerunOrNotTested": [
+    "C# 14-test frozen proof: reported in original handoff, not rerun by this review",
+    "C# browser WASM: previously blocked, not resolved by review",
+    "Unity/URP import, IL2CPP, Android/iOS installation",
+    "Original 3D screenshot and performance, physical touch, keyboard safe-area on device",
+    "Server-authoritative time, cloud saves, online leaderboards",
+    "Native-level review of all five translations"
+  ],
+  "provenanceNotes": [
+    "The uploaded archive and baseline application source were not edited.",
+    "Dependency installation, build output and reproducible asset validation evidence were generated in extracted review folders.",
+    "Browser screenshots are internal inspection only and are not included in this pack.",
+    "Core probe numeric financial values use 10 JPY per normalized unit.",
+    "Reproduction probes report observations; repaired behavior requires explicit regression assertions."
+  ],
+  "packagedProbeValidation": {
+    "command": "node --import tsx reviewer_probes/core-review.mts",
+    "result": "Completed in isolated folder linked to baseline source/dependencies; all four baseline observations reproduced.",
+    "interpretation": "Exit 0 means observations collected, not defects fixed."
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "shopId": "shop.player.1",
+  "region": "tokyo",
+  "district": "ikebukuro",
+  "archetype": "retail",
+  "specialization": "lifestyle-select",
+  "layoutId": "layout.graybox.1",
+  "staffRoster": [
+    "staff.graybox"
+  ],
+  "schemaVersion": 1,
+  "contentVersion": "w1-provisional-1",
+  "simulationVersion": "ts-w1-1",
+  "mode": "sandbox",
+  "rankingEligible": false,
+  "worldStateId": "tokyo.static.w1",
+  "shopName": "Little Lavender",
+  "companyName": "Journey Company",
+  "logo": "◇",
+  "cash": 5140,
+  "purchases": 200,
+  "watermark": 1792548000000,
+  "lastWallTime": 1792544400000,
+  "revision": 6,
+  "open": true,
+  "revealed": true,
+  "tutorial": 5,
+  "eventSequence": 5,
+  "inventory": {
+    "off.notebook": {
+      "stock": 0,
+      "price": 80,
+      "bookCost": 0,
+      "demandRemainder": 0
+    },
+    "off.pencil": {
+      "stock": 0,
+      "price": 25,
+      "bookCost": 0,
+      "demandRemainder": 0
+    },
+    "off.mug": {
+      "stock": 0,
+      "price": 130,
+      "bookCost": 0,
+      "demandRemainder": 0
+    },
+    "off.tea": {
+      "stock": 0,
+      "price": 75,
+      "bookCost": 0,
+      "demandRemainder": 0
+    },
+    "off.cookie": {
+      "stock": 0,
+      "price": 45,
+      "bookCost": 0,
+      "demandRemainder": 0
+    },
+    "off.tote": {
+      "stock": 0,
+      "price": 150,
+      "bookCost": 0,
+      "demandRemainder": 0
+    },
+    "off.card": {
+      "stock": 0,
+      "price": 35,
+      "bookCost": 0,
+      "demandRemainder": 0
+    },
+    "off.towel": {
+      "stock": 0,
+      "price": 90,
+      "bookCost": 0,
+      "demandRemainder": 0
+    },
+    "off.tray": {
+      "stock": 0,
+      "price": 110,
+      "bookCost": 0,
+      "demandRemainder": 0
+    },
+    "off.vase": {
+      "stock": 0,
+      "price": 170,
+      "bookCost": 0,
+      "demandRemainder": 0
+    }
+  },
+  "shelves": [
+    "",
+    "off.notebook",
+    ""
+  ],
+  "commandIds": [
+    "id",
+    "buy",
+    "display",
+    "open",
+    "reveal"
+  ],
+  "reports": [
+    {
+      "day": "2026-10-21",
+      "sales": 400,
+      "cogs": 200,
+      "salary": 30,
+      "rent": 20,
+      "operating": 10,
+      "units": 5,
+      "net": 140
+    }
+  ],
+  "breakdown": [
+    {
+      "id": "base",
+      "value": 6,
+      "unit": "units/h"
+    },
+    {
+      "id": "world",
+      "value": 0,
+      "unit": "bp"
+    },
+    {
+      "id": "offering",
+      "value": 0,
+      "unit": "bp"
+    },
+    {
+      "id": "staff",
+      "value": 0,
+      "unit": "bp"
+    },
+    {
+      "id": "equipment",
+      "value": 0,
+      "unit": "bp"
+    },
+    {
+      "id": "set",
+      "value": 0,
+      "unit": "bp"
+    },
+    {
+      "id": "event",
+      "value": 0,
+      "unit": "bp"
+    },
+    {
+      "id": "capacity",
+      "value": 18,
+      "unit": "units/h"
+    },
+    {
+      "id": "conversion",
+      "value": 10000,
+      "unit": "bp"
+    },
+    {
+      "id": "sales",
+      "value": 400,
+      "unit": "economic-units"
+    },
+    {
+      "id": "variable",
+      "value": 200,
+      "unit": "economic-units"
+    },
+    {
+      "id": "period",
+      "value": 60,
+      "unit": "economic-units"
+    },
+    {
+      "id": "net",
+      "value": 140,
+      "unit": "economic-units"
+    },
+    {
+      "id": "ratings",
+      "value": 0,
+      "unit": "bp"
+    }
+  ],
+  "salaryRemainder": 0,
+  "rentRemainder": 0,
+  "operatingRemainder": 0
+}

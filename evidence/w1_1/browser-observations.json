@@ -1,0 +1,73 @@
+{
+  "environment": "Supported Sites managed static preview and cua_repl cloud browser; original production build, no test simulation adapter",
+  "webgl": "BLOCKED: browser console Error: WebGL not supported",
+  "httpCommandIds": "Production command-ID adapter uses crypto.randomUUID when present and crypto.getRandomValues UUID otherwise; no economy changes or isolated source substitution",
+  "checks": [
+    {
+      "case": "v1 normal load",
+      "result": "PASS",
+      "observed": "Existing reviewer shop identity, cash, stock, shelf and earned tutorial loaded; normal Tokyo time advanced"
+    },
+    {
+      "case": "price draft across reload",
+      "result": "PASS",
+      "observed": "Uncommitted 990 JPY survived static preview reload; still a draft, committed price remained 250 JPY"
+    },
+    {
+      "case": "price draft across automatic settlement",
+      "result": "PASS",
+      "observed": "Uncommitted 980 JPY and focused price-0 input survived normal clock 17:32 →17:34 Tokyo; cash 45160→45150 JPY"
+    },
+    {
+      "case": "shelf target",
+      "result": "PASS",
+      "observed": "Selected Stock target 2; notebook placed on shelf2; pencil on shelf1 unchanged. Both confirmed in Shop panel"
+    },
+    {
+      "case": "cash form error",
+      "result": "PASS",
+      "observed": "1000 notebook purchase rejected near card; deficit 354850 JPY shown at cash45150, Tokyo17:34. Auto-resume check follows; automatic clock advanced to17:35 Tokyo despite error; quantity1000 preserved."
+    },
+    {
+      "case": "first full loop",
+      "result": "PASS",
+      "observed": "Synthetic sandbox new shop identity → buy5 notebooks → shelf2 → price800JPY applied → open →advance60 → sold5. Cash51400JPY, sales4000, COGS2000, salary300, rent200, operating100, net1400; restock5 → cash49400; reveal completed."
+    },
+    {
+      "case": "reveal/reload",
+      "result": "PASS",
+      "observed": "Reload retained name, cash49400, sandbox11:00 and completion card Select/Unique/0stats; next-step card absent, reveal button no longer offered."
+    },
+    {
+      "case": "Escape/focus return",
+      "result": "PASS",
+      "observed": "Escape closed Journal drawer and returned focus to the invoking Journal navigation button."
+    },
+    {
+      "case": "responsive settings/navigation",
+      "result": "PASS",
+      "observed": "25 CSS iframe combinations: widths320/375/430/768/1200 ×5 locales, no document horizontal overflow, all5 nav controls in bounds, no drawer inputs/buttons/selects clipped horizontally. Minimum nav touch58x49CSSpx. Not physical devices."
+    },
+    {
+      "case": "320 Thai stock controls",
+      "result": "PASS",
+      "observed": "No horizontal clipping or sub44px input/button/select hit targets in Stock drawer. UI screenshot labelled noWebGL retained."
+    },
+    {
+      "case": "real multi-tab CAS",
+      "result": "PASS",
+      "observed": "Second sandbox tab loaded revision16; first tab changed open setting; stale second tab command rejected and displayed localized reload/export actions; no newer state overwrite. Original setting restored."
+    },
+    {
+      "case": "free recovery UI and resumed sale",
+      "result": "PASS",
+      "observed": "Synthetic11-day empty shop displayed cash-2800JPY; support preview16900JPY →14100JPY, eligibility/ongoing rent separate from profit. Claim→buy5pencils→display→open→advance1h, sold5, cash14250JPY; daily sales1250/cogs500 and historic rent2200 retained; support16900 shown separately."
+    },
+    {
+      "case": "test-save preservation",
+      "result": "PASS",
+      "observed": "Existing sandbox reviewer state exported before synthetic imports and restored after testing; original shop title/cash51400/time11:00/reveal restored, newer revision retained. No runtime save included in source archive."
+    }
+  ],
+  "scope": "DOM/IndexedDB only. No 3D screenshot, physical touch, real-phone or FPS pass. Additional results appended after verification."
+}

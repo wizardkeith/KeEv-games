@@ -1,0 +1,554 @@
+{
+  "method": "Local production artifact byte counts; gzip level 9 calculated locally. NOT an actual browser download or hosting compression claim.",
+  "totalBytes": 3648577,
+  "totalGzipBytes": 1377609,
+  "files": [
+    {
+      "file": "dist/assets/animationGroup-30-TOBmc.js",
+      "bytes": 34654,
+      "gzipBytes": 8736
+    },
+    {
+      "file": "dist/assets/baseTexture.polynomial-DsBVBgWL.js",
+      "bytes": 1050,
+      "gzipBytes": 349
+    },
+    {
+      "file": "dist/assets/basisTextureLoader-BGn29eVB.js",
+      "bytes": 8211,
+      "gzipBytes": 3246
+    },
+    {
+      "file": "dist/assets/brdfTextureTools-dWI_1yrf.js",
+      "bytes": 34248,
+      "gzipBytes": 25190
+    },
+    {
+      "file": "dist/assets/bumpVertex-C3_A-E1N.js",
+      "bytes": 968,
+      "gzipBytes": 406
+    },
+    {
+      "file": "dist/assets/bumpVertex-DrGNeqQE.js",
+      "bytes": 738,
+      "gzipBytes": 341
+    },
+    {
+      "file": "dist/assets/clipPlaneFragment-kDtKmFqT.js",
+      "bytes": 1207,
+      "gzipBytes": 336
+    },
+    {
+      "file": "dist/assets/clipPlaneVertex-DKkYpqXU.js",
+      "bytes": 9565,
+      "gzipBytes": 1642
+    },
+    {
+      "file": "dist/assets/color.fragment-CSsCsmiW.js",
+      "bytes": 773,
+      "gzipBytes": 386
+    },
+    {
+      "file": "dist/assets/color.fragment-DFSnRTXB.js",
+      "bytes": 913,
+      "gzipBytes": 437
+    },
+    {
+      "file": "dist/assets/color.vertex-CNHr-VBS.js",
+      "bytes": 1243,
+      "gzipBytes": 543
+    },
+    {
+      "file": "dist/assets/color.vertex-CuLoxG8X.js",
+      "bytes": 1249,
+      "gzipBytes": 563
+    },
+    {
+      "file": "dist/assets/counter.glb",
+      "bytes": 1592,
+      "gzipBytes": 647
+    },
+    {
+      "file": "dist/assets/cubemapToSphericalPolynomial-D-XKKMCU.js",
+      "bytes": 2503,
+      "gzipBytes": 1150
+    },
+    {
+      "file": "dist/assets/dds-B46q_jdk.js",
+      "bytes": 9365,
+      "gzipBytes": 3538
+    },
+    {
+      "file": "dist/assets/ddsTextureLoader-fgKEjE7_.js",
+      "bytes": 1414,
+      "gzipBytes": 692
+    },
+    {
+      "file": "dist/assets/default.fragment-BJBclDBW.js",
+      "bytes": 22460,
+      "gzipBytes": 5349
+    },
+    {
+      "file": "dist/assets/default.fragment-CAsg-m21.js",
+      "bytes": 23880,
+      "gzipBytes": 5330
+    },
+    {
+      "file": "dist/assets/default.vertex-BJpZEE_7.js",
+      "bytes": 7157,
+      "gzipBytes": 1900
+    },
+    {
+      "file": "dist/assets/default.vertex-DeKRhHUk.js",
+      "bytes": 7779,
+      "gzipBytes": 2034
+    },
+    {
+      "file": "dist/assets/defaultUboDeclaration-BiO3SQIs.js",
+      "bytes": 1139,
+      "gzipBytes": 494
+    },
+    {
+      "file": "dist/assets/defaultUboDeclaration-CsfUxJE0.js",
+      "bytes": 1492,
+      "gzipBytes": 481
+    },
+    {
+      "file": "dist/assets/depth.fragment-HHjJMsXJ.js",
+      "bytes": 1288,
+      "gzipBytes": 570
+    },
+    {
+      "file": "dist/assets/depth.vertex-CTc1xXNG.js",
+      "bytes": 2098,
+      "gzipBytes": 783
+    },
+    {
+      "file": "dist/assets/depthBoxBlur.fragment-5Vk6_7df.js",
+      "bytes": 561,
+      "gzipBytes": 372
+    },
+    {
+      "file": "dist/assets/depthBoxBlur.fragment-DfgbgqIT.js",
+      "bytes": 740,
+      "gzipBytes": 438
+    },
+    {
+      "file": "dist/assets/dumpTools-C56WAo3a.js",
+      "bytes": 3216,
+      "gzipBytes": 1548
+    },
+    {
+      "file": "dist/assets/envTextureLoader-BrTBl1n2.js",
+      "bytes": 6936,
+      "gzipBytes": 2965
+    },
+    {
+      "file": "dist/assets/exrTextureLoader-D1kVQtO3.js",
+      "bytes": 15558,
+      "gzipBytes": 5819
+    },
+    {
+      "file": "dist/assets/fogFragment-C2h28KJf.js",
+      "bytes": 1017,
+      "gzipBytes": 456
+    },
+    {
+      "file": "dist/assets/fogFragment-D8dpM2qD.js",
+      "bytes": 1147,
+      "gzipBytes": 504
+    },
+    {
+      "file": "dist/assets/glTFLoaderAnimation-Bp1Dvmf9.js",
+      "bytes": 1711,
+      "gzipBytes": 771
+    },
+    {
+      "file": "dist/assets/harmonicsFunctions-BYnV8SJf.js",
+      "bytes": 13121,
+      "gzipBytes": 4335
+    },
+    {
+      "file": "dist/assets/harmonicsFunctions-CqsWZ315.js",
+      "bytes": 12145,
+      "gzipBytes": 4177
+    },
+    {
+      "file": "dist/assets/hdrTextureLoader-DlCG_6Sy.js",
+      "bytes": 2458,
+      "gzipBytes": 1185
+    },
+    {
+      "file": "dist/assets/helperFunctions-AtEyWQJm.js",
+      "bytes": 5304,
+      "gzipBytes": 1775
+    },
+    {
+      "file": "dist/assets/helperFunctions-B3At4OdJ.js",
+      "bytes": 5711,
+      "gzipBytes": 1893
+    },
+    {
+      "file": "dist/assets/iesTextureLoader-BWh0hss9.js",
+      "bytes": 2728,
+      "gzipBytes": 1179
+    },
+    {
+      "file": "dist/assets/index-e1UpeMx7.js",
+      "bytes": 51687,
+      "gzipBytes": 21194
+    },
+    {
+      "file": "dist/assets/index-jj4X-ZZ6.css",
+      "bytes": 7601,
+      "gzipBytes": 2438
+    },
+    {
+      "file": "dist/assets/instancesDeclaration-BDRrDBmT.js",
+      "bytes": 998,
+      "gzipBytes": 332
+    },
+    {
+      "file": "dist/assets/kernelBlur.fragment-BEYq5uqN.js",
+      "bytes": 2698,
+      "gzipBytes": 803
+    },
+    {
+      "file": "dist/assets/kernelBlur.fragment-BqvhW4gW.js",
+      "bytes": 2127,
+      "gzipBytes": 715
+    },
+    {
+      "file": "dist/assets/kernelBlur.vertex-BEVtwALR.js",
+      "bytes": 933,
+      "gzipBytes": 477
+    },
+    {
+      "file": "dist/assets/kernelBlur.vertex-oJl3-xA6.js",
+      "bytes": 790,
+      "gzipBytes": 438
+    },
+    {
+      "file": "dist/assets/kernelBlurVaryingDeclaration-BHwAFYoL.js",
+      "bytes": 170,
+      "gzipBytes": 154
+    },
+    {
+      "file": "dist/assets/kernelBlurVaryingDeclaration-CBQXDdGB.js",
+      "bytes": 180,
+      "gzipBytes": 161
+    },
+    {
+      "file": "dist/assets/ktxTextureLoader-DNvhNGEN.js",
+      "bytes": 15827,
+      "gzipBytes": 4627
+    },
+    {
+      "file": "dist/assets/lightFragment-CMW8cWLy.js",
+      "bytes": 29188,
+      "gzipBytes": 5414
+    },
+    {
+      "file": "dist/assets/lightFragment-Cm-db2d7.js",
+      "bytes": 26183,
+      "gzipBytes": 5341
+    },
+    {
+      "file": "dist/assets/logDepthDeclaration-BEJ6qg5j.js",
+      "bytes": 395,
+      "gzipBytes": 259
+    },
+    {
+      "file": "dist/assets/logDepthDeclaration-BHbq7HuK.js",
+      "bytes": 379,
+      "gzipBytes": 253
+    },
+    {
+      "file": "dist/assets/logDepthVertex-BSDDLyVV.js",
+      "bytes": 6690,
+      "gzipBytes": 1590
+    },
+    {
+      "file": "dist/assets/logDepthVertex-CBzvQ-Kh.js",
+      "bytes": 8004,
+      "gzipBytes": 1655
+    },
+    {
+      "file": "dist/assets/mesh.vertexData.functions-ayNlGC5K.js",
+      "bytes": 960,
+      "gzipBytes": 494
+    },
+    {
+      "file": "dist/assets/meshUboDeclaration-CO1JTUc2.js",
+      "bytes": 561,
+      "gzipBytes": 313
+    },
+    {
+      "file": "dist/assets/meshUboDeclaration-cbKdGl5A.js",
+      "bytes": 557,
+      "gzipBytes": 308
+    },
+    {
+      "file": "dist/assets/morphTargetsVertex-CIzOO1hS.js",
+      "bytes": 4595,
+      "gzipBytes": 959
+    },
+    {
+      "file": "dist/assets/oitFragment-BRk4o-kK.js",
+      "bytes": 47544,
+      "gzipBytes": 8869
+    },
+    {
+      "file": "dist/assets/oitFragment-rfuWPbSd.js",
+      "bytes": 45805,
+      "gzipBytes": 8846
+    },
+    {
+      "file": "dist/assets/openPbrMaterial-CKYTvE06.js",
+      "bytes": 43346,
+      "gzipBytes": 10508
+    },
+    {
+      "file": "dist/assets/openPbrMaterialLoadingAdapter-Dl17xs6i.js",
+      "bytes": 7002,
+      "gzipBytes": 1205
+    },
+    {
+      "file": "dist/assets/openpbr.fragment-BPS5XRFv.js",
+      "bytes": 60469,
+      "gzipBytes": 12077
+    },
+    {
+      "file": "dist/assets/openpbr.fragment-Cs8TY3Nx.js",
+      "bytes": 61121,
+      "gzipBytes": 11870
+    },
+    {
+      "file": "dist/assets/openpbr.vertex-B8Jlyqiv.js",
+      "bytes": 15305,
+      "gzipBytes": 3122
+    },
+    {
+      "file": "dist/assets/openpbr.vertex-DuwqITp8.js",
+      "bytes": 12531,
+      "gzipBytes": 2649
+    },
+    {
+      "file": "dist/assets/openpbrUboDeclaration-CLP7hNm1.js",
+      "bytes": 2528,
+      "gzipBytes": 752
+    },
+    {
+      "file": "dist/assets/openpbrUboDeclaration-LGTd7QpW.js",
+      "bytes": 3408,
+      "gzipBytes": 753
+    },
+    {
+      "file": "dist/assets/packingFunctions-DUoxh1Rd.js",
+      "bytes": 521,
+      "gzipBytes": 286
+    },
+    {
+      "file": "dist/assets/pass.fragment-BkrSYzdY.js",
+      "bytes": 479,
+      "gzipBytes": 314
+    },
+    {
+      "file": "dist/assets/pass.fragment-DgLwwX1Y.js",
+      "bytes": 345,
+      "gzipBytes": 266
+    },
+    {
+      "file": "dist/assets/passCube.fragment-BJ-WJLHo.js",
+      "bytes": 1159,
+      "gzipBytes": 419
+    },
+    {
+      "file": "dist/assets/passCube.fragment-CYla6rrn.js",
+      "bytes": 850,
+      "gzipBytes": 369
+    },
+    {
+      "file": "dist/assets/passPostProcess-BE8q9rsS.js",
+      "bytes": 2943,
+      "gzipBytes": 981
+    },
+    {
+      "file": "dist/assets/pbr.fragment-BAsybMmu.js",
+      "bytes": 89429,
+      "gzipBytes": 15154
+    },
+    {
+      "file": "dist/assets/pbr.fragment-kAOfFbqc.js",
+      "bytes": 92978,
+      "gzipBytes": 16601
+    },
+    {
+      "file": "dist/assets/pbr.vertex-C6l_ELo3.js",
+      "bytes": 12791,
+      "gzipBytes": 2692
+    },
+    {
+      "file": "dist/assets/pbr.vertex-DHOlWF67.js",
+      "bytes": 16146,
+      "gzipBytes": 3241
+    },
+    {
+      "file": "dist/assets/pbrDebug-BQ12T1MI.js",
+      "bytes": 39336,
+      "gzipBytes": 8692
+    },
+    {
+      "file": "dist/assets/pbrDebug-DaPjw8Ct.js",
+      "bytes": 46864,
+      "gzipBytes": 10209
+    },
+    {
+      "file": "dist/assets/pbrMaterial-C_wUgKtV.js",
+      "bytes": 93050,
+      "gzipBytes": 17134
+    },
+    {
+      "file": "dist/assets/pbrMaterialLoadingAdapter-CqtW4dJV.js",
+      "bytes": 9886,
+      "gzipBytes": 1847
+    },
+    {
+      "file": "dist/assets/pbrUboDeclaration-C2S8FhZ-.js",
+      "bytes": 2266,
+      "gzipBytes": 607
+    },
+    {
+      "file": "dist/assets/pbrUboDeclaration-OgvNT3OU.js",
+      "bytes": 1678,
+      "gzipBytes": 618
+    },
+    {
+      "file": "dist/assets/postprocess.vertex-BZcxuOO2.js",
+      "bytes": 611,
+      "gzipBytes": 375
+    },
+    {
+      "file": "dist/assets/rgbdDecode.fragment-BNtxF8VM.js",
+      "bytes": 441,
+      "gzipBytes": 323
+    },
+    {
+      "file": "dist/assets/rgbdDecode.fragment-C-WSKWQW.js",
+      "bytes": 576,
+      "gzipBytes": 365
+    },
+    {
+      "file": "dist/assets/rgbdEncode.fragment-BmukmDd3.js",
+      "bytes": 433,
+      "gzipBytes": 317
+    },
+    {
+      "file": "dist/assets/rgbdEncode.fragment-Cs-1Hed9.js",
+      "bytes": 567,
+      "gzipBytes": 357
+    },
+    {
+      "file": "dist/assets/sale.wav",
+      "bytes": 9644,
+      "gzipBytes": 7806
+    },
+    {
+      "file": "dist/assets/shadowMap.fragment-BvFm6QB_.js",
+      "bytes": 3691,
+      "gzipBytes": 1195
+    },
+    {
+      "file": "dist/assets/shadowMap.fragment-nmrFgVxZ.js",
+      "bytes": 3060,
+      "gzipBytes": 1075
+    },
+    {
+      "file": "dist/assets/shadowMap.vertex-BzCuUj3a.js",
+      "bytes": 4403,
+      "gzipBytes": 1399
+    },
+    {
+      "file": "dist/assets/shadowMap.vertex-CuPnyI96.js",
+      "bytes": 4451,
+      "gzipBytes": 1435
+    },
+    {
+      "file": "dist/assets/shadowMapFragmentSoftTransparentShadow-C4YfsOOk.js",
+      "bytes": 397,
+      "gzipBytes": 284
+    },
+    {
+      "file": "dist/assets/shadowMapFragmentSoftTransparentShadow-SbeppSCC.js",
+      "bytes": 432,
+      "gzipBytes": 303
+    },
+    {
+      "file": "dist/assets/skin-test.glb",
+      "bytes": 3300,
+      "gzipBytes": 992
+    },
+    {
+      "file": "dist/assets/textureTools-BI0UMCop.js",
+      "bytes": 1339,
+      "gzipBytes": 835
+    },
+    {
+      "file": "dist/assets/tgaTextureLoader-G36mWJX8.js",
+      "bytes": 3556,
+      "gzipBytes": 1393
+    },
+    {
+      "file": "dist/assets/vertexColorMixing-CkXR4FYP.js",
+      "bytes": 664,
+      "gzipBytes": 338
+    },
+    {
+      "file": "dist/assets/vertexColorMixing-DR5Ljzwn.js",
+      "bytes": 929,
+      "gzipBytes": 390
+    },
+    {
+      "file": "dist/assets/world-WQcNn_lS.js",
+      "bytes": 1452950,
+      "gzipBytes": 351304
+    },
+    {
+      "file": "dist/fonts/NotoSansHK.ttf",
+      "bytes": 286284,
+      "gzipBytes": 203027
+    },
+    {
+      "file": "dist/fonts/NotoSansJP.ttf",
+      "bytes": 282652,
+      "gzipBytes": 198491
+    },
+    {
+      "file": "dist/fonts/NotoSansSC.ttf",
+      "bytes": 325844,
+      "gzipBytes": 232008
+    },
+    {
+      "file": "dist/fonts/NotoSansThai.ttf",
+      "bytes": 107968,
+      "gzipBytes": 73054
+    },
+    {
+      "file": "dist/fonts/PlusJakartaSans.ttf",
+      "bytes": 34096,
+      "gzipBytes": 19509
+    },
+    {
+      "file": "dist/index.html",
+      "bytes": 647,
+      "gzipBytes": 468
+    }
+  ],
+  "loading": "HTML/UI first, dynamic world module, file-based GLB, font by selected locale. Skin fixture retained but not loaded by game.",
+  "browserStartupMs": null,
+  "actualTransferBytes": null,
+  "frameTimeMs": null,
+  "fps": null,
+  "reason": "Required control-browser skill is absent; managed Sites workflow prohibits alternative browser setup. No browser server was started.",
+  "devices": "No phone or native device tested"
+}

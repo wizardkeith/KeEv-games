@@ -1,0 +1,159 @@
+請直接實作《下一站・小店物語》W1.1：介面、美術與首輪遊玩改善。
+不要只回覆建議或一份計劃。先讀現有 Bible、handoff、此包的 review／art direction，再完成修改、驗證與同一 Site 的更新。
+
+【目的與工作環境】
+我需要一個在瀏覽器就能玩的 Web 版本；公司電腦不能安裝 Unity、driver 或本機開發環境。所有開發／build／測試使用你可用的雲端工作環境與正式支援的 preview／Sites 流程。
+遊戲要更漂亮、有精品生活選物店的感覺、容易操作；同時修復 review 已確認的問題。保留未來 Android／iOS 的資產及資料重用路線。
+
+現有 Site：https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site
+project_id：appgprj_6ad82a08ed2881918ebcc2dd206a122d
+已審查 source checkpoint：Next_Stop_Little_Shop_W0_W1_Source_2026-10-21.zip
+SHA256：4657259fe75717dce76099d2a7964d88ad6f1364f1514b4ccf05cea95bfbfaf1
+審查時 version 1／active／custom access。
+
+先確認目前 project／source 狀態。若已有更新，保留新工作並按實際差異重現問題，不用舊 ZIP 蓋過較新的變更。沿用同一 Site、原網址與原有存取對象；不要另建 clone，不擴大分享權限。按照可用 Sites workflow 取得並更新真正 source，不把 Site 的 Library projection 當可覆寫檔案。
+
+【閱讀及規則優先次序】
+1. 原始完整 Game Bible、已同意的 Web-first／W0／W1 範圍與修訂。
+2. 現有 docs/HANDOFF.md、docs/CONTRACT.md、source-inputs/reference_extracts/Bible_full_text.txt 及原始 Bible。
+3. 本包 01_REVIEW_zh-HK.txt、03_UI_ART_DIRECTION.txt、04_VERIFICATION_EVIDENCE.json、reviewer_probes/。
+本包的新美術與復業細節是 W1.1 實作指引／暫定設計，不是授權更改凍結的世界觀、免費承諾、角色故事或稀有度規則。
+如一項舊 review finding 已被目前 source 修好，保留修正並用證據記錄，不重寫它。
+
+【必須保留】
+- 真正 3D 世界；35–45° curated 2.5D presentation，有限 zoom／rotate。不能用一張背景圖、CSS 微縮示意或影片取代可互動 3D。
+- 玩家自己的 shopName／companyName／mark。KeEv Games 是開發／發行方，不能變成固定玩家公司或店名。
+- 東京、池袋、一間 Lifestyle Select Shop；現有 stable content／layout／staff IDs。
+- 正常模式現實一日＝遊戲一日；Asia/Tokyo；現有 browser-clock estimate 誠實標示。正常模式不能暗中快進或冒充 server-authoritative。
+- 沙盒獨立 namespace／clock／save；normal 與 sandbox 都 rankingEligible=false。
+- 唯一 active deterministic economy；經濟與 FPS／畫質／rendered crowd 無關；整數 normalized units、basis points、既定會計、容量與 modifier caps。
+- 現有交易原子性、revision CAS、command dedup、watermark、費用與需求餘數、存檔／匯入保護。任何 schema／simulation 改動需有版本及明確 migration／compatibility policy，不以清空存檔解決。
+- Standard／Select／Premium／Signature／Prestige／Masterpiece 六級；Unique 是獨立 tag。
+- 目前 discovery 仍為 Select、Unique、zero-stat 的教學 fixture，不改成正式 Prestige／Masterpiece、雨夜玻璃小燈或加數值獎勵。
+- 五語 zh-HK／en／ja／th／zh-CN，已有字體、fallback、數字對齊及授權原檔。
+- 無 forced ads、energy、streak punishment、paid recovery、付費能力上限或其他 Bible 禁項。
+- 保留 masters、來源及授權；Web optimization 只產生衍生檔。
+
+【W1.1 範圍】
+A. 修復已重現的遊玩／經濟／存檔問題。
+B. 重整資訊層次、入貨／貨架／定價／結算操作和手機版。
+C. 對現有靜態 3D 小店做一輪可見的美術提升。
+D. 讓首輪入貨→成交→看懂盈利→揭樣本的教學完整、舒適、有結果感。
+不要趁這輪擴成 36 商品、完整七日故事、正式 Misaki／Ren、Momo、天氣、day-night、商城、帳號、排名或大型引擎重寫。
+大幅擴展內容前仍要做單一共享核心決策；現有 C# proof 繼續 frozen，不能宣稱它與 TS 已全面相同。
+
+【實作順序】
+先建立可回退 checkpoint，保存既有 normal／sandbox fixture 及輸出；重現缺陷。
+先修核心／存檔與會影響 UI 的 state 問題，再重整操作及美術；每個階段留可重現驗證。以功能分檔提升可讀性，不把所有邏輯再壓回單一巨型 main.ts。
+在可用時間內持續完成整個 W1.1；一般可逆實作選擇自行決定，不逐項等我批准。若環境缺 WebGL／原生工具，完成其餘可測工作，清楚標未測，不要求我安裝公司電腦軟件。
+
+【A. 必須修復的問題】
+
+A1. 調價需求餘額
+原重現：notebook 1 件、價格 81 units、開店 10 分鐘累積 demandRemainder 592560；改為 100000 units，至第165分鐘可售一件，從開始維持高價則0件。
+本 gate 採明確簡單規則：實際價格改變時重設該 Offering 的 fractional demand remainder；完全同價的 no-op 保留。所有入口走 core，不能只在 UI 防堵。
+更新 contract、simulation version／舊存檔遷移處理；加 low→high／high→low／no-op／interval split／reload regression。不得因修補改變 unrelated accounting。
+
+A2. 負現金且零存貨的復業死路
+原重現：正常新店保持關店11日，cash=-280 units，stock=0，最便宜買貨也拒絕。
+實作最小免費復業支援，作為清楚標示 provisional 的 W1.1 規則；不要等待玩家重開、付費或刪存檔。
+最低要求：
+  • 根據目前 cash、可售庫存及最低復業需要判斷資格，不能把一般正常店都變成無條件領錢。
+  • UI 預覽支援效果及下一個可行入貨／上架動作；領取後能在該測試情境重新經營。
+  • 支援和既有歷史損益分開記錄；不是 sales／net-profit unlock progress，不倒改過往 rent／P&L。
+  • 在 atomic core command 內重新判斷資格後寫入，commandId dedup；reload、重複點擊與多分頁不重複領同一操作。亦要測不同 command IDs 同時申領，不能只依賴同 ID 去重。
+  • 支援金額、可重用條件及持續扣租風險寫成具體可測試的資料規則，放 docs/RECOVERY_W1_1.md，標明不是正式 balance 批准。
+  • 不只 clamp 畫面為0，也不默默刪債／刪 ledger；維持 cash reconciliation，可追溯 support amount。
+可先用最小、有限範圍的復業補助方案；不要為此實作完整銀行／貸款／商城。請自行選擇符合上述限制的具體暫定規則，完成 code、UI、schema migration 和情境測試後交付。
+
+A3. 嚴格 numeric validation
+每個數字欄位都先 type-check number、safe integer、欄位範圍；禁止 coercion。
+至少覆蓋 cash、timestamps、revision／eventSequence、tutorial、inventory stock／price／bookCost／remainder、reports、expense remainders，以及新增 recovery fields。
+原案例 stock="10" 匯入後 buy1 變"101"。修後應拒絕匯入，原良好存檔保持完整。測試 strings／null／boolean／arrays／unsafe integers、invalid references，保留有效 migration path。
+
+A4. command ledger 邊界
+有效存檔有100000 command IDs 時，settle 仍可按 watermark 結算，因為不新增 ledger entry。
+維持一般新增指令的上限、重複 ID no-op 和 CAS，不偷偷 prune IDs。
+
+A5. 錯誤與自動結算
+cash／quantity／price 等 nonblocking form error 不能令自動／focus／visibility settlement 停止。顯示具體原因與修正方法。
+save-stale、clock rollback、long_gap、storage failure 使用各自正確處理；不要把全部 errorCode 當成同一全域暫停。時間趕上後可恢復；長間隔按既有分段原子 catch-up；存檔衝突不能覆蓋新 revision。
+
+A6. 草稿與目標貨架
+分離 UI draft state 與 simulation state。自動結算後保留未提交售價、數量、店名／公司名、焦點、選取位置及 scroll；套用才 commit。
+所有貨架入口（世界點選、空架入貨、selector、商品卡）共享同一選中 slot；上架按鈕顯示具體架號。修正「架2入貨仍操作架1」。替換已有貨架顯示清楚回饋，原商品保持在庫存。
+避免連按重複購買：pending 時立即正確鎖定相關動作，UI intent ID／core dedup 配合；不以 queue 無限新增購買處理雙擊。
+
+A7. 教學、模式與時段
+教學條件用實際 state predicates。若提示 notebook＋pencil，就檢查兩者；若允許自由選，文案相符。不能任何一次 buy／display 就跳到下一步。條件達成後記錄 milestone，後來成交耗掉庫存或重新陳列不令已完成教學倒退。
+清楚說明正常／沙盒兩份進度。新手可以主動選沙盒做即時試玩；不暗改正常鐘。
+「營業中」以東京營業時段及 open 設定共同判定；非營業時間可做店務，不能畫成正常成交中的狀態。
+揭樣本後有清楚完成卡及下一個可選行動，不永久重覆教學文字。
+
+A8. 報告期間
+選定日期的 sales／cogs／salary／rent／operating／net／units 使用同一日。現在庫存、累計採購、最新參數各自標明範圍；沒有歷史 breakdown 就不冒充歷史資料。
+
+【B. 新介面】
+方向依 03_UI_ART_DIRECTION.txt。保留功能，重整呈現：
+- 暖木＋奶油＋薰衣草紫，簡潔可讀、輕陰影與克制 motion。
+- 玩家店名是主標；現金是頂部主要數值；東京時間／有效營業狀態／模式清楚。
+- 待機讓世界佔約70–80%；側欄或底部面板按需要開；Zen 仍存在。
+- 每次一個 next action；不要整屏教學段落和 debug 狀態。
+- 商品圖示／thumbnail 可辨識；商品卡顯示庫存、單位成本、數量、總成本、入貨後現金和明確目標架。
+- 售價有草稿／套用／取消，錯誤在欄位附近。現金不足顯示差額。
+- 銷售、上架、售罄、樣本揭示用真實 committed state delta 回饋，包含自動結算路徑；不要每次 draw 重播。
+- 已購但未售仍是 inventory；P&L 以簡明解說輔助，深入參數可展開。
+- 主要 touch targets 約44px或以上，正文14–16px起，次要文字通常不低於12px；五語長字串實測。
+- 手機導航可用短標籤／更多選單；設定、語言、normal/sandbox、營業、Zen 全部找得到。禁止把溢出控制直接裁掉。
+- 正確 drawer-close aria 名稱、label、role、keyboard focus、Escape／focus return，support reduced motion。
+- 技術註記如 PORT_REQUIRED_FOR_UNITY 放 developer/about／handoff；玩家只看到必要的 prototype 限制。
+
+【C. 3D 美術提升】
+保留現有引擎與真正場景：改善暖木地板／牆、窗光、柔和陰影、櫃檯／架輪廓、價牌／收銀機／小植物。
+至少讓現有主要商品從輪廓就較容易認出，尤其 notebook、pencil、mug、tote。物件、thumbnail 和名稱一致。
+場景構圖要跟可視區域及 drawer 尺寸調整；不能桌面好看但手機被面板遮住。
+若改善 generic staff，保持 generic，不當作正式 Misaki／Ren 成品。
+沿用資產 convention，保留 authoring source、GLB／texture masters、license／manifest；Web 導出另存衍生檔。任何新 shader／材質註明 native adapter 需求。
+使用最低必要 draw／texture／shadow 成本，先做最有感的一個場景；不以高成本粒子掩蓋粗糙形體。
+
+【D. 敘事與體驗】
+W1.1 只修教學、短回饋及開場節奏，不新寫正式 canon。
+後續七段維持：
+1 第一盞燈：Misaki、開店、第一次小盈利。
+2 選物的味道：山田生活商店、補貨／Local Offering。
+3 比數字快一步的人：Ren、效率、人工、Sales ≠ Profit。
+4 雨天的店：Living World、雨聲／暖內冷外／需求。
+5 總會有人再回來：佐藤先生、Customer Memory、三花貓 Momo 開始出現。
+6 有故事的東西：Prestige 雨夜玻璃小燈／收藏故事。
+7 明天也會開門吧：週線收束、Momo 加入、第一週回顧。
+不改順序、不把七段做成必須連續七日登入，不新增人物年齡／背景當已批准 canon。
+
+【E. 效能、環境與可信證據】
+使用目前可用且受支援的 Sites／preview／browser 工具。先讀相關 skill；不要假定過去缺少某 browser skill 就永遠無法測試，也不要用未支援的管道繞過安全限制。
+若 HTTP preview 缺 crypto.randomUUID，先判定環境；可用受支援 secure preview 或明確的 command-ID adapter。任何僅供測試的 adapter 要和正式 source 分開，不能把測試副本通過說成原始 build 完整通過。
+若 WebGL 不支援，明列 blocked，仍完成 DOM／core／storage／responsive 可測部分；不能用 NullEngine 匯入代替真實 render 驗證。
+修正 diagnostics：startupMs 固定在真正 UI／world ready；hidden-tab interval 不當有效 frame sample；Auto quality 有真實策略或如實命名。不輸出虛構30／60 FPS、download／cold start或手機結果。
+不為減少 bundle warning 任意提高門檻；只做有根據的 imports／lazy loading／asset衍生優化，記前後相同口徑數據。
+新增字串做完整五語 coverage；母語審校未做就明示。
+
+【驗收：完成相關改動後做有意義的檢查，不無限重測】
+1. 原18個測試、validate、asset-check、production build 保持通過。將已證實缺陷寫成會在舊版失敗的有針對性 regression；不要把 observational probe 的 exit0當通過。
+2. 核心：調價carry exploit消失；同價no-op／split intervals一致；malformed numeric import拒絕且保存原state；full-ledger仍可settle；復業資格／會計／dedup／recovery後可行操作通過。
+3. 原 normal／sandbox 存檔可載入／遷移，保留店名、公司名、mark、cash、stock、shelves、price、reports、reveal、版本及時間意義。未知／損壞版本不覆蓋有效存檔。
+4. 真實瀏覽器完成新店→買貨→架2上架→定價→開店→成交→P&L→補貨→揭示→reload。檢查架1／2／3、輸入草稿遇自動settle、普通錯誤後自動settle仍進行、normal/sandbox切換。
+5. 東京時段前／中／後狀態正確；模式隔離；UI 不暗加速正常時間。帳面數值對照可重現fixture。
+6. 桌面、320／375／430／768等適當寬度逐一檢查五語；主要按鈕／導航／語言／模式不裁切、不重疊、可觸及。CSS viewport測試不能寫成 physical device pass。
+7. Keyboard、focus、drawer close、錯誤標籤、reduced-motion；輸入中刷新不丟草稿。無須寫只鏡像樣式實作的脆弱測試。
+8. 有 WebGL 才驗 3D 構圖、可點貨架、商品、動畫、shadow、loading／fallback 和合理效能樣本；質素或可見顧客數不同，same commands/time 的經濟結果一致。
+9. 資產授權、master、導出、ID引用及保存方式完整；Unity／URP／Android／iOS未測就保留NOT TESTED。
+10. 根據結果更新同一 Site，保留原access設定；若有必要 gate blocked，清楚稱為review candidate／PARTIAL，不將其包裝成正式Tokyo slice全通過。
+
+【交付】
+- 同一 Site 的更新網址與實際版本／存取範圍。
+- 可回退、可重建的 source checkpoint；包含原始Bible／inputs／lockfile／assets／tests／必要evidence，不包node_modules、cache、憑證、使用者runtime存檔。
+- 更新 HANDOFF：改了甚麼、為甚麼、測了甚麼、具體結果、未測／blocked、schema／migration、recovery暫定政策、資產重用界線。
+- 以實際可用瀏覽器做前後視覺對照；只有真的有render的畫面才稱遊戲截圖。不要把CSS概念圖當成真實3D成果。
+- 附短變更／清理紀錄，不刪原始輸入、master、license、舊良好存檔或診斷證據。
+- 最後以玩家容易理解的文字概述新體驗、已修問題和仍待驗證事項。
+
+請開始實作 W1.1，持續完成到可玩、可審查的更新。

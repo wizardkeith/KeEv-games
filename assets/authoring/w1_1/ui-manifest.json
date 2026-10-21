@@ -1,0 +1,9 @@
+{
+  "id": "ui.offering-thumbnails.w1_1",
+  "source": "src/ui/thumbnails.ts",
+  "dimensions": "64x64 SVG viewBox",
+  "provenance": "Original vector source, matching existing Offering colors and silhouettes; no external imagery",
+  "licence": "Project-original; owner use permitted under project LICENSE",
+  "sha256": "54f68b774b00a599a7753493743ac508be8738e01d0967e39ad58050b7cbb6af",
+  "native": "Requires native UI/vector/texture adapter; NOT TESTED"
+}

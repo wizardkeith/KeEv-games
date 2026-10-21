@@ -1,0 +1,10 @@
+# W1.1 changes and cleanup
+
+- Retained original Site project/origin/access and database/key names; retrieved canonical source commit 182a7a427d95f609f488a0c626937be294fbd329 before edits. Baseline probes reproduced all four reported defects; original 18 tests passed.
+- Added strict snapshot validation/migration and provisional free recovery with a traceable financing history. Actual price changes clear fractional demand; full-ledger settlement remains available. C# proof remains frozen.
+- Split UI formatting, keyed DOM updates, drafts, thumbnails and panels out of main.ts. Inputs/focus/scroll survive automatic settlement; explicit panel changes start at the panel top. A synchronous pending guard discards duplicate clicks; command IDs are cryptographic in HTTPS or supported HTTP preview.
+- All shelf entry points share selected slot. Free-choice tutorial predicates retain milestones; completion is clear. Tokyo trading status combines schedule and open flag. Reports separate selected-day activity from current assets/funding and latest parameters.
+- Added warm original 3D recipes/15 GLBs, matching vector thumbnails, filtered sunlight/shadows, plants/register/details, generic staff and bounded camera UI composition. Auto quality uses visible frame samples. No new canonical characters, weather, pets, story beats or payment features.
+- Rebuilt derived font subsets from retained originals for the expanded five-language UI. Preserved masters/licences; no font re-download when the retained licence exists.
+- Kept original W0/W1 handoff in docs/archive; retained original inputs, reviewer probes, old synthetic v1 fixtures and diagnostics. No user runtime save or credential enters source or deliverable.
+- Excluded node_modules, dist, caches and native bin/obj via existing .gitignore. The local-only iframe viewport harness lives only in ignored build output and is removed by the final production build; it is not deployed. Runtime test backups remain outside the source tree. No original inputs or masters were deleted.

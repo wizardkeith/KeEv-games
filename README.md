@@ -1,6 +1,6 @@
 # 下一站・小店物語 / Next Stop, Little Shop
 
-Private W0+W1 graybox by KeEv Games. The player names their own business. This checkpoint implements the ten-item management loop for review and stops before full Tokyo content production.
+Private W1.1 chill art / UX review candidate by KeEv Games. The player names their own business. This checkpoint improves the ten-item management loop and preserves the original Bible. It stops before full Tokyo content production.
 
 ## Run and verify
 
@@ -23,7 +23,7 @@ Procedural source and lossless masters are retained in `tools/assets.mjs` and `a
 
 1. Enter a shop name and optional company/brand and mark.
 2. Choose sandbox test clock for a prompt demonstration; it has its own save and cannot enter rankings.
-3. Buy five notebooks and five pencils. Pick display 1, place notebooks; pick display 2, place pencils. You can change shelf assignment and prices from the display panel.
+3. Buy a few items you like, select a display, and place them there. Notebook + pencil on two shelves optionally activates the test desk set. Apply/cancel prices from Shop.
 4. Open the shop, then advance an hour. Read the report: stock purchases affect cash/inventory; only sold inventory is expensed. Wages, rent and operating costs are distinct.
 5. Restock, change prices, try the desk test set and reveal the zero-stat paper sample after a first sale. No payment or random loot exists.
 
@@ -38,4 +38,8 @@ cd proof/csharp-headless
 dotnet run --project adapters/Headless -c Release -- test
 ```
 
-No browser startup, interactive browser journey, screenshot, FPS or phone/native benchmark was performed: the required managed control-browser capability is missing. GLBs were independently reloaded in Babylon NullEngine; this is not rendered visual or Unity verification. Inspect the private deployment before accepting the W1 experience. No commercial launch has been performed.
+Browser DOM/IndexedDB walkthrough and CSS viewport checks are recorded in docs/HANDOFF.md and evidence/w1_1/. The supported cloud browser reports WebGL not supported, so actual 3D appearance, FPS and physical-device/native testing remain unverified. GLB validation / NullEngine import is structural evidence only. This is an art review candidate, not a commercial launch.
+
+## W1.1 source and compatibility
+
+Snapshot schema 2 / simulation ts-w1-2 migrates valid v1 data without resetting saves. Read docs/MIGRATION_W1_1.md and docs/RECOVERY_W1_1.md. Additional art source: src/art/, src/ui/thumbnails.ts; 15 original reusable GLB masters and Web copies; see docs/ART_W1_1.md. Regenerate/export with `node --import tsx tools/art-w1_1.ts`; independently import with `node tools/validate-art-w1_1.mjs`. Native Unity/URP and Android/iOS adapters remain pending.

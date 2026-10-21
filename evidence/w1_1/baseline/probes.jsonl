@@ -1,0 +1,4 @@
+{"probe":"closed-empty-shop-eleven-days","cash":-280,"stock":0,"rent":5280,"buyCheapest":{"accepted":false,"error":"cash"}}
+{"probe":"price-remainder-transfer","before":{"stock":1,"remainder":592560,"sales":0},"changed":{"cash":104796,"units":1,"sales":100000},"fixedHighPrice":{"cash":4796,"units":0,"sales":0}}
+{"probe":"numeric-string-import","validationAccepted":true,"stockAfterBuyingOne":"101","stockType":"string","bookCost":440,"cash":4960,"reloadAccepted":true}
+{"probe":"full-ledger-settle","validation":{"accepted":true,"value":true},"settle":{"accepted":false,"error":"command_limit"}}

@@ -1,0 +1,42 @@
+
+> next-stop-little-shop-w1@0.1.0 test
+> node --import tsx --test tests/*.test.ts
+
+✔ explicit golden purchase → display → sale → P&L (5.486595ms)
+✔ stock cash and inventory book value conserve; purchase is not expense (1.203696ms)
+✔ duplicate purchase command exactly once (0.67975ms)
+✔ one 60-minute settlement equals two 30-minute settlements (1.828679ms)
+✔ fractional demand, salary and rent remainder carry across arbitrary splits (1.920492ms)
+✔ repeated offline settlement / reload has no second payout (2.511569ms)
+✔ deterministic replay repeated 10 times (7.464383ms)
+✔ render/FPS/background schedules have identical economic authority (15.786815ms)
+✔ modifier group aggregates before cap and half-even is exact (0.157988ms)
+✔ invalid actions reject atomically and cannot produce negative stock (6.660286ms)
+✔ future and old schema fail without mutating current save (1.053822ms)
+✔ numeric bounds, invalid references and unsafe imports rejected (1.115394ms)
+✔ rollback and long gaps fail explicitly (0.848703ms)
+✔ Tokyo schedule: closed hours have rent but no sales/wages (0.445699ms)
+✔ test set, discovery and six tiers remain separate from Unique (0.779891ms)
+✔ inventory unit cost rounding preserves total cost on final sale (1.633932ms)
+✔ conversion cannot exceed capacity even at minimum prices (4.33696ms)
+✔ IDB atomic CAS, interruption, import validation, reload and mode isolation (24.91155ms)
+✔ A1 cheap demand cannot transfer into an expensive sale (4.33757ms)
+✔ A1 reverse change, no-op and reload/split intervals obey the price policy (2.387293ms)
+✔ A2 free recovery reconciles cash, preserves P&L and permits a new sale (21.552354ms)
+✔ A2 eligibility requires insufficient purchasing cash AND no sellable stock (0.21319ms)
+✔ A2 repeated episodes may recover after later actual losses, without deleting debt (6.473036ms)
+✔ A3 every numeric field rejects coercible/malformed numbers (5.899935ms)
+✔ A3 recovery grant numeric records and references reject malformed values (1.339821ms)
+✔ A4 full ledger still settles and duplicate ordinary IDs remain no-op (112.098969ms)
+✔ A7 free-choice tutorial uses actual stocked display and retained milestones (1.001543ms)
+✔ v1 normal and sandbox migrate without losing identity, cash, inventory or history (0.937507ms)
+✔ IDB malformed import preserves original good save and v1 import migrates atomically (17.407087ms)
+✔ IDB concurrent different recovery IDs cannot receive duplicate grants; reload preserved (15.322788ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 524.621867

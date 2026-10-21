@@ -2,7 +2,7 @@
   "errors": [],
   "offerings": 10,
   "locales": 5,
-  "keysPerLocale": 108,
+  "keysPerLocale": 165,
   "qualityTiers": [
     "Standard",
     "Select",

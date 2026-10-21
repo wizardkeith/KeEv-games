@@ -1,46 +1,86 @@
 import {Engine} from '@babylonjs/core/Engines/engine';
 import {Scene} from '@babylonjs/core/scene';
-import {Color3, Color4} from '@babylonjs/core/Maths/math.color';
+import {Color3,Color4} from '@babylonjs/core/Maths/math.color';
 import {Vector3} from '@babylonjs/core/Maths/math.vector';
+import {Viewport} from '@babylonjs/core/Maths/math.viewport';
 import {ArcRotateCamera} from '@babylonjs/core/Cameras/arcRotateCamera';
 import {HemisphericLight} from '@babylonjs/core/Lights/hemisphericLight';
 import {DirectionalLight} from '@babylonjs/core/Lights/directionalLight';
-import {MeshBuilder} from '@babylonjs/core/Meshes/meshBuilder';
-import {StandardMaterial} from '@babylonjs/core/Materials/standardMaterial';
-import {SceneLoader} from '@babylonjs/core/Loading/sceneLoader';
+import {ShadowGenerator} from '@babylonjs/core/Lights/Shadows/shadowGenerator';
+import '@babylonjs/core/Lights/Shadows/shadowGeneratorSceneComponent';
+import {PBRMaterial} from '@babylonjs/core/Materials/PBR/pbrMaterial';
+import {Mesh} from '@babylonjs/core/Meshes/mesh';
+import {VertexData} from '@babylonjs/core/Meshes/mesh.vertexData';
 import {TransformNode} from '@babylonjs/core/Meshes/transformNode';
-import {AbstractMesh} from '@babylonjs/core/Meshes/abstractMesh';
-import '@babylonjs/loaders/glTF/glTFFileLoader';
-import '@babylonjs/loaders/glTF/2.0/glTFLoader';
-import {catalog, type Snapshot} from './core/contracts';
-import layout from './content/layout.json';
+import {catalog,config,type Snapshot} from './core/contracts';
+import layoutData from './content/layout.json';
+import {palette,roomRecipe,displayRecipe,counterRecipe,personRecipe,productRecipe,plantRecipe,type Part} from './art/recipes';
+import {grouped} from './art/geometry';
 
 export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>void){
- const engine=new Engine(canvas,true,{preserveDrawingBuffer:false,stencil:true});const scene=new Scene(engine);scene.useRightHandedSystem=true;scene.clearColor=new Color4(.87,.87,.91,1);
- const camera=new ArcRotateCamera('curated',-Math.PI/4,Math.PI*50/180,17,new Vector3(0,0.8,0),scene);camera.attachControl(canvas,true);camera.lowerBetaLimit=45*Math.PI/180;camera.upperBetaLimit=55*Math.PI/180;camera.lowerAlphaLimit=-Math.PI/4-.30;camera.upperAlphaLimit=-Math.PI/4+.30;camera.lowerRadiusLimit=12;camera.upperRadiusLimit=22;camera.panningSensibility=0;camera.wheelDeltaPercentage=.015;
- new HemisphericLight('soft sky',new Vector3(0,1,0),scene).intensity=.85;const sun=new DirectionalLight('warm light',new Vector3(-.4,-1,.3),scene);sun.diffuse=new Color3(1,.91,.8);sun.intensity=.8;
- const materials=new Map<string,StandardMaterial>();function mat(hex:string){if(materials.has(hex))return materials.get(hex)!;const m=new StandardMaterial(hex,scene);m.diffuseColor=Color3.FromHexString(hex);m.specularColor=new Color3(.06,.06,.06);materials.set(hex,m);return m;}
- function box(name:string,w:number,h:number,d:number,x:number,y:number,z:number,color:string){const m=MeshBuilder.CreateBox(name,{width:w,height:h,depth:d},scene);m.position.set(x,y,z);m.material=mat(color);return m;}
- box('diorama plinth',10,.45,8,0,-.3,0,'#c1bbc9');box('floor',9,.12,6.6,0,0,0,'#c7ab8d');
- // Modular two-wall shell, deliberately open toward the curated camera.
- box('back wall',9,3.5,.16,0,1.75,3.3,'#e4dbce');box('left wall',.16,3.5,6.6,-4.5,1.75,0,'#e8dfd3');
- for(let x=-4;x<4.4;x+=.65)box('floor plank',.022,.013,6.4,x,.067,0,'#b99b7f');
- box('back shelf',6,.14,.6,.4,1.5,2.9,'#8d6f58');box('back shelf',6,.14,.6,.4,2.25,2.9,'#8d6f58');
- for(let i=0;i<12;i++)box('placeholder back stock',.25,.35,.25,-2.3+i*.48,1.75,2.85,['#aea1bc','#d5b78b','#96b0a2'][i%3]);
- box('door frame',1.6,2.7,.2,2.9,1.35,3.14,'#a08a75');box('door glass',1.3,2.4,.21,2.9,1.35,3.12,'#a9c0c2');
- box('window frame',.2,1.65,2.3,-4.35,2,0,'#a08a75');box('window glass',.21,1.35,2,-4.31,2,0,'#b2c7cd');
- box('mat',2,.025,1.1,2.6,.08,2,'#a393aa');box('tutorial sample parcel',.55,.3,.4,-3,.25,1.9,'#b8a5cd');
- const counter=await SceneLoader.ImportMeshAsync(null,'/assets/','counter.glb',scene);counter.meshes[0].position.copyFromFloats(layout.counter.position[0],layout.counter.position[1],layout.counter.position[2]);counter.meshes[0].scaling.copyFromFloats(layout.counter.scale[0],layout.counter.scale[1],layout.counter.scale[2]);
- const displays=layout.displays.map(d=>[d.position[0],d.position[2]]);const products:AbstractMesh[][]=[];
- for(let i=0;i<3;i++){const [x,z]=displays[i];const base=box(`display-${i}`,1.5,.8,.85,x,.48,z,'#ae8c70');base.metadata={slot:i};box(`displaytop-${i}`,1.58,.09,.93,x,.92,z,'#d9c6ae').metadata={slot:i};products[i]=[];for(let k=0;k<6;k++){const p=box(`product-${i}-${k}`,.23,.28,.23,x+(k%3-1)*.4,1.1,z+(Math.floor(k/3)-.5)*.35,'#bda6ce');p.metadata={slot:i};p.setEnabled(false);products[i].push(p);}}
- function person(name:string,color:string,x:number,z:number){const root=new TransformNode(name,scene);const body=MeshBuilder.CreateCapsule(name+'.body',{height:1.0,radius:.19,tessellation:8},scene);body.parent=root;body.position.y=.75;body.material=mat(color);const head=MeshBuilder.CreateSphere(name+'.head',{diameter:.38,segments:8},scene);head.parent=root;head.position.y=1.4;head.material=mat('#e3c4aa');root.position.set(x,.1,z);return root;}
- person('placeholder staff','#9286a5',2.6,-2.3);const customers=[person('generic-1','#94b1a7',1.1,1),person('generic-2','#bca3a6',.3,-2)];
- let state:Snapshot|undefined,quality='auto',zen=false;let frames:number[]=[],last=performance.now();
- 
- scene.onPointerPick=(_,pick)=>{const n=pick.pickedMesh?.metadata?.slot;if(typeof n==='number')onSlot(n);};
- const resize=()=>{engine.resize();const narrow=window.innerWidth<720;camera.target.x=zen?0:(narrow?0:.9);camera.target.y=narrow?.1:.9;};window.addEventListener('resize',resize);
- canvas.addEventListener('webglcontextlost',()=>canvas.dispatchEvent(new CustomEvent('world-error')));
- const observer=new ResizeObserver(resize);observer.observe(canvas);
- engine.runRenderLoop(()=>{if(document.hidden)return;const now=performance.now();frames.push(now-last);last=now;if(frames.length>120)frames.shift();for(let i=0;i<customers.length;i++){customers[i].setEnabled(!!state?.open&&(quality!=='low'||i===0));if(state?.open&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const phase=now/7000+i*2;customers[i].position.x=.5+Math.sin(phase)*.7;customers[i].position.z=Math.cos(phase)*1.5;customers[i].rotation.y=phase;}}scene.render();});
- return {update(s:Snapshot){state=s;for(let i=0;i<3;i++){const id=s.shelves[i],item=s.inventory[id],o=catalog.offerings.find(o=>o.id===id);products[i].forEach((p,k)=>{p.setEnabled(!!item&&k<item.stock);if(o)p.material=mat(o.color);});}},quality(q:string){quality=q;engine.setHardwareScalingLevel(q==='low'?Math.max(1,devicePixelRatio):Math.max(1,devicePixelRatio/1.5));},zen(value:boolean){zen=value;resize();},metrics(){return {fps:engine.getFps(),frameSamplesMs:frames,meshes:scene.meshes.length,renderer:engine.getGlInfo(),viewport:[canvas.width,canvas.height]};},dispose(){observer.disconnect();engine.dispose();}};
+ const engine=new Engine(canvas,true,{preserveDrawingBuffer:false,stencil:true,adaptToDeviceRatio:false});
+ const scene=new Scene(engine);scene.useRightHandedSystem=true;scene.clearColor=Color4.FromHexString('#F4EFE8FF');
+ const camera=new ArcRotateCamera('curated.40deg',-Math.PI/4,50*Math.PI/180,18,new Vector3(0,1,0),scene);
+ camera.attachControl(canvas,true);camera.lowerBetaLimit=45*Math.PI/180;camera.upperBetaLimit=55*Math.PI/180;camera.lowerAlphaLimit=-Math.PI/4-.27;camera.upperAlphaLimit=-Math.PI/4+.27;camera.lowerRadiusLimit=13;camera.upperRadiusLimit=26;camera.panningSensibility=0;camera.wheelDeltaPercentage=.012;camera.minZ=.1;camera.maxZ=90;
+ const sky=new HemisphericLight('soft cream sky',new Vector3(0,1,0),scene);sky.intensity=.85;sky.diffuse=Color3.FromHexString('#FFF4E4');sky.groundColor=Color3.FromHexString('#B8A79C');
+ const sun=new DirectionalLight('static window sunlight',new Vector3(.85,-.5,.12),scene);sun.position.set(-8,5,-2);sun.diffuse=Color3.FromHexString('#FFE1B0');sun.intensity=2.4;sun.shadowMinZ=.1;sun.shadowMaxZ=35;
+ const shadow=new ShadowGenerator(1024,sun);shadow.usePercentageCloserFiltering=true;shadow.filteringQuality=ShadowGenerator.QUALITY_LOW;shadow.bias=.001;shadow.normalBias=.025;shadow.darkness=.22;
+ const materials=new Map<string,PBRMaterial>();
+ function material(hex:string,alpha=1){const key=hex+alpha;let m=materials.get(key);if(!m){m=new PBRMaterial(key,scene);m.albedoColor=Color3.FromHexString(hex);m.roughness=.88;m.metallic=0;m.environmentIntensity=.5;m.alpha=alpha;materials.set(key,m);}return m;}
+ function model(name:string,recipe:Part[],parent?:TransformNode,slot?:number,cast=true){const root=new TransformNode(name,scene);if(parent)root.parent=parent;for(const [i,g] of grouped(recipe).entries()){const mesh=new Mesh(`${name}.material${i}`,scene);const data=new VertexData();data.positions=g.geometry.positions;data.normals=g.geometry.normals;data.indices=g.geometry.indices;data.applyToMesh(mesh);mesh.material=material(g.color,g.alpha);mesh.parent=root;mesh.receiveShadows=true;mesh.isPickable=slot!==undefined;if(slot!==undefined)mesh.metadata={slot};if(cast&&g.alpha===1)shadow.addShadowCaster(mesh);}return root;}
+ // All surfaces are actual geometry with reusable authoring recipes; no backdrop illusion.
+ model('room.modular',roomRecipe(),undefined,undefined,false);
+ const roomMeshes=scene.meshes.filter(m=>m.name.startsWith('room.'));for(const m of roomMeshes){m.receiveShadows=true;const material=m.material as PBRMaterial;if(material.alpha===1&&[palette.wood,palette.cream].some(c=>material.albedoColor.equals(Color3.FromHexString(c))))shadow.addShadowCaster(m);}
+ const counter=model('fixture.shop-counter.w1_1',counterRecipe());counter.position.set(...layoutData.counter.position as [number,number,number]);
+ const registerPlant=model('counter.plant',plantRecipe(.38));registerPlant.position.set(2.0,1.12,-1.45);
+ for(const [x,z,scale] of [[-3.9,2.6,1.15],[-4.05,-1.6,.9],[1.2,2.95,.52]]){const plant=model('plant.original',plantRecipe(scale));plant.position.set(x,scale===.52?1.52:.09,z);}
+ for(let row=0;row<2;row++)for(let i=0;i<8;i++){const item=catalog.offerings[(i+row*3)%catalog.offerings.length];const stock=model(`back.display.${row}.${item.id}`,productRecipe(item.id,item.color));stock.position.set(-2.95+i*.55,1.53+row*.76,2.84);stock.scaling.setAll(.85);}
+ const highlights:Mesh[]=[],productRoots:TransformNode[]=[];const shelfContents:string[]=[];
+ for(let i=0;i<3;i++){
+  const d=layoutData.displays[i];const display=model(d.id,displayRecipe(),undefined,i);display.position.set(d.position[0],.08,d.position[2]);
+  const rim=model(`${d.id}.selected`,[{shape:'round',size:[1.68,.035,1.05],at:[0,.10,0],color:'#B59AC8',radius:.016}],undefined,i,false);rim.position.set(d.position[0],0,d.position[2]);for(const mesh of rim.getChildMeshes()){highlights.push(mesh as Mesh);mesh.setEnabled(false);}
+  const products=new TransformNode(`${d.id}.products`,scene);products.position.set(d.position[0],1.08,d.position[2]);productRoots.push(products);
+ }
+ const staff=model('staff.graybox.generic',personRecipe('#9E8CAA'));staff.position.set(2.6,.09,-2.45);staff.rotation.y=-.35;
+ const customers=[model('customer.decorative.1',personRecipe('#8DA597')),model('customer.decorative.2',personRecipe('#BA9FA2'))];
+ const parcel=model('discovery.graybox-sample',[
+  {shape:'round',size:[.52,.30,.38],at:[0,.15,0],color:'#C8B3D4',radius:.035},
+  {shape:'box',size:[.045,.31,.385],at:[0,.15,0],color:'#F6E5C1'},
+  {shape:'box',size:[.525,.315,.035],at:[0,.15,0],color:'#F6E5C1'}]);parcel.position.set(-3.2,.09,2.35);
+ let state:Snapshot|undefined,quality='auto',effectiveQuality='high',zen=false,panelOpen=false,selectedSlot=-1,disposed=false;
+ let frames:number[]=[],last:number|undefined,visibleSamples=0,qualityCheckedAt=0;let readyAt=0,composition='';
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+ const setQuality=(q:string)=>{effectiveQuality=q;engine.setHardwareScalingLevel(q==='low'?1.5:1);shadow.getShadowMap()!.refreshRate=q==='low'?2:1;document.documentElement.dataset.renderQuality=q;};
+ setQuality('high');
+ const resize=()=>{
+  if(disposed)return;engine.resize();const w=canvas.clientWidth,h=canvas.clientHeight,narrow=w<720;
+  const panel=document.querySelector<HTMLElement>('.sidebar');const rect=panel?.getBoundingClientRect();const visible=panelOpen||!!(rect&&rect.height>0);
+  const header=document.querySelector<HTMLElement>('.top')?.getBoundingClientRect();const footer=document.querySelector<HTMLElement>('.dock')?.getBoundingClientRect();
+  const top=zen?20:Math.min(header?.bottom??110,h*.24)+10;let bottom=zen?20:Math.max(85,h-(footer?.top??h-85));let right=0;
+  if(visible&&rect&&!zen){if(narrow)bottom=Math.max(bottom,h-rect.top+8);else right=Math.min(w*.46,w-rect.left+12);}
+  const vw=Math.max(120,w-right),vh=Math.max(80,h-top-bottom);camera.viewport=new Viewport(0,bottom/h,vw/w,vh/h);
+  const signature=[w,h,top,bottom,right].join(':');if(signature===composition)return;composition=signature;
+  const aspect=vw/vh;camera.radius=Math.min(26,Math.max(15.8,12/aspect));camera.target.set(0,1.0,0);camera.lowerRadiusLimit=Math.max(12,camera.radius-3);camera.upperRadiusLimit=camera.radius+4;
+ };
+ scene.onPointerPick=(_,pick)=>{const n=pick.pickedMesh?.metadata?.slot;if(typeof n==='number'){selectedSlot=n;highlights.forEach((m,i)=>m.setEnabled(i===n));onSlot(n);}};
+ const contextLost=()=>canvas.dispatchEvent(new CustomEvent('world-error'));
+ canvas.addEventListener('webglcontextlost',contextLost);window.addEventListener('resize',resize);const observer=new ResizeObserver(resize);observer.observe(canvas);
+ const visibility=()=>{last=undefined;};document.addEventListener('visibilitychange',visibility);
+ resize();await scene.whenReadyAsync();readyAt=performance.now();
+ engine.runRenderLoop(()=>{
+  if(disposed||document.hidden){last=undefined;return;}
+  const now=performance.now();if(last!==undefined){const dt=now-last;if(dt>0&&dt<250){frames.push(dt);visibleSamples++;if(frames.length>180)frames.shift();}}last=now;
+  if(quality==='auto'&&frames.length>=90&&now-qualityCheckedAt>3000){const sorted=[...frames].sort((a,b)=>a-b);const p75=sorted[Math.floor(sorted.length*.75)];if(p75>35&&effectiveQuality!=='low')setQuality('low');qualityCheckedAt=now;}
+  const hour=state?new Date(state.watermark+9*3600000).getUTCHours():0;const trading=!!state?.open&&hour>=config.openHour&&hour<config.closeHour;
+  customers.forEach((c,i)=>{c.setEnabled(trading&&(effectiveQuality!=='low'||i===0));if(trading&&!reduced.matches){const phase=now/9000+i*2.6;c.position.set(.55+Math.sin(phase)*.65,.09,Math.cos(phase)*1.35);c.rotation.y=phase+.5;}});
+  scene.render();
+ });
+ return {
+  update(s:Snapshot){state=s;parcel.setEnabled(!s.revealed);for(let i=0;i<3;i++){const id=s.shelves[i],item=s.inventory[id],o=catalog.offerings.find(o=>o.id===id),count=Math.min(4,item?.stock??0);const key=`${id}:${count}`;if(shelfContents[i]===key)continue;shelfContents[i]=key;for(const child of [...productRoots[i].getChildren()]){if(child instanceof TransformNode)for(const mesh of child.getChildMeshes())shadow.removeShadowCaster(mesh);child.dispose(false);}if(!o)continue;for(let k=0;k<count;k++){const object=model(`${layoutData.displays[i].id}.${id}.${k}`,productRecipe(id,o.color),productRoots[i],i);object.position.set((k%2-.5)*.60,0,(Math.floor(k/2)-.5)*.38);object.scaling.setAll(id==='off.pencil'?1.05:.82);}}resize();},
+  quality(q:string){quality=q;frames=[];last=undefined;setQuality(q==='low'?'low':'high');},
+  zen(value:boolean){zen=value;resize();},layout(value:boolean){panelOpen=value;resize();},
+  selected(slot:number){selectedSlot=slot;highlights.forEach((m,i)=>m.setEnabled(i===slot));},
+  metrics(){return {readyAtMs:readyAt,quality,effectiveQuality,adaptivePolicy:'auto lowers resolution and decorative crowd after 90 visible samples with p75 >35ms; no economy change',selectedSlot,visibleSamples,frameSamplesMs:[...frames],fps:frames.length?1000/(frames.reduce((a,b)=>a+b,0)/frames.length):null,meshes:scene.meshes.length,activeMeshes:scene.getActiveMeshes().length,renderer:engine.getGlInfo(),viewport:[canvas.width,canvas.height],cameraViewport:camera.viewport};},
+  dispose(){disposed=true;observer.disconnect();window.removeEventListener('resize',resize);document.removeEventListener('visibilitychange',visibility);canvas.removeEventListener('webglcontextlost',contextLost);scene.dispose();engine.dispose();}
+ };
 }

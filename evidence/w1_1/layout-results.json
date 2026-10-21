@@ -1,0 +1,252 @@
+[
+  {
+    "lang": "zh-HK",
+    "overflow": false,
+    "width": 320,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 58,
+    "minTouchHeight": 49,
+    "clippedControls": []
+  },
+  {
+    "lang": "en",
+    "overflow": false,
+    "width": 320,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 58,
+    "minTouchHeight": 49,
+    "clippedControls": []
+  },
+  {
+    "lang": "ja",
+    "overflow": false,
+    "width": 320,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 58,
+    "minTouchHeight": 49,
+    "clippedControls": []
+  },
+  {
+    "lang": "th",
+    "overflow": false,
+    "width": 320,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 58,
+    "minTouchHeight": 49,
+    "clippedControls": []
+  },
+  {
+    "lang": "zh-CN",
+    "overflow": false,
+    "width": 320,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 58,
+    "minTouchHeight": 49,
+    "clippedControls": []
+  },
+  {
+    "lang": "zh-HK",
+    "overflow": false,
+    "width": 375,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 69,
+    "minTouchHeight": 50.25,
+    "clippedControls": []
+  },
+  {
+    "lang": "en",
+    "overflow": false,
+    "width": 375,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 69,
+    "minTouchHeight": 50.25,
+    "clippedControls": []
+  },
+  {
+    "lang": "ja",
+    "overflow": false,
+    "width": 375,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 69,
+    "minTouchHeight": 50.25,
+    "clippedControls": []
+  },
+  {
+    "lang": "th",
+    "overflow": false,
+    "width": 375,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 69,
+    "minTouchHeight": 50.25,
+    "clippedControls": []
+  },
+  {
+    "lang": "zh-CN",
+    "overflow": false,
+    "width": 375,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 69,
+    "minTouchHeight": 50.25,
+    "clippedControls": []
+  },
+  {
+    "lang": "zh-HK",
+    "overflow": false,
+    "width": 430,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 80,
+    "minTouchHeight": 50.25,
+    "clippedControls": []
+  },
+  {
+    "lang": "en",
+    "overflow": false,
+    "width": 430,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 80,
+    "minTouchHeight": 50.25,
+    "clippedControls": []
+  },
+  {
+    "lang": "ja",
+    "overflow": false,
+    "width": 430,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 80,
+    "minTouchHeight": 50.25,
+    "clippedControls": []
+  },
+  {
+    "lang": "th",
+    "overflow": false,
+    "width": 430,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 80,
+    "minTouchHeight": 50.25,
+    "clippedControls": []
+  },
+  {
+    "lang": "zh-CN",
+    "overflow": false,
+    "width": 430,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 80,
+    "minTouchHeight": 50.25,
+    "clippedControls": []
+  },
+  {
+    "lang": "zh-HK",
+    "overflow": false,
+    "width": 768,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 66,
+    "minTouchHeight": 57.140625,
+    "clippedControls": []
+  },
+  {
+    "lang": "en",
+    "overflow": false,
+    "width": 768,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 66,
+    "minTouchHeight": 57.140625,
+    "clippedControls": []
+  },
+  {
+    "lang": "ja",
+    "overflow": false,
+    "width": 768,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 66,
+    "minTouchHeight": 57.140625,
+    "clippedControls": []
+  },
+  {
+    "lang": "th",
+    "overflow": false,
+    "width": 768,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 66,
+    "minTouchHeight": 57.140625,
+    "clippedControls": []
+  },
+  {
+    "lang": "zh-CN",
+    "overflow": false,
+    "width": 768,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 66,
+    "minTouchHeight": 57.140625,
+    "clippedControls": []
+  },
+  {
+    "lang": "zh-HK",
+    "overflow": false,
+    "width": 1200,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 74,
+    "minTouchHeight": 57.140625,
+    "clippedControls": []
+  },
+  {
+    "lang": "en",
+    "overflow": false,
+    "width": 1200,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 74,
+    "minTouchHeight": 57.140625,
+    "clippedControls": []
+  },
+  {
+    "lang": "ja",
+    "overflow": false,
+    "width": 1200,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 74,
+    "minTouchHeight": 57.140625,
+    "clippedControls": []
+  },
+  {
+    "lang": "th",
+    "overflow": false,
+    "width": 1200,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 74,
+    "minTouchHeight": 57.140625,
+    "clippedControls": []
+  },
+  {
+    "lang": "zh-CN",
+    "overflow": false,
+    "width": 1200,
+    "navCount": 5,
+    "navClipped": false,
+    "minTouchWidth": 74,
+    "minTouchHeight": 57.140625,
+    "clippedControls": []
+  }
+]

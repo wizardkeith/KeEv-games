@@ -1,0 +1,30 @@
+
+> next-stop-little-shop-w1@0.1.0 test
+> node --import tsx --test tests/*.test.ts
+
+✔ explicit golden purchase → display → sale → P&L (4.351783ms)
+✔ stock cash and inventory book value conserve; purchase is not expense (0.930166ms)
+✔ duplicate purchase command exactly once (0.424087ms)
+✔ one 60-minute settlement equals two 30-minute settlements (1.123226ms)
+✔ fractional demand, salary and rent remainder carry across arbitrary splits (1.466702ms)
+✔ repeated offline settlement / reload has no second payout (1.497318ms)
+✔ deterministic replay repeated 10 times (4.445864ms)
+✔ render/FPS/background schedules have identical economic authority (7.981673ms)
+✔ modifier group aggregates before cap and half-even is exact (0.248083ms)
+✔ invalid actions reject atomically and cannot produce negative stock (1.867473ms)
+✔ future and old schema fail without mutating current save (2.688997ms)
+✔ numeric bounds, invalid references and unsafe imports rejected (1.229396ms)
+✔ rollback and long gaps fail explicitly (0.559771ms)
+✔ Tokyo schedule: closed hours have rent but no sales/wages (0.385719ms)
+✔ test set, discovery and six tiers remain separate from Unique (0.531378ms)
+✔ inventory unit cost rounding preserves total cost on final sale (1.071138ms)
+✔ conversion cannot exceed capacity even at minimum prices (0.811088ms)
+✔ IDB atomic CAS, interruption, import validation, reload and mode isolation (20.004571ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 314.766392

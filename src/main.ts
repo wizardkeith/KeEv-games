@@ -1,47 +1,126 @@
 import './style.css';
-import zh from './content/zh-HK.json';import en from './content/en.json';import ja from './content/ja.json';import th from './content/th.json';import cn from './content/zh-CN.json';
 import {catalog,type Mode,type Snapshot,type Command} from './core/contracts';
-import {loadCore} from './platform/loader';import {database,Saves} from './platform/storage';
-const dictionaries:Record<string,Record<string,string>>={'zh-HK':zh,en,ja,th,'zh-CN':cn};
-let locale=localStorage.getItem('shop.locale')||'zh-HK';if(!dictionaries[locale])locale='zh-HK';
-const t=(key:string)=>dictionaries[locale][key]??key;
-const esc=(s:unknown)=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
-const money=(n:number)=>new Intl.NumberFormat(locale,{style:'currency',currency:'JPY',maximumFractionDigits:0}).format(n*catalog.config.yenPerUnit);
-const date=(n:number)=>new Intl.DateTimeFormat(locale,{timeZone:'Asia/Tokyo',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(n);
+import {recoveryPreview,purchaseCost} from './core/recovery';import {loadCore} from './platform/loader';import {database,Saves} from './platform/storage';
+import {t,esc,money,date,locale,setLocale,trading} from './ui/copy';
+import {panelContent,identityForm,button} from './ui/panels';import {render} from './ui/dom';
+import {commandId,draftFor,storeDraft,type UI} from './ui/session';
 const app=document.querySelector<HTMLDivElement>('#app')!,canvas=document.querySelector<HTMLCanvasElement>('#world')!;
-let state:Snapshot,saves:Saves,mode:Mode='normal',panel='stock',slot=0,busy=false,zen=false,quality='auto',sound=false,errorCode='',message='',qty=5,reportDay='',world:Awaited<ReturnType<typeof import('./world')['createWorld']>>|undefined;
-let chain=Promise.resolve();const buildStarted=performance.now();const saleSound=new Audio('/assets/sale.wav');saleSound.volume=.4;
-function notify(code:string){errorCode=code;message=t(code==='cash'?'cashError':dictionaries[locale][code]?code:'invalid');draw();}
-function effectiveTarget(now=Date.now()){return mode==='normal'?now:state.watermark;}
-function queue(action:()=>Promise<void>){chain=chain.then(async()=>{busy=true;try{await action();message='';errorCode='';}catch(e){notify(e instanceof Error?e.message:'invalid');}finally{busy=false;world?.update(state);draw();}});}
-async function act(kind:string,data:Partial<Command>={}){const units=state.eventSequence;state=await saves.command(state,{id:crypto.randomUUID(),kind,...data},effectiveTarget(),Date.now());if(sound&&state.eventSequence>units)void saleSound.play().catch(()=>{});}
-const button=(text:string,action:string,extra='',primary=false)=>`<button data-action="${action}" ${extra} class="${primary?'primary':''}" ${busy?'disabled':''}>${esc(t(text))}</button>`;
-function progress(){const stage=state.tutorial;let key=stage<1?'tutorial1':stage<2?'tutorial2':stage<4?'tutorial3':'tutorial4';return `<div class="progress">${Array.from({length:5},(_,i)=>`<span class="${i<stage?'done':''}"></span>`).join('')}</div><p class="muted">${esc(t(key))}</p>`;}
-function stockPanel(){return `<p class="muted">${esc(t('supplier'))}</p>${progress()}<div class="row spread"><label>${esc(t('quantity'))} <input id="qty" type="number" min="1" max="1000" step="1" value="${qty}" class="quantity"></label><label>${esc(t('slot'))} <select id="slot">${[0,1,2].map(n=>`<option value="${n}" ${slot===n?'selected':''}>${n+1}</option>`).join('')}</select></label></div>${catalog.offerings.map(o=>{const i=state.inventory[o.id];return `<div class="item"><div class="row"><span class="swatch" style="background:${o.color}"></span><h3>${esc(t(o.key))}</h3><span class="stocknum">${esc(t('inventory'))} ${i.stock}</span></div><div class="meta">${esc(t('cost'))} ${money(o.cost)} · ${esc(t('price'))} ${money(i.price)}</div><div class="row">${button('buy','buy',`data-id="${o.id}"`)}${button('display','display',`data-id="${o.id}"`)}</div></div>`;}).join('')}`;}
-function shelvesPanel(){return `${progress()}${state.shelves.map((id,n)=>{const o=catalog.offerings.find(o=>o.id===id),i=state.inventory[id];return `<div class="slot ${n===slot?'selected':''}"><h3>${esc(t('slot'))} ${n+1} · ${o?esc(t(o.key)):esc(t('empty'))}</h3>${o?`<div class="muted">${esc(t('inventory'))}: ${i.stock} · ${esc(t('suggested'))}: ${money(o.suggestedPrice)}</div><div class="row wrap"><label>${esc(t('price'))} ¥ <input type="number" min="10" max="1000000" step="10" id="price-${n}" value="${i.price*10}"></label>${button('apply','price',`data-slot="${n}" data-id="${id}"`)}${button('clear','clear',`data-slot="${n}"`)}</div>`:`<p class="muted">${esc(t('tutorial2'))}</p>${button('stock','panel',`data-panel="stock"`)}`}</div>`}).join('')}<p class="muted">${esc(t('hours'))}</p>${button(state.open?'close':'open','open','',true)}`;}
-function reportPanel(){const reports=state.reports;const r=reports.find(r=>r.day===reportDay)??reports.at(-1)??{day:date(state.watermark),sales:0,cogs:0,salary:0,rent:0,operating:0,net:0,units:0};const value=Object.values(state.inventory).reduce((a,i)=>a+i.bookCost,0);return `<p class="muted">${esc(t('accounting'))}</p><select class="dayselect" id="reportDay">${(reports.length?reports:[r]).map(d=>`<option value="${d.day}" ${r.day===d.day?'selected':''}>${d.day} · Tokyo</option>`).join('')}</select>${(['sales','cogs','salary','rent','operating','net'] as const).map(k=>`<div class="finrow ${k==='net'?'net':''}"><span>${esc(t(k==='net'?'profit':k))}</span><b>${money(r[k])}</b></div>`).join('')}<div class="finrow"><span>${esc(t('units'))}</span><span>${r.units}</span></div><div class="finrow"><span>${esc(t('purchases'))}</span><span>${money(state.purchases)}</span></div><div class="finrow"><span>${esc(t('bookValue'))}</span><span>${money(value)}</span></div><details class="details"><summary>${esc(t('breakdown'))}</summary>${state.breakdown.map(b=>`<div class="finrow"><span>${esc(t(b.id))}</span><span>${b.id==='ratings'?'—':b.unit==='economic-units'?money(b.value):b.unit==='bp'?b.value/100+'%':b.value+'/h'}</span></div>`).join('')}</details>`;}
-function journalPanel(){const set=catalog.set.pieces.every(id=>state.shelves.includes(id));return `${progress()}<div class="discovery"><h3>${esc(t('testSet'))}</h3><p class="muted">${esc(t(set?'active':'inactive'))}</p></div><div class="discovery"><h3>${esc(t('discovery'))}</h3><p class="muted">${esc(t(state.revealed?'revealed':state.eventSequence?'discovery':'locked'))}</p>${!state.revealed&&state.eventSequence?button('reveal','reveal','',true):''}</div><p class="muted">${esc(t('prototypeNote'))}</p>`;}
-function settingsPanel(){return `<p class="muted">${esc(t('prototypeNote'))}</p><div class="field"><label for="quality">${esc(t('quality'))}</label><select id="quality">${['auto','high','low'].map(q=>`<option value="${q}" ${q===quality?'selected':''}>${esc(t(q))}</option>`).join('')}</select></div><label class="row"><input type="checkbox" id="sound" ${sound?'checked':''}>${esc(t('sound'))}</label><p>${button('export','export')}</p><label class="field">${esc(t('import'))}<input type="file" id="import" accept="application/json,.json"></label><p>${button('refresh','reload')}</p><p>${button('welcome','rename')}</p><p class="muted">${esc(t('save'))} · ${state.revision}</p><p class="watermark">KeEv Games · PORT_REQUIRED_FOR_UNITY</p>`;}
-function draw(){if(!state)return;document.documentElement.lang=locale;document.title=t('title');document.body.classList.toggle('zen',zen);const report=state.reports.at(-1);const panels:Record<string,()=>string>={stock:stockPanel,shelves:shelvesPanel,report:reportPanel,journal:journalPanel,settings:settingsPanel};
- app.innerHTML=`<header class="top"><div class="brand glass"><div class="eyebrow">${esc(t('prototype'))}</div><h1>${esc(t('title'))}</h1><div class="small muted">${esc(t('subtitle'))}</div><div class="shop"><span class="mark">${esc(state.logo)}</span><b>${esc(state.shopName||t('welcome'))}</b><span class="muted">${esc(state.companyName)}</span></div></div><div class="balance glass"><div class="metric"><small>${esc(t('cash'))}</small><strong>${money(state.cash)}</strong></div><div class="metric"><small>${esc(t('sales'))}</small><strong>${money(report?.sales??0)}</strong></div><div class="metric"><small>${esc(t('profit'))}</small><strong>${money(report?.net??0)}</strong></div></div><div class="language glass"><select id="locale" aria-label="Language">${Object.entries({'zh-HK':'中文(繁)',en:'English',ja:'日本語',th:'ไทย','zh-CN':'中文(简)'}).map(([k,v])=>`<option value="${k}" ${k===locale?'selected':''}>${v}</option>`).join('')}</select></div></header>${panel?`<aside class="sidebar glass"><div class="panelhead"><h2>${esc(t(panel))}</h2><button data-action="hide" class="closepanel" aria-label="${esc(t('close'))}">×</button></div><div class="panelbody">${panels[panel]()}</div></aside>`:''}<div class="hint">${esc(t('camera'))}</div><footer class="bottom"><nav class="dock glass">${['stock','shelves','report','journal','settings'].map(p=>`<button data-action="panel" data-panel="${p}" class="${p===panel?'chosen':''}">${esc(t(p))}</button>`).join('')}<button data-action="zen" aria-label="${esc(t('zen'))}">◇</button></nav><div class="clockbox glass"><div class="row spread"><b><span class="statusdot ${state.open?'':'closed'}"></span>${esc(t(state.open?'isOpen':'isClosed'))}</b><span>${esc(date(state.watermark))} · Tokyo</span></div><div class="muted">${esc(t(mode==='sandbox'?'sandboxNote':'normalNote'))}</div><div class="row wrap">${button(state.open?'close':'open','open')}${mode==='sandbox'?`${button('advance15','advance','data-minutes="15"')}${button('advance60','advance','data-minutes="60"')}${button('advanceDay','advance','data-minutes="1440"')}${button('real','mode')}`:button('demo','mode')}${errorCode==='long_gap'?button('catchup','catchup'):''}</div></div></footer>${message?`<div class="message" role="alert">${esc(message)}${errorCode==='stale'?button('refresh','reload'):''}</div>`:''}${zen?`<button data-action="zen" class="zenbtn glass">${esc(t('return'))}</button>`:''}${!state.shopName?identityForm():''}`;
- bind();world?.update(state);
-}
-function identityForm(){return `<div class="modalshade"><form id="identity" class="modal glass"><div class="eyebrow">KeEv Games</div><h2>${esc(t('welcome'))}</h2><p class="muted">${esc(t('prototypeNote'))}</p><label class="field">${esc(t('name'))}<input name="shop" maxlength="32" required autocomplete="off" value="${esc(state.shopName)}"></label><label class="field">${esc(t('company'))}<input name="company" maxlength="32" autocomplete="off" value="${esc(state.companyName)}"></label><label class="field">${esc(t('logo'))}<input name="logo" maxlength="4" value="${esc(state.logo)}"></label><button type="submit" class="primary">${esc(t('start'))}</button></form></div>`;}
+let mode:Mode=localStorage.getItem('shop.mode')==='sandbox'?'sandbox':'normal';
+let state:Snapshot,saves:Saves,busy=false,world:Awaited<ReturnType<typeof import('./world')['createWorld']>>|undefined;
+const u:UI={panel:'',slot:0,zen:false,quality:'auto',sound:false,reportDay:'',rename:false,draft:{quantity:'5',prices:{},shop:'',company:'',logo:'◇'},formError:'',formField:'',notice:'',blocking:'',worldFailed:false};
+let focusReturn:HTMLElement|null=null,readyMs:number|null=null,worldReadyMs:number|null=null,noticeTimer:ReturnType<typeof setTimeout>|undefined;
+const started=performance.now(),saleSound=new Audio('/assets/sale.wav');saleSound.volume=.25;
 function download(data:string,name:string){const url=URL.createObjectURL(new Blob([data],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-function bind(){
- app.querySelectorAll<HTMLButtonElement>('[data-action]').forEach(b=>b.onclick=()=>{const a=b.dataset.action!;if(a==='panel'){panel=b.dataset.panel!;draw();return;}if(a==='hide'){panel='';draw();return;}if(a==='zen'){zen=!zen;world?.zen(zen);draw();return;}if(a==='export'){download(JSON.stringify(state,null,2),`little-shop-${mode}.json`);return;}if(a==='rename'){app.insertAdjacentHTML('beforeend',identityForm());bindForm();return;}
- queue(async()=>{switch(a){case 'buy':await act('buy',{itemId:b.dataset.id!,quantity:qty});break;case 'display':await act('display',{itemId:b.dataset.id!,slot});break;case 'price':await act('price',{itemId:b.dataset.id!,price:Number(app.querySelector<HTMLInputElement>(`#price-${b.dataset.slot}`)!.value)/10});break;case 'clear':await act('clear',{slot:Number(b.dataset.slot)});break;case 'open':await act('open');break;case 'reveal':await act('reveal');break;case 'advance':state=await saves.settle(state,state.watermark+Number(b.dataset.minutes)*60000,Date.now());panel='report';break;case 'mode':{const nextMode=mode==='normal'?'sandbox':'normal';const next=await saves.loadOrCreate(nextMode,nextMode==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());mode=nextMode;state=next;break;}case 'reload':state=(await saves.read(mode))!;break;case 'catchup':state=await saves.settle(state,Math.min(Date.now(),state.watermark+86400000),Date.now());break;}});
- });
- const language=app.querySelector<HTMLSelectElement>('#locale');if(language)language.onchange=()=>{locale=language.value;localStorage.setItem('shop.locale',locale);draw();};const q=app.querySelector<HTMLInputElement>('#qty');if(q)q.onchange=()=>{qty=Number(q.value);};const s=app.querySelector<HTMLSelectElement>('#slot');if(s)s.onchange=()=>slot=Number(s.value);
- const day=app.querySelector<HTMLSelectElement>('#reportDay');if(day)day.onchange=()=>{reportDay=day.value;draw();};const qual=app.querySelector<HTMLSelectElement>('#quality');if(qual)qual.onchange=()=>{quality=qual.value;world?.quality(quality);};const snd=app.querySelector<HTMLInputElement>('#sound');if(snd)snd.onchange=()=>{sound=snd.checked;if(sound)void saleSound.play().catch(()=>{});};
- const imp=app.querySelector<HTMLInputElement>('#import');if(imp)imp.onchange=()=>{const file=imp.files?.[0];if(file)queue(async()=>{state=await saves.import(state,await file.text());});};bindForm();
+function notice(text:string){u.notice=text;clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>{u.notice='';draw();},6500);}
+function actionButton(key:string,action:string,extra='',primary=false){return button(t(key),action,extra,primary,busy);}
+function nextAction(){
+ if(recoveryPreview(state).eligible)return {text:'recoveryTitle',label:'recoveryTitle',panel:'stock'};
+ const n=state.tutorial;
+ if(n===3&&!state.open)return {text:'nextOpen',label:'navShelves',panel:'shelves'};
+ return [{text:'nextBuy',label:'stock',panel:'stock'},{text:'nextDisplay',label:'navShelves',panel:'shelves'},{text:'nextOpen',label:'navShelves',panel:'shelves'},{text:state.open&&!trading(state)?'hours':'nextSale',label:mode==='sandbox'?'advance60':'report',panel:'report'},{text:'nextReveal',label:'journal',panel:'journal'}][Math.min(n,4)];
 }
-function bindForm(){const form=app.querySelector<HTMLFormElement>('#identity');if(form)form.onsubmit=e=>{e.preventDefault();const data=new FormData(form);queue(async()=>{await act('identity',{text:String(data.get('shop')),company:String(data.get('company')),logo:String(data.get('logo'))});form.closest('.modalshade')?.remove();});};}
-async function boot(){app.innerHTML=`<div class="boot">${esc(t('loading'))}</div>`;const core=await loadCore();saves=new Saves(await database(),core);state=await saves.loadOrCreate(mode,Date.now());draw();try{const {createWorld}=await import('./world');world=await createWorld(canvas,n=>{slot=n;panel='shelves';draw();});world.update(state);}catch(e){console.error(e);notify('loadError');}
- // Economic authority is elapsed time, never this timer or rendered NPCs.
- const resume=()=>{if(mode!=='normal'||document.hidden||busy||errorCode)return;const now=Date.now();if(now-state.watermark>=60000||now<state.lastWallTime)queue(async()=>{state=await saves.settle(state,now,now);});};
+function draw(){
+ if(!state)return;document.documentElement.lang=locale;document.title=state.shopName?state.shopName+' · '+t('title'):t('title');document.body.classList.toggle('zen',u.zen);document.body.classList.toggle('drawer-open',!!u.panel);
+ const status=trading(state)?'isOpen':state.open?'outsideHours':'isClosed',next=nextAction();
+ const oldActive=document.activeElement as HTMLInputElement|null;const activeId=oldActive?.id;const start=oldActive?.selectionStart,end=oldActive?.selectionEnd;
+ render(app,`<header class="top"><div class="brand"><div class="brand-title"><span class="mark">${esc(state.logo)}</span><h1>${esc(state.shopName||t('welcome'))}</h1></div><p>${esc(t('subtitle'))}</p><div class="shop-context"><span class="statusdot ${trading(state)?'':'closed'}"></span>${esc(t(status))}<span class="mode-badge">${esc(t(mode==='sandbox'?'sandboxShort':'normalShort'))}</span></div></div><div class="balance"><small>${esc(t('cash'))}</small><strong>${money(state.cash)}</strong><span>${esc(date(state.watermark))} · Tokyo</span></div></header>
+ <div class="world-note" ${u.worldFailed?'':'hidden'}><span>◇</span><p>${esc(t('noWebGL'))}</p></div>
+ ${!world&&!u.worldFailed?`<p class="world-loading">${esc(t('worldPreparing'))}</p>`:''}
+ ${!state.revealed&&!u.zen?`<section class="next-card" aria-label="${esc(t('nextStep'))}"><span class="eyebrow">${esc(t('nextStep'))}</span><p>${esc(t(next.text))}</p>${actionButton(next.label,next.text==='nextSale'&&mode==='sandbox'?'advance':'panel',next.text==='nextSale'&&mode==='sandbox'?'data-minutes="60"':`data-panel="${next.panel}"`)}</section>`:''}
+ ${u.panel?`<aside id="drawer" class="sidebar" role="dialog" aria-modal="false" aria-labelledby="panel-title"><header class="panelhead"><h2 id="panel-title" tabindex="-1">${esc(t(u.panel))}</h2><button data-action="hide" class="closepanel" aria-label="${esc(t('closePanel'))}">×</button></header><div class="panelbody" id="panelbody">${panelContent(state,u,busy)}</div></aside>`:''}
+ <div class="shop-controls"><span class="clock-note">${esc(t(mode==='sandbox'?'sandboxNote':'normalNote'))}</span><div class="control-actions">${actionButton(state.open?'close':'open','open','',true)}${mode==='sandbox'?actionButton('advance60','advance','data-minutes="60"'):actionButton('demo','mode')}</div></div>
+ <nav class="dock" aria-label="${esc(t('navShelves'))}">${[['shelves','navShelves','▦'],['stock','navStock','＋'],['report','navReport','≋'],['journal','navJournal','◇'],['settings','more','•••']].map(([p,label,icon])=>`<button data-action="panel" data-panel="${p}" aria-pressed="${u.panel===p}"><span aria-hidden="true">${icon}</span><span>${esc(t(label))}</span></button>`).join('')}</nav>
+ <p class="camera-hint">${esc(t('camera'))}</p>
+ ${u.blocking?`<section class="blocking" role="alert"><p>${esc(t(u.blocking))}</p>${u.blocking==='stale'?actionButton('refresh','reload'):u.blocking==='long_gap'?actionButton('catchup','catchup'):actionButton('retry','retry')}${actionButton('export','export')}</section>`:''}
+ ${u.notice?`<div class="message" role="status" aria-live="polite">${esc(u.notice)}</div>`:''}
+ ${u.formError&&u.formField==='general'?`<div class="message field-error" role="alert">${esc(u.formError)}</div>`:''}
+ ${u.zen?`<button class="zenbtn" data-action="zen">${esc(t('return'))}</button>`:''}
+ ${!state.shopName||u.rename?identityForm(state,u,busy):''}`);
+ if(activeId&&document.activeElement?.id!==activeId){const replacement=document.getElementById(activeId) as HTMLInputElement|null;if(replacement){replacement.focus({preventScroll:true});if(start!==null&&start!==undefined)try{replacement.setSelectionRange(start,end??start);}catch{}}}
+ world?.update(state);world?.selected(u.slot);world?.layout(!!u.panel&&!u.zen);world?.zen(u.zen);
+}
+function committed(previous:Snapshot,current:Snapshot){
+ if(previous.mode!==current.mode)return;
+ const sold=current.eventSequence-previous.eventSequence;
+ if(sold>0){let text=t('sold')+' '+sold;const empty=catalog.offerings.filter(o=>previous.inventory[o.id].stock>0&&current.inventory[o.id].stock===0);if(empty.length)text+=' · '+empty.map(o=>t(o.key)).join(', ')+' '+t('soldOut');notice(text);if(u.sound)void saleSound.play().catch(()=>{});}
+}
+function fail(e:unknown,field='general'){
+ const code=e instanceof Error?e.message:'invalid';
+ if(['stale','storage','rollback','long_gap'].includes(code)){u.blocking=code;return;}
+ u.formField=field;u.formError=t(code==='cash'?'cashError':code==='price'?'priceError':code==='quantity'?'quantityError':code==='identity'?'identityError':code);
+ if(u.formError===code&&!['command_limit','recovery_ineligible','discovery_locked'].includes(code))u.formError=t('invalid');
+}
+async function run(action:()=>Promise<void>,field='general',success?:()=>void){
+ // Lock this intent synchronously, before the first await. Double clicks are
+ // discarded rather than turned into a queue of fresh purchasing commands.
+ if(busy)return;busy=true;u.formError='';u.formField='';draw();const previous=state;
+ try{await action();u.blocking='';committed(previous,state);success?.();}catch(e){fail(e,field);}finally{busy=false;storeDraft(mode,u.draft);draw();}
+}
+async function act(kind:string,data:Partial<Command>={}){state=await saves.command(state,{id:commandId(),kind,...data},mode==='normal'?Date.now():state.watermark,Date.now());}
+function openPanel(p:string,source?:HTMLElement){if(source)focusReturn=source;const changed=u.panel!==p;u.panel=p;u.formError='';draw();if(changed){const body=document.getElementById('panelbody');if(body)body.scrollTop=0;}document.getElementById('panel-title')?.focus({preventScroll:true});}
+function closePanel(){u.panel='';u.formError='';draw();focusReturn?.focus({preventScroll:true});}
+async function switchMode(next:Mode){
+ storeDraft(mode,u.draft);const loaded=await saves.loadOrCreate(next,next==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());mode=next;state=loaded;u.draft=draftFor(mode,state);u.rename=false;u.reportDay='';u.slot=0;u.formError='';u.notice='';localStorage.setItem('shop.mode',mode);
+}
+app.addEventListener('input',e=>{
+ const input=e.target as HTMLInputElement;switch(input.id){case 'qty':u.draft.quantity=input.value;break;case 'shop-name':u.draft.shop=input.value;break;case 'company-name':u.draft.company=input.value;break;case 'shop-logo':u.draft.logo=input.value;break;default:if(input.dataset.priceId)u.draft.prices[input.dataset.priceId]=input.value;}
+ storeDraft(mode,u.draft);if(input.id==='qty')draw();
+});
+app.addEventListener('change',e=>{
+ const input=e.target as HTMLInputElement|HTMLSelectElement;
+ if(input.id==='locale'){setLocale(input.value);draw();}
+ if(input.id==='slot'){u.slot=Number(input.value);draw();}
+ if(input.id==='reportDay'){u.reportDay=input.value;draw();}
+ if(input.id==='quality'){u.quality=input.value;world?.quality(u.quality);}
+ if(input.id==='sound'){u.sound=(input as HTMLInputElement).checked;if(u.sound)void saleSound.play().catch(()=>{});}
+ if(input.id==='import'){const file=(input as HTMLInputElement).files?.[0];if(file)void run(async()=>{state=await saves.import(state,await file.text());u.draft=draftFor(mode,state);});}
+});
+app.addEventListener('submit',e=>{
+ if((e.target as HTMLElement).id!=='identity')return;e.preventDefault();
+ void run(async()=>{await act('identity',{text:u.draft.shop,company:u.draft.company,logo:u.draft.logo});u.rename=false;},'identity',()=>{notice(t('identitySaved'));});
+});
+app.addEventListener('click',e=>{
+ const target=(e.target as Element).closest<HTMLButtonElement>('button[data-action]');if(!target||target.disabled)return;const a=target.dataset.action!,id=target.dataset.id!,n=Number(target.dataset.slot??u.slot);
+ if(a==='panel'){openPanel(target.dataset.panel!,target);return;}if(a==='hide'){closePanel();return;}
+ if(a==='select-slot'){u.slot=n;draw();return;}if(a==='stock-slot'){u.slot=n;openPanel('stock',target);return;}
+ if(a==='zen'){u.zen=!u.zen;draw();return;}
+ if(a==='cancel-price'){delete u.draft.prices[id];u.formError='';storeDraft(mode,u.draft);draw();return;}
+ if(a==='rename'){u.rename=true;u.draft.shop=state.shopName;u.draft.company=state.companyName;u.draft.logo=state.logo;draw();document.getElementById('shop-name')?.focus();return;}
+ if(a==='cancel-identity'){u.rename=false;draw();return;}
+ if(a==='export'){download(JSON.stringify(state,null,2),`little-shop-${mode}.json`);return;}
+ const field=a==='buy'?'buy-'+id:a==='price'?'price-'+n:'general';
+ void run(async()=>{
+  switch(a){
+   case 'buy':{const q=Number(u.draft.quantity);if(!u.draft.quantity.trim()||!Number.isSafeInteger(q)||q<1||q>1000)throw Error('quantity');const o=catalog.offerings.find(x=>x.id===id)!;if(state.cash<purchaseCost(o.cost)*q){u.formField=field;throw Error('cash');}await act('buy',{itemId:id,quantity:q});notice(t(o.key)+' ×'+q+' · '+t('bought'));break;}
+   case 'display':if(state.inventory[id].stock===0)throw Error('displayEmptyError');await act('display',{itemId:id,slot:u.slot});notice(t('placed')+' '+(u.slot+1)+' · '+t('replacedNote'));break;
+   case 'price':{const raw=u.draft.prices[id]??String(state.inventory[id].price*10),price=Number(raw)/10;if(!raw.trim()||!Number.isSafeInteger(price)||price<1||price>100000)throw Error('price');await act('price',{itemId:id,price});delete u.draft.prices[id];notice(t('priceSaved'));break;}
+   case 'clear':await act('clear',{slot:n});break;
+   case 'open':await act('open');break;
+   case 'reveal':await act('reveal');u.panel='journal';notice(t('completeTitle'));break;
+   case 'recover':await act('recover');u.draft.quantity='5';u.panel='stock';notice(t('supportReceived'));break;
+   case 'advance':state=await saves.settle(state,state.watermark+Number(target.dataset.minutes)*60000,Date.now());break;
+   case 'mode':await switchMode(mode==='normal'?'sandbox':'normal');break;
+   case 'choose-mode':if(target.dataset.mode!==mode)await switchMode(target.dataset.mode as Mode);break;
+   case 'reload':{const loaded=await saves.read(mode);if(loaded)state=loaded;break;}
+   case 'catchup':state=await saves.settle(state,Math.min(Date.now(),state.watermark+86400000),Date.now());break;
+   case 'retry':if(mode==='normal')state=await saves.settle(state,Date.now(),Date.now());else state=(await saves.read(mode))!;break;
+  }
+ },field);
+});
+document.addEventListener('keydown',e=>{
+ if(e.key==='Escape'){if(u.rename){u.rename=false;draw();}else if(state?.shopName)closePanel();}
+ if(e.key==='Tab'&&document.querySelector('.modalshade')){const focusables=Array.from(document.querySelectorAll<HTMLElement>('.modal button:not(:disabled),.modal input'));const first=focusables[0],last=focusables.at(-1);if(e.shiftKey&&document.activeElement===first){last?.focus();e.preventDefault();}else if(!e.shiftKey&&document.activeElement===last){first?.focus();e.preventDefault();}}
+});
+function resume(){
+ if(!state||mode!=='normal'||document.hidden||busy||['stale','storage','long_gap'].includes(u.blocking))return;
+ const now=Date.now();if(now-state.watermark>=60000||now<state.lastWallTime||u.blocking==='rollback')void run(async()=>{state=await saves.settle(state,now,now);});
+}
+async function boot(){
+ const core=await loadCore();saves=new Saves(await database(),core);state=await saves.loadOrCreate(mode,mode==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());u.draft=draftFor(mode,state);draw();readyMs=performance.now()-started;
+ try{const {createWorld}=await import('./world');world=await createWorld(canvas,n=>{u.slot=n;openPanel('shelves');});world.update(state);world.layout(!!u.panel);worldReadyMs=performance.now()-started;}catch(e){console.error(e);u.worldFailed=true;}
+ draw();if(!state.shopName)document.getElementById('shop-name')?.focus();
  document.addEventListener('visibilitychange',resume);window.addEventListener('focus',resume);setInterval(resume,10000);resume();
- canvas.addEventListener('world-error',()=>notify('loadError'));
- Object.assign(window,{littleShopDiagnostics:()=>({core:'PORT_REQUIRED_FOR_UNITY',startupMs:performance.now()-buildStarted,world:world?.metrics(),resources:performance.getEntriesByType('resource').map(e=>({name:e.name,duration:e.duration,transferSize:(e as PerformanceResourceTiming).transferSize,encodedBodySize:(e as PerformanceResourceTiming).encodedBodySize})),userAgent:navigator.userAgent})});
+ canvas.addEventListener('world-error',()=>{u.worldFailed=true;draw();});
+ Object.assign(window,{littleShopDiagnostics:()=>({core:'PORT_REQUIRED_FOR_UNITY',uiReadyMs:readyMs,startupMs:worldReadyMs,worldReady:worldReadyMs!==null,world:world?.metrics(),userAgent:navigator.userAgent,resources:performance.getEntriesByType('resource').map(e=>({name:e.name,duration:e.duration,transferSize:(e as PerformanceResourceTiming).transferSize,encodedBodySize:(e as PerformanceResourceTiming).encodedBodySize}))})});
 }
-boot().catch(async e=>{console.error(e);app.innerHTML=`<div class="boot"><h2>${esc(t('loadError'))}</h2><p>${esc(t('recovery'))}</p><p>${esc(t(e instanceof Error&&dictionaries[locale][e.message]?e.message:'invalid'))}</p><button id="raw">${esc(t('rawExport'))}</button></div>`;document.querySelector<HTMLButtonElement>('#raw')!.onclick=()=>{try{const tx=saves.db.transaction('saves','readonly');const r=tx.objectStore('saves').get(`shop.w1.${mode}`);r.onsuccess=()=>download(JSON.stringify(r.result,null,2),'little-shop-raw-recovery.json');}catch{}};});
+boot().catch(e=>{console.error(e);app.innerHTML=`<main class="boot"><h2>${esc(t('loadError'))}</h2><p>${esc(t('recovery'))}</p><button id="raw">${esc(t('rawExport'))}</button></main>`;document.getElementById('raw')!.onclick=()=>{if(!saves)return;const tx=saves.db.transaction('saves','readonly'),r=tx.objectStore('saves').get('shop.w1.'+mode);r.onsuccess=()=>download(JSON.stringify(r.result,null,2),'little-shop-raw-recovery.json');};});

@@ -5,7 +5,7 @@
     "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/plusjakartasans/PlusJakartaSans[wght].ttf",
     "runtime": "public/fonts/PlusJakartaSans.ttf",
     "licence": "SIL Open Font License 1.1",
-    "subset": "W1 locale strings + basic Latin, numerals, symbols; user names may use system fallback"
+    "subset": "W1.1 locale strings + basic Latin, numerals, symbols; user names may use system fallback"
   },
   {
     "id": "font.NotoSansHK",
@@ -13,7 +13,7 @@
     "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanshk/NotoSansHK[wght].ttf",
     "runtime": "public/fonts/NotoSansHK.ttf",
     "licence": "SIL Open Font License 1.1",
-    "subset": "W1 locale strings + basic Latin, numerals, symbols; user names may use system fallback"
+    "subset": "W1.1 locale strings + basic Latin, numerals, symbols; user names may use system fallback"
   },
   {
     "id": "font.NotoSansJP",
@@ -21,7 +21,7 @@
     "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansjp/NotoSansJP[wght].ttf",
     "runtime": "public/fonts/NotoSansJP.ttf",
     "licence": "SIL Open Font License 1.1",
-    "subset": "W1 locale strings + basic Latin, numerals, symbols; user names may use system fallback"
+    "subset": "W1.1 locale strings + basic Latin, numerals, symbols; user names may use system fallback"
   },
   {
     "id": "font.NotoSansThai",
@@ -29,7 +29,7 @@
     "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthai/NotoSansThai[wdth,wght].ttf",
     "runtime": "public/fonts/NotoSansThai.ttf",
     "licence": "SIL Open Font License 1.1",
-    "subset": "W1 locale strings + basic Latin, numerals, symbols; user names may use system fallback"
+    "subset": "W1.1 locale strings + basic Latin, numerals, symbols; user names may use system fallback"
   },
   {
     "id": "font.NotoSansSC",
@@ -37,6 +37,6 @@
     "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/NotoSansSC[wght].ttf",
     "runtime": "public/fonts/NotoSansSC.ttf",
     "licence": "SIL Open Font License 1.1",
-    "subset": "W1 locale strings + basic Latin, numerals, symbols; user names may use system fallback"
+    "subset": "W1.1 locale strings + basic Latin, numerals, symbols; user names may use system fallback"
   }
 ]
