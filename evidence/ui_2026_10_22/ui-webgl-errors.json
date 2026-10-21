@@ -1,0 +1,14 @@
+[
+  {
+    "level": "error",
+    "message": "Error: WebGL not supported\n    at new ge (http://terminal.local:4173/assets/world-FwbVWuXO.js:27:21249)\n    at new k (http://terminal.local:4173/assets/world-FwbVWuXO.js:30:85466)\n    at wu (http://terminal.local:4173/assets/world-FwbVWuXO.js:566:122513)\n    at Zf (http://terminal.local:4173/assets/index-DKc0bqqc.js:13:6882)",
+    "timestamp": "2026-10-21T16:43:10.662Z",
+    "url": "http://terminal.local:4173/assets/index-DKc0bqqc.js"
+  },
+  {
+    "level": "error",
+    "message": "Error: WebGL not supported\n    at new ge (http://terminal.local:4173/assets/world-1lvXPbEt.js:27:21249)\n    at new k (http://terminal.local:4173/assets/world-1lvXPbEt.js:30:85466)\n    at wu (http://terminal.local:4173/assets/world-1lvXPbEt.js:566:122513)\n    at qf (http://terminal.local:4173/assets/index-Lz4_dTjJ.js:13:6882)",
+    "timestamp": "2026-10-21T16:45:05.251Z",
+    "url": "http://terminal.local:4173/assets/index-Lz4_dTjJ.js"
+  }
+]

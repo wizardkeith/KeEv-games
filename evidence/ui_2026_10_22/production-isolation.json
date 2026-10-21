@@ -1,0 +1,11 @@
+{
+  "all_absent": {
+    "next-stop-little-shop-art-review": true,
+    "shop.art-review": true,
+    "VITE_ART_REVIEW": true,
+    "__ui-review375": true
+  },
+  "qa_wrapper_absent": true,
+  "technical_port_marker": "retained in existing core diagnostic metadata; removed only from player About copy",
+  "scope": "ordinary production build; no browser/player DB accessed"
+}

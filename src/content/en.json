@@ -44,7 +44,7 @@
   "company": "Company / brand",
   "logo": "Mark (up to 4 characters)",
   "start": "Begin my shop",
-  "supplier": "Graybox supplier · provisional items & balance",
+  "supplier": "Shop stock catalogue",
   "tutorial1": "Choose something you like and buy a few.",
   "tutorial2": "Place stocked goods on your chosen display.",
   "tutorial3": "Check your prices, then open your shop.",
@@ -55,7 +55,7 @@
   "discovery": "A little sample",
   "reveal": "Reveal sample",
   "locked": "Available after your first sale.",
-  "revealed": "Paper sample · Select / Unique · 0 stats. Tutorial fixture, not a canon story item.",
+  "revealed": "Tutorial sample · No business bonuses · Not a canon story item",
   "accounting": "Purchases become inventory; only sold stock becomes cost. Reports use Tokyo dates.",
   "purchases": "Total stock payments",
   "bookValue": "Inventory book cost",
@@ -166,5 +166,11 @@
   "displayEmptyError": "Buy stock before placing goods on a display.",
   "minimalFX": "Minimal effects",
   "minimalFXNote": "Keep steady cues; disable dust, small character motions and brief 3D effects. Saved on this device only; shop rules stay the same.",
-  "skipReveal": "Skip opening animation"
+  "skipReveal": "Skip opening animation",
+  "qualityStandard": "Standard",
+  "qualitySelect": "Select",
+  "uniqueTag": "Unique tag",
+  "savePrice": "Save price",
+  "cancelPrice": "Cancel price change",
+  "removeDisplay": "Remove from display"
 }

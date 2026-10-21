@@ -1,0 +1,123 @@
+{
+  "method": "Read-only measurements of actual rendered DOM in a 375×780 same-origin iframe, via supported browser. Not physical mobile, GPU or FPS testing. Values captured in browser tool output.",
+  "measurements": [
+    {
+      "locale": "zh-HK",
+      "panel": "stock",
+      "viewport": [
+        375,
+        780
+      ],
+      "scrollTop": 0,
+      "panelBottom": 701,
+      "buyBottom": 680.875,
+      "buyHeight": 44,
+      "buyFullyVisible": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh-HK",
+      "panel": "journal",
+      "actionsBottom": 568.015625,
+      "panelBottom": 701,
+      "actionsFullyVisible": true
+    },
+    {
+      "locale": "en",
+      "panel": "stock",
+      "viewport": [
+        375,
+        780
+      ],
+      "scrollTop": 0,
+      "panelBottom": 701,
+      "buyBottom": 680.875,
+      "buyHeight": 44,
+      "buyFullyVisible": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "en",
+      "panel": "journal",
+      "actionsBottom": 568.015625,
+      "panelBottom": 701,
+      "actionsFullyVisible": true
+    },
+    {
+      "locale": "th",
+      "panel": "stock",
+      "viewport": [
+        375,
+        780
+      ],
+      "scrollTop": 0,
+      "panelBottom": 701,
+      "buyBottom": 680.875,
+      "buyHeight": 44,
+      "buyFullyVisible": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "th",
+      "panel": "journal",
+      "actionsBottom": 546.328125,
+      "panelBottom": 701,
+      "actionsFullyVisible": true
+    },
+    {
+      "locale": "ja",
+      "panel": "stock",
+      "viewport": [
+        375,
+        780
+      ],
+      "scrollTop": 0,
+      "panelBottom": 701,
+      "buyBottom": 680.875,
+      "buyHeight": 44,
+      "buyFullyVisible": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "ja",
+      "panel": "journal",
+      "actionsBottom": 568.015625,
+      "panelBottom": 701,
+      "actionsFullyVisible": true
+    },
+    {
+      "locale": "zh-CN",
+      "panel": "stock",
+      "viewport": [
+        375,
+        780
+      ],
+      "scrollTop": 0,
+      "panelBottom": 701,
+      "buyBottom": 680.875,
+      "buyHeight": 44,
+      "buyFullyVisible": true,
+      "horizontalOverflow": false
+    },
+    {
+      "locale": "zh-CN",
+      "panel": "journal",
+      "actionsBottom": 568.015625,
+      "panelBottom": 701,
+      "actionsFullyVisible": true
+    }
+  ],
+  "formChecks": {
+    "invalidZeroDisabled": true,
+    "quantityFocusRetained": true,
+    "shortfallAt1000Shown": 348600,
+    "quantityRestored": 5,
+    "slot2Label": true,
+    "TabQtyToSlot": true,
+    "EscapeReturnFocus": "stock",
+    "priceDraftCancelledFrom900To800": true,
+    "PageDownScrollTopObserved": 131,
+    "cashDisplayedBeforeAfter": 51400,
+    "noEconomicCommandsOrSaveImportsPerformed": true
+  }
+}

@@ -44,7 +44,7 @@
   "company": "公司／品牌名稱",
   "logo": "標記（最多 4 字）",
   "start": "開啟我的小店",
-  "supplier": "灰盒供應商 · 暫定商品與數值",
+  "supplier": "小店入貨目錄",
   "tutorial1": "挑一件喜歡嘅商品，先入貨幾件。",
   "tutorial2": "把有存貨嘅商品放上指定陳列架。",
   "tutorial3": "確認售價，為小店開門。",
@@ -55,7 +55,7 @@
   "discovery": "一份小小樣本",
   "reveal": "揭開樣本",
   "locked": "完成首宗銷售後可查看。",
-  "revealed": "紙品樣本 · Select / Unique · 0 數值。僅教學測試，非正式故事物品。",
+  "revealed": "教學樣本 · 無經營加成 · 非正式故事物品",
   "accounting": "入貨先變存貨；只有售出部分計入商品成本。報告按東京日期累計。",
   "purchases": "累計入貨付款",
   "bookValue": "存貨帳面成本",
@@ -166,5 +166,11 @@
   "displayEmptyError": "請先入貨，再把商品放上貨架。",
   "minimalFX": "最少特效",
   "minimalFXNote": "只保留穩定提示，關閉微塵、角色小動作及短暫 3D 特效。設定只保存在此裝置，不影響經營。",
-  "skipReveal": "略過開箱動效"
+  "skipReveal": "略過開箱動效",
+  "qualityStandard": "標準",
+  "qualitySelect": "精選",
+  "uniqueTag": "唯一標記",
+  "savePrice": "儲存售價",
+  "cancelPrice": "取消改價",
+  "removeDisplay": "收起陳列"
 }

@@ -44,7 +44,7 @@
   "company": "公司／品牌名称",
   "logo": "标记（最多 4 字）",
   "start": "开启我的小店",
-  "supplier": "灰盒供应商 · 暂定商品与数值",
+  "supplier": "小店进货目录",
   "tutorial1": "挑一件喜欢的商品，先进货几件。",
   "tutorial2": "把有库存的商品放上指定陈列架。",
   "tutorial3": "确认售价，为小店开门。",
@@ -55,7 +55,7 @@
   "discovery": "一份小小样本",
   "reveal": "揭开样本",
   "locked": "完成首宗销售后可查看。",
-  "revealed": "纸品样本 · Select / Unique · 0 数值。仅教学测试，非正式故事物品。",
+  "revealed": "教学样本 · 无经营加成 · 非正式故事物品",
   "accounting": "采购先变存货；只有售出部分计入商品成本。报告按东京日期累计。",
   "purchases": "累计采购付款",
   "bookValue": "存货账面成本",
@@ -166,5 +166,11 @@
   "displayEmptyError": "请先进货，再把商品放上货架。",
   "minimalFX": "最少特效",
   "minimalFXNote": "只保留稳定提示，关闭微尘、角色小动作及短暂 3D 特效。设置仅保存在此设备，不影响经营。",
-  "skipReveal": "跳过开箱动效"
+  "skipReveal": "跳过开箱动效",
+  "qualityStandard": "标准",
+  "qualitySelect": "精选",
+  "uniqueTag": "唯一标签",
+  "savePrice": "保存售价",
+  "cancelPrice": "取消改价",
+  "removeDisplay": "收起陈列"
 }

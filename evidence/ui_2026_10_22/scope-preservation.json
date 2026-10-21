@@ -1,0 +1,16 @@
+{
+  "baseline": "6c42daeae2246275bc98553b774fe800c068cc32",
+  "pre_documentation_changed_files": [
+    "evidence/content-validation.json",
+    "src/content/en.json",
+    "src/content/ja.json",
+    "src/content/th.json",
+    "src/content/zh-CN.json",
+    "src/content/zh-HK.json",
+    "src/style.css",
+    "src/ui/panels.ts",
+    "tools/locales.py"
+  ],
+  "main_world_core_storage_art_assets_tests_lockfile_unchanged": true,
+  "method": "git diff name list from freshly opened canonical; UI/copy only, no asset regeneration"
+}

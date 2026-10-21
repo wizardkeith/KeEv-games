@@ -1,6 +1,6 @@
 # 下一站・小店物語 / Next Stop, Little Shop
 
-W1.1A1 source closeout candidate (startup visibility P3) by KeEv Games. The player names their own business. This checkpoint improves the ten-item management loop and preserves the original Bible. It stops before full Tokyo content production.
+W1.1A1 focused UI refinement (2026-10-22), extending the accepted startup visibility closeout by KeEv Games. The player names their own business. This checkpoint improves the ten-item management loop and preserves the original Bible. It stops before full Tokyo content production.
 
 ## Run and verify
 
@@ -38,7 +38,7 @@ cd proof/csharp-headless
 dotnet run --project adapters/Headless -c Release -- test
 ```
 
-Browser DOM/IndexedDB walkthrough and CSS viewport checks are recorded in docs/HANDOFF.md and evidence/w1_1a1/. The supported cloud browser reports WebGL not supported, so actual 3D appearance, FPS and physical-device/native testing remain unverified. GLB validation / NullEngine import is structural evidence only. This is an art review candidate, not a commercial launch.
+Browser DOM/IndexedDB walkthrough and CSS viewport checks are recorded in docs/HANDOFF.md, evidence/ui_2026_10_22/ and preserved evidence/w1_1a1/. The supported cloud browser reports WebGL not supported, so actual 3D appearance, FPS and physical-device/native testing remain unverified. GLB validation / NullEngine import is structural evidence only. This is an art review candidate, not a commercial launch.
 
 ## Source and compatibility
 
@@ -46,4 +46,4 @@ Snapshot schema 2 / simulation ts-w1-2 migrates valid v1 data without resetting 
 
 For safe local visual review, build with `VITE_ART_REVIEW=1 npm run build`; it uses a separate QA database and mode/draft/locale/presentation keys. Never overwrite an existing sandbox to stage screenshots. Rebuild with ordinary `npm run build` before packaging production. The review switch is compile-only; production has no review query hook. See docs/W1_1A_Visual_Check_zh-HK.md for the three optional follow-up views.
 
-Source corrections are closed after the startup visibility fix. Original art/economy scope remains frozen; 3D visual confirmation is still pending. Delivery ZIP creation/closed-reader source verification is implemented in tools/checkpoint.py; see the current handoff and its actual publication receipt.
+Source corrections remain closed after the accepted startup visibility fix. A separately authorised 2026-10-22 UI-only pass refines stock/journal hierarchy and five-language player copy. Original art/economy scope remains frozen; 3D visual confirmation is still pending. Delivery ZIP creation/closed-reader source verification is implemented in tools/checkpoint.py; see the current handoff and its actual publication receipt.

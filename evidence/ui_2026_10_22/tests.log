@@ -1,0 +1,71 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> next-stop-little-shop-w1@0.1.1 test
+> node --import tsx --test tests/*.test.ts
+
+✔ ellipsoid normals are perpendicular to both true nonuniform surface tangents (9.814789ms)
+✔ tapered elliptical cylinder normals include slope and cross-section scale (1.47202ms)
+✔ elliptically stretched torus uses inverse-transpose normals (3.144342ms)
+✔ rotation preserves tangent-normal orthogonality and unit normals (6.982295ms)
+✔ product curves and hollow mug have finite unit normals and correctly oriented nondegenerate triangles (32.389952ms)
+✔ same-color different semantic materials remain distinct in grouping (0.600602ms)
+✔ generic semantic pivots flatten to exactly the static recipe without lost parts (1.605852ms)
+✔ previous W1.1 GLB master and Web bytes remain unchanged (1.886953ms)
+BJS - [00:46:44]: Babylon.js v8.32.0 - Null engine
+✔ mug rim shares both wall boundaries and seals the full polygonal annulus while leaving cavity open (69.797008ms)
+✔ mug handle has measured upper/lower surface contacts and an unobstructed opening without entering cavity (8.439295ms)
+✔ capped handle arc keeps finite unit normals, correct cap planes and nondegenerate winding (1.405901ms)
+✔ actual runtime material adapter and independent GLB import agree on sidedness and common PBR state (150.617351ms)
+✔ published W1.1A masters/manifests remain intact and exact authoring source is frozen (3.03695ms)
+✔ explicit golden purchase → display → sale → P&L (22.977778ms)
+✔ stock cash and inventory book value conserve; purchase is not expense (1.332351ms)
+✔ duplicate purchase command exactly once (0.548514ms)
+✔ one 60-minute settlement equals two 30-minute settlements (1.596968ms)
+✔ fractional demand, salary and rent remainder carry across arbitrary splits (6.088994ms)
+✔ repeated offline settlement / reload has no second payout (1.907264ms)
+✔ deterministic replay repeated 10 times (15.878255ms)
+✔ render/FPS/background schedules have identical economic authority (11.916415ms)
+✔ modifier group aggregates before cap and half-even is exact (1.158009ms)
+✔ invalid actions reject atomically and cannot produce negative stock (2.388367ms)
+✔ future and old schema fail without mutating current save (1.190117ms)
+✔ numeric bounds, invalid references and unsafe imports rejected (1.115325ms)
+✔ rollback and long gaps fail explicitly (0.95865ms)
+✔ Tokyo schedule: closed hours have rent but no sales/wages (0.516346ms)
+✔ test set, discovery and six tiers remain separate from Unique (0.797397ms)
+✔ inventory unit cost rounding preserves total cost on final sale (1.58459ms)
+✔ conversion cannot exceed capacity even at minimum prices (1.23179ms)
+✔ feedback follows actual commits; load/import/mode/duplicate never replay rewards (7.936488ms)
+✔ support is distinct from sales and remains one feedback after repeated commands (0.78593ms)
+✔ presentation clock has one bounded effect, skip/hidden/dispose prevent backlog and replay (1.199091ms)
+✔ static customer anchors clear display/counter bounds and survive all visibility policies (1.13204ms)
+✔ art review DB is isolated from both player slots; default database and CAS preserved (16.36075ms)
+✔ F1 deferred actual Saves result after hidden cancellation commits once without FX/audio or resume replay (24.878512ms)
+✔ F1 world feedback rejects hidden/disposed callers independently of the UI guard (1.734194ms)
+✔ F2 slow frames retain Skip until shared UI deadline synchronously cancels scene; normal completion also clears UI (5.123374ms)
+✔ F2 skip, replacement, hidden/mode cancellation and failed scene preserve committed reveal without orphaned Skip (10.501581ms)
+✔ F2 Low, Auto downgrade, Minimal and Reduce Motion use identical static completion policy (10.099607ms)
+✔ F3 actual display click captures shelf 2 across deferred Saves while selection changes to shelf 3 (7.59065ms)
+✔ diagnostics separate historical world readiness from current availability after context loss (7.123878ms)
+✔ boot wires cancellation before UI: deferred-world hide/resume consumes one commit without replay; visible completion still feeds back (33.022712ms)
+✔ hidden during deferred first world then world failure keeps usable committed state and never starts stale FX/audio (7.62415ms)
+✔ IDB atomic CAS, interruption, import validation, reload and mode isolation (32.018915ms)
+✔ A1 cheap demand cannot transfer into an expensive sale (3.936221ms)
+✔ A1 reverse change, no-op and reload/split intervals obey the price policy (1.937079ms)
+✔ A2 free recovery reconciles cash, preserves P&L and permits a new sale (12.956968ms)
+✔ A2 eligibility requires insufficient purchasing cash AND no sellable stock (0.313091ms)
+✔ A2 repeated episodes may recover after later actual losses, without deleting debt (4.460718ms)
+✔ A3 every numeric field rejects coercible/malformed numbers (6.169656ms)
+✔ A3 recovery grant numeric records and references reject malformed values (1.532622ms)
+✔ A4 full ledger still settles and duplicate ordinary IDs remain no-op (151.291604ms)
+✔ A7 free-choice tutorial uses actual stocked display and retained milestones (1.420312ms)
+✔ v1 normal and sandbox migrate without losing identity, cash, inventory or history (2.784471ms)
+✔ IDB malformed import preserves original good save and v1 import migrates atomically (15.592641ms)
+✔ IDB concurrent different recovery IDs cannot receive duplicate grants; reload preserved (19.52058ms)
+ℹ tests 57
+ℹ suites 0
+ℹ pass 57
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1832.813743

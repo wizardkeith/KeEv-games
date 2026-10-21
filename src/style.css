@@ -17,3 +17,30 @@ button{transition:background-color 160ms ease,border-color 160ms ease,box-shadow
 @keyframes panel-arrive{from{opacity:.65;translate:0 5px}to{opacity:1;translate:0 0}}@keyframes message-arrive{from{opacity:.5;translate:0 3px}to{opacity:1;translate:0 0}}@keyframes sample-open{0%{opacity:.5;transform:scale(.96)}40%,100%{opacity:1;transform:scale(1)}}
 .minimal-fx *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 @media(prefers-reduced-motion:reduce){.sidebar,.message,.completion.revealing .sample-icon{animation:none}}
+
+/* Focused W1.1A1 UI refinement: keep the world/drawer bounds and 44px controls. */
+.stock-intro{margin:0 0 6px}
+.stock-tools{gap:12px}
+.stock-tools .field{margin:4px 0 8px;gap:4px}
+.stock-card{padding:12px 0}
+.stock-card .product-title{margin-bottom:8px}
+.stock-costs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0;padding:6px 0;border-bottom:1px solid var(--border)}
+.stock-costs>div{min-width:0}
+.stock-costs dt{font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.stock-costs dd{margin:2px 0 0;font-size:15px;font-weight:600;overflow-wrap:anywhere}
+.stock-costs>div:last-child{text-align:right}
+.stock-balance{padding:6px 0;border:0}
+.stock-actions{margin-top:8px}
+.stock-actions>*{flex:1 1 calc(50% - 4px);min-width:0}
+.stock-actions .primary{flex-basis:calc(50% - 4px)}
+.stock-card>p.muted{margin:6px 0 0}
+.completion{padding:16px}
+.completion .sample-icon{font-size:24px;line-height:1;margin:0 0 8px;text-align:left}
+.completion h3{margin:0 0 8px}
+.completion>p{margin:0 0 12px}
+.complete-actions{margin:12px 0}
+.complete-actions>*{flex:1 1 calc(50% - 4px);min-width:0}
+.complete-actions .primary{flex-basis:calc(50% - 4px)}
+.sample-details{border-top:1px solid #d8c8df;padding-top:10px}
+.sample-tags{display:flex;gap:6px;flex-wrap:wrap}
+.completion .sample-details p{font-size:12px;line-height:1.65;margin:7px 0 0}
