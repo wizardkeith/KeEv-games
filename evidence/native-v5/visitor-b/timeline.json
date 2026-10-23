@@ -1,0 +1,31 @@
+[
+  {
+    "seconds": 5.709,
+    "name": "Current production High scene opened through real Sandbox command"
+  },
+  {
+    "seconds": 126.086,
+    "name": "Existing Visitor B reaches reachable service approach"
+  },
+  {
+    "seconds": 127.803,
+    "name": "Actual settlement committed before service",
+    "sold": 16,
+    "time": 1792548000000
+  },
+  {
+    "seconds": 193.028,
+    "name": "Actual single bag owner transferred to Visitor B socket",
+    "carriedBag": "visitor-b",
+    "activeProps": [
+      {
+        "kind": "bag",
+        "parent": "actor.visitor-b.native.v3.socket-left"
+      }
+    ]
+  },
+  {
+    "seconds": 316.513,
+    "name": "Visitor B exits through real doorway"
+  }
+]

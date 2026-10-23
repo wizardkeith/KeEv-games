@@ -1,0 +1,54 @@
+{
+  "source": "b9d240a5ebcf86f2ce939e1a815904b3ed8bd2de",
+  "renderer": "Chromium WebGL2 ANGLE SwiftShader software",
+  "quality": "high",
+  "events": [
+    {
+      "seconds": 5.709,
+      "name": "Current production High scene opened through real Sandbox command"
+    },
+    {
+      "seconds": 126.086,
+      "name": "Existing Visitor B reaches reachable service approach"
+    },
+    {
+      "seconds": 127.803,
+      "name": "Actual settlement committed before service",
+      "sold": 16,
+      "time": 1792548000000
+    },
+    {
+      "seconds": 193.028,
+      "name": "Actual single bag owner transferred to Visitor B socket",
+      "carriedBag": "visitor-b",
+      "activeProps": [
+        {
+          "kind": "bag",
+          "parent": "actor.visitor-b.native.v3.socket-left"
+        }
+      ]
+    },
+    {
+      "seconds": 316.513,
+      "name": "Visitor B exits through real doorway"
+    }
+  ],
+  "transfer": {
+    "rigVersion": "native-characters-v5-r1",
+    "staffClip": "native.staff.pack-handover.v3",
+    "propCount": 5,
+    "carriedBag": "visitor-b",
+    "activeProps": [
+      {
+        "kind": "bag",
+        "parent": "actor.visitor-b.native.v3.socket-left"
+      }
+    ],
+    "visibleTime": 30.901999999999838
+  },
+  "errors": [],
+  "limitations": [
+    "Encoded video timing is not a physical GPU or game FPS result",
+    "No audio or native-device acceptance"
+  ]
+}

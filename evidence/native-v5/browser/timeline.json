@@ -1,0 +1,204 @@
+[
+  {
+    "seconds": 3.23,
+    "name": "production WebGL ready",
+    "renderer": {
+      "vendor": "Google Inc. (Google)",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+    }
+  },
+  {
+    "seconds": 3.943,
+    "name": "purchase committed",
+    "id": "off.towel",
+    "quantity": 3,
+    "cash": 4865,
+    "stock": 3,
+    "doubleClick": true
+  },
+  {
+    "seconds": 4.73,
+    "name": "display committed",
+    "id": "off.towel",
+    "slot": 0,
+    "shelves": [
+      "off.towel",
+      "",
+      ""
+    ]
+  },
+  {
+    "seconds": 5.136,
+    "name": "purchase committed",
+    "id": "off.tray",
+    "quantity": 2,
+    "cash": 4755,
+    "stock": 2,
+    "doubleClick": false
+  },
+  {
+    "seconds": 5.508,
+    "name": "display committed",
+    "id": "off.tray",
+    "slot": 1,
+    "shelves": [
+      "off.towel",
+      "off.tray",
+      ""
+    ]
+  },
+  {
+    "seconds": 6.148,
+    "name": "purchase committed",
+    "id": "off.notebook",
+    "quantity": 10,
+    "cash": 4355,
+    "stock": 10,
+    "doubleClick": false
+  },
+  {
+    "seconds": 6.603,
+    "name": "display committed",
+    "id": "off.notebook",
+    "slot": 2,
+    "shelves": [
+      "off.towel",
+      "off.tray",
+      "off.notebook"
+    ]
+  },
+  {
+    "seconds": 7.19,
+    "name": "purchase committed",
+    "id": "off.towel",
+    "quantity": 5,
+    "cash": 4130,
+    "stock": 8,
+    "doubleClick": false
+  },
+  {
+    "seconds": 7.725,
+    "name": "purchase committed",
+    "id": "off.mug",
+    "quantity": 4,
+    "cash": 3850,
+    "stock": 4,
+    "doubleClick": false
+  },
+  {
+    "seconds": 8.297,
+    "name": "display committed",
+    "id": "off.mug",
+    "slot": 1,
+    "shelves": [
+      "off.towel",
+      "off.mug",
+      "off.notebook"
+    ]
+  },
+  {
+    "seconds": 9.024,
+    "name": "display committed",
+    "id": "off.mug",
+    "slot": 0,
+    "shelves": [
+      "off.mug",
+      "",
+      "off.notebook"
+    ]
+  },
+  {
+    "seconds": 9.604,
+    "name": "display committed",
+    "id": "off.towel",
+    "slot": 1,
+    "shelves": [
+      "off.mug",
+      "off.towel",
+      "off.notebook"
+    ]
+  },
+  {
+    "seconds": 12.362,
+    "name": "real settlement with no eligible customer (fallback)",
+    "sold": 16,
+    "time": 1792548000000
+  },
+  {
+    "seconds": 14.702,
+    "name": "search and draft repaint preserve existing visitor route"
+  },
+  {
+    "seconds": 92.345,
+    "name": "existing customer browses"
+  },
+  {
+    "seconds": 93.863,
+    "name": "real settlement before handoff",
+    "sold": 6,
+    "time": 1792551600000
+  },
+  {
+    "seconds": 141.198,
+    "name": "actual bag ownership transfer",
+    "visitor": "visitor-a"
+  },
+  {
+    "seconds": 246.039,
+    "name": "recipient exits through door"
+  },
+  {
+    "seconds": 256.688,
+    "name": "complete uncut gameplay video saved"
+  },
+  {
+    "seconds": 263.19,
+    "name": "purchase committed",
+    "id": "off.mug",
+    "quantity": 1,
+    "cash": 5700,
+    "stock": 1,
+    "doubleClick": false
+  },
+  {
+    "seconds": 264.009,
+    "name": "display committed",
+    "id": "off.mug",
+    "slot": 2,
+    "shelves": [
+      "",
+      "off.towel",
+      "off.mug"
+    ]
+  },
+  {
+    "seconds": 264.431,
+    "name": "invalid input, insufficient cash, focus, per-item drafts and retained filter verified"
+  },
+  {
+    "seconds": 267.631,
+    "name": "actual save export/import/reload preserves state and drafts"
+  },
+  {
+    "seconds": 268.358,
+    "name": "purchase committed",
+    "id": "off.notebook",
+    "quantity": 1,
+    "cash": 5660,
+    "stock": 1,
+    "doubleClick": false
+  },
+  {
+    "seconds": 297.412,
+    "name": "320/375px five-language responsive and keyboard checks passed"
+  },
+  {
+    "seconds": 297.412,
+    "name": "QA remains in isolated Sandbox; no Normal identity or player save mutation"
+  },
+  {
+    "seconds": 297.54,
+    "name": "uncut interaction video saved"
+  }
+]

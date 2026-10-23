@@ -1,0 +1,37 @@
+[
+  {
+    "file": "evidence/native-v5/browser/interaction.webm",
+    "bytes": 12444829,
+    "sha256": "f7c4f85ed599871f2581a624234f1f78fa34eaf45759b87191e9122b861082e2",
+    "duration_seconds": 256.76,
+    "encoded_frame_rate": "25/1",
+    "audio_streams": 0,
+    "review": "Chronological sampled frames inspected; uncut original included. Encoded FPS is not game FPS."
+  },
+  {
+    "file": "evidence/native-v5/visitor-b/interaction.webm",
+    "bytes": 13947376,
+    "sha256": "9f06ef7f0a96d881c8022e824e970a9c4b282a113355ff43363c39a161604e5e",
+    "duration_seconds": 317.08,
+    "encoded_frame_rate": "25/1",
+    "audio_streams": 0,
+    "review": "Chronological sampled frames inspected; uncut original included. Encoded FPS is not game FPS."
+  },
+  {
+    "file": "evidence/native-v5/stock-lifecycle/interaction.webm",
+    "bytes": 5132237,
+    "sha256": "ba85d9b4a52f89c3f520806f4d3fc4ecacb200c422612dfff6163b03b477c419",
+    "duration_seconds": 121.8,
+    "encoded_frame_rate": "25/1",
+    "audio_streams": 0,
+    "review": "Chronological sampled frames inspected; uncut original included. Encoded FPS is not game FPS."
+  },
+  {
+    "file": "evidence/native-v5/browser/ui-acceptance.webm",
+    "bytes": 3417259,
+    "sha256": "c4ee84be5226e866580e70d697d582fe6338dd54af05b05a03b05459982cea81",
+    "duration_seconds": 41.48,
+    "encoded_frame_rate": "25/1",
+    "audio_streams": 0
+  }
+]
