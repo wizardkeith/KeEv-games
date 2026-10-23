@@ -53,7 +53,7 @@ const zhHK = {
  back:'返回小店',
  smallMoment:'一個小片刻',
  reportCurrent:'以下是報表目前的數字，全日結果仍會隨經營更新。',
- noSale:'未有售出紀錄。陳列有存貨嘅商品，並喺營業時間內開店。'
+ noSale:'暫時沒有銷售紀錄。請把有存貨的商品上架，並在營業時間內開始營業。'
 } as const;
 
 export type Day1CopyKey = keyof typeof zhHK;

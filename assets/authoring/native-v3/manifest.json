@@ -4,20 +4,23 @@
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
-    "src/art/native-characters.ts": "9a36fec811375eb944f0511ca214bed71cb93567447fee64929eb6993d573181",
+    "src/art/native-characters.ts": "caa1189e97f88cffc75c2e96e606150d18494bc7fc3b24c0dc62eb0e66ed7950",
     "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
-    "src/art/native-materials.ts": "3bf54ba8c589497a2014bced5758b4b30c4f57dd89f2982272b14217170cdaf6",
+    "src/art/native-materials.ts": "f614aa78548aedb281c1a44dadba7ec63af4475abba0047fc9effc7bd709bc61",
     "src/presentation/native-motion.ts": "215b955ec4b3fc83400a478545882b257fc244247fb16ea630748bbce8547000",
     "src/presentation/native-staff.ts": "bc24e60d90398f4fb1436820209c886ec631917e9531fbe2890de646adfcfa27",
     "src/presentation/native-staff-player.ts": "5f57bc4a85ca0b431b7eb81ba50a95d44954a9a10ac276595a79b686cd86acb1",
     "src/presentation/native-feet.ts": "440404e1bceabdb2bf8d8f9f699d030c40e4815f7b0e904ea15a3f6a180bdef3",
     "src/presentation/native-delivery.ts": "0f151cc4f9c293b20fc680fda7f6125ee93501a4c10f680e8563f66cdcf9b942",
     "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
-    "src/world.ts": "c107805f8eb3a31c6a2d8877083339dfff4a9097b2ff2f9c731f0dda85411de1",
+    "src/world.ts": "8aa841223b8f13a2f0942390cf937f2961d9ef123801398070a74a6fb3c035c3",
     "src/presentation/native-routes.ts": "248918d9a9942383431892aaf3dc9b6bd794be8c5ca85080f490cd40ff81beb1",
     "src/presentation/native-scene.ts": "db04429859b5c7adcf23a3730cc2244ae5e2620db8db1e2b50eee3f988736e3e",
-    "tools/export-native-characters.ts": "45197631fc63a64397f8f64471e81a2be61f445841f6a1b47ae1fccbe557da00"
+    "tools/export-native-characters.ts": "58354f50486e7ab5597bf759caa90e28a252adc23f9080b69afcabb4e4daf1b5",
+    "tools/generate-v5-hair.py": "2708f0ecaab1a236d1338023a25da7a2ff4c620537391f0e9aef719e7a28016b",
+    "assets/masters/native-v5/hair-strand-basecolor.png": "f735cf754d5333711f0809e11a1dbe09f2ae5e566d01e3625b3a94e98adc65e1",
+    "assets/masters/native-v5/hair-strand-normal.png": "c5603902148920f86bf59a66920f357f7a6f845b7891e26bbb3845efeeb9091b"
   },
   "rig": "assets/authoring/native-v3/rig-contract.json",
   "motion": {
@@ -33,7 +36,7 @@
     "clips": "External procedural rigid part definitions, not embedded glTF animations"
   },
   "format": "glTF 2 binary, rigid parent hierarchy, local rest pivots; no skins/skeleton/embedded animation clips",
-  "material": "Geometry palette with explicit IEC sRGB→linear standard PBR fallback; no texture/atlas/shader external dependency; future engine adapter should calibrate soft toon response",
+  "material": "Geometry palette with explicit IEC sRGB→linear standard PBR fallback; original bob strand colour/normal inputs embedded in GLB; shared cylindrical UV seams and standard PBR; no external texture dependency; future engine adapter should calibrate soft toon response",
   "rights": "Original project custom loft geometry/design and existing reusable primitive authoring; no external model, picture, texture, video or paid service used",
   "visualStatus": "Source, geometry and export integrity checked; actual 3D appearance, pose clearance and normal-camera readability require real WebGL visual confirmation",
   "assets": [
@@ -42,8 +45,8 @@
       "id": "actor.misaki.native.v3",
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
-      "bytes": 380352,
-      "sha256": "77f46cfcd7d7e0046194030f8171a3176f90c419dd6ca659ff74936c2ade38e0",
+      "bytes": 713568,
+      "sha256": "4c522a52a0bc302d022f3451d7a990c6da85db0b4188a384610bf4cd9f6d972d",
       "nodes": [
         {
           "id": "body",
@@ -622,8 +625,8 @@
       "id": "actor.visitor-b.native.v3",
       "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
       "web": "public/assets/native-v3/visitor-b-native-v3.glb",
-      "bytes": 374052,
-      "sha256": "d230de55605b21c5949eb95aac32ad9cc76939b62ebc7c5c80230f150aadb54b",
+      "bytes": 707268,
+      "sha256": "345c58f42be2b1cee3bae47aeadcee40ac08df781adf91d36959220c5404846f",
       "nodes": [
         {
           "id": "body",

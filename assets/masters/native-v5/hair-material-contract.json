@@ -1,0 +1,24 @@
+{
+  "id": "native.v5.hair.strands",
+  "source": "tools/generate-v5-hair.py",
+  "rights": "Original mathematical fields; no external images or models",
+  "UV": "Cylindrical atan2(z-.028,x) u, head-local y height v; seam triangles split with u+1, sampler repeat. Only native bob roughness .60 material uses these inputs; eyelash/brow surfaces are plain.",
+  "normal_scale": 0.65,
+  "baked_light": false,
+  "maps": [
+    {
+      "file": "assets/masters/native-v5/hair-strand-basecolor.png",
+      "public": "public/assets/native-v5/hair-strand-basecolor.png",
+      "bytes": 53435,
+      "sha256": "f735cf754d5333711f0809e11a1dbe09f2ae5e566d01e3625b3a94e98adc65e1",
+      "colour_space": "sRGB"
+    },
+    {
+      "file": "assets/masters/native-v5/hair-strand-normal.png",
+      "public": "public/assets/native-v5/hair-strand-normal.png",
+      "bytes": 250411,
+      "sha256": "c5603902148920f86bf59a66920f357f7a6f845b7891e26bbb3845efeeb9091b",
+      "colour_space": "linear tangent normal OpenGL +Y"
+    }
+  ]
+}

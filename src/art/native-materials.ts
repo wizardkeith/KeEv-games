@@ -7,3 +7,6 @@ export function nativeMaterialIntent(surface:{role?:MaterialRole;color:string;al
  if(!Number.isFinite(roughness)||roughness<0||roughness>1)throw new RangeError('native material roughness');
  return {...base,roughness,materialId:roughness===base.roughness?base.materialId:`${base.materialId}:native-r${roughness}`};
 }
+
+/** Original authored strand colour and OpenGL tangent normal inputs, shared by Web/GLB. */
+export const nativeHairMaterial={roughness:.60,baseColor:'/assets/native-v5/hair-strand-basecolor.png',normal:'/assets/native-v5/hair-strand-normal.png',normalScale:.65} as const;
