@@ -1,5 +1,5 @@
 {
-  "version": "native-motion-v3",
+  "version": "native-motion-v3.1",
   "source": "src/presentation/native-staff.ts",
   "units": {
     "length": "metres",
@@ -12,7 +12,7 @@
     "forward": "-Z"
   },
   "skeletalClips": false,
-  "method": "Rigid-part procedural samples, additive to named node rest transforms; no foot IK.",
+  "method": "Rigid-part procedural staff playback; planted world-space foot anchors solved by a small two-link leg IK adapter. No embedded skeletal clips.",
   "staffClips": [
     {
       "id": "native.staff.idle.v3",
@@ -123,20 +123,21 @@
     }
   ],
   "walk": {
-    "id": "native.visitor.walk.v3",
+    "id": "native.visitor.walk.v3.1",
     "loop": true,
-    "source": "distance-driven starter sampleWalk; route displacement owns distance",
-    "strideMetres": 0.72,
-    "markers": [
-      {
-        "phase": 0,
-        "event": "left-contact"
-      },
-      {
-        "phase": 0.5,
-        "event": "right-contact"
-      }
-    ]
+    "source": "src/presentation/native-feet.ts NativeFootPlant per pooled visitor; route owns actual root displacement",
+    "stance": "Fixed world XZ and world yaw; sole target y=.08, ankle anchor y=.165",
+    "stepMetres": 0.18,
+    "swingLiftMetres": 0.045,
+    "swing": "one swing at a time; sin² vertical arc",
+    "turnStopSeconds": 0.28,
+    "legLengthsMetres": [
+      0.25,
+      0.3
+    ],
+    "solution": "Rigid two-link IK, forward knee pole, small reach-based body drop. Local quaternion [x,y,z,w] outputs for leg/shin/foot, ankle counters root yaw.",
+    "freeze": "Hidden/Reduce Motion preserves stored anchors and pose; no catchup",
+    "regressionToleranceMetres": 0.002
   },
   "inspect": {
     "id": "native.visitor.inspect.v3",
@@ -153,7 +154,7 @@
   },
   "propOwnership": {
     "capacity": {
-      "bag": 1,
+      "bag": 2,
       "box": 1,
       "note": 1,
       "cloth": 1
@@ -161,9 +162,11 @@
     "owners": [
       "counter",
       "socket-left",
-      "socket-right"
+      "socket-right",
+      "visitor-a.socket-left"
     ],
-    "cancellation": "Hide all pooled props and restore counter parent on epoch, hidden, mode/import, loss or dispose; sequence owns no delayed callbacks."
+    "cancellation": "Cancel service player and hide/reclaim pooled props on epoch, hidden, mode/import, loss or dispose; no delayed callbacks. Ordinary paint/settings do not reset playback.",
+    "bound": "Five pooled nodes: two generic bag nodes, box, note and cloth. At most one carried bag plus one staff task prop. Same actual held bag node transfers to customer; reserve becomes the staff bag."
   },
   "portable": "Named node contract, mesh masters and motion data are reusable. Babylon adapter and future native engine binding still require platform integration and actual visual checks.",
   "staffClearanceArc": {
@@ -177,5 +180,44 @@
       "shoulderRetractComplete": 0.96
     },
     "geometryVerification": "Use actual generated hand/forearm vertices transformed through RH node hierarchy against counter bounds; non-visual geometry evidence, not GPU visual acceptance."
+  },
+  "staffPlayer": "src/presentation/native-staff-player.ts",
+  "crossClipTransition": {
+    "id": "native.staff.crossfade.v3.1",
+    "seconds": [
+      0.15,
+      0.25
+    ],
+    "duration": "maximum of incoming and outgoing STAFF_CLIPS.blend, clamped to .15–.25 seconds",
+    "pose": "Snapshot current rendered rest-relative pose; smooth head/body/yaw and expression weights. For active work arms tuck elbows, move shoulders, unfold. Authored neutral entries retain their existing safe envelope.",
+    "prop": "One outgoing prop fades during first transition quarter while still safely held; incoming prop withheld until end. No duplicate held objects. Renderer preserves world pose on owner changes and applies propOpacity.",
+    "idle": "Own elapsed task clock; first tidy at6seconds and alternate note/tidy on16second start cadence. External service/greet discards interrupted task, then waits16seconds before fresh work. No global modulo midpoint resume.",
+    "cancellation": "cancel/reset immediately clear prop/transition on explicit hide/skip/reduced-motion; ordinary repaint preserves player state.",
+    "conditionalServiceYaw": {
+      "source": "StaffServiceFrame.serviceYaw",
+      "lift": "upper-arm pitch1.57 before turning across counter corner",
+      "turnInPhase": [
+        0.16,
+        0.34
+      ],
+      "fullyOrientedPhase": [
+        0.34,
+        0.65
+      ],
+      "returnPhase": [
+        0.65,
+        0.85
+      ],
+      "suggestedCustomerTransferPhase": 0.64,
+      "fallback": "undefined retains original forward packing yaw and counter release"
+    }
+  },
+  "representativeDelivery": {
+    "source": "src/presentation/native-delivery.ts",
+    "request": "One existing freshly browsing visitor-a, side bay [3.4,-.65], no buyer or SKU attribution",
+    "acquisitionDeadlineSeconds": 8.55,
+    "handoverProgress": 0.64,
+    "fallback": "No candidate or deadline expiry uses existing Misaki counter packaging; account committed immediately",
+    "cancellation": "Clears reservation/owned props while preserving positions, with no economic callbacks"
   }
 }

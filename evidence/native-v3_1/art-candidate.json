@@ -1,0 +1,274 @@
+{
+  "kind": "non-rendering geometry/projection evidence; not visual approval",
+  "reference": "Original v3 supplied video actual frames at00:01 and00:40 reviewed; night/nontrading. New candidate has not been rendered in this subtask.",
+  "camera": {
+    "contract": {
+      "id": "native.view.v3.1",
+      "alpha": -0.7853981633974483,
+      "alphaRange": [
+        -1.0553981633974483,
+        -0.5153981633974483
+      ],
+      "beta": 0.8726646259971648,
+      "betaRange": [
+        0.7853981633974483,
+        0.9599310885968813
+      ],
+      "shopTarget": [
+        0.5,
+        1,
+        0.3
+      ],
+      "staffTarget": [
+        2.55,
+        1.02,
+        -0.73
+      ],
+      "margin": 0.965,
+      "guard": 1.002,
+      "criticalBoxes": [
+        {
+          "id": "display.1",
+          "min": [
+            -2.85,
+            0.08,
+            -2.05
+          ],
+          "max": [
+            -1.15,
+            1.34,
+            -0.95
+          ]
+        },
+        {
+          "id": "display.2",
+          "min": [
+            -0.75,
+            0.08,
+            -0.65
+          ],
+          "max": [
+            0.95,
+            1.34,
+            0.45
+          ]
+        },
+        {
+          "id": "display.3",
+          "min": [
+            -2.85,
+            0.08,
+            0.55
+          ],
+          "max": [
+            -1.15,
+            1.34,
+            1.65
+          ]
+        },
+        {
+          "id": "counter-and-staff",
+          "min": [
+            1.62,
+            0.08,
+            -2.01
+          ],
+          "max": [
+            3.58,
+            1.67,
+            -0.35
+          ]
+        },
+        {
+          "id": "doorway",
+          "min": [
+            2.21,
+            0.08,
+            3.08
+          ],
+          "max": [
+            3.89,
+            2.71,
+            3.36
+          ]
+        },
+        {
+          "id": "entry-visitor",
+          "min": [
+            2.68,
+            0.08,
+            2.55
+          ],
+          "max": [
+            4.6,
+            1.67,
+            4.42
+          ]
+        },
+        {
+          "id": "service-visitor",
+          "min": [
+            3,
+            0.08,
+            -1.04
+          ],
+          "max": [
+            3.82,
+            1.67,
+            -0.25
+          ]
+        },
+        {
+          "id": "window",
+          "min": [
+            -4.58,
+            0.82,
+            -1.65
+          ],
+          "max": [
+            -4.2,
+            2.84,
+            1.65
+          ]
+        },
+        {
+          "id": "back-shelves",
+          "min": [
+            -3.45,
+            1.2,
+            2.5
+          ],
+          "max": [
+            1.85,
+            2.6,
+            3.17
+          ]
+        }
+      ],
+      "staffBox": {
+        "min": [
+          1.9,
+          0.08,
+          -2.01
+        ],
+        "max": [
+          3.35,
+          1.72,
+          -0.22
+        ]
+      },
+      "note": "Fit excludes decorative upper wall/plinth only. Preserve user zoom relative to this fit when the safe viewport changes; ordinary draw must not reset camera."
+    },
+    "fit": [
+      {
+        "aspect": 0.5,
+        "priorRadius": 32.61571711884778,
+        "candidateRadius": 29.32037653830822,
+        "radiusReduction": 0.10103535570080324
+      },
+      {
+        "aspect": 0.75,
+        "priorRadius": 21.593848146721797,
+        "candidateRadius": 20.002226942712834,
+        "radiusReduction": 0.07370715924250815
+      },
+      {
+        "aspect": 1,
+        "priorRadius": 16.580259671222297,
+        "candidateRadius": 15.41326862020138,
+        "radiusReduction": 0.07038436515239965
+      },
+      {
+        "aspect": 1.5,
+        "priorRadius": 14.329854499673496,
+        "candidateRadius": 10.824310297689932,
+        "radiusReduction": 0.24463222582360744
+      },
+      {
+        "aspect": 2,
+        "priorRadius": 14.329854499673496,
+        "candidateRadius": 10.359278851060857,
+        "radiusReduction": 0.27708415662581276
+      },
+      {
+        "aspect": 2.5,
+        "priorRadius": 14.329854499673496,
+        "candidateRadius": 10.359278851060857,
+        "radiusReduction": 0.27708415662581276
+      }
+    ],
+    "criticalHullPoints": 72,
+    "test": "Babylon NullEngine RH view/projection matrices over9yawx5beta angles,6aspects plusrestricted UI-safe viewport. Allcriticalpoints withinprojectionbounds."
+  },
+  "lighting": {
+    "id": "native.light.v3.1",
+    "key": {
+      "color": "#FFE8CA",
+      "intensity": 1.62,
+      "direction": [
+        0.78,
+        -0.82,
+        0.22
+      ],
+      "position": [
+        -8,
+        8,
+        -2
+      ]
+    },
+    "fill": {
+      "color": "#E9F0F4",
+      "ground": "#B3A494",
+      "intensity": 0.76
+    },
+    "faceFill": {
+      "color": "#FFF0DC",
+      "ground": "#B9B6B0",
+      "intensity": 0.43,
+      "direction": [
+        0.12,
+        0.35,
+        -1
+      ],
+      "parts": [
+        "head",
+        "eye-left",
+        "eye-right",
+        "eyelid-left",
+        "eyelid-right",
+        "brow-left",
+        "brow-right",
+        "mouth"
+      ],
+      "roles": [
+        "skin",
+        "ink"
+      ]
+    },
+    "shadow": {
+      "size": 1024,
+      "normalBias": 0.007,
+      "bias": 0.0005,
+      "darkness": 0.2
+    },
+    "exposure": 1,
+    "note": "Standard PBR fallback. No tone-map/exposure boost, bloom or dynamic reflection. Face fill includes only face skin/ink meshes; hair/cloth retain key/fill volume. Visual balance is pending actual WebGL."
+  },
+  "exterior": {
+    "parts": 28,
+    "architectureMaximumY": 2.345,
+    "changes": "Reduced old exposed2.5/3.1m walls to1.76/2.05m facade bodies; addedpairedgableplanes/ridges/recessedbays/lintels/footings/smallchimney;loweredandwidenedtreecanopies"
+  },
+  "limits": [
+    "Decorative upper-wall/plinth bounds excluded fromactionablecamera fit; normalcamera actualcompositionstillunverified",
+    "Facefillrestrictedtargetmeshsetmustbewiredbyworldadapter",
+    "NophotometricorGPUFPSmeasurement"
+  ],
+  "surfaces": {
+    "floorRoughness": 0.83,
+    "counterTopRoughness": 0.57,
+    "displayTopRoughness": 0.64,
+    "wallShelfRoughness": 0.76,
+    "encoding": "Existing IEC sRGB→linear conversion; per-native-surface overrides, no shared legacy material mutation"
+  }
+}

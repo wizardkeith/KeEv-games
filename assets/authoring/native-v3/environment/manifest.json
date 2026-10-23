@@ -1,25 +1,28 @@
 {
-  "id": "environment.native-v3",
-  "version": 3,
+  "id": "environment.native-v3.1",
+  "version": "3.1",
   "master": {
     "path": "assets/masters/native-v3/environment-v3.json",
-    "sizeBytes": 83578,
-    "sha256": "a903bdee214508aa62ea357951a584cc74658922ed38f4bba080de632812ad7e"
+    "sizeBytes": 89696,
+    "sha256": "dbef34a970398cf7b4efde3dd911bb41ce5d83e5a3e57c81c260a172ac7337aa"
   },
   "sources": {
-    "src/art/native-environment.ts": "a1c727ecfe4bda2a49103fd4b592023352198a55446ae22c3c60423cf923cec9",
+    "src/art/native-environment.ts": "f99116e1e0a745ca2ff064089a33c157da6699dc9290dad095fb3438a2f1ac2b",
+    "src/art/native-view.ts": "004e7e98702004470371ee920b31af4bdd011a0d92da7ba5e207e3a7c3735426",
     "src/art/recipes.ts": "c20e2d9819bd5a60678c8e006318882a5ad10dcb290c228d71816add11b7dfef",
     "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
-    "tools/export-native-environment.ts": "b4c4e212093dd52dd2a9be168429c77b2d47b23a9028903c92faf89943b44b95"
+    "src/art/native-materials.ts": "dfb556cd2e813656f298fb39c988aaa27ce36af2370aa6717b3e0a18beff49eb",
+    "tools/export-native-environment.ts": "b7625db97e42a4a327a351c3a2d060d295665227746bf00b789e1c792f3e540a"
   },
   "rebuild": "node --import tsx tools/export-native-environment.ts",
-  "runtime": "src/world.ts imports native-environment.ts; geometry.ts builds the same authored recipes",
+  "runtime": "src/world.ts imports native-environment.ts and native-view.ts; geometry.ts builds the same authored recipes. nativeGrouped/nativeMaterialIntent respect per-surface roughness while shared legacy materials remain unchanged.",
   "assets": [
     "split doorway and skirting, fixed jambs, real hinged glass leaf, separately hinged sign",
     "fixed-base plants with seven leaf-local attachments",
-    "small cool-tone exterior branches, foliage and buildings",
-    "counter drawer/edge/base detail, display tabletop/feet/label detail"
+    "low cool-tone exterior buildings with paired gables, ridges, recessed window bays and small chimney; restrained foliage",
+    "counter drawer/edge/base detail, display tabletop/feet/label detail; native-only floor/table roughness and colour separation",
+    "actionable-shop and staff camera contracts with actual-safe-viewport fit, and restricted-face-fill lighting intent"
   ],
-  "validation": "tests/native-environment.test.ts checks geometric aperture, opened leaf clearance, stable plant bases, finite geometry/material intent and five Minimal FX translations. Actual WebGL appearance remains a separate acceptance step."
+  "validation": "tests/native-environment.test.ts checks geometric aperture, opened leaf clearance, stable plant bases, finite geometry/material intent and five Minimal FX translations; tests/v31-art.test.ts checks actual Babylon RH projection fit, bounded low architectural geometry, native roughness and exported presentation parity. Neither is actual WebGL appearance acceptance."
 }

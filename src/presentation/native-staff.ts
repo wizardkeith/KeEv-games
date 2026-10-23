@@ -8,7 +8,9 @@ export type StaffPropKind = 'bag' | 'box' | 'note' | 'cloth';
 export interface StaffServiceFrame {
  readonly cue: {readonly kind: 'sale' | 'stock' | 'display'};
  readonly progress: number;
+ readonly serviceYaw?:number;
 }
+export interface StaffIdleTask {readonly kind:'tidy'|'note';readonly progress:number}
 export interface StaffPose {
  readonly rotations: Readonly<Record<string, StaffRotation>>;
  readonly expression: StaffExpression;
@@ -44,7 +46,7 @@ function blink(seconds:number){const t=(seconds%5.8)-2.8;return t>=0&&t<=.26?Mat
  * Caller suppresses sampling for Reduce Motion/hidden and resets prop ownership
  * on cancellation; this function cannot cancel or restart another channel.
  */
-export function sampleStaff(visibleSeconds:number, service?:StaffServiceFrame, greetProgress?:number):StaffPose {
+export function sampleStaff(visibleSeconds:number, service?:StaffServiceFrame, greetProgress?:number, idleTask?:StaffIdleTask|null):StaffPose {
  valid(visibleSeconds,'visibleSeconds');
  if(service)valid(service.progress,'service progress');
  if(greetProgress!==undefined)valid(greetProgress,'greet progress');
@@ -57,7 +59,8 @@ export function sampleStaff(visibleSeconds:number, service?:StaffServiceFrame, g
  let action:'greet'|'tidy'|'note'|'stock'|'sale'|'display'|undefined;
  if(service){action=service.cue.kind;progress=clamp(service.progress);}
  else if(greetProgress!==undefined&&greetProgress<=1){action='greet';progress=clamp(greetProgress);}
- else {
+ else if(idleTask){action=idleTask.kind;progress=clamp(valid(idleTask.progress,'idle task progress'));}
+ else if(idleTask!==null){
   // 16-second stagger, first readable task at six seconds. Two different tasks
   // alternate, with an unhurried pause. No wall-clock catch-up is involved.
   const phase=(visibleSeconds+10)%16;
@@ -122,5 +125,16 @@ export function sampleStaff(visibleSeconds:number, service?:StaffServiceFrame, g
  }
  // Canonical zero avoids signed-zero differences at identical neutral endpoints.
  for(const joint of Object.keys(rotations))rotations[joint]=rotations[joint].map(a=>a===0?0:a) as unknown as StaffRotation;
- return {rotations,expression,eyelidClosure:blink(visibleSeconds),bodyLift,turn,clip,progress,prop};
+ if(service?.serviceYaw!==undefined){
+  if(!Number.isFinite(service.serviceYaw))throw new RangeError('service yaw');
+  // Finish the elbow-first lift before sweeping the left hand diagonally over
+  // the counter corner. Recovery retucks while returning to the default yaw.
+  turn=service.serviceYaw*smooth((progress-.16)/.18)*smooth((.85-progress)/.20);
+  // At a side-facing handover, the elbow itself crosses the counter corner.
+  // Raise the upper arms to shoulder height first; the ordinary forward-only
+  // packing pose may safely keep its elbows behind that edge instead.
+  const amount=clamp(Math.abs(service.serviceYaw)/(Math.PI/2));
+  for(const side of ['left','right']){const id='arm-'+side,r=rotations[id];rotations[id]=[r[0]*(1+amount*(1.57/1.10-1)),r[1],r[2]];}
+ }
+ return {rotations,expression,eyelidClosure:blink(visibleSeconds),bodyLift,turn:turn===0?0:turn,clip,progress,prop};
 }

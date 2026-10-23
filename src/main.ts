@@ -8,6 +8,7 @@ import {icon} from './ui/icons';
 import {day1View,emptyStory,type StoryRecord,type BeatId,type StoryAction} from './narrative/day1';
 import {day1Text} from './narrative/day1-copy';
 import {day1Card} from './ui/day1';
+import {shopGuidance,guidanceText,nextSandboxOpening} from './ui/shop-guidance';
 const artReview=import.meta.env.VITE_ART_REVIEW==='1',modeKey=artReview?'shop.art-review.mode':'shop.mode',draftPrefix=artReview?'shop.art-review.draft.':'shop.w1.draft.';
 const reviewDatabase=import.meta.env.VITE_DAY1_REVIEW==='1'?'next-stop-little-shop-day1-review':'next-stop-little-shop-art-review-w1_1a1';
 const presentationStorageKey=artReview?'shop.art-review.presentation.v1':'shop.presentation.v1';
@@ -15,6 +16,7 @@ const feedback=new FeedbackProjector();
 const nativePresentation=new NativeCommitPresentation();
 let pendingCommand:CapturedCommand|undefined;
 let presentationEpoch=0;
+let returnPending=false;
 import {catalog,type Mode,type Snapshot,type Command} from './core/contracts';
 import {recoveryPreview,purchaseCost} from './core/recovery';import {loadCore} from './platform/loader';import {database,Saves} from './platform/storage';
 import {t,esc,money,date,locale,setLocale,trading} from './ui/copy';
@@ -53,12 +55,12 @@ function nextAction(){
 }
 function draw(){
  if(!state)return;document.documentElement.lang=locale;document.title=state.shopName?state.shopName+' · '+t('title'):t('title');document.body.classList.toggle('zen',u.zen);document.body.classList.toggle('drawer-open',!!u.panel);document.body.classList.toggle('minimal-fx',u.minimalFX);document.body.dataset.feedback=u.feedbackKind;
- const status=trading(state)?'isOpen':state.open?'outsideHours':'isClosed',next=nextAction();
+ const status=trading(state)?'isOpen':state.open?'outsideHours':'isClosed',next=nextAction(),guidance=shopGuidance(state,locale,busy||storyBusy);
  const oldActive=document.activeElement as HTMLInputElement|null;const activeId=oldActive?.id;const start=oldActive?.selectionStart,end=oldActive?.selectionEnd;
  render(app,`<header class="top"><div class="brand"><div class="brand-title"><span class="mark">${esc(state.logo)}</span><h1>${esc(state.shopName||t('welcome'))}</h1></div><p>${esc(t('subtitle'))}</p><div class="shop-context"><span class="statusdot ${trading(state)?'':'closed'}"></span>${esc(t(status))}<span class="mode-badge">${esc(t(mode==='sandbox'?'sandboxShort':'normalShort'))}</span></div></div><div class="balance"><small>${esc(t('cash'))}</small><strong>${money(state.cash)}</strong><span>${esc(date(state.watermark))} · Tokyo</span></div></header>
  <div class="world-note" ${u.worldFailed?'':'hidden'}><span>◇</span><p>${esc(t('noWebGL'))}</p></div>
  ${!world&&!u.worldFailed?`<p class="world-loading">${esc(t('worldPreparing'))}</p>`:''}
- ${!u.zen&&!u.panel?recoveryPreview(state).eligible||!story?`<section class="next-card" aria-label="${esc(t('nextStep'))}"><span class="eyebrow">${esc(t('nextStep'))}</span><p>${esc(t(next.text))}</p>${actionButton(next.label,next.text==='nextSale'&&mode==='sandbox'?'advance':'panel',next.text==='nextSale'&&mode==='sandbox'?'data-minutes="60"':`data-panel="${next.panel}"`)}</section>`:day1Card(state,story,{locale,itemName:id=>t(catalog.offerings.find(o=>o.id===id)?.key??id),money},busy||storyBusy,storyReplay):''}
+ ${!u.zen&&!u.panel?guidance||(recoveryPreview(state).eligible||!story?`<section class="next-card" aria-label="${esc(t('nextStep'))}"><span class="eyebrow">${esc(t('nextStep'))}</span><p>${esc(t(next.text))}</p>${actionButton(next.label,next.text==='nextSale'&&mode==='sandbox'?'advance':'panel',next.text==='nextSale'&&mode==='sandbox'?'data-minutes="60"':`data-panel="${next.panel}"`)}</section>`:day1Card(state,story,{locale,itemName:id=>t(catalog.offerings.find(o=>o.id===id)?.key??id),money},busy||storyBusy,storyReplay)):''}
  ${u.panel?`<aside id="drawer" class="sidebar" role="dialog" aria-modal="false" aria-labelledby="panel-title"><header class="panelhead"><h2 id="panel-title" tabindex="-1">${esc(t(u.panel))}</h2><button data-action="hide" class="closepanel" aria-label="${esc(t('closePanel'))}">×</button></header><div class="panelbody" id="panelbody">${panelContent(state,u,busy||storyBusy,story)}</div></aside>`:''}
  <div class="shop-controls"><span class="clock-note">${esc(t(mode==='sandbox'?'sandboxNote':'normalNote'))}</span><div class="control-actions">${actionButton(state.open?'close':'open','open','',true)}${mode==='sandbox'?actionButton('advance60','advance','data-minutes="60"'):actionButton('demo','mode')}</div></div>
  <nav class="dock" aria-label="${esc(t('navShelves'))}">${[['shelves','navShelves'],['stock','navStock'],['report','navReport'],['journal','navJournal'],['settings','more']].map(([p,label])=>`<button data-action="panel" data-panel="${p}" aria-pressed="${u.panel===p}">${icon(p)}<span>${esc(t(label))}</span></button>`).join('')}</nav>
@@ -75,7 +77,9 @@ function finishReveal(){clearTimeout(revealTimer);if(u.revealFx){u.revealFx=fals
 function cancelFeedback(){presentationEpoch++;nativePresentation.invalidate(presentationEpoch);world?.skip();finishReveal();u.feedbackKind='';}
 function committed(previous:Snapshot,current:Snapshot,cause:string,targetSlot:number,epoch:number){
  const observation=nativePresentation.commit(previous,current,cause,epoch,pendingCommand,resolveMotionPolicy({quality:'high',minimalFx:u.minimalFX,reduceMotion:matchMedia('(prefers-reduced-motion: reduce)').matches,visible:!document.hidden}));
- if(['baseline','reload','retry','catchup','import','mode','choose-mode'].includes(cause))world?.baseline?.();
+ if(observation?.status==='ignored')return;
+ if(cause==='offline-return'||cause==='catchup'){if(!document.hidden&&epoch===presentationEpoch&&current.eventSequence>previous.eventSequence)notice(guidanceText(locale,'offline',{units:current.eventSequence-previous.eventSequence}));return;}
+ if(previous.mode!==current.mode||['baseline','reload','retry','import','mode','choose-mode'].includes(cause))world?.baseline?.();
  // Consume every real committed delta even when its presentation became stale.
  const event=feedback.project(previous,current,cause,targetSlot);if(!event)return;
  clearTimeout(revealTimer);u.revealFx=false;u.feedbackKind=event.kind;
@@ -101,7 +105,7 @@ async function act(kind:string,data:Partial<Command>={}){const command={id:comma
 function openPanel(p:string,source?:HTMLElement){if(source)focusReturn=source;const changed=u.panel!==p;u.panel=p;u.formError='';draw();if(changed){const body=document.getElementById('panelbody');if(body)body.scrollTop=0;}document.getElementById('panel-title')?.focus({preventScroll:true});}
 function closePanel(){u.panel='';u.formError='';draw();focusReturn?.focus({preventScroll:true});}
 async function switchMode(next:Mode){
- storeDraft(mode,u.draft,draftPrefix);const loaded=await saves.loadOrCreate(next,next==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());mode=next;state=loaded;storyReplay=false;u.draft=draftFor(mode,state,draftPrefix);u.rename=false;u.reportDay='';u.slot=0;u.formError='';u.notice='';localStorage.setItem(modeKey,mode);cancelFeedback();
+ storeDraft(mode,u.draft,draftPrefix);const loaded=await saves.loadOrCreate(next,next==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());mode=next;state=loaded;storyReplay=false;u.draft=draftFor(mode,state,draftPrefix);u.rename=false;u.reportDay='';u.slot=0;u.formError='';u.notice='';localStorage.setItem(modeKey,mode);returnPending=document.hidden||(mode==='normal'&&Date.now()-state.watermark>=60000);cancelFeedback();
 }
 app.addEventListener('input',e=>{
  const input=e.target as HTMLInputElement;switch(input.id){case 'qty':u.draft.quantity=input.value;break;case 'shop-name':u.draft.shop=input.value;break;case 'company-name':u.draft.company=input.value;break;case 'shop-logo':u.draft.logo=input.value;break;default:if(input.dataset.priceId)u.draft.prices[input.dataset.priceId]=input.value;}
@@ -115,7 +119,7 @@ app.addEventListener('change',e=>{
  if(input.id==='quality'){u.quality=input.value;world?.quality(u.quality);}
  if(input.id==='minimal-fx'){u.minimalFX=(input as HTMLInputElement).checked;savePreferences({minimalFX:u.minimalFX},presentationStorageKey);draw();}
  if(input.id==='sound'){u.sound=(input as HTMLInputElement).checked;if(u.sound)void saleSound.play().catch(()=>{});}
- if(input.id==='import'){const file=(input as HTMLInputElement).files?.[0];if(file)void run(async()=>{state=await saves.import(state,await file.text());u.draft=draftFor(mode,state,draftPrefix);cancelFeedback();},'general',undefined,'import');}
+ if(input.id==='import'){const file=(input as HTMLInputElement).files?.[0];if(file)void run(async()=>{state=await saves.import(state,await file.text());u.draft=draftFor(mode,state,draftPrefix);returnPending=document.hidden||(mode==='normal'&&Date.now()-state.watermark>=60000);cancelFeedback();},'general',undefined,'import');}
 });
 app.addEventListener('submit',e=>{
  if((e.target as HTMLElement).id!=='identity')return;e.preventDefault();
@@ -140,6 +144,7 @@ app.addEventListener('click',e=>{
  if(a==='select-slot'){u.slot=n;draw();return;}if(a==='stock-slot'){u.slot=n;openPanel('stock',target);return;}
  if(a==='skip-reveal'){cancelFeedback();draw();return;}
  if(a==='zen'){u.zen=!u.zen;draw();return;}
+ if(a==='camera-shop'||a==='camera-staff'){world?.view(a==='camera-shop'?'shop':'staff');closePanel();return;}
  if(a==='cancel-price'){delete u.draft.prices[id];u.formError='';storeDraft(mode,u.draft,draftPrefix);draw();return;}
  if(a==='rename'){u.rename=true;u.draft.shop=state.shopName;u.draft.company=state.companyName;u.draft.logo=state.logo;draw();document.getElementById('shop-name')?.focus();return;}
  if(a==='cancel-identity'){u.rename=false;draw();return;}
@@ -155,9 +160,11 @@ app.addEventListener('click',e=>{
    case 'reveal':await act('reveal');u.panel='journal';notice(t('completeTitle'));break;
    case 'recover':await act('recover');u.draft.quantity='5';u.panel='stock';notice(t('supportReceived'));break;
    case 'advance':state=await saves.settle(state,state.watermark+Number(target.dataset.minutes)*60000,Date.now());break;
+   case 'sandbox-enter':await switchMode('sandbox');break;
+   case 'sandbox-hours':if(mode==='sandbox'){const time=nextSandboxOpening(state);if(time>state.watermark)state=await saves.settle(state,time,Date.now());}break;
    case 'mode':await switchMode(mode==='normal'?'sandbox':'normal');break;
    case 'choose-mode':if(target.dataset.mode!==mode)await switchMode(target.dataset.mode as Mode);break;
-   case 'reload':{cancelFeedback();const loaded=await saves.read(mode);if(loaded)state=loaded;break;}
+   case 'reload':{cancelFeedback();const loaded=await saves.read(mode);if(loaded)state=loaded;returnPending=document.hidden||(mode==='normal'&&Date.now()-state.watermark>=60000);break;}
    case 'catchup':state=await saves.settle(state,Math.min(Date.now(),state.watermark+86400000),Date.now());break;
    case 'retry':if(mode==='normal')state=await saves.settle(state,Date.now(),Date.now());else state=(await saves.read(mode))!;break;
   }
@@ -167,17 +174,17 @@ document.addEventListener('keydown',e=>{
  if(e.key==='Escape'){if(u.rename){u.rename=false;draw();}else if(state?.shopName)closePanel();}
  if(e.key==='Tab'&&document.querySelector('.modalshade')){const focusables=Array.from(document.querySelectorAll<HTMLElement>('.modal button:not(:disabled),.modal input'));const first=focusables[0],last=focusables.at(-1);if(e.shiftKey&&document.activeElement===first){last?.focus();e.preventDefault();}else if(!e.shiftKey&&document.activeElement===last){first?.focus();e.preventDefault();}}
 });
-function resume(){
+function resume(reason:'timer'|'return'='timer'){
  if(!state||!saves||mode!=='normal'||document.hidden||busy||['stale','storage','long_gap'].includes(u.blocking))return;
- const now=Date.now();if(now-state.watermark>=60000||now<state.lastWallTime||u.blocking==='rollback')void run(async()=>{state=await saves.settle(state,now,now);});
+ const now=Date.now();if(now-state.watermark>=60000||now<state.lastWallTime||u.blocking==='rollback'){const cause=returnPending||reason==='return'?'offline-return':'settle';returnPending=false;void run(async()=>{state=await saves.settle(state,now,now);},'general',undefined,cause);}
 }
 async function boot(){
  // Record cancellation before any awaited startup work or actionable UI.
- document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelFeedback();draw();}else resume();});window.addEventListener('focus',resume);
+ document.addEventListener('visibilitychange',()=>{if(document.hidden){returnPending=true;cancelFeedback();draw();}else resume('return');});window.addEventListener('blur',()=>{returnPending=true;});window.addEventListener('focus',()=>resume('return'));
  const core=await loadCore();saves=new Saves(await database(artReview?reviewDatabase:"next-stop-little-shop-w1"),core);state=await saves.loadOrCreate(mode,mode==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());nativePresentation.baseline(state,presentationEpoch);u.draft=draftFor(mode,state,draftPrefix);await syncStory();draw();readyMs=performance.now()-started;
  try{const {createWorld}=await import('./world');world=await createWorld(canvas,n=>{u.slot=n;openPanel('shelves');},finishReveal,nativePresentation);world.update(state);world.layout(!!u.panel);worldReadyMs=performance.now()-started;}catch(e){console.error(e);u.worldFailed=true;}
  draw();if(!state.shopName)document.getElementById('shop-name')?.focus();
- setInterval(resume,10000);resume();
+ setInterval(()=>resume('timer'),10000);resume('return');
  canvas.addEventListener('world-error',()=>{cancelFeedback();world?.dispose();world=undefined;u.worldFailed=true;draw();});
  Object.assign(window,{littleShopDiagnostics:()=>({core:'PORT_REQUIRED_FOR_UNITY',artReview,uiReadyMs:readyMs,startupMs:worldReadyMs,worldReady:!!world&&!u.worldFailed,worldEverReady:worldReadyMs!==null,worldAvailable:!!world&&!u.worldFailed,world:world?.metrics(),userAgent:navigator.userAgent,resources:performance.getEntriesByType('resource').map(e=>({name:e.name,duration:e.duration,transferSize:(e as PerformanceResourceTiming).transferSize,encodedBodySize:(e as PerformanceResourceTiming).encodedBodySize}))})});
 }

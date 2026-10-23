@@ -55,3 +55,17 @@ RIGHTS
 Original project procedural geometry/design, existing project primitive
 geometry and semantic palette. No external model, image, Grok video, texture,
 paid service, new API key or local modelling software dependency.
+
+V3.1 PLANTED LOCOMOTION REVISION
+NativeFootPlant in src/presentation/native-feet.ts replaces vertical-only gait
+compensation. It stores immutable world ankle/sole targets and foot yaw during
+stance; a single swing uses .18m half steps, .045m lift and .28s turn/recenter.
+The actual .25/.30m rigid links use external two-link IK quaternions and small
+reach-based body drop. No skeleton, skinned mesh or embedded GLB clip is claimed.
+Visitor B retains complete authored leg/shin/foot meshes; a fuller A-line skirt
+profile encloses actual moving thigh vertices through both steps and turns.
+The exported rest hierarchy is unchanged, and the engine-neutral locomotion
+source is included in the manifest so another engine can reconnect it.
+evidence/native-v3_1/locomotion-before.json replays the old indexed v10 GLB;
+locomotion-after.json records shoe centroid horizontal drift and full stride /
+turn skirt clearance. These are geometry results, not rendered visual approval.

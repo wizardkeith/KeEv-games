@@ -1,0 +1,70 @@
+{
+  "baseline": "3869ef9aefcdc08c0aede158ec5276df89f7cbae",
+  "source": "actual v10 visitor-b GLB accessors / indexed triangles + original sampler and adapter transforms",
+  "supportFootSamples": [
+    {
+      "distance": 0,
+      "rightLift": 0,
+      "centroid": [
+        0.10000000149011612,
+        0.07999996095895767,
+        -0.03400000184774399
+      ]
+    },
+    {
+      "distance": 0.09,
+      "rightLift": 0,
+      "centroid": [
+        0.10000000149011612,
+        0.07999996095895767,
+        0.022013381123542786
+      ]
+    },
+    {
+      "distance": 0.18,
+      "rightLift": 0,
+      "centroid": [
+        0.10000000149011612,
+        0.08000000566244125,
+        -0.009993741288781166
+      ]
+    },
+    {
+      "distance": 0.27,
+      "rightLift": 0,
+      "centroid": [
+        0.10000000149011612,
+        0.07999996095895767,
+        -0.15798663347959518
+      ]
+    },
+    {
+      "distance": 0.36,
+      "rightLift": 0,
+      "centroid": [
+        0.10000000149011612,
+        0.07999996095895767,
+        -0.39400001615285873
+      ]
+    }
+  ],
+  "supportHalfStepNetDriftMetres": 0.36000001430511475,
+  "skinSkirt": {
+    "penetratingVertices": 580,
+    "worst": {
+      "phase": 0.75,
+      "side": "left",
+      "point": [
+        -0.15101110935211182,
+        0.5574430873350258,
+        -0.11600819734838086
+      ],
+      "skirtZ": [
+        -0.05313227484356294,
+        0.05342528745496468
+      ],
+      "excess": 0.06287592250481791
+    }
+  },
+  "visualClaim": false
+}

@@ -5,7 +5,8 @@
 import {roomRecipe,counterRecipe,displayRecipe,palette,type Part,type V3} from './recipes';
 import type {MaterialRole} from './materials';
 
-const part=(shape:Part['shape'],size:V3,at:V3,color:string,role:MaterialRole='wood',extra:Partial<Part>={}):Part=>({shape,size,at,color,role,...extra});
+export type NativeEnvironmentPart=Part&{roughness?:number};
+const part=(shape:Part['shape'],size:V3,at:V3,color:string,role:MaterialRole='wood',extra:Partial<NativeEnvironmentPart>={}):NativeEnvironmentPart=>({shape,size,at,color,role,...extra});
 const round=(size:V3,at:V3,color:string,radius=.025,role:MaterialRole='wood')=>part('round',size,at,color,role,{radius});
 
 export const nativeDoorContract=Object.freeze({
@@ -16,12 +17,19 @@ export const nativeDoorContract=Object.freeze({
  crossingOpenRadians:1.30,signPivot:[.80,1.56,-.073] as V3,
 });
 
-export function nativeRoomRecipe():Part[]{
+export function nativeRoomRecipe():NativeEnvironmentPart[]{
  // These five pieces are the frozen full back wall, full-width skirting,
  // decorative solid door panel, old glass, and old handle respectively.
  // Removing only the glass would leave both an opaque wall and opaque panel.
  const removed=new Set([2,7,10,11,12]);
- const old=roomRecipe().filter((_,i)=>!removed.has(i));
+ const old=roomRecipe().filter((_,i)=>!removed.has(i)).map(p=>{
+  // Cool, desaturated floor boards separate furniture from the floor without
+  // changing material encoding or brightening every surface in the scene.
+  if(p.role==='wood'&&p.size[2]===6.45&&p.size[1]===.018)return {...p,color:p.color===palette.floorLight?'#C9B8A4':'#C0AE98',roughness:.83};
+  // Retained wall shelves stay deeper and warmer than the new floor.
+  if(p.role==='wood'&&p.size[0]===5.2)return {...p,color:'#967255',roughness:.76};
+  return p;
+ });
  const {minX,maxX,topY}=nativeDoorContract.aperture;
  const wallMin=-4.55,wallMax=4.55,wallTop=3.5;
  return [...old,
@@ -86,30 +94,39 @@ export function plantParts(scale=1):NativePlantParts{
  return {base,leaves};
 }
 
-/** Small real-geometry window vignette. It is scenery, never a new play area. */
+/** Small real-geometry window vignette, rebuilt after the v3 raw-block review.
+ * Low rooflines, paired pitched roof planes, ridges, recessed window bays and
+ * a small chimney read as architecture rather than exposed tall test boxes.
+ * It remains scenery, never a new map or player destination. */
 export function exteriorRecipe():Part[]{
  const result:Part[]=[
-  round([2.0,.09,6.2],[-5.45,-.015,0],'#B2BDB3',.03),
-  round([1.50,2.50,1.35],[-7.10,1.15,-2.15],'#A9B9B8',.05,'paint'),
-  round([1.10,3.10,1.65],[-7.50,1.45,1.70],'#BBC6C1',.05,'paint'),
-  round([1.63,.12,1.47],[-7.10,2.44,-2.15],'#879D9A',.035,'paint'),
-  round([1.23,.12,1.77],[-7.50,3.04,1.70],'#9EAFAB',.035,'paint'),
+  round([2.0,.09,6.2],[-5.45,-.015,0],'#BCC6BA',.03),
  ];
- for(const [x,z,h] of [[-5.55,-1.10,2.28],[-6.02,1.48,2.7]]){
-  result.push(part('cylinder',[.13,h,.13],[x,h/2,z],'#8E9983','wood',{top:.66}));
-  for(let i=0;i<3;i++){
-   const a=i*2.1;
-   result.push(part('cylinder',[.045,.72,.045],[x+Math.sin(a)*.15,h-.50+i*.10,z+Math.cos(a)*.15],'#8E9983','wood',{top:.5,turn:[Math.sin(a)*.65,0,Math.cos(a)*.65]}));
-   result.push(part('sphere',[.89,.59,.75],[x+Math.sin(a)*.30,h-.10+i*.13,z+Math.cos(a)*.28],i%2?'#9EB8A1':'#B3C5A6','leaf'));
-  }
+ for(const [i,[x,z,w,h,d]] of [[-6.95,-2.08,1.48,1.76,1.28],[-7.22,1.76,1.08,2.05,1.52]].entries()){
+  result.push(round([w,h,d],[x,h/2+.03,z],i?'#BAC5BF':'#A8B9B5',.045,'paint'));
+  // A two-plane shallow gable is true 3D geometry, including overhanging eaves.
+  const roofWidth=w*.61,angle=.20;
+  for(const side of [-1,1])result.push(part('round',[roofWidth,.075,d+.18],[x+side*w*.25,h+.03,z],i?'#859C99':'#7E9790','paint',{radius:.014,turn:[0,0,-side*angle]}));
+  result.push(round([.09,.075,d+.22],[x,h+.03+Math.sin(angle)*roofWidth*.5,z],'#A5B5AB',.018,'paint'));
+  // The visible east facade gets actual inset bays and a lintel. Window panels
+  // stay soft/cool, with controlled contrast instead of emissive squares.
+  for(const offset of [-.27,.27])result.push(round([.035,.46,.28],[x+w/2+.008,.99+i*.17,z+offset],'#D1DDD4',.012,'glass'));
+  result.push(round([.055,.07,.94],[x+w/2+.012,1.28+i*.17,z],'#91A59B',.012,'paint'));
+  result.push(round([w+.06,.09,d+.06],[x,.055,z],'#9DAFA3',.018,'paint'));
  }
- for(const [x,z] of [[-6.34,-2.15],[-6.94,1.70]])for(const y of [.85,1.65]){
-  result.push(round([.018,.39,.31],[x,y,z],'#D4DFD7',.008,'glass'));
+ result.push(round([.16,.29,.19],[-7.25,2.20,2.11],'#9AADA2',.015,'paint'));
+ for(const [x,z,h] of [[-5.55,-1.10,1.90],[-6.02,1.48,2.12]]){
+  result.push(part('cylinder',[.13,h,.13],[x,h/2,z],'#899A83','wood',{top:.66}));
+  for(let i=0;i<2;i++){
+   const a=i*2.3;
+   result.push(part('cylinder',[.045,.65,.045],[x+Math.sin(a)*.15,h-.44+i*.10,z+Math.cos(a)*.15],'#899A83','wood',{top:.5,turn:[Math.sin(a)*.65,0,Math.cos(a)*.65]}));
+   result.push(part('sphere',[1.04,.64,.88],[x+Math.sin(a)*.31,h-.06+i*.13,z+Math.cos(a)*.26],i?'#A9BEA0':'#BACBAB','leaf'));
+  }
  }
  return result;
 }
 
-export function nativeCounterRecipe():Part[]{return [...counterRecipe(),
+export function nativeCounterRecipe():NativeEnvironmentPart[]{return [...counterRecipe().map((p,i)=>i===0?{...p,color:'#DAB98F',roughness:.57}:i===1?{...p,color:'#B28C67'}:p),
  // Recesses, a bevel beneath the thick top, and restrained drawer construction.
  round([1.79,.024,.80],[0,.847,0],'#8B664B',.009),
  round([1.65,.065,.65],[0,.050,0],'#77583F',.014),
@@ -120,7 +137,7 @@ export function nativeCounterRecipe():Part[]{return [...counterRecipe(),
  part('box',[1.52,.012,.009],[0,.577,-.409],'#C2AF94'),
  ];}
 
-export function nativeDisplayRecipe():Part[]{return [...displayRecipe(),
+export function nativeDisplayRecipe():NativeEnvironmentPart[]{return [...displayRecipe().map((p,i)=>i===0?{...p,color:'#DDC29D',roughness:.64}:p.role==='wood'&&p.color===palette.dark?{...p,color:'#806B58'}:p),
  round([1.49,.020,.86],[0,.879,0],'#B89268',.008),
  ...[-.59,.59].flatMap(x=>[-.28,.28].map(z=>round([.095,.028,.095],[x,.014,z],'#7F6652',.008))),
  round([.27,.042,.024],[-.49,.905,-.477],'#F0E5D0',.006,'paper'),

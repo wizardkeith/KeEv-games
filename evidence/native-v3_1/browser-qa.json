@@ -1,0 +1,49 @@
+{
+  "dateUTC": "2026-10-23",
+  "environment": "managed cloud browser, internal QA review build; normal production database never opened",
+  "isolatedDatabase": "next-stop-little-shop-day1-review",
+  "reviewFlags": [
+    "VITE_ART_REVIEW=1",
+    "VITE_DAY1_REVIEW=1"
+  ],
+  "actualDOMChecks": [
+    "320 CSS px: outside-hours opening guide appears from real committed Tokyo time; readiness shows actual stock/display/open/hours.",
+    "Existing Sandbox was preserved at 21 Oct 10:15, cash 48860, revision5; card entry did not reset it to10:00.",
+    "Using real UI twelve legal +1h actions reached21 Oct22:15, cash45550. Thai card primary action remained usable; width320 with no horizontal overflow; card max220px, scrollHeight236 allows short internal scroll.",
+    "Sandbox-hours CTA used actual Saves.settle to next22 Oct10:00, cash43200. It did not reset cash/time or overwrite Normal.",
+    "Final build375×820: normal identity v3.1 引導 QA preserved, outside-hours guide23:00; card x12,width351,height187.515625,bottom627; document clientWidth=scrollWidth=375.",
+    "Final build card entry returned unchanged existing Sandbox22 Oct10:00,cash43200. Settings exposes full-shop and staff views. Camera effect cannot be checked without WebGL.",
+    "Existing v10 Sandbox story state and Minimal preference retained across review reloads. Normal cash49960 at23:00 reflects actual ordinary operating cost, not a reset."
+  ],
+  "webGL": {
+    "status": "unavailable",
+    "message": "Error: WebGL not supported",
+    "finalAttemptUTC": "2026-10-23T14:00:36.093Z",
+    "worldChunk": "world-BiD6tt02.js",
+    "entryChunk": "index-DixusKNQ.js",
+    "renderedCandidate3DFrames": 0
+  },
+  "priorUserVideo": {
+    "filename": "20261023-1237-34.1135302.mp4",
+    "version": 10,
+    "durationSeconds": 109.3666,
+    "encodedDimensions": [
+      2548,
+      1268
+    ],
+    "encodedFPS": 30,
+    "directlyViewedFramesSeconds": [
+      1,
+      40
+    ],
+    "interpretation": "Prior v10 scene only: staff small/dark and raw exterior boxes; night outside opening hours. Encoding FPS is not measured game performance and this is not a v3.1 before/after pair."
+  },
+  "notVerified": [
+    "New candidate rendered faces/hair/clothes and lighting",
+    "Natural full gait/cloth and motion transition appearance",
+    "Rendered hand/socket/bag exchange and whole route timing",
+    "Low/Minimal/Reduce Motion actual rendered presentation",
+    "Mobile GPU frame time/FPS, physical device performance, audio"
+  ],
+  "evidenceBoundary": "DOM/CSS browser checks and actual runtime/GLB vertex + NullEngine matrices prove separate things. Neither is real WebGL visual acceptance."
+}

@@ -1,3 +1,5 @@
+import {nativeCameraFrame,nativeLighting,type NativeView} from './art/native-view';
+import {NativeDelivery} from './presentation/native-delivery';
 import {nativeProductRecipe as productRecipe} from './art/native-products';
 import {Engine} from '@babylonjs/core/Engines/engine';
 import {Scene} from '@babylonjs/core/scene';
@@ -17,7 +19,7 @@ import {catalog,config,type Snapshot} from './core/contracts';
 import layoutData from './content/layout.json';
 import {palette,type Part} from './art/recipes';
 import {materialRenderState,linearColor,type MaterialRole} from './art/materials';
-import {artDirection,curatedRadius} from './art/direction';
+import {artDirection} from './art/direction';
 import {FeedbackClock,motionAllowed,vfx} from './presentation/config';
 import type {Feedback} from './presentation/feedback';
 import {NativeCustomerRoutes} from './presentation/native-routes';
@@ -34,9 +36,9 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  const scene=new Scene(engine);scene.useRightHandedSystem=true;scene.clearColor=Color4.FromHexString('#F4EFE8FF');
  const camera=new ArcRotateCamera('curated.40deg',-Math.PI/4,50*Math.PI/180,18,new Vector3(0,1,0),scene);
  camera.attachControl(canvas,true);camera.lowerBetaLimit=45*Math.PI/180;camera.upperBetaLimit=55*Math.PI/180;camera.lowerAlphaLimit=-Math.PI/4-.27;camera.upperAlphaLimit=-Math.PI/4+.27;camera.lowerRadiusLimit=13;camera.upperRadiusLimit=26;camera.panningSensibility=0;camera.wheelDeltaPercentage=.012;camera.minZ=.1;camera.maxZ=90;
- const sky=new HemisphericLight('soft cream sky',new Vector3(0,1,0),scene);sky.intensity=artDirection.fill.intensity;sky.diffuse=Color3.FromArray(linearColor(artDirection.fill.color));sky.groundColor=Color3.FromArray(linearColor(artDirection.fill.ground));
- const sun=new DirectionalLight('static window sunlight',Vector3.FromArray([...artDirection.key.direction]),scene);sun.position.set(...artDirection.key.position);sun.diffuse=Color3.FromArray(linearColor(artDirection.key.color));sun.intensity=artDirection.key.intensity;sun.shadowMinZ=.1;sun.shadowMaxZ=35;
- const shadow=new ShadowGenerator(artDirection.shadow.size,sun);shadow.usePercentageCloserFiltering=true;shadow.filteringQuality=ShadowGenerator.QUALITY_MEDIUM;shadow.bias=artDirection.shadow.bias;shadow.normalBias=artDirection.shadow.normalBias;shadow.darkness=artDirection.shadow.darkness;
+ const sky=new HemisphericLight('soft cream sky',new Vector3(0,1,0),scene);sky.intensity=nativeLighting.fill.intensity;sky.diffuse=Color3.FromArray(linearColor(nativeLighting.fill.color));sky.groundColor=Color3.FromArray(linearColor(nativeLighting.fill.ground));
+ const sun=new DirectionalLight('static window sunlight',Vector3.FromArray([...nativeLighting.key.direction]),scene);sun.position.set(...artDirection.key.position);sun.diffuse=Color3.FromArray(linearColor(nativeLighting.key.color));sun.intensity=nativeLighting.key.intensity;sun.shadowMinZ=.1;sun.shadowMaxZ=35;
+ const shadow=new ShadowGenerator(nativeLighting.shadow.size,sun);shadow.usePercentageCloserFiltering=true;shadow.filteringQuality=ShadowGenerator.QUALITY_MEDIUM;shadow.bias=nativeLighting.shadow.bias;shadow.normalBias=nativeLighting.shadow.normalBias;shadow.darkness=nativeLighting.shadow.darkness;
  const materials=new Map<string,PBRMaterial>();
  function material(hex:string,alpha=1,role:MaterialRole='paint',roughness?:number,identity?:string){const spec=materialRenderState(role,hex,alpha),key=identity??spec.materialId;let m=materials.get(key);if(!m){m=new PBRMaterial(key,scene);m.albedoColor=Color3.FromArray(spec.baseColorLinear);m.roughness=roughness??spec.roughness;m.metallic=spec.metallic;m.indexOfRefraction=spec.indexOfRefraction;m.environmentIntensity=.5;m.alpha=spec.alpha;m.transparencyMode=spec.alphaBlend?PBRMaterial.PBRMATERIAL_ALPHABLEND:PBRMaterial.PBRMATERIAL_OPAQUE;m.backFaceCulling=spec.backFaceCulling;m.twoSidedLighting=spec.twoSidedLighting;materials.set(key,m);}return m;}
  function model(name:string,recipe:NativeSurface[],parent?:TransformNode,slot?:number,cast=true){const root=new TransformNode(name,scene);if(parent)root.parent=parent;for(const [i,g] of nativeGrouped(recipe).entries()){const mesh=new Mesh(`${name}.material${i}`,scene);const data=new VertexData();data.positions=g.geometry.positions;data.normals=g.geometry.normals;data.indices=g.geometry.indices;data.applyToMesh(mesh);mesh.material=material(g.color,g.alpha,g.role,g.roughness,g.materialId);mesh.parent=root;mesh.receiveShadows=true;mesh.isPickable=slot!==undefined;mesh.metadata={materialRole:g.role,authoredColor:g.color,...(slot!==undefined?{slot}:{})};if(cast&&g.alpha===1)shadow.addShadowCaster(mesh);}return root;}
@@ -62,7 +64,8 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
   const products=new TransformNode(`${d.id}.products`,scene);products.position.set(d.position[0],artDirection.displaySurfaceY+artDirection.restingGap,d.position[2]);productRoots.push(products);
  }
  const nativeActors=createNativeActors(scene,(name,parts,parent)=>model(name,parts,parent));
- const routes=new NativeCustomerRoutes();let previousArrival=false;
+ const routes=new NativeCustomerRoutes(),delivery=new NativeDelivery();let previousArrival=false;
+ const faceFill=new HemisphericLight('soft local face fill',Vector3.FromArray([...nativeLighting.faceFill.direction]),scene);faceFill.intensity=nativeLighting.faceFill.intensity;faceFill.diffuse=Color3.FromArray(linearColor(nativeLighting.faceFill.color));faceFill.groundColor=Color3.FromArray(linearColor(nativeLighting.faceFill.ground));faceFill.includedOnlyMeshes=scene.meshes.filter(m=>nativeLighting.faceFill.parts.some(p=>m.name.includes('.'+p+'.material'))&&nativeLighting.faceFill.roles.includes(m.metadata?.materialRole));
  const parcel=model('discovery.graybox-sample',[
   {shape:'round',size:[.52,.30,.38],at:[0,.15,0],color:'#C8B3D4',radius:.035},
   {shape:'box',size:[.045,.31,.385],at:[0,.15,0],color:'#F6E5C1'},
@@ -80,7 +83,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  for(let i=0;i<vfx.dust.capacity;i++){const mote=model(`fx.dust.${i}`,[{shape:'box',size:[vfx.dust.size,vfx.dust.size,.002],at:[0,0,0],color:'#F9EACD',alpha:vfx.dust.maxOpacity,role:'paper'}],dustRoot,undefined,false);for(const m of mote.getChildMeshes()){m.receiveShadows=false;(m as Mesh).billboardMode=Mesh.BILLBOARDMODE_ALL;}dust.push(mote);}
  const clock=new FeedbackClock(),gestureClock=new Day1GestureClock();let minimalFX=false,ambientTime=0,selectionTime:number=vfx.selection.duration;
  let state:Snapshot|undefined,quality='auto',effectiveQuality='high',zen=false,panelOpen=false,selectedSlot=-1,disposed=false;
- let frames:number[]=[],last:number|undefined,visibleSamples=0,qualityCheckedAt=0;let readyAt=0,composition='';
+ let frames:number[]=[],last:number|undefined,visibleSamples=0,qualityCheckedAt=0;let readyAt=0,composition='',viewMode:NativeView='shop',lastFitRadius=0;
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
  const setQuality=(q:string)=>{effectiveQuality=q;engine.setHardwareScalingLevel(q==='low'?1.5:1);shadow.getShadowMap()!.refreshRate=q==='low'?2:1;shadow.filteringQuality=q==='low'?ShadowGenerator.QUALITY_LOW:ShadowGenerator.QUALITY_MEDIUM;document.documentElement.dataset.renderQuality=q;};
  setQuality('high');
@@ -88,16 +91,17 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
   if(disposed)return;engine.resize();const w=canvas.clientWidth,h=canvas.clientHeight,narrow=w<720;
   const panel=document.querySelector<HTMLElement>('.sidebar');const rect=panel?.getBoundingClientRect();const visible=panelOpen||!!(rect&&rect.height>0);
   const header=document.querySelector<HTMLElement>('.top')?.getBoundingClientRect();const footer=document.querySelector<HTMLElement>('.dock')?.getBoundingClientRect();
-  const top=zen?20:Math.min(header?.bottom??110,h*.24)+10;let bottom=zen?20:Math.max(85,h-(footer?.top??h-85));let right=0;
+  const controls=document.querySelector<HTMLElement>('.shop-controls')?.getBoundingClientRect();
+  const top=zen?20:Math.min(header?.bottom??110,h*.24)+10;let bottom=zen?20:Math.max(85,h-Math.min(footer?.top??h-85,controls&&controls.height>0?controls.top:h));let right=0;
   if(visible&&rect&&!zen){if(narrow)bottom=Math.max(bottom,h-rect.top+8);else right=Math.min(w*.46,w-rect.left+12);}
   const vw=Math.max(120,w-right),vh=Math.max(80,h-top-bottom);camera.viewport=new Viewport(0,bottom/h,vw/w,vh/h);
-  const signature=[w,h,top,bottom,right].join(':');if(signature===composition)return;composition=signature;
-  const aspect=vw/vh;camera.radius=curatedRadius(aspect,camera.fov);camera.target.set(...artDirection.target);camera.lowerRadiusLimit=Math.max(10,camera.radius-3);camera.upperRadiusLimit=camera.radius+4;
+  const signature=[w,h,top,bottom,right,viewMode].join(':');if(signature===composition)return;composition=signature;
+  const fit=nativeCameraFrame(vw/vh,camera.fov,viewMode),zoom=lastFitRadius?camera.radius/lastFitRadius:1;camera.lowerRadiusLimit=fit.lowerRadiusLimit;camera.upperRadiusLimit=fit.upperRadiusLimit;camera.radius=Math.max(fit.lowerRadiusLimit,Math.min(fit.upperRadiusLimit,fit.radius*zoom));camera.target.set(...fit.target);lastFitRadius=fit.radius;
  };
  scene.onPointerPick=(_,pick)=>{const n=pick.pickedMesh?.metadata?.slot;if(typeof n==='number')onSlot(n);};
  const contextLost=()=>canvas.dispatchEvent(new CustomEvent('world-error'));
  canvas.addEventListener('webglcontextlost',contextLost);window.addEventListener('resize',resize);const observer=new ResizeObserver(resize);observer.observe(canvas);
- function finishFeedback(){const reveal=clock.active?.kind==='reveal';clock.cancel();gestureClock.cancel();nativePresentation.cancel();nativeActors.clearProps();routes.cancelPresentation();if(reveal)onFeedbackEnd();}
+ function finishFeedback(){const reveal=clock.active?.kind==='reveal';clock.cancel();gestureClock.cancel();nativePresentation.cancel();nativeActors.clearProps();delivery.cancel(routes);if(reveal)onFeedbackEnd();}
  function advanceFeedback(dt:number){if(disposed||document.hidden){finishFeedback();return;}const reveal=clock.active?.kind==='reveal';if(reduced.matches){gestureClock.cancel();nativePresentation.cancel();nativeActors.clearProps();}if(!motionAllowed({low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches})){clock.cancel();if(reveal)onFeedbackEnd();return;}clock.step(dt);if(reveal&&!clock.active)onFeedbackEnd();}
  const visibility=()=>{last=undefined;if(document.hidden)finishFeedback();};document.addEventListener('visibilitychange',visibility);
  resize();await scene.whenReadyAsync();readyAt=performance.now();
@@ -111,9 +115,9 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
   gestureClock.step(dt,policy,document.hidden);
   const hour=state?new Date(state.watermark+9*3600000).getUTCHours():0;const trading=!!state?.open&&hour>=config.openHour&&hour<config.closeHour;
   // Milliseconds enter the engine-neutral motion clock exactly once as seconds.
-  const seconds=dt/1000,routeFrame=routes.tick(seconds,{open:trading,visible:true,reduceMotion:reduced.matches,capacity:nativePolicy.customerCapacity});
+  const seconds=dt/1000;let routeFrame=routes.tick(seconds,{open:trading,visible:true,reduceMotion:reduced.matches,capacity:nativePolicy.customerCapacity});
   const arrival=routeFrame.actors.some(a=>a.enabled&&a.state==='entering');if(arrival&&!previousArrival&&!nativePresentation.current)gestureClock.start('greet',policy);previousArrival=arrival;
-  const service=nativePresentation.tick(seconds,nativePolicy),greet=gestureClock.active;
+  const service=delivery.tick(seconds,nativePresentation,routes,nativePolicy),greet=gestureClock.active;routeFrame=routes.tick(0,{open:trading,visible:true,reduceMotion:reduced.matches,capacity:nativePolicy.customerCapacity});
   nativeActors.frame(seconds,nativePolicy,routeFrame,service,greet?.kind==='greet'?greet.elapsed/greet.duration:undefined);
   door.rotation.y=routeFrame.doorAngle;sign.rotation.z=nativePolicy.decorativeMotion?Math.sin(ambientTime/1000*1.4)*.024*Math.abs(routeFrame.doorAngle):0;
   leafNodes.forEach((leaf,i)=>{leaf.rotation.z=nativePolicy.decorativeMotion?Math.sin(ambientTime/1000*.43+i*1.7)*.025:0;leaf.rotation.x=nativePolicy.decorativeMotion?Math.sin(ambientTime/1000*.31+i*.8)*.012:0;});
@@ -125,8 +129,9 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
   scene.render();
  });
  return {
-  baseline(){nativeActors.clearProps();routes.reset();previousArrival=false;},
+  baseline(){nativeActors.clearProps();delivery.cancel(routes);routes.reset();previousArrival=false;},
   update(s:Snapshot){state=s;parcel.setEnabled(!s.revealed);for(let i=0;i<3;i++){const id=s.shelves[i],item=s.inventory[id],o=catalog.offerings.find(o=>o.id===id),count=Math.min(4,item?.stock??0);const key=`${id}:${count}`;if(shelfContents[i]===key)continue;shelfContents[i]=key;for(const child of [...productRoots[i].getChildren()]){if(child instanceof TransformNode)for(const mesh of child.getChildMeshes())shadow.removeShadowCaster(mesh);child.dispose(false);}if(!o)continue;for(let k=0;k<count;k++){const object=model(`${layoutData.displays[i].id}.${id}.${k}`,productRecipe(id,o.color),productRoots[i],i);object.position.set((k%2-.5)*.60,0,(Math.floor(k/2)-.5)*.38);object.rotation.y=[-.07,.04,.025,-.045][k];object.scaling.setAll(id==='off.pencil'?1.05:.82);}}resize();},
+  view(value:NativeView){if(viewMode===value)return;viewMode=value;lastFitRadius=0;composition='';resize();},
   quality(q:string){if(quality===q)return;quality=q;frames=[];last=undefined;setQuality(q==='low'?'low':'high');},
   zen(value:boolean){zen=value;resize();},layout(value:boolean){panelOpen=value;resize();},
   selected(slot:number){if(selectedSlot!==slot){selectedSlot=slot;selectionTime=0;}highlights.forEach((m,i)=>m.setEnabled(i===slot));},
@@ -135,7 +140,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
   gesture(kind:'greet'){if(disposed)return false;return gestureClock.start(kind,{low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches},document.hidden);},
   skip(){finishFeedback();},
   skipReveal(){if(clock.active?.kind==='reveal'){clock.cancel();onFeedbackEnd();}},
-  metrics(){return {presentationActor:nativeActors.staff.root.metadata,nativeMotion:nativeActors.metrics(),nativeService:nativePresentation.metrics(),gesture:gestureClock.active?.kind??null,artDirection:artDirection.id,readyAtMs:readyAt,quality,effectiveQuality,adaptivePolicy:'auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged',minimalFX,reducedMotion:reduced.matches,feedback:clock.active?.kind??null,materials:scene.materials.length,dustCapacity:vfx.dust.capacity,customerRoots:nativeActors.visitors.map(c=>({position:c.root.position.asArray(),enabled:c.root.isEnabled()})),selectedSlot,visibleSamples,frameSamplesMs:[...frames],fps:frames.length?1000/(frames.reduce((a,b)=>a+b,0)/frames.length):null,meshes:scene.meshes.length,activeMeshes:scene.getActiveMeshes().length,renderer:engine.getGlInfo(),viewport:[canvas.width,canvas.height],cameraViewport:camera.viewport};},
+  metrics(){return {presentationActor:nativeActors.staff.root.metadata,nativeMotion:nativeActors.metrics(),nativeService:nativePresentation.metrics(),gesture:gestureClock.active?.kind??null,artDirection:nativeLighting.id,cameraView:viewMode,readyAtMs:readyAt,quality,effectiveQuality,adaptivePolicy:'auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged',minimalFX,reducedMotion:reduced.matches,feedback:clock.active?.kind??null,materials:scene.materials.length,dustCapacity:vfx.dust.capacity,customerRoots:nativeActors.visitors.map(c=>({position:c.root.position.asArray(),enabled:c.root.isEnabled()})),selectedSlot,visibleSamples,frameSamplesMs:[...frames],fps:frames.length?1000/(frames.reduce((a,b)=>a+b,0)/frames.length):null,meshes:scene.meshes.length,activeMeshes:scene.getActiveMeshes().length,renderer:engine.getGlInfo(),viewport:[canvas.width,canvas.height],cameraViewport:camera.viewport};},
   dispose(){finishFeedback();disposed=true;routes.dispose();nativeActors.dispose();clock.dispose();observer.disconnect();window.removeEventListener('resize',resize);document.removeEventListener('visibilitychange',visibility);canvas.removeEventListener('webglcontextlost',contextLost);engine.stopRenderLoop();scene.dispose();engine.dispose();}
  };
 }

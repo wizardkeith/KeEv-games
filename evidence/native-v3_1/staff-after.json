@@ -1,0 +1,41 @@
+{
+  "kind": "stateful source playback measurements, geometry verified separately; not GPU",
+  "frameSeconds": 0.016666666666666666,
+  "transitions": [
+    {
+      "time": 6.8,
+      "kind": "sale",
+      "previousClip": "native.staff.tidy.v3",
+      "firstFrameJumpRadians": 0,
+      "maximum60HzJointDeltaRadians": 0.3483022222222223,
+      "outgoingPropOpacity": [
+        0.8245925925925925,
+        0.45007407407407407,
+        0.10399999999999987,
+        0,
+        0,
+        0
+      ],
+      "targetClip": "native.staff.pack-handover.v3",
+      "transitionFinished": true
+    },
+    {
+      "time": 22.8,
+      "kind": "stock",
+      "previousClip": "native.staff.check-note.v3",
+      "firstFrameJumpRadians": 0,
+      "maximum60HzJointDeltaRadians": 0.17976888888888887,
+      "outgoingPropOpacity": [
+        0.8245925925925925,
+        0.45007407407407407,
+        0.10399999999999987,
+        0,
+        0,
+        0
+      ],
+      "targetClip": "native.staff.receive-stock.v3",
+      "transitionFinished": true
+    }
+  ],
+  "geometryRegression": "tests/v31-staff-blend.test.ts actual indexed hand/forearm vertices + closed garment solids and counter bounds; conditional service yaw full169phases plus recovery"
+}

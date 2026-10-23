@@ -1,25 +1,32 @@
 {
-  "version": "native-characters-v3.1",
+  "version": "native-characters-v3.1-r2",
   "authoring": "src/art/native-characters.ts",
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
-    "src/art/native-characters.ts": "d8f6a0ce8ada2a80cf095feea1a593a35427078d399673f07b38dcb6bf26a68a",
+    "src/art/native-characters.ts": "9612d4d8c2d1e65aaa520097192ea0f327d6df55a8210fcdc0e4fd03f8da92c3",
     "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "dfb556cd2e813656f298fb39c988aaa27ce36af2370aa6717b3e0a18beff49eb",
     "src/presentation/native-motion.ts": "215b955ec4b3fc83400a478545882b257fc244247fb16ea630748bbce8547000",
-    "src/presentation/native-staff.ts": "c21089152a3356e32f312023b7f8b8763f972f2add94c57341fdd8dff62c5b22",
-    "src/presentation/native-routes.ts": "667dc80168065231f0050e6b5039b021f9b559fb051c7900ce123ac6126fffb7",
-    "src/presentation/native-scene.ts": "4b857f6f579e5f17e28be6414632de4d36d245c5e4dcfdd9881535fabb12f2a9",
-    "tools/export-native-characters.ts": "aa9494a32ea5bf75d5121dbe1f32ef2087acddc23131ff051f7af496f28d54a6"
+    "src/presentation/native-staff.ts": "95272f64253c4a5098668b4f8a0cbb285c4d852d57c918d3ffd1ed0b380efb9c",
+    "src/presentation/native-staff-player.ts": "98755b9cca613a1624875b3b61c3721ca1c8efac0fcd176bb83f4556aa74a730",
+    "src/presentation/native-feet.ts": "14620ca78d45b50456c780e4edaaba32bbf8222b3103d65763baee1e86b59e83",
+    "src/presentation/native-delivery.ts": "fb6a3113a03bf8bc9830196f5339b19125a2ff4f3e4ac4a9dbc81696f916c0c7",
+    "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
+    "src/world.ts": "68d48b422d25bfb95e7359d950d623fad352da2cf32583b75c9b3ef77da2a56b",
+    "src/presentation/native-routes.ts": "0a0fbbfe0148825392f497d44fa122bc40b10b8bd1f3b2d9684b4985db9b9067",
+    "src/presentation/native-scene.ts": "a368d2010b68c4d61ecfef9e2dc1450a95e42ea4e0cf21232f750b027bf9a60d",
+    "tools/export-native-characters.ts": "45197631fc63a64397f8f64471e81a2be61f445841f6a1b47ae1fccbe557da00"
   },
   "rig": "assets/authoring/native-v3/rig-contract.json",
   "motion": {
     "contract": "assets/authoring/native-v3/motion-contract.json",
     "samplers": [
       "src/presentation/native-motion.ts",
-      "src/presentation/native-staff.ts"
+      "src/presentation/native-staff.ts",
+      "src/presentation/native-staff-player.ts",
+      "src/presentation/native-feet.ts"
     ],
     "routes": "src/presentation/native-routes.ts",
     "sceneAdapter": "src/presentation/native-scene.ts",
@@ -35,8 +42,8 @@
       "id": "actor.misaki.native.v3",
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
-      "bytes": 341628,
-      "sha256": "664adbca33601ebc45edcba84b057d01c5d9424babbeb95cd428b88675e41bdf",
+      "bytes": 341636,
+      "sha256": "5aaec590c0c19c9a3ddaa11be2885a2152e1bc044c5fd977144c24ea6edeaeeb",
       "nodes": [
         {
           "id": "body",
@@ -325,8 +332,8 @@
       "id": "actor.visitor-a.native.v3",
       "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
       "web": "public/assets/native-v3/visitor-a-native-v3.glb",
-      "bytes": 333800,
-      "sha256": "6d31d04d8df4ef7fc530024c7d4d53ea2fb6e2e65e484ce29958482c0eec0941",
+      "bytes": 333808,
+      "sha256": "d80d40ddd16230b718ae21bb2b6bf6a035356290cdc7f36db46c88f0293c2ffe",
       "nodes": [
         {
           "id": "body",
@@ -615,8 +622,8 @@
       "id": "actor.visitor-b.native.v3",
       "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
       "web": "public/assets/native-v3/visitor-b-native-v3.glb",
-      "bytes": 313284,
-      "sha256": "80f694705114e36cf406c8da307ca7c481a9847cd3a8e3fb13c66438bfbab45d",
+      "bytes": 314444,
+      "sha256": "43d268762b6caa0b407237b71d2eefc9fbedeef2d5a52818b25f9422fc4de148",
       "nodes": [
         {
           "id": "body",
@@ -627,7 +634,7 @@
             0
           ],
           "geometryGroups": 7,
-          "triangles": 1608
+          "triangles": 1656
         },
         {
           "id": "head",

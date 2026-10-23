@@ -1,5 +1,5 @@
 {
-  "version": "native-rigid-rig.v3.1",
+  "version": "native-rigid-rig.v3.1-r2",
   "units": "metres",
   "axes": "right-handed; +Y up; face -Z; positive local X pitch moves hanging hands/feet toward -Z",
   "pivotSpace": "local to parent; surfaces local to node; body is actor-local root",
@@ -15,8 +15,8 @@
     "socket-left",
     "socket-right"
   ],
-  "motion": "rigid articulated parts; no skeleton, skins, inverse kinematics or embedded glTF clips",
+  "motion": "rigid articulated parts; external flat-floor world-foot anchoring and two-link leg IK; no skeleton, skins or embedded glTF clips",
   "restArms": "shoulder→forearm→hand hangs downward; elbow and wrist local rotations blend on authored rest",
-  "restLegs": "hips at y=.65; knees -.25; ankles -.30; soles .015; foot lift must apply at leg root and joint pitch must be calibrated by adapter",
+  "restLegs": "hips at y=.65; knees -.25; ankles -.30; actual rest sole .015; NativeFootPlant solves .25/.30m links from immutable world stance anchors and bounded swing targets; apply bodyDrop and local hip/knee/foot quaternions",
   "material": "Existing IEC sRGB→linear PBR semantic material intent; opaque soft fallback; custom lofts use finite smooth normals; no external image/UV/texture dependency"
 }

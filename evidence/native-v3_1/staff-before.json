@@ -1,0 +1,13 @@
+{
+  "kind": "source sampler reproduction, not GPU",
+  "tidyToSale": {
+    "from": 1.12,
+    "to": 0,
+    "jump": 1.12
+  },
+  "serviceToIdleAt23": {
+    "from": 0,
+    "to": 0.76,
+    "jump": 0.76
+  }
+}

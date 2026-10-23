@@ -1,7 +1,7 @@
 import type {Snapshot} from '../core/contracts';
 import {NativeServiceSequencer,makeStreamKey,projectConfirmedCommit,type CapturedCommand,type MotionPolicy,type Observation} from './native-motion';
 
-const baselines=new Set(['baseline','reload','retry','catchup','import','mode','choose-mode']);
+const baselines=new Set(['baseline','reload','retry','import','mode','choose-mode']);
 /** App-owned lifecycle: survives deferred world creation and a missing GPU. */
 export class NativeCommitPresentation {
  private incarnation=0;
@@ -17,7 +17,9 @@ export class NativeCommitPresentation {
   if(after.revision<=before.revision)return;
   if(!this.sequence)this.baseline(before,this.epoch);
   const receipt=projectConfirmedCommit(before,after,{incarnation:String(this.incarnation),epoch,source:command?'command':'settle',...(command?{command:{...command}}:{})});
-  return this.sequence!.observe(receipt,policy);
+  // Returning/offline reconciliation consumes the same stream's watermark.
+  // It is not a new save incarnation and never resets world customer routes.
+  return this.sequence!.observe(receipt,cause==='offline-return'||cause==='catchup'?{...policy,visible:false,nativeMotion:false}:policy);
  }
  tick(seconds:number,policy:MotionPolicy){return this.sequence?.tick(seconds,policy);}
  cancel(){this.sequence?.cancelVisuals();}

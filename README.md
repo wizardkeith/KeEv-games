@@ -1,6 +1,6 @@
-# Day1 candidate (2026-10-22)
+# Native 3D v3.1 candidate (2026-10-23)
 
-Misaki, The First Light story and separate reading progress are implemented. The same public Site and economic saves remain in use. See docs/HANDOFF.md for actual results and new3D visual limits. Rebuild character: node --import tsx tools/export-misaki.ts.
+Opening/Sandbox guidance, planted visitor feet and skirt clearance, cross-clip work playback, offline-return presentation, conditional customer handoff, camera and native lighting/exterior refinements are implemented. The same public Site, economic saves and Day1 story remain in use. See docs/HANDOFF.md for 133-test results and the explicit new3D visual limit. Current native masters: run the three tools/export-native-*.ts scripts with node --import tsx. Older art export commands below rebuild historical masters only.
 
 # 下一站・小店物語 / Next Stop, Little Shop
 
