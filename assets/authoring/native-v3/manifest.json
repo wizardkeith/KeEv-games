@@ -1,10 +1,10 @@
 {
-  "version": "native-characters-v4-r1",
+  "version": "native-characters-v5-r1",
   "authoring": "src/art/native-characters.ts",
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
-    "src/art/native-characters.ts": "7718b16e05334cba6d6742597ac16240ccd5baf547624811f2a0b397673ea911",
+    "src/art/native-characters.ts": "25d68e01e73aec706f93117fc1407e86797318b41e5a064ccdf54ac674318c67",
     "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "dfb556cd2e813656f298fb39c988aaa27ce36af2370aa6717b3e0a18beff49eb",
@@ -42,8 +42,8 @@
       "id": "actor.misaki.native.v3",
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
-      "bytes": 381872,
-      "sha256": "ae5eb341b4fc84adb04761f1c2a1835a6ac8d6927be8142532eafda867e5da02",
+      "bytes": 378468,
+      "sha256": "dc17dad12531ae9206e00925748e67a784aee540e55af6bfe915556bf834699c",
       "nodes": [
         {
           "id": "body",
@@ -54,7 +54,7 @@
             0
           ],
           "geometryGroups": 7,
-          "triangles": 2700
+          "triangles": 2548
         },
         {
           "id": "head",
@@ -64,8 +64,8 @@
             1.25,
             0
           ],
-          "geometryGroups": 6,
-          "triangles": 3048
+          "geometryGroups": 4,
+          "triangles": 3256
         },
         {
           "id": "eye-left",
@@ -153,7 +153,7 @@
             0.048
           ],
           "geometryGroups": 1,
-          "triangles": 192
+          "triangles": 224
         },
         {
           "id": "hair-secondary-right",
@@ -164,7 +164,7 @@
             0.048
           ],
           "geometryGroups": 1,
-          "triangles": 192
+          "triangles": 224
         },
         {
           "id": "arm-left",
@@ -175,7 +175,7 @@
             0
           ],
           "geometryGroups": 2,
-          "triangles": 348
+          "triangles": 576
         },
         {
           "id": "forearm-left",
@@ -186,7 +186,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "hand-left",
@@ -219,7 +219,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "shin-left",
@@ -230,7 +230,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "foot-left",
@@ -252,7 +252,7 @@
             0
           ],
           "geometryGroups": 2,
-          "triangles": 348
+          "triangles": 576
         },
         {
           "id": "forearm-right",
@@ -263,7 +263,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "hand-right",
@@ -296,7 +296,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "shin-right",
@@ -307,7 +307,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "foot-right",
@@ -332,8 +332,8 @@
       "id": "actor.visitor-a.native.v3",
       "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
       "web": "public/assets/native-v3/visitor-a-native-v3.glb",
-      "bytes": 335396,
-      "sha256": "e98cdce91e94c50b4301687466638510a2dd7502dfeeeb09daa1069ee6e3beeb",
+      "bytes": 354284,
+      "sha256": "da9a2ab9a9d1d19de55991705ced79a7ff62eb24204479396a1d75895ad1a152",
       "nodes": [
         {
           "id": "body",
@@ -344,7 +344,7 @@
             0
           ],
           "geometryGroups": 9,
-          "triangles": 1512
+          "triangles": 1860
         },
         {
           "id": "head",
@@ -355,7 +355,7 @@
             0
           ],
           "geometryGroups": 4,
-          "triangles": 2376
+          "triangles": 2600
         },
         {
           "id": "eye-left",
@@ -443,7 +443,7 @@
             0.048
           ],
           "geometryGroups": 1,
-          "triangles": 192
+          "triangles": 224
         },
         {
           "id": "hair-secondary-right",
@@ -454,7 +454,7 @@
             0.048
           ],
           "geometryGroups": 1,
-          "triangles": 192
+          "triangles": 224
         },
         {
           "id": "arm-left",
@@ -465,7 +465,7 @@
             0
           ],
           "geometryGroups": 2,
-          "triangles": 348
+          "triangles": 576
         },
         {
           "id": "forearm-left",
@@ -476,7 +476,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "hand-left",
@@ -509,7 +509,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "shin-left",
@@ -520,7 +520,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "foot-left",
@@ -542,7 +542,7 @@
             0
           ],
           "geometryGroups": 2,
-          "triangles": 348
+          "triangles": 576
         },
         {
           "id": "forearm-right",
@@ -553,7 +553,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "hand-right",
@@ -586,7 +586,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "shin-right",
@@ -597,7 +597,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "foot-right",
@@ -622,8 +622,8 @@
       "id": "actor.visitor-b.native.v3",
       "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
       "web": "public/assets/native-v3/visitor-b-native-v3.glb",
-      "bytes": 332124,
-      "sha256": "7d4edf14a12e19796d0d8587b5cf31b1aaf0fbec2becb1b4252acdc07bc4bfa3",
+      "bytes": 372156,
+      "sha256": "c0ddea393a0465c22be544d8c6674bd509fc8c97bb01df96880db65d623d9480",
       "nodes": [
         {
           "id": "body",
@@ -634,7 +634,7 @@
             0
           ],
           "geometryGroups": 7,
-          "triangles": 1656
+          "triangles": 2052
         },
         {
           "id": "head",
@@ -645,7 +645,7 @@
             0
           ],
           "geometryGroups": 4,
-          "triangles": 2472
+          "triangles": 3432
         },
         {
           "id": "eye-left",
@@ -733,7 +733,7 @@
             0.048
           ],
           "geometryGroups": 1,
-          "triangles": 192
+          "triangles": 224
         },
         {
           "id": "hair-secondary-right",
@@ -744,7 +744,7 @@
             0.048
           ],
           "geometryGroups": 1,
-          "triangles": 192
+          "triangles": 224
         },
         {
           "id": "arm-left",
@@ -755,7 +755,7 @@
             0
           ],
           "geometryGroups": 2,
-          "triangles": 348
+          "triangles": 576
         },
         {
           "id": "forearm-left",
@@ -766,7 +766,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "hand-left",
@@ -799,7 +799,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "shin-left",
@@ -810,7 +810,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "foot-left",
@@ -832,7 +832,7 @@
             0
           ],
           "geometryGroups": 2,
-          "triangles": 348
+          "triangles": 576
         },
         {
           "id": "forearm-right",
@@ -843,7 +843,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "hand-right",
@@ -876,7 +876,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "shin-right",
@@ -887,7 +887,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 144
+          "triangles": 160
         },
         {
           "id": "foot-right",

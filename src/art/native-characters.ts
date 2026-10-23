@@ -11,7 +11,7 @@ export interface NativeMesh {shape:'mesh';at:V3;color:string;role:MaterialRole;g
 export type NativePrimitive=Part&{roughness?:number};
 export type NativeSurface=NativePrimitive|NativeMesh;
 export interface NativePart {id:string;parent?:string;pivot:V3;recipe:NativeSurface[];}
-export const nativeCharacterIdentity={version:'native-characters-v4-r1',misaki:{id:'actor.misaki.native.v3',economicBinding:'staff.graybox'},'visitor-a':{id:'actor.visitor-a.native.v3',economicBinding:null},'visitor-b':{id:'actor.visitor-b.native.v3',economicBinding:null}} as const;
+export const nativeCharacterIdentity={version:'native-characters-v5-r1',misaki:{id:'actor.misaki.native.v3',economicBinding:'staff.graybox'},'visitor-a':{id:'actor.visitor-a.native.v3',economicBinding:null},'visitor-b':{id:'actor.visitor-b.native.v3',economicBinding:null}} as const;
 const P={skin:'#EAC3A8',skinB:'#E1B99D',blush:'#D99D91',hair:'#604638',hairLight:'#87634C',sage:'#7F9A89',sageDark:'#607B6A',cream:'#F5EBDD',ivory:'#F1E6CF',plum:'#826879',ink:'#57413D',shoe:'#59483F',sole:'#8C7764',terracotta:'#B77F62',blue:'#748F9D',trousers:'#555E61'};
 const p=(shape:Part['shape'],size:V3,at:V3,color:string,role:MaterialRole='fabric',extra:Partial<NativePrimitive>={}):NativePrimitive=>({shape,size,at,color,role,...extra});
 const round=(size:V3,at:V3,color:string,role:MaterialRole='fabric',radius=.014)=>p('round',size,at,color,role,{radius});
@@ -20,6 +20,14 @@ interface Ring {y:number;x:number;z:number;cx?:number;cz?:number;}
  * authored garment folds. Smooth normals are derived from the actual mesh. */
 function loft(rings:Ring[],segments=24,pleat=0,phase=0):Geometry {
  if(rings[0].y>rings[rings.length-1].y)rings=[...rings].reverse();
+ const controls=rings;
+ rings=[];
+ for(let i=0;i<controls.length-1;i++)for(let step=0;step<2;step++){
+  const t=step/2,a=controls[Math.max(0,i-1)],b=controls[i],c=controls[i+1],d=controls[Math.min(controls.length-1,i+2)],r:Ring={y:b.y+(c.y-b.y)*t,x:0,z:0};
+  for(const k of ['x','z','cx','cz'] as const){const v0=a[k]??0,v1=b[k]??0,v2=c[k]??0,v3=d[k]??0,m1=(v2-v0)*.5,m2=(v3-v1)*.5;r[k]=(2*t*t*t-3*t*t+1)*v1+(t*t*t-2*t*t+t)*m1+(-2*t*t*t+3*t*t)*v2+(t*t*t-t*t)*m2;if(k==='x'||k==='z')r[k]=Math.max(.001,r[k]!);}
+  rings.push(r);
+ }
+ rings.push(controls[controls.length-1]);
  const g:Geometry={positions:[],normals:[],indices:[]};
  for(const r of rings)for(let j=0;j<segments;j++){const a=j*Math.PI*2/segments,fold=1+pleat*Math.cos(a*6+phase);g.positions.push((r.cx??0)+Math.cos(a)*r.x*fold,r.y,(r.cz??0)+Math.sin(a)*r.z*fold);}
  const tri=(a:number,b:number,c:number)=>{g.indices.push(a,b,c);};
@@ -30,19 +38,28 @@ function loft(rings:Ring[],segments=24,pleat=0,phase=0):Geometry {
  for(let i=0;i<g.normals.length;i+=3){const l=Math.hypot(...g.normals.slice(i,i+3));if(!l)throw Error('native loft zero normal');for(let k=0;k<3;k++)g.normals[i+k]/=l;}
  return g;
 }
-function mesh(rings:Ring[],color:string,role:MaterialRole,at:V3=[0,0,0],pleat=0,phase=0):NativeMesh{return {shape:'mesh',at,color,role,geometry:loft(rings,24,pleat,phase)};}
+function mesh(rings:Ring[],color:string,role:MaterialRole,at:V3=[0,0,0],pleat=0,phase=0):NativeMesh{return {shape:'mesh',at,color,role,geometry:loft(rings,16,pleat,phase)};}
 /** A tapered curved hair lock is a loft around a deliberately authored curve,
  * rather than overlapping spheres. */
 function lock(points:Ring[],color=P.hair):NativeMesh{return mesh(points,color,'hair');}
 /** Continuous bob shell with an open face, a shaped nape and real 8mm edge
  * thickness. Both Web and GLB use these vertices; no camera-facing hair cards. */
+function smoothNormals(g:Geometry):Geometry {
+ g.normals=Array(g.positions.length).fill(0);
+ for(let i=0;i<g.indices.length;i+=3){const ids=g.indices.slice(i,i+3).map(n=>n*3),[a,b,c]=ids,u=[0,1,2].map(k=>g.positions[b+k]-g.positions[a+k]),v=[0,1,2].map(k=>g.positions[c+k]-g.positions[a+k]),n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];for(const q of ids)for(let k=0;k<3;k++)g.normals[q+k]+=n[k];}
+ for(let i=0;i<g.normals.length;i+=3){const n=Math.hypot(...g.normals.slice(i,i+3));for(let k=0;k<3;k++)g.normals[i+k]/=n||1;}
+ return g;
+}
+/** Closed sculpted shell: the fringe is the same surface as the crown, with
+ * broad flowing ridges, an asymmetric part and a softly scalloped bob edge. */
 function bob(width:number,color:string):NativeMesh {
- const g:Geometry={positions:[],normals:[],indices:[]},segments=24,rows=8;
+ const g:Geometry={positions:[],normals:[],indices:[]},segments=32,rows=12;
  for(let layer=0;layer<2;layer++)for(let i=0;i<=rows;i++)for(let j=0;j<segments;j++){
-  const a=j*Math.PI*2/segments,front=Math.max(0,Math.min(1,(-Math.sin(a)-.12)/.6));
-  const end=2.12-front*.94+.07*Math.cos(a)*front,t=(1-i/rows)*end+.025;
-  const r=layer?.008:0;
-  g.positions.push(Math.cos(a)*Math.sin(t)*(width*1.10-r),.18+Math.cos(t)*(.21-r),.028+Math.sin(a)*Math.sin(t)*(.211-r));
+  const a=j*Math.PI*2/segments,front=Math.max(0,Math.min(1,(-Math.sin(a)-.03)/.82)),sweep=.15*Math.cos(a)*front;
+  const end=2.32-front*(.94+.16*Math.cos(a*2)) + sweep + .045*Math.sin(a*7)*(1-front*.7),t=.025+(1-i/rows)*end;
+  const strand=.006*Math.cos(a*9+t*1.8)*Math.sin(t)**2,edge=layer*.009;
+  const x=Math.cos(a)*Math.sin(t)*(width*1.10-edge+strand);
+  g.positions.push(x,.18+Math.cos(t)*(.21-edge),.028+Math.sin(a)*Math.sin(t)*(.211-edge+strand));
  }
  const count=(rows+1)*segments;
  for(let l=0;l<2;l++)for(let i=0;i<rows;i++)for(let j=0;j<segments;j++){
@@ -50,11 +67,24 @@ function bob(width:number,color:string):NativeMesh {
   g.indices.push(...(l?[a,b,c,b,d,c]:[a,c,b,b,c,d]));
  }
  for(let j=0;j<segments;j++){const b=(j+1)%segments;g.indices.push(j,b,j+count,b,b+count,j+count);}
- for(let l=0;l<2;l++){const center=g.positions.length/3;g.positions.push(0,.391-l*.008,.028);for(let j=0;j<segments;j++){const a=l*count+rows*segments+j,b=l*count+rows*segments+(j+1)%segments;g.indices.push(...(l?[center,a,b]:[center,b,a]));}}
- g.normals=Array(g.positions.length).fill(0);
- for(let i=0;i<g.indices.length;i+=3){const [a,b,c]=g.indices.slice(i,i+3).map(n=>n*3),u=[0,1,2].map(k=>g.positions[b+k]-g.positions[a+k]),v=[0,1,2].map(k=>g.positions[c+k]-g.positions[a+k]),n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];for(const p of [a,b,c])for(let k=0;k<3;k++)g.normals[p+k]+=n[k];}
- for(let i=0;i<g.normals.length;i+=3){const n=Math.hypot(...g.normals.slice(i,i+3));for(let k=0;k<3;k++)g.normals[i+k]/=n||1;}
- return {shape:'mesh',at:[0,0,0],color,role:'hair',geometry:g,roughness:.66};
+ for(let l=0;l<2;l++){const center=g.positions.length/3;g.positions.push(0,.391-l*.009,.028);for(let j=0;j<segments;j++){const a=l*count+rows*segments+j,b=l*count+rows*segments+(j+1)%segments;g.indices.push(...(l?[center,a,b]:[center,b,a]));}}
+ return {shape:'mesh',at:[0,0,0],color,role:'hair',geometry:smoothNormals(g),roughness:.60};
+}
+/** Thin closed fabric panel follows the front of the dress; the rounded hem
+ * and subtle broad folds are geometry, with no oval end caps or rigid slab. */
+function apron():NativeMesh {
+ const g:Geometry={positions:[],normals:[],indices:[]},columns=16;
+ const rows=[{y:.365,w:.180,z:-.189},{y:.395,w:.192,z:-.191},{y:.490,w:.184,z:-.186},{y:.590,w:.166,z:-.164},{y:.690,w:.145,z:-.142},{y:.783,w:.133,z:-.134}];
+ for(let side=0;side<2;side++)for(let r=0;r<rows.length;r++)for(let c=0;c<=columns;c++){
+  const u=c/columns*2-1,p=rows[r],fold=.002*Math.cos(u*Math.PI*3)*(r<4?1:.25);
+  g.positions.push(u*p.w,p.y+(r===0?.012*Math.pow(u,8):0),p.z+.045*u*u+fold+side*.006);
+ }
+ const stride=columns+1,count=rows.length*stride;
+ for(let side=0;side<2;side++)for(let r=0;r<rows.length-1;r++)for(let c=0;c<columns;c++){const a=side*count+r*stride+c,b=a+1,d=a+stride,e=d+1;g.indices.push(...(side?[a,b,d,b,e,d]:[a,d,b,b,d,e]));}
+ const bridge=(a:number,b:number)=>g.indices.push(a,b,a+count,b,b+count,a+count);
+ for(let c=0;c<columns;c++){bridge(c+1,c);bridge((rows.length-1)*stride+c,(rows.length-1)*stride+c+1);}
+ for(let r=0;r<rows.length-1;r++){bridge(r*stride,(r+1)*stride);bridge((r+1)*stride+columns,r*stride+columns);}
+ return {shape:'mesh',at:[0,0,0],role:'fabric',color:P.ivory,roughness:.91,geometry:smoothNormals(g)};
 }
 export function nativeSurfaceGeometry(surface:NativeSurface):Geometry & {uvs?:number[]} {
  if(surface.shape!=='mesh'){const g=geometry(surface),uvs:number[]=[];for(let i=0;i<g.positions.length;i+=3){const [x,y,z]=g.positions.slice(i,i+3),[nx,ny,nz]=g.normals.slice(i,i+3).map(Math.abs);uvs.push(...(ny>=nx&&ny>=nz?[x,z]:nx>=nz?[z,y]:[x,y]));}return {...g,uvs};}
@@ -81,8 +111,6 @@ function head(kind:NativeCharacterKind):NativePart[]{
  const hair=a?'#3F3B35':misaki?P.hair:'#55473F';
  face.push(a?mesh([{y:.207,x:w*1.03,z:.198,cz:.020},{y:.295,x:w*1.04,z:.192,cz:.012},{y:.361,x:w*.78,z:.133,cz:.012},{y:.384,x:.031,z:.028}],hair,'hair'):bob(w,hair));
  if(misaki){
-  face.push(lock([{y:.310,x:.055,z:.037,cx:-.115,cz:-.132},{y:.240,x:.072,z:.039,cx:-.121,cz:-.145},{y:.153,x:.048,z:.031,cx:-.165,cz:-.093},{y:.077,x:.016,z:.014,cx:-.182,cz:-.039}],hair),lock([{y:.348,x:.069,z:.037,cx:.054,cz:-.127},{y:.292,x:.084,z:.039,cx:.080,cz:-.162},{y:.218,x:.043,z:.029,cx:.154,cz:-.143},{y:.136,x:.010,z:.012,cx:.188,cz:-.095}],hair),lock([{y:.315,x:.047,z:.031,cx:-.020,cz:-.149},{y:.270,x:.038,z:.029,cx:-.039,cz:-.174},{y:.227,x:.005,z:.007,cx:-.060,cz:-.183}],hair));
-  face.push(lock([{y:.301,x:.011,z:.005,cx:.078,cz:-.198},{y:.266,x:.016,z:.006,cx:.110,cz:-.198},{y:.232,x:.004,z:.003,cx:.141,cz:-.176}],P.hairLight));
   face.push(p('sphere',[.069,.024,.013],[.195,.250,-.110],P.ivory,'fabric',{turn:[0,-.30,-.55]}),p('sphere',[.048,.022,.012],[.209,.272,-.105],P.ivory,'fabric',{turn:[0,-.30,.75]}));
  }else if(a){
   for(let i=0;i<7;i++){const cx=(i-3)*.047;face.push(lock([{y:.344,x:.039,z:.039,cx,cz:-.105},{y:.291+(i%2)*.017,x:.046,z:.034,cx:cx-.008,cz:-.157},{y:.250+(i%2)*.016,x:.018,z:.018,cx:cx+.012,cz:-.165}],i%3===0?'#51483D':hair));}
@@ -92,23 +120,23 @@ function head(kind:NativeCharacterKind):NativePart[]{
  const parts:NativePart[]=[{id:'head',parent:'body',pivot:[0,1.250,0],recipe:face},...eyes(kind)];
  // Mouth is independently posed without swapping face/head silhouette.
  parts.push({id:'mouth',parent:'head',pivot:[0,.067,-.157],recipe:[p('torus',[.047,.006,.035],[0,0,0],'#A36D67','ink',{turn:[Math.PI/2,0,0],arc:[Math.PI*.12,Math.PI*.88],segments:16})]});
- for(const side of [-1,1]){const s=side<0?'left':'right';parts.push({id:`hair-secondary-${s}`,parent:'head',pivot:[side*.177,.214,.048],recipe:[lock([{y:.060,x:.040,z:.061},{y:-.030,x:.055,z:.067,cx:side*.012},{y:-.125,x:.037,z:.048,cx:side*.006},{y:-.166,x:.007,z:.012,cx:side*-.008}],hair)]});}
+ for(const side of [-1,1]){const s=side<0?'left':'right';parts.push({id:`hair-secondary-${s}`,parent:'head',pivot:[side*.177,.214,.048],recipe:[lock([{y:.020,x:.022,z:.044},{y:-.070,x:.036,z:.046,cx:side*.012},{y:-.139,x:.026,z:.035,cx:side*.006},{y:-.170,x:.005,z:.008,cx:side*-.008}],hair)]});}
  return parts;
 }
 function body(kind:NativeCharacterKind):NativeSurface[]{
  const misaki=kind==='misaki',a=kind==='visitor-a',coat=misaki?P.sage:a?P.terracotta:P.blue;
- const torso:NativeSurface[]=[mesh([{y:.640,x:.153,z:.106},{y:.739,x:.167,z:.118},{y:.946,x:.183,z:.120},{y:1.074,x:.207,z:.111},{y:1.132,x:.183,z:.099}],coat,'fabric'),round([.198,.303,.026],[0,.980,-.117],P.cream),p('cylinder',[.10,.103,.10],[0,1.180,0],a?P.skinB:P.skin,'skin',{top:1})];
- // Jacket opening and lapels have actual sloping, broad, folded geometry.
- for(const side of [-1,1]){
+ const torso:NativeSurface[]=[mesh([{y:.640,x:.153,z:.106},{y:.739,x:.167,z:.118},{y:.946,x:.183,z:.120},{y:1.065,x:.204,z:.112},{y:1.112,x:.190,z:.103},{y:1.155,x:.130,z:.080},{y:1.178,x:.064,z:.065}],coat,'fabric'),mesh([{y:.790,x:.075,z:.018,cz:-.123},{y:.960,x:.081,z:.020,cz:-.127},{y:1.105,x:.076,z:.016,cz:-.112},{y:1.153,x:.047,z:.012,cz:-.072}],P.cream,'fabric'),p('cylinder',[.10,.103,.10],[0,1.180,0],a?P.skinB:P.skin,'skin',{top:1})];
+ // The upper layer is a continuous cardigan. A fitted blouse sits just in
+ // front, under the waist apron; no disconnected lapels or rectangular straps.
+ if(!misaki)for(const side of [-1,1]){
   torso.push(mesh([{y:.803,x:.040,z:.018,cx:side*.120,cz:-.128},{y:1.037,x:.064,z:.022,cx:side*.110,cz:-.135},{y:1.126,x:.036,z:.023,cx:side*.073,cz:-.110}],coat,'fabric'),round([.070,.054,.027],[side*.067,1.105,-.126],P.cream,'fabric',.008));
  }
  if(misaki){
-  torso.push(mesh([{y:.390,x:.236,z:.175},{y:.427,x:.242,z:.174},{y:.560,x:.211,z:.148},{y:.720,x:.152,z:.109}],P.plum,'fabric',[0,0,0],.085));
-  torso.push(mesh([{y:.447,x:.154,z:.014,cz:-.170},{y:.470,x:.173,z:.019,cz:-.170},{y:.635,x:.162,z:.022,cz:-.146},{y:.761,x:.135,z:.019,cz:-.127},{y:.832,x:.127,z:.013,cz:-.146},{y:.985,x:.105,z:.018,cz:-.148},{y:1.048,x:.090,z:.012,cz:-.140}],P.ivory,'fabric',[0,0,0],.036));
-  for(const y of [1.070,1.012,.954])torso.push(p('sphere',[.012,.012,.009],[0,y,-.135],'#B3A181','fabric'));
-  // Waist band and long thin straps, off-centre shaped pocket and hems.
-  torso.push(round([.315,.034,.260],[0,.783,-.006],P.cream,'fabric',.007),round([.307,.018,.026],[0,.456,-.183],P.cream,'fabric',.004),round([.110,.099,.021],[.065,.648,-.181],'#E0D3BA','fabric',.012),round([.109,.015,.023],[.065,.697,-.184],P.cream,'fabric',.004),p('sphere',[.030,.049,.009],[.067,.650,-.195],P.sage,'fabric',{turn:[0,0,-.4]}));
-  for(const side of [-1,1])torso.push(round([.024,.335,.020],[side*.118,.996,-.139],P.ivory,'fabric',.005));
+  torso.push(mesh([{y:.305,x:.238,z:.175},{y:.350,x:.249,z:.180},{y:.490,x:.229,z:.166},{y:.620,x:.189,z:.134},{y:.750,x:.152,z:.109}],P.plum,'fabric',[0,0,0],.035));
+  torso.push(apron());
+  for(const y of [1.104,1.045,.986,.927,.868])torso.push(p('sphere',[.012,.012,.009],[0,y,-.150],'#B3A181','fabric'));
+  // Thin continuous waistband; rounded pocket follows the apron front.
+  torso.push(mesh([{y:.768,x:.151,z:.116},{y:.779,x:.154,z:.119},{y:.796,x:.151,z:.116}],P.cream,'fabric'),round([.103,.084,.009],[.058,.579,-.168],'#E4D6BD','fabric',.017),round([.100,.006,.010],[.058,.621,-.171],P.cream,'fabric',.003));
  }else if(a){
   torso.push(mesh([{y:.624,x:.156,z:.103},{y:.702,x:.165,z:.110}],P.trousers,'fabric'),round([.110,.106,.020],[-.114,.923,-.145],'#AA7055','fabric',.009),round([.102,.017,.023],[-.114,.974,-.147],'#D0A088','fabric',.004));
   torso.push(p('round',[.027,.590,.026],[.050,.967,-.156],'#C8B595','fabric',{radius:.004,turn:[0,0,.52]}),round([.212,.203,.087],[.212,.711,-.076],'#D6C5A3','fabric',.022),round([.212,.026,.091],[.212,.810,-.076],'#B3A180','fabric',.007));
@@ -124,7 +152,7 @@ export function nativeCharacterParts(kind:NativeCharacterKind):NativePart[]{
  const misaki=kind==='misaki',a=kind==='visitor-a',coat=misaki?P.sage:a?P.terracotta:P.blue,skin=a?P.skinB:P.skin;
  const parts:NativePart[]=[{id:'body',pivot:[0,0,0],recipe:body(kind)},...head(kind)];
  for(const side of [-1,1]){const s=side<0?'left':'right',x=side*.222;
-  parts.push({id:`arm-${s}`,parent:'body',pivot:[x,1.100,0],recipe:[mesh([{y:-.220,x:.049,z:.049,cx:side*.007},{y:-.165,x:.060,z:.056,cx:side*.008},{y:-.031,x:.069,z:.061},{y:.026,x:.052,z:.052},{y:.060,x:.014,z:.016}],coat,'fabric'),round([.112,.045,.111],[side*.006,-.199,0],misaki?'#A8BAA5':a?'#CD9D7D':'#A0B3B8','fabric',.009)]});
+  parts.push({id:`arm-${s}`,parent:'body',pivot:[x,1.100,0],recipe:[mesh([{y:-.220,x:.048,z:.048,cx:side*.007},{y:-.177,x:.058,z:.057,cx:side*.008},{y:-.060,x:.066,z:.060},{y:.020,x:.064,z:.060,cx:side*-.012},{y:.057,x:.040,z:.041,cx:side*-.032},{y:.065,x:.008,z:.012,cx:side*-.044}],coat,'fabric'),mesh([{y:-.225,x:.045,z:.045,cx:side*.006},{y:-.217,x:.058,z:.058,cx:side*.006},{y:-.188,x:.060,z:.059,cx:side*.006},{y:-.177,x:.052,z:.052,cx:side*.006}],misaki?'#8FA38E':a?'#BE8B6D':'#829BA5','fabric')]});
   parts.push({id:`forearm-${s}`,parent:`arm-${s}`,pivot:[side*.007,-.220,0],recipe:[mesh([{y:-.168,x:.036,z:.036},{y:-.110,x:.045,z:.043},{y:.012,x:.047,z:.045}],misaki?skin:coat,misaki?'skin':'fabric')]});
   parts.push({id:`hand-${s}`,parent:`forearm-${s}`,pivot:[0,-.168,0],recipe:[round([.073,.089,.048],[0,-.028,-.004],skin,'skin',.021),p('sphere',[.030,.051,.031],[side*-.036,-.021,-.010],skin,'skin')]});
   parts.push({id:`socket-${s}`,parent:`hand-${s}`,pivot:[0,-.021,-.043],recipe:[]});

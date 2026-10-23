@@ -69,3 +69,7 @@ button{transition:background-color 160ms ease,border-color 160ms ease,box-shadow
 @media(min-width:721px) and (max-width:1080px){.stock-sidebar{width:min(560px,55vw)}.stock-grid{grid-template-columns:1fr}}
 @media(max-width:720px){.stock-sidebar{top:12px;bottom:calc(78px + env(safe-area-inset-bottom));width:auto;max-height:none;left:10px;right:10px}.stock-grid{grid-template-columns:1fr}.stock-sidebar .panelbody{padding:0 12px 20px;scroll-padding-top:200px}.stock-grid .stock-card{padding:14px}.stock-card .product-title h3{font-size:16px}.stock-card .thumbnail{width:58px;height:58px;flex-basis:58px}.stock-toolbar input{font-size:16px}.stock-buy,.stock-place{font-size:14px}.stock-sidebar .panelhead{background:var(--panel);border-radius:20px 20px 0 0}.stock-card .finrow{font-size:13px}}
 @media(max-height:480px){.stock-sidebar{top:6px;bottom:70px}.stock-toolbar .field{margin:0}.stock-toolbar{position:static}.stock-sidebar .panelbody{scroll-padding-top:8px}}
+
+/* Pending actions stay focusable so a committed purchase retains keyboard context. */
+button[aria-disabled=true]{cursor:wait;opacity:.65}.stock-total{margin-top:8px;color:#435d4b}.stock-total b{font-size:15px}.stock-intro{padding:10px 0 0}.shelf-picker p{margin:0 0 2px}.stock-card:focus-within{border-color:#a68cb6;box-shadow:0 0 0 1px #d6c6df}.stock-card{scroll-margin-top:190px}
+@media(max-height:600px){.stock-toolbar{position:static}.stock-sidebar .panelbody{scroll-padding-top:8px}.stock-card{scroll-margin-top:8px}}

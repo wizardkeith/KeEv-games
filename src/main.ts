@@ -99,8 +99,8 @@ function fail(e:unknown,field='general'){
 async function run(action:()=>Promise<void>,field='general',success?:()=>void,cause='settle',targetSlot=u.slot){
  // Lock this intent synchronously, before the first await. Double clicks are
  // discarded rather than turned into a queue of fresh purchasing commands.
- if(busy)return;busy=true;pendingCommand=undefined;u.formError='';u.formField='';draw();const previous=state,epoch=presentationEpoch;
- try{await action();u.blocking='';committed(previous,state,cause,targetSlot,epoch);await syncStory();success?.();}catch(e){fail(e,field);}finally{busy=false;storeDraft(mode,u.draft,draftPrefix);draw();}
+ if(busy)return;const actionFocus=document.activeElement as HTMLElement|null;const focusItem=actionFocus?.closest<HTMLElement>('.stock-card')?.dataset.item;busy=true;pendingCommand=undefined;u.formError='';u.formField='';draw();const previous=state,epoch=presentationEpoch;
+ try{await action();u.blocking='';committed(previous,state,cause,targetSlot,epoch);await syncStory();success?.();}catch(e){fail(e,field);}finally{busy=false;storeDraft(mode,u.draft,draftPrefix);draw();if(focusItem&&actionFocus&&document.activeElement===document.body){const next=document.getElementById('place-'+focusItem)??document.getElementById('stock-search');next?.focus({preventScroll:true});}}
 }
 async function act(kind:string,data:Partial<Command>={}){const command={id:commandId(),kind,...data};pendingCommand={...command};state=await saves.command(state,command,mode==='normal'?Date.now():state.watermark,Date.now());}
 function openPanel(p:string,source?:HTMLElement){if(source)focusReturn=source;const changed=u.panel!==p;u.panel=p;u.formError='';draw();if(changed){const body=document.getElementById('panelbody');if(body)body.scrollTop=0;}document.getElementById('panel-title')?.focus({preventScroll:true});}
@@ -129,7 +129,7 @@ app.addEventListener('submit',e=>{
  void run(async()=>{await act('identity',{text:u.draft.shop,company:u.draft.company,logo:u.draft.logo});u.rename=false;},'identity',()=>{notice(t('identitySaved'));});
 });
 app.addEventListener('click',e=>{
- const target=(e.target as Element).closest<HTMLButtonElement>('button[data-action]');if(!target||target.disabled)return;const a=target.dataset.action!,id=target.dataset.id!,n=Number(target.dataset.slot??u.slot);
+ const target=(e.target as Element).closest<HTMLButtonElement>('button[data-action]');if(!target||target.disabled||target.getAttribute('aria-disabled')==='true')return;const a=target.dataset.action!,id=target.dataset.id!,n=Number(target.dataset.slot??u.slot);
  if(a.startsWith('story-')){
   const beat=(target.dataset.beat??'welcome') as BeatId;
   if(a==='story-open'){if(busy||state.open)return;void run(async()=>{if(!state.open)await act('open');},'general',undefined,'open');return;}
