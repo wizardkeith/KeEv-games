@@ -1,0 +1,43 @@
+{
+  "published_at": "2026-10-23T19:32:24.124013+00:00",
+  "status": "succeeded",
+  "project_id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+  "url": "https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site",
+  "audience": "public",
+  "version": 12,
+  "version_id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d~appgver_6f62e573e7b481919e88879967b3d0bd",
+  "deployment_id": "appgdep_6adbb63d83f081919731b00a5f5d3e9d",
+  "source_sha": "e03924bdcc0f2c41825b8eb86e0bcfa32b7b8c55",
+  "reviewed_candidate_sha": "de0a56b7820e1f5696cf30be2d73c50bc7844863",
+  "merge_sha": "c10bbc6cc5770ad3998dd1d9e4201228542cf2b8",
+  "original_gzip_archive_sha256": "c7f20ca9f1533397ce58b6f3f00a6caa7b101a43b6abb8a244ea42e941589b2c",
+  "provider_archive": {
+    "archive_format": "tar",
+    "sediment_file_id": "file_0000000076bc81f6991d0b4faf35becc",
+    "content_hash": "sha256:e01edfe2ee572059340182d9402b7dbf60887626e2097fe60a4146ca573a48f6",
+    "size_bytes": 7792640,
+    "file_count": 120
+  },
+  "preupload_runtime_payload_matches": 119,
+  "source_batches_verified": [
+    "b9d240a5ebcf86f2ce939e1a815904b3ed8bd2de",
+    "566e27ae3db5880490a0d2e541dff7f6f34a3bf0",
+    "e03924bdcc0f2c41825b8eb86e0bcfa32b7b8c55"
+  ],
+  "intermediate_publication": false,
+  "live_http_verification": {
+    "status": "blocked",
+    "reason": "Execution-environment proxy denied CONNECT to public Site: 403 Forbidden. No alternate route attempted."
+  },
+  "live_browser_smoke": {
+    "status": "not_run",
+    "reason": "Playwright recordVideo helper ffmpeg-1011 unavailable; newPage failed before navigation."
+  },
+  "normal_save_mutated": false,
+  "limitations": [
+    "Final target art not accepted",
+    "Physical mobile GPU/FPS/Safari/keyboard/audio/true hidden-tab/native not accepted",
+    "119 payload hashes verified before upload, not independently refetched live",
+    "Provider returns a tar storage receipt distinct from original gzip archive; its whole-file hash is not asserted equal"
+  ]
+}
