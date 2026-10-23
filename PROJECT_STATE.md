@@ -1,13 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-24T02:36:27+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-24T02:48:41+08:00** (Asia/Hong_Kong).
 
 ## Current unmerged work — bounded Game refinement
 
 - Active implementation: [`codex/game-v5-refinement`](https://github.com/wizardkeith/KeEv-games/tree/codex/game-v5-refinement), [draft PR #2](https://github.com/wizardkeith/KeEv-games/pull/2). Source checkpoint and latest evidence are tracked by that branch and `docs/V5_REFINEMENT.md`.
-- Status: gates 1–2 implemented and browser-verified (stock/focus and five-locale written copy); gate 3 art refinement rendered, with final UV/tangent material parity and target gap stated honestly. Application checkpoint `021e23a`; 144 tests/build pass. Final material-pass recordings and delivery verification are in progress under gate 4. No feature changes are merged into main.
+- Status: all four implementation/verification gates complete as a **review candidate** at pushed checkpoint `566e27ae3db5880490a0d2e541dff7f6f34a3bf0` (application code `021e23a`). 144 tests/build/replay/validators, real A/B bag transfers/exits, twenty narrow locale cases and interrupted-write/focus checks passed; matched renders, uncut recordings and complete verified source/build packages are delivered. Final approved art fidelity and physical-device/audio/native gates are not claimed. No feature changes are merged into main.
 - The current user task supersedes the earlier documentation-only scope. The latest user authorization requests publication to the **same existing Site** after each checked Game update; the parent coordinates independent review, integration and publication. No Site save/deploy/access/identity change is claimed here. Normal saves, economy, original masters/history and local Unity work remain protected.
-- This main update is a documentation pointer only; detailed results and limitations will be supplied with the final pushed branch checkpoint.
+- Library delivery is pending: the required upload helper failed before any upload at its read-only hosted-app tool-list request (`network`); no Library IDs or uncertain writes were produced. Complete artifacts/receipts remain in the executing cloud environment and the source/evidence checkpoint above. Detailed evidence, reproduction and limitations: branch `docs/V5_REFINEMENT.md` and `evidence/native-v5/KeEv_v5_Refinement_Review.pdf`. This main update is a documentation pointer only; parent coordinates review and the authorized same-Site publication.
 
 ## Canonical checkpoint and branch state
 
