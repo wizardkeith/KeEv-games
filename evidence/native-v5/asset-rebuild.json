@@ -1,0 +1,15 @@
+{
+  "source_checkpoint": "021e23a",
+  "commands": [
+    "python3 tools/generate-v4-textures.py (unchanged original input)",
+    "python3 tools/generate-v5-textures.py",
+    "python3 tools/generate-v5-hair.py",
+    "node --import tsx tools/export-native-characters.ts",
+    "node --import tsx tools/export-native-environment.ts",
+    "node --import tsx tools/export-native-products.ts",
+    "node --import tsx tools/export-v4-fixtures.ts"
+  ],
+  "compared_count": 207,
+  "different": [],
+  "pass": true
+}

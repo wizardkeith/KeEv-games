@@ -1,0 +1,36 @@
+[
+  {
+    "label": "before",
+    "source": "274148b19e53cd33e68e214d41aed05e19d272b3",
+    "url": "http://127.0.0.1:5174",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "quality": "high",
+    "renderer": {
+      "vendor": "Google Inc. (Google)",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+    },
+    "camera": "Existing Whole-shop and View-shopkeeper controls; unchanged view contract; no zoom/exposure manipulation",
+    "state": "Same real Sandbox stocked by v5 harness commands; only isolated preview origin mapping differs"
+  },
+  {
+    "label": "after",
+    "source": "021e23a85c0212f6e780a5d5af4ebe70c4fadf76",
+    "url": "http://127.0.0.1:4173",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "quality": "high",
+    "renderer": {
+      "vendor": "Google Inc. (Google)",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+    },
+    "camera": "Existing Whole-shop and View-shopkeeper controls; unchanged view contract; no zoom/exposure manipulation",
+    "state": "Same real Sandbox stocked by v5 harness commands; only isolated preview origin mapping differs"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "image": "evidence/native-v5/after/mesh/misaki-0-idle-normal.png",
+  "comparison": "Same source Web neutral adapter vs standard GLB loader; aligned full-character detail crops; same camera and normal-light fixture",
+  "mean_absolute_RGB_difference": [
+    0.016574468085106382,
+    0.013531914893617021,
+    0.011382978723404255
+  ],
+  "meaning": "Adapter/map parity evidence only; not target fidelity or device performance acceptance"
+}

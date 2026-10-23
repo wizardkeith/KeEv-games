@@ -3,18 +3,18 @@
   "version": "3.1",
   "master": {
     "path": "assets/masters/native-v3/environment-v3.json",
-    "sizeBytes": 112839,
-    "sha256": "d8685fd6c20ea99e1a5350d2562a306b886aae5da7c76d0d371196699faef35c"
+    "sizeBytes": 113036,
+    "sha256": "2ccb2c129de41e5f72cc9a1c5d231410dbbb65e5d81985fe1833edf183d788de"
   },
   "sources": {
-    "src/art/native-characters.ts": "7718b16e05334cba6d6742597ac16240ccd5baf547624811f2a0b397673ea911",
-    "src/art/native-environment.ts": "911bdc024b6c9c7eaebf0e8e8037c8d23b52279e5e67d81c7d9d3f8cb3f3f40d",
+    "src/art/native-characters.ts": "caa1189e97f88cffc75c2e96e606150d18494bc7fc3b24c0dc62eb0e66ed7950",
+    "src/art/native-environment.ts": "03eabe5c482cde2b56b1f86f78c9c2f5bf65bf6de752646f28663fe96995ef8e",
     "src/art/native-display.ts": "2ee17c179f4aa8af8ccf7a70ff9ce6aca02e8ed9ac8c859d9292e234738eb95d",
-    "src/art/native-view.ts": "004e7e98702004470371ee920b31af4bdd011a0d92da7ba5e207e3a7c3735426",
+    "src/art/native-view.ts": "288bd8659f2f03f0a6853823d48ec36646e5594fcf02df82b5b8b48e01c0239e",
     "src/art/recipes.ts": "c20e2d9819bd5a60678c8e006318882a5ad10dcb290c228d71816add11b7dfef",
     "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
-    "src/art/native-materials.ts": "dfb556cd2e813656f298fb39c988aaa27ce36af2370aa6717b3e0a18beff49eb",
+    "src/art/native-materials.ts": "f614aa78548aedb281c1a44dadba7ec63af4475abba0047fc9effc7bd709bc61",
     "tools/export-native-environment.ts": "69e461a0ebb17e26542c4af7bf82eaca7870f9b8cf84ac837cc26cce4a50addf"
   },
   "rebuild": "node --import tsx tools/export-native-environment.ts",

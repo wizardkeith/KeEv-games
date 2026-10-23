@@ -1,0 +1,557 @@
+{
+  "commit": "566e27ae3db5880490a0d2e541dff7f6f34a3bf0",
+  "branch": "codex/game-v5-refinement",
+  "main_documentation_checkpoint": "aef8caa1d0c25bd3be979d523a14478afe893c42",
+  "draft_pr": "https://github.com/wizardkeith/KeEv-games/pull/2",
+  "source_files": 833,
+  "independent_clone_all_source_hashes_match": true,
+  "bundle": {
+    "branch": "codex/game-v5-refinement",
+    "commit": "566e27ae3db5880490a0d2e541dff7f6f34a3bf0",
+    "bundle": {
+      "name": "source-history.bundle",
+      "size": 111327573,
+      "sha256": "a8020e33e350dc7a612e0d50e608bcc77444d72a4f85d09bc10e65c90167e4d0"
+    },
+    "parts": [
+      {
+        "name": "source-history.bundle.part01",
+        "size": 29360128,
+        "sha256": "9a08bd397603f5d8df03056e49d646d0db73ff67ed99f4a216ff30f01b17d474"
+      },
+      {
+        "name": "source-history.bundle.part02",
+        "size": 29360128,
+        "sha256": "c4c0b4a44d70beb39d8b0b272dd2dbb19cdd8ffa4d58858e14ea5fe2778b1e44"
+      },
+      {
+        "name": "source-history.bundle.part03",
+        "size": 29360128,
+        "sha256": "a7ae65572a6f3251fa065acf96fd3ba75a04ef48f5ca791ceb2d77c814c37f96"
+      },
+      {
+        "name": "source-history.bundle.part04",
+        "size": 23247189,
+        "sha256": "7a4b433cdb89d02b886d28475ff4e904b915000b70d7f9969ae05f809771f5b7"
+      }
+    ]
+  },
+  "runtime_files": 119,
+  "runtime_sha256": {
+    "dist/index.html": {
+      "size": 685,
+      "sha256": "3b34eb25c7ed8c341597415fd47551c0fa61d74ca03d3e14daffe39741461a2f"
+    },
+    "dist/assets/logDepthDeclaration-DmJgTyY-.js": {
+      "size": 14120,
+      "sha256": "5074738bb6039d8a32433bad3216040f4643f3b946c727454b9b5ee289aeb648"
+    },
+    "dist/assets/counter.glb": {
+      "size": 1592,
+      "sha256": "4abfa586bcd31bae50b75a264f32415e24d9a3f6592629cc71062bc66f5c68bb"
+    },
+    "dist/assets/dds-CWkrYWNr.js": {
+      "size": 9225,
+      "sha256": "d2226954f61e76fdb068659ed552bd10c739e2dbe55cf0fea2dec27904cb80a6"
+    },
+    "dist/assets/pbr.vertex-BFW5BioP.js": {
+      "size": 23924,
+      "sha256": "7f2c9d3d6031d94196ad33e3e739de7f1cb3cfd3a02f3b7ade30f4c0c39d6ca2"
+    },
+    "dist/assets/pbr.fragment-BCqd9otQ.js": {
+      "size": 204966,
+      "sha256": "1334e545101ae0625faf6173c087e512f3f63b8b89e942c7a7bf116aa200aa87"
+    },
+    "dist/assets/kernelBlurVaryingDeclaration-3I6SKep-.js": {
+      "size": 180,
+      "sha256": "df151fe6096aa5948bf0bfad2513942d4e856631a296d6f2ea1cac0e0b590dd7"
+    },
+    "dist/assets/rgbdDecode.fragment-BaAF1e5G.js": {
+      "size": 576,
+      "sha256": "9b9103f473cf27107d283590100c3871dfcad0cacb49f31c5226d56815738954"
+    },
+    "dist/assets/pass.fragment-C6ogSsTQ.js": {
+      "size": 345,
+      "sha256": "59668db445699320a681f9255709a31dfc6026c00f4274537e6847003a7fb8c2"
+    },
+    "dist/assets/shadowMap.vertex-BPi370YD.js": {
+      "size": 4451,
+      "sha256": "c9445b17eec2308e25227dde5d716f1280805f752516c67ed380c57d37939378"
+    },
+    "dist/assets/world-BffXC3Nl.js": {
+      "size": 1304962,
+      "sha256": "c018110056481b60cbf35cf32da0b38957154672d401d38e9c8f34d1fa2ea3e7"
+    },
+    "dist/assets/exrTextureLoader-BMPhUvRl.js": {
+      "size": 15556,
+      "sha256": "31ee3377f37c83e07f647f33a0a68f4bb89e9421b3f05e609733f54070932c32"
+    },
+    "dist/assets/helperFunctions-BhwSDETB.js": {
+      "size": 5711,
+      "sha256": "9b975ca779f05faee8dd92753c4f01dcf5f07adaabdd146843bfd2cb98e38e81"
+    },
+    "dist/assets/depth.fragment-E2sJk5HP.js": {
+      "size": 1288,
+      "sha256": "27be56fc9eacf038acc12187d840f6344dfc8e4c4cb3ec8d12ea0e822ec64abd"
+    },
+    "dist/assets/index-DPUu9f7N.js": {
+      "size": 156271,
+      "sha256": "579c1b9b7ef75f37163a74d82fa5712966df04fffd522402d9cc433b6529fa86"
+    },
+    "dist/assets/clipPlaneVertex-CMwmtQ_8.js": {
+      "size": 14119,
+      "sha256": "285b97d5fe78c9afbf7863653143370b0bcc451b61bbcaf627de2d0a5d01a8f5"
+    },
+    "dist/assets/passCube.fragment-LGJIQ5tp.js": {
+      "size": 1159,
+      "sha256": "05c3c540b3ba9ec5a92ebe4ded4413e3f0e41d64009f6dbb614009adc73940e0"
+    },
+    "dist/assets/iesTextureLoader-BbyGxAQo.js": {
+      "size": 2727,
+      "sha256": "61c829160ef235a6840e00d0af7a0a98f596e4dddad832eced5ebce01a15dda6"
+    },
+    "dist/assets/rgbdEncode.fragment-BtRPTUWs.js": {
+      "size": 567,
+      "sha256": "b0e8ddd438fd9dac96b61405b84bc7c5937fff55c1a8bb5702d77f7fdf12a866"
+    },
+    "dist/assets/pbr.fragment-C390m9qr.js": {
+      "size": 213799,
+      "sha256": "35bfcf040604f74c96c3dd9750cef5e4f941c08b4869789ed54991eed01e4eb9"
+    },
+    "dist/assets/shadowMapFragmentSoftTransparentShadow-C--uw7G5.js": {
+      "size": 397,
+      "sha256": "0361b0868b6f342f427437300dfd4cd4e314d19ac3412d368c6a3effc8c902ca"
+    },
+    "dist/assets/shadowMap.fragment-ClwK82BN.js": {
+      "size": 3691,
+      "sha256": "480df8051deb95a0281f6fad6199ff9c28473d2ad59a54ee549aebdeb3a2405d"
+    },
+    "dist/assets/index-BaYu4n71.css": {
+      "size": 20701,
+      "sha256": "de607cf722eb6ac81c4ede8876fba5340af91c2d142c3d344e6ca84fc819f90f"
+    },
+    "dist/assets/helperFunctions-bG7xyZ8T.js": {
+      "size": 5304,
+      "sha256": "4a64c20b2b25cad310f0fcd6867b787904146885b9f301deedeb5d01b07a5ce8"
+    },
+    "dist/assets/rgbdDecode.fragment-gvd-wyTU.js": {
+      "size": 441,
+      "sha256": "c21ff5cf4b2749c0706a0ddfdc319cc07ebc327662babb5b485bda1f902884b4"
+    },
+    "dist/assets/depthBoxBlur.fragment-BSB_ohpE.js": {
+      "size": 740,
+      "sha256": "df6e68e706318767cd5a2ee5cb9acec21ee75bfce7831baaa40e7b85bbd0f68a"
+    },
+    "dist/assets/shadowMap.fragment-CUyUyPVe.js": {
+      "size": 3060,
+      "sha256": "2a4f31e7d11a48a5588a7cc98c095497edf9bd476e0c938cd9c57e02b72e2ffb"
+    },
+    "dist/assets/kernelBlur.vertex-52yhEdnH.js": {
+      "size": 933,
+      "sha256": "aff46dfefaf01e3ec4c8accd29d919cdb5bbe0318e67b9da052c0a761922cdee"
+    },
+    "dist/assets/ddsTextureLoader-By1UJ9rB.js": {
+      "size": 1289,
+      "sha256": "5ddcdb44bae3c00c99edd259ec7ea439a3852745273b3809a0075722f3d60ae6"
+    },
+    "dist/assets/dumpTools-DL9nL2WY.js": {
+      "size": 3211,
+      "sha256": "999f77c139a65eb25db039e2903584691550a52a6bc8d31692d14c2d7b12cddc"
+    },
+    "dist/assets/tgaTextureLoader-DI2vk0Pm.js": {
+      "size": 3556,
+      "sha256": "c7bcb3f2642cd2255bc5dafd2610bd389cb0ff28421009ffcdd0b98679d21320"
+    },
+    "dist/assets/shadowMapFragmentSoftTransparentShadow-BDPRNnzB.js": {
+      "size": 432,
+      "sha256": "8bd9c193bcfb5ea3e7ccae0e5f4c2c340873171430dd7df5e25137c59ecdf2bc"
+    },
+    "dist/assets/meshUboDeclaration-CHmTzNsG.js": {
+      "size": 561,
+      "sha256": "7bc5124e282870645898283b6f364c8f313f56d38933a5594421150d27e85ed4"
+    },
+    "dist/assets/logDepthDeclaration-BiR5ABB_.js": {
+      "size": 15700,
+      "sha256": "e1c71265d286c27a61bc9b1eb841d47c10f4cc40f696bb74233522b578c1e564"
+    },
+    "dist/assets/passCube.fragment-DVdB_qEd.js": {
+      "size": 850,
+      "sha256": "f051308e246249c644ef3b87fb412e39768d20f00f0cc384bb6076cc6a6ba865"
+    },
+    "dist/assets/clipPlaneFragment-BjtGDmy3.js": {
+      "size": 1207,
+      "sha256": "e3aa608c98b1250f1b243851041e59fd0dbb6570792003518d79504182b7a6a8"
+    },
+    "dist/assets/meshUboDeclaration-SAMmEtOb.js": {
+      "size": 557,
+      "sha256": "002902afa39a077962103a230ac9cef2f948796c388329a46a2491a09e876f64"
+    },
+    "dist/assets/shadowMap.vertex-rsYx2jUg.js": {
+      "size": 4362,
+      "sha256": "b82d085126512810579db5fd981fe23e332eb68b4813653ac0c21533cd431239"
+    },
+    "dist/assets/kernelBlur.fragment-BC1kVnkN.js": {
+      "size": 2698,
+      "sha256": "eebf5a0f6417f75aeeee260d90f6b970d0b2dfbfe901bbc6e4bc81238ccaab57"
+    },
+    "dist/assets/rgbdEncode.fragment-oYThdgZv.js": {
+      "size": 433,
+      "sha256": "c181ce71ec458e6321407710f03e84efd7c1e1cda2cdfcabd6cf843895f00cd4"
+    },
+    "dist/assets/kernelBlur.vertex-aMBLhnYN.js": {
+      "size": 790,
+      "sha256": "b6a4cb9e73774af1f49f169c052faf39dff8aa7dab591c1e695f4ec3101008e2"
+    },
+    "dist/assets/basisTextureLoader-DsC0Wzg-.js": {
+      "size": 8209,
+      "sha256": "ec3a8135c4ac462e485e587e93b2f1013fd00ea013719c8eb2d43187ddc5472d"
+    },
+    "dist/assets/pass.fragment-B228SJNH.js": {
+      "size": 479,
+      "sha256": "a1146f3f67f038eb5fcde1c6b7efeb45090ccbd540f835b759098445a76adce4"
+    },
+    "dist/assets/kernelBlur.fragment-BKMiAGDf.js": {
+      "size": 2127,
+      "sha256": "bb4f63b8137c3321c915abca4e9a1d10db77db503916a16d3af30e502781250e"
+    },
+    "dist/assets/instancesDeclaration-DagO7l3I.js": {
+      "size": 998,
+      "sha256": "5b330f61d374420c3981f3f4171a308f2cfcc73be7f4fb789d16a85acd664e9d"
+    },
+    "dist/assets/packingFunctions-B0oDSEdu.js": {
+      "size": 521,
+      "sha256": "ca9e1183e9a94f49030c400e1d6a530194857e8031f0e86294be793da9db9135"
+    },
+    "dist/assets/envTextureLoader-BWrfm4o4.js": {
+      "size": 6794,
+      "sha256": "3ed7c3ee1cc2a3703e5e63d5c2eab9d175537f61db4932380b0b9ba9a7e55c89"
+    },
+    "dist/assets/skin-test.glb": {
+      "size": 3300,
+      "sha256": "7472fe82516c54ad646d025ff9ad2115f9f3b2d6d06a8767a31f52b13376b01e"
+    },
+    "dist/assets/depthBoxBlur.fragment-DqzX2ZJ6.js": {
+      "size": 561,
+      "sha256": "dbb70ef9d245cdd37ac421a96af7aa91cac93eefc62e24c8fe113715d35d2a84"
+    },
+    "dist/assets/sale.wav": {
+      "size": 9644,
+      "sha256": "bdf0db6fb6b690878eaf0c01392768b873188bf9999b0d1091d4dcb7bc9da2ba"
+    },
+    "dist/assets/kernelBlurVaryingDeclaration-Df0kr_QO.js": {
+      "size": 170,
+      "sha256": "e890418195809488dc47369dd104a11844e48dfabdb16d8ab7f9707d5fa55409"
+    },
+    "dist/assets/mesh.vertexData.functions-ayNlGC5K.js": {
+      "size": 960,
+      "sha256": "109b0c291f78ec6b98053b23c7a9ce01eb8bcee909a0964ce337a68a9b4bc61e"
+    },
+    "dist/assets/pbr.vertex-BUptYloE.js": {
+      "size": 22337,
+      "sha256": "18d165201bc99cef74323034c4f75b286d9a3584a9320e0093ebb11627b76d21"
+    },
+    "dist/assets/depth.vertex-B--IoOY-.js": {
+      "size": 2057,
+      "sha256": "8723cb702ea8cd460af45abff113ff26a0a46ad10d50cbb38406db94455e00e5"
+    },
+    "dist/assets/ktxTextureLoader-BNGbIqaG.js": {
+      "size": 15826,
+      "sha256": "c7b38137c0ec344c683dc9a23881de524a72c98f45ec91615b1767dc2f3e37b1"
+    },
+    "dist/assets/hdrTextureLoader-dGQFwjla.js": {
+      "size": 2458,
+      "sha256": "8a975aeff2412c79227e0615c8976966c148f43d7087a09d90786f6fcfbf0e6f"
+    },
+    "dist/assets/postprocess.vertex-B1JdykDF.js": {
+      "size": 611,
+      "sha256": "663ec81b2d4c7ece476f88e01d147e2ec43fb67dfbc88758051ee79f09c6cd29"
+    },
+    "dist/fonts/NotoSansHK.ttf": {
+      "size": 357952,
+      "sha256": "49ed803874550e473cd9ca117101dc0c52efcb4048c0db114aae80e4fbc98f18"
+    },
+    "dist/fonts/NotoSansJP.ttf": {
+      "size": 354672,
+      "sha256": "61c98a4f9fac39f1f68f9f0a52a0b816fb69ba84d68c2780a2e364f96ad27390"
+    },
+    "dist/fonts/PlusJakartaSans.ttf": {
+      "size": 34096,
+      "sha256": "99c2de7a89fa5af7facb4b4e6370787d86e63fa69711f38a35f9ecf304c9efcc"
+    },
+    "dist/fonts/NotoSansThai.ttf": {
+      "size": 112488,
+      "sha256": "980bcfaee0273a4e5ba1d497646e26e0ac60abb578978955d9dd16ece7097182"
+    },
+    "dist/fonts/NotoSansSC.ttf": {
+      "size": 410788,
+      "sha256": "6cc44f4ea674d50ed753938b75532400ba973cda0601c28af9c390f5f4c8b550"
+    },
+    "dist/assets/native-v3/visitor-b-native-v3.glb": {
+      "size": 707268,
+      "sha256": "345c58f42be2b1cee3bae47aeadcee40ac08df781adf91d36959220c5404846f"
+    },
+    "dist/assets/native-v3/visitor-a-native-v3.glb": {
+      "size": 352392,
+      "sha256": "caf1fce66409042e4fe105b78db30516d2c5aae357f9096f2db34a35d77d109d"
+    },
+    "dist/assets/native-v3/misaki-native-v3.glb": {
+      "size": 713568,
+      "sha256": "4c522a52a0bc302d022f3451d7a990c6da85db0b4188a384610bf4cd9f6d972d"
+    },
+    "dist/assets/w1_1a/tea.glb": {
+      "size": 9092,
+      "sha256": "601713d11fbb86696178740d7d9aed6f7b08b0f2053c18b9ca64bc1a5b186b00"
+    },
+    "dist/assets/w1_1a/cookie.glb": {
+      "size": 23008,
+      "sha256": "56d3f7e37e3786194a50fd595ee34a551935a86410200744b4fee8dbed9669ef"
+    },
+    "dist/assets/w1_1a/tray.glb": {
+      "size": 20136,
+      "sha256": "2a7b050d5c4c29b6fb8ca16c887ef78e2d1054d07c896306f7942d154cf30edc"
+    },
+    "dist/assets/w1_1a/display-w1_1a.glb": {
+      "size": 35704,
+      "sha256": "27c93d6233cc1877b80d52ff82d8a994f811afb42a22d1a43953ab3e0ab1df30"
+    },
+    "dist/assets/w1_1a/plant-w1_1a.glb": {
+      "size": 44404,
+      "sha256": "c21a3b5f469ec5ec3865ff1bacad6c84e204b3d5fa084138e522d9b005adc7c8"
+    },
+    "dist/assets/w1_1a/pencil.glb": {
+      "size": 13772,
+      "sha256": "abcdda62d02b5f319f0a27e059ce325cc74b41a436cc0c83e68299fdb5a04ab3"
+    },
+    "dist/assets/w1_1a/mug.glb": {
+      "size": 20500,
+      "sha256": "a89356583b9e07f76c8419f57d08393fc4d89b8272329b0a5a99e37e264a7d17"
+    },
+    "dist/assets/w1_1a/card.glb": {
+      "size": 13576,
+      "sha256": "44b7c523c7b806460616372f5ec5eb14ebd13d945740c9266fca72edaefee6f1"
+    },
+    "dist/assets/w1_1a/tote.glb": {
+      "size": 24988,
+      "sha256": "16195d570489bd0414fa70a311778343a59232856d68cdd9372cd12934dedd74"
+    },
+    "dist/assets/w1_1a/generic-staff-w1_1a.glb": {
+      "size": 102436,
+      "sha256": "3b8cabce823bf59f194af946cf26882d4deb1eb82606b91ea73ead6d56ad1bc6"
+    },
+    "dist/assets/w1_1a/vase.glb": {
+      "size": 15248,
+      "sha256": "ce8ff1db6ae3d9eba482896b2b03475a064c32d38e9f189f29c273420ee96b9f"
+    },
+    "dist/assets/w1_1a/towel.glb": {
+      "size": 10016,
+      "sha256": "4d8732870b6cf02cbd12c74c7451e5b6f98bee26ee3030addc66d9521ff85c85"
+    },
+    "dist/assets/w1_1a/notebook.glb": {
+      "size": 20796,
+      "sha256": "557a3e91d19bae5840e4040b64a26d39466385742340ea91c8c77379448a2942"
+    },
+    "dist/assets/w1_1a/counter-w1_1a.glb": {
+      "size": 29036,
+      "sha256": "58e5cef53fb60bff7c364e478a71018aab31804f1c7027b83335a31f22fa8a7d"
+    },
+    "dist/assets/w1_1a/room-w1_1a.glb": {
+      "size": 108432,
+      "sha256": "fb30caebe52c5e58bce3e23a6099b43d61c53fec43135c0b50ebb582cf7f929d"
+    },
+    "dist/assets/native-v5/hair-strand-basecolor.png": {
+      "size": 53435,
+      "sha256": "f735cf754d5333711f0809e11a1dbe09f2ae5e566d01e3625b3a94e98adc65e1"
+    },
+    "dist/assets/native-v5/hair-strand-normal.png": {
+      "size": 250411,
+      "sha256": "c5603902148920f86bf59a66920f357f7a6f845b7891e26bbb3845efeeb9091b"
+    },
+    "dist/assets/native-v5/wood-grain-basecolor.png": {
+      "size": 39456,
+      "sha256": "005a27aa95a703c95006e872275a7dd3a837b62bb16acacf3e83e2558f754cd6"
+    },
+    "dist/assets/day1/misaki-smile-v1.glb": {
+      "size": 246948,
+      "sha256": "b6c1ba01ac8c697f6230f745e86ceceefd47abd8af14eedc00e62aef72541283"
+    },
+    "dist/assets/day1/misaki-calm-v1.glb": {
+      "size": 270328,
+      "sha256": "f61a3dd54935f4c88c6d341e2b2c7c07311bff4e58c84ddb40697343cc811b05"
+    },
+    "dist/assets/w1_1b/tea.glb": {
+      "size": 9644,
+      "sha256": "305a59d15f07f158004f93b9bb1766de96e501a619efa170117c936b86d4edaf"
+    },
+    "dist/assets/w1_1b/generic-staff-w1_1b.glb": {
+      "size": 103816,
+      "sha256": "ed48d9b32e99b290746006cf65c9082ed59d6c6380dd1177c43c0a9301f2d7bd"
+    },
+    "dist/assets/w1_1b/cookie.glb": {
+      "size": 23432,
+      "sha256": "b3fe29d0193c385fa013f34f2cdb8e6cffe240341790d52a9ad69b3a45111a97"
+    },
+    "dist/assets/w1_1b/tray.glb": {
+      "size": 20408,
+      "sha256": "a7f4a392e9627701f6cd86fc8aa14ed8f1d547f53f9433fe32a5e4af8dcaf389"
+    },
+    "dist/assets/w1_1b/pencil.glb": {
+      "size": 14448,
+      "sha256": "222c5fac7895df7b0cda2421a960e7cc7e2ee62951ab047bbaccd650d1dc9d22"
+    },
+    "dist/assets/w1_1b/mug.glb": {
+      "size": 21304,
+      "sha256": "d21c6a345c2b3798365803b2025af010ee89561af6fb53d58ed46c562c9ddc50"
+    },
+    "dist/assets/w1_1b/plant-w1_1b.glb": {
+      "size": 45088,
+      "sha256": "e443fb165bc9a97937893db92e27d268ec8a7d741387746af760a255fd0b43fe"
+    },
+    "dist/assets/w1_1b/card.glb": {
+      "size": 14112,
+      "sha256": "1b0ec45e2cc6bfe7e71adc856491edbb2f306f8e449aa03ce6e6c685b72fc33f"
+    },
+    "dist/assets/w1_1b/tote.glb": {
+      "size": 25672,
+      "sha256": "7c258639cb378f4eb06f6df41004697665c6391ff128b3bc4c46458ad1ea9181"
+    },
+    "dist/assets/w1_1b/display-w1_1b.glb": {
+      "size": 36364,
+      "sha256": "39dd49e91bee6c9fc305498adaac2f07783dde79cc03fca05a920f63a5753ee7"
+    },
+    "dist/assets/w1_1b/room-w1_1b.glb": {
+      "size": 110424,
+      "sha256": "24ee1be4623e0745f06b950e5545fb8580d15393fa0c2b7fb2df3a89f79c8c4e"
+    },
+    "dist/assets/w1_1b/vase.glb": {
+      "size": 15516,
+      "sha256": "188cfc7827eff27cb28a232e37d883a61b8d5990882d74a76d22d9c1ef6b5bdf"
+    },
+    "dist/assets/w1_1b/towel.glb": {
+      "size": 10284,
+      "sha256": "0eadeb110572f5faffacb1e0d786fa5062cdc418390ac1ece4ecdc33c47444c5"
+    },
+    "dist/assets/w1_1b/counter-w1_1b.glb": {
+      "size": 31052,
+      "sha256": "0210373d5cc9c3662996a8970e608b7e4c2dab9d76690a4610b8e1e83b299802"
+    },
+    "dist/assets/w1_1b/notebook.glb": {
+      "size": 21492,
+      "sha256": "e9cf86b58ea868735e3bdc1763ac95f047a1043a6349bc387030466e6d807173"
+    },
+    "dist/assets/w1_1/counter-w1_1.glb": {
+      "size": 28508,
+      "sha256": "6f7c049686f17feeabcdba3bcc6594b320013508336bd3d27c4f14e52358cd43"
+    },
+    "dist/assets/w1_1/tea.glb": {
+      "size": 8644,
+      "sha256": "5700cf84d949c83e8cb1f5b2d44410294a9f7341e4ba42f972576d0364fd1862"
+    },
+    "dist/assets/w1_1/cookie.glb": {
+      "size": 23548,
+      "sha256": "640f770550fc75352db0fce6fc3e151f9c29f8ec4e8d7bda4b19e8d4f708427d"
+    },
+    "dist/assets/w1_1/tray.glb": {
+      "size": 19928,
+      "sha256": "8667182404da277a68c5066e0dbec5fd4bc35854694fb89315a0ad3ff56833b3"
+    },
+    "dist/assets/w1_1/pencil.glb": {
+      "size": 11080,
+      "sha256": "7770a19a8b4d49e6c112493772abec5415e0cfd6d35f42a2d52a24c6bda4168f"
+    },
+    "dist/assets/w1_1/mug.glb": {
+      "size": 19276,
+      "sha256": "1059b8569f028ec01dbe9f4d6524fd73fa22cf8f047f1e49d1900ac1eef472e9"
+    },
+    "dist/assets/w1_1/display-w1_1.glb": {
+      "size": 34308,
+      "sha256": "262b5d19636fb1d7b0e3a2b4f4b55701e907b0bb1987b7890ec6213298164791"
+    },
+    "dist/assets/w1_1/card.glb": {
+      "size": 13724,
+      "sha256": "aa8a32236fd5001e90c50bc1c25fe24159ac4627ed07e5c4713470a05f2659ac"
+    },
+    "dist/assets/w1_1/tote.glb": {
+      "size": 21412,
+      "sha256": "16bc44b791fbed0b972b61778f24e4a26acad917f7f43f17c308c351c0a92f28"
+    },
+    "dist/assets/w1_1/generic-staff-w1_1.glb": {
+      "size": 56248,
+      "sha256": "0424a2726d4236bd555731549062ff95ed01b64d1dee3e2ccca631f5697481c5"
+    },
+    "dist/assets/w1_1/vase.glb": {
+      "size": 15304,
+      "sha256": "10d319300b0f14b535d2443655d11bc0c6030aca0ec0512b5774799ec73894ca"
+    },
+    "dist/assets/w1_1/towel.glb": {
+      "size": 9792,
+      "sha256": "a1bb9dd4f7ca055fe15594f19c5caf1efe6929b063e43081291d848e68604045"
+    },
+    "dist/assets/w1_1/notebook.glb": {
+      "size": 10060,
+      "sha256": "8543abae07663deb8897984fcdd1e391680c5f20e097df73c654fba66650129f"
+    },
+    "dist/assets/w1_1/room-w1_1.glb": {
+      "size": 105976,
+      "sha256": "2a560e9c2e1d8e98299f4c10d70b0851f2d7fb960653db6303d9e96ede97d998"
+    },
+    "dist/assets/w1_1/plant-w1_1.glb": {
+      "size": 45028,
+      "sha256": "a6a737f6f7513e448482b86dfbb265e822894262a4b1744a318802f56420fb66"
+    },
+    "dist/assets/w1_1a1/mug.glb": {
+      "size": 21128,
+      "sha256": "cb3c59c5627d56ef6dbcc6d21b97a175393b038affd5174edf13ab3e85b27a41"
+    },
+    "dist/assets/w1_1a1/counter-w1_1a1.glb": {
+      "size": 29364,
+      "sha256": "4602da938fde3b8dbbc5a3ec5a5bb64007c51729e1ddb3c3d8c004e39ec54cef"
+    },
+    "dist/assets/w1_1a1/room-w1_1a1.glb": {
+      "size": 109132,
+      "sha256": "77ebd30600952ee370e20f598ee6f8a4c0202e54335d0dd654aa3d46ee0ca71a"
+    },
+    "dist/assets/native-v4/wood-grain-basecolor.png": {
+      "size": 90925,
+      "sha256": "a8b5b706fbc873b45a034816dc93829f6fb361a3326d33db97f3c04ee2aa88e1"
+    }
+  },
+  "archives": [
+    {
+      "file": "LittleShop-v5-source-A.zip",
+      "bytes": 29391370,
+      "sha256": "dfe05e1820965eb8de1998e955a17f901c93b62862c01c202b0207eb58f9d997",
+      "closed_reader_crc_and_hashes": true
+    },
+    {
+      "file": "LittleShop-v5-source-B.zip",
+      "bytes": 29368782,
+      "sha256": "d664ef1e3fee19764baa9d0c1d732a0efedf9a4f4895c7ebff829e0d9add83da",
+      "closed_reader_crc_and_hashes": true
+    },
+    {
+      "file": "LittleShop-v5-source-C.zip",
+      "bytes": 29369199,
+      "sha256": "06dc48c617feb151903b1be9e0d66ed10e3cd5bb71bc63e99e277561dd1bcd42",
+      "closed_reader_crc_and_hashes": true
+    },
+    {
+      "file": "LittleShop-v5-source-D.zip",
+      "bytes": 23247005,
+      "sha256": "59285e46d61fdb2de6f4135506232adae2ce87f83de63fbe6d5c4e58138fb72a",
+      "closed_reader_crc_and_hashes": true
+    },
+    {
+      "file": "LittleShop-v5-Web-Candidate.zip",
+      "bytes": 3230996,
+      "sha256": "9506fed236acc07af99bbe627302c89fc4a3b196e7e44b9dee3790c207887a70",
+      "closed_reader_crc_and_hashes": true
+    }
+  ],
+  "deployment_archive": {
+    "file": "LittleShop-v5-deploy.tar.gz",
+    "bytes": 3169217,
+    "sha256": "c7f20ca9f1533397ce58b6f3f00a6caa7b101a43b6abb8a244ea42e941589b2c",
+    "all_static_payloads_match": true
+  },
+  "publication": "Not performed; parent coordinates same-Site review/integration/publication. Sites tools available."
+}

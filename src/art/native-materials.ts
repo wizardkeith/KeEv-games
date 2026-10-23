@@ -3,7 +3,10 @@
  */
 import {materialRenderState,type MaterialRole} from './materials';
 export function nativeMaterialIntent(surface:{role?:MaterialRole;color:string;alpha?:number;roughness?:number}){
- const base=materialRenderState(surface.role??'paint',surface.color,surface.alpha??1),roughness=surface.roughness??base.roughness;
+ const base=materialRenderState(surface.role??'paint',surface.color,surface.alpha??1),nativeRoughness=surface.role==='skin'?.78:surface.role==='hair'?.63:surface.role==='fabric'?.90:base.roughness,roughness=surface.roughness??nativeRoughness;
  if(!Number.isFinite(roughness)||roughness<0||roughness>1)throw new RangeError('native material roughness');
- return {...base,roughness,materialId:surface.roughness===undefined?base.materialId:`${base.materialId}:native-r${roughness}`};
+ return {...base,roughness,materialId:roughness===base.roughness?base.materialId:`${base.materialId}:native-r${roughness}`};
 }
+
+/** Original authored strand colour and OpenGL tangent normal inputs, shared by Web/GLB. */
+export const nativeHairMaterial={roughness:.60,baseColor:'/assets/native-v5/hair-strand-basecolor.png',normal:'/assets/native-v5/hair-strand-normal.png',normalScale:.65} as const;

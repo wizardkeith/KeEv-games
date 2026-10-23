@@ -18,5 +18,5 @@
   "motion": "rigid articulated parts; external flat-floor world-foot anchoring and two-link leg IK; no skeleton, skins or embedded glTF clips",
   "restArms": "shoulder→forearm→hand hangs downward; elbow and wrist local rotations blend on authored rest",
   "restLegs": "hips at y=.65; knees -.25; ankles -.30; actual rest sole .015; NativeFootPlant solves .25/.30m links from immutable world stance anchors and bounded swing targets; apply bodyDrop and local hip/knee/foot quaternions",
-  "material": "Existing IEC sRGB→linear PBR semantic material intent; opaque soft fallback; custom lofts use finite smooth normals; no external image/UV/texture dependency"
+  "material": "Existing IEC sRGB→linear PBR semantic material intent; opaque soft fallback; custom lofts use finite smooth normals; shared native bob UVs and original strand colour/normal inputs; no external image dependency"
 }

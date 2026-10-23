@@ -6,7 +6,7 @@ import fs from 'node:fs';import {createHash} from 'node:crypto';
 import {nativeGrouped,type NativeSurface} from '../src/art/native-characters';
 import {nativeRoomRecipe,nativeCounterRecipe,nativeDisplayRecipe} from '../src/art/native-environment';
 import {nativeMaterialIntent} from '../src/art/native-materials';
-const texture=fs.readFileSync('assets/masters/native-v4/wood-grain-basecolor.png');
+const texture=fs.readFileSync('assets/masters/native-v5/wood-grain-basecolor.png');
 export function fixtureGlb(name:string,parts:NativeSurface[]){
  const chunks:Buffer[]=[],views:any[]=[],accessors:any[]=[];let offset=0;
  const append=(b:Buffer,target?:number)=>{const pad=(4-offset%4)%4;if(pad){chunks.push(Buffer.alloc(pad));offset+=pad;}const n=views.length;views.push({buffer:0,byteOffset:offset,byteLength:b.length,...(target?{target}:{})});chunks.push(b);offset+=b.length;return n;};

@@ -1,0 +1,1035 @@
+{
+  "source": "b9d240a5ebcf86f2ce939e1a815904b3ed8bd2de",
+  "workingTree": "evidence/native-v4/locomotion-after.json | 18 +++++++++---------\n tools/v5-matched-camera-qa.cjs           |  2 +-\n tools/v5-stock-lifecycle-qa.cjs          |  2 +-\n 3 files changed, 11 insertions(+), 11 deletions(-)",
+  "runtime": "Node v24.19.0",
+  "diagnostics": {
+    "core": "PORT_REQUIRED_FOR_UNITY",
+    "artReview": false,
+    "uiReadyMs": 74,
+    "startupMs": 1085.8999999999069,
+    "worldReady": true,
+    "worldEverReady": true,
+    "worldAvailable": true,
+    "world": {
+      "presentationActor": {
+        "id": "actor.misaki.native.v3",
+        "economicBinding": "staff.graybox"
+      },
+      "nativeMotion": {
+        "rigVersion": "native-characters-v5-r1",
+        "staffClip": "native.staff.still.v3",
+        "propCount": 5,
+        "carriedBag": null,
+        "activeProps": [],
+        "visibleTime": 44.54939999999905
+      },
+      "nativeService": {
+        "epoch": 1,
+        "stream": "[\"sandbox\",\"shop.player.1\",\"2\"]",
+        "consumedRevision": 15,
+        "batches": 0
+      },
+      "customers": [
+        {
+          "id": "visitor-a",
+          "enabled": false,
+          "x": 4.18,
+          "z": 4.05,
+          "yaw": 4.71238898038469,
+          "speed": 0,
+          "distance": 15.281978076266306,
+          "state": "outside",
+          "browseProgress": 0.02976190476190476,
+          "hasBag": false,
+          "handoverProgress": 0
+        },
+        {
+          "id": "visitor-b",
+          "enabled": true,
+          "x": -0.65,
+          "z": 1.1940157476001518,
+          "yaw": 3.141592653589794,
+          "speed": 0,
+          "distance": 7.5951696254222325,
+          "state": "leaving",
+          "browseProgress": 1,
+          "hasBag": false,
+          "handoverProgress": 0
+        }
+      ],
+      "gesture": null,
+      "artDirection": "native.light.v5",
+      "cameraView": "shop",
+      "readyAtMs": 1144.5,
+      "quality": "low",
+      "effectiveQuality": "low",
+      "adaptivePolicy": "auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged",
+      "minimalFX": true,
+      "reducedMotion": true,
+      "feedback": null,
+      "materials": 161,
+      "dustCapacity": 8,
+      "customerRoots": [
+        {
+          "position": [
+            4.18,
+            0.065,
+            4.05
+          ],
+          "enabled": false
+        },
+        {
+          "position": [
+            -0.65,
+            0.065,
+            1.1940157476001518
+          ],
+          "enabled": true
+        }
+      ],
+      "selectedSlot": 0,
+      "visibleSamples": 371,
+      "frameSamplesMs": [
+        49.39999999990687,
+        219.5,
+        190.29999999981374,
+        199.90000000037253,
+        219.09999999962747,
+        16.600000000093132,
+        12.300000000279397,
+        230.79999999981374,
+        14.800000000279397,
+        232
+      ],
+      "fps": 7.221780891166791,
+      "meshes": 410,
+      "activeMeshes": 324,
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "viewport": [
+        666,
+        506
+      ],
+      "cameraViewport": {
+        "x": 0,
+        "y": 0.1270970394736842,
+        "width": 1,
+        "height": 0.6658717105263158
+      }
+    },
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "resources": [
+      {
+        "name": "http://127.0.0.1:4173/assets/index-DPUu9f7N.js",
+        "duration": 17,
+        "transferSize": 57735,
+        "encodedBodySize": 57435
+      },
+      {
+        "name": "http://127.0.0.1:4173/assets/index-BaYu4n71.css",
+        "duration": 12.899999999906868,
+        "transferSize": 5607,
+        "encodedBodySize": 5307
+      },
+      {
+        "name": "http://127.0.0.1:4173/fonts/PlusJakartaSans.ttf",
+        "duration": 14.599999999627471,
+        "transferSize": 34396,
+        "encodedBodySize": 34096
+      },
+      {
+        "name": "http://127.0.0.1:4173/assets/sale.wav",
+        "duration": 3.8000000002793968,
+        "transferSize": 9944,
+        "encodedBodySize": 9644
+      },
+      {
+        "name": "http://127.0.0.1:4173/fonts/NotoSansHK.ttf",
+        "duration": 13.100000000093132,
+        "transferSize": 358252,
+        "encodedBodySize": 357952
+      },
+      {
+        "name": "http://127.0.0.1:4173/assets/world-BffXC3Nl.js",
+        "duration": 48.60000000009313,
+        "transferSize": 334687,
+        "encodedBodySize": 334387
+      },
+      {
+        "name": "http://127.0.0.1:4173/favicon.ico",
+        "duration": 2.8999999999068677,
+        "transferSize": 300,
+        "encodedBodySize": 0
+      },
+      {
+        "name": "http://127.0.0.1:4173/assets/shadowMap.fragment-CUyUyPVe.js",
+        "duration": 5.7999999998137355,
+        "transferSize": 1376,
+        "encodedBodySize": 1076
+      },
+      {
+        "name": "http://127.0.0.1:4173/assets/shadowMap.vertex-BPi370YD.js",
+        "duration": 5.400000000372529,
+        "transferSize": 1735,
+        "encodedBodySize": 1435
+      },
+      {
+        "name": "http://127.0.0.1:4173/assets/helperFunctions-BhwSDETB.js",
+        "duration": 5.5,
+        "transferSize": 2192,
+        "encodedBodySize": 1892
+      },
+      {
+        "name": "http://127.0.0.1:4173/assets/meshUboDeclaration-CHmTzNsG.js",
+        "duration": 4.7999999998137355,
+        "transferSize": 861,
+        "encodedBodySize": 561
+      },
+      {
+        "name": "http://127.0.0.1:4173/assets/depthBoxBlur.fragment-DqzX2ZJ6.js",
+        "duration": 4.7999999998137355,
+        "transferSize": 861,
+        "encodedBodySize": 561
+      },
+      {
+        "name": "http://127.0.0.1:4173/assets/shadowMapFragmentSoftTransparentShadow-C--uw7G5.js",
+        "duration": 4.800000000279397,
+        "transferSize": 697,
+        "encodedBodySize": 397
+      },
+      {
+        "name": "http://127.0.0.1:4173/assets/native-v5/wood-grain-basecolor.png",
+        "duration": 3.099999999627471,
+        "transferSize": 39756,
+        "encodedBodySize": 39456
+      },
+      {
+        "name": "http://127.0.0.1:4173/assets/native-v5/hair-strand-basecolor.png",
+        "duration": 3,
+        "transferSize": 53735,
+        "encodedBodySize": 53435
+      },
+      {
+        "name": "http://127.0.0.1:4173/assets/native-v5/hair-strand-normal.png",
+        "duration": 5.5,
+        "transferSize": 250711,
+        "encodedBodySize": 250411
+      },
+      {
+        "name": "http://127.0.0.1:4173/assets/rgbdDecode.fragment-gvd-wyTU.js",
+        "duration": 2.2000000001862645,
+        "transferSize": 741,
+        "encodedBodySize": 441
+      },
+      {
+        "name": "http://127.0.0.1:4173/assets/pbr.vertex-BFW5BioP.js",
+        "duration": 9.899999999906868,
+        "transferSize": 5020,
+        "encodedBodySize": 4720
+      },
+      {
+        "name": "http://127.0.0.1:4173/assets/logDepthDeclaration-DmJgTyY-.js",
+        "duration": 10,
+        "transferSize": 5085,
+        "encodedBodySize": 4785
+      },
+      {
+        "name": "http://127.0.0.1:4173/assets/pbr.fragment-BCqd9otQ.js",
+        "duration": 17.200000000186265,
+        "transferSize": 38439,
+        "encodedBodySize": 38139
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "seconds": 3.23,
+      "name": "production WebGL ready",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "seconds": 3.943,
+      "name": "purchase committed",
+      "id": "off.towel",
+      "quantity": 3,
+      "cash": 4865,
+      "stock": 3,
+      "doubleClick": true
+    },
+    {
+      "seconds": 4.73,
+      "name": "display committed",
+      "id": "off.towel",
+      "slot": 0,
+      "shelves": [
+        "off.towel",
+        "",
+        ""
+      ]
+    },
+    {
+      "seconds": 5.136,
+      "name": "purchase committed",
+      "id": "off.tray",
+      "quantity": 2,
+      "cash": 4755,
+      "stock": 2,
+      "doubleClick": false
+    },
+    {
+      "seconds": 5.508,
+      "name": "display committed",
+      "id": "off.tray",
+      "slot": 1,
+      "shelves": [
+        "off.towel",
+        "off.tray",
+        ""
+      ]
+    },
+    {
+      "seconds": 6.148,
+      "name": "purchase committed",
+      "id": "off.notebook",
+      "quantity": 10,
+      "cash": 4355,
+      "stock": 10,
+      "doubleClick": false
+    },
+    {
+      "seconds": 6.603,
+      "name": "display committed",
+      "id": "off.notebook",
+      "slot": 2,
+      "shelves": [
+        "off.towel",
+        "off.tray",
+        "off.notebook"
+      ]
+    },
+    {
+      "seconds": 7.19,
+      "name": "purchase committed",
+      "id": "off.towel",
+      "quantity": 5,
+      "cash": 4130,
+      "stock": 8,
+      "doubleClick": false
+    },
+    {
+      "seconds": 7.725,
+      "name": "purchase committed",
+      "id": "off.mug",
+      "quantity": 4,
+      "cash": 3850,
+      "stock": 4,
+      "doubleClick": false
+    },
+    {
+      "seconds": 8.297,
+      "name": "display committed",
+      "id": "off.mug",
+      "slot": 1,
+      "shelves": [
+        "off.towel",
+        "off.mug",
+        "off.notebook"
+      ]
+    },
+    {
+      "seconds": 9.024,
+      "name": "display committed",
+      "id": "off.mug",
+      "slot": 0,
+      "shelves": [
+        "off.mug",
+        "",
+        "off.notebook"
+      ]
+    },
+    {
+      "seconds": 9.604,
+      "name": "display committed",
+      "id": "off.towel",
+      "slot": 1,
+      "shelves": [
+        "off.mug",
+        "off.towel",
+        "off.notebook"
+      ]
+    },
+    {
+      "seconds": 12.362,
+      "name": "real settlement with no eligible customer (fallback)",
+      "sold": 16,
+      "time": 1792548000000
+    },
+    {
+      "seconds": 14.702,
+      "name": "search and draft repaint preserve existing visitor route"
+    },
+    {
+      "seconds": 92.345,
+      "name": "existing customer browses"
+    },
+    {
+      "seconds": 93.863,
+      "name": "real settlement before handoff",
+      "sold": 6,
+      "time": 1792551600000
+    },
+    {
+      "seconds": 141.198,
+      "name": "actual bag ownership transfer",
+      "visitor": "visitor-a"
+    },
+    {
+      "seconds": 246.039,
+      "name": "recipient exits through door"
+    },
+    {
+      "seconds": 256.688,
+      "name": "complete uncut gameplay video saved"
+    },
+    {
+      "seconds": 263.19,
+      "name": "purchase committed",
+      "id": "off.mug",
+      "quantity": 1,
+      "cash": 5700,
+      "stock": 1,
+      "doubleClick": false
+    },
+    {
+      "seconds": 264.009,
+      "name": "display committed",
+      "id": "off.mug",
+      "slot": 2,
+      "shelves": [
+        "",
+        "off.towel",
+        "off.mug"
+      ]
+    },
+    {
+      "seconds": 264.431,
+      "name": "invalid input, insufficient cash, focus, per-item drafts and retained filter verified"
+    },
+    {
+      "seconds": 267.631,
+      "name": "actual save export/import/reload preserves state and drafts"
+    },
+    {
+      "seconds": 268.358,
+      "name": "purchase committed",
+      "id": "off.notebook",
+      "quantity": 1,
+      "cash": 5660,
+      "stock": 1,
+      "doubleClick": false
+    },
+    {
+      "seconds": 297.412,
+      "name": "320/375px five-language responsive and keyboard checks passed"
+    },
+    {
+      "seconds": 297.412,
+      "name": "QA remains in isolated Sandbox; no Normal identity or player save mutation"
+    }
+  ],
+  "localeResults": [
+    {
+      "width": 320,
+      "locale": "zh-HK",
+      "viewport": 320,
+      "document": 320,
+      "drawer": {
+        "x": 10,
+        "y": 12,
+        "width": 300,
+        "height": 722,
+        "top": 12,
+        "right": 310,
+        "bottom": 734,
+        "left": 10
+      },
+      "inputs": [
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "viewport": 320,
+      "document": 320,
+      "drawer": {
+        "x": 10,
+        "y": 12,
+        "width": 300,
+        "height": 722,
+        "top": 12,
+        "right": 310,
+        "bottom": 734,
+        "left": 10
+      },
+      "inputs": [
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "locale": "ja",
+      "viewport": 320,
+      "document": 320,
+      "drawer": {
+        "x": 10,
+        "y": 12,
+        "width": 300,
+        "height": 722,
+        "top": 12,
+        "right": 310,
+        "bottom": 734,
+        "left": 10
+      },
+      "inputs": [
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "locale": "th",
+      "viewport": 320,
+      "document": 320,
+      "drawer": {
+        "x": 10,
+        "y": 12,
+        "width": 300,
+        "height": 722,
+        "top": 12,
+        "right": 310,
+        "bottom": 734,
+        "left": 10
+      },
+      "inputs": [
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "locale": "zh-CN",
+      "viewport": 320,
+      "document": 320,
+      "drawer": {
+        "x": 10,
+        "y": 12,
+        "width": 300,
+        "height": 722,
+        "top": 12,
+        "right": 310,
+        "bottom": 734,
+        "left": 10
+      },
+      "inputs": [
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        },
+        {
+          "font": "16px",
+          "width": 148
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "locale": "zh-HK",
+      "viewport": 375,
+      "document": 375,
+      "drawer": {
+        "x": 10,
+        "y": 12,
+        "width": 355,
+        "height": 722,
+        "top": 12,
+        "right": 365,
+        "bottom": 734,
+        "left": 10
+      },
+      "inputs": [
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "locale": "en",
+      "viewport": 375,
+      "document": 375,
+      "drawer": {
+        "x": 10,
+        "y": 12,
+        "width": 355,
+        "height": 722,
+        "top": 12,
+        "right": 365,
+        "bottom": 734,
+        "left": 10
+      },
+      "inputs": [
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "locale": "ja",
+      "viewport": 375,
+      "document": 375,
+      "drawer": {
+        "x": 10,
+        "y": 12,
+        "width": 355,
+        "height": 722,
+        "top": 12,
+        "right": 365,
+        "bottom": 734,
+        "left": 10
+      },
+      "inputs": [
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "locale": "th",
+      "viewport": 375,
+      "document": 375,
+      "drawer": {
+        "x": 10,
+        "y": 12,
+        "width": 355,
+        "height": 722,
+        "top": 12,
+        "right": 365,
+        "bottom": 734,
+        "left": 10
+      },
+      "inputs": [
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "locale": "zh-CN",
+      "viewport": 375,
+      "document": 375,
+      "drawer": {
+        "x": 10,
+        "y": 12,
+        "width": 355,
+        "height": 722,
+        "top": 12,
+        "right": 365,
+        "bottom": 734,
+        "left": 10
+      },
+      "inputs": [
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        },
+        {
+          "font": "16px",
+          "width": 203
+        }
+      ]
+    }
+  ],
+  "pageErrors": [],
+  "limitations": [
+    "Software SwiftShader renderer; no physical phone/GPU performance claim",
+    "Playwright desktop responsive emulation does not open a physical mobile keyboard",
+    "No audio acceptance or public Site deployment claimed"
+  ]
+}

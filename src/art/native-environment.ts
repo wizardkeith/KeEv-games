@@ -25,7 +25,7 @@ export function nativeRoomRecipe():NativeEnvironmentPart[]{
  const old=roomRecipe().filter((_,i)=>!removed.has(i)).map(p=>{
   // Cool, desaturated floor boards separate furniture from the floor without
   // changing material encoding or brightening every surface in the scene.
-  if(p.role==='wood'&&p.size[2]===6.45&&p.size[1]===.018)return {...p,size:[.545,p.size[1],p.size[2]] as V3,color:p.color===palette.floorLight?'#C6A884':'#BFA07E',roughness:.83};
+  if(p.role==='wood'&&p.size[2]===6.45&&p.size[1]===.018)return {...p,size:[.545,p.size[1],p.size[2]] as V3,color:p.color===palette.floorLight?'#C2A481':'#B99A76',roughness:.83};
   // Retained wall shelves stay deeper and warmer than the new floor.
   if(p.role==='wood'&&p.size[0]===5.2)return {...p,color:'#967255',roughness:.76};
   return p;

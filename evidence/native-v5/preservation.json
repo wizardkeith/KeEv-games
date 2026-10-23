@@ -1,0 +1,22 @@
+{
+  "baseline": "10c070c8121aecfd9e3e1ac9d0db213947416a08",
+  "protected_comparison": "274148b19e53cd33e68e214d41aed05e19d272b3",
+  "original_history_commits": [
+    "182a7a427d95f609f488a0c626937be294fbd329",
+    "f48dc15030fd89af0fe99e00f890ba204bdc0185",
+    "8296c3251b0a7bfd43221781ba7241319891f396",
+    "2da2ca394bd2e1c0d3ec65d6e0f712b21a5294c4",
+    "6c42daeae2246275bc98553b774fe800c068cc32",
+    "b093c50fa13cfca80c8b10fdfd96e716114a2d7d",
+    "503ce1dfc22d369cc512084c1a4db9aa2930885c",
+    "2686019a76d020543cfa0bca3efa867422add4d5",
+    "8eca6d53e13b0d2db457636844b49bf700753c43",
+    "3869ef9aefcdc08c0aede158ec5276df89f7cbae",
+    "10c070c8121aecfd9e3e1ac9d0db213947416a08"
+  ],
+  "protected_count": 230,
+  "changed_protected": [],
+  "authorized_text_changes": "Five locale dictionaries, Day 1 copy and presentation guidance only. Narrative predicates/economy/catalog/layout/storage/schema unchanged.",
+  "historical_masters": "All original source and masters remain in full Git history; new v5 wood master is separate. Current native-v3/v4 export paths intentionally regenerated to preserve reusable stable assets.",
+  "pass": true
+}
