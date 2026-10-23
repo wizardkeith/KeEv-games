@@ -64,7 +64,7 @@ export function createNativeActors(scene:Scene,model:NativeModel){
    }
    receiveWeight[i]+=Math.max(-seconds/.22,Math.min(seconds/.22,(route.state==='receiving'?1:0)-receiveWeight[i]));
    if(receiveWeight[i]>0){a.parts.get('arm-left')!.rotation.set(1.57*receiveWeight[i],0,-.15*receiveWeight[i]);a.parts.get('forearm-left')!.rotation.x=0;a.parts.get('head')!.rotation.x=.075*Math.sin(Math.PI*route.handoverProgress);}
-   if(route.state==='browsing'&&policy.nativeMotion){const p=route.browseProgress,e=Math.sin(Math.PI*p)**2;a.parts.get('head')!.rotation.y+=.12*Math.sin(p*Math.PI*2);a.parts.get('arm-right')!.rotation.set(.65*e,0,.18*e);a.parts.get('forearm-right')!.rotation.x=.6*e;}
+   if(route.state==='browsing'&&policy.nativeMotion){const p=route.browseProgress,smooth=(t:number)=>{const v=Math.max(0,Math.min(1,t));return v*v*(3-2*v);},look=smooth(p/.16)*smooth((1-p)/.18),reach=smooth((p-.24)/.22)*smooth((.88-p)/.22);a.parts.get('head')!.rotation.y+=.10*look;a.parts.get('head')!.rotation.x=.09*look;a.parts.get('arm-right')!.rotation.set(.58*reach,0,.15*reach);a.parts.get('forearm-right')!.rotation.x=.52*reach;}
   });
   const recipient=routes.actors.find(a=>a.enabled&&a.hasBag);
   if(!policy.nativeMotion||!recipient){if(carried){carried.node.setEnabled(false);carried.node.parent=null;carrySpare=carried.node;carried=undefined;}}

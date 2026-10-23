@@ -1,3 +1,4 @@
+import {capturePurchase,newStockWorkspace,parseQuantity,quantityDraft,setQuantity} from './ui/stock-state';
 import './style.css';
 import {FeedbackProjector} from './presentation/feedback';
 import {NativeCommitPresentation} from './presentation/native-commits';
@@ -61,7 +62,7 @@ function draw(){
  <div class="world-note" ${u.worldFailed?'':'hidden'}><span>◇</span><p>${esc(t('noWebGL'))}</p></div>
  ${!world&&!u.worldFailed?`<p class="world-loading">${esc(t('worldPreparing'))}</p>`:''}
  ${!u.zen&&!u.panel?guidance||(recoveryPreview(state).eligible||!story?`<section class="next-card" aria-label="${esc(t('nextStep'))}"><span class="eyebrow">${esc(t('nextStep'))}</span><p>${esc(t(next.text))}</p>${actionButton(next.label,next.text==='nextSale'&&mode==='sandbox'?'advance':'panel',next.text==='nextSale'&&mode==='sandbox'?'data-minutes="60"':`data-panel="${next.panel}"`)}</section>`:day1Card(state,story,{locale,itemName:id=>t(catalog.offerings.find(o=>o.id===id)?.key??id),money},busy||storyBusy,storyReplay)):''}
- ${u.panel?`<aside id="drawer" class="sidebar" role="dialog" aria-modal="false" aria-labelledby="panel-title"><header class="panelhead"><h2 id="panel-title" tabindex="-1">${esc(t(u.panel))}</h2><button data-action="hide" class="closepanel" aria-label="${esc(t('closePanel'))}">×</button></header><div class="panelbody" id="panelbody">${panelContent(state,u,busy||storyBusy,story)}</div></aside>`:''}
+ ${u.panel?`<aside id="drawer" class="sidebar ${u.panel==='stock'?'stock-sidebar':''}" role="dialog" aria-modal="false" aria-labelledby="panel-title"><header class="panelhead"><h2 id="panel-title" tabindex="-1">${esc(t(u.panel))}</h2><button data-action="hide" class="closepanel" aria-label="${esc(t('closePanel'))}">×</button></header><div class="panelbody" id="panelbody">${panelContent(state,u,busy||storyBusy,story)}</div></aside>`:''}
  <div class="shop-controls"><span class="clock-note">${esc(t(mode==='sandbox'?'sandboxNote':'normalNote'))}</span><div class="control-actions">${actionButton(state.open?'close':'open','open','',true)}${mode==='sandbox'?actionButton('advance60','advance','data-minutes="60"'):actionButton('demo','mode')}</div></div>
  <nav class="dock" aria-label="${esc(t('navShelves'))}">${[['shelves','navShelves'],['stock','navStock'],['report','navReport'],['journal','navJournal'],['settings','more']].map(([p,label])=>`<button data-action="panel" data-panel="${p}" aria-pressed="${u.panel===p}">${icon(p)}<span>${esc(t(label))}</span></button>`).join('')}</nav>
  <p class="camera-hint">${esc(t('camera'))}</p>
@@ -105,10 +106,10 @@ async function act(kind:string,data:Partial<Command>={}){const command={id:comma
 function openPanel(p:string,source?:HTMLElement){if(source)focusReturn=source;const changed=u.panel!==p;u.panel=p;u.formError='';draw();if(changed){const body=document.getElementById('panelbody');if(body)body.scrollTop=0;}document.getElementById('panel-title')?.focus({preventScroll:true});}
 function closePanel(){u.panel='';u.formError='';draw();focusReturn?.focus({preventScroll:true});}
 async function switchMode(next:Mode){
- storeDraft(mode,u.draft,draftPrefix);const loaded=await saves.loadOrCreate(next,next==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());mode=next;state=loaded;storyReplay=false;u.draft=draftFor(mode,state,draftPrefix);u.rename=false;u.reportDay='';u.slot=0;u.formError='';u.notice='';localStorage.setItem(modeKey,mode);returnPending=document.hidden||(mode==='normal'&&Date.now()-state.watermark>=60000);cancelFeedback();
+ storeDraft(mode,u.draft,draftPrefix);const loaded=await saves.loadOrCreate(next,next==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());mode=next;state=loaded;storyReplay=false;u.draft=draftFor(mode,state,draftPrefix);u.rename=false;u.reportDay='';u.slot=0;u.stock=newStockWorkspace();u.formError='';u.notice='';localStorage.setItem(modeKey,mode);returnPending=document.hidden||(mode==='normal'&&Date.now()-state.watermark>=60000);cancelFeedback();
 }
 app.addEventListener('input',e=>{
- const input=e.target as HTMLInputElement;switch(input.id){case 'qty':u.draft.quantity=input.value;break;case 'shop-name':u.draft.shop=input.value;break;case 'company-name':u.draft.company=input.value;break;case 'shop-logo':u.draft.logo=input.value;break;default:if(input.dataset.priceId)u.draft.prices[input.dataset.priceId]=input.value;}
+ const input=e.target as HTMLInputElement;if(input.dataset.quantityId){setQuantity(u.draft,input.dataset.quantityId,input.value);u.formError='';storeDraft(mode,u.draft,draftPrefix);draw();return;}if(input.id==='stock-search'){const w=u.stock??=newStockWorkspace();w.query=input.value;w.recent={};draw();return;}switch(input.id){case 'qty':u.draft.quantity=input.value;break;case 'shop-name':u.draft.shop=input.value;break;case 'company-name':u.draft.company=input.value;break;case 'shop-logo':u.draft.logo=input.value;break;default:if(input.dataset.priceId)u.draft.prices[input.dataset.priceId]=input.value;}
  storeDraft(mode,u.draft,draftPrefix);if(input.id==='qty')draw();
 });
 app.addEventListener('change',e=>{
@@ -119,8 +120,10 @@ app.addEventListener('change',e=>{
  if(input.id==='quality'){u.quality=input.value;world?.quality(u.quality);}
  if(input.id==='minimal-fx'){u.minimalFX=(input as HTMLInputElement).checked;savePreferences({minimalFX:u.minimalFX},presentationStorageKey);draw();}
  if(input.id==='sound'){u.sound=(input as HTMLInputElement).checked;if(u.sound)void saleSound.play().catch(()=>{});}
- if(input.id==='import'){const file=(input as HTMLInputElement).files?.[0];if(file)void run(async()=>{state=await saves.import(state,await file.text());u.draft=draftFor(mode,state,draftPrefix);returnPending=document.hidden||(mode==='normal'&&Date.now()-state.watermark>=60000);cancelFeedback();},'general',undefined,'import');}
+ if(input.id==='import'){const file=(input as HTMLInputElement).files?.[0];if(file)void run(async()=>{state=await saves.import(state,await file.text());u.stock=newStockWorkspace();u.draft=draftFor(mode,state,draftPrefix);returnPending=document.hidden||(mode==='normal'&&Date.now()-state.watermark>=60000);cancelFeedback();},'general',undefined,'import');}
 });
+for(const event of ['pointerover','focusin'])app.addEventListener(event,e=>{const target=(e.target as Element).closest<HTMLElement>('[data-preview-slot]');if(target)world?.selected(Number(target.dataset.previewSlot));});
+for(const event of ['pointerout','focusout'])app.addEventListener(event,e=>{if((e.target as Element).closest('[data-preview-slot]'))world?.selected(u.slot);});
 app.addEventListener('submit',e=>{
  if((e.target as HTMLElement).id!=='identity')return;e.preventDefault();
  void run(async()=>{await act('identity',{text:u.draft.shop,company:u.draft.company,logo:u.draft.logo});u.rename=false;},'identity',()=>{notice(t('identitySaved'));});
@@ -140,6 +143,9 @@ app.addEventListener('click',e=>{
   if(a==='story-settings'){openPanel('settings',target);return;}
   if(a==='story-sandbox'){void run(async()=>{state=await saves.settle(state,state.watermark+15*60000,Date.now());},'general',undefined,'advance');return;}
  }
+ if(a==='stock-filter'){const w=u.stock??=newStockWorkspace();w.filter=target.dataset.filter as typeof w.filter;w.recent={};draw();return;}
+ if(a==='stock-picker'){const w=u.stock??=newStockWorkspace();w.picker=w.picker===id?'':id;draw();return;}
+ if(a==='stock-step'||a==='stock-quantity'){const raw=quantityDraft(u.draft,id),q=parseQuantity(raw);if(a==='stock-quantity')setQuantity(u.draft,id,target.dataset.quantity!);else if(q!==undefined)setQuantity(u.draft,id,String(Math.max(1,Math.min(1000,q+Number(target.dataset.step)))));u.formError='';storeDraft(mode,u.draft,draftPrefix);draw();return;}
  if(a==='panel'){openPanel(target.dataset.panel!,target);return;}if(a==='hide'){closePanel();return;}
  if(a==='select-slot'){u.slot=n;draw();return;}if(a==='stock-slot'){u.slot=n;openPanel('stock',target);return;}
  if(a==='skip-reveal'){cancelFeedback();draw();return;}
@@ -150,10 +156,11 @@ app.addEventListener('click',e=>{
  if(a==='cancel-identity'){u.rename=false;draw();return;}
  if(a==='export'){download(JSON.stringify(state,null,2),`little-shop-${mode}.json`);return;}
  const field=a==='buy'?'buy-'+id:a==='price'?'price-'+n:'general';
+ let purchase:ReturnType<typeof capturePurchase>|undefined;if(a==='buy'){try{purchase=capturePurchase(state,u.draft,id);}catch(e){fail(e,field);draw();return;}}
  void run(async()=>{
   switch(a){
-   case 'buy':{const q=Number(u.draft.quantity);if(!u.draft.quantity.trim()||!Number.isSafeInteger(q)||q<1||q>1000)throw Error('quantity');const o=catalog.offerings.find(x=>x.id===id)!;if(state.cash<purchaseCost(o.cost)*q){u.formField=field;throw Error('cash');}await act('buy',{itemId:id,quantity:q});notice(t(o.key)+' ×'+q+' · '+t('bought'));break;}
-   case 'display':{if(state.inventory[id].stock===0)throw Error('displayEmptyError');const oldSlot=state.shelves.indexOf(id);await act('display',{itemId:id,slot:n});notice(oldSlot>=0&&oldSlot!==n?day1Text(locale,'moveShelf',{from:oldSlot+1,to:n+1}):t('placed')+' '+(n+1)+' · '+t('replacedNote'));break;}
+   case 'buy':{const intent=purchase!;if(intent.mode!==mode)throw Error('invalid');await act('buy',{itemId:intent.itemId,quantity:intent.quantity});const w=u.stock??=newStockWorkspace();w.recent[intent.itemId]=true;if(!state.shelves.includes(intent.itemId))w.picker=intent.itemId;notice(t(catalog.offerings.find(o=>o.id===intent.itemId)!.key)+' ×'+intent.quantity+' · '+t('bought'));break;}
+   case 'display':{if(state.inventory[id].stock===0)throw Error('displayEmptyError');const oldSlot=state.shelves.indexOf(id);await act('display',{itemId:id,slot:n});if(u.stock){delete u.stock.recent[id];u.stock.picker='';}notice(oldSlot>=0&&oldSlot!==n?day1Text(locale,'moveShelf',{from:oldSlot+1,to:n+1}):t('placed')+' '+(n+1)+' · '+t('replacedNote'));break;}
    case 'price':{const raw=u.draft.prices[id]??String(state.inventory[id].price*10),price=Number(raw)/10;if(!raw.trim()||!Number.isSafeInteger(price)||price<1||price>100000)throw Error('price');await act('price',{itemId:id,price});delete u.draft.prices[id];notice(t('priceSaved'));break;}
    case 'clear':await act('clear',{slot:n});break;
    case 'open':await act('open');break;

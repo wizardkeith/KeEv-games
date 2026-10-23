@@ -35,7 +35,7 @@ export interface RouteFrame {
 }
 export const CUSTOMER_ROUTE_CONTRACT = Object.freeze({
  id:'native.customer-routes.v3', units:'metres', forward:'-Z', radius:.24,
- maxSpeed:.62, acceleration:.92, turnRadiansPerSecond:2.2,
+ maxSpeed:.54, acceleration:.92, turnRadiansPerSecond:2.2,
  doorHinge:Object.freeze({x:2.34,z:3.20}), doorLeafWidth:1.42,
  doorMaxAngle:-1.42, doorPassAngle:-1.30, maxDeltaSeconds:.05,
  servicePoint:Object.freeze({x:3.40,z:-.65}), serviceFacingYaw:Math.PI/2,
@@ -69,6 +69,20 @@ function turn(a:number,b:number,dt:number):number {
  const delta=angleDelta(a,b),step=CUSTOMER_ROUTE_CONTRACT.turnRadiansPerSecond*dt;
  return a+Math.max(-step,Math.min(step,delta));
 }
+/** Round only corners whose entire sampled arc clears fixtures and staff.
+ * Narrow door/aisle turns retain the authored stop/turn route. */
+function roundedPath(path:readonly RoutePoint[]):readonly RoutePoint[]{
+ if(path.length<3)return path;
+ const out:RoutePoint[]=[path[0]];
+ for(let i=1;i<path.length-1;i++){
+  const a=path[i-1],b=path[i],c=path[i+1],ab=distance(a,b),bc=distance(b,c),r=Math.min(.42,ab*.35,bc*.35);
+  if(r<.06){out.push(b);continue;}
+  const start=point(b.x+(a.x-b.x)*r/ab,b.z+(a.z-b.z)*r/ab),end=point(b.x+(c.x-b.x)*r/bc,b.z+(c.z-b.z)*r/bc);
+  const curve=Array.from({length:9},(_,n)=>{const t=n/8,v=1-t;return point(v*v*start.x+2*v*t*b.x+t*t*end.x,v*v*start.z+2*v*t*b.z+t*t*end.z);});
+  if(curve.every(p=>fixtureClearance(p)>=.26&&distance(p,CUSTOMER_ROUTE_CONTRACT.staffAvoidance)>=.51)&&b.z<2.55)out.push(...curve);else out.push(b);
+ }
+ out.push(path.at(-1)!);return out;
+}
 interface Visitor {
  id:CustomerRouteFrame['id']; index:0|1; enabled:boolean; x:number;z:number;yaw:number;
  speed:number;distance:number;state:CustomerRouteState;path:readonly RoutePoint[];
@@ -79,7 +93,7 @@ function visitor(index:0|1):Visitor {
  const outside=CUSTOMER_ROUTES[index][0];
  return {id:index===0?'visitor-a':'visitor-b',index,enabled:false,...outside,
   yaw:Math.PI/2,speed:0,distance:0,state:'outside',path:[],next:0,goal:'browse',
-  browseElapsed:0,browseDuration:index===0?5.2:6.6,wantsExit:false,cooldown:0,pause:0,hasBag:false};
+  browseElapsed:0,browseDuration:index===0?8.4:9.2,wantsExit:false,cooldown:0,pause:0,hasBag:false};
 }
 
 export class NativeCustomerRoutes {
@@ -101,9 +115,18 @@ export class NativeCustomerRoutes {
   if(this.disposed||revision<=this.lastServiceRevision)return;
   this.lastServiceRevision=revision;
   if(this.service)return;
-  const v=this.visitors[0];
-  if(!v.enabled||v.state!=='browsing'||v.wantsExit||v.hasBag||distance(v,CUSTOMER_ROUTES[0].at(-1)!)>.01)return;
-  v.path=[point(v.x,v.z),point(3.40,-.10),CUSTOMER_ROUTE_CONTRACT.servicePoint];
+  const candidates=this.visitors.filter(v=>v.enabled&&!v.wantsExit&&!v.hasBag&&(v.state==='browsing'||v.state==='entering')&&v.x>=1.3&&v.z<=2.1&&v.z>=-.12)
+   .map(v=>{
+    const end=CUSTOMER_ROUTE_CONTRACT.servicePoint;
+    const direct=Array.from({length:25},(_,i)=>point(v.x+(end.x-v.x)*i/24,v.z+(end.z-v.z)*i/24)).every(p=>fixtureClearance(p)>=.25&&distance(p,CUSTOMER_ROUTE_CONTRACT.staffAvoidance)>=.51);
+    const path=direct?[point(v.x,v.z),end]:[point(v.x,v.z),point(3.4,v.z),end];
+    let heading=v.yaw,estimate=.4;
+    for(let i=1;i<path.length;i++){const a=path[i-1],b=path[i],yaw=Math.atan2(a.x-b.x,a.z-b.z);estimate+=distance(a,b)/CUSTOMER_ROUTE_CONTRACT.maxSpeed+Math.abs(angleDelta(heading,yaw))/CUSTOMER_ROUTE_CONTRACT.turnRadiansPerSecond;heading=yaw;}
+    estimate+=Math.abs(angleDelta(heading,CUSTOMER_ROUTE_CONTRACT.serviceFacingYaw))/CUSTOMER_ROUTE_CONTRACT.turnRadiansPerSecond;
+    return {v,path,estimate};
+   }).filter(c=>c.estimate<CUSTOMER_ROUTE_CONTRACT.serviceAcquireSeconds).sort((a,b)=>a.estimate-b.estimate);
+  const chosen=candidates[0];if(!chosen)return;const v=chosen.v;
+  v.path=roundedPath(chosen.path);
   v.next=1;v.goal='service';v.state='to-service';v.speed=0;v.pause=.10;
   this.service={revision,visitor:v,deadline:this.time+CUSTOMER_ROUTE_CONTRACT.serviceAcquireSeconds};
   return v.id;
@@ -124,10 +147,7 @@ export class NativeCustomerRoutes {
  private departService(v:Visitor):void {
   // At the service bay, leave along the clear right aisle. If interrupted
   // earlier, undo only traversed private segments before rejoining the old route.
-  const traversed=v.path.slice(0,v.next);
-  v.path=v.x===3.40?
-   [point(v.x,v.z),point(3.40,.60),point(3.40,2.05),point(3.05,2.05),point(3.05,3.20),point(3.05,4.05),point(4.18,4.05)]:
-   [point(v.x,v.z),...traversed.slice().reverse(),...CUSTOMER_ROUTES[v.index].slice().reverse()];
+  v.path=roundedPath([point(v.x,v.z),point(3.40,v.z),point(3.40,2.05),point(3.05,2.05),point(3.05,3.20),point(3.05,4.05),point(4.18,4.05)]);
   v.next=1;v.goal='outside';v.state='service-exit-wait';v.wantsExit=true;v.speed=0;v.pause=.10;
   if(!this.owner||this.owner===v){v.state='leaving';v.wantsExit=false;this.owner=v;}
  }
@@ -146,14 +166,14 @@ export class NativeCustomerRoutes {
  private depart(v:Visitor):void {
   // Reverse only already traversed segments when closing during an entrance.
   const traversed=v.state==='entering'?v.path.slice(0,v.next):CUSTOMER_ROUTES[v.index];
-  v.path=[point(v.x,v.z),...traversed.slice().reverse()];
+  v.path=roundedPath([point(v.x,v.z),...traversed.slice().reverse()]);
   v.next=1;v.goal='outside';v.state='leaving';v.wantsExit=false;
   v.pause=.10;this.owner=v;
  }
  private arrive(v:Visitor):void {
   const route=CUSTOMER_ROUTES[v.index];
   v.enabled=true;v.x=route[0].x;v.z=route[0].z;v.yaw=Math.PI/2;
-  v.path=route;v.next=1;v.goal='browse';v.state='entering';v.speed=0;
+  v.path=roundedPath(route);v.next=1;v.goal='browse';v.state='entering';v.speed=0;
   v.browseElapsed=0;v.wantsExit=false;v.pause=.10;v.hasBag=false;this.owner=v;
   this.nextArrival=this.time+7.6;this.nextApplicant=1-v.index;
  }
@@ -173,7 +193,7 @@ export class NativeCustomerRoutes {
   const future=v.path[v.next+1],previous=v.path[v.next-1];
   const straight=!!future&&!!previous&&Math.abs(angleDelta(
    Math.atan2(target.x-previous.x,target.z-previous.z),Math.atan2(future.x-target.x,future.z-target.z),
-  ))<.01;
+  ))<.55;
   if(remaining<.0001){v.distance+=remaining;v.x=target.x;v.z=target.z;v.next++;if(!straight){v.speed=0;v.pause=.10;}return;}
   const heading=Math.atan2(-dx,-dz);
   v.yaw=turn(v.yaw,heading,dt);
@@ -181,7 +201,7 @@ export class NativeCustomerRoutes {
   // Turns are in place at authored corners; no diagonal shortcut through tables.
   if(Math.abs(angleDelta(v.yaw,heading))>.25){v.speed=Math.max(0,v.speed-1.8*dt);return;}
   const maxSpeed=CUSTOMER_ROUTE_CONTRACT.maxSpeed-(v.index===0?0:.035);
-  const brakingDistance=remaining+(straight?distance(target,future!):0);
+  let brakingDistance=remaining;if(straight)for(let j=v.next;j<v.path.length-1&&brakingDistance<1;j++){const a=v.path[j],b=v.path[j+1],c=v.path[j+2];brakingDistance+=distance(a,b);if(c&&Math.abs(angleDelta(Math.atan2(b.x-a.x,b.z-a.z),Math.atan2(c.x-b.x,c.z-b.z)))>=.55)break;}
   const desired=Math.min(maxSpeed,Math.sqrt(2*CUSTOMER_ROUTE_CONTRACT.acceleration*brakingDistance));
   v.speed=Math.min(desired,v.speed+CUSTOMER_ROUTE_CONTRACT.acceleration*dt);
   const step=Math.min(remaining,v.speed*dt);

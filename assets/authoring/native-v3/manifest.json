@@ -1,22 +1,22 @@
 {
-  "version": "native-characters-v3.1-r2",
+  "version": "native-characters-v4-r1",
   "authoring": "src/art/native-characters.ts",
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
-    "src/art/native-characters.ts": "9612d4d8c2d1e65aaa520097192ea0f327d6df55a8210fcdc0e4fd03f8da92c3",
+    "src/art/native-characters.ts": "afe9cac34f119a95c6cef8b02ba3174a68cab27dd82485b1b47eaca7855bbd82",
     "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "dfb556cd2e813656f298fb39c988aaa27ce36af2370aa6717b3e0a18beff49eb",
     "src/presentation/native-motion.ts": "215b955ec4b3fc83400a478545882b257fc244247fb16ea630748bbce8547000",
-    "src/presentation/native-staff.ts": "95272f64253c4a5098668b4f8a0cbb285c4d852d57c918d3ffd1ed0b380efb9c",
-    "src/presentation/native-staff-player.ts": "98755b9cca613a1624875b3b61c3721ca1c8efac0fcd176bb83f4556aa74a730",
-    "src/presentation/native-feet.ts": "14620ca78d45b50456c780e4edaaba32bbf8222b3103d65763baee1e86b59e83",
-    "src/presentation/native-delivery.ts": "fb6a3113a03bf8bc9830196f5339b19125a2ff4f3e4ac4a9dbc81696f916c0c7",
+    "src/presentation/native-staff.ts": "bc24e60d90398f4fb1436820209c886ec631917e9531fbe2890de646adfcfa27",
+    "src/presentation/native-staff-player.ts": "5f57bc4a85ca0b431b7eb81ba50a95d44954a9a10ac276595a79b686cd86acb1",
+    "src/presentation/native-feet.ts": "440404e1bceabdb2bf8d8f9f699d030c40e4815f7b0e904ea15a3f6a180bdef3",
+    "src/presentation/native-delivery.ts": "0f151cc4f9c293b20fc680fda7f6125ee93501a4c10f680e8563f66cdcf9b942",
     "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
-    "src/world.ts": "68d48b422d25bfb95e7359d950d623fad352da2cf32583b75c9b3ef77da2a56b",
-    "src/presentation/native-routes.ts": "0a0fbbfe0148825392f497d44fa122bc40b10b8bd1f3b2d9684b4985db9b9067",
-    "src/presentation/native-scene.ts": "a368d2010b68c4d61ecfef9e2dc1450a95e42ea4e0cf21232f750b027bf9a60d",
+    "src/world.ts": "a94c1c113fbf810fe3572455cb2bc2862664e2064bba70b0b3266cf98de7fb95",
+    "src/presentation/native-routes.ts": "248918d9a9942383431892aaf3dc9b6bd794be8c5ca85080f490cd40ff81beb1",
+    "src/presentation/native-scene.ts": "db04429859b5c7adcf23a3730cc2244ae5e2620db8db1e2b50eee3f988736e3e",
     "tools/export-native-characters.ts": "45197631fc63a64397f8f64471e81a2be61f445841f6a1b47ae1fccbe557da00"
   },
   "rig": "assets/authoring/native-v3/rig-contract.json",
@@ -42,8 +42,8 @@
       "id": "actor.misaki.native.v3",
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
-      "bytes": 341636,
-      "sha256": "5aaec590c0c19c9a3ddaa11be2885a2152e1bc044c5fd977144c24ea6edeaeeb",
+      "bytes": 381872,
+      "sha256": "6d237363b48f2d4ed63ead47562fca0536f811320d35f5abc2ac33d1db82c36c",
       "nodes": [
         {
           "id": "body",
@@ -53,8 +53,8 @@
             0,
             0
           ],
-          "geometryGroups": 6,
-          "triangles": 2100
+          "geometryGroups": 7,
+          "triangles": 2700
         },
         {
           "id": "head",
@@ -64,8 +64,8 @@
             1.25,
             0
           ],
-          "geometryGroups": 5,
-          "triangles": 2208
+          "geometryGroups": 6,
+          "triangles": 3048
         },
         {
           "id": "eye-left",
@@ -94,11 +94,11 @@
           "parent": "head",
           "pivot": [
             -0.079,
-            0.22,
+            0.20700000000000002,
             -0.165
           ],
           "geometryGroups": 1,
-          "triangles": 108
+          "triangles": 84
         },
         {
           "id": "eye-right",
@@ -127,11 +127,11 @@
           "parent": "head",
           "pivot": [
             0.079,
-            0.22,
+            0.20700000000000002,
             -0.165
           ],
           "geometryGroups": 1,
-          "triangles": 108
+          "triangles": 84
         },
         {
           "id": "mouth",
@@ -175,7 +175,7 @@
             0
           ],
           "geometryGroups": 2,
-          "triangles": 300
+          "triangles": 348
         },
         {
           "id": "forearm-left",
@@ -252,7 +252,7 @@
             0
           ],
           "geometryGroups": 2,
-          "triangles": 300
+          "triangles": 348
         },
         {
           "id": "forearm-right",
@@ -332,8 +332,8 @@
       "id": "actor.visitor-a.native.v3",
       "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
       "web": "public/assets/native-v3/visitor-a-native-v3.glb",
-      "bytes": 333808,
-      "sha256": "d80d40ddd16230b718ae21bb2b6bf6a035356290cdc7f36db46c88f0293c2ffe",
+      "bytes": 335396,
+      "sha256": "3ffe4e05d95f404c1ae2dcc8c2eaf5d98e9889b0bacc6b049d83576854aced0c",
       "nodes": [
         {
           "id": "body",
@@ -384,11 +384,11 @@
           "parent": "head",
           "pivot": [
             -0.079,
-            0.215,
+            0.202,
             -0.165
           ],
           "geometryGroups": 1,
-          "triangles": 108
+          "triangles": 84
         },
         {
           "id": "eye-right",
@@ -417,11 +417,11 @@
           "parent": "head",
           "pivot": [
             0.079,
-            0.215,
+            0.202,
             -0.165
           ],
           "geometryGroups": 1,
-          "triangles": 108
+          "triangles": 84
         },
         {
           "id": "mouth",
@@ -465,7 +465,7 @@
             0
           ],
           "geometryGroups": 2,
-          "triangles": 300
+          "triangles": 348
         },
         {
           "id": "forearm-left",
@@ -542,7 +542,7 @@
             0
           ],
           "geometryGroups": 2,
-          "triangles": 300
+          "triangles": 348
         },
         {
           "id": "forearm-right",
@@ -622,8 +622,8 @@
       "id": "actor.visitor-b.native.v3",
       "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
       "web": "public/assets/native-v3/visitor-b-native-v3.glb",
-      "bytes": 314444,
-      "sha256": "43d268762b6caa0b407237b71d2eefc9fbedeef2d5a52818b25f9422fc4de148",
+      "bytes": 332124,
+      "sha256": "108fc8736de34c8c98663d5c5040f41f91fc7332af410625135c4aecb70fafd7",
       "nodes": [
         {
           "id": "body",
@@ -644,8 +644,8 @@
             1.25,
             0
           ],
-          "geometryGroups": 3,
-          "triangles": 1800
+          "geometryGroups": 4,
+          "triangles": 2472
         },
         {
           "id": "eye-left",
@@ -674,11 +674,11 @@
           "parent": "head",
           "pivot": [
             -0.085,
-            0.22,
+            0.20700000000000002,
             -0.165
           ],
           "geometryGroups": 1,
-          "triangles": 108
+          "triangles": 84
         },
         {
           "id": "eye-right",
@@ -707,11 +707,11 @@
           "parent": "head",
           "pivot": [
             0.085,
-            0.22,
+            0.20700000000000002,
             -0.165
           ],
           "geometryGroups": 1,
-          "triangles": 108
+          "triangles": 84
         },
         {
           "id": "mouth",
@@ -755,7 +755,7 @@
             0
           ],
           "geometryGroups": 2,
-          "triangles": 300
+          "triangles": 348
         },
         {
           "id": "forearm-left",
@@ -832,7 +832,7 @@
             0
           ],
           "geometryGroups": 2,
-          "triangles": 300
+          "triangles": 348
         },
         {
           "id": "forearm-right",

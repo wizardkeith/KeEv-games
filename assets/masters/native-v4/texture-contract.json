@@ -1,0 +1,12 @@
+{
+  "id": "native.v4.wood.grain",
+  "source": "tools/generate-v4-textures.py",
+  "rights": "Original procedural asset, authored for KeEv Games in this task. No third-party image inputs.",
+  "channels": "RGB base-color multiplier; sRGB; no alpha, shadows, highlights or text",
+  "projection": "nativeSurfaceGeometry per-vertex metre-based face-plane UV; REPEAT S/T",
+  "size": [
+    512,
+    512
+  ],
+  "sha256": "a8b5b706fbc873b45a034816dc93829f6fb361a3326d33db97f3c04ee2aa88e1"
+}

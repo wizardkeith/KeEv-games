@@ -11,7 +11,7 @@ export interface NativeMesh {shape:'mesh';at:V3;color:string;role:MaterialRole;g
 export type NativePrimitive=Part&{roughness?:number};
 export type NativeSurface=NativePrimitive|NativeMesh;
 export interface NativePart {id:string;parent?:string;pivot:V3;recipe:NativeSurface[];}
-export const nativeCharacterIdentity={version:'native-characters-v3.1-r2',misaki:{id:'actor.misaki.native.v3',economicBinding:'staff.graybox'},'visitor-a':{id:'actor.visitor-a.native.v3',economicBinding:null},'visitor-b':{id:'actor.visitor-b.native.v3',economicBinding:null}} as const;
+export const nativeCharacterIdentity={version:'native-characters-v4-r1',misaki:{id:'actor.misaki.native.v3',economicBinding:'staff.graybox'},'visitor-a':{id:'actor.visitor-a.native.v3',economicBinding:null},'visitor-b':{id:'actor.visitor-b.native.v3',economicBinding:null}} as const;
 const P={skin:'#EAC3A8',skinB:'#E1B99D',blush:'#D99D91',hair:'#604638',hairLight:'#87634C',sage:'#7F9A89',sageDark:'#607B6A',cream:'#F5EBDD',ivory:'#F1E6CF',plum:'#826879',ink:'#57413D',shoe:'#59483F',sole:'#8C7764',terracotta:'#B77F62',blue:'#748F9D',trousers:'#555E61'};
 const p=(shape:Part['shape'],size:V3,at:V3,color:string,role:MaterialRole='fabric',extra:Partial<NativePrimitive>={}):NativePrimitive=>({shape,size,at,color,role,...extra});
 const round=(size:V3,at:V3,color:string,role:MaterialRole='fabric',radius=.014)=>p('round',size,at,color,role,{radius});
@@ -34,34 +34,56 @@ function mesh(rings:Ring[],color:string,role:MaterialRole,at:V3=[0,0,0],pleat=0,
 /** A tapered curved hair lock is a loft around a deliberately authored curve,
  * rather than overlapping spheres. */
 function lock(points:Ring[],color=P.hair):NativeMesh{return mesh(points,color,'hair');}
-export function nativeSurfaceGeometry(surface:NativeSurface):Geometry {
- if(surface.shape!=='mesh')return geometry(surface);
+/** Continuous bob shell with an open face, a shaped nape and real 8mm edge
+ * thickness. Both Web and GLB use these vertices; no camera-facing hair cards. */
+function bob(width:number,color:string):NativeMesh {
+ const g:Geometry={positions:[],normals:[],indices:[]},segments=24,rows=8;
+ for(let layer=0;layer<2;layer++)for(let i=0;i<=rows;i++)for(let j=0;j<segments;j++){
+  const a=j*Math.PI*2/segments,front=Math.max(0,Math.min(1,(-Math.sin(a)-.12)/.6));
+  const end=2.12-front*.94+.07*Math.cos(a)*front,t=(1-i/rows)*end+.025;
+  const r=layer?.008:0;
+  g.positions.push(Math.cos(a)*Math.sin(t)*(width*1.10-r),.18+Math.cos(t)*(.21-r),.028+Math.sin(a)*Math.sin(t)*(.192-r));
+ }
+ const count=(rows+1)*segments;
+ for(let l=0;l<2;l++)for(let i=0;i<rows;i++)for(let j=0;j<segments;j++){
+  const a=l*count+i*segments+j,b=l*count+i*segments+(j+1)%segments,c=a+segments,d=b+segments;
+  g.indices.push(...(l?[a,b,c,b,d,c]:[a,c,b,b,c,d]));
+ }
+ for(let j=0;j<segments;j++){const b=(j+1)%segments;g.indices.push(j,b,j+count,b,b+count,j+count);}
+ for(let l=0;l<2;l++){const center=g.positions.length/3;g.positions.push(0,.391-l*.008,.028);for(let j=0;j<segments;j++){const a=l*count+rows*segments+j,b=l*count+rows*segments+(j+1)%segments;g.indices.push(...(l?[center,a,b]:[center,b,a]));}}
+ g.normals=Array(g.positions.length).fill(0);
+ for(let i=0;i<g.indices.length;i+=3){const [a,b,c]=g.indices.slice(i,i+3).map(n=>n*3),u=[0,1,2].map(k=>g.positions[b+k]-g.positions[a+k]),v=[0,1,2].map(k=>g.positions[c+k]-g.positions[a+k]),n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];for(const p of [a,b,c])for(let k=0;k<3;k++)g.normals[p+k]+=n[k];}
+ for(let i=0;i<g.normals.length;i+=3){const n=Math.hypot(...g.normals.slice(i,i+3));for(let k=0;k<3;k++)g.normals[i+k]/=n||1;}
+ return {shape:'mesh',at:[0,0,0],color,role:'hair',geometry:g,roughness:.66};
+}
+export function nativeSurfaceGeometry(surface:NativeSurface):Geometry & {uvs?:number[]} {
+ if(surface.shape!=='mesh'){const g=geometry(surface),uvs:number[]=[];for(let i=0;i<g.positions.length;i+=3){const [x,y,z]=g.positions.slice(i,i+3),[nx,ny,nz]=g.normals.slice(i,i+3).map(Math.abs);uvs.push(...(ny>=nx&&ny>=nz?[x,z]:nx>=nz?[z,y]:[x,y]));}return {...g,uvs};}
  return {positions:surface.geometry.positions.map((x,i)=>x+surface.at[i%3]),normals:[...surface.geometry.normals],indices:[...surface.geometry.indices]};
 }
 export function nativeGrouped(recipe:NativeSurface[]){
- const groups=new Map<string,{role:MaterialRole;materialId:string;color:string;alpha:number;roughness:number;geometry:Geometry}>();
- for(const surface of recipe){const role=surface.role??'paint',alpha=surface.alpha??1,intent=nativeMaterialIntent(surface),key=intent.materialId;let group=groups.get(key);if(!group){group={role,materialId:key,color:surface.color,alpha,roughness:intent.roughness,geometry:{positions:[],normals:[],indices:[]}};groups.set(key,group);}const a=nativeSurfaceGeometry(surface),offset=group.geometry.positions.length/3;group.geometry.positions.push(...a.positions);group.geometry.normals.push(...a.normals);group.geometry.indices.push(...a.indices.map(x=>x+offset));}
+ const groups=new Map<string,{role:MaterialRole;materialId:string;color:string;alpha:number;roughness:number;geometry:Geometry & {uvs:number[]}} >();
+ for(const surface of recipe){const role=surface.role??'paint',alpha=surface.alpha??1,intent=nativeMaterialIntent(surface),key=intent.materialId;let group=groups.get(key);if(!group){group={role,materialId:key,color:surface.color,alpha,roughness:intent.roughness,geometry:{positions:[],normals:[],indices:[],uvs:[]}};groups.set(key,group);}const a=nativeSurfaceGeometry(surface),offset=group.geometry.positions.length/3;group.geometry.positions.push(...a.positions);group.geometry.normals.push(...a.normals);group.geometry.indices.push(...a.indices.map(x=>x+offset));group.geometry.uvs!.push(...(a.uvs??Array(a.positions.length/3*2).fill(0)));}
  return [...groups.values()];
 }
 function eyes(kind:NativeCharacterKind):NativePart[]{
  const wider=kind==='visitor-b',skin=kind==='visitor-a'?P.skinB:P.skin,out:NativePart[]=[];
  for(const side of [-1,1]){const x=side*(wider?.085:.079),s=side<0?'left':'right',y=kind==='visitor-a'?.155:.16;
-  out.push({id:`eye-${s}`,parent:'head',pivot:[x,y,-.177],recipe:[p('sphere',[.074,.044,.012],[0,0,0],'#F2E8DB','ink'),p('sphere',[.033,.040,.013],[side*-.003,0,-.009],kind==='visitor-a'?'#554332':'#76513C','ink'),p('sphere',[.017,.027,.014],[side*-.003,.001,-.016],'#3F3330','ink'),p('sphere',[.009,.009,.004],[-.008,.010,-.025],'#FFF4DF','ink'),round([.078,.010,.014],[0,.023,-.009],P.ink,'hair',.004)]});
+  out.push({id:`eye-${s}`,parent:'head',pivot:[x,y,-.177],recipe:[p('sphere',[.080,.065,.014],[0,0,0],'#F2E8DB','ink'),p('sphere',[.052,.057,.015],[side*-.003,0,-.009],kind==='visitor-a'?'#554332':'#76513C','ink'),p('sphere',[.026,.039,.015],[side*-.003,.001,-.016],'#3F3330','ink'),p('sphere',[.012,.014,.004],[-.009,.015,-.027],'#FFF4DF','ink'),round([.082,.009,.014],[0,.033,-.010],P.ink,'hair',.004)]});
   out.push({id:`eyelid-${s}`,parent:'head',pivot:[x,y+.005,-.201],recipe:[round([.083,.049,.010],[0,0,0],skin,'skin',.015),round([.077,.006,.012],[0,-.004,-.006],P.ink,'hair',.002)]});
-  out.push({id:`brow-${s}`,parent:'head',pivot:[x,y+.060,-.165],recipe:[round([.069,.010,.012],[0,0,0],kind==='visitor-a'?'#423D36':P.hair,'hair',.004)]});
+  out.push({id:`brow-${s}`,parent:'head',pivot:[x,y+.047,-.165],recipe:[round([.061,.006,.010],[0,0,0],kind==='visitor-a'?'#423D36':P.hair,'hair',.004)]});
  }
  return out;
 }
 function head(kind:NativeCharacterKind):NativePart[]{
  const misaki=kind==='misaki',a=kind==='visitor-a',skin=a?P.skinB:P.skin,w=a?.174:kind==='visitor-b'?.204:.193;
- const face:NativeSurface[]=[mesh([{y:-.025,x:.067,z:.075,cz:-.004},{y:.025,x:w*.70,z:.122,cz:-.012},{y:.090,x:w*.94,z:.164},{y:.170,x:w,z:.177},{y:.250,x:w*.94,z:.167},{y:.315,x:w*.72,z:.126},{y:.342,x:.045,z:.042}],skin,'skin'),p('sphere',[.029,.039,.029],[0,.114,-.173],skin,'skin'),...[-1,1].flatMap(side=>[p('sphere',[.045,.077,.031],[side*w,.139,.005],skin,'skin'),p('sphere',[.048,.015,.006],[side*.122,.093,-.150],P.blush,'skin')])];
+ const face:NativeSurface[]=[mesh([{y:-.025,x:.067,z:.075,cz:-.004},{y:.025,x:w*.70,z:.122,cz:-.012},{y:.090,x:w*.94,z:.164},{y:.170,x:w,z:.177},{y:.250,x:w*.94,z:.167},{y:.315,x:w*.72,z:.126},{y:.342,x:.045,z:.042}],skin,'skin'),p('sphere',[.018,.025,.016],[0,.114,-.173],skin,'skin'),...[-1,1].flatMap(side=>[p('sphere',[.045,.077,.031],[side*w,.139,.005],skin,'skin'),p('sphere',[.048,.015,.006],[side*.122,.093,-.150],P.blush,'skin')])];
  // Curved upper head silhouette; front hairline is a shaped canopy plus locks.
  const hair=a?'#3F3B35':misaki?P.hair:'#55473F';
- face.push(mesh([{y:.207,x:w*1.03,z:.177,cz:.029},{y:.295,x:w*1.04,z:.176,cz:.019},{y:.361,x:w*.78,z:.133,cz:.012},{y:.384,x:.031,z:.028}],hair,'hair'));
+ face.push(a?mesh([{y:.207,x:w*1.03,z:.177,cz:.029},{y:.295,x:w*1.04,z:.176,cz:.019},{y:.361,x:w*.78,z:.133,cz:.012},{y:.384,x:.031,z:.028}],hair,'hair'):bob(w,hair));
  if(misaki){
   face.push(lock([{y:.310,x:.055,z:.037,cx:-.115,cz:-.132},{y:.240,x:.072,z:.039,cx:-.121,cz:-.145},{y:.153,x:.048,z:.031,cx:-.165,cz:-.093},{y:.077,x:.016,z:.014,cx:-.182,cz:-.039}],hair),lock([{y:.348,x:.069,z:.037,cx:.054,cz:-.127},{y:.292,x:.084,z:.039,cx:.080,cz:-.162},{y:.218,x:.043,z:.029,cx:.154,cz:-.143},{y:.136,x:.010,z:.012,cx:.188,cz:-.095}],hair),lock([{y:.315,x:.047,z:.031,cx:-.020,cz:-.149},{y:.270,x:.038,z:.029,cx:-.039,cz:-.174},{y:.227,x:.005,z:.007,cx:-.060,cz:-.183}],hair));
   face.push(lock([{y:.301,x:.011,z:.005,cx:.078,cz:-.198},{y:.266,x:.016,z:.006,cx:.110,cz:-.198},{y:.232,x:.004,z:.003,cx:.141,cz:-.176}],P.hairLight));
-  face.push(p('sphere',[.098,.034,.020],[.201,.234,-.095],P.ivory,'fabric',{turn:[0,-.30,-.46]}));
+  face.push(p('sphere',[.069,.024,.013],[.195,.250,-.110],P.ivory,'fabric',{turn:[0,-.30,-.55]}),p('sphere',[.048,.022,.012],[.209,.272,-.105],P.ivory,'fabric',{turn:[0,-.30,.75]}));
  }else if(a){
   for(let i=0;i<7;i++){const cx=(i-3)*.047;face.push(lock([{y:.344,x:.039,z:.039,cx,cz:-.105},{y:.291+(i%2)*.017,x:.046,z:.034,cx:cx-.008,cz:-.157},{y:.250+(i%2)*.016,x:.018,z:.018,cx:cx+.012,cz:-.165}],i%3===0?'#51483D':hair));}
  }else{
@@ -82,7 +104,8 @@ function body(kind:NativeCharacterKind):NativeSurface[]{
  }
  if(misaki){
   torso.push(mesh([{y:.390,x:.236,z:.175},{y:.427,x:.242,z:.174},{y:.560,x:.211,z:.148},{y:.720,x:.152,z:.109}],P.plum,'fabric',[0,0,0],.085));
-  torso.push(mesh([{y:.447,x:.154,z:.014,cz:-.170},{y:.470,x:.173,z:.019,cz:-.170},{y:.635,x:.162,z:.022,cz:-.146},{y:.761,x:.135,z:.019,cz:-.127},{y:.832,x:.127,z:.013,cz:-.127}],P.ivory,'fabric',[0,0,0],.036));
+  torso.push(mesh([{y:.447,x:.154,z:.014,cz:-.170},{y:.470,x:.173,z:.019,cz:-.170},{y:.635,x:.162,z:.022,cz:-.146},{y:.761,x:.135,z:.019,cz:-.127},{y:.832,x:.127,z:.013,cz:-.146},{y:.985,x:.105,z:.018,cz:-.148},{y:1.048,x:.090,z:.012,cz:-.140}],P.ivory,'fabric',[0,0,0],.036));
+  for(const y of [1.070,1.012,.954])torso.push(p('sphere',[.012,.012,.009],[0,y,-.135],'#B3A181','fabric'));
   // Waist band and long thin straps, off-centre shaped pocket and hems.
   torso.push(round([.315,.034,.260],[0,.783,-.006],P.cream,'fabric',.007),round([.307,.018,.026],[0,.456,-.183],P.cream,'fabric',.004),round([.110,.099,.021],[.065,.648,-.181],'#E0D3BA','fabric',.012),round([.109,.015,.023],[.065,.697,-.184],P.cream,'fabric',.004),p('sphere',[.030,.049,.009],[.067,.650,-.195],P.sage,'fabric',{turn:[0,0,-.4]}));
   for(const side of [-1,1])torso.push(round([.024,.335,.020],[side*.118,.996,-.139],P.ivory,'fabric',.005));
@@ -101,8 +124,8 @@ export function nativeCharacterParts(kind:NativeCharacterKind):NativePart[]{
  const misaki=kind==='misaki',a=kind==='visitor-a',coat=misaki?P.sage:a?P.terracotta:P.blue,skin=a?P.skinB:P.skin;
  const parts:NativePart[]=[{id:'body',pivot:[0,0,0],recipe:body(kind)},...head(kind)];
  for(const side of [-1,1]){const s=side<0?'left':'right',x=side*.222;
-  parts.push({id:`arm-${s}`,parent:'body',pivot:[x,1.100,0],recipe:[mesh([{y:-.220,x:.049,z:.049,cx:side*.007},{y:-.165,x:.060,z:.056,cx:side*.008},{y:-.031,x:.069,z:.061},{y:.026,x:.052,z:.052}],coat,'fabric'),round([.112,.045,.111],[side*.006,-.199,0],misaki?'#A8BAA5':a?'#CD9D7D':'#A0B3B8','fabric',.009)]});
-  parts.push({id:`forearm-${s}`,parent:`arm-${s}`,pivot:[side*.007,-.220,0],recipe:[mesh([{y:-.168,x:.036,z:.036},{y:-.110,x:.045,z:.043},{y:-.015,x:.047,z:.045}],misaki?skin:coat,misaki?'skin':'fabric')]});
+  parts.push({id:`arm-${s}`,parent:'body',pivot:[x,1.100,0],recipe:[mesh([{y:-.220,x:.049,z:.049,cx:side*.007},{y:-.165,x:.060,z:.056,cx:side*.008},{y:-.031,x:.069,z:.061},{y:.026,x:.052,z:.052},{y:.060,x:.014,z:.016}],coat,'fabric'),round([.112,.045,.111],[side*.006,-.199,0],misaki?'#A8BAA5':a?'#CD9D7D':'#A0B3B8','fabric',.009)]});
+  parts.push({id:`forearm-${s}`,parent:`arm-${s}`,pivot:[side*.007,-.220,0],recipe:[mesh([{y:-.168,x:.036,z:.036},{y:-.110,x:.045,z:.043},{y:.012,x:.047,z:.045}],misaki?skin:coat,misaki?'skin':'fabric')]});
   parts.push({id:`hand-${s}`,parent:`forearm-${s}`,pivot:[0,-.168,0],recipe:[round([.073,.089,.048],[0,-.028,-.004],skin,'skin',.021),p('sphere',[.030,.051,.031],[side*-.036,-.021,-.010],skin,'skin')]});
   parts.push({id:`socket-${s}`,parent:`hand-${s}`,pivot:[0,-.021,-.043],recipe:[]});
   parts.push({id:`leg-${s}`,parent:'body',pivot:[side*.100,.650,0],recipe:[mesh([{y:-.251,x:.055,z:.057},{y:-.112,x:.062,z:.063},{y:0,x:.069,z:.069}],a?P.trousers:skin,a?'fabric':'skin')]});
@@ -111,4 +134,4 @@ export function nativeCharacterParts(kind:NativeCharacterKind):NativePart[]{
  }
  return parts;
 }
-export const nativeRigContract={version:'native-rigid-rig.v3.1-r2',units:'metres',axes:'right-handed; +Y up; face -Z; positive local X pitch moves hanging hands/feet toward -Z',pivotSpace:'local to parent; surfaces local to node; body is actor-local root',soleRestY:.015,rootMotion:'Only route adapter translates actor root; local gesture clips have no root motion',binding:'Misaki remains staff.graybox; visitors have no economic identity or capability',expressions:{eyelids:'eyelid-left/right are closed-lid geometry; disabled at rest; animate scale.y or enable only for blink, iris geometry stays on same face; GLB master has scale Y=.001 at rest because glTF has no visibility property; runtime adapter restores scale=1 then disables until blink',mouth:'independent curved mouth; scale/tilt for smile/focus; no head replacement',brows:'independent stable brow pivots'},attachments:['socket-left','socket-right'],motion:'rigid articulated parts; external flat-floor world-foot anchoring and two-link leg IK; no skeleton, skins or embedded glTF clips',restArms:'shoulder→forearm→hand hangs downward; elbow and wrist local rotations blend on authored rest',restLegs:'hips at y=.65; knees -.25; ankles -.30; actual rest sole .015; NativeFootPlant solves .25/.30m links from immutable world stance anchors and bounded swing targets; apply bodyDrop and local hip/knee/foot quaternions',material:'Existing IEC sRGB→linear PBR semantic material intent; opaque soft fallback; custom lofts use finite smooth normals; no external image/UV/texture dependency'} as const;
+export const nativeRigContract={version:'native-rigid-rig.v4-v3-compatible',units:'metres',axes:'right-handed; +Y up; face -Z; positive local X pitch moves hanging hands/feet toward -Z',pivotSpace:'local to parent; surfaces local to node; body is actor-local root',soleRestY:.015,rootMotion:'Only route adapter translates actor root; local gesture clips have no root motion',binding:'Misaki remains staff.graybox; visitors have no economic identity or capability',expressions:{eyelids:'eyelid-left/right are closed-lid geometry; disabled at rest; animate scale.y or enable only for blink, iris geometry stays on same face; GLB master has scale Y=.001 at rest because glTF has no visibility property; runtime adapter restores scale=1 then disables until blink',mouth:'independent curved mouth; scale/tilt for smile/focus; no head replacement',brows:'independent stable brow pivots'},attachments:['socket-left','socket-right'],motion:'rigid articulated parts; external flat-floor world-foot anchoring and two-link leg IK; no skeleton, skins or embedded glTF clips',restArms:'shoulder→forearm→hand hangs downward; elbow and wrist local rotations blend on authored rest',restLegs:'hips at y=.65; knees -.25; ankles -.30; actual rest sole .015; NativeFootPlant solves .25/.30m links from immutable world stance anchors and bounded swing targets; apply bodyDrop and local hip/knee/foot quaternions',material:'Existing IEC sRGB→linear PBR semantic material intent; opaque soft fallback; custom lofts use finite smooth normals; no external image/UV/texture dependency'} as const;

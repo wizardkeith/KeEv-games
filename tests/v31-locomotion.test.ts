@@ -9,7 +9,7 @@ import {nativeCharacterParts,nativeSurfaceGeometry,type NativeSurface,type Nativ
 import {NativeFootPlant,type FootPlantPose,type FootRoot} from '../src/presentation/native-feet';
 import {NativeCustomerRoutes} from '../src/presentation/native-routes';
 const measurements:Record<string,unknown>={basis:'actual runtime authoring positions / indexed triangles transformed by Babylon matrices; output GLB parity covered by native-characters test',visualClaim:false,units:'metres; seconds; radians',stanceToleranceMetres:.002,skirtSeamToleranceMetres:.001};
-function record(key:string,value:unknown){measurements[key]=value;fs.mkdirSync('evidence/native-v3_1',{recursive:true});fs.writeFileSync('evidence/native-v3_1/locomotion-after.json',JSON.stringify(measurements,null,2)+'\n');}
+function record(key:string,value:unknown){measurements[key]=value;fs.mkdirSync('evidence/native-v4',{recursive:true});fs.writeFileSync('evidence/native-v4/locomotion-after.json',JSON.stringify(measurements,null,2)+'\n');}
 function rig(kind:NativeCharacterKind='visitor-b'){
  const engine=new NullEngine(),scene=new Scene(engine);scene.useRightHandedSystem=true;const root=new TransformNode('root',scene),parts=nativeCharacterParts(kind),nodes=new Map<string,TransformNode>();root.position.y=.065;
  for(const p of parts){const n=new TransformNode(p.id,scene);n.position.set(...p.pivot);nodes.set(p.id,n);}for(const p of parts)nodes.get(p.id)!.parent=p.parent?nodes.get(p.parent)!:root;

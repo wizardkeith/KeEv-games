@@ -14,7 +14,7 @@ const lerp=(a:number,b:number,t:number)=>a+(b-a)*t;
 const expression=(name:StaffExpression)=>({attentive:Number(name==='attentive'),focused:Number(name==='focused'),smile:Number(name==='smile')});
 const decorate=(pose:StaffPose):StaffPlaybackPose=>({...pose,expressionWeights:expression(pose.expression),propOpacity:Number(pose.prop.visible),transitioning:false});
 const neutral=()=>decorate(sampleStaff(0,undefined,undefined,null));
-const blendDuration=(clip:string)=>Math.max(.15,Math.min(.25,Object.values(STAFF_CLIPS).find(c=>c.id===clip)?.blend??.2));
+const blendDuration=(clip:string)=>Math.max(.32,Math.min(.42,(Object.values(STAFF_CLIPS).find(c=>c.id===clip)?.blend??.2)+.12));
 
 /** During an interruption the lower arms tuck before shoulder retraction and
  * unfold only after the shoulder reaches its new safe position. This follows

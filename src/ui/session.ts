@@ -1,9 +1,9 @@
-import type {Mode,Snapshot} from '../core/contracts';
-export interface Drafts {quantity:string;prices:Record<string,string>;shop:string;company:string;logo:string}
-export interface UI {panel:string;slot:number;zen:boolean;quality:string;sound:boolean;minimalFX:boolean;feedbackKind:string;revealFx:boolean;reportDay:string;rename:boolean;draft:Drafts;formError:string;formField:string;notice:string;blocking:string;worldFailed:boolean}
+import {catalog,type Mode,type Snapshot} from '../core/contracts';
+export interface Drafts {quantity:string;quantities?:Record<string,string>;prices:Record<string,string>;shop:string;company:string;logo:string}
+export interface UI {panel:string;slot:number;zen:boolean;quality:string;sound:boolean;minimalFX:boolean;feedbackKind:string;revealFx:boolean;reportDay:string;rename:boolean;draft:Drafts;formError:string;formField:string;notice:string;blocking:string;worldFailed:boolean;stock?:import('./stock-state').StockWorkspace}
 export function draftFor(mode:Mode,s:Snapshot,prefix="shop.w1.draft."):Drafts{
  const base={quantity:'5',prices:{},shop:s.shopName,company:s.companyName,logo:s.logo};
- try{const d=JSON.parse(sessionStorage.getItem(prefix+mode)||'null');if(d&&typeof d.quantity==='string'&&typeof d.shop==='string'&&typeof d.company==='string'&&typeof d.logo==='string'&&d.prices&&Object.values(d.prices).every(v=>typeof v==='string'))return d;}catch{}return base;
+ try{const d=JSON.parse(sessionStorage.getItem(prefix+mode)||'null');if(d&&typeof d.quantity==='string'&&typeof d.shop==='string'&&typeof d.company==='string'&&typeof d.logo==='string'&&d.prices&&Object.values(d.prices).every(v=>typeof v==='string')){const quantities:Record<string,string>={};for(const o of catalog.offerings)quantities[o.id]=typeof d.quantities?.[o.id]==='string'?d.quantities[o.id]:d.quantity;return {...d,quantities};}}catch{}return {...base,quantities:{}};
 }
 export function storeDraft(mode:Mode,draft:Drafts,prefix="shop.w1.draft."){try{sessionStorage.setItem(prefix+mode,JSON.stringify(draft));}catch{/* Unsaved draft persistence can be unavailable; simulation is untouched. */}}
 export function commandId(){

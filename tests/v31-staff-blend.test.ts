@@ -30,7 +30,7 @@ test('v3.1 reproduces old tidy/service jump and consumes actual cross-clip blend
  assert.equal(sampleStaff(6.8).rotations['arm-right'][0],1.12);assert.equal(sampleStaff(23).rotations['arm-right'][0],.76);
  const player=new StaffMotionPlayer(),before=advance(player,6.8);assert.equal(before.clip,'native.staff.tidy.v3');assert.equal(before.rotations['arm-right'][0],1.12);
  const first=player.tick(0,{cue:{kind:'sale'},progress:0},undefined,true);assert.equal(jointDelta(before,first),0,'interruption preserves exact prior pose before elapsed transition');assert.equal(first.transitioning,true);
- let last=first,max=0;for(let n=1;n<=18;n++){const pose=player.tick(1/60,{cue:{kind:'sale'},progress:n/60/2.8},undefined,true);max=Math.max(max,jointDelta(last,pose));assert.ok(Object.values(pose.expressionWeights).every(w=>w>=0&&w<=1));assert.ok(Math.abs(Object.values(pose.expressionWeights).reduce((a,b)=>a+b,0)-1)<1e-10);last=pose;}
+ let last=first,max=0;for(let n=1;n<=30;n++){const pose=player.tick(1/60,{cue:{kind:'sale'},progress:n/60/2.8},undefined,true);max=Math.max(max,jointDelta(last,pose));assert.ok(Object.values(pose.expressionWeights).every(w=>w>=0&&w<=1));assert.ok(Math.abs(Object.values(pose.expressionWeights).reduce((a,b)=>a+b,0)-1)<1e-10);last=pose;}
  assert.ok(max<.42,`bounded frame rotation ${max}`);assert.ok(max<1.12/2,'old64degree instantaneous jump removed');assert.equal(last.transitioning,false);
 });
 
@@ -49,7 +49,7 @@ test('v3.1 interrupted tidy/note, service-to-idle and rapid command transitions 
 test('v3.1 outgoing prop fades before arm retraction; hidden/skip/reduced cancel owners and no midway task returns',()=>{
  const player=new StaffMotionPlayer();let before=advance(player,6.8);assert.equal(before.prop.kind,'cloth');assert.equal(before.prop.visible,true);
  const frames=[];for(let n=0;n<=18;n++)frames.push(player.tick(n===0?0:1/60,{cue:{kind:'sale'},progress:n/60/2.8},undefined,true));
- assert.equal(frames[0].prop.kind,'cloth');assert.equal(frames[0].propOpacity,1);assert.ok(frames.some(p=>p.prop.visible&&p.propOpacity>0&&p.propOpacity<1));assert.ok(frames.slice(5,12).every(p=>!p.prop.visible),'outgoing prop is gone before shoulder retraction');
+ assert.equal(frames[0].prop.kind,'cloth');assert.equal(frames[0].propOpacity,1);assert.ok(frames.some(p=>p.prop.visible&&p.propOpacity>0&&p.propOpacity<1));assert.ok(frames.slice(7,16).every(p=>!p.prop.visible),'outgoing prop is gone before shoulder retraction');
  for(let n=0;n<20;n++)player.tick(1/60,{cue:{kind:'stock'},progress:.4},undefined,true);player.cancel();assert.equal(player.current.prop.visible,false);assert.equal(player.current.transitioning,false);
  for(let n=0;n<30;n++)assert.equal(player.tick(1/60,undefined,undefined,true).clip,'native.staff.idle.v3');
  player.tick(.01,{cue:{kind:'sale'},progress:.5},undefined,true);player.tick(.05,undefined,undefined,false);assert.equal(player.current.prop.visible,false);assert.equal(player.current.turn,0);

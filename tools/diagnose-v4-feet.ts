@@ -1,0 +1,3 @@
+import {NativeFootPlant} from '../src/presentation/native-feet';import {NativeCustomerRoutes} from '../src/presentation/native-routes';
+const r=new NativeCustomerRoutes(),f=new NativeFootPlant();let worst:any={distance:0};for(let n=0;n<4200;n++){const a=r.tick(1/60,{open:n<3000,visible:true,reduceMotion:false,capacity:1}).actors[0];if(!a.enabled){f.reset();continue;}const p=f.tick(1/60,a);for(const [side,s]of [['left',-.1],['right',.1]]as const){const v=p[side],hip=[a.x+Math.cos(a.yaw)*s,.065+.65+p.bodyDrop,a.z-Math.sin(a.yaw)*s],distance=Math.hypot(...v.ankleWorld.map((x,i)=>x-hip[i]));if(distance>worst.distance)worst={n,distance,side,hip,ankle:v.ankleWorld,root:a,drop:p.bodyDrop,stance:v.stance};}}
+console.log(JSON.stringify(worst,null,2));

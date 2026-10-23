@@ -1,5 +1,5 @@
 {
-  "version": "native-rigid-rig.v3.1-r2",
+  "version": "native-rigid-rig.v4-v3-compatible",
   "units": "metres",
   "axes": "right-handed; +Y up; face -Z; positive local X pitch moves hanging hands/feet toward -Z",
   "pivotSpace": "local to parent; surfaces local to node; body is actor-local root",

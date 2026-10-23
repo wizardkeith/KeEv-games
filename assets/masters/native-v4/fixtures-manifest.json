@@ -1,0 +1,99 @@
+{
+  "source": "tools/export-v4-fixtures.ts",
+  "rights": "Original authored procedural geometry and texture for this game",
+  "units": "metres",
+  "axes": "RH +Y up",
+  "uv": "nativeSurfaceGeometry metre-based box projection; sRGB base color; no baked lighting",
+  "assets": [
+    {
+      "id": "room",
+      "file": "assets/masters/native-v4/room.glb",
+      "bytes": 238284,
+      "sha256": "8b40fb56be7b02ddb9815c1e589643894352c66d4cec273373bc2341564fd49e"
+    },
+    {
+      "id": "counter",
+      "file": "assets/masters/native-v4/counter.glb",
+      "bytes": 158060,
+      "sha256": "0113a164aa4a84e62d930f0d8c1078b4bbc77eca79952657fb797d5ea90cb525"
+    },
+    {
+      "id": "display-1",
+      "file": "assets/masters/native-v4/display-1.glb",
+      "bytes": 172284,
+      "sha256": "ca46e5fe855989cde35f6ae184d2ebed95e84aad74e8815ba73d56200836ab13"
+    },
+    {
+      "id": "display-2",
+      "file": "assets/masters/native-v4/display-2.glb",
+      "bytes": 172312,
+      "sha256": "a6b9c94f324603d8c5d400f5906d81395864c4c867e5f37c13ecc658701d803d"
+    },
+    {
+      "id": "display-3",
+      "file": "assets/masters/native-v4/display-3.glb",
+      "bytes": 172284,
+      "sha256": "9d59fc7363756b8ee13b7ed083e479852f02f3d481e4fd3aec7c891b3bf09c77"
+    },
+    {
+      "id": "product-off.notebook",
+      "file": "assets/masters/native-v4/product-off.notebook.glb",
+      "bytes": 124664,
+      "sha256": "7bb61236dbfbf9b5b00fc2b04f24fe1f6b3206c2db3d94e3fc8db7362568fbff"
+    },
+    {
+      "id": "product-off.pencil",
+      "file": "assets/masters/native-v4/product-off.pencil.glb",
+      "bytes": 107316,
+      "sha256": "713d0a6bdcc65fe7249c6d072d1b74343c3eeb88d1272ffb959f6ebe3a4ebea3"
+    },
+    {
+      "id": "product-off.mug",
+      "file": "assets/masters/native-v4/product-off.mug.glb",
+      "bytes": 127816,
+      "sha256": "a93b2c8a9308415c6f23f91515834b62f650e14179665117185675430c685347"
+    },
+    {
+      "id": "product-off.tea",
+      "file": "assets/masters/native-v4/product-off.tea.glb",
+      "bytes": 125708,
+      "sha256": "1af2067a1821597fe9412355bfac0054394e163e65735c92247386402d3d30f4"
+    },
+    {
+      "id": "product-off.cookie",
+      "file": "assets/masters/native-v4/product-off.cookie.glb",
+      "bytes": 118256,
+      "sha256": "3ba61654d14b105c76249a828d5e8f1ab2d8274d3cac49aacff85d1a47204071"
+    },
+    {
+      "id": "product-off.tote",
+      "file": "assets/masters/native-v4/product-off.tote.glb",
+      "bytes": 120304,
+      "sha256": "d4ae2ad20a74ffbcae38f1833abba989db289093a03635819b342cf330729009"
+    },
+    {
+      "id": "product-off.card",
+      "file": "assets/masters/native-v4/product-off.card.glb",
+      "bytes": 106844,
+      "sha256": "3b665cdf9fbde193cb4e399008c0c8eb3509b1fc6fb97fd63c104e34294ac0fa"
+    },
+    {
+      "id": "product-off.towel",
+      "file": "assets/masters/native-v4/product-off.towel.glb",
+      "bytes": 102924,
+      "sha256": "5696674697dc5702eac6f8b957f79054e297a8fd7bc645539759b5daf63f31f6"
+    },
+    {
+      "id": "product-off.tray",
+      "file": "assets/masters/native-v4/product-off.tray.glb",
+      "bytes": 115264,
+      "sha256": "6a5810bdc2da4b652ca4c4a8c3c4d20e7031293bbbe1d53a082d20d3fac356fb"
+    },
+    {
+      "id": "product-off.vase",
+      "file": "assets/masters/native-v4/product-off.vase.glb",
+      "bytes": 109000,
+      "sha256": "e4cb27934dfc28c5fa6cf2c4a0574108767d88a5bedc19b3eee839e7343119fc"
+    }
+  ]
+}

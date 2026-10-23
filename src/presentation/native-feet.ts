@@ -7,7 +7,7 @@ export type FootQuaternion=readonly [number,number,number,number];
 export interface FootRoot {readonly x:number;readonly z:number;readonly yaw:number;readonly distance:number;readonly speed:number;}
 export interface PlantedLeg {readonly hip:FootQuaternion;readonly knee:FootQuaternion;readonly foot:FootQuaternion;readonly stance:boolean;readonly contactId:number;readonly ankleWorld:FootVector;readonly footYaw:number;}
 export interface FootPlantPose {readonly bodyDrop:number;readonly left:PlantedLeg;readonly right:PlantedLeg;readonly armSwing:number;}
-export const FOOT_PLANT_CONTRACT=Object.freeze({id:'native.feet.planted.v3.1',upperLength:.25,lowerLength:.30,halfStepMetres:.18,swingLiftMetres:.045,turnThresholdRadians:.16,settleSeconds:.28,stanceToleranceMetres:.002,soleWorldY:.08,ankleWorldY:.165,hipLocalY:.65,rootY:.065,maxDeltaSeconds:.05,method:'World ankle anchors and world foot yaw; two-link 3D rigid IK; forward knee pole; bounded one-foot swing. Hidden/reduced freezes state.'});
+export const FOOT_PLANT_CONTRACT=Object.freeze({id:'native.feet.planted.v4',upperLength:.25,lowerLength:.30,halfStepMetres:.20,cornerHalfStepMetres:.09,forwardPlantMetres:.27,cornerForwardPlantMetres:.13,anticipationSeconds:.10,swingLiftMetres:.045,turnThresholdRadians:.16,settleSeconds:.28,stanceToleranceMetres:.002,soleWorldY:.08,ankleWorldY:.165,hipLocalY:.65,rootY:.065,maxDeltaSeconds:.05,method:'World ankle anchors and world foot yaw; two-link 3D rigid IK; forward knee pole; bounded one-foot swing. Hidden/reduced freezes state.'});
 type Vec=[number,number,number];type Quat=[number,number,number,number];
 const add=(a:FootVector,b:FootVector):Vec=>[a[0]+b[0],a[1]+b[1],a[2]+b[2]];
 const sub=(a:FootVector,b:FootVector):Vec=>[a[0]-b[0],a[1]-b[1],a[2]-b[2]];
@@ -27,7 +27,7 @@ const angle=(a:number,b:number)=>Math.atan2(Math.sin(b-a),Math.cos(b-a));
 const smooth=(n:number)=>{const p=Math.max(0,Math.min(1,n));return p*p*(3-2*p);};
 const mix=(a:FootVector,b:FootVector,t:number):Vec=>add(a,mul(sub(b,a),t));
 interface Contact {position:Vec;yaw:number;id:number;}
-interface Swing {side:0|1;from:Vec;target:Vec;fromYaw:number;targetYaw:number;progress:number;mode:'walk'|'settle'|'turn';}
+interface Swing {side:0|1;from:Vec;target:Vec;fromYaw:number;targetYaw:number;progress:number;mode:'walk'|'settle'|'turn';distance:number;}
 function rootRest(root:FootRoot,side:0|1,forward=0):Vec {return add([root.x,.165,root.z],yawVector([side===0?-.1:.1,0,-forward],root.yaw));}
 /** Reusable per pooled visitor. reset() only for fresh actor/true stream reload. */
 export class NativeFootPlant {
@@ -39,9 +39,11 @@ export class NativeFootPlant {
  private current:FootPlantPose|undefined;
  reset(){this.root=undefined;this.contacts=undefined;this.swing=undefined;this.current=undefined;this.next=0;}
  private seed(root:FootRoot){this.contacts=[0,1].map(side=>({position:rootRest(root,side as 0|1),yaw:root.yaw,id:++this.counter})) as [Contact,Contact];this.root={...root};this.swing=undefined;}
- private start(root:FootRoot,side:0|1,mode:Swing['mode']){
-  const c=this.contacts![side],forward=mode==='walk'?.27:0;
-  this.swing={side,from:[...c.position],target:rootRest(root,side,forward),fromYaw:c.yaw,targetYaw:root.yaw,progress:0,mode};this.next=side===0?1:0;
+ private start(root:FootRoot,side:0|1,mode:Swing['mode'],dt:number){
+  const rate=this.root?Math.abs(angle(this.root.yaw,root.yaw))/Math.max(.001,dt):0,corner=rate>.35;
+  const c=this.contacts![side],forward=mode==='walk'?(corner?.13:.27):0;
+  const predicted={...root,yaw:root.yaw+(this.root?Math.max(-.30,Math.min(.30,angle(this.root.yaw,root.yaw)/Math.max(.001,dt)*.10)):0)};
+  this.swing={side,from:[...c.position],target:rootRest(predicted,side,forward),fromYaw:c.yaw,targetYaw:predicted.yaw,progress:0,mode,distance:corner?.09:.20};this.next=side===0?1:0;
  }
  tick(deltaSeconds:number,root:FootRoot,motion=true):FootPlantPose {
   if(!Number.isFinite(deltaSeconds)||deltaSeconds<0||[root.x,root.z,root.yaw,root.speed,root.distance].some(v=>!Number.isFinite(v))||root.speed<0||root.distance<0)throw new RangeError('foot input');
@@ -49,13 +51,16 @@ export class NativeFootPlant {
   if(!this.root||!this.contacts||Math.hypot(root.x-this.root.x,root.z-this.root.z)>.8)this.seed(root);
   if(!motion&&this.current)return this.current;
   const old=this.root!,moved=Math.hypot(root.x-old.x,root.z-old.z),walking=moved>1e-7;
-  if(this.swing?.mode==='walk'&&!walking&&root.speed<.015&&dt>0){const s=this.swing,c=this.contacts![s.side];this.swing={side:s.side,from:[...c.position],target:rootRest(root,s.side),fromYaw:c.yaw,targetYaw:root.yaw,progress:0,mode:'settle'};}
+  if(this.swing?.mode==='walk'&&!walking&&root.speed<.015&&dt>0){const s=this.swing,c=this.contacts![s.side];this.swing={side:s.side,from:[...c.position],target:rootRest(root,s.side),fromYaw:c.yaw,targetYaw:root.yaw,progress:0,mode:'settle',distance:.20};}
+  // A route can resume while a turn/settle swing is still in flight. Retarget
+  // that free foot before advancing, retaining the other immutable stance.
+  if(walking&&this.swing&&this.swing.mode!=='walk'){const side=this.swing.side;this.start(root,side,'walk',dt);this.swing!.distance=.10;}
   if(!this.swing&&motion){
-   if(walking)this.start(root,this.next,'walk');
-   else if(dt>0){const needs=(side:0|1)=>{const c=this.contacts![side];return planarDistance(c.position,rootRest(root,side))>.055||Math.abs(angle(c.yaw,root.yaw))>.16;};const side=needs(this.next)?this.next:needs(this.next===0?1:0)?(this.next===0?1:0):undefined;if(side!==undefined)this.start(root,side,Math.abs(angle(this.contacts![side].yaw,root.yaw))>.16?'turn':'settle');}
+   if(walking)this.start(root,this.next,'walk',dt);
+   else if(dt>0){const needs=(side:0|1)=>{const c=this.contacts![side];return planarDistance(c.position,rootRest(root,side))>.055||Math.abs(angle(c.yaw,root.yaw))>.16;};const side=needs(this.next)?this.next:needs(this.next===0?1:0)?(this.next===0?1:0):undefined;if(side!==undefined)this.start(root,side,Math.abs(angle(this.contacts![side].yaw,root.yaw))>.16?'turn':'settle',dt);}
   }
   if(this.swing&&motion){
-   const s=this.swing,c=this.contacts![s.side];s.progress=Math.min(1,s.progress+(s.mode==='walk'?moved/.18:dt/.28));
+   const s=this.swing,c=this.contacts![s.side];s.progress=Math.min(1,s.progress+(s.mode==='walk'?moved/s.distance:dt/.28));
    const p=s.progress,e=smooth(p);c.position=mix(s.from,s.target,e);c.position[1]+=.045*Math.sin(Math.PI*p)**2;c.yaw=s.fromYaw+angle(s.fromYaw,s.targetYaw)*e;
    if(p>=1){c.position=[...s.target];c.yaw=s.targetYaw;c.id=++this.counter;this.swing=undefined;}
   }

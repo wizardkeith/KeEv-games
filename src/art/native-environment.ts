@@ -25,7 +25,7 @@ export function nativeRoomRecipe():NativeEnvironmentPart[]{
  const old=roomRecipe().filter((_,i)=>!removed.has(i)).map(p=>{
   // Cool, desaturated floor boards separate furniture from the floor without
   // changing material encoding or brightening every surface in the scene.
-  if(p.role==='wood'&&p.size[2]===6.45&&p.size[1]===.018)return {...p,color:p.color===palette.floorLight?'#C9B8A4':'#C0AE98',roughness:.83};
+  if(p.role==='wood'&&p.size[2]===6.45&&p.size[1]===.018)return {...p,size:[.545,p.size[1],p.size[2]] as V3,color:p.color===palette.floorLight?'#C6A884':'#BFA07E',roughness:.83};
   // Retained wall shelves stay deeper and warmer than the new floor.
   if(p.role==='wood'&&p.size[0]===5.2)return {...p,color:'#967255',roughness:.76};
   return p;
@@ -137,9 +137,13 @@ export function nativeCounterRecipe():NativeEnvironmentPart[]{return [...counter
  part('box',[1.52,.012,.009],[0,.577,-.409],'#C2AF94'),
  ];}
 
-export function nativeDisplayRecipe():NativeEnvironmentPart[]{return [...displayRecipe().map((p,i)=>i===0?{...p,color:'#DDC29D',roughness:.64}:p.role==='wood'&&p.color===palette.dark?{...p,color:'#806B58'}:p),
+export function nativeDisplayRecipe(variant=0):NativeEnvironmentPart[]{return [...displayRecipe().map((p,i)=>i===0?{...p,color:'#D0AF85',roughness:.64}:p.role==='wood'&&p.color===palette.dark?{...p,color:'#806B58'}:p),
  round([1.49,.020,.86],[0,.879,0],'#B89268',.008),
  ...[-.59,.59].flatMap(x=>[-.28,.28].map(z=>round([.095,.028,.095],[x,.014,z],'#7F6652',.008))),
  round([.27,.042,.024],[-.49,.905,-.477],'#F0E5D0',.006,'paper'),
  part('box',[.11,.005,.027],[-.49,.907,-.492],'#A89A7E','ink'),
+ // Three quiet textile runners have the same furniture footprint. They remain
+ // identifiable as fixtures when no real products are displayed.
+ round([variant===1?.65:1.30,.006,variant===1?.83:.54],[variant===1?-.16:0,.995,0],variant===2?'#D7DAC8':'#E0D1B5',.003,'fabric'),
+ ...[-1,1].map(side=>part('box',[variant===1?.006:1.27,.001,variant===1?.80:.006],[variant===1?-.16+side*.28:0,.999,variant===1?0:side*.235],'#C1B698','fabric')),
  ];}

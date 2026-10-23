@@ -1,3 +1,4 @@
+import {capturePurchase,newStockWorkspace} from '../src/ui/stock-state';
 import {nativeContext} from './native-context';
 import {day1Text} from '../src/narrative/day1-copy';
 import {Day1GestureClock} from '../src/presentation/day1';
@@ -28,7 +29,7 @@ function saleFixture(){let s=core.create('sandbox',epoch);s=apply(s,'buy',{itemI
 function deferred<T>(){let resolve!:(x:T)=>void;const promise=new Promise<T>(r=>resolve=r);return {promise,resolve};}
 function boundary(state= saleFixture()){
  const timers=new Map<number,{fn:()=>void;ms:number}>(),clock=new FeedbackClock(),notices:string[]=[],errors:unknown[]=[];let timerId=0,plays=0,fxCalls=0;
- const c:any={...nativeContext(),state,clock,gestureClock:new Day1GestureClock(),syncStory:async()=>{},day1Text,locale:'en',vfx,motionAllowed,feedback:new FeedbackProjector(),catalog,presentationEpoch:0,busy:false,mode:'sandbox',draftPrefix:'qa.',disposed:false,effectiveQuality:'high',quality:'auto',frames:[],last:undefined,minimalFX:false,reduced:{matches:false},document:{hidden:false},revealTimer:undefined,u:{slot:1,sound:true,minimalFX:false,revealFx:false,feedbackKind:'',draft:{},formError:'',formField:'',blocking:''},draw:()=>{},storeDraft:()=>{},fail:(e:unknown)=>errors.push(e),notice:(s:string)=>notices.push(s),t:(key:string)=>key,commandId:()=>`integration-${++id}`,clearTimeout:(n:number)=>timers.delete(n),setTimeout:(fn:()=>void,ms:number)=>{timers.set(++timerId,{fn,ms});return timerId;},saleSound:{currentTime:0,play:()=>{plays++;return Promise.resolve();}},onFeedbackEnd:()=>c.finishReveal(),setQuality:(q:string)=>c.effectiveQuality=q};
+ const c:any={...nativeContext(),capturePurchase,newStockWorkspace,state,clock,gestureClock:new Day1GestureClock(),syncStory:async()=>{},day1Text,locale:'en',vfx,motionAllowed,feedback:new FeedbackProjector(),catalog,presentationEpoch:0,busy:false,mode:'sandbox',draftPrefix:'qa.',disposed:false,effectiveQuality:'high',quality:'auto',frames:[],last:undefined,minimalFX:false,reduced:{matches:false},document:{hidden:false},revealTimer:undefined,u:{slot:1,sound:true,minimalFX:false,revealFx:false,feedbackKind:'',draft:{},formError:'',formField:'',blocking:''},draw:()=>{},storeDraft:()=>{},fail:(e:unknown)=>errors.push(e),notice:(s:string)=>notices.push(s),t:(key:string)=>key,commandId:()=>`integration-${++id}`,clearTimeout:(n:number)=>timers.delete(n),setTimeout:(fn:()=>void,ms:number)=>{timers.set(++timerId,{fn,ms});return timerId;},saleSound:{currentTime:0,play:()=>{plays++;return Promise.resolve();}},onFeedbackEnd:()=>c.finishReveal(),setQuality:(q:string)=>c.effectiveQuality=q};
  vm.createContext(c);vm.runInContext(script,c);const realFeedback=c.world.feedback;c.world.feedback=(e:unknown)=>{fxCalls++;return realFeedback(e);};
  const click=(action:string,data:Record<string,string>={})=>{c.clickHandler({target:{closest:()=>({disabled:false,dataset:{action,...data}})}});return c.lastRun as Promise<void>;};
  const reveal=()=>{const before=c.state;c.state=apply(before,'reveal');c.committed(before,c.state,'reveal',1,c.presentationEpoch);return c.state as Snapshot;};
@@ -97,10 +98,10 @@ test('native service survives repeated Minimal setter, quality change and decora
  b.c.world.skip();assert.equal(b.c.nativePresentation.current,undefined);assert.equal(b.c.nativePresentation.metrics().batches,0);
 });
 test('actual main act captures accepted buy quantity when the same successful IDB command first settles sales',async()=>{
- const db=await database('native-main-buy-'+(++id)),saves=new Saves(db,core);let before=await saves.loadOrCreate('sandbox',epoch);
+ const db=await database('native-main-buy-'+(++id)),saves=new Saves(db,core);let before=await saves.loadOrCreate('normal',epoch);
  for(const [kind,data] of [['buy',{itemId:'off.notebook',quantity:5}],['display',{itemId:'off.notebook',slot:1}],['open',{}]] as const)before=await saves.command(before,{id:'main-fixture-'+(++id),kind,...data});
- const b=boundary(before);b.c.saves=saves;b.c.purchaseCost=purchaseCost;b.c.u.draft.quantity='3';b.c.mode='normal';b.c.Date={now:()=>epoch+3600000};
- await b.click('buy',{id:'off.notebook'});assert.deepEqual(b.errors,[]);const stored=(await saves.read('sandbox'))!;assert.equal(stored.inventory['off.notebook'].stock,3);assert.equal(stored.eventSequence-before.eventSequence,5);
+ const b=boundary(before);b.c.saves=saves;b.c.purchaseCost=purchaseCost;b.c.u.draft.quantities={'off.notebook':'3'};b.c.mode='normal';b.c.Date={now:()=>epoch+3600000};
+ await b.click('buy',{id:'off.notebook'});assert.deepEqual(b.errors,[]);const stored=(await saves.read('normal'))!;assert.equal(stored.inventory['off.notebook'].stock,3);assert.equal(stored.eventSequence-before.eventSequence,5);
  assert.equal(b.c.nativePresentation.current.cue.kind,'stock');assert.equal(b.c.nativePresentation.current.cue.quantity,3);assert.ok(b.notices.some(text=>text.includes('sold 5')&&text.includes('bought ×3')));
  const policy={visible:true,reduceMotion:false,nativeMotion:true,decorativeMotion:true,customerCapacity:2,detailedIdle:true};for(let n=0;n<41;n++)b.c.nativePresentation.tick(.05,policy);assert.equal(b.c.nativePresentation.current.cue.kind,'sale');assert.equal(b.c.nativePresentation.current.cue.soldUnits,5);db.close();
 });

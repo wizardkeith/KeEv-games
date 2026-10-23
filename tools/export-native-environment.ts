@@ -1,3 +1,5 @@
+import {displaySamples} from '../src/art/native-display';
+import {catalog} from '../src/core/contracts';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -6,7 +8,7 @@ import {nativeViewContract,nativeLighting} from '../src/art/native-view';
 
 const root=process.cwd(),masterPath='assets/masters/native-v3/environment-v3.json',authoringPath='assets/authoring/native-v3/environment';
 const hash=(buffer:Buffer|string)=>crypto.createHash('sha256').update(buffer).digest('hex');
-const sourcePaths=['src/art/native-environment.ts','src/art/native-view.ts','src/art/recipes.ts','src/art/geometry.ts','src/art/materials.ts','src/art/native-materials.ts','tools/export-native-environment.ts'];
+const sourcePaths=['src/art/native-characters.ts','src/art/native-environment.ts','src/art/native-display.ts','src/art/native-view.ts','src/art/recipes.ts','src/art/geometry.ts','src/art/materials.ts','src/art/native-materials.ts','tools/export-native-environment.ts'];
 const sources=Object.fromEntries(sourcePaths.map(file=>[file,hash(fs.readFileSync(path.join(root,file)))]));
 const master={
  id:'environment.native-v3.1',format:'engine-neutral-recipe-json',version:'3.1',
@@ -14,6 +16,7 @@ const master={
  notes:['A JSON mesh-authoring master, not a GLB or embedded animation clip.','Runtime meshes are rebuilt with art/geometry.ts and the Babylon world adapter.','Rigid part leaf and door movement is applied around the authored local pivots.','No UVs or image textures; solid geometry and semantic materials.','No device or WebGL visual validation is implied by this export.'],
  sources,
  presentation:{camera:nativeViewContract,lighting:nativeLighting},
+ displayVariants:[0,1,2].map(nativeDisplayRecipe),staging:catalog.offerings.map(o=>({id:o.id,samples:displaySamples(o.id,4,0)})),
  room:nativeRoomRecipe(),
  door:{contract:nativeDoorContract,leaf:doorLeafRecipe(),sign:doorSignRecipe()},
  plants:[1,.38,.52,.9,1.15].map(scale=>({scale,...plantParts(scale)})),
