@@ -1,0 +1,409 @@
+《下一站・小店物語》v4 改版執行指示
+入貨 UX、已確認渲染修正、完整 3D 美術與動畫提升
+2026-10-23｜供 ChatGPT Work / Codex 接手同一項目
+
+【Keith 已確認的方向】
+Keith 看過今次生成的「VISUAL TARGET / Misaki」小店概念圖，明確表示：「我就係想要呢種畫面」。
+Keith 亦接受在需要時由 Codex 接手，不限由 Work 實作。目標仍是可玩的 Web 版；不能要求 Keith 在公司電腦安裝開發環境、Unity、Blender 或本機驅動。
+全部沿用現有 Bible、遊戲內容與核心系統。美術方向是 chill、治癒、精緻、溫暖而有生活感的真正 3D，配合受控的 2.5D 遊玩鏡頭。
+
+本文件是完整的下一輪執行 prompt，可交給同一個 Work 項目，或有完整原始碼的 Codex 雲端環境。
+請實際修改、整合、驗證並交付可玩的候選版本。不要只回覆方案、TODO、概念圖、沒有接入遊戲的示範程式，或單獨的數值測試結果。
+
+交接時請同時附上 Keith 已接受的概念圖：左邊為精緻小店剖面，右邊為 Misaki 全身與臉部特寫，圖上有「VISUAL TARGET」及「Misaki」字樣。跨到另一個 Work / Codex 對話時，不能假設它自動看得到原對話圖片。
+本文件第 6 節提供獨立文字規格，方便先開始工作；要判斷是否貼近 Keith 已選定的視覺，仍須以那張實際參考圖比較。
+
+============================================================
+1. 項目、基線與證據範圍
+============================================================
+
+現有公開網址：
+https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site
+
+現有 Site project：
+appgprj_6ad82a08ed2881918ebcc2dd206a122d
+
+本次上載：
+- 20261023-1428-24.3498334.mp4
+- Next_Stop_Little_Shop_Native_3D_v3_1_Delivery(1).zip
+
+交付包 receipt 記錄的 v3.1 基線：
+- Site version 11
+- source commit：10c070c8121aecfd9e3e1ac9d0db213947416a08
+- saved version：appgprj_6ad82a08ed2881918ebcc2dd206a122d~appgver_4403e294aa8c8191a61d6d2d508e7122
+- deployment：appgdep_6adb6a654ca08191b1e6d84ba1fdfff2
+- receipt 時間：2026-10-23T14:08:52.232507+00:00
+
+以上是本次交付包記錄，並非重新查詢後對「最新線上版本」的保證。
+開始前請辨認 canonical project、目前分支、最新 commit 與未提交工作；如果已有更新，保留並以最新正確基線整合，不可盲目回退 v11。
+
+注意：v3.1 ZIP 是以 v10 為基礎的增量包，不是獨立完整 repository。接手方不能把它當成完整項目直接重建，也不能因缺少未變更檔案而另起一個簡化版遊戲。
+需取得可完整 build 的 canonical checkout，包含 Bible / 已鎖定規格、package manifest、lockfile、src、content、public assets、asset masters/generators、測試及既有部署設定。
+
+本次審查已確認 ZIP CRC、65 個 SHA256SUMS 項目及 61 個 source coverage 項目一致。
+交付文件聲稱完整 133 tests、production build、content validation、replay 通過；審查沒有獨立重跑全部 133 個測試。
+交付方的 browser-qa 記錄 WebGL not supported，當時未看到新 v3.1 3D render。這不能當作美術驗收通過。
+
+本次影片約 84.2 秒，1862×1264，30 fps 編碼，沒有音軌。編碼幀率不是遊戲實測 FPS。
+審查方式為時序抽幀、原尺寸關鍵幀與角色裁切，不宣稱完整連續播放流暢度、手機 GPU 或音效已驗收。
+
+============================================================
+2. Work / Codex 接手方式
+============================================================
+
+採用同一份遊戲工程與一套美術目標，不維護兩個互相分叉的遊戲。
+
+如果目前 Work 已有完整 source、資產製作能力及可用驗證環境，直接在該項目完成本輪。
+如果改由 Codex 雲端：
+- 從完整 canonical repository 開始；只給公開網址、截圖或上述增量 ZIP 都不足以完整接手。
+- 重用既有 repository、lockfile、資產與保存資料契約，建立隔離分支完成改動。
+- 使用雲端可用的工具安裝依賴、執行 asset scripts、build、測試與 browser/render 檢查；不把本機安裝工作轉交 Keith。
+- 若建模／UV／rig 需要 DCC 工具，可以在已獲授權且支援的雲端環境使用，保留可編輯原檔及重建腳本；不要假設某個環境一定有 Blender 或 GPU。
+- 不需要 Keith 提供 Grok 素材，不導入依賴 Grok 影片的假 3D。
+- 同一 Site 的發佈身份由原 Sites 流程保留；Codex 如無該發佈能力，交付可合併 commit / 完整 patch 與 build 證據，再由已有權限的 Work/Sites 流程整合發佈。不得假稱已部署。
+
+現行官方 Codex Cloud 文件說明可在雲端以 repository、dependencies、tools、access settings 組成環境，並從 web 開始任務；這不保證每個帳戶都已有相同權限或 WebGL/GPU。
+參考：
+https://learn.chatgpt.com/docs/cloud
+https://learn.chatgpt.com/docs/environments/cloud-environments
+
+不要把更換產品名稱當成美術品質已提升的證據。真正交付物是更好的模型、材質、動畫、UI，以及它們在遊戲內的實際效果。
+
+============================================================
+3. 今次應承認的進步與尚未完成的事
+============================================================
+
+影片可見：
+- 約 00:23–00:29，藍外套、奶油長裙的 Visitor B 真正從門口進店。
+- 約 00:37–00:43，橙啡衣服的 Visitor A 進店；之後客人有行走、看貨及離開。
+- 約 00:28 有「剛剛售出 15」，約 01:05 有「剛剛售出 12」的真結算摘要。
+- 攝影機已比舊版更接近有效遊玩空間。不要不看現況又一律要求放大 25%。
+- 舊版高大盒形窗外建築已不再同樣突出。
+
+Source 亦已包含：
+- world ankle/yaw stance anchors + two-link leg IK；
+- stateful staff crossfade、服務後重新安排 idle；
+- offline return/catchup 使用同一 receipt stream、靜態摘要且不 reset routes；
+- 向合資格現有 Visitor A 交接真正 bag node 的條件式流程。
+
+以上修正必須保留，不可再次當成完全未實作。
+
+仍然不足：
+- 入貨數量與架位是清單頂部的全域狀態，買下方商品要反覆上落捲動。
+- 衣服、頭髮與身體有明顯異常色塊／露出截面的視覺感。
+- 顯示桌與商品排列像重複測試平台，材質與造型層次不足。
+- 有移動機制，但步態、轉角、凝視、接觸、停頓與服務表演尚欠自然。
+- 完整交袋的可見成功證據不足；這不等於交袋程式不存在或必定已壞。
+
+影片約 00:28 成交時 Visitor A 尚未進店；約 01:05 成交後 Tokyo 20:15 已在營業時間外。
+現有 handoff 只選符合條件的 Visitor A，因此這兩次採用店員 fallback 有合理可能，不能用此片直接判定 handoff pass/fail。
+
+============================================================
+4. 優先修正：已確認的模型正面方向不一致
+============================================================
+
+這是 source / render-state 層面已重現的缺陷，應先修正，再判斷角色需要多少重建。
+
+位置：src/world.ts 的 createWorld() / model() 手動 mesh adapter。
+現況：
+- scene.useRightHandedSystem = true。
+- engine-neutral geometry 的向外三角形採 CCW，並帶有相符的向外 normals。
+- model() 直接以 VertexData 建立 Babylon Mesh，沒有明確設定 mesh.sideOrientation。
+- 本次安裝的 Babylon 8.32.0，在 right-handed scene 的 Mesh 預設方向是 ClockWise。
+- 目前 PBRMaterial.sideOrientation 沒有覆寫（null）；fabric / skin / hair 開啟 back-face culling。
+- 同版本 glTF loader 在 RH scene 會明確設定 CounterClockWise。
+
+獨立檢查以本次交付 GLB 的實際裙面 triangles、相同手動 VertexData 路徑及相同 Babylon dependency，在 NullEngine 重現：
+- effective orientation = CW；
+- backFaceCulling / cullBackFaces = true；
+- world determinant = +1；
+- 從外側觀察的 40 個裙面 front triangles 全為 CCW，與目前 front-face 設定不符。
+- Visitor B 索引三角形與 outward normals 的方向一致，沒有發現 loft 與 primitive 之間混合 winding 的問題。
+
+修正方向示例，請在實際 adapter 整合：
+
+    import { Material } from '@babylonjs/core/Materials/material';
+    // 此 adapter 的輸入契約：right-handed、Y-up、CCW outward faces
+    mesh.sideOrientation = Material.CounterClockWiseSideOrientation;
+
+只在這個已知 CCW/RH 的 neutral mesh adapter 套用，不要盲目覆寫所有 Babylon built-ins、第三方模型或 glTF loader 的設定。
+保留 material.sideOrientation 為 null 或驗證明確且一致的覆寫；檢查 effective orientation，不只檢查某個屬性被賦值。
+不要用所有材質 double-sided、關掉全部陰影、刪走腿部，或放寬測試來掩蓋問題。
+目前 mug 的 inside:true 內壁在 geometry.ts 已同步反轉 indices 與 normals；從杯腔觀察仍是正確的 CCW，不應再額外翻轉一次。
+負 determinant / mirror 情況需按引擎既有規則處理，避免疊加不必要的 double-flip。
+
+驗證：
+- 同一角色、姿勢、鏡頭、光線，對比手動 Web mesh 與 exported GLB 經標準 loader 的結果。
+- 正面、四分三、背面；idle、mid-walk、轉身、伸手。
+- 測正常材質與陰影、暫停陰影、簡單實色／法線診斷，修正後恢復正常呈現。
+- 檢查頭髮外殼／頭頂、肩袖／手肘、腰裙、腿部、杯內壁、房間及家具的內外表面與陰影。
+- 取得真正當前 build 的 WebGL 前後圖，列出 commit，不能以 NullEngine 取代。
+
+關於裙面：
+影片 00:28、00:45、00:53 的奶油裙有膚色／啡色斑塊，source 沒有這種圖案。
+本次用新 GLB、新 routes / foot solver 的獨立抽樣檢查了 137,426 個相關 thigh points，未重現舊版大腿穿裙，最小抽樣餘量約 5 mm。
+這不是所有姿勢的完全保證，但不能再把舊版 3.9 cm 穿模當作本次已重現缺陷。
+目前 front-face mismatch 可合理解釋部分空心／截面感；尚未用 GPU 前後圖證明片中每個異常像素都只由它引起。先修正，再重新診斷剩餘瑕疵。
+
+============================================================
+5. 入貨 UI：每件貨就地選數量、買入、選架
+============================================================
+
+目標流程：
+找到商品 → 在該商品選數量 → 看清真實總價與資金 → 入貨 → 同位置選架位。
+
+不應再依賴遠離商品的全域數量／架位選單。影片 00:11–00:19、00:37–00:45、00:47–00:59 的反覆捲動是具體改善對象。
+
+5.1 桌面版結構
+- 入貨面板使用獨立較寬的工作區，約 560–640 CSS px 可作起點，按 viewport 實測調整。
+- 大螢幕可兩欄商品卡；空間不足自然單欄。不要把其他所有面板一併放大。
+- 標題、可用現金、搜尋與簡單 filter 保持容易到達；商品區只有一個主要捲動方向。
+- 與 world safe area / camera viewport 同步，不遮住重要店員、貨架或操作。不再盲目縮小整個場景遷就側欄。
+- 新 UI 視覺使用奶油、鼠尾草綠、克制莓紫；清晰字體、真實商品縮圖、適當留白，保持閱讀對比。
+
+5.2 每張商品卡的必要內容
+- 商品縮圖與本地化名稱。
+- 真正庫存、是否已陳列、目前在哪個架位。
+- 真正入貨單價。
+- 每件商品自己的減號／數字欄／加號。
+- 5 / 10 / 20 快捷數量，意思是「設為」，不是累加；沿用正式數量範圍。
+- 主按鈕：「入貨 5 件 · ¥…」。
+- 次動作：「上架」或「調整架位」。
+- 一行相關狀態：預計餘額、尚欠多少、已補貨、或者可直接上架。
+
+逐件 quantity drafts 以 item ID 為 key；不要在買另一商品時暗中沿用最近一個全域數量。
+drafts 屬 UI 狀態，Normal / Sandbox 隔離，不寫進經濟核心。安全遷移舊 global draft，不破壞存檔／匯入。
+合理保留搜尋、filter、捲動位置、正在輸入的 raw text、游標與 focus。正常 app repaint 不可整個重建輸入 DOM 而令玩家打字中斷。
+
+5.3 輸入與資金
+- 接受合法整數，清楚處理空字串、貼上、負數、小數、超大數字與邊界值。
+- 不在玩家輸入一半時偷偷改成另一個數量，提交時以正式規則驗證。
+- 成本必須來自現有 catalog / canonical purchaseCost；不要把示意 UI 的數字複製成正式價錢。
+- 資金不足時預先 disable 買入並顯示尚欠金額；核心命令仍要重新驗證，避免顯示與真狀態不同步。
+- 按下買入時，在任何 await 之前擷取 item ID、quantity、必要 context / command identity；不要事後讀會變的全域 draft。
+- 保留既有同步 busy / 防重複命令機制，避免雙擊／觸控連按重複扣錢。
+- 不自動改成「買得起的最大數量」，不偷偷購入其他商品。
+
+5.4 買完同一位置繼續
+- 成功後立即更新真庫存與現金，在該卡顯示成功狀態與下一步，不能只靠短暫 toast。
+- 原本已在架的商品，補貨後保持陳列，玩家不用再按一次上架。
+- 未上架商品，直接在卡片內展開或提供清晰可達的三架位 picker。
+- 若「缺貨」filter 下剛補貨，當前卡不要在玩家準備上架時突然消失；可暫留並標「剛補貨」，直到玩家改搜尋／filter 或完成下一步，再恢復篩選。不可無標示地展示過時 filter 結果。
+- 所有成功提示源自實際已接受命令，失敗不能播放成功演出。
+
+5.5 架位選擇
+- 明確顯示三個架位及每個架目前商品／空架，不只顯示數字。
+- 按鈕寫清「放到空架」、「換成…」、「由架 1 移到架 2」，降低玩家記憶負擔。
+- 選定前可用溫和 3D 邊緣高亮對應貨架，結束後移除。
+- 換下來的商品保留庫存；一件商品是否可同時佔多架，嚴格按現有 core contract。
+- 使用真 display command，不能為方便 UI 直接改 snapshot。
+- 平常補貨／換架不需要每次跳阻斷確認框，但替換結果必須在按鈕前清楚。
+- 如做「入貨並上架」，必須保留兩個正式命令與部分成功語意；買入成功、上架失敗時不可顯示全部失敗或回滾成假數據。本輪優先做好順序的就地操作，不新增購物車／大規模原子批量交易架構。
+
+5.6 手機與可用性
+- 使用可展開的單欄 sheet，讓入貨成為可完整操作的工作區；避免只有半屏又巢狀捲動。
+- 在 320 / 375 CSS px、橫直向及鍵盤開啟時，數量欄、買入與架位 picker 均可達。
+- touch target 約 44 px；輸入字級足夠；鍵盤 focus 可見，正常 tab order。
+- 不只靠 hover 或顏色表達結果；動態成功使用適量 aria-live，錯誤關聯到輸入。
+- 全部新文案加入既有五語系，依項目實際 locale 列表，不能只硬寫廣東話。
+- filter 先用「全部／已陳列／缺貨（stock = 0）」；不擅自創作會改遊戲理解的低庫存閾值或缺貨規則。
+
+聊天內已有可操作的入貨示意，供理解互動與視覺方向。它用示意現金、庫存與 in-memory state，不是正式 adapter，也沒有真實 Saves／命令／五語系。
+不要把該示意的假資料層移植成正式遊戲。即使未收到示意檔，本節足以獨立完成正式 UI。
+
+============================================================
+6. 以 Keith 已接受的圖為美術目標
+============================================================
+
+概念圖重點：
+- 真正 3D 的溫暖小店剖面，柔和約 40° 視角，3.5–4 頭身的細緻可愛角色。
+- 暖而不發黃的室內光；窗外較清涼的綠色，形成溫和明暗與冷暖層次。
+- 奶油白、自然木色、鼠尾草綠、莓紫，局部低飽和藍與橙啡。
+- Misaki 有完整而連貫的臉、髮型與衣服：栗啡不對稱 bob、淡色葉形髮夾、溫柔眼神；鼠尾草 cardigan、奶油內搭、象牙色圍裙、莓紫裙的整體語言。若 Bible 已鎖定具體角色服飾，保留該身份與要求並達到相同精緻度。
+- 另外兩位既有訪客維持可區別的藍／奶油與橙啡輪廓，不新增命名劇情人物。
+- 三張展示桌有整齊但不機械的商品安排；家具、商品與小植物的尺度可信。
+- 顧客與店員的關係可讀：看貨、包裝、接袋、點頭，而不是散放幾個玩偶。
+
+概念圖是經 Keith 接受的視覺方向，不是目前遊戲已完成的截圖，也不是現成 3D mesh、UV、rig 或動畫素材。
+不承諾一張生成圖可自動變成像素一致的即時 3D。必須以真實可玩的 runtime 逐步實現其角色完整度、光影、材質與陳列品質。
+概念圖中的額外花朵／小物只作構圖參考，不代表獲准新增 SKU、劇情道具、解鎖內容或虛假庫存。
+不得用整張概念圖貼在地板／背景、相機朝向 billboard 人物、循環影片或 2D 場景替代可互動 3D。
+
+6.1 先做好一個完整實際範例，再擴展
+內部順序：完成 Misaki + 一張展示桌 + 正常相機與光影，直接在遊戲內看效果；把一致的模型／材質／動作語言擴展到兩名客人與全店。
+這是實作節奏，不是要求 Keith 在每個小步再批准。不要做到第一張樣圖便停止。
+
+6.2 角色品質
+- 本輪包括必要的角色與場景視覺資產重製，可替換限制品質的舊幾何／rig／材質；保留歷史 masters 與遊戲身份，不受舊版外觀實作形式限制。
+- 修正表面方向後，仍須改善肩袖、手肘、腰、裙擺與腿的連續形體。
+- 臉在正常遊玩距離仍有眼神、眉、嘴與髮型辨識，不靠過量 fill light 或拉近到不可玩的距離。
+- 頭髮有主體輪廓與有意圖的髮束分區，避免平面帽蓋、頭頂突兀裸露弧帶與大量小零件拼接感。
+- 衣服有合理厚度、袖口、領口、腰線、圍裙邊緣與少量有意圖的摺位；細節服務輪廓，不堆配件掩蓋基本造型。
+- 布料、皮膚、頭髮與鞋的 roughness / 高光各有差異，避免塑膠蠟像感。
+- 優先做好整體可見品質。可以重構現有 procedural authoring，也可以製作真正連續 mesh / skinned rig；不能以「全由程式寫」為理由把拼積木品質當完成。
+- 若引入新 rig，保留角色 ID、尺寸、rest pivots、named sockets、接觸與服務契約，提供舊版到新版的明確 adapter，不能犧牲腳掌支撐和物件所有權。
+
+6.3 家具與商品陳列
+- 保留真實房間 layout、三架位規則、門口、櫃檯、碰撞與顧客可走空間。
+- 三張桌子可在同一家具系列內有不同托盤、低台座／層次、卡片架、細緻邊緣與陳列節奏。
+- 簿本可少量斜立與錯位、陶器有疏密與留白、布品有合理摺疊厚度；避免每架永遠四件相同 clone 的 2×2 方格。
+- 商品顯示必須跟真實陳列／庫存狀態，不得在售罄後仍堆滿可售商品。區分既有非售裝飾與真正貨品，不能混淆可購買內容。
+- 品類辨識優先於微小裝飾；在正常鏡頭仍能分清物件。
+
+6.4 材質與光影
+- 木地板、家具、牆架有自然但低對比的木紋／粗糙度變化，縫線不應像白色座標網格。
+- 紙張、陶器、布料、金屬小件與木材分清材質；如使用 texture，必須有正確 UV、色彩空間與 map 用途。
+- 避免把陰影、強高光、透視扭曲或文字錯誤烘進 base-color texture，再被動態光重複照一次。
+- 接觸陰影要讓腳掌、桌腳、商品有重量，不能靠黑色厚陰影描邊所有物件。
+- 光線以角色／商品可讀為目標；保留柔和層次，避免全局過曝、重 bloom、重 DOF 或模糊遮瑕。
+- 現有攝影機構圖已有改善。只在實際 panel safe area / readability 有需求時微調，不整體再放大固定百分比。
+
+============================================================
+7. 動畫：由「會移動」提升到自然、有目的、有接觸
+============================================================
+
+保持節制與休息，角色不需要不停搖晃才能有生命力。
+
+7.1 保留的基礎
+- v3.1 的 foot anchors / IK、真正 crossfade、idle task interruption handling。
+- route / counter / doorway clearance。
+- 真實命令／settlement 成功後的 feedback；offline catchup 靜態摘要。
+- 真正 bag node / hand socket 交接；bounded queue / pool / reservation / timeout / fallback。
+
+7.2 行走、停步與轉向
+現有 source 在轉角會先停止、等 0.10 秒，再原地轉到 heading error 小於 0.25 rad 才前行，形成 stop-turn-go。
+獨立 60 Hz 原始 solver 抽樣中，Visitor A 巡航約每 0.30 秒換一次接觸腳，約 3.3 步／秒；最大 bodyDrop 約 6.7 cm，最大單抽樣 pelvis change 約 1.8 cm。
+以上是 source-level trajectory 指標，不是實測 GPU 卡頓或每個畫面都難看的結論。
+
+改善要求：
+- 用身高、速度與步幅一起校準輕鬆步態，不只把整段播放乘慢速。
+- 腳掌站立時不滑地，擺腿有清楚落腳，pelvis 連續而不突然彈動。
+- 啟步先有重心準備，停步自然收腳；手臂、肩、頭與腳協調。
+- 在真實 clearance 容許範圍內使用平順小弧線／提前轉頭轉身，保留必要狹窄空間停轉。不能為平滑而穿桌角或走出合法路徑。
+- 客人可有少量不同節奏，保留安靜停頓；不要所有人同步呼吸、點頭或擺動。
+
+7.3 看貨與生活細節
+- 先看向商品，再轉頭／上身，才做合適手部動作。
+- 有短暫觀察、輕微重心移動、收手與離開決定，能在正常鏡頭讀懂。
+- 不要求無限 procedural 動作；少量有品質、有邊界、可中斷的小段演出比很多短促擺動更好。
+- 若手中拿起真商品，明確處理展示副本／視覺 prop，不能錯寫庫存或令售罄物件憑空出現。
+
+7.4 店員與交袋
+現有 crossfade 已修掉舊版即時大跳，但有些肘部 tuck 集中於 0.15–0.25 秒 transition 的首四分之一，仍可能顯得急促。
+為每個服務動作設計可讀節奏：
+看向工作／客人 → 準備 → 伸手 → 接觸 → 操作／短暫保持 → 放好／放手 → 放鬆回復。
+- 手要真正靠近工作平面或道具；手與袋的相對位置、朝向與持有 socket 一致。
+- 袋在轉移一刻保持世界位置／朝向連續，單一 owner，沒有跳位、複製或提早消失。
+- 接袋後有克制點頭／回應與合理離店，門口有讓路與可走空間。
+- 拓闊到合適的現有 Visitor A / B，以可達位置／狀態選擇，不只靠其中一人的狹窄 5.2 秒窗口。不能把不合適的客人瞬移到櫃檯。
+- 保留有限 acquisition deadline（目前 8.55 秒可作基線）、side-bay reservation、取消與 fallback。動畫不能延遲真實收入入帳。
+- Aggregate sold units 不等於交易宗數或買家數量；不能為每 sold unit 生成一個客人，也不能憑空聲稱某個顧客買了某個 SKU。
+- 無合適客人時，店員包裝／收據 fallback 要本身自然完整，不是錯誤。
+
+7.5 克制特效
+- 成功補貨：對應架位短暫柔和提示，然後退場。
+- 店員包裝：紙袋／包裝紙的輕微反應與手部接觸。
+- 窗邊少量、低對比漂浮微塵，植物細微動作；不遮住 UI／臉／商品。
+- 如有音效，沿用 mute / volume / user gesture 規則，輕柔且可關；本次影片沒有聲音，不能引用它證明音效好壞。
+- 特效跟真事件觸發，不靠全場閃光、愛心、金幣雨或長期 hover 動畫代替品質。
+
+7.6 Quality、Reduce Motion 與生命週期
+- Low / Minimal FX 仍保留必要 native 顧客／服務動作，優先減粒子、陰影成本、材質與額外 secondary motion。
+- Reduce Motion 是獨立偏好，提供明確靜態／短淡化回饋，不讓重要操作結果消失。
+- hidden / focus return / scene recreate / mode switch / import 不重播過期演出，不造成新收入。
+- 普通 UI repaint、搜尋、調數量及捲動不可重新建立 world、重設訪客路徑或取消剛開始的動畫。
+- delta time 單位在邊界轉換一次，保持 seconds / radians / metres 契約。
+
+============================================================
+8. 核心、Bible 與未來資產重用
+============================================================
+
+保留：
+- economics、catalog、transactional Saves、schema / migration、存檔與匯入／匯出；
+- Normal / Sandbox 隔離、所有既有五語系；
+- Bible 劇情、Day1 節奏、角色身份與解鎖條件；
+- 已修復的 CTA、profit / pending、receipt sequencing、冪等與離線結算；
+- 現有 Site identity 與公開 URL，除非使用者另有明確指示。
+
+本輪不擅自加 Ren / Momo、雨天、Prestige、新日數劇情、商品定價或經濟再平衡。
+可新增 UI 文案與純 presentation 資料；若核心契約確實不足，先用現有正式入口完成，避免為方便畫面侵入計帳。
+
+為未來 Android / iOS 保留：
+- 可編輯模型／生成器、正確 UV 的原始 texture 與材質定義、GLB / glTF。
+- 同一模型與材料在 Web 與 export 的一致性；不可只有 export 好看、Web 仍用另一套簡化形體。
+- metres、Y-up、明確 handedness / winding；stable asset IDs、hierarchy、rig/rest pose、named sockets。
+- 程式動作參數／state machine / event contracts；如新增 skeletal clips，保存命名、循環、時間與 retarget 說明。
+- texture / material / LOD / mesh / draw-call / 下載大小的實測成本，根據可用設備調整。
+- 自製或可合法使用資產的來源與授權記錄；不要臨時抓不明模型。
+
+不要聲稱輸出 GLB 就等於完成 Android / iOS 版，亦不要把 rigid hierarchy 說成已嵌入 skeletal animation clips。
+未來可重用的是資產與清楚契約；不同 runtime 的控制、渲染與性能仍需整合。
+
+============================================================
+9. 實作安排與真正的驗收
+============================================================
+
+在同一輪自主完成以下依賴順序；可把互不依賴的 UI 與診斷平行處理：
+
+A. 確認 canonical 基線與可還原 checkpoint；修正 front-face adapter，先做真正 runtime 對比。
+B. 重構入貨流程；接回既有正式命令與真存檔。
+C. 完成一個高品質 Misaki / 展示桌 / 光影範例，擴展到全店與另外兩人。
+D. 調整步態、轉向、看貨、店員與交袋節奏，保留現有 correctness 修正。
+E. 在現有獨立 Sandbox，用合法時間／結算／命令錄製可重現證據，保留 Normal 進度。
+F. build、必要回歸、實畫面檢查、整合與正式交付。
+
+不要每完成一個步驟就問「要不要繼續」。若某工具不可用，先完成其他可做工作，使用已授權替代路徑；不得繞過權限、任意更換公開 Site 或假裝驗證完成。
+
+9.1 入貨驗收情境
+- 在清單較下方買兩種商品，各自不同 quantity；無須回頂部。
+- 補貨已在架的商品，庫存／現金正確，陳列保持。
+- 入貨未上架商品，原地揀空架；替換／搬架結果清楚，原貨庫存保留。
+- 缺錢、非法輸入、double-click、快速切品、連續操作、慢回應或命令失敗。
+- Filter 中剛補貨的卡保持可完成下一步且狀態真實。
+- 鍵盤操作、手機鍵盤、320 / 375 CSS px、五語系長文字。
+- Normal / Sandbox 切換、重開面板、保存／載入、import；UI draft 不污染另一模式。
+- 操作期間既有顧客／服務演出不中斷、不重設。
+
+9.2 3D 與動作驗收情境
+- 正常遊玩鏡頭的全店圖；角色正／四分三／背面；idle、mid-walk、轉向、伸手。
+- 同一鏡頭的 v3.1 / 修正後 / 最終美術版本對比，不以不同 zoom 或曝光製造提升假象。
+- 至少一段不中斷的進店 → 看貨 → 停步／轉身 → 離店。
+- 至少一段在合理營業時間、合資格現有客人在場、實際結算成功的包裝 → 接近 → 交袋 → 接袋 → 離店。
+- 在既有 Sandbox 選營業時間中段，保留足夠時間，避免剛結算就收店；不要透過改玩家存檔或假收入強迫觸發。
+- 另一段無合資格顧客的 fallback；離線回來使用靜態摘要，不重演舊交易。
+- Low / Minimal FX / Reduce Motion 的真畫面。
+- 有條件時測手機真設備；否則分清 desktop responsive、emulation 與 physical GPU。沒有實測就不要寫 FPS 保證。
+
+9.3 測試要能保護真風險
+- 現有正式 build、content validation、replay 與核心回歸。
+- 針對 adapter effective orientation / master parity、per-item draft capture、資金驗證／防雙擊、架位結果、filter/focus、動畫生命週期、腳掌接觸／道具 owner 等有實際回歸風險的項目補測。
+- 不為湊 test count 寫只抄實作常數的測試，不靠放寬閾值掩蓋 visual error。
+- 如果 mesh / rig / motion 已變，舊 geometry / clearance 檢查必須對新資產執行，而非繼續引用舊 JSON。
+- 記錄測試實際執行環境與版本；測試綠燈不能單獨代表美術接受。
+
+9.4 WebGL 不可用的情況
+先嘗試目前授權能力中可用的雲端 browser / renderer，分清 harness、canvas、GPU 與資產錯誤。
+不可把 NullEngine、GLB validator、DOM 截圖、生成概念圖或舊影片當成當前 3D 實畫面。
+如所有可用環境都無法 render，仍完成可驗證的實作與候選 build，明確標示「3D 視覺待驗」，列出具體未驗收項目與最短重現步驟。
+只有真正缺少外部存取／權限的部分才最後請 Keith 處理；不可因為某 browser 不支援 WebGL 就停止全部改版。
+
+============================================================
+10. 完成交付
+============================================================
+
+給 Keith 的交付要簡潔、真實、可玩：
+- 實際修改完成的同一項目版本／preview；使用既有發佈授權及 Sites 流程更新時，附真正回傳的 deployment receipt 與 URL。
+- 如果還未發佈，直接寫清楚是 candidate / preview，不能把 source commit 當公開部署。
+- 以簡短說明展示：入貨方便在哪裡、角色／陳列改善在哪裡、動畫完整做到哪些段落。
+- 真正當前 runtime 的前後截圖與不中斷錄影片段。標示 camera、commit、quality preset 與未完成的驗證。
+- 完整可重建 source checkpoint；若交增量包，清楚標出 base commit、包含範圍及取得完整 repo 的方式。
+- 可重用的 asset masters / GLB / textures / rig / animation contracts 與改動記錄。
+- 如跨 Work / Codex，附可合併 commit / patch、實際 build instructions、已完成與未完成的檢查；不要要求 Keith 手動拼幾十個程式片段。
+- 壓縮包關閉後再讀一次，檢查 CRC、檔名、checksum 與 source coverage，避免再次交不存在／不完整附件。
+
+完成判準：
+Keith 可以在 Web 上更方便地入貨、上架，看到符合已接受風格的完整角色與精緻小店，並看得懂自然的進店、看貨、工作與交袋動作。
+本輪應帶來實際可見的品質提升，不能只交「加亮、加粒子、測試變多」。
+
+【直接開始】
+請從目前 canonical 工程讀取 Bible 與 v3.1 基線，保留已完成修正，以本文件完整執行 v4。美術目標已獲 Keith 確認；如果使用 Codex，也沿用同一個遊戲與素材規格，不另起簡化版。先做必要診斷，接著完成 UI、美術、動畫、驗證與交付。

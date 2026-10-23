@@ -1,0 +1,232 @@
+《下一站・小店物語》完整 Codex 交接包｜精簡下載版
+2026-10-23｜先閱讀本檔，再執行 reference/ 內的 v4 prompt
+
+下載修復說明：本包保留完整 source-history.bundle、Bible、全部素材、
+已確認原圖、v4 prompt 及驗證記錄。僅移除另一份重複的 project/ 展開副本。
+請依第 3 節把 bundle 還原為 project/；完整 593 檔案及 11 次提交都會還原。
+這不是增量包，無需其他工程 ZIP；Keith 無需在公司電腦操作命令。
+若使用 LittleShop-A.zip + LittleShop-B.zip，先將兩包解壓到同一目錄，
+於其中 LittleShop-Codex/ 執行 python3 restore_bundle.py，再照本檔繼續。
+兩個小包不能只用其中一個。
+
+這次已補齊完整工程、完整 Bible、已確認的美術原圖與 Git 歷史。
+此包是「公開 v11／Native 3D v3.1 的完整基線 + v4 任務資料」，v4 尚未實作。
+不要重新從零做簡化遊戲；不要把完整 source 誤認為之前的增量 ZIP。
+
+============================================================
+1. 內容在哪裡
+============================================================
+
+project/（由 source-history.bundle 還原；未重複放入 ZIP）
+  公開 Site v11 對應的完整原始碼樹，共 593 個 Git-tracked files。
+  已逐檔對照 source commit 的 Git blob 與 SHA-256。
+  包括 package.json、package-lock.json、src、public、資產 masters、
+  原始建模／匯出程式、tests、tools、內容、五語系、歷史規格與部署身份。
+  不包含可重新產生的 node_modules、dist 或 .git 認證設定。
+
+source-history.bundle
+  自給自足的 Git bundle，含 main 及其完整 11 次提交歷史。
+  主提交：10c070c8121aecfd9e3e1ac9d0db213947416a08。
+  包含既有測試／preservation checks 需要參照的 v10 等歷史 source。
+  這是 Git objects/refs，不含原 checkout 的 remote credentials/config。
+
+reference/Approved_Visual_Target_Misaki.png
+  Keith 已明確接受的原始生成圖，未重新生成或修改。
+  圖左為溫暖精緻小店，右為 Misaki 全身與臉部特寫；
+  圖上有 VISUAL TARGET / Misaki 字樣。
+  務必用圖片工具打開實際 PNG，不能只根據檔名想像其內容。
+
+reference/Next_Stop_Little_Shop_v4_Stock_UX_Art_Animation_Prompt_2026-10-23.txt
+  完整最新執行指示：入貨 UX、CCW 修正、角色／場景美術、
+  步態與服務／交袋動畫、真實 runtime 驗證、交付方式。
+
+evidence/SITE_V11_PROVENANCE.json
+  本次從 Sites 查核的項目／版本／source provenance，無任何 access token。
+
+evidence/SOURCE_COMMIT_FILE_MANIFEST.json
+  全部 593 個原始碼檔案的名稱、Git blob、SHA-256 及大小。
+
+evidence/
+  本次交接包的 Git bundle、獨立還原及實際執行驗證記錄。
+  請以 HANDOFF_VERIFICATION.json 及對應日誌為準。
+
+MANIFEST_SHA256.json
+  本交接包所有 payload 檔案的 SHA-256；不包含 manifest 自身。
+
+============================================================
+2. Bible 原檔與規格先後關係
+============================================================
+
+完整版 Bible：
+project/source-inputs/source_bible/Next_Stop_Little_Shop_Game_Bible_v0.1.docx
+
+方便程式閱讀的完整文字抽取：
+project/source-inputs/reference_extracts/Bible_full_text.txt
+
+簡短摘要（不是完整 Bible）：
+project/source-inputs/source_bible/Next_Stop_Little_Shop_Game_Bible_v0.1.md
+
+本次已把 Word 與原始保存文件逐 byte 比較；完全一致。
+Word 包含 32 個 Bible 章節、Tokyo Vertical Slice Production Spec P1–P10、
+Appendices A–C 及視覺參考。全文抽取逐段比對完整；圖片／版面以 Word 為準。
+
+接著閱讀：
+- project/source-inputs/01_WEB_FIRST_ADDENDUM_v1.0.txt
+- project/source-inputs/00_README_zh-HK.txt
+- project/docs/CONTRACT.md
+- project/docs/NATIVE_V3_1_HANDOFF.md
+- reference/ 內的最新 v4 prompt 與原始 PNG
+
+適用關係：
+- Bible 保持遊戲世界、經濟、敘事與美術方向的權威。
+- 後來 Web-first Addendum 已授權 Babylon.js / TypeScript 的雲端 Web 路線。
+  Bible 的 Unity/C#/URP native 規劃不能當作今輪必須先安裝 Unity 的理由。
+- 本輪從 v3.1 接續做 v4；早期 W0/W1／灰盒階段指令屬歷史，不重新開始。
+- v4 已授權必要的視覺資產重製，Keith 已接受附圖方向。
+- 保留現有已完成核心修正；不藉此提前擴大成完整 Tokyo 七日內容／全部商品製作。
+
+============================================================
+3. 導入 wizardkeith/KeEv-games
+============================================================
+
+Keith 提供的 Codex 回覆指該 repository 當時是空的、沒有 main。
+這是先前回覆的狀態；導入前請在你已有權限的 Codex 環境重新檢查，
+避免覆蓋另一項工作剛建立的內容。
+
+優先使用 Git bundle 導入完整歷史，不單靠 project/ 複製：
+現有 npm test / preservation 工具有歷史 commit 參照，
+單把檔案變成全新的 initial commit 會失去這些參照。
+
+A. 目前 Codex 已開啟那個空 GitHub repository
+
+1) 確認工作目錄／origin 正確，檢查未提交檔案及遠端 heads。
+2) 在不覆蓋任何檔案的前提下，從本地 bundle 取 main：
+
+   git fetch /ABSOLUTE/PATH/TO/source-history.bundle main
+   git switch -c codex/little-shop-v4 FETCH_HEAD
+
+3) 確認：
+
+   git rev-parse HEAD
+
+   應為 10c070c8121aecfd9e3e1ac9d0db213947416a08。
+   如已有同名分支，保留它並用另一個清楚命名的分支；不要 force reset。
+
+4) 將本交接包 reference/ 及本 START_HERE 複製到工程的
+   docs/codex-v4/，建立獨立 commit，讓原圖及最新指示可在之後任務重用。
+   不要把 source-history.bundle 自己提交進 GitHub repository。
+
+5) 依本輪已有授權使用正常 commit / push。
+   確認遠端確實空的情況下，可把目前分支推為 main：
+
+   git push -u origin HEAD:main
+
+   不使用 force push。若遠端已有內容，保留它，以分支／合併方式接續。
+
+B. 在另一個新的雲端工作目錄還原
+
+   git clone --branch main /ABSOLUTE/PATH/TO/source-history.bundle project
+
+必須指定 --branch main；bundle 沒有 symbolic HEAD，不能假設不帶 branch
+的 clone 會自動 checkout main。
+還原後，按 Codex 已連接的授權途徑連到既有 wizardkeith/KeEv-games，
+保持上述不覆蓋、不 force push 的規則。
+
+C. 精簡下載版的完整性
+
+本 ZIP 沒有另外重複附上 project/ 資料夾；這是正常且有意的打包方式。
+完整 source、Bible、資產及歷史均在自給自足的 source-history.bundle 內。
+在本交接包目錄執行下列命令，即可建立上述所有 project/ 路徑：
+
+   git clone --branch main source-history.bundle project
+
+如按 A 節導入已開啟的 repository，後文 project/ 指該 repository 根目錄。
+不要把未解開 Git bundle 誤判為缺少 source 或 Bible。
+
+本次縮小檔案後已重新還原 bundle、逐檔核對 593 個 source 檔案，
+並檢查 ZIP 與 SHA-256；沒有再執行或冒稱新一輪遊戲 build/test。
+evidence/HANDOFF_VERIFICATION.json 及 build-verification/ 是原交接驗證記錄。
+evidence/COMPACT_PACKAGE_VERIFICATION.json 是這次重新打包的驗證記錄。
+evidence/ORIGINAL_HANDOFF_MANIFEST_SHA256.json 是原 77.4 MB 包的歷史清單，
+根目錄 MANIFEST_SHA256.json 才是本精簡包的實際 payload 清單。
+
+============================================================
+4. 雲端啟動與驗證
+============================================================
+
+全部由 Codex 雲端完成，無需 Keith 在公司電腦安裝開發工具。
+Node/npm 實測版本與這次驗證結果見 evidence/HANDOFF_VERIFICATION.json。
+原工程 README 記錄 Node 24.19.0；沿用已驗證版本可減少環境差異。
+
+在已還原的工程根目錄：
+
+   npm ci
+   npm test
+   npm run validate
+   npm run asset-check
+   npm run replay
+   npm run build
+
+本次交接驗證重用原工程已安裝且版本相符的依賴；
+不把它說成全新遠端 npm ci 下載測試。你在新 Codex 環境仍需依 lockfile 安裝。
+依賴下載如受網絡權限限制，應報出具體受限項目，不向 Keith 索取已在包內的 source。
+
+package.json 沒有 dev script；需要開發預覽時，可用已安裝 Vite：
+
+   npm exec vite -- --host 0.0.0.0
+
+真正可用的預覽入口及 WebGL/GPU 取決於當前雲端環境能力。
+測試／GLB validator／NullEngine 通過不能冒充真正 3D 畫面通過。
+如果 browser 不支援 WebGL，請完成可完成的程式／素材工作，
+明確列出未驗證項目，使用現有授權內的可用 renderer 驗證。
+
+注意：validate / replay / 部分測試會輸出 evidence 或 fixtures。
+正式交付前檢查 git diff，分清可重現證據更新與遊戲規則變更。
+不要為了清走 diff 而刪除資產原檔或回退修正。
+
+============================================================
+5. 接下來真正要做的 v4
+============================================================
+
+完整執行 reference/ 內 v4 prompt，不在取得資料後只再回覆一次計劃。
+
+先修正已確認的 CCW/RH manual mesh adapter 問題，
+再用實畫面檢查殘餘模型／材質問題。
+同步完成逐件入貨 UX，然後按附圖提升角色、場景與動畫。
+使用實際遊戲畫面及完整互動作驗收，保留現有正確經濟／存檔／離線結算。
+
+今次不必再找之前的 v3.1 增量 ZIP 才能開工；
+它的全部 source 改動已在本完整 checkpoint。
+舊影片的審查重點已記錄於 v4 prompt。舊影片可作額外參考，
+不應因為它不是此包的附件而再次阻止 source／美術改版。
+最終仍需要你完成當前新版本的真正畫面／錄影驗證。
+
+============================================================
+6. 部署與存檔範圍
+============================================================
+
+原 Site：
+https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site
+
+project_id：
+appgprj_6ad82a08ed2881918ebcc2dd206a122d
+
+保留 .openai/hosting.json 的現有身份。
+推到 GitHub 不等於已更新這個公開 Site。
+如果 Codex 沒有 Sites 發佈能力，完成 source/asset commit、build、
+畫面證據與清楚交接，交給已有權限的 Work/Sites 流程發佈；
+不要因此另建一個無關遊戲或假稱已部署。
+
+這是完整開發 source，不含 Keith 瀏覽器內的個人進度資料。
+現有遊戲以瀏覽器本機存檔為主；從不同 preview origin 開啟時，
+不能把看到新的存檔槽誤判成原公開站進度被刪除。
+任何測試請用既有獨立 Sandbox／QA 機制，保留 Normal 存檔。
+
+============================================================
+直接開始
+============================================================
+
+請解壓、閱讀本檔、按正確 main 分支還原完整工程，
+打開 Approved_Visual_Target_Misaki.png，閱讀完整版 Bible、
+Web-first Addendum 及 v4 prompt，接續實作。
+完整 source、Bible 與已接受原圖現在都已提供。
