@@ -1,0 +1,11 @@
+# V5 publication receipt — pending provider recovery
+
+Checked: 2026-10-24T03:15:17+08:00 (Asia/Hong_Kong).
+
+- Result: **merged, not published**. Owner explicitly authorized Draft→Ready, merge and same-Site publication. PR #2 moved Ready and merged successfully; the prior approval rejection is resolved.
+- Reviewed candidate: `de0a56b7820e1f5696cf30be2d73c50bc7844863`; packaged checkpoint `566e27ae3db5880490a0d2e541dff7f6f34a3bf0`; merge `c10bbc6cc5770ad3998dd1d9e4201228542cf2b8`. Independent review: `docs/reviews/V5_INDEPENDENT_RELEASE_REVIEW_2026-10-24_zh-HK.md`.
+- Fresh merged-source build passed. Reviewed and merged `src` tree: `33a8cdb4289c12e62b2c772245ee547a00948168`. All 119 runtime payloads and hosting file match the original tar; SHA-256 `c7f20ca9f1533397ce58b6f3f00a6caa7b101a43b6abb8a244ea42e941589b2c`.
+- Blocked action: read configured Site source branch via Git `ls-remote` at `https://git.chatgpt-team.site/a663243a-e764-4721-8a46-8c7d9a796259/appgprj_6ad82a08ed2881918ebcc2dd206a122d.git`. Both initial read and one retry returned HTTP 500 / Internal Server Error. This prevented safe source push/save/deploy provenance. Neither read writes; no push/save/deploy was called; no uncertain mutation. Credential session closed with no persistent secret written.
+- Existing Site: `appgprj_6ad82a08ed2881918ebcc2dd206a122d`, public, https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site . Last verified v11, source `10c070c8121aecfd9e3e1ac9d0db213947416a08`, deployment `appgdep_6adb6a654ca08191b1e6d84ba1fdfff2`. No new version/deployment ID exists from this attempt.
+- No release browser smoke is claimed because v5 is not live. Prepared isolated Sandbox probe is retained in the cloud environment. Normal saves/identity/economy/access were untouched. Final art target and physical GPU/FPS/Safari/keyboard/audio/hidden-tab/native remain unverified. Nonblocking sale-toast wording remains unchanged.
+- Resume only after reading current provider/Site/GitHub state. Normally push a source checkpoint preserving this complete history; prove its runtime matches the reviewed archive, save once, deploy once, verify terminal result, live payload provenance and isolated Sandbox. Update this receipt and main PROJECT_STATE after successful publication.

@@ -1,13 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-24T03:00:26+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-24T03:15:17+08:00** (Asia/Hong_Kong).
 
-## Current unmerged work — bounded Game refinement
+## Current v5 integration and publication status — 2026-10-24T03:15:17+08:00
 
-- Active implementation: [`codex/game-v5-refinement`](https://github.com/wizardkeith/KeEv-games/tree/codex/game-v5-refinement), [draft PR #2](https://github.com/wizardkeith/KeEv-games/pull/2). Source checkpoint and latest evidence are tracked by that branch and `docs/V5_REFINEMENT.md`.
-- Status: all four implementation/verification gates complete as a **review candidate** at pushed checkpoint `566e27ae3db5880490a0d2e541dff7f6f34a3bf0` (application code `021e23a`). 144 tests/build/replay/validators, real A/B bag transfers/exits, twenty narrow locale cases and interrupted-write/focus checks passed; matched renders, uncut recordings and complete verified source/build packages are delivered. Final approved art fidelity and physical-device/audio/native gates are not claimed. No feature changes are merged into main.
-- The current user task supersedes the earlier documentation-only scope. The latest user authorization requests publication to the **same existing Site** after each checked Game update; the parent coordinates independent review, integration and publication. No Site save/deploy/access/identity change is claimed here. Normal saves, economy, original masters/history and local Unity work remain protected.
-- Library delivery is pending: the required upload helper failed before any upload at its read-only hosted-app tool-list request (`network`); no Library IDs or uncertain writes were produced. Complete artifacts/receipts remain in the executing cloud environment and the source/evidence checkpoint above. Detailed evidence, reproduction and limitations: branch `docs/V5_REFINEMENT.md` and `evidence/native-v5/KeEv_v5_Refinement_Review.pdf`. This main update is a documentation pointer only; parent coordinates review and the authorized same-Site publication.
+- **Merged:** [PR #2](https://github.com/wizardkeith/KeEv-games/pull/2), reviewed exact tip `de0a56b7820e1f5696cf30be2d73c50bc7844863`, was explicitly authorized by the owner to move Draft→Ready, merge and publish to the same existing Site. Draft→Ready succeeded and GitHub merged it normally as **`c10bbc6cc5770ad3998dd1d9e4201228542cf2b8`**. Complete history and newer independent-review/state documentation are preserved. The feature branch remains available; this is now merged work.
+- **Publication blocked by provider:** the configured Site source Git endpoint returned HTTP **500 Internal Server Error** on the read-only `ls-remote` check, then returned the same error on one retry. No source push, Site version save or deployment was attempted. Both failed reads are known not to be writes; there is no uncertain publication outcome. No access/identity/account/security settings or player Normal saves changed. The earlier approval rejection is resolved by the owner's explicit authorization; this current blocker is a provider error, not a permission request.
+- **Public Site remains v11 / Native 3D v3.1**, public at https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site ; project `appgprj_6ad82a08ed2881918ebcc2dd206a122d`, saved/live source `10c070c8121aecfd9e3e1ac9d0db213947416a08`, deployment `appgdep_6adb6a654ca08191b1e6d84ba1fdfff2`. Do not describe v5 as live. Provider source read succeeded at that same old SHA in the earlier preflight; current failures occurred after integration.
+- **Release ready:** fresh TypeScript/Vite build on the merged source passed (existing large-chunk warning). All **119** rebuilt runtime payloads and `.openai/hosting.json` match the original deployment tar byte-for-byte; archive SHA-256 **`c7f20ca9f1533397ce58b6f3f00a6caa7b101a43b6abb8a244ea42e941589b2c`**. Runtime/public/assets/package/hosting trees are unchanged from the independently reviewed tip. All 144 tests and broader browser/asset/save checks remain attributed to the independent review below, not falsely claimed as rerun during publication.
+- **Next:** recheck provider/PR/Site state, reconcile and normally push the exact merged source to the existing configured Site source repository, save the matching verified archive, deploy once, then verify terminal success/original URL/public audience/live bundle and isolated Sandbox before claiming release. Short-lived credential session was closed and memory references cleared; no persistent credential was written. Final target art and physical GPU/FPS/Safari/real keyboard/audio/true hidden-tab/native acceptance remain open; nonblocking P3 sale-toast wording is deferred, with no code fixes added during release.
+- [Publication receipt](docs/V5_PUBLICATION_RECEIPT_2026-10-24.md). Library delivery remains unavailable because the required helper failed at read-only hosted-app discovery before any upload; no native Library IDs or uncertain writes. Complete source/build/evidence packages remain preserved; attachment delivery does not block an otherwise safe publication.
 
 ## Independent v5 review — 2026-10-24T03:00:26+08:00
 
@@ -21,7 +23,7 @@ Last updated: **2026-10-24T03:00:26+08:00** (Asia/Hong_Kong).
 - [Independent release-review summary](docs/reviews/V5_INDEPENDENT_RELEASE_REVIEW_2026-10-24_zh-HK.md) records results, reproduction, source/evidence links and limits. This review changed **documentation only on main**: no PR head/metadata change, application fix, merge, deployment, Site save/access/identity change, player-save manipulation or local Unity operation. No new public v5 release is claimed. The parent owns exact-source integration and authorized same-project publication, followed by the deployment receipt and user-facing link.
 - Documentation handoff checks: diff/whitespace and allowed-path review, unchanged application trees, normal non-force push, exact remote SHA/content readback; the documentation SHA is returned externally. Next: parent independently reads that SHA/update time, then coordinates the incremental release without treating the remaining nonblocking art gap as a reason to withhold it.
 
-## Canonical checkpoint and branch state
+## Historical canonical checkpoint and branch state — before v5 integration
 
 - Repository: https://github.com/wizardkeith/KeEv-games ; this file on `main` is the sole designated progress entry.
 - Verified source/candidate checkpoint: `220a7165d67ecb5214587a305f55603ffc285a7e`. This documentation-only successor preserves that complete source tree. Obtain this checkpoint's exact commit with `git log -1 --format=%H -- PROJECT_STATE.md`; the post-push receipt is recorded in issue #1.
@@ -31,10 +33,8 @@ Last updated: **2026-10-24T03:00:26+08:00** (Asia/Hong_Kong).
 
 ## Public Site versus repository candidate
 
-- Public Site: https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site
-- Identity: `appgprj_6ad82a08ed2881918ebcc2dd206a122d`; preserved `.openai/hosting.json`.
-- Sites read in this checkpoint confirmed latest version **11**, public access and the same live URL. Public v11 / Native 3D v3.1 source baseline is `10c070c8121aecfd9e3e1ac9d0db213947416a08` (supplied provenance; not a new deployment).
-- GitHub contains a later **unpublished v4 candidate**. No Site save, deployment, identity/access change or browser-save mutation was performed. Existing handoff invitations to publish are not authorization in this documentation task.
+- Public Site and audience remain unchanged: https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site ; public v11 / Native 3D v3.1, project `appgprj_6ad82a08ed2881918ebcc2dd206a122d`.
+- V5 is merged on GitHub at `c10bbc6cc5770ad3998dd1d9e4201228542cf2b8` but **not published**. The current provider blocker, verified archive and exact next steps are recorded at the top of this file. Earlier documentation-only publication restrictions describe their historical tasks and are superseded by the current owner's explicit same-Site release authorization.
 
 ## Completed functionality in the candidate
 
