@@ -1,6 +1,6 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-24T01:22:21+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-24T01:32:07+08:00** (Asia/Hong_Kong).
 
 ## Canonical checkpoint and branch state
 
@@ -24,7 +24,7 @@ Repository documentation and source retain the Day 1 shop, ten-product economy, 
 ## Newly verified synchronization evidence
 
 - `git fsck --full` passed. All **11** commits through v11 were individually checked with `git merge-base --is-ancestor` against live main: all passed. The baseline has **593** tracked files, and candidate main has **691**. Complete original Git history/source at that exact baseline is present remotely; no single-snapshot substitute was used.
-- [Full candidate inventory](docs/SYNC_CHECKPOINT_INVENTORY.tsv) records every candidate path, mode, Git blob, size and SHA-256. All 691 working files matched their fetched Git blobs. Inventory SHA-256: `6f1a1351747242e48bb3ee9356df0de367004af6e3ad1dec1d0f23ade3d7a2e7`. It is pinned to the pre-documentation candidate, intentionally excludes this checkpoint's three new documentation files; resulting tree has 694 tracked files and 20 commits.
+- [Full candidate inventory](docs/SYNC_CHECKPOINT_INVENTORY.tsv) records every candidate path, mode, Git blob, size and SHA-256. All 691 working files matched their fetched Git blobs. Inventory SHA-256: `6f1a1351747242e48bb3ee9356df0de367004af6e3ad1dec1d0f23ade3d7a2e7`. It is pinned to the pre-documentation candidate, intentionally excludes this checkpoint's three new documentation files; the initial synchronization checkpoint had 694 tracked files and 20 commits. The closing receipt adds a documentation-only commit.
 - Rechecked `evidence/native-v4/preservation.json`: `src/core`, `src/platform`, `src/content`, `src/narrative`, `source-inputs`, `.openai`, package manifest and lockfile are byte-identical to v11.
 - Both videos' SHA-256 values match `evidence/native-v4/browser/video-metadata.json`. This checks file integrity, not fresh viewing or acceptance.
 - No standalone tracked credential-scan report was found. Newly scanned all **777 unique reachable historical blobs** for private-key headers and common GitHub/AWS/OpenAI token signatures: zero matches. This bounded scan is not an exhaustive secret, embedded-archive or personal-data audit.
@@ -56,5 +56,23 @@ Tracked `evidence/native-v4/tests.log` records **142 passed / 0 failed**; produc
 - Owner art/UX acceptance remains pending. Software-rendered cloud evidence is not physical-phone GPU/FPS/keyboard/audio acceptance. Visitor B lacks its own separate handoff video; rig assets remain articulated rigid hierarchies, not embedded skeletal clips.
 - Unity/C#/URP and iOS/Android ports remain pending; active TypeScript simulation is `PORT_REQUIRED_FOR_UNITY`. No full Tokyo seven-day expansion or economy rebalance is authorized here.
 - Do not force push, restore an older snapshot over newer work, change code/assets in this task, publish/recreate the Site, change identity/access, or manipulate Normal saves.
-- Next: parent independently reads this exact GitHub checkpoint SHA and timestamp and records agreement. Cross-environment agreement is **pending that independent read**, not assumed from this push. Then seek the owner's next explicit development/acceptance task; publication remains separately scoped.
+- Next: parent independently reads this exact GitHub checkpoint SHA and timestamp and records agreement. The original pending cross-environment check is now completed for the exact checkpoint identified in the closing receipt below. Then seek the owner's next explicit development/acceptance task; publication remains separately scoped.
 - Library unified handoff `Evana_KeEv_Three_Project_Unified_Handoff_2026-10-24.txt` was read fully. Its empty-repository/unimplemented-v4 statements are stale relative to live main; preserved historical material must not replace the newer candidate.
+
+## Closing cross-environment receipt — 2026-10-24T01:32:07+08:00
+
+- Original verified checkpoint timestamp: **2026-10-24T01:22:21+08:00** (Asia/Hong_Kong). Receipt recorded in this documentation update at **2026-10-24T01:32:07+08:00** (Asia/Hong_Kong); the original timestamp is not the time of the later local inspection.
+- Parent reports that local executor task `01a169ca-b43d-74e3-882f-f4985f05b00f` independently read remote `main` and SHA-pinned `PROJECT_STATE.md` for all three projects. The parent connector independently confirmed the same values. The agreed checkpoints are:
+
+| Project | Independently matched main SHA | Matched progress timestamp |
+| --- | --- | --- |
+| KeEv-games | `36caa1dd664b13aa0c51e179d6382021c1eb8483` | `2026-10-24T01:22:21+08:00` |
+| KeEv-ledger | `898611d657aa5e6fece25d7768d42b24ea6a382d` | `2026-10-24T01:22:21+08:00` |
+| KeEv-website | `ac759aed1716850e67446af81010ca027ba73bbe` | `2026-10-24T01:22:21+08:00` |
+
+- This repository's matched checkpoint is `36caa1dd664b13aa0c51e179d6382021c1eb8483`. The previous pending cross-environment comparison is **complete for those exact commits**. This closing documentation successor will have a different SHA, supplied for final parent readback; it is not falsely described as already independently cross-checked.
+- Local connection is now authorized and read-only Git/network access succeeded. These are access observations, distinct from local repository availability, installed toolchains, native Editor access or device acceptance. The local task made no file/settings changes and ran no builds or tests.
+- The registered local Game folder is unborn `master`, with no commits or remote, and untracked `outputs/` and `work/`. A separate local-only Unity working tree is also unborn `master`, with no remote: **136 staged additions, 6 unstaged modifications and 18 untracked files**. This unsynchronized Unity work is not a published remote branch and is **not included in Web GitHub main**. Preserve it; never overwrite, reset or import over it. Any future synchronization requires separate inspection and the appropriate explicit task.
+- Local live-task listing did not return and was stopped; live task state remains unverified. The local findings are attributed to the parent-provided executor receipt, not a fresh inspection from this cloud checkout. Absolute personal paths are intentionally omitted.
+- This closing update changes only `PROJECT_STATE.md`. Documentation diff/whitespace checks and normal remote push/readback are performed; no application code, assets, builds/tests, Site/Wix publication, settings or local Unity work are changed. Prior product, acceptance and release limitations remain in force.
+- Next: parent reads back this closing documentation SHA and current update time; future application work follows the owner's explicit task and must preserve unsynchronized local work.
