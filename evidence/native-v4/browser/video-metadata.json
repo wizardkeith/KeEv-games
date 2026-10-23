@@ -1,0 +1,51 @@
+{
+  "encoded_frame_rate_is_not_game_fps": true,
+  "unedited_original_playwright_recordings": true,
+  "gameplay_source_commit": "43fe276",
+  "gameplay_app_src_tree": "7e4c3847b114806edd061a8ded1f2844119fc5b4",
+  "same_app_src_as_candidate": true,
+  "gameplay_quality": "Low; 1000x760; software SwiftShader WebGL2",
+  "ui_continuation": "Independent browser UI acceptance resumes an authentic post-game QA checkpoint; full gameplay is in interaction.webm",
+  "videos": [
+    {
+      "file": "evidence/native-v4/browser/interaction.webm",
+      "sha256": "4e8e341cb425183a89d7dca3ef32f4ab17badcf5d0455937c7a41f458d6e7c40",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp8",
+            "width": 1000,
+            "height": 760,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "122.680000",
+          "size": "6034516"
+        }
+      }
+    },
+    {
+      "file": "evidence/native-v4/browser/ui-acceptance.webm",
+      "sha256": "454af10c77c73338a6ca8a24e820d7716eb64dfa21602f148e14d06b604dbfdf",
+      "metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp8",
+            "width": 1000,
+            "height": 760,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "34.680000",
+          "size": "3678806"
+        }
+      }
+    }
+  ]
+}

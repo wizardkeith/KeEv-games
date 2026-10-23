@@ -1,0 +1,11 @@
+{
+  "bundle_sha256": "768bf67a90d8d5f73dc0f483b3f70e336f2cb61a6628a428de1f6e3df8669dd5",
+  "bundle_complete_history": true,
+  "baseline_commit": "10c070c8121aecfd9e3e1ac9d0db213947416a08",
+  "baseline_files_verified": 593,
+  "handoff_payload_hashes_verified": 25,
+  "working_repository": "wizardkeith/KeEv-games",
+  "origin_preserved": true,
+  "branch": "codex/little-shop-v4",
+  "import": "git fetch source-history.bundle main; git switch -c codex/little-shop-v4 FETCH_HEAD (START_HERE section A)"
+}

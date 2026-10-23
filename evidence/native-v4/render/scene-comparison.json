@@ -1,0 +1,12 @@
+{
+  "baseline": "10c070c8121aecfd9e3e1ac9d0db213947416a08",
+  "candidate": "bf3370454da514e87507efd5d6e61c32f6ddd9b0",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "quality": "high",
+  "camera": "Unmodified native.view.v3.1 curated shop camera / original zoom; same framing and native lighting constants",
+  "state": "initial-storage (actual empty Sandbox made by UI); stocked hero uses authentic post-purchase QA checkpoint, without invented balances",
+  "middle": "Same baseline, only explicit CCW adapter patch saved alongside the screenshot"
+}

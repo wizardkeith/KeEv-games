@@ -1,0 +1,15 @@
+{
+  "baseline": "10c070c8121aecfd9e3e1ac9d0db213947416a08",
+  "protected_paths": [
+    "src/core",
+    "src/platform",
+    "src/content",
+    "src/narrative",
+    "source-inputs",
+    ".openai",
+    "package.json",
+    "package-lock.json"
+  ],
+  "byte_identical_to_baseline": true,
+  "scope": "Core economy, storage, content/Bible/narrative, dependency lock and Site identity; presentation/UI changes are intentional"
+}

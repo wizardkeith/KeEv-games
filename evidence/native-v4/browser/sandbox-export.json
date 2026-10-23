@@ -1,0 +1,204 @@
+{
+  "shopId": "shop.player.1",
+  "region": "tokyo",
+  "district": "ikebukuro",
+  "archetype": "retail",
+  "specialization": "lifestyle-select",
+  "layoutId": "layout.graybox.1",
+  "staffRoster": [
+    "staff.graybox"
+  ],
+  "schemaVersion": 2,
+  "contentVersion": "w1-provisional-1",
+  "simulationVersion": "ts-w1-2",
+  "recovery": {
+    "total": 0,
+    "grants": []
+  },
+  "mode": "sandbox",
+  "rankingEligible": false,
+  "worldStateId": "tokyo.static.w1",
+  "shopName": "小森選物 · v4",
+  "companyName": "",
+  "logo": "◇",
+  "cash": 5700,
+  "purchases": 1220,
+  "watermark": 1792551600000,
+  "lastWallTime": 1792775142584,
+  "revision": 17,
+  "open": true,
+  "revealed": false,
+  "tutorial": 4,
+  "eventSequence": 22,
+  "inventory": {
+    "off.notebook": {
+      "stock": 0,
+      "price": 80,
+      "bookCost": 0,
+      "demandRemainder": 0
+    },
+    "off.pencil": {
+      "stock": 0,
+      "price": 25,
+      "bookCost": 0,
+      "demandRemainder": 0
+    },
+    "off.mug": {
+      "stock": 1,
+      "price": 130,
+      "bookCost": 70,
+      "demandRemainder": 0
+    },
+    "off.tea": {
+      "stock": 0,
+      "price": 75,
+      "bookCost": 0,
+      "demandRemainder": 0
+    },
+    "off.cookie": {
+      "stock": 0,
+      "price": 45,
+      "bookCost": 0,
+      "demandRemainder": 0
+    },
+    "off.tote": {
+      "stock": 0,
+      "price": 150,
+      "bookCost": 0,
+      "demandRemainder": 0
+    },
+    "off.card": {
+      "stock": 0,
+      "price": 35,
+      "bookCost": 0,
+      "demandRemainder": 0
+    },
+    "off.towel": {
+      "stock": 0,
+      "price": 90,
+      "bookCost": 0,
+      "demandRemainder": 0
+    },
+    "off.tray": {
+      "stock": 2,
+      "price": 110,
+      "bookCost": 110,
+      "demandRemainder": 0
+    },
+    "off.vase": {
+      "stock": 0,
+      "price": 170,
+      "bookCost": 0,
+      "demandRemainder": 0
+    }
+  },
+  "shelves": [
+    "",
+    "off.towel",
+    "off.mug"
+  ],
+  "commandIds": [
+    "25053dbc-b77a-45a9-bd48-d67c6d0fee6a",
+    "2433dc88-56d5-42fb-abb6-04a20e5aaeb7",
+    "c6a7f301-3a9d-42a6-be2d-d2cd086df1e2",
+    "6a1719cb-f267-416e-b85e-592880739711",
+    "2877d495-6470-47d1-a8c1-a2f977c1a290",
+    "e4f070b2-30fb-4a30-9147-be28cc367d53",
+    "e47ff7b7-bb43-40c8-a171-08c416ded4f8",
+    "f74c5b1b-9221-4372-83c6-85e1fb584f5b",
+    "5c656807-b92b-4c9e-9387-5827a7dd5505",
+    "e67e2ca1-8177-4fa1-82c9-23a4e349bc7b",
+    "6aabc084-68bf-484e-8322-314fcf62359f",
+    "38d6495f-c8b6-4024-afce-0faa9229b78f",
+    "dc07bf37-20e6-4d8f-b521-fe30a630c26d",
+    "786b4176-554b-4273-9ab8-47ecfb518b82",
+    "876bb6d4-1e5f-4b38-86ae-dafb37126d19"
+  ],
+  "reports": [
+    {
+      "day": "2026-10-21",
+      "sales": 2040,
+      "cogs": 1040,
+      "salary": 60,
+      "rent": 40,
+      "operating": 20,
+      "units": 22,
+      "net": 880
+    }
+  ],
+  "breakdown": [
+    {
+      "id": "base",
+      "value": 6,
+      "unit": "units/h"
+    },
+    {
+      "id": "world",
+      "value": 0,
+      "unit": "bp"
+    },
+    {
+      "id": "offering",
+      "value": 0,
+      "unit": "bp"
+    },
+    {
+      "id": "staff",
+      "value": 0,
+      "unit": "bp"
+    },
+    {
+      "id": "equipment",
+      "value": 0,
+      "unit": "bp"
+    },
+    {
+      "id": "set",
+      "value": 0,
+      "unit": "bp"
+    },
+    {
+      "id": "event",
+      "value": 0,
+      "unit": "bp"
+    },
+    {
+      "id": "capacity",
+      "value": 18,
+      "unit": "units/h"
+    },
+    {
+      "id": "conversion",
+      "value": 10000,
+      "unit": "bp"
+    },
+    {
+      "id": "sales",
+      "value": 2040,
+      "unit": "economic-units"
+    },
+    {
+      "id": "variable",
+      "value": 1040,
+      "unit": "economic-units"
+    },
+    {
+      "id": "period",
+      "value": 120,
+      "unit": "economic-units"
+    },
+    {
+      "id": "net",
+      "value": 880,
+      "unit": "economic-units"
+    },
+    {
+      "id": "ratings",
+      "value": 0,
+      "unit": "bp"
+    }
+  ],
+  "salaryRemainder": 0,
+  "rentRemainder": 0,
+  "operatingRemainder": 0
+}

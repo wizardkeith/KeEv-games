@@ -1,0 +1,61 @@
+{
+  "crop": "Two 600x590 regions, same canvas coordinates, excluding different column labels",
+  "scope": "Current character fixture Web path vs standard GLB loader, identical camera/pose/light. Does not validate full gameplay/prop ownership or physical GPUs.",
+  "results": [
+    {
+      "image": "misaki-0-idle-flat.png",
+      "sha256": "119185b175b63a9cb071b1663ba41a3e5b0b659c8c8026834badee5329d8353b",
+      "mean_absolute_rgb_difference_0_to_255": 0.0
+    },
+    {
+      "image": "misaki-0-idle-normal.png",
+      "sha256": "f3b4b3e32159db9b36ee59815ec73cd67fc8350ef3944472ba9ecbe82034c835",
+      "mean_absolute_rgb_difference_0_to_255": 0.001155367231638418
+    },
+    {
+      "image": "misaki-180-idle-normal.png",
+      "sha256": "11135b06dc1dcc51ce4da3d5f021a4d1da4e8462927be095d1a0a5b70f4ec4ab",
+      "mean_absolute_rgb_difference_0_to_255": 0.0004943502824858757
+    },
+    {
+      "image": "misaki-45-serve-normal.png",
+      "sha256": "9e036f0764f9ba9d61b0a0c70bcda73234fd5db8b9ca5f923a11139affa071d8",
+      "mean_absolute_rgb_difference_0_to_255": 0.0005423728813559322
+    },
+    {
+      "image": "visitor-a-0-walk-normal.png",
+      "sha256": "8ef4998d228178693ef00a10872dc13a8eea02752563e1b1f8a336608733270b",
+      "mean_absolute_rgb_difference_0_to_255": 0.0003917137476459511
+    },
+    {
+      "image": "visitor-a-180-walk-normal.png",
+      "sha256": "fdb28f93f0b199315a1081a47cb82b5a1176c4f246d32ff2dc86e1ede807d628",
+      "mean_absolute_rgb_difference_0_to_255": 9.698681732580038e-05
+    },
+    {
+      "image": "visitor-a-45-idle-normal.png",
+      "sha256": "678e1e0f8e1d30df8a220e5a46522be4685cd6b47389eb554b564bdb9ed1a2c4",
+      "mean_absolute_rgb_difference_0_to_255": 0.00043879472693032014
+    },
+    {
+      "image": "visitor-b-0-idle-normal.png",
+      "sha256": "9a792f01237d2663274b801a40328383aa42358e3ccf3461be5b151466a9b3d7",
+      "mean_absolute_rgb_difference_0_to_255": 0.001098870056497175
+    },
+    {
+      "image": "visitor-b-0-walk-no-shadows.png",
+      "sha256": "dfd23c4bd5d22487817c1ac5a570c3f707e5808c95534cd44fc3b5c4a68a613e",
+      "mean_absolute_rgb_difference_0_to_255": 0.0008794726930320151
+    },
+    {
+      "image": "visitor-b-180-idle-normal.png",
+      "sha256": "5c980c5e3a98aada3b3c71aae1a73ab1da6dca7ade442e2ef0093d5db0489d65",
+      "mean_absolute_rgb_difference_0_to_255": 0.00035687382297551793
+    },
+    {
+      "image": "visitor-b-45-walk-normal.png",
+      "sha256": "177dee0effab31505ff0d8aeb4fe4e2d7df805cabbf146e0563202f9d68950f4",
+      "mean_absolute_rgb_difference_0_to_255": 0.0005451977401129943
+    }
+  ]
+}

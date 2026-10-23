@@ -1,53 +1,35 @@
-# Native 3D v3.1 candidate (2026-10-23)
+# 下一站・小店物語 / Next Stop, Little Shop — v4 candidate
 
-Opening/Sandbox guidance, planted visitor feet and skirt clearance, cross-clip work playback, offline-return presentation, conditional customer handoff, camera and native lighting/exterior refinements are implemented. The same public Site, economic saves and Day1 story remain in use. See docs/HANDOFF.md for 133-test results and the explicit new3D visual limit. Current native masters: run the three tools/export-native-*.ts scripts with node --import tsx. Older art export commands below rebuild historical masters only.
+A playable Web candidate continuing the complete Site v11 / Native 3D v3.1 source history. It keeps the original Bible, ten-product economy, five locales, transactional local saves, independent Normal/Sandbox modes and Site identity.
 
-# 下一站・小店物語 / Next Stop, Little Shop
+v4 adds per-product stock quantities and inline shelf placement, corrects CCW front-face handling in the right-handed neutral mesh adapter, improves original character/furniture/wood assets, and refines planted walking, safe turns, browsing and customer bag handoff. See [v4 implementation and rebuild](docs/V4_CANDIDATE_zh-HK.md). The approved art reference and full task remain in [docs/codex-v4](docs/codex-v4/).
 
-W1.1B focused 3D art candidate (2026-10-22), extending accepted UI v6 and W1.1A1 closeout by KeEv Games. The player names their own business. This checkpoint improves the ten-item management loop and preserves the original Bible. It stops before full Tokyo content production.
+## Run
 
-## Run and verify
+Node 24.19.0 / npm 11.9.0 were used with the unchanged lockfile.
 
-Node 24.19.0 was used. Runtime and development dependencies are exact in package.json and package-lock.json.
-
-```bash
+```sh
 npm ci
 npm test
 npm run validate
 npm run asset-check
 npm run replay
 npm run build
+npm exec vite -- --host 0.0.0.0
 ```
 
-`dist/` is the static deployment directory. Serve it through an ordinary HTTPS static host with WebGL2, IndexedDB and ES modules. There is no server or paid service dependency. No user-side SDK or native environment is needed to play the deployed Site. The game uses local browser storage, not cloud accounts.
+`dist/` is the production static build. It requires WebGL2, IndexedDB and ES modules. The deployed game needs no user-side SDK or local development tools. There is no backend or new secret dependency. Saves are browser-local, so different preview origins have independent progress. Test with the explicit Sandbox controls; never modify a player's Normal save to stage visuals.
 
-Procedural source and lossless masters are retained in `tools/assets.mjs` and `assets/masters/`. `npm run assets` regenerates the GLBs and WAV. Fonts are already supplied: rebuilding the game does not download fonts. To regenerate derived font subsets, run `python tools/fonts.py` with Python 3.12 and fonttools 4.61.1; original downloaded TTF masters and OFL licences remain intact. The derivative TTFs avoid an unavailable optional Brotli encoder. The source master is not overwritten by web optimization.
+## Art and QA
 
-## First play
+Editable procedural sources, lossless texture masters, reusable GLBs and rig/socket contracts are retained. Web and GLB use the same character vertices; original older masters remain in Git history. These are articulated rigid models with external procedural motion and leg IK, not embedded skeletal clips or completed native ports.
 
-1. Enter a shop name and optional company/brand and mark.
-2. Choose sandbox test clock for a prompt demonstration; it has its own save and cannot enter rankings.
-3. Buy a few items you like, select a display, and place them there. Notebook + pencil on two shelves optionally activates the test desk set. Apply/cancel prices from Shop.
-4. Open the shop, then advance an hour. Read the report: stock purchases affect cash/inventory; only sold inventory is expensed. Wages, rent and operating costs are distinct.
-5. Restock, change prices, try the desk test set and reveal the zero-stat paper sample after a first sale. No payment or random loot exists.
+[Current evidence](evidence/native-v4/) includes test/build/replay results and actual Chromium WebGL2/SwiftShader screenshots and video. The rendered character fixture compares the Web adapter with the standard GLB loader at identical camera/pose/light. Tests and NullEngine alone are not visual acceptance. Desktop responsive checks are distinct from physical phones; no physical-device FPS or audio acceptance is claimed.
 
-Real time uses Tokyo 10:00–20:00 provisional business hours, with one real day = one game day. The static visual world does not follow day/night yet. Sandbox clock advances only through explicit controls. The original normal save is preserved when switching modes. Prototype saves are not promised to migrate to production accounts. Export/import is in Settings. Unknown save versions are rejected without replacing good data.
+The active simulation remains TypeScript, classified `PORT_REQUIRED_FOR_UNITY`. Original Unity/C#/URP and native-device gates remain pending. Scope stays at the established Day 1 game rather than introducing additional Tokyo story days or rebalancing the economy.
 
-## Evidence and limitations
+## Publication
 
-Read docs/HANDOFF.md and docs/CONTRACT.md. `evidence/` contains actual test/build/validator output. The active simulation is `src/core/simulation.ts`, classified **PORT_REQUIRED_FOR_UNITY**. C# headless proof passed, but the browser-WASM build failed with an MSBuild task-host error after one correction. `proof/csharp-headless/` is frozen evidence, not a second maintained economy and not active Web source. Its fourteen tests can be rerun with .NET 10.0.402:
+Keep `.openai/hosting.json` and the existing public Site. GitHub pushes and candidate build ZIPs do not publish that Site. The cloud environment has no Sites publishing tool; use the original Work/Sites publishing flow for this candidate. No replacement Site or deployment receipt is invented.
 
-```bash
-cd proof/csharp-headless
-dotnet run --project adapters/Headless -c Release -- test
-```
-
-Browser DOM/IndexedDB walkthrough and CSS viewport checks are recorded in docs/HANDOFF.md, evidence/ui_2026_10_22/ and preserved evidence/w1_1a1/. Owner-provided v6 PNGs and video frames have been viewed as real 3D BEFORE evidence. The supported cloud browser still reports WebGL not supported, so the current candidate AFTER appearance, FPS and physical-device/native testing remain unverified. GLB validation / NullEngine import is structural evidence only. This is an art review candidate, not a commercial launch.
-
-## Source and compatibility
-
-Snapshot schema 2 / simulation ts-w1-2 migrates valid v1 data without resetting saves. Read docs/MIGRATION_W1_1.md and docs/RECOVERY_W1_1.md. W1.1A1 preserves W1.1A art, W1.1 economy and saves. Additional art source: src/art/, src/ui/thumbnails.ts; 15 original reusable GLB masters and Web copies; see docs/ART_W1_1A1.md and docs/VFX_W1_1A.md. Current interchange command: `node --import tsx tools/art-w1_1b.ts`; independent import: `node tools/validate-art-w1_1b.mjs`. The original W1.1A1 exporter now explicitly imports its frozen source snapshot, preserving historical outputs. Native Unity/URP and Android/iOS adapters remain pending.
-
-For safe local visual review, build with `VITE_ART_REVIEW=1 npm run build`; it uses a separate QA database and mode/draft/locale/presentation keys. Never overwrite an existing sandbox to stage screenshots. Rebuild with ordinary `npm run build` before packaging production. The review switch is compile-only; production has no review query hook. See docs/W1_1A_Visual_Check_zh-HK.md for the three optional follow-up views.
-
-Source corrections remain closed after the accepted startup visibility fix. A separately authorised 2026-10-22 UI-only pass refines stock/journal hierarchy and five-language player copy. A subsequent authorised 3D-only pass adjusts color interpretation, palette, grounding, existing shadows and curated framing. Economy remains frozen; candidate AFTER visual confirmation is still pending. See docs/ART_W1_1B.md. Delivery ZIP creation/closed-reader source verification is implemented in tools/checkpoint.py; see the current handoff and its actual publication receipt.
+The previous README is preserved in [docs/archive/README_v3_1.md](docs/archive/README_v3_1.md); its old WebGL-unavailable observations describe the historical environment.

@@ -1,0 +1,51 @@
+[
+  {
+    "seconds": 7.063,
+    "name": "purchase committed",
+    "id": "off.mug",
+    "quantity": 1,
+    "cash": 5700,
+    "stock": 1,
+    "doubleClick": false
+  },
+  {
+    "seconds": 7.628,
+    "name": "display committed",
+    "id": "off.mug",
+    "slot": 2,
+    "shelves": [
+      "",
+      "off.towel",
+      "off.mug"
+    ]
+  },
+  {
+    "seconds": 7.926,
+    "name": "invalid input, insufficient cash, focus, per-item drafts and retained filter verified"
+  },
+  {
+    "seconds": 10.587,
+    "name": "actual save export/import/reload preserves state and drafts"
+  },
+  {
+    "seconds": 10.976,
+    "name": "purchase committed",
+    "id": "off.notebook",
+    "quantity": 1,
+    "cash": 5660,
+    "stock": 1,
+    "doubleClick": false
+  },
+  {
+    "seconds": 31.186,
+    "name": "320/375px five-language responsive and keyboard checks passed"
+  },
+  {
+    "seconds": 34.909,
+    "name": "Normal and Sandbox isolate UI drafts and committed game progress"
+  },
+  {
+    "seconds": 35.191,
+    "name": "uncut interaction video saved"
+  }
+]
