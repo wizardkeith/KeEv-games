@@ -82,5 +82,7 @@ export function misakiPose(gesture:MisakiGesture,progress:number){
  const neutral={headTilt:0,armLeft:0,armRight:0};
  if(!Number.isFinite(progress)||progress<=0||progress>=1)return neutral;
  const envelope=Math.sin(Math.PI*progress);
- return {headTilt:(gesture==='sale'?.10:.045)*envelope,armLeft:gesture==='sale'?.08*envelope:0,armRight:gesture==='greet'?-.55*envelope*(.88+.12*Math.sin(progress*Math.PI*4)):-.08*envelope};
+ // At the existing right-shoulder pivot, positive Z lifts the hand outward.
+ // Keep the same gentle envelope; the previous negative sign swept into the torso.
+ return {headTilt:(gesture==='sale'?.10:.045)*envelope,armLeft:gesture==='sale'?.08*envelope:0,armRight:gesture==='greet'?.55*envelope*(.88+.12*Math.sin(progress*Math.PI*4)):-.08*envelope};
 }

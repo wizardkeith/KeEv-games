@@ -1,0 +1,46 @@
+✖ opening story CTA executes actual run/act/Saves once; duplicate, deferred, stale and normal-clock intents never close an open shop (16.024749ms)
+✖ all five current-report pending messages preserve real first-profit history after same-day losses without rebuilding an old amount (10.092531ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 820.975931
+
+✖ failing tests:
+
+test at tests/day1-focused-fix.test.ts:1:1272
+✖ opening story CTA executes actual run/act/Saves once; duplicate, deferred, stale and normal-clock intents never close an open shop (16.024749ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /data-action="story-open"/. Input:
+  
+  '<section id="day1-story" class="next-card day1-card" aria-labelledby="day1-heading" data-beat="open"><div class="day1-meta"><span class="eyebrow">The first light</span><button type="button" data-action="story-dismiss" data-beat="open" class="" >Put this away</button></div><h2 id="day1-heading" tabindex="-1">Misaki</h2><p>Open when you’re ready. Trading hours are 10:00–20:00 Tokyo time. The off.tea you’re choosing now feels like an invitation to sit down and take a breath.</p><div class="day1-actions"><button type="button" data-action="story-shelves" data-beat="open" class="primary" >Continue</button><button type="button" data-action="story-skip" data-beat="open" class="" >Skip this part</button></div></section>'
+  
+      at TestContext.<anonymous> (/workspace/sites/next-stop-little-shop-w1-readonly/tests/day1-focused-fix.test.ts:22:9)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '<section id="day1-story" class="next-card day1-card" aria-labelledby="day1-heading" data-beat="open"><div class="day1-meta"><span class="eyebrow">The first light</span><button type="button" data-action="story-dismiss" data-beat="open" class="" >Put this away</button></div><h2 id="day1-heading" tabindex="-1">Misaki</h2><p>Open when you’re ready. Trading hours are 10:00–20:00 Tokyo time. The off.tea you’re choosing now feels like an invitation to sit down and take a breath.</p><div class="day1-actions"><button type="button" data-action="story-shelves" data-beat="open" class="primary" >Continue</button><button type="button" data-action="story-skip" data-beat="open" class="" >Skip this part</button></div></section>',
+    expected: /data-action="story-open"/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/day1-focused-fix.test.ts:3:1196
+✖ all five current-report pending messages preserve real first-profit history after same-day losses without rebuilding an old amount (10.092531ms)
+  AssertionError [ERR_ASSERTION]: The input was expected to not match the regular expression /首次|仍待達成/. Input:
+  
+  '首次小盈利仍待達成，慢慢經營就好。'
+  
+      at TestContext.<anonymous> (/workspace/sites/next-stop-little-shop-w1-readonly/tests/day1-focused-fix.test.ts:40:160)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '首次小盈利仍待達成，慢慢經營就好。',
+    expected: /首次|仍待達成/,
+    operator: 'doesNotMatch',
+    diff: 'simple'
+  }

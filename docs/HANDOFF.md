@@ -1,62 +1,44 @@
-# Day 1「第一盞燈」可玩候選 — HANDOFF
-2026-10-22（香港）
+# Day 1 集中修正 — HANDOFF
+2026-10-23（香港）
 
 同一 Site：appgprj_6ad82a08ed2881918ebcc2dd206a122d
 https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site
-起點 canonical main：503ce1dfc22d369cc512084c1a4db9aa2930885c；v7／active／public／policy2。沒有覆蓋後續工作。
-最終 source commit、saved version、部署及 archive hash 見交付包內實際 DELIVERY_RECEIPT.json。該回執是 commit 後產生的交付 metadata，不冒稱存在同一 source commit。
+起點核對：canonical main 2686019a76d020543cfa0bca3efa867422add4d5／v8／public／policy2，clean；接續此來源，沒有回退其他工作。
+最終 commit、版本及實際部署結果見精簡交付包內 DELIVERY_RECEIPT.json；回執是 commit 後產生，並非聲稱已存在同一 source commit。
 
-## 已實作
-- 獨立 Misaki 3D 候選：不對稱 bob、側髮結／葉形髮夾、sage 外衣、米色長圍裙、plum 裙及平底鞋。約3.66頭身／高1.48m，平靜與微笑真實表情幾何。短招呼、售後程序動作，沒有根節點滑動。不是 generic 改名／換色。actor.misaki.day1.v1 明確綁定 staff.graybox；經濟 roster、薪酬／能力不變。
-- 五語 Day1 台詞／手記，各52新 keys；原各174 keys 不變。可收起／略過／重看；自由選物→上架→開店→真實首售→P&L→溫柔手記。茶包／其他選物的反應依目前實際狀態，不假裝記得未保存的歷史選擇。
-- P&L 重新讀取正在顯示的 validated report，附 Tokyo「截至」日期／時間；正／負分支不依舊盈利已讀旗標。舊玩家用回顧語氣，不重給資源或強迫重買。
-- 顧客依 trading／quality 在首售前可以瀏覽。售出摘要／Misaki 售後回應才跟 committed eventSequence 增量；多件快進是一次摘要，reload／import／mode 不補播。沒有具名顧客交易 ledger 或虛構指定客人購買某商品。
-- 收銀枱新增暖色迎賓紙卡，利用局部材質及非常低 emissive 作焦點；沒有新增燈、陰影貼圖、粒子、bloom、render target。實際柔光觀感待 GPU 畫面。
-- 同商品換架提示具體 from／to，原 display 規則不變。原 reveal 資格及零經營加成小樣本保留，沒有 Day6 Prestige 燈獎勵。
+三項修正：
+A. 開店故事主 CTA 使用原五語「開始營業／Open shop」標籤，直接經 run→act→Saves.command 開店，不再把玩家送到窄屏隱藏開店控制的貨架頁。只在未開店且不 busy 時執行；重複／延後事件不新增關店 toggle，另一分頁舊 revision 仍被原 CAS 拒絕。正常模式原時間結算及 committed boundary 保留。
+B. 五語 profitPending 改為「目前這份報表沒有正淨利」的溫和提示，不否認已發生／已讀首次盈利。主卡／手記根據目前 report 判斷，不從 profitDay 重建舊金額或當作目前盈利證據。正利但記憶點尚未讀完時仍給 P&L 說明，不誤用無正利提示。沒有新 ledger／schema／reward。
+C. Misaki greet 右肩 Z 旋轉向外，保留原柔和曲線／幅度、售後 pose、neutral endpoints、原地站位及全部取消政策。只改程序 pose，不改模型幾何。兩個 GLB 及 public 副本與 v8 完全相同；manifest source hash 已更新，附 greeting-fix-rebuild.json。GLB 沒有 embedded clips，未聲稱動畫烘焙入檔案。
 
-## 存檔／生命週期
-獨立 story.day1.v1.<mode>.<shopId> 記錄，使用原 IndexedDB saves store。
-純 read／skip／dismiss／reopen 在 serialized transaction 讀最新 validated Snapshot 與 sidecar，合併單調 IDs；不經 Saves.write，不呼叫 core command／settle，不改任何核心欄位，連 revision／commandIds／watermark／lastWallTime 亦完全不變。
-所有經濟資格由 Snapshot 推導；schema2／ts-w1-2、時鐘、營業段、需求、價格及成本不改。
-import 與故事清理一次原子提交，仍用本地舊 revision＋1；舊 callback 不能恢復匯入前標記。缺失／壞v1可重建，未支援較新版本忽略並保留。normal／sandbox 隔離，沒有新增玩家 reset 功能。
-raw Snapshot 備份相容，UI 說明故事閱讀位置匯入後重新整理。
-Hidden／Skip／Minimal／Reduce Motion／Low／mode／import 取消新短動作，單一容量、不排隊；首次 deferred-world 不補播。
+重現及針對性驗證：
+- A/B 新回歸在舊來源分別重現錯誤導航及五語首次盈利未達成文案；修正後通過。
+- 真正 run／act／Saves 行為測試：首次開店只一個 command；連按 busy、延後已開店、舊分頁 stale、正常時鐘 target 均檢查。沒有改 core 開店規則。
+- 同一茶包 fixture：10:15 net +¥260；讀 report／memory／profit 後，14:15 net −¥540、cash ¥49,460。主卡及手記五語均不否認過往盈利，報表保留目前負數及 Tokyo 截至時間；未曾盈利分支仍可繼續。
+- 實際 Babylon RH root／yaw／shoulder hierarchy＋作者12邊 torso／skirt triangle half-planes：舊 p=.5/.6 手掌117/117頂點進入衣服；修正後全招呼101採樣，手掌／拇指在實體內的採樣頂點均0。這是幾何驗證，不是看過GPU畫面。
+- 原80具名案例與13個 test files byte-identical；新增3個缺口回歸，共83 PASS、0 FAIL／cancelled／skipped。
+- content validate PASS（10商品、原5語各174keys；Day1仍各52keys）；TypeScript／production build PASS。既有 large chunk warning 保留，並非效能驗收。
+- 154個保護檔案與v8相同，包括核心、storage、story state、原資產／字型、world、motion／feedback政策與package／lockfile；沒有改玩家進度、schema2／ts-w1-2、DB/store、薪酬／成本／需求／營業段。
+- Misaki 兩 GLB 重新匯出及 validator：0 errors／warnings，所有master/public bytes不變。沒有無因重造歷史資產。
 
-## 實際測試
-npm test：80具名 PASS，0 FAIL／cancelled／skipped。
-保留原62案例名稱與所有 assert 呼叫原文；兩份既有 VM fixtures 只補新 runtime bindings。
-新增18：storage7、art5、copy3、實際 main／world presentation boundary3。
-覆蓋核心 Snapshot 完整一致、純故事零核心寫入、多連線合併、import 原子 rollback／本地revision／舊回呼、壞／未來 sidecar、mode隔離、茶包固定路線、鉛筆自由選擇、時段外、同日正轉負、售前瀏覽、手勢取消、目前報表及安全文字。
-content validator PASS：10商品、5語各174 baseline keys；另5×52 Day1 keys 對齊／插值 PASS。
-TypeScript／Sites production build PASS；原 large chunk warning 保留，不當作效能通過。
-Misaki exporter：2 GLB共517,276bytes；Khronos 0errors／0warnings；實際 vertex／normal／indices／pivot／linear material parity、Babylon獨立匯入、曲面繞序／比例／落點通過。這不是GPU視覺驗收。
-preservation：179個受保護檔案與v7一致；原core／catalog／baseline五語／recipes／materials／direction／歷史資產與package／lockfile保持。
-證據：evidence/day1/；完整原測試與歷史證據保留。
+真正 browser QA：
+Supported managed preview，獨立QA副本及不同320／375 test DB，只改QA資料庫名稱，未接觸公開站 normal／sandbox。
+320×820鉛筆與375×820茶包：買5→上架→關入貨側欄→故事「開始營業」直接開店，無新drawer，next beat變sale。body clientWidth＝scrollWidth各320／375。
+兩路線實際 +15分鐘、P&L、memory／profit；茶包+¥260、鉛筆+¥10，reload保留。
+375茶包同日14:15實際−¥540、售5、收入3750／COGS1750／人工1270／租850／營運420／存貨帳面0；再實際查看五語主卡／手記，均為目前報表語意。
+這些是CSS viewport及UI操作，不是手機硬體／GPU／觸控認證。
 
-## 真正看過的介面
-Supported cloud browser、獨立review build／DB；沒有操作公開站玩家存檔。
-實際命名→買茶包5→架1→開店→＋15分鐘→報表→手記→盈利節拍→reload保留→reveal→重看／收起。
-截至Tokyo10:15：售出1、收入¥750、COGS¥350、人工¥70、租金¥50、營運¥20、net¥260、現金¥48,860、存貨帳面¥1,400。符合固定新測試起點。
-320×820 CSS iframe：五語故事／重看，body scrollWidth＝clientWidth＝320、card width290；繁中操作最少44px。泰文長段可讀；重看焦點到故事繼續，Return可繼續，收起回手記導航。不是手機實機／觸控硬體驗收。
-連續玩家主動操作時間未量測；5–10分鐘仍為沙盒設計目標，不把工具或編碼時間當遊玩時長。
+視覺界線：
+managed preview仍回報 Error: WebGL not supported。
+修正招呼的自然度、正常全景可讀性、calm／smile、售後動作及局部暖色紙卡仍為「3D 視覺待確認」。幾何／NullEngine／GLB驗證均不當成真正渲染。
+已接受W1.1B靜態美術維持；未擴展Day2、Ren、Momo、雨景、36商品、完整七日或native。
 
-## 3D 視覺待確認
-W1.1B靜態3D已由後續用戶AFTER影片完成獨立驗收，沒有重新變成待驗收。
-本輪預覽實際回報 Error: WebGL not supported；UI／經營／故事流程已看過。
-新Misaki輪廓／正常全景表情、局部暖色焦點、招呼／售後3D動作、小樣本3D開啟仍待真實畫面。
-沒有以NullEngine、GLB validator、camera矩陣或錄製fps冒稱GPU畫面／效能；Android／iOS／URP、手機30／60FPS均未驗收。
+回傳畫面：同一網址由手記重看，拍正常全景的招呼右手；再於沙盒營業段拍一次真實售後反應，加P&L截至時間及有側欄一張即可。勿重置正常進度，勿要求既有沙盒硬套全新fixture數字。
 
-簡單回傳：同一網址進沙盒，不重置正常存檔。正常全景＋有側欄各一張；另錄約30–90秒，拍招呼／目前選物、日間售出摘要、P&L「截至」時間及手記／小樣本。時段外可用原快進進Tokyo10:00–20:00；舊玩家可由手記重看，不需為劇情重買。既有沙盒累積租金／餘數不同，不應硬套全新fixture的¥260。
-
-## 可重建來源
-完整 source checkpoint 留同一 canonical Git；報告ZIP是交接／新資源／證據包，不冒稱包含整包歷史source。
-Node24／原lockfile：npm ci → npm test → npm run validate → npm run build。
-角色重匯：node --import tsx tools/export-misaki.ts。
-保留核對：node --import tsx tools/day1-preservation.ts。
-新設計卡 docs/MISAKI_DAY1_DESIGN.md；作者來源 src/art/misaki.ts、day1-focus.ts；程序姿態 misakiPose＋src/presentation/day1.ts；交換資產 assets/masters/day1、public/assets/day1；manifest／hash／權利來源 assets/authoring/day1。
-Metres／RH／+Y up／+Z forward，人物面朝-Z、地面pivot；無骨架／embedded clips的聲稱。程序動作及URP材質／光影仍需native adapter與實機校準。
-外觀／逐句台詞是今次原創提案；Bible只定service／regulars／cozy等定位，不能冒稱完整正式staff系統完成。
-
-W1.1B正常交接補註：15masters真實容量503,056bytes，原503,072屬文字誤差；檔案／manifest原本正確。歷史HANDOFF封存docs/HANDOFF_W1_1B_Archived.md；後續用戶影片完成該輪AFTER評審。
-未擴展Day2 suppliers／Ren／Momo／雨景／36商品／七日全套／native。下一步先收新角色／演出真實畫面。
+來源與證據：
+同一 canonical Git 保存完整來源及全部歷史；精簡ZIP只裝本輪交接／實際回執／測試與修正來源，不冒稱整包歷史source。
+npm ci → npm test → npm run validate → npm run build；角色交換重建仍為 node --import tsx tools/export-misaki.ts。
+evidence/day1-fix/ 保存 before／after、83具名測試、build／content、preservation及browser結果。
+assets/authoring/day1/greeting-fix-rebuild.json 保存來源hash與GLB不變記錄。舊v8交接封存docs/HANDOFF_Day1_v8_Archived.md。
+ZIP完成關閉後才驗CRC、檔案清單及manifest SHA256；部署回執實際包含在包內。
 

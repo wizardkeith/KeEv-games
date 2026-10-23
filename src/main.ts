@@ -119,6 +119,7 @@ app.addEventListener('click',e=>{
  const target=(e.target as Element).closest<HTMLButtonElement>('button[data-action]');if(!target||target.disabled)return;const a=target.dataset.action!,id=target.dataset.id!,n=Number(target.dataset.slot??u.slot);
  if(a.startsWith('story-')){
   const beat=(target.dataset.beat??'welcome') as BeatId;
+  if(a==='story-open'){if(busy||state.open)return;void run(async()=>{if(!state.open)await act('open');},'general',undefined,'open');return;}
   if(a==='story-read'||a==='story-skip'||a==='story-dismiss'){void storyAction(beat,a==='story-read'?'read':a==='story-skip'?'skip':'dismiss');return;}
   if(a==='story-report-read'){void storyAction('report','read').then(ok=>{if(ok){closePanel();document.getElementById('day1-heading')?.focus({preventScroll:true});}});return;}
   if(a==='story-replay'){void storyAction('welcome','reopen').then(ok=>{if(ok){storyReplay=true;closePanel();document.querySelector<HTMLButtonElement>('#day1-story button[data-action="story-read"]')?.focus({preventScroll:true});}});return;}

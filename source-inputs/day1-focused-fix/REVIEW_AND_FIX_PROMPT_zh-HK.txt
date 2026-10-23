@@ -1,0 +1,343 @@
+《下一站・小店物語》Day 1 獨立審查及集中修正 Prompt
+審查日期：2026-10-23（香港）
+審查對象：已發佈 v8／source 2686019a76d020543cfa0bca3efa867422add4d5
+
+一、結論
+
+Day 1 的核心經營、獨立故事存檔、首售與損益流程已有實際程式和可重現結果支持，可以保留為可玩候選。
+這輪找到三項需要集中修正的局部問題：
+A. 開店引導主按鈕把玩家帶進貨架頁，375px 窄畫面下真正開店按鈕被隱藏。
+B. 玩家已讀過首次正盈利片段後，當日轉負仍顯示「首次小盈利仍待達成」，否定了先前已發生的事件。
+C. Misaki 招呼中段的右手向身體內側旋轉，手掌幾何進入衣服實體。
+
+建議把三項一次修好，再回傳新 Misaki／演出的真實畫面。毋須重寫 Day 1 scope，亦毋須重做角色、經濟或存檔架構。
+既有 W1.1B 靜態 3D 驗收繼續有效；新增 Misaki 正常全景可讀性、表情、局部暖色焦點及動作自然度仍未完成真實 GPU 視覺驗收。
+本輪只做獨立審查；沒有修改、push 或重新部署公開遊戲，也沒有操作公開站玩家存檔。
+
+二、交付身份及報告實物核對
+
+同一網站：
+https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site
+project_id：appgprj_6ad82a08ed2881918ebcc2dd206a122d
+已由原生網站服務核實：active／public／access policy revision 2／latest version 8。
+saved version：
+appgprj_6ad82a08ed2881918ebcc2dd206a122d~appgver_6c9282dc697081918b0cca766b5e94a1
+deployment：
+appgdep_6ad9422a52f4819195a66e4a2550dc52
+部署狀態：succeeded。
+source commit：2686019a76d020543cfa0bca3efa867422add4d5。
+本輪讀取的 canonical source 與該 commit 完全對應，498 tracked files，共 58,510,425 bytes。
+
+上次已接受基線：
+v7／503ce1dfc22d369cc512084c1a4db9aa2930885c。
+
+兩個本次附件均由 upload 路徑直接讀取：
+1. HANDOFF_Day1_2026-10-22.txt
+   9,800 bytes
+   SHA256 e5a15ad7d0e4a7cd4fe072a649c9d3c0afea6cbdf8797ceaeb90f7cea11ad08b
+2. Day1_Delivery_Verification_2026-10-22.json
+   594 bytes
+   SHA256 bf630f2d0fcfc454da9dc7caf5b4d2ed2eddc7090ffa46d79ee7cba5ddbd7dbc
+
+另外找到並實際取得 handoff 所指的報告 ZIP，故這次並非只相信 JSON 內的自述：
+Next_Stop_Little_Shop_Day1_Report_2026-10-22.zip
+實際 227,065 bytes。
+SHA256 661af9e5b2894d60643c721a7cc7369663cd551f915c05ced5872ca80be517f2。
+ZIP 35 entries、CRC 通過、manifest 34/34 hashes 通過，沒有未列入的額外交付檔案。
+其中可與 canonical 對照的 31 個檔案全部 byte-identical。
+報告 ZIP 是本輪新資源／證據包；完整歷史 source 保留 canonical Git，這種分工可以接受，不需重交完整歷史 source ZIP。
+
+三、本輪獨立驗證結果
+
+1. Node v24.19.0；每個 test file 以獨立 process 執行具名 TAP cases：
+   node --import tsx --test --test-isolation=none --test-reporter=tap tests/<file>.test.ts
+   13 個檔案，合計 80 PASS、0 FAIL、0 cancelled、0 skipped。
+   包含原 62 個案例及新增 18 個案例。
+
+2. 舊測試 preservation：
+   原 62 個 test 名稱及 335 個 assert 呼叫文字全部保持。
+   兩份既有 VM fixture 增加必要 runtime bindings，沒有刪除原 assert 來換取通過。
+
+3. npm run validate：通過。
+   原 10 商品、5 語各 174 baseline keys 保持。
+   新 Day 1 五語各 52 keys 的鍵值／placeholder 合約由新 copy tests 驗證。
+   這不是五語獨立母語潤稿認證。
+
+4. npm run build：TypeScript noEmit 及 Vite production build 通過。
+   原大型 bundle 警告仍在；world chunk 約 1,258.84 kB minified／315.33 kB gzip。
+   這只是 build 資訊，不是 GPU、FPS、手機載入速度或記憶體效能驗收。
+
+5. 179 個保護範圍檔案與 v7 byte-identical：
+   core、catalog／原五語、舊 assets／fonts、recipes／geometry／materials／direction、既有 feedback／config／poses、package／lockfile 等均保留。
+
+6. Misaki 交換檔案：
+   misaki-calm-v1.glb：270,328 bytes。
+   misaki-smile-v1.glb：246,948 bytes。
+   合共 517,276 bytes。
+   manifest hashes 相符；public copies 與 masters byte-identical。
+   對兩個實物重新執行 gltf-validator：均 0 errors／0 warnings／0 infos。
+   具名 tests 亦通過 actual vertex／normal／indices／pivot／linear material parity 及獨立匯入檢查。
+
+測試執行環境補註：
+新 checkout 的 offline npm ci 因 cache 缺少 Vite tarball 而未完成。本次核對 v7 與 v8 package-lock SHA256 完全相同後，重用已存在的同 lockfile dependency installation 執行測試及 build。
+因此可報「獨立測試／build 通過」，不能報「本輪全新 npm ci 成功」。測試後移除本次建立的 dependency symlink，canonical tracked source 沒有修改。
+
+四、實際瀏覽器流程
+
+使用受支援的 managed preview 與獨立 QA checkout。
+QA 與 v8 source 唯一邏輯外差異是測試資料庫名稱，並開啟既有 ART_REVIEW／DAY1_REVIEW build flags。另加 375×820 CSS iframe 作窄畫面容器。
+獨立資料庫：next-stop-little-shop-day1-independent-20261023。
+沒有接觸公開站的 normal 或 sandbox 存檔；沒有新增產品 reset 功能。
+
+實際完成：
+命名新沙盒 → 讀 welcome → 買茶包 5 件 → 上架 → 關閉側欄 → 檢查開店引導 → 重現其錯誤導航 → 經既有「開始營業」按鈕開店 → +15 分鐘 → 查看報表 → 讀報表說明 → 茶包小片段 → 盈利片段 → 重新載入 → 完成狀態保留 → 繼續快進令當日轉負 → 重現故事文案回退。
+
+固定新起點（Tokyo 2026-10-21 10:00、¥50,000、茶包5件、建議價¥750、架1）在 10:15 的實際畫面：
+售出 1 件
+收入 ¥750
+已售商品成本 ¥350
+人工 ¥70
+租金 ¥50
+營運費用 ¥20
+淨盈利 +¥260
+現金 ¥48,860
+存貨帳面成本 ¥1,400
+故事及報表均顯示 Tokyo 2026-10-21 10:15 截至時間。
+
+之後同一測試進度保持營業，售罄後繼續快進至 14:15：
+售出共 5 件
+收入 ¥3,750
+已售商品成本 ¥1,750
+人工 ¥1,270
+租金 ¥850
+營運費用 ¥420
+淨盈利 −¥540
+現金 ¥49,460
+存貨帳面成本 ¥0。
+報表及其負盈利說明正確；主故事卻寫「首次小盈利仍待達成，慢慢經營就好。」
+
+375px QA 報表畫面：body clientWidth=scrollWidth=375，drawer width=355，沒有該場景的水平溢出。
+這次獨立 browser QA 是繁中、375×820 CSS viewport；交付方的 320px／五語 browser 紀錄是另一路證據，沒有在本輪冒稱全部重新做過。
+不是手機實機或觸控硬體測試；沒有量度連續玩家主動操作的 5–10 分鐘目標。
+
+Managed preview 實際再回報「Error: WebGL not supported」。
+以上是實際 UI、資料與故事流程驗證；不是新 3D 畫面驗收。
+本輪沒有新的用戶 3D 截圖／影片。
+
+五、三項具體發現與最小修正
+
+A. 開店引導主按鈕未完成它所指示的操作
+優先度：P2；直接影響首次遊玩動線，建議同輪優先修。
+
+Source：
+src/ui/day1.ts，open case（約第18行）：
+  cta=b('continue','story-shelves')
+src/main.ts，story-shelves handler（約第128行）只開 shelves panel。
+src/ui/panels.ts 的 shelves 分支沒有開店控制。
+src/style.css 的 max-width:720px 規則：
+  .drawer-open .shop-controls{display:none}
+
+已由 source、純函數與實際375px瀏覽器三方面重現：
+買貨／上架後故事叫「準備好就開門啦」，玩家按「繼續」會進「陳列與定價」。
+在這個窄畫面，真正「開始營業」按鈕隨 shop-controls 隱藏；該頁也沒有替代開店入口。
+玩家需自己再關閉側欄才能開店。熟悉介面的玩家仍可玩，不能說整個遊戲鎖死。
+
+建議：
+這個 beat 主按鈕清楚寫「開始營業／開店」，直接透過現有 run／act／Saves.command 完成開店；只在尚未 open 時執行。
+不要讓重複或過時的 story-open event 把已開店狀態反向切成關店。
+沿用現有防連按、expected revision、正常模式 settle、committed presentation boundary。
+另一可接受方案是在引導打開的 panel 保留清楚且可達的開店入口。
+不改 core 開店規則或營業時間。
+
+必要驗證：
+新沙盒任意商品買貨並上架後，375px／320px 視窗跟故事主CTA即可完成開店，不必靠猜測關側欄。
+重複／延後的操作不會重新關店，也不多建 command。
+只針對此真正缺口加一個有價值的行為 regression，保留80原案例。
+
+B. 目前轉蝕的敘述，錯把首次盈利歷史說成未達成
+優先度：P2；故事／財務語意問題，經濟數字本身正確。
+
+Source：
+src/narrative/day1.ts 的 positive／complete 按目前 Tokyo-day report 計算。
+src/ui/day1.ts 的 done card／journal 在目前未 complete 時選用 profitPending。
+src/narrative/day1-copy.ts 五語 profitPending 均表達首次盈利尚未發生。
+
+已重現：
+10:15 真實 +¥260，讀 report／memory／profit 後，profit 已讀及 profitDay 保留。
+同日 14:00 純函數 fixture net−¥400；同一路線 browser 實際 14:15 net−¥540。
+兩者均重現「首次小盈利仍待達成」。
+原回歸測試已驗證目前 positive 轉 false，但沒有檢查這句敘述。
+
+建議最小修正：
+將五語 pending copy 改為描述「目前報表暫未有正淨利／可以慢慢調整」，避免斷言首次盈利從未發生。
+若要保留完成感，可用現有 profit 已讀／profitDay 表達已讀過故事，但必須與目前 P&L 分開。
+不需要新增歷史金額 ledger、runId、save schema 或經濟 reward。
+不得從 profitDay 推斷目前仍盈利，亦不得憑空重建歷史盈利金額。
+
+必要驗證：
+同一進度真實正利並讀過 profit → 同日轉負，報表繼續顯示目前負數／Tokyo截至時間；
+主卡及手記五語不再寫首次盈利尚未發生，也不宣稱現在仍盈利。
+未曾盈利的玩家仍有溫和、真實、可繼續的引導。
+
+C. Misaki 招呼右手旋轉入衣服
+優先度：P2；局部手勢問題，可保留模型及現有程序動作系統。
+
+Source：
+src/art/misaki.ts：arm recipe／shoulder pivots 約70–76行；misakiPose 約81–85行。
+src/world.ts：actor hierarchy 約54–57行；pose 寫入 rotation.z 約104–106行。
+
+實際肩膀 pivot (0.21,1.08,0)。
+靜止手掌中心 (0.27,0.75,−0.006)。
+greet 現時回傳負 Z 旋轉，在該 hierarchy 下把右手向身體中央帶入。
+
+用實際 Babylon TransformNode、right-handed scene、同樣 root yaw／position／arm pivot 計算，再以作者的12邊 cylinder／frustum 截面 half-planes 判斷實體內部，並非僅用 bounding box：
+progress 0.0：angle0；手掌中心(0.2700,0.7500,−0.0060)；衣服內手掌頂點0/117。
+progress 0.4：angle−0.4006；中心(0.1366,0.7527,−0.0060)；108/117。
+progress 0.5：angle−0.4840；中心(0.1096,0.7600,−0.0060)；117/117。
+progress 0.6：angle−0.5200；中心(0.0981,0.7638,−0.0060)；117/117。
+progress 1.0：回到 neutral；0/117。
+
+這可以證明招呼中段手掌幾何進入衣服實體。
+尚未看到 GPU 畫面，不能寫「已親眼看見手消失」。
+現有 pose tests 檢查 finite、角度範圍、neutral endpoints／no root motion，未檢查手掌與衣服的空間關係。
+
+建議：
+調整方向／幅度，或確實需要的前向姿態，使右手在既有 pivot 下自然向外／向上，避免穿入衣服。
+保持輕柔短動作、原地站立、單一容量及所有取消條件。
+不用增加完整骨架、pathfinding、walk cycle 或重造整個角色。
+新增一個檢查真實姿態／幾何關係的 regression，避免只斷言 angle 的正負號。
+修正後仍需實際影片看正常全景可讀性與動作自然度。
+
+若只改程序 pose，GLB 沒有 embedded clips，不要聲稱 GLB 內動畫已更新。
+如受影響檔案的 manifest source hash 改變，更新相應作者 manifest／重建記錄；若幾何不變，GLB 可能保持 byte-identical，應按實際結果說明。
+
+六、可保留的實作及驗收邊界
+
+存檔：
+- 純 story read／skip／dismiss／reopen 使用獨立 sidecar transaction，讀最新 validated core 和 sidecar，只 put sidecar。
+- 沒有透過 Saves.write 增加 core revision，也沒有改 commandIds／watermark／lastWallTime／現金／存貨／reports。
+- 同 store readwrite transaction 合併 read／skipped IDs，避免多分頁 stale whole-object overwrite。
+- Import 經本地 revision+1，core 與已知 story 重建原子提交；失敗 rollback。
+- 舊 callback 跨 import 後因 expected revision／epoch 被拒。
+- 缺失／壞v1安全重建；future version忽略並保留，包括import。
+- Normal／sandbox隔離；schema2／ts-w1-2及DB store保留；沒有新增玩家reset。
+
+經營及敘事：
+- 顧客在首售前仍依 trading／quality 瀏覽。
+- eventSequence仍代表已售件數；committed sold delta 才啟動售後摘要／姿態；不編造具名顧客交易。
+- 聚合快進一個摘要；reload／import／mode不補播。
+- P&L使用真正被選中的report與net；故事目前盈利按目前Tokyo-day report，沒有用profitDay冒充現在盈利。
+- 舊玩家welcome用回顧語氣，不強迫重買或重新派資源。
+- 茶包／其他商品反應依現在陳列或存貨，沒有編造永久歷史選物記憶。
+- 故事可收起／略過／重開；Zen與開啟側欄時不堆疊故事卡。
+- 原小樣本是既有零經營加成reveal，並非Day6 Prestige燈。
+- 所有新台詞／髮型／服裝是本輪原創候選，不能冒稱Bible逐字已定。
+
+美術及移植：
+- Misaki有獨立髮型／服裝／身體比例／calm與smile臉部幾何；並非generic換名換色。
+- 3.66頭身、站高1.465m及1mm落點間距有幾何證據；正常全景觀感仍待真實畫面。
+- actor.misaki.day1.v1只作presentation binding；經濟staff.graybox及薪酬／能力保持。
+- GLB masters／原創recipe／palette／pivots／source hashes支持未來繼續使用；無skeleton、skin、embedded clips。
+- Unity／URP／Android／iOS adapter、材質校準及實機效能未驗收；不能宣稱直接移植完成。
+- 新局部焦點是暖色紙卡及低emissive材質；沒有新增燈、shadow map、render target、bloom或新粒子系統。
+- 既有收據／小樣本／微塵等系統保留，不應把它們列成全部本輪新做。
+- Hidden／Skip／Low／Minimal／Reduce Motion／mode／import取消、單一gesture容量及deferred-world不補播路線可保留。
+
+七、可直接交給 ChatGPT Work 的完整修正 Prompt
+
+【Prompt開始】
+
+請基於目前《下一站・小店物語》的最新 canonical source，完成一次聚焦的 Day 1 UX、文案及招呼手勢修正，然後驗證及更新同一 public Site。
+
+已審查版本：
+v8，commit 2686019a76d020543cfa0bca3efa867422add4d5。
+Site：appgprj_6ad82a08ed2881918ebcc2dd206a122d。
+網址：https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site。
+
+開始先確認最新canonical／saved version；若已有後續工作，以最新版本延續，避免覆蓋。
+Day1 scope已接受，毋須再交純規格等待批准。此次請直接實作以下三項集中修正。
+v8既有80 tests、存檔隔離與核心經營已有獨立驗證支持；修正應保留這些成果。
+
+1）讓開店故事主CTA完成正確操作
+目前src/ui/day1.ts的open beat以「繼續」觸發story-shelves，main只開貨架panel；720px以下drawer又隱藏真正開店控制。375px實際瀏覽器已重現。
+把主CTA改成清楚的「開始營業／開店」，經既有command/run路線執行，或在引導到達的panel提供清楚且可用的開店入口。
+只在未開店時執行；防止重複或過時事件把已開店狀態切回關店。
+保留busy／expected revision／normal時間結算／committed feedback等既有保護。
+不改core開門規則、營業段或經濟參數。
+以新沙盒任意有效商品買貨→上架→故事主CTA，驗證320px及375px路線可直接完成開店。
+
+2）修正已盈利後轉蝕的故事語意，五語同步
+現有profitPending會在玩家已讀真實盈利片段、當日再轉負後仍說「首次小盈利仍待達成」。
+改成描述目前report狀態的溫和文字，例如「目前呢份報表未有正淨利，我哋睇清楚成本，再慢慢調整」。
+可按現有profit已讀／profitDay保留故事已讀感，但不能把它當現在仍盈利的證據，也不能補造歷史盈利金額。
+請同步zh-HK／en／ja／th／zh-CN。維持目前報表金額及Tokyo截至時間的誠實呈現。
+不需要新ledger、runId、reward或save schema。
+
+可重現fixture：
+新沙盒Tokyo2026-10-21 10:00，¥50,000，買茶包5件，上架，建議價¥750，開店，+15分鐘：
+10:15售出1、收入750、COGS350、人工70、租50、營運20、net+260、cash48860、bookCost1400。
+讀report／memory／profit後保持營業，快進至14:15：
+共售出5、收入3750、COGS1750、人工1270、租850、營運420、net−540、cash49460、bookCost0。
+報表負數本身正確；要修的是主卡／手記不應否認先前已讀的首次正利。
+用隔離fixture驗證，不能要求重置玩家現有normal／sandbox來硬套數字。
+
+3）修正Misaki招呼右手穿入衣服的姿態
+目前misakiPose('greet')的負Z旋轉，在world的實際right-arm pivot下把右手向中央帶入。
+肩pivot(.21,1.08,0)，neutral手中心(.27,.75,−.006)。
+progress .5～.6時，實際Babylon hierarchy計算顯示手掌117/117 vertices在torso／skirt實體union內；.6中心約(.0981,.7638,−.006)，angle約−.5200rad。
+調整旋轉方向／幅度或必要的前向姿態，使招呼在身體外側自然可見，維持chill、短、輕柔及原地站立。
+保留現有greet／sale程序pose、calm／smile、單一容量、不排隊，以及Hidden／Skip／Low／Minimal／Reduce Motion／mode／import／deferred-world取消規則。
+加一個實際姿態／幾何關係的regression，避免只硬編碼assert某個角度符號。
+不要為這個小修增加完整rig／walk cycle／pathfinding或重做角色。
+若pose來源hash影響manifest，更新來源hash及重建記錄。GLB沒有embedded clips；按實際資產變化交代，不能宣稱未包含的動畫已烘焙入GLB。
+
+共同保留要求：
+- 同一public Site及現有玩家進度。
+- 原core、schema2、ts-w1-2、時鐘、10商品、薪酬／成本／價格／需求規則。
+- 獨立sidecar、純story零core寫入、import原子性、multi-tab merge及future-version保護。
+- 原五語174 keys、既有資產及已接受W1.1B美術。
+- Day1原創設計身份與可攜資源：不把這輪當正式staff系統、Day6 Prestige獎勵或native完成。
+- 暫不擴展Day2／Ren／Momo／雨景／36商品／完整七日。
+
+驗證及交付：
+a. 保留原80 cases及有效assert；只補這三個實際缺口所需的行為／文案／姿態回歸。
+b. content validate、TypeScript／production build通過；如未改幾何，不要無因重做全部歷史asset驗證。
+c. 支援的browser以隔離test progress走買貨→上架→新開店CTA→首售→P&L→memory／profit→reload，以及正利後轉負文案；核對320／375px關鍵入口。
+d. 正常與sandbox舊save相容；不要新增玩家reset。
+e. 更新同一canonical commit／saved version／public deployment，回傳實際version、commit、deployment result及精簡handoff。
+f. 若managed preview仍無WebGL，照實列新Misaki演出視覺待確認，交付已修候選；不要把NullEngine／geometry／validator當GPU畫面證明。
+g. 請交代三項各改了甚麼、怎樣驗證，以及仍待真實畫面項目。用一個精簡交付包即可，不需重交整個歷史source。
+h. 新畫面只需聚焦Misaki正常全景／有側欄、calm／smile、修正招呼、日間售後反應及局部暖色紙卡；既有W1.1B驗收維持。
+i. 沒有真實畫面、實機或測量就不要宣稱「更漂亮已驗收」「30/60FPS達成」「Android/iOS完成」。
+
+【Prompt結束】
+
+八、修正後用戶畫面回傳建議
+
+修正後再從同一網址錄約30–90秒：
+- 一小段正常全店視角，能看到Misaki和收銀枱。
+- 由手記重看觸發招呼，觀察手是否自然留在身體外側。
+- 在Tokyo10:00–20:00營業且有貨，於沙盒快進觸發真實售出；拍售出摘要及售後小動作。
+- 打開P&L及手記，拍目前數字與截至時間；加一張有側欄構圖即可。
+不要為拍片重置正常存檔。既有沙盒若有累積租金／不同餘數，結果不必等於上述新fixture的¥260。
+沒有必要在這段短片同時驗收手機FPS、完整七日或native。
+
+九、本輪證據索引（供後續Work定位）
+
+本輪只讀source：
+review_day1_delivery_2026_10_23/source_v8/
+
+本輪獨立測試及核對：
+review_day1_delivery_2026_10_23/independent-named-tests.json
+review_day1_delivery_2026_10_23/independent-named-tests.log
+review_day1_delivery_2026_10_23/independent-content.log
+review_day1_delivery_2026_10_23/independent-build.log
+review_day1_delivery_2026_10_23/independent-package-check.json
+review_day1_delivery_2026_10_23/independent-preservation.json
+review_day1_delivery_2026_10_23/independent-test-preservation.json
+review_day1_delivery_2026_10_23/independent-browser-review.json
+review_day1_delivery_2026_10_23/agent_art/greeting-geometry-babylon.json
+review_day1_delivery_2026_10_23/agent_art/gltf-validation.json
+
+上述路徑是本輪審查工作區。即使下一個Work對話不能讀這些工作區檔案，本報告已包含重現條件、數值、source位置、驗證範圍及完整修正prompt，可以直接據此在canonical重現。
+

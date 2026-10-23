@@ -1,0 +1,62 @@
+{
+  "dateHongKong": "2026-10-23",
+  "preview": "supported managed preview, isolated QA copy",
+  "onlyQARuntimeDifference": "separate review database name per375/320fixture; no production player slots touched",
+  "openCTA": [
+    {
+      "width": 375,
+      "item": "tea",
+      "label": "開始營業",
+      "beforeBeat": "open",
+      "afterBeat": "sale",
+      "afterOpen": true,
+      "drawerAfter": false,
+      "bodyScrollWidth": 375
+    },
+    {
+      "width": 320,
+      "item": "pencil",
+      "label": "開始營業",
+      "beforeBeat": "open",
+      "afterBeat": "sale",
+      "afterOpen": true,
+      "drawerAfter": false,
+      "bodyScrollWidth": 320
+    }
+  ],
+  "flow": "both actual UI buy5, display, story-open, +15, report read, memory, profit; reload kept progress",
+  "tea1015": {
+    "netJPY": 260,
+    "cashJPY": 48860,
+    "units": 1,
+    "asOfTokyo": "2026-10-21 10:15"
+  },
+  "pencil1015": {
+    "netJPY": 10,
+    "cashJPY": 49610,
+    "units": 1
+  },
+  "tea1415": {
+    "netJPY": -540,
+    "cashJPY": 49460,
+    "units": 5,
+    "salesJPY": 3750,
+    "cogsJPY": 1750,
+    "salaryJPY": 1270,
+    "rentJPY": 850,
+    "operatingJPY": 420,
+    "bookCostJPY": 0,
+    "asOfTokyo": "2026-10-21 14:15"
+  },
+  "postLossCardAndJournalLocalesActuallyViewed": [
+    "zh-HK",
+    "en",
+    "ja",
+    "th",
+    "zh-CN"
+  ],
+  "postLossSemantics": "all describe current report without denying past first profit or claiming current positive net",
+  "webGL": "Error: WebGL not supported",
+  "new3DVisualStatus": "PENDING; UI evidence and geometry tests are not GPU visual acceptance",
+  "physicalPhoneAndFPS": "not tested"
+}
