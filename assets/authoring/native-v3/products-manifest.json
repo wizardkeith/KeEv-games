@@ -1,0 +1,14 @@
+{
+  "version": "native.products.v3",
+  "file": "assets/masters/native-v3/products-v3.json",
+  "bytes": 19621,
+  "sha256": "339b628354146e487acb9a22ca3dce2105bace91948097f2ee9c9f1fc2afb05b",
+  "rebuild": "node --import tsx tools/export-native-products.ts",
+  "sourceSha256": {
+    "src/art/native-products.ts": "eb2d2b537568cdbe69def1261a0f68531f67227c8bbced854aefe8ebf41ab3e1",
+    "src/art/recipes.ts": "c20e2d9819bd5a60678c8e006318882a5ad10dcb290c228d71816add11b7dfef",
+    "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
+    "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
+    "tools/export-native-products.ts": "b2c9c97bec85006a3b9e36015bd9b98cad747ccaf0174ac52afc90d1a110931d"
+  }
+}

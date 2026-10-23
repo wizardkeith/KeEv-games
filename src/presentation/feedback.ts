@@ -1,7 +1,7 @@
 import type {Snapshot} from '../core/contracts';
 export type FeedbackKind='sale'|'stock'|'support'|'display'|'reveal';
 export interface Feedback {id:string;kind:FeedbackKind;units:number;slot:number;sold:number}
-const baselineCauses=new Set(['baseline','reload','retry','import','mode','choose-mode']);
+const baselineCauses=new Set(['baseline','reload','retry','catchup','import','mode','choose-mode']);
 /** Only a transition returned by a successful, live commit may create feedback.
  * Loading a newer saved snapshot is a baseline, never a presentation replay. */
 export class FeedbackProjector {

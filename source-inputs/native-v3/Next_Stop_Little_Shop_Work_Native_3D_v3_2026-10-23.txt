@@ -1,0 +1,572 @@
+《下一站・小店物語》Work 全原生 3D 美術及動態更新 v3
+日期：2026-10-23
+交付方式：本完整執行 Prompt + Next_Stop_Little_Shop_Native_Motion_Starter_v3.ts
+
+使用方式
+將本 TXT 及上述 .ts 一併上傳至負責原遊戲的 ChatGPT Work，執行下方 BEGIN WORK PROMPT 至 END WORK PROMPT。
+這一份已完整整合及取代之前的美術／Living Shop prompt、v2 Grok 整合 prompt，以及其後的補充文字；不需要再拼貼舊版。
+今輪全部由 Work 在現有 Web 項目內完成。無需 Grok 原片、Grok 重製、額外影片服務或玩家先製作素材。
+項目內已有的 Bible、原創概念圖、既有資產及實際遊戲錄影仍可使用。沒有額外圖片附件也可開始；新需要的造型／資產由 Work 按本文及可用工具製作。
+
+隨附 .ts 的定位
+這是可獨立編譯、與引擎分開的 TypeScript 動作參考模組，提供畫質／無障礙政策、idle／步態取樣及已提交事件的有限演出排程。
+它沒有包含新 3D 模型、完整關節綁定、角色尋路、避障、門洞或 Babylon 場景 adapter，也尚未接到公開遊戲。
+Work 必須檢查最新 source 後接駁、按新模型調整及驗證；不能把複製 .ts 或通過型別檢查當成整輪已完成。
+本文中的「原生 3D 動態」是直接控制 Web 遊戲內真正模型／道具的動作；本輪仍是 Web 開發，不是提前要求完成 iOS／Android 原生建置。
+
+這次完成目標
+1. Misaki 與兩款普通客人有精緻、可辨識的真正 3D 面容、髮型及衣著。
+2. 正常鏡頭可看到顧客慢慢行、停低看貨、進出小店；Misaki 有日常工作。
+3. 真實成交／入貨／陳列有清楚、自然的動作或狀態回應。
+4. 小店光影、材質、門、植物及少量特效有生活感，整體 chill、治癒。
+5. Low／最少特效保留基本人物活動；Reduce Motion 獨立處理。
+6. 動態素材由 Work 自行建立，保留可重用來源、動作定義及資產資料，供後續平台接駁。
+
+已知 source 基線及界線
+此前已獨立檢查 v9：
+Project ID：appgprj_6ad82a08ed2881918ebcc2dd206a122d
+Commit：8eca6d53e13b0d2db457636844b49bf700753c43
+URL：https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site
+本次為新的實作交接包，沒有重新核實最新部署。Work 必須取最新 canonical source；若比此基線新，保留後續修正。
+重要已知限制：固定 customer roots；人物只有 body/head/兩臂，缺可踏步下肢；Low／Minimal 同時停掉動作；UI draw 會重覆套用 minimal setter；現有回饋只選一個 kind。
+這些需要按本次要求實質改進。它們不是禁止擴充的歷史規格。
+v9 已修正的開店 CTA、首次盈利文案及 greeting 向外揮手應保留。
+
+────────────────────────────────
+完整 Work 執行 Prompt
+────────────────────────────────
+
+
+BEGIN WORK PROMPT
+
+請在《下一站・小店物語》的現有 Site，直接完成一輪可玩的「全原生 3D 角色美術 + 動態小店 + 買賣動畫」整合更新。
+
+使用者已決定今輪全部由 Work 自行製作，不依賴 Grok 材料。本份 A–L 是最新完整規格，取代之前未執行的美術／動態及影片接入 prompt。隨附 .ts 是可改用的參考模組；全部造型、動態資產及實際遊戲接駁由你完成。
+
+玩家最新明確要求：
+「沒有特效，人物／客人／店員不會郁動，買賣會否有動作／動畫，太過靜態了，要動態，有生氣的。」
+最新追加：「3D 美術方面請也更加美化改進一下，現在的 3D 有點 raw，例如樣貌、衣著太簡單，沒有獨特之處。」
+兩項都屬於本輪必做範圍。
+
+這一輪要完成實作、必要驗證、現有 Site 的更新發佈及交接。按以下規格自主完成合理實作選擇；不要只交計劃或再要求玩家批准已列出的動態方向。
+
+A. 基線與工作範圍
+
+A1. 目標 Site
+https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site
+Project ID：appgprj_6ad82a08ed2881918ebcc2dd206a122d
+此前已檢查的 baseline commit：8eca6d53e13b0d2db457636844b49bf700753c43（v9）。
+
+先取得此 Site 最新 canonical source。若最新版本比 baseline 新，以最新版本為基礎，保留已存在的後續修正；不可為了套用本規格回滾公開 Site。
+沿用現有 Site 身份及 public audience。依環境提供的受支援 Sites 工作流程實作及發佈。
+
+A2. 先讀權威 Bible、現有 source 和項目內可用的實際遊戲錄影
+使用項目內的 Bible；現有文字擷取位置為 source-inputs/reference_extracts/Bible_full_text.txt。重點核對 §28、§29 Day 1、§30 及相關固定經濟規則。
+保持 chill、治癒、生活小景、柔和 anime chibi、暖內冷外，以及真 3D／curated 2.5D 相機。
+
+A3. 本輪明確授權擴充角色美術與 presentation
+必須實質提升 Misaki 及兩位普通客人的 3D 面形、髮型、衣服輪廓／層次與材質，同時實作顧客 locomotion、可讀的店員動作及交易演出。
+可以重塑現有候選角色的幾何、髮束、服裝剪裁及結構。先前「美術已接受／保留原模型」的歷史結論，不應被用來阻止本次使用者已要求的新美術改善。
+舊規格／測試中「customer roots 永不移動」「Low 或 Minimal 必須全部靜止」屬於被本輪取代的呈現政策。應更新相關程式與測試，並記錄原因。
+為達成可信行走，可修改角色分件／pivot、門洞／門葉、動作資料、場景路徑及必要的站位。
+保留 Bible 的角色風格與身份、已修正的色彩／接地等有效成果、UI 操作，以及 v9 已修正的開店 CTA、首次盈利文案及 greeting 向外揮手。這不要求沿用現有粗略的球體頭、圓柱衣服或同模換色客人。
+
+A4. 保持經營與呈現分離
+本輪不新增經濟需求、不加快正常模式時間、不假造銷售、不改現金或庫存規則、不重寫 deterministic core／存檔機制。
+活動中的 visual customer 是場景呈現角色。其移動、看貨、接袋或 clip 完成不能創建經濟事件。
+保留 Day 1 範圍；Ren、Momo、Day 2–7 劇情與完整天氣不列為本輪前置工作。
+
+B. 3D 美術及動態：玩家必須看得到的結果
+
+B1. 正常營業、視窗可見、未啟用 Reduce Motion 時：
+- 不操作相機，5–10 秒內應察覺店內有人活動。
+- 持續 20–30 秒可看到 Misaki 做一件小工作，及顧客走動／停低睇貨。
+- 不需要先有成交，店內才有基本活動。
+- 普通遊戲鏡頭與手機鏡頭下均要可讀；不能只靠 Zen 放大、特寫、慢播或逐格比較證明動作存在。
+以上是可讀性目標，不代表每 5–10 秒要成交。
+
+B2. 動作語言
+慢速、柔和、帶短暫停頓。轉身、起步、減速、停步要連貫。
+人物的時間與動作相位錯開，避免所有人同步點頭、呼吸或搖擺。
+至少有明顯「做事情」的動作：行到貨架、伸手看貨、整理紙袋、交收。呼吸／眨眼只作輔助。
+
+B3. 先確保人物可讀
+檢查正常相機構圖、櫃檯方向、Misaki 的服務側與客人的停靠位置。交易時要看得見手臂與袋，避免被 UI 或櫃檯完全遮住。
+可以在既有 curated camera 限制內作小幅構圖調整，保留既有導航及選架體驗。
+
+
+B4. 三個有辨識度的真正 3D 角色
+本輪必須更新遊戲內實際使用的 Misaki 及兩款 generic customer。
+正常鏡頭下，不看名字，仍能憑髮型輪廓、衣服剪裁及大色塊區分三人。
+近鏡則要看到合理面形、五官、髮際、衣領、袖口及衣服層次。
+不以只換色、增加細小鈕扣、換 UI 頭像或貼概念圖作完成。
+現有 runtime 主要直接建 recipe；只在 masters 資料夾放一個新 GLB，不會讓 runtime 自動換角色。新資產必須真的接到場景的 actor。
+
+B5. Misaki 面容與表情
+以溫暖、留意客人的店員氣質，重塑柔和橢圓臉、略飽滿面頰、收窄但不尖銳的下巴。
+眼睛有清楚上眼瞼、暖棕虹膜、克制高光，眉毛及嘴角共同表達情緒；不要只在球面加兩個黑點或凸出的玻璃珠。
+至少有安靜留心、眨眼、柔和微笑與工作專注的可用狀態；各狀態維持同一角色面形，不出現換頭／跳位的感覺。
+使用柔和 anime-toon 明暗，檢查主要遊戲燈光下眼眶、鼻、嘴不被陰影吞沒。
+如果表情以幾何替換實作，pivot、輪廓及面部對位須一致；不要求為此重造大型表情系統。
+
+B6. Misaki 髮型
+延續栗啡、不對稱短 bob／側束髮／象牙葉髮夾這組辨識方向，但重新做出有設計的髮束輪廓。
+有清楚分界、一側貼耳、一側弧形髮束；用少量成組、末端收細的髮塊及寬柔高光表現體積。
+避免一堆彼此相交的圓球／圓帽當頭髮。
+髮夾位置及大小要在預設視角讀得到；保留一兩個小 secondary pivot，讓轉頭／步行時有克制跟隨，不使用昂貴髮絲物理。
+形狀與輪廓的改善優先於逐條細髮。
+
+B7. Misaki 服裝：真正剪裁、層次與材質
+現有 cardigan、apron、skirt 已存在；請交付可見的造型重塑，而不是重新列出這些名詞。
+建議落地設計：
+- Sage 短外套：清楚肩線、胸前開口、柔軟袖形及捲袖口；內露 warm cream blouse。
+- Ivory 圍裙：細帶、收腰、明確下擺厚度、兩三道主要布褶；有形狀的偏置口袋／折邊。
+- 葉形元素：髮夾及口袋最多各一個呼應，克制而可識別。
+- Muted plum A-line 裙：有輪廓、寬褶及圍裙之外的可見層次，避免一條光滑圓柱。
+- 襪、鞋：區分 cream 襪、深啡鞋面、鞋底及簡單縫線；腳掌接地。
+以深髮色、中間衣服色、亮面／圍裙三個大明暗區域帶出人物。針織、麻布、皮鞋用有分別的表面表現；不要一律改亮或改光滑。
+主角特色應在正常鏡頭仍存在；微小刺繡與鈕扣只作近鏡加分。
+
+B8. 兩款普通客人要有不同造型
+移除兩款客人的共用店員圍裙；兩者不能只是同一 mesh 換色。
+每款至少在頭髮輪廓、面形／眉眼、上衣剪裁、下身輪廓及配色分佈上有可讀區別。
+可採本次概念板作原創方向：
+- Visitor A：較修長輪廓、短而微曲深髮、陶土／暖赭色 overshirt、cream 內搭、深色褲、簡單淺色鞋、個人帆布斜袋。
+- Visitor B：較圓潤／柔和輪廓、側分及肩髮、dusty-blue 短外套、cream 長裙或闊褲、低調 plum 頸巾、深色鞋及個人袋。
+按 Bible 的 3.5–4 頭身重新調整比例；不照抄參考圖任何偏長的人體比例。
+這些是匿名視覺訪客，不能改名當作 Bible 的佐藤先生、Ayaka、近藤太太，也不新增人物背景、關係或經濟能力。
+個人袋與真正成交後的店舖紙袋必須在形狀／材質上區分，避免誤讀成所有客人已經買了貨。
+
+B9. 材質與形狀
+先把輪廓和大形做完整，再使用表面細節增加質感。
+皮膚柔和、髮束有受控高光、布料啞面、鞋有少量皮革光澤；避免蠟面、塑膠頭、硬黑邊或 noisy fabric。
+保持現有已修正的 sRGB-to-linear 色彩一致性及 material intent。
+可以改進現有 mesh authoring；若 primitive recipe 達不到目標，允許以更完整、可編輯的網格／GLB 資產管線替換。不要把只能使用幾種基本幾何當作本輪的限制。
+如引入貼圖，必須補齊 UV、runtime material、輸出及資產 manifest。貼圖／人像檔放入資料夾不算已整合。
+可以使用合適小型 atlas 或乾淨幾何／頂點色方案，依實際觀感及 Web 成本選擇。不能以面向相機的人像板或整張概念插畫覆蓋 canvas 代替 3D。
+
+B10. 模型與動畫一起完成
+在造型時就安排肩、肘、腕、手掌、髖、腿與腳，以及拿袋／紙箱的 attachment points。
+需要彎手交收的動作，使用合理分節或足以達標的簡化結構；不要讓直圓柱手臂穿過衣服。
+圍裙／裙下擺與行走腿部留足活動空間，可用少量跟隨節點；毋須全套布料物理。
+在走路、轉身、查看、包裝、交袋姿勢下檢查新衣服，避免只在站姿好看。
+greeting 的要求是向外揮手且不穿身，不必為維持舊角度數值而犧牲新模型的正確動作。
+
+B11. 店景一併做有重點的美化
+在角色完成的同一輪，整理普通鏡頭最顯眼的櫃檯、主要陳列桌、窗邊及代表商品。
+家具邊緣、桌板厚度、木色層次與接觸陰影應有細緻度；避免所有表面都是同一啞色。
+選幾件最常見商品改善輪廓、包裝／陶瓷表現及陳列節奏，保留商品 ID、真實庫存及選架操作。
+用暖主光、較冷柔和補光、受控局部亮點，讓角色、貨品和木家具分開，保留舒適閱讀與觸控。
+保留空間留白及可行路徑。不要用大量雜物堵路；不要靠重 bloom／DoF 模糊模型。
+本輪不擴展新店、新地圖或完整天氣；集中提升目前玩家每天看到的小店。
+
+B12. 概念圖使用界線
+如項目有「CHARACTER ART TARGET — CONCEPT」，它是造型、臉形、髮束、服裝層次及配色參考，不是完成品、3D 模型或精確效能承諾。
+可將圖中的細密織紋／髮絲簡化成適合實時 Web 的表現；保留其有辨識度的大形及精緻感。
+最終比例以 Bible 為準，最終品質以實際遊戲畫面為準。
+沒有概念圖附件亦可按本節文字直接執行；不應因此把已明確的實作任務停成另一輪選風格確認。
+
+C. 顧客：完整而有界的進出與瀏覽
+
+C1. 同時最多兩位普通顧客；Low 至少保留一位。使用可重用 actor pool。
+基本流程：
+入口外／門檻 → 進店 → 沿通道到貨架 → 停看／轉頭／伸手查看 → 另一停點或離店。
+只有真實已提交的銷售結果，才允許追加櫃檯交收及帶購物袋離店。
+普通瀏覽訪客可空手離開；不因此增加銷售、訪客統計或新需求。
+
+C2. 用有限且清楚的路徑
+對這個房間使用人工安排的 waypoints、貨架觀看點、櫃檯停點與簡單位置預約即可。
+依現有桌子、櫃檯、牆與門的實際 footprint，加上角色半徑檢查通道。
+兩位客人避免相穿；同一停點已佔用時，另一位選其他站點或在安全處稍等。
+不需要引入完整 navmesh、物理或群眾模擬。
+
+C3. 入口必須真的可通行
+現有門框／玻璃後仍有後牆的部分，要修成合理門洞與可開合門葉，或使用實際可通行的適當入口。
+角色跨門檻要可見。不要從房間中心出現、穿過實牆、在展示架旁突然現身。
+門的動作跟進出協調，門葉不能掃過站立角色。
+
+C4. 真正踏步
+先為需要行走的角色補足左右腿／腳樞軸或合適 rig。依 B4–B10 更新造型，保留 Bible 比例及角色身份。
+步態相位依行走距離推進，配合速度／步幅；左右腳交替、輕微抬腳、落地，手臂輕擺。
+起停與轉向要有過渡，站定時腳接地。不要以 root 平移、整個人搖擺或雙腳拖地取代行走。
+可使用簡單 rigid-part animation；不必引入重型 skeletal 系統，但必須交出可讀步態。
+
+C5. 建議節奏，按實機觀感調整
+每個展示點停留約 4–8 秒；一次瀏覽／進出約 20–40 秒；入店時間錯開。
+這些是起始調校值，可按房間尺寸及角色步幅合理調整，不是經濟 clock。
+
+C6. 開店與關店
+開店後顧客由入口錯開進來。
+關店立即依原 core 停止營業；呈現層停止新入店，現有顧客沿路離開，未成交者空手離開。
+不可等離店動畫結束才關店，也不可關店後因演出追加成交。
+快速關店／重開要有連貫、有限的狀態轉換，不複製角色、不重播舊交易。
+fresh load 可以重建視覺狀態；在可見遊戲流程中的正常開關店不可把兩位顧客直接一起消失／出現。
+
+D. Misaki：日常工作與事件回應
+
+D1. 平時有活動
+加入慢呼吸、眨眼、重心轉移、望向顧客；本輪更新眼部結構時一併支援眨眼。
+再加入至少兩個可讀的小工作，例如整理紙袋、抹櫃檯、檢查一張便條／收據。
+約每 12–20 秒做一次 2–3 秒小工作，使用錯開時間與少量變化。
+不要求全程不停動；安靜停頓也是 chill 節奏的一部分。
+
+D2. 事件動作
+迎客：抬頭、輕揮手／點頭。
+入貨：接過小箱、查看／點貨。
+成交：轉身面向服務位置、拿袋／包裝、交收、點頭或微笑。
+小工作可為交易讓位，之後自然回到 idle；開關 UI 面板或一般 repaint 不可不停把她重設 neutral。
+
+D3. 空間與手部
+保留 v9 已修正的 greeting 向外揮手，不重現手掌／拇指穿胸口。
+新工作、拿袋、交收動作檢查手臂與衣服、櫃檯、道具的相交。
+如安排 Misaki 走到貨架補貨，必須有可行路線和完整去回流程；不可伸長手跨店、滑穿櫃檯。
+本輪優先完成櫃檯小工作、接貨點貨、成交交收與顧客步行。不要因要支援所有跨店補貨路線而延遲整輪交付。
+
+E. 成交、入貨與陳列動畫：全部接駁真實已提交結果
+
+E1. 只在成功 persistence commit 後觸發
+沿用 Saves.command／Saves.settle 等既有成功 persistence commit → committed presentation 的邊界，涵蓋 Normal 自動結算及既有 Sandbox advance，不只接玩家點擊命令。
+動畫不呼叫 settle／Saves.command，不獎勵現金、不扣庫存、不新增收入或成本。
+已提交結果立即按既有規則顯示；不要等顧客行完或動畫完成才入帳。
+動畫取消、隱藏、略過或品質降低，不可反向取消經濟結果。
+
+E2. 正確認識 eventSequence
+現有 src/core/simulation.ts 的 eventSequence delta 代表售出「件數」，不是交易筆數或客人人數。
+src/presentation/feedback.ts 的資料只有 aggregate committed before/after；沒有可信的買家身份、單次購物籃或逐 SKU 成交事件。
+因此：
+- 可以挑選一位合適的現有 visual customer，演繹這次已提交銷售摘要。
+- 道具使用 generic 紙袋／包裝；沒有來源資料就不指定袋內 SKU。
+- 不建立「某 named customer 買了某件商品」的紀錄。
+- 不因 sold=5 就生出五位客人或播五次交易。
+- 不把演出角色數當真實客流／業績統計。
+
+E3. 成交演出
+真實 sold > 0 後，立即給可讀的收據／銷售回應；Misaki 在約 2.5–3 秒的主要手部演出內包裝或交袋。
+如已有合理位置的客人，客人面向櫃檯、接袋／點頭，再沿既有通道離店。
+如客人需要走過來，可以沿合理路徑移動；不要為了湊一次交收而瞬移。
+如沒有合適客人，可用 Misaki 的包裝／收據回應該筆已提交摘要，顧客活動繼續。
+主要手部演出時長不包括必要的行路時間；要讓玩家能看懂，但不要阻塞操作。
+
+E4. 批量與同時事件
+一次 settle／沙盒 advance 可能結算多件商品，只做一段代表性銷售演出，數字摘要使用已確認結果。
+使用有限 active sequence 及最多一個有界 pending summary，或選擇有界合併／略過策略；明確實作及測試。
+不得無限排隊、逐件補播、為了看完動畫推遲下一次正常 command。
+新一輪動作不要讓舊 callback 取消新的動作。
+
+E5. 成功入貨
+出現小紙箱／貨袋、Misaki 接收與點貨，約 1.5–2.5 秒。
+Saves.command 在套用玩家命令前會先 settle，因此同一個 buy commit 可同時包含賣貨與入貨。
+不能用 inventory 的淨增加量當成實際送到的入貨量。
+在命令送出時保存 item／quantity／target 的呈現上下文，僅在確認該命令成功套用後使用；若受限／拒絕／中止，不演成功入貨。
+需要顯示數量時，使用確實已接受的數量或合法的 committed 結果；資料不足就不顯示推測數字。
+
+E6. 成功上架／換陳列
+對實際成功改動的架位做清楚的放下／整理／短暫柔和 highlight。
+目標必須是該次命令原本捕捉且成功套用的架位，不是 await 後玩家目前選中的架位。
+商品 mesh 最終仍取 authoritative snapshot；不要用裝飾道具額外改庫存或把不存在的商品放進真實陳列資料。
+無變更的操作不假裝上架成功。
+
+E7. 一個 commit 包含多種變化
+現有 projector 只挑一個優先 kind；不可讓 sale 永遠吞掉玩家剛完成的入貨／上架回應。
+保留兩項真實結果的清楚 UI 回應；3D 可按有界優先序串接或整合短演出。
+必要時擴充 presentation payload 與 command context，但不要捏造 core 沒提供的交易明細。
+
+E8. 去重與生命週期
+保留 revision／epoch 去重、stale CAS、busy lock、transaction abort、不重播 baseline／reload／retry／import／mode-switch／離線結算舊動畫。
+已成功 commit 的 delta，仍需按現有方式消耗及記錄，即使當時 hidden 或 epoch 已失效，避免返回時重播。
+相機移動、UI redraw、一般 render 不可再創建銷售／入貨動畫。
+
+F. 環境動態與特效
+
+F1. 與更新後人物及店景整合少量生活效果
+- 窗旁植物葉片緩慢微擺，花盆／根部穩定。
+- 入口門葉及小門牌跟隨進出輕動。
+- 窗邊合理受光區域少量光塵，使用有限物件池。
+- 上架短暫 settle／柔光；成交用紙袋、收據及角色反應。
+如有熱飲內容，蒸氣只出現在確實合理的熱飲道具；不要在袋裝茶、空杯或所有商品上加蒸氣。
+
+F2. 藝術節制
+人物、門、植物與光塵的節奏要有層次。
+避免滿屏閃光、爆炸星星、大量金幣、鏡頭震動或不停跳動的物件。
+不以增加 bloom、粒子數或相機動作替代人物行為。
+同一場景關掉裝飾特效後，仍能辨認「有人逛店、有人工作」。
+
+F3. 音效
+可在既有玩家開啟的提示音設定下，配合輕門鈴、紙袋／紙箱或收據聲，避免重複密集播放。
+保留靜音選擇。音效不是本輪視覺動態驗收的替代，也不是完成角色動作的前置條件。
+
+G. 畫質、Minimal FX、Reduce Motion 必須拆開
+
+G1. High／正常品質
+最多兩位顧客；完整簡單步態；Misaki idle、小工作、成交／入貨動作；少量裝飾效果。
+
+G2. Low
+至少一位顧客仍會步行和看貨，Misaki 仍有清楚基本工作／成交動作。
+先移除光塵、次要裝飾、昂貴陰影／反射，再按需要降低 pose 更新頻率；保持畫面和輸入順暢。
+不要把人物凍結當成 Low 的主要實作。
+可用固定較低頻率更新 pose 並合理插值；具體數值依實測決定。
+
+G3. Minimal FX
+關閉粒子、發光、非必要裝飾位移，保留基本人物步行與交易回應。
+更新設定標籤／說明，清楚表達新行為。所有現有五語文案一起更新；不只改 zh-HK。
+
+G4. Reduce Motion
+獨立尊重系統偏好及已有應用內選擇。對此模式可減少／停止連續行走與 idle，用穩定姿態及清楚的文字／狀態回應。
+無障礙偏好優先；不可為了讓影片看起來活潑而忽略。
+若需要新增開關，保持簡單、可理解，並沿用既有裝置偏好保存方式。
+
+G5. Auto
+沿用或合理調整現有 Auto，但自動降 Low 後仍要有基本生命力。
+不必在本輪重做完整自適應系統。如新增恢復機制，加入穩定門檻避免品質反覆跳動。
+UI 顯示「Auto」不等於證明實際使用 High／Low；QA 記錄要分清設定值和有效層級。
+
+G6. 分開動作通道
+至少概念上分開 ambient／locomotion、staff/service sequence、decorative transient FX。
+一個新收據或 UI 更新不可取消所有人物活動。
+hidden／disposed／WebGL loss／import／mode epoch 仍要安全停止、清理或重建，不產生追趕播放。
+切回頁面時直接回到合理當前狀態；不補播離開期間的進出、紙箱、成交或粒子。
+品質切換要妥善完成或收束當前動作，不能留下半穿櫃檯的人、懸空購物袋或失去 owner 的道具。
+
+H. 為 Android／iOS 後續保留可重用結構
+
+H1. 角色資產
+對需要改動的角色建立版本化分件／rig contract。
+保留角色與經濟身份的現有綁定（v9 的 Misaki 使用 staff.graybox）；視覺資產改善不改寫角色的經濟能力。
+保留 body／head／左右手臂等既有語意 ID；增加腿／腳等穩定 node 名稱、局部 pivot、rest pose、metres 與座標方向說明。
+需要行走的角色一定有可用下肢動畫結構。Misaki 如維持櫃檯工作，可按實際動作需要調整，不必為未做的遠距補貨加入整套多餘系統。
+
+H2. 動作資料
+idle、walk、inspect、tidy、receive-stock、pack／handover、greet 等有穩定 clip ID 或等價的 engine-neutral 動作定義。
+記錄 duration、loop、blend、foot-contact／handover 等必要標記。
+將 presentation state／動作資料與 Babylon-specific 播放適配分開，避免未來只能照抄一大段 renderer code。
+行走路徑與步態分層；原地 greeting 的零 root-motion 規則仍可保留，world locomotion 另行控制。
+
+H3. 重新輸出實際受影響的資產
+更新 authoring source、可重建方法、GLB／其他 master、manifest、hash 及版本。
+若 GLB 包含 clips，檢查真正輸出的 clips、node hierarchy 與 runtime 行為一致。
+若使用 rigid-part 程序動作，要如實交付 node hierarchy + 動作資料／adapter，不把它描述成已完成 skeletal clips。
+現有兩個 static calm／smile GLB 不能當成新動作已可移植的證明。
+本輪只承諾可重用資產及清楚接口；不宣稱已完成 Unity、URP、Android 或 iOS 的實機驗證。
+
+H4. 新材質／貼圖／shader 的可重用資料
+若使用 atlas，交 source、UV、texture/material references；GLB 要包含對應 TEXCOORD 及正確 image/sampler/material 引用。
+若採 soft-toon shader，記錄跨引擎材質意圖及合理的標準材質 fallback；Babylon shader 不能宣稱可直接等同 Unity/URP shader。
+不必為本輪先完成所有原生 adapter，但要誠實說明哪些可直接重用、哪些日後需重接。
+
+I. 驗證與必要回歸
+
+I1. 保留經濟／存檔保障
+沿用現有 deterministic core、成本／收入／庫存、stale-write／CAS、IDB transaction、busy lock、hidden startup、epoch／dedupe／no-replay 的必要測試。
+不因視覺更新刪除這些保障。
+特別驗證 animation callback 不會改現金／庫存；hidden 或 stale command 不出現假的成功演出；重載不重播舊交易。
+
+I2. 有意更新舊 presentation／art 測試
+以下舊期望可按本次新需求調整：
+- tests/presentation-w1_1a.test.ts 的固定 anchors／Low、Minimal 全部停動。
+- tests/presentation-w1_1a1.test.ts 的 Low、Auto downgrade、Minimal、Reduce Motion 一律相同靜態政策。
+- tests/day1-presentation.test.ts 的 Low／Minimal 一定取消人物 gesture。
+- tests/art-w1_1a.test.ts、tests/day1-art.test.ts 的精確四分件、無動畫／無 skeleton 等，僅在真實資產 contract 改動時更新對應期望。
+保留仍適用的資源上限、清理、去重、提交真實性及 greeting 幾何保障。
+交接清楚列出哪些舊呈現規則被替換；不要聲稱所有舊測試 byte-identical。
+
+I3. 針對本輪風險的檢查
+- 路徑通道、門洞、停點預約及角色不穿家具。
+- 步態與速度／距離相配，腳接地，停步與轉向連貫。
+- 同一 commit 同時 sale + buy／display 的處理，入貨數量與架位上下文正確。
+- Low、Minimal FX、Reduce Motion 行為不同且符合上述政策。
+- 快速關／開店、隱藏／返回、品質切換、mode/import 後無重複角色／孤兒道具／舊 callback。
+- 道具、actor、粒子及 pending sequence 數量有界，清理有效。
+- v9 greeting 手部不再穿衣服；新交收動作無明顯穿模。
+- 已改資產的 source、輸出、manifest 相符。
+跑必要的內容驗證與 production build。不要用大量沒有實際風險意義的檢查替代視覺驗證。
+
+I4. 實際 3D 美術比較與動態影片
+先提供同 viewport、同主要燈光／相機的前後比較；另看 Misaki 及兩位客人的正面、三分之四角度及必要側面。
+普通鏡頭檢查三人辨識度；近鏡檢查五官、髮際、衣領、層次及穿模。兩種視角都需要，不能只以漂亮特寫代表正常遊戲觀感。
+Low 也要保留面容／衣服大形辨識，不可退回無五官或同模色塊。
+以下影片必須使用新角色模型及新材質：
+在可用 WebGL 環境，錄一段約 60–90 秒主要示範，必要時附少量補充短片：
+1) 20–30 秒不操作／不拖相機，展示持續的 Misaki 工作及客人活動。
+2) 至少一位客人完成看得見的進店、踏步、停看貨架及離店；包含完整步態。
+3) 一次真實已提交成交，展示包裝／交收或相應摘要回應；若示範客人接袋，須有合理到櫃檯與離店路徑。
+4) 一次成功入貨及／或改陳列的對應回應，證明作用在正確目標。
+5) Low 下仍有人物活動。
+6) 開店／關店的連貫進出，不再一起突然消失／出現。
+補充驗證 Minimal FX／Reduce Motion 差異及 hidden 返回不補播舊成交。
+
+影片要讓正常玩家在一般縮放下看得懂；不能只交靜態截圖或 code 中有 animation loop。
+交易示範可用正常模式真正等待結算，或既有獨立 Sandbox 的合法快進產生真實 commit。若用 Sandbox，清楚註明。不要改玩家主存檔、強加現金、偽造交易，或偷偷改正常模式時間速度。
+
+I5. 效能陳述
+有真實量測才報告 FPS／frame-time，寫清楚裝置、解析度、品質及採樣方法。
+錄影 30fps、build 成功或 timer 測試都不是遊戲達到 30／60fps 的證明。
+以 Bible 的目標作效能方向，優先保留人物與操作，按實測削減裝飾負擔。
+
+I6. 如果目前環境不能渲染 WebGL
+完成可做的實作、內容／資產檢查、測試及 build，依支援的流程交付候選版本。
+明確列出「已完成的 source／非視覺驗證」及「仍待真正 3D 實機確認」。
+不得把 DOM 可見、source assertion 或模型存在，寫成步態／手部／效果已經目視通過。
+提供可直接打開的現有 Site 版本及簡短重現路徑，讓後續錄影可驗證；不要為此要求玩家安裝 Unity 或本機 driver。
+
+J. 交付
+
+1) 在現有公開 Site 完成更新；沿用原 URL、project 和 audience。
+2) 說明實際完成的玩家可見改善：Misaki 與兩位客人的新面貌／髮型／服裝／材質、店景重點美化、顧客活動、成交、入貨／陳列、環境、Low／Minimal／Reduce Motion。
+3) 提供本次 commit、saved version、deployment 成功狀態及精確 URL。
+4) 提供精簡 change log、必要測試／build 結果、實際 3D 驗證狀態；任何尚未目視驗證的項目要清楚列明。
+5) 交付更新的 authoring source、動作／rig contract、masters／manifest，以及可核對的變更資料；避免重複打包未改的大型資源。
+   說明隨附 .ts 哪部分已接入／調整、實際呼叫位置、已完成的場景 adapter 及必要測試。
+6) 有可用 WebGL 時附正常鏡頭連續影片；沒有時遵守 I6，如實交付候選版本，不宣稱動態視覺已驗收。
+7) 保留玩家現有存檔，正常／Sandbox 仍各自獨立。
+8) 不以「已有特效函數」「已新增若干測試」「粒子已開啟」作為完成有生氣目標的唯一依據。
+
+本輪完成標準：
+三位人物有看得出差別的面貌、髮型及衣服，實際 3D 觀感較 baseline 更完整、精緻；
+正常鏡頭一望，就見到有人慢慢逛店、店員正在做事；
+真實買賣有清楚動作回應；
+店景光影與材質更有層次，整體仍然 chill、治癒，低畫質亦保有基本生命力。
+
+
+K. 全部動態素材由 Work 自行製作
+
+K1. 本輪採用方式
+不用接入此前兩條 Grok MP4，不做影片 loop 修復，也不要求玩家再交影片／原圖後才能開工。
+所有必要的角色與物件動態，直接在現有真正 3D 場景中實作。
+現有影片與來源歷史如已在項目中，可保留作參考；取消它們的實作依賴，不以刪除原檔作本輪工作。
+不新增必須使用的影片播放器、VideoTexture 或影片 decoder。
+不要讓外部圖片轉影片、付費建模服務、API key 或本機軟件成為這輪完成的前置條件。
+
+K2. Work 自行完成美術來源與落地
+先依 B4–B12 做一組一致的角色設計，再完成實際網格、材質及可動結構。
+可用既有原創概念板，或在可用圖片生成工具中製作原創造型參考／適合用途的圖案與貼圖；具體工具不可用時選可行的幾何／頂點色／材質方案，不停在要求玩家去外部生成。
+圖片是設計／材質輸入。若使用，必須完成 UV／材質／匯出等實際接駁；不能以人像圖覆蓋模型。
+模型不要受限於幾個基本球／圓柱；可改善自訂網格、髮束、衣服輪廓及局部幾何，在 Web 負擔內追求可見精緻度。
+保留正式 authoring source、重建方法與來源紀錄；不要捏造未使用的工具、模型名稱或授權。
+
+K3. 原生人物活動
+至少有：idle／blink、walk、turn／stop、inspect、greet、tidy、receive-stock、pack／handover。
+依角色需要補足肩／肘／腕、髖／腿／腳及物件 attachment points。
+分清楚角色路徑、步態、手部動作及表情。走路由實際移動距離驅動，並處理起停；手部演出依所需時間取樣。
+不要把整個人上下搖、root 平移或固定位置小轉頭當作完整顧客活動。
+分開 ambient／locomotion、service、decorative channels，避免新提示或 repaint 停掉所有人。
+售出多件只做一段代表性演出；回饋來自真實成功 commit，遵守 E 節。
+
+K4. 原生門、植物及窗外
+門葉有正確 hinge／轉軸及實際門洞；跟進出相配，角色不穿實牆／門板。
+盆栽根部和盆固定，葉片或葉簇在各自 attachment／局部轉軸附近小幅擺動；不同植物相位錯開。
+如需要改善窗外，建立少量可見的枝葉、樹幹／枝條及遠景建築大形，僅服務現有窗景及 curated camera。
+窗框、牆體及前後遮擋仍是真正 3D；檢查既有相機範圍不露出不合理邊界或吃掉選架操作。
+不擴展成可遊歷城市、新地圖或完整天氣系統。日夜／天氣以現有 Bible 範圍及已實作狀態為準，不提前加入後續章節內容。
+葉動、門牌、光塵使用克制節奏；店景漂亮來自形狀、材質、光影及構圖一起配合。
+
+K5. 原生物件／特效
+紙箱、紙袋、收據和陳列物件是場景內實際可管理的視覺道具，使用有限物件池或有界生命週期。
+手持道具跟隨 hand socket；交接時正確切換 owner／parent，取消或 epoch 切換能安全收回，不留懸空袋。
+使用少量粒子、材質參數或簡單動畫曲線完成適當光塵、輕柔提示與合理蒸氣；不堆滿畫面。
+對同一材質 instance／shared material 的變更應檢查影響範圍，避免選中一件商品令全店同時閃。
+UI 動態保持快速可操作，不在交易或存檔前等待動畫完成。
+
+K6. UI 人像的範圍
+先完成世界內的真正 3D 人物。故事／手記人像不是本輪前置功能。
+若現有版面適合，可用一致原創靜態人像，或在性能可接受下使用新模型的畫面；任何額外動態人像皆需符合手機版空間及 Reduce Motion。
+不為了展示素材增加大型彈窗、強制新劇情步驟或遮住開店 CTA／報表。
+人物造型完成度以實際店內畫面判斷，不以 UI 頭像代替。
+
+K7. 降級及有效設定
+Low 優先減少粒子、影子、反射、遠景枝葉數及次要更新頻率；至少一位顧客仍行路，Misaki 仍工作。
+Minimal FX 關閉裝飾效果，保留原生行路及必要工作／交易演出。
+Reduce Motion 使用穩定姿勢及即時可讀狀態回應；不得為表現活潑而違反無障礙偏好。
+現有 world.minimal(...) 由每次 draw 重覆呼叫；新 setter 要冪等，重覆套同一值不可取消／重啟正在做的原生動作。
+quality／Auto 層級切換亦不可再一律呼叫「停止所有人物」；安全收束已移除 actor／道具，保留仍有效活動。
+
+L. 隨附 TypeScript 參考模組的使用與接入責任
+
+L1. 檔案
+Next_Stop_Little_Shop_Native_Motion_Starter_v3.ts
+先讀檔頭與公開型別，再檢查最新 source 的對應位置。它刻意沒有依賴 Babylon、DOM、timer 或經濟核心。
+可將其可用部分移入 src/presentation/，或以相同保障整合至現有架構；不要複製出一套永遠沒有場景呼叫的平行系統。
+數值是起始調校值，不是 Bible 固定參數或已在新模型目視通過的動作。
+
+L2. 明確尚需 Work 完成的部分
+- 真正 3D 新模型、材質、面部表情、關節／pivot／rest-pose 綁定。
+- 移動路徑、轉向／起停、角色半徑、停點預約、互不相穿、門洞及門葉。
+- 依模型比例校準步幅、左右腿、腳底接地、膝／踝、衣服與手臂穿模。
+- 將取樣輸出連到 Babylon actor、實際道具、表情及有界環境效果。
+- 將真實 commit 接到回饋，將新政策連到現有設定／語系。
+- 接駁、處理與驗證品質、hidden、mode、import、disposed、WebGL loss 等生命週期。
+模組本身不建立買家身份、實際交易明細或商店 layout，也不宣稱已完成上述功能。
+
+L3. 已提交結果的入口
+成功 await Saves.command 或 Saves.settle 後，才使用其確實已持久化的 before／after 結果建立 presentation receipt。
+涵蓋 Normal 自動 settle 及 Sandbox 既有合法快進；不能只接點擊命令。
+載入、reload、retry-refresh、import、選模式和離線補結算的基線，只同步 baseline，不投影成新交易演出。
+記錄 command 發出前的 id／kind／item／quantity／targetSlot 及相應 presentation epoch。完成後使用該上下文，不能改讀使用者目前選中項目。
+
+L4. 「revision 有增加」並不足以證明命令生效
+v9 Saves.write 在持久化時會增加 revision，即使底層收到 duplicate/no-op command。因此不能只見 revision 增加就演成功入貨／陳列。
+對 buy／display，至少核對 captured command id 在 before 未存在而在 after 新加入，並驗證相應命令結果。
+入貨量採用該已接受命令的真實 quantity；不可用 inventory 淨增加，因同一 commit 可能先 settle 賣貨再 buy。
+對 display，確認捕捉的 targetSlot 確實由原內容改成該接受結果；無變更不演成功換陳列。
+同一 commit 有 soldUnits 及 accepted-command effect 時，兩者都要給真實回應，視覺動作可作有界短序列。
+現有 core 沒提供逐筆買家／購物籃資料；紙袋保持 generic，售出件數不等於客人／交易筆數。
+
+L5. 生命週期與重播保障
+valid committed receipt 的去重消耗先於 hidden／stale epoch 的視覺略過。即使當時不播，也不能回到頁面後重播。
+取消一次動作與重設存檔 baseline 是不同操作；hidden／普通 repaint 不清空已消耗 revision。
+同一 mode／shop stream 使用正確 baseline；import／restore 導致資料來源更換或 revision 可能回退時，建立新的 stream incarnation／epoch 並切斷舊 callback。
+建立 NativeServiceSequencer 時明確傳入當前 app-wide presentationEpoch：new NativeServiceSequencer(streamKey, loaded.revision, presentationEpoch)。切換模式亦保持這個取消計數器單調增加，不能重設成 0。save incarnation 只在存檔身份真正更換時更新，不因每次 hide／resume 而重造。
+不能把一個未驗證或其他 stream 的 receipt 當作合法新 revision，導致吞掉之後真事件。
+模組對數值／型別的檢查不會證明 caller 的 persistence 成功；成功邊界仍由現有儲存 adapter 負責。
+UI 的已提交結果由 authoritative snapshot 顯示；視覺 pending queue 合併／略過不得令資料消失。
+
+L6. 場景應用及清理
+現有 v9 world.ts 的 frame delta 是 milliseconds；隨附模組的 tick／advanceVisibleTime／sampleIdle 使用 seconds。接駁時明確將 dtMs / 1000 轉換一次，不能直接傳原有毫秒值，也不能重覆轉換。距離維持 metres，角度維持 radians。
+可見時間取樣及 delta 限制要與現有 frame loop 一致，hidden 返回不追趕 elapsed time 或補播行路／交易。
+模組輸出的姿勢需混合到角色 rest pose；不可將中立 0 直接當作所有模型骨架的正確局部角度。
+轉換角度／座標系、身高、步幅及 pivot 時記錄約定。不要將距離驅動步態描述成已實作完整 foot IK。
+只有角色在合理位置且可到達時安排接袋；否則讓 Misaki 做包裝／收據回應，不能瞬移客人到櫃檯。
+取消序列時同步清理臨時袋／箱／表情／服務站點 reservation；新 sequence 不受舊 callback 影響。
+
+L7. 本輪驗證與交付
+先保留現有 core／存檔保障，測試上述真實風險；模組測試不可取代遊戲接入測試與 I4 的實際 3D 畫面。
+確認有新模型及實際演出後，才把對應項目寫成已完成；沒有可用 WebGL 時按 I6 清楚列待目視驗證。
+交付表列出：檔案哪部分沿用／調整、接駁在哪裏、新增哪些 assets／動作、哪些已實際看過。
+不要要求 Keith 自行跑 TypeScript、設定本機環境或安裝 Unity／Blender；這些接駁工作由 Work 完成。
+
+最終交付目標
+在同一個公開 Site，看到精緻而有特色的新 3D 人物、緩慢自然的顧客活動、可讀的店員工作與真實交易回應，以及克制而有生活感的環境動態。
+素材製作、程式接入、合理驗證及發布均由 Work 在可用雲端流程完成。
+
+
+END WORK PROMPT
+
+────────────────────────────────
+交接包自身的驗證紀錄
+────────────────────────────────
+
+提供日期：2026-10-23。
+此段說明本交接包的參考模組驗證，不是公開遊戲新版本的測試或視覺驗收。
+
+TypeScript 檔案：Next_Stop_Little_Shop_Native_Motion_Starter_v3.ts
+SHA-256：215b955ec4b3fc83400a478545882b257fc244247fb16ea630748bbce8547000
+
+編譯：PASS。
+- strict；ES2022 target；ES2022-only lib，無 DOM／Babylon／外部依賴。
+- 另檢查 noUncheckedIndexedAccess、exactOptionalPropertyTypes、noUnusedLocals、noUnusedParameters。
+- ESM 型別檢查及 CommonJS 測試編譯均已完成。
+
+獨立行為檢查：26 項通過；0 failed／skipped／cancelled。
+重點包括：Low／Minimal 不凍結原生動作、Reduce Motion 靜態回應、眨眼／距離步態取樣、有限數值、hidden 不追趕時間、同一 commit 賣貨兼入貨、duplicate/no-op 不假裝命令成功、捕捉原目標架位、stale epoch 消耗後不重播、無效／其他 stream receipt 不污染 revision、有界 active/pending 及取消清理。
+初版極大有限時間／距離值可能使姿勢出現 NaN 的問題，已改用先取週期餘數再計算，並對最終版本重跑通過。
+NativeServiceSequencer 的 initialEpoch 現為必填，必須傳 app 當前取消 epoch。
+
+主要 exports：
+- COZY_TIMING：可調節奏參考。
+- resolveMotionPolicy：可見性、有效畫質、Minimal 與 Reduce Motion 政策。
+- advanceVisibleTime：可見時間累積與長 frame gap 限制。
+- sampleIdle／sampleWalk：以 seconds／metres 取樣的局部動作資料。
+- makeStreamKey／projectConfirmedCommit：存檔 stream 與真實成功 transition 的 presentation 投影。
+- NativeServiceSequencer：一個 active commit batch + 一個最新 pending batch；每個 batch 最多兩種 cue。
+
+仍由 Work 完成並驗證：實際新模型、rig/pivot、路徑、腳底接地、道具交接、Babylon adapter、現有存檔入口接駁、遊戲回歸、裝置效能、真正 WebGL 視覺及發布。
+本模組不寫現金／庫存，不提供完整遊戲引擎，也不保證把檔案放入資料夾後畫面就會更新。

@@ -1,3 +1,4 @@
+import {nativeContext} from './native-context';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -21,7 +22,7 @@ function extract(file:ts.SourceFile,names:string[],methods=false){const result:s
 const main=parse('src/main.ts'),world=parse('src/world.ts');
 test('Day1 real story UI boundary writes only sidecar; skip and greeting do not transact, old import callbacks cannot restore marks',async()=>{
  const db=await database('day1-ui-'+(++id)),saves=new Saves(db,core),snapshot=await saves.loadOrCreate('sandbox',start);let greets=0,cancels=0;
- const c:any={state:snapshot,story:emptyStory(snapshot),storyBusy:false,busy:false,storyReplay:false,presentationEpoch:0,saves,emptyStory,locale:'zh-HK',day1Text,draw:()=>{},notice:()=>{},document:{hidden:false,querySelector:()=>undefined},world:{gesture:()=>greets++},cancelFeedback:()=>{c.presentationEpoch++;cancels++;}};
+ const c:any={...nativeContext(),state:snapshot,story:emptyStory(snapshot),storyBusy:false,busy:false,storyReplay:false,presentationEpoch:0,saves,emptyStory,locale:'zh-HK',day1Text,draw:()=>{},notice:()=>{},document:{hidden:false,querySelector:()=>undefined},world:{gesture:()=>greets++},cancelFeedback:()=>{c.presentationEpoch++;cancels++;}};
  vm.createContext(c);vm.runInContext(ts.transpileModule(extract(main,['syncStory','storyAction']),{compilerOptions:{target:ts.ScriptTarget.ES2022}}).outputText,c);
  assert.equal(await c.storyAction('welcome','read'),true);assert.equal(greets,1);assert.ok(c.story.read.includes('welcome'));assert.deepEqual(await saves.read('sandbox'),snapshot);
  assert.equal(await c.storyAction('choose','skip'),true);assert.equal(c.story.dismissed,true);assert.equal(cancels,1);assert.deepEqual(await saves.read('sandbox'),snapshot);
@@ -30,15 +31,15 @@ test('Day1 real story UI boundary writes only sidecar; skip and greeting do not 
  // Simulates an old UI callback still carrying the pre-import object/revision.
  assert.equal(await c.storyAction('welcome','read'),false);assert.deepEqual((await saves.readStory(imported)).read,[]);assert.deepEqual(await saves.read('sandbox'),imported);db.close();
 });
-test('Day1 actual world boundary keeps pre-sale browsing, committed sale summary and one bounded gesture; all cancellation policies agree',()=>{
+test('Day1 actual world boundary keeps pre-sale browsing, committed sale summary and one bounded gesture; native gestures survive Low and Minimal while decorative feedback is separate',()=>{
  const script=ts.transpileModule(extract(world,['finishFeedback','advanceFeedback'])+'\nworld={'+extract(world,['feedback','gesture','skip','quality','minimal'],true)+'};',{compilerOptions:{target:ts.ScriptTarget.ES2022}}).outputText;
- const c:any={clock:new FeedbackClock(),gestureClock:new Day1GestureClock(),disposed:false,effectiveQuality:'high',quality:'auto',frames:[],last:undefined,minimalFX:false,reduced:{matches:false},document:{hidden:false},motionAllowed,onFeedbackEnd:()=>{},setQuality:(q:string)=>c.effectiveQuality=q};vm.createContext(c);vm.runInContext(script,c);
+ const c:any={...nativeContext(),clock:new FeedbackClock(),gestureClock:new Day1GestureClock(),disposed:false,effectiveQuality:'high',quality:'auto',frames:[],last:undefined,minimalFX:false,reduced:{matches:false},document:{hidden:false},motionAllowed,onFeedbackEnd:()=>{},setQuality:(q:string)=>c.effectiveQuality=q};vm.createContext(c);vm.runInContext(script,c);
  assert.equal(customerVisible(0,true,false),true);assert.equal(customerVisible(0,true,true),true);assert.equal(customerVisible(1,true,true),false);
  let s=core.create('sandbox',start);for(const cmd of [{kind:'buy',itemId:'off.tea',quantity:5},{kind:'display',itemId:'off.tea',slot:0},{kind:'open'}])s=core.apply(s,{id:'pose-'+(++id),...cmd});
  assert.equal(s.eventSequence,0);const after=core.apply(s,{id:'pose-settle',kind:'settle',target:start+3600000}),projector=new FeedbackProjector(),event=projector.project(s,after,'advance',0)!;assert.equal(event.sold,5);
- c.world.feedback(event);assert.equal(c.gestureClock.active.kind,'sale');assert.equal(projector.project(after,after,'reload',0),undefined);
- for(const cancellation of ['skip','hidden','low','minimal','reduced']){c.document.hidden=false;c.effectiveQuality='high';c.minimalFX=false;c.reduced.matches=false;c.world.gesture('greet');assert.equal(c.gestureClock.active.kind,'greet');if(cancellation==='skip')c.world.skip();if(cancellation==='hidden'){c.document.hidden=true;c.advanceFeedback(16);}if(cancellation==='low')c.world.quality('low');if(cancellation==='minimal')c.world.minimal(true);if(cancellation==='reduced'){c.reduced.matches=true;c.advanceFeedback(16);}assert.equal(c.gestureClock.active,undefined);}
- c.document.hidden=false;assert.equal(c.gestureClock.start('sale',policy),true);for(let i=0;i<15;i++)c.gestureClock.step(50,policy);assert.equal(c.gestureClock.active,undefined);c.gestureClock.step(5000,policy);assert.equal(c.gestureClock.active,undefined);
+ c.world.feedback(event);assert.equal(c.clock.active.kind,'sale');assert.equal(projector.project(after,after,'reload',0),undefined);
+ for(const cancellation of ['skip','hidden','low','minimal','reduced']){c.document.hidden=false;c.effectiveQuality='high';c.minimalFX=false;c.reduced.matches=false;c.world.gesture('greet');assert.equal(c.gestureClock.active.kind,'greet');if(cancellation==='skip')c.world.skip();if(cancellation==='hidden'){c.document.hidden=true;c.advanceFeedback(16);}if(cancellation==='low')c.world.quality('low');if(cancellation==='minimal')c.world.minimal(true);if(cancellation==='reduced'){c.reduced.matches=true;c.advanceFeedback(16);}if(cancellation==='low'||cancellation==='minimal')assert.equal(c.gestureClock.active?.kind,'greet');else assert.equal(c.gestureClock.active,undefined);}
+ c.document.hidden=false;assert.equal(c.gestureClock.start('sale',policy),true);for(let i=0;i<57;i++)c.gestureClock.step(50,policy);assert.equal(c.gestureClock.active,undefined);c.gestureClock.step(5000,policy);assert.equal(c.gestureClock.active,undefined);
 });
 test('Day1 rendered UI uses live positive/negative as-of report, current selection and safe text; no remembered profit reconstruction',()=>{
  let s=core.create('sandbox',start);for(const cmd of [{kind:'buy',itemId:'off.tea',quantity:5},{kind:'display',itemId:'off.tea',slot:0},{kind:'open'},{kind:'settle',target:start+15*60000}])s=core.apply(s,{id:'markup-'+(++id),...cmd});

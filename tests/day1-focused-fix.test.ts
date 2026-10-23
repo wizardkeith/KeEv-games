@@ -1,3 +1,4 @@
+import {nativeContext} from './native-context';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -23,7 +24,7 @@ test('opening story CTA executes actual run/act/Saves once; duplicate, deferred,
  const ast=ts.createSourceFile('main.ts',fs.readFileSync('src/main.ts','utf8'),ts.ScriptTarget.Latest,true);
  let click='';for(const n of ast.statements){if(ts.isExpressionStatement(n)&&ts.isCallExpression(n.expression)&&n.expression.expression.getText(ast)==='app.addEventListener'&&n.expression.arguments[0]?.getText(ast)==="'click'")click=n.expression.arguments[1].getText(ast);}assert.ok(click);
  let release!:()=>void,calls=0;const gate=new Promise<void>(r=>release=r),errors:unknown[]=[],targets:unknown[]=[];
- const c:any={state:f.s,mode:'sandbox',draftPrefix:'test.',saves:{command:async(...args:Parameters<Saves['command']>)=>{calls++;targets.push(args[2]);await gate;return f.saves.command(...args);}},commandId:()=>`intent-${++seq}`,busy:false,presentationEpoch:0,u:{slot:0,draft:{},formError:'',formField:'',blocking:''},draw:()=>{},syncStory:async()=>{},committed:()=>{},storeDraft:()=>{},fail:(e:unknown)=>errors.push(e),Date:{now:()=>start+15*60000}};
+ const c:any={...nativeContext(),state:f.s,mode:'sandbox',draftPrefix:'test.',saves:{command:async(...args:Parameters<Saves['command']>)=>{calls++;targets.push(args[2]);await gate;return f.saves.command(...args);}},commandId:()=>`intent-${++seq}`,busy:false,presentationEpoch:0,u:{slot:0,draft:{},formError:'',formField:'',blocking:''},draw:()=>{},syncStory:async()=>{},committed:()=>{},storeDraft:()=>{},fail:(e:unknown)=>errors.push(e),Date:{now:()=>start+15*60000}};
  vm.createContext(c);vm.runInContext(ts.transpileModule(functions(ast,['run','act'])+`\nclickHandler=${click};\nconst actualRun=run;run=(...args:any[])=>pending=actualRun(...args);`,{compilerOptions:{target:ts.ScriptTarget.ES2022}}).outputText,c);
  const clickOpen=()=>c.clickHandler({target:{closest:()=>({disabled:false,dataset:{action:'story-open',beat:'open'}})}});
  clickOpen();clickOpen();assert.equal(calls,1);assert.equal(c.busy,true);release();await c.pending;assert.deepEqual(errors,[]);assert.equal(c.state.open,true);assert.equal(c.state.commandIds.length,f.s.commandIds.length+1);assert.equal(targets[0],start);

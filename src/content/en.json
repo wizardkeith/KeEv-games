@@ -165,7 +165,7 @@
   "identityError": "Enter a shop name (1–32 characters), company (up to 32) and mark (up to 4).",
   "displayEmptyError": "Buy stock before placing goods on a display.",
   "minimalFX": "Minimal effects",
-  "minimalFXNote": "Keep steady cues; disable dust, small character motions and brief 3D effects. Saved on this device only; shop rules stay the same.",
+  "minimalFXNote": "Disable dust, glow and decorative movement; keep customer walking and staff work / transaction responses. Reduce Motion is separate. Saved on this device; shop rules stay the same.",
   "skipReveal": "Skip opening animation",
   "qualityStandard": "Standard",
   "qualitySelect": "Select",

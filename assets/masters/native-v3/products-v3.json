@@ -1,0 +1,1075 @@
+{
+  "version": "native.products.v3",
+  "units": "metres",
+  "axes": "RH Y up",
+  "material": "existing linear-sRGB semantic PBR",
+  "recipes": [
+    {
+      "id": "off.notebook",
+      "parts": [
+        {
+          "shape": "round",
+          "size": [
+            0.34,
+            0.012,
+            0.45
+          ],
+          "at": [
+            0,
+            0.006,
+            0
+          ],
+          "color": "#bca8cc",
+          "role": "fabric",
+          "radius": 0.005
+        },
+        {
+          "shape": "round",
+          "size": [
+            0.34,
+            0.012,
+            0.45
+          ],
+          "at": [
+            0,
+            0.056,
+            0
+          ],
+          "color": "#bca8cc",
+          "role": "fabric",
+          "radius": 0.005
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.307,
+            0.038,
+            0.423
+          ],
+          "at": [
+            0.007,
+            0.031,
+            0.002
+          ],
+          "color": "#FFF7E9",
+          "role": "paper"
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.302,
+            0.0018,
+            0.003
+          ],
+          "at": [
+            0.008,
+            0.021,
+            -0.211
+          ],
+          "color": "#D9D0BF",
+          "role": "paper"
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.302,
+            0.0018,
+            0.003
+          ],
+          "at": [
+            0.008,
+            0.031,
+            -0.211
+          ],
+          "color": "#D9D0BF",
+          "role": "paper"
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.302,
+            0.0018,
+            0.003
+          ],
+          "at": [
+            0.008,
+            0.041,
+            -0.211
+          ],
+          "color": "#D9D0BF",
+          "role": "paper"
+        },
+        {
+          "shape": "round",
+          "size": [
+            0.025,
+            0.062,
+            0.45
+          ],
+          "at": [
+            -0.158,
+            0.031,
+            0
+          ],
+          "color": "#bca8cc",
+          "role": "fabric",
+          "radius": 0.008
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.14,
+            0.002,
+            0.072
+          ],
+          "at": [
+            0.02,
+            0.063,
+            -0.07
+          ],
+          "color": "#FFF7E9",
+          "role": "paper"
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.01,
+            0.003,
+            0.438
+          ],
+          "at": [
+            0.105,
+            0.064,
+            0
+          ],
+          "color": "#7B9783",
+          "role": "fabric"
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.035,
+            0.002,
+            0.006
+          ],
+          "at": [
+            0.02,
+            0.065,
+            -0.07
+          ],
+          "color": "#6A4E3C",
+          "role": "ink"
+        },
+        {
+          "shape": "round",
+          "size": [
+            0.346,
+            0.066,
+            0.06
+          ],
+          "at": [
+            0,
+            0.033,
+            0.11
+          ],
+          "color": "#D8C8AB",
+          "role": "paper",
+          "radius": 0.004
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.075,
+            0.002,
+            0.005
+          ],
+          "at": [
+            -0.035,
+            0.067,
+            0.11
+          ],
+          "color": "#9B8B71",
+          "role": "ink"
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.043,
+            0.002,
+            0.003
+          ],
+          "at": [
+            -0.048,
+            0.067,
+            0.12
+          ],
+          "color": "#B5A185",
+          "role": "ink"
+        }
+      ]
+    },
+    {
+      "id": "off.pencil",
+      "parts": [
+        {
+          "shape": "cylinder",
+          "size": [
+            0.042,
+            0.43,
+            0.042
+          ],
+          "at": [
+            0,
+            0.026,
+            0
+          ],
+          "color": "#d5ba78",
+          "role": "paint",
+          "turn": [
+            0,
+            0,
+            1.5707963267948966
+          ],
+          "top": 1
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.042,
+            0.075,
+            0.042
+          ],
+          "at": [
+            0.2525,
+            0.026,
+            0
+          ],
+          "color": "#CBA67D",
+          "role": "wood",
+          "turn": [
+            0,
+            0,
+            -1.5707963267948966
+          ],
+          "top": 0
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.01,
+            0.022,
+            0.01
+          ],
+          "at": [
+            0.289,
+            0.026,
+            0
+          ],
+          "color": "#443B3C",
+          "role": "ink",
+          "turn": [
+            0,
+            0,
+            -1.5707963267948966
+          ],
+          "top": 0
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.045,
+            0.03,
+            0.045
+          ],
+          "at": [
+            -0.23,
+            0.026,
+            0
+          ],
+          "color": "#D5C4A7",
+          "role": "metal",
+          "turn": [
+            0,
+            0,
+            1.5707963267948966
+          ],
+          "top": 1
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.044,
+            0.038,
+            0.044
+          ],
+          "at": [
+            -0.264,
+            0.026,
+            0
+          ],
+          "color": "#CBA6A5",
+          "role": "fabric",
+          "turn": [
+            0,
+            0,
+            1.5707963267948966
+          ],
+          "top": 1
+        }
+      ]
+    },
+    {
+      "id": "off.mug",
+      "parts": [
+        {
+          "shape": "cylinder",
+          "size": [
+            0.235,
+            0.235,
+            0.235
+          ],
+          "at": [
+            0,
+            0.1175,
+            0
+          ],
+          "color": "#dfc9a2",
+          "role": "ceramic",
+          "top": 1,
+          "open": true
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.197,
+            0.205,
+            0.197
+          ],
+          "at": [
+            0,
+            0.1325,
+            0
+          ],
+          "color": "#FFF7E9",
+          "role": "ceramic",
+          "top": 1,
+          "open": true,
+          "inside": true
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.235,
+            0.03,
+            0.235
+          ],
+          "at": [
+            0,
+            0.015,
+            0
+          ],
+          "color": "#dfc9a2",
+          "role": "ceramic",
+          "top": 1
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.195,
+            0.003,
+            0.195
+          ],
+          "at": [
+            0,
+            0.032,
+            0
+          ],
+          "color": "#FFF7E9",
+          "role": "ceramic",
+          "top": 1
+        },
+        {
+          "shape": "torus",
+          "size": [
+            0.235,
+            0.019,
+            0.235
+          ],
+          "at": [
+            0,
+            0.235,
+            0
+          ],
+          "color": "#FFF7E9",
+          "role": "ceramic",
+          "segments": 12
+        },
+        {
+          "shape": "torus",
+          "size": [
+            0.178,
+            0.028,
+            0.165
+          ],
+          "at": [
+            0.155,
+            0.125,
+            0
+          ],
+          "color": "#dfc9a2",
+          "role": "ceramic",
+          "turn": [
+            1.5707963267948966,
+            0,
+            0
+          ],
+          "arc": [
+            -2.2,
+            2.2
+          ],
+          "segments": 28
+        },
+        {
+          "shape": "torus",
+          "size": [
+            0.239,
+            0.008,
+            0.239
+          ],
+          "at": [
+            0,
+            0.053,
+            0
+          ],
+          "color": "#D8C5A9",
+          "role": "ceramic"
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.155,
+            0.008,
+            0.155
+          ],
+          "at": [
+            0,
+            0.004,
+            0
+          ],
+          "color": "#CBB99E",
+          "top": 1,
+          "role": "ceramic"
+        }
+      ]
+    },
+    {
+      "id": "off.tea",
+      "parts": [
+        {
+          "shape": "cylinder",
+          "size": [
+            0.23,
+            0.29,
+            0.23
+          ],
+          "at": [
+            0,
+            0.145,
+            0
+          ],
+          "color": "#93a998",
+          "role": "metal",
+          "top": 1
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.25,
+            0.025,
+            0.25
+          ],
+          "at": [
+            0,
+            0.3,
+            0
+          ],
+          "color": "#CBA67D",
+          "role": "metal",
+          "top": 1
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.13,
+            0.13,
+            0.006
+          ],
+          "at": [
+            0,
+            0.15,
+            -0.116
+          ],
+          "color": "#FFF7E9",
+          "role": "paper"
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.04,
+            0.07,
+            0.008
+          ],
+          "at": [
+            0,
+            0.15,
+            -0.12
+          ],
+          "color": "#7B9783",
+          "role": "ink"
+        },
+        {
+          "shape": "torus",
+          "size": [
+            0.252,
+            0.008,
+            0.252
+          ],
+          "at": [
+            0,
+            0.308,
+            0
+          ],
+          "color": "#D8C4A1",
+          "role": "metal"
+        },
+        {
+          "shape": "sphere",
+          "size": [
+            0.027,
+            0.052,
+            0.005
+          ],
+          "at": [
+            -0.024,
+            0.158,
+            -0.122
+          ],
+          "turn": [
+            0,
+            0,
+            -0.35
+          ],
+          "color": "#8B9F81",
+          "role": "ink"
+        },
+        {
+          "shape": "sphere",
+          "size": [
+            0.022,
+            0.043,
+            0.005
+          ],
+          "at": [
+            0.016,
+            0.145,
+            -0.122
+          ],
+          "turn": [
+            0,
+            0,
+            0.45
+          ],
+          "color": "#A5B291",
+          "role": "ink"
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.08,
+            0.003,
+            0.004
+          ],
+          "at": [
+            0,
+            0.106,
+            -0.122
+          ],
+          "color": "#AD9679",
+          "role": "ink"
+        }
+      ]
+    },
+    {
+      "id": "off.cookie",
+      "parts": [
+        {
+          "shape": "round",
+          "size": [
+            0.29,
+            0.09,
+            0.23
+          ],
+          "at": [
+            0,
+            0.045,
+            0
+          ],
+          "color": "#CBA67D",
+          "role": "paper",
+          "radius": 0.018
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.18,
+            0.018,
+            0.18
+          ],
+          "at": [
+            0,
+            0.1,
+            0
+          ],
+          "color": "#cc9a78",
+          "role": "paint",
+          "top": 1
+        },
+        {
+          "shape": "sphere",
+          "size": [
+            0.023,
+            0.01,
+            0.023
+          ],
+          "at": [
+            -0.04,
+            0.113,
+            -0.04
+          ],
+          "color": "#6A4E3C",
+          "role": "paint"
+        },
+        {
+          "shape": "sphere",
+          "size": [
+            0.023,
+            0.01,
+            0.023
+          ],
+          "at": [
+            0.04,
+            0.113,
+            -0.03
+          ],
+          "color": "#6A4E3C",
+          "role": "paint"
+        },
+        {
+          "shape": "sphere",
+          "size": [
+            0.023,
+            0.01,
+            0.023
+          ],
+          "at": [
+            0,
+            0.113,
+            0.04
+          ],
+          "color": "#6A4E3C",
+          "role": "paint"
+        }
+      ]
+    },
+    {
+      "id": "off.tote",
+      "parts": [
+        {
+          "shape": "round",
+          "size": [
+            0.32,
+            0.285,
+            0.095
+          ],
+          "at": [
+            0,
+            0.147,
+            0
+          ],
+          "color": "#c7b7a0",
+          "role": "fabric",
+          "radius": 0.026
+        },
+        {
+          "shape": "torus",
+          "size": [
+            0.19,
+            0.025,
+            0.19
+          ],
+          "at": [
+            0,
+            0.3,
+            -0.028
+          ],
+          "color": "#CBA67D",
+          "role": "fabric",
+          "turn": [
+            1.5707963267948966,
+            0,
+            0
+          ]
+        },
+        {
+          "shape": "torus",
+          "size": [
+            0.19,
+            0.025,
+            0.19
+          ],
+          "at": [
+            0,
+            0.3,
+            0.028
+          ],
+          "color": "#CBA67D",
+          "role": "fabric",
+          "turn": [
+            1.5707963267948966,
+            0,
+            0
+          ]
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.13,
+            0.085,
+            0.004
+          ],
+          "at": [
+            0,
+            0.15,
+            -0.049
+          ],
+          "color": "#FFF7E9",
+          "role": "fabric"
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.04,
+            0.054,
+            0.005
+          ],
+          "at": [
+            0,
+            0.15,
+            -0.052
+          ],
+          "color": "#7B9783",
+          "role": "ink"
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.003,
+            0.225,
+            0.003
+          ],
+          "at": [
+            -0.139,
+            0.15,
+            -0.049
+          ],
+          "color": "#AE9D86",
+          "role": "fabric"
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.003,
+            0.225,
+            0.003
+          ],
+          "at": [
+            0.139,
+            0.15,
+            -0.049
+          ],
+          "color": "#AE9D86",
+          "role": "fabric"
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.282,
+            0.003,
+            0.003
+          ],
+          "at": [
+            0,
+            0.037,
+            -0.049
+          ],
+          "color": "#AE9D86",
+          "role": "fabric"
+        }
+      ]
+    },
+    {
+      "id": "off.card",
+      "parts": [
+        {
+          "shape": "round",
+          "size": [
+            0.28,
+            0.014,
+            0.38
+          ],
+          "at": [
+            0,
+            0.008,
+            0
+          ],
+          "color": "#FFF7E9",
+          "role": "paper",
+          "radius": 0.007
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.23,
+            0.004,
+            0.23
+          ],
+          "at": [
+            0,
+            0.018,
+            -0.025
+          ],
+          "color": "#b9c3d8",
+          "role": "ink"
+        },
+        {
+          "shape": "sphere",
+          "size": [
+            0.1,
+            0.005,
+            0.1
+          ],
+          "at": [
+            -0.04,
+            0.022,
+            -0.045
+          ],
+          "color": "#C28F73",
+          "role": "ink"
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.14,
+            0.003,
+            0.008
+          ],
+          "at": [
+            0,
+            0.023,
+            0.13
+          ],
+          "color": "#6A4E3C",
+          "role": "ink"
+        }
+      ]
+    },
+    {
+      "id": "off.towel",
+      "parts": [
+        {
+          "shape": "round",
+          "size": [
+            0.33,
+            0.09,
+            0.27
+          ],
+          "at": [
+            0,
+            0.045,
+            0
+          ],
+          "color": "#9abdb6",
+          "role": "fabric",
+          "radius": 0.035
+        },
+        {
+          "shape": "round",
+          "size": [
+            0.32,
+            0.065,
+            0.25
+          ],
+          "at": [
+            0,
+            0.11,
+            0
+          ],
+          "color": "#9abdb6",
+          "role": "fabric",
+          "radius": 0.025
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.065,
+            0.16,
+            0.278
+          ],
+          "at": [
+            0,
+            0.08,
+            0
+          ],
+          "color": "#FFF7E9",
+          "role": "paper"
+        }
+      ]
+    },
+    {
+      "id": "off.tray",
+      "parts": [
+        {
+          "shape": "round",
+          "size": [
+            0.38,
+            0.025,
+            0.29
+          ],
+          "at": [
+            0,
+            0.016,
+            0
+          ],
+          "color": "#bb957b",
+          "role": "wood",
+          "radius": 0.012
+        },
+        {
+          "shape": "round",
+          "size": [
+            0.02,
+            0.055,
+            0.29
+          ],
+          "at": [
+            -0.184,
+            0.034,
+            0
+          ],
+          "color": "#6A4E3C",
+          "role": "wood",
+          "radius": 0.009
+        },
+        {
+          "shape": "round",
+          "size": [
+            0.02,
+            0.055,
+            0.29
+          ],
+          "at": [
+            0.184,
+            0.034,
+            0
+          ],
+          "color": "#6A4E3C",
+          "role": "wood",
+          "radius": 0.009
+        },
+        {
+          "shape": "round",
+          "size": [
+            0.38,
+            0.055,
+            0.02
+          ],
+          "at": [
+            0,
+            0.034,
+            -0.135
+          ],
+          "color": "#6A4E3C",
+          "role": "wood",
+          "radius": 0.009
+        },
+        {
+          "shape": "round",
+          "size": [
+            0.38,
+            0.055,
+            0.02
+          ],
+          "at": [
+            0,
+            0.034,
+            0.135
+          ],
+          "color": "#6A4E3C",
+          "role": "wood",
+          "radius": 0.009
+        }
+      ]
+    },
+    {
+      "id": "off.vase",
+      "parts": [
+        {
+          "shape": "sphere",
+          "size": [
+            0.24,
+            0.29,
+            0.24
+          ],
+          "at": [
+            0,
+            0.145,
+            0
+          ],
+          "color": "#9b94b3",
+          "role": "ceramic"
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.12,
+            0.13,
+            0.12
+          ],
+          "at": [
+            0,
+            0.315,
+            0
+          ],
+          "color": "#9b94b3",
+          "role": "ceramic",
+          "top": 0.8
+        },
+        {
+          "shape": "torus",
+          "size": [
+            0.11,
+            0.018,
+            0.11
+          ],
+          "at": [
+            0,
+            0.385,
+            0
+          ],
+          "color": "#CBA67D",
+          "role": "ceramic"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "version": "native-motion-v3",
+  "source": "src/presentation/native-staff.ts",
+  "units": {
+    "length": "metres",
+    "time": "seconds",
+    "angle": "radians"
+  },
+  "coordinates": {
+    "handedness": "right",
+    "up": "+Y",
+    "forward": "-Z"
+  },
+  "skeletalClips": false,
+  "method": "Rigid-part procedural samples, additive to named node rest transforms; no foot IK.",
+  "staffClips": [
+    {
+      "id": "native.staff.idle.v3",
+      "duration": 6,
+      "loop": true,
+      "blend": 0.2,
+      "markers": []
+    },
+    {
+      "id": "native.staff.greet.v3",
+      "duration": 1.8,
+      "loop": false,
+      "blend": 0.2,
+      "markers": [
+        {
+          "time": 0.7,
+          "event": "outward-wave"
+        }
+      ]
+    },
+    {
+      "id": "native.staff.tidy.v3",
+      "duration": 2.6,
+      "loop": false,
+      "blend": 0.25,
+      "markers": [
+        {
+          "time": 0.55,
+          "event": "cloth-contact"
+        },
+        {
+          "time": 2.15,
+          "event": "cloth-release"
+        }
+      ]
+    },
+    {
+      "id": "native.staff.check-note.v3",
+      "duration": 2.8,
+      "loop": false,
+      "blend": 0.25,
+      "markers": [
+        {
+          "time": 0.7,
+          "event": "note-held"
+        },
+        {
+          "time": 2.2,
+          "event": "note-return"
+        }
+      ]
+    },
+    {
+      "id": "native.staff.receive-stock.v3",
+      "duration": 2,
+      "loop": false,
+      "blend": 0.2,
+      "markers": [
+        {
+          "time": 0.4,
+          "event": "box-contact"
+        },
+        {
+          "time": 0.9,
+          "event": "count"
+        },
+        {
+          "time": 1.65,
+          "event": "box-return"
+        }
+      ]
+    },
+    {
+      "id": "native.staff.pack-handover.v3",
+      "duration": 2.8,
+      "loop": false,
+      "blend": 0.2,
+      "markers": [
+        {
+          "time": 0.55,
+          "event": "pack"
+        },
+        {
+          "time": 1.26,
+          "event": "bag-lift"
+        },
+        {
+          "time": 2.1,
+          "event": "handover-or-counter-release"
+        },
+        {
+          "time": 2.52,
+          "event": "recover"
+        }
+      ]
+    },
+    {
+      "id": "native.staff.acknowledge-display.v3",
+      "duration": 0.65,
+      "loop": false,
+      "blend": 0.12,
+      "markers": [
+        {
+          "time": 0.3,
+          "event": "acknowledge"
+        }
+      ]
+    }
+  ],
+  "walk": {
+    "id": "native.visitor.walk.v3",
+    "loop": true,
+    "source": "distance-driven starter sampleWalk; route displacement owns distance",
+    "strideMetres": 0.72,
+    "markers": [
+      {
+        "phase": 0,
+        "event": "left-contact"
+      },
+      {
+        "phase": 0.5,
+        "event": "right-contact"
+      }
+    ]
+  },
+  "inspect": {
+    "id": "native.visitor.inspect.v3",
+    "loop": false,
+    "durationRange": [
+      4,
+      8
+    ]
+  },
+  "turnStop": {
+    "id": "native.visitor.turn-stop.v3",
+    "loop": false,
+    "method": "route adapter smooths root yaw and speed"
+  },
+  "propOwnership": {
+    "capacity": {
+      "bag": 1,
+      "box": 1,
+      "note": 1,
+      "cloth": 1
+    },
+    "owners": [
+      "counter",
+      "socket-left",
+      "socket-right"
+    ],
+    "cancellation": "Hide all pooled props and restore counter parent on epoch, hidden, mode/import, loss or dispose; sequence owns no delayed callbacks."
+  },
+  "portable": "Named node contract, mesh masters and motion data are reusable. Babylon adapter and future native engine binding still require platform integration and actual visual checks.",
+  "staffClearanceArc": {
+    "method": "Elbow-first tuck, shoulder lift, then unfold above counter. Reverse ordering on recovery. Left supporting hand holds its raised pose during sale release.",
+    "normalizedMarkers": {
+      "elbowFoldComplete": 0.04,
+      "shoulderLiftComplete": 0.15,
+      "elbowUnfoldComplete": 0.22,
+      "elbowRetuckStart": 0.78,
+      "shoulderRetractStart": 0.85,
+      "shoulderRetractComplete": 0.96
+    },
+    "geometryVerification": "Use actual generated hand/forearm vertices transformed through RH node hierarchy against counter bounds; non-visual geometry evidence, not GPU visual acceptance."
+  }
+}

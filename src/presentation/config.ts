@@ -7,9 +7,10 @@ export const vfx={
  support:{id:'fx.support.receipt.v1',trigger:'committed-recovery-total-delta',duration:700,color:'#B59AC8'},
  reveal:{id:'fx.sample.open.v1',trigger:'committed-revealed-false-to-true',duration:1100,color:'#D5C4DF'},
  dust:{id:'fx.window.dust.v1',trigger:'visible-high-quality',capacity:8,lifetime:12000,ratePerSecond:8/12,maxOpacity:.13,size:.018},
- policy:{majorCapacity:1,queueCapacity:0,maxDt:50,hidden:'cancel transient; pause ambient; no catchup',low:'no dust; static feedback',minimal:'no dust, pose animation or transient 3D feedback',reduced:'static poses and selection; immediate committed result'}
+ policy:{majorCapacity:1,queueCapacity:0,maxDt:50,hidden:'cancel transient; pause ambient; no catchup',low:'no decorative dust/transients; native characters stay active',minimal:'no decorative motion/transients; native walk/work/service stay active',reduced:'static poses and selection; immediate committed result'}
 } as const;
 export type MotionPolicy={low:boolean;minimal:boolean;reduced:boolean};
+/** Decorative transient channel only. Native motion uses native-motion policy. */
 export function motionAllowed(p:MotionPolicy){return !p.low&&!p.minimal&&!p.reduced;}
 export class FeedbackClock {
  active?:{kind:'sale'|'stock'|'support'|'display'|'reveal';slot:number;elapsed:number;duration:number};

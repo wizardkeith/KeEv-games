@@ -1,0 +1,25 @@
+{
+  "id": "environment.native-v3",
+  "version": 3,
+  "master": {
+    "path": "assets/masters/native-v3/environment-v3.json",
+    "sizeBytes": 83578,
+    "sha256": "a903bdee214508aa62ea357951a584cc74658922ed38f4bba080de632812ad7e"
+  },
+  "sources": {
+    "src/art/native-environment.ts": "a1c727ecfe4bda2a49103fd4b592023352198a55446ae22c3c60423cf923cec9",
+    "src/art/recipes.ts": "c20e2d9819bd5a60678c8e006318882a5ad10dcb290c228d71816add11b7dfef",
+    "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
+    "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
+    "tools/export-native-environment.ts": "b4c4e212093dd52dd2a9be168429c77b2d47b23a9028903c92faf89943b44b95"
+  },
+  "rebuild": "node --import tsx tools/export-native-environment.ts",
+  "runtime": "src/world.ts imports native-environment.ts; geometry.ts builds the same authored recipes",
+  "assets": [
+    "split doorway and skirting, fixed jambs, real hinged glass leaf, separately hinged sign",
+    "fixed-base plants with seven leaf-local attachments",
+    "small cool-tone exterior branches, foliage and buildings",
+    "counter drawer/edge/base detail, display tabletop/feet/label detail"
+  ],
+  "validation": "tests/native-environment.test.ts checks geometric aperture, opened leaf clearance, stable plant bases, finite geometry/material intent and five Minimal FX translations. Actual WebGL appearance remains a separate acceptance step."
+}

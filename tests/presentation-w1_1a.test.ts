@@ -7,6 +7,7 @@ import {database,Saves} from '../src/platform/storage';
 import {FeedbackProjector} from '../src/presentation/feedback';
 import {FeedbackClock,motionAllowed,vfx} from '../src/presentation/config';
 import {customerPoses,customerVisible,browsePose} from '../src/presentation/poses';
+import {NativeCustomerRoutes} from '../src/presentation/native-routes';
 import layout from '../src/content/layout.json';
 const core=new Core(execute),epoch=Date.parse('2026-10-21T01:00:00Z');
 const create=()=>({...core.create('sandbox',epoch),revision:0});
@@ -30,15 +31,14 @@ test('presentation clock has one bounded effect, skip/hidden/dispose prevent bac
  for(const key of ['low','minimal','reduced'] as const){const p={...policy,[key]:true};assert.equal(motionAllowed(p),false);const c=new FeedbackClock();c.start('reveal',0,p);assert.equal(c.active,undefined);}
  const clean=new FeedbackClock();for(let i=0;i<500;i++){clean.start('stock',1,policy);for(let n=0;n<12;n++)clean.step(50);assert.equal(clean.active,undefined);}assert.equal(vfx.policy.queueCapacity,0);assert.equal(vfx.dust.capacity,8);
 });
-test('static customer anchors clear display/counter bounds and survive all visibility policies',()=>{
- const radius=.25;
- for(const [i,p] of customerPoses.entries()){
-  assert.ok(Math.hypot(p.x,p.z)>.5);assert.ok(Math.hypot(p.x-customerPoses[1-i].x,p.z-customerPoses[1-i].z)>radius*2);
-  for(const d of layout.displays){const dx=Math.max(0,Math.abs(p.x-d.position[0])-.79),dz=Math.max(0,Math.abs(p.z-d.position[2])-.475);assert.ok(Math.hypot(dx,dz)>radius,'clear shelf footprint');}
-  const counter=layout.counter.position;assert.ok(Math.hypot(Math.max(0,Math.abs(p.x-counter[0])-.95),Math.max(0,Math.abs(p.z-counter[2])-.46))>radius);
-  for(const low of [false,true])for(const trading of [false,true]){assert.equal(customerVisible(i,trading,low),trading&&(!low||i===0));assert.deepEqual(browsePose(i,999999,false),{headYaw:0,armAngle:0});}
-  const pose=browsePose(i,98765,true);assert.ok(Math.abs(pose.headYaw)<=.045&&Math.abs(pose.armAngle)<=.035);
- }
+test('native customer roots traverse actual retained layout clearance; Low drains a visitor instead of freezing everyone',()=>{
+ const routes=new NativeCustomerRoutes(),radius=.24;let moved=false,browsed=false,last=routes.tick(0,{open:true,visible:true,reduceMotion:false,capacity:2});
+ for(let n=0;n<7000;n++){const frame=routes.tick(1/60,{open:true,visible:true,reduceMotion:false,capacity:n<3500?2:1});for(const p of frame.actors.filter(a=>a.enabled)){
+  if(p.speed>0)moved=true;if(p.state==='browsing')browsed=true;
+  for(const d of layout.displays){const dx=Math.max(0,Math.abs(p.x-d.position[0])-.79),dz=Math.max(0,Math.abs(p.z-d.position[2])-.475);assert.ok(Math.hypot(dx,dz)>radius,'moving root clears authoritative shelf footprint');}
+  const c=layout.counter.position;assert.ok(Math.hypot(Math.max(0,Math.abs(p.x-c[0])-.95),Math.max(0,Math.abs(p.z-c[2])-.46))>radius);
+ }last=frame;}
+ assert.equal(moved,true);assert.equal(browsed,true);assert.equal(last.actors[1].enabled,false);routes.dispose();
 });
 test('art review DB is isolated from both player slots; default database and CAS preserved',async()=>{
  const player=new Saves(await database(),core),normal=await player.loadOrCreate('normal',epoch),sandbox=await player.loadOrCreate('sandbox',epoch);

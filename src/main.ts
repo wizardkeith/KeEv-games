@@ -1,5 +1,7 @@
 import './style.css';
 import {FeedbackProjector} from './presentation/feedback';
+import {NativeCommitPresentation} from './presentation/native-commits';
+import {resolveMotionPolicy,type CapturedCommand} from './presentation/native-motion';
 import {vfx} from './presentation/config';
 import {readPreferences,savePreferences} from './presentation/preferences';
 import {icon} from './ui/icons';
@@ -10,6 +12,8 @@ const artReview=import.meta.env.VITE_ART_REVIEW==='1',modeKey=artReview?'shop.ar
 const reviewDatabase=import.meta.env.VITE_DAY1_REVIEW==='1'?'next-stop-little-shop-day1-review':'next-stop-little-shop-art-review-w1_1a1';
 const presentationStorageKey=artReview?'shop.art-review.presentation.v1':'shop.presentation.v1';
 const feedback=new FeedbackProjector();
+const nativePresentation=new NativeCommitPresentation();
+let pendingCommand:CapturedCommand|undefined;
 let presentationEpoch=0;
 import {catalog,type Mode,type Snapshot,type Command} from './core/contracts';
 import {recoveryPreview,purchaseCost} from './core/recovery';import {loadCore} from './platform/loader';import {database,Saves} from './platform/storage';
@@ -68,15 +72,17 @@ function draw(){
  world?.minimal(u.minimalFX);world?.update(state);world?.selected(u.slot);world?.layout(!!u.panel&&!u.zen);world?.zen(u.zen);
 }
 function finishReveal(){clearTimeout(revealTimer);if(u.revealFx){u.revealFx=false;draw();}}
-function cancelFeedback(){presentationEpoch++;world?.skip();finishReveal();u.feedbackKind='';}
+function cancelFeedback(){presentationEpoch++;nativePresentation.invalidate(presentationEpoch);world?.skip();finishReveal();u.feedbackKind='';}
 function committed(previous:Snapshot,current:Snapshot,cause:string,targetSlot:number,epoch:number){
+ const observation=nativePresentation.commit(previous,current,cause,epoch,pendingCommand,resolveMotionPolicy({quality:'high',minimalFx:u.minimalFX,reduceMotion:matchMedia('(prefers-reduced-motion: reduce)').matches,visible:!document.hidden}));
+ if(['baseline','reload','retry','catchup','import','mode','choose-mode'].includes(cause))world?.baseline?.();
  // Consume every real committed delta even when its presentation became stale.
  const event=feedback.project(previous,current,cause,targetSlot);if(!event)return;
  clearTimeout(revealTimer);u.revealFx=false;u.feedbackKind=event.kind;
- if(event.sold>0){let text=t('sold')+' '+event.sold;const empty=catalog.offerings.filter(o=>previous.inventory[o.id].stock>0&&current.inventory[o.id].stock===0);if(empty.length)text+=' · '+empty.map(o=>t(o.key)).join(', ')+' '+t('soldOut');text+=' · '+day1Text(locale,'misaki')+': '+day1Text(locale,'sale');notice(event.kind==='support'?text+' · '+t('supportReceived'):text);}
+ if(event.sold>0){let text=t('sold')+' '+event.sold;const empty=catalog.offerings.filter(o=>previous.inventory[o.id].stock>0&&current.inventory[o.id].stock===0);if(empty.length)text+=' · '+empty.map(o=>t(o.key)).join(', ')+' '+t('soldOut');const accepted=observation?.summary?.accepted;if(accepted?.kind==='stock')text+=' · '+t('bought')+' ×'+accepted.quantity;if(accepted?.kind==='display')text+=' · '+t('placed')+' '+(accepted.slot+1);text+=' · '+day1Text(locale,'misaki')+': '+day1Text(locale,'sale');notice(event.kind==='support'?text+' · '+t('supportReceived'):text);}
  if(document.hidden||epoch!==presentationEpoch)return;
  const started=world?.feedback(event)===true;
- if(event.kind==='reveal'&&started){u.revealFx=true;revealTimer=setTimeout(()=>{if(epoch!==presentationEpoch||!u.revealFx)return;world?.skip();finishReveal();},vfx.reveal.duration);}
+ if(event.kind==='reveal'&&started){u.revealFx=true;revealTimer=setTimeout(()=>{if(epoch!==presentationEpoch||!u.revealFx)return;world?.skipReveal();finishReveal();},vfx.reveal.duration);}
  if(event.sold>0&&u.sound){saleSound.currentTime=0;void saleSound.play().catch(()=>{});}
 }
 function fail(e:unknown,field='general'){
@@ -88,10 +94,10 @@ function fail(e:unknown,field='general'){
 async function run(action:()=>Promise<void>,field='general',success?:()=>void,cause='settle',targetSlot=u.slot){
  // Lock this intent synchronously, before the first await. Double clicks are
  // discarded rather than turned into a queue of fresh purchasing commands.
- if(busy)return;busy=true;u.formError='';u.formField='';draw();const previous=state,epoch=presentationEpoch;
+ if(busy)return;busy=true;pendingCommand=undefined;u.formError='';u.formField='';draw();const previous=state,epoch=presentationEpoch;
  try{await action();u.blocking='';committed(previous,state,cause,targetSlot,epoch);await syncStory();success?.();}catch(e){fail(e,field);}finally{busy=false;storeDraft(mode,u.draft,draftPrefix);draw();}
 }
-async function act(kind:string,data:Partial<Command>={}){state=await saves.command(state,{id:commandId(),kind,...data},mode==='normal'?Date.now():state.watermark,Date.now());}
+async function act(kind:string,data:Partial<Command>={}){const command={id:commandId(),kind,...data};pendingCommand={...command};state=await saves.command(state,command,mode==='normal'?Date.now():state.watermark,Date.now());}
 function openPanel(p:string,source?:HTMLElement){if(source)focusReturn=source;const changed=u.panel!==p;u.panel=p;u.formError='';draw();if(changed){const body=document.getElementById('panelbody');if(body)body.scrollTop=0;}document.getElementById('panel-title')?.focus({preventScroll:true});}
 function closePanel(){u.panel='';u.formError='';draw();focusReturn?.focus({preventScroll:true});}
 async function switchMode(next:Mode){
@@ -107,7 +113,7 @@ app.addEventListener('change',e=>{
  if(input.id==='slot'){u.slot=Number(input.value);draw();}
  if(input.id==='reportDay'){u.reportDay=input.value;draw();}
  if(input.id==='quality'){u.quality=input.value;world?.quality(u.quality);}
- if(input.id==='minimal-fx'){u.minimalFX=(input as HTMLInputElement).checked;savePreferences({minimalFX:u.minimalFX},presentationStorageKey);if(u.minimalFX)cancelFeedback();draw();}
+ if(input.id==='minimal-fx'){u.minimalFX=(input as HTMLInputElement).checked;savePreferences({minimalFX:u.minimalFX},presentationStorageKey);draw();}
  if(input.id==='sound'){u.sound=(input as HTMLInputElement).checked;if(u.sound)void saleSound.play().catch(()=>{});}
  if(input.id==='import'){const file=(input as HTMLInputElement).files?.[0];if(file)void run(async()=>{state=await saves.import(state,await file.text());u.draft=draftFor(mode,state,draftPrefix);cancelFeedback();},'general',undefined,'import');}
 });
@@ -168,8 +174,8 @@ function resume(){
 async function boot(){
  // Record cancellation before any awaited startup work or actionable UI.
  document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelFeedback();draw();}else resume();});window.addEventListener('focus',resume);
- const core=await loadCore();saves=new Saves(await database(artReview?reviewDatabase:"next-stop-little-shop-w1"),core);state=await saves.loadOrCreate(mode,mode==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());u.draft=draftFor(mode,state,draftPrefix);await syncStory();draw();readyMs=performance.now()-started;
- try{const {createWorld}=await import('./world');world=await createWorld(canvas,n=>{u.slot=n;openPanel('shelves');},finishReveal);world.update(state);world.layout(!!u.panel);worldReadyMs=performance.now()-started;}catch(e){console.error(e);u.worldFailed=true;}
+ const core=await loadCore();saves=new Saves(await database(artReview?reviewDatabase:"next-stop-little-shop-w1"),core);state=await saves.loadOrCreate(mode,mode==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());nativePresentation.baseline(state,presentationEpoch);u.draft=draftFor(mode,state,draftPrefix);await syncStory();draw();readyMs=performance.now()-started;
+ try{const {createWorld}=await import('./world');world=await createWorld(canvas,n=>{u.slot=n;openPanel('shelves');},finishReveal,nativePresentation);world.update(state);world.layout(!!u.panel);worldReadyMs=performance.now()-started;}catch(e){console.error(e);u.worldFailed=true;}
  draw();if(!state.shopName)document.getElementById('shop-name')?.focus();
  setInterval(resume,10000);resume();
  canvas.addEventListener('world-error',()=>{cancelFeedback();world?.dispose();world=undefined;u.worldFailed=true;draw();});

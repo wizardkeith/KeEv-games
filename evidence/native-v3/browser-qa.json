@@ -1,0 +1,44 @@
+{
+  "kind": "real managed browser DOM / CSS QA; no GPU visual acceptance",
+  "isolation": "VITE_ART_REVIEW=1 and VITE_DAY1_REVIEW=1; independent next-stop-little-shop-day1-review database / presentation preferences. Public player slots not opened or modified.",
+  "engineResult": "Error: WebGL not supported",
+  "observedAtUTC": "2026-10-23T11:20:41.412Z",
+  "qaBundles": [
+    "world-XKoALesm.js",
+    "index-B_1KxIZD.js"
+  ],
+  "cssViewports": [
+    {
+      "width": 375,
+      "height": 820,
+      "bodyWidth": 375,
+      "bodyScrollWidth": 375
+    },
+    {
+      "width": 320,
+      "height": 820,
+      "bodyWidth": 320,
+      "bodyScrollWidth": 320
+    }
+  ],
+  "flow": [
+    "create isolated shop identity",
+    "five settings translations checked",
+    "enable Minimal FX and select Low (UI setting only; no effective GPU tier)",
+    "buy 5 tea; display slot1",
+    "story-open primary CTA opens shop",
+    "legal Sandbox +15min",
+    "report Tokyo10:15: sold1, revenue750JPY, COGS350JPY, salary70JPY, rent50JPY, operating20JPY, net260JPY, cash48860JPY",
+    "reload at320px retains revision5, Tokyo10:15, cash48860JPY and MinimalFX checked"
+  ],
+  "notVerified": [
+    "actual rendered new characters and silhouette comparison",
+    "default/closeup face lighting, cloth and expression quality",
+    "walk readability, door sweep and hands/props in rendered scene",
+    "High/Low/Minimal/Reduce Motion rendered behavior",
+    "GPU FPS/frame-time or physical phone performance",
+    "60–90second rendered demo / before-after image pair"
+  ],
+  "gpuFootageProduced": false,
+  "notes": "Only expected WebGL startup error plus browser-extension metadata errors observed; UI commands remained usable. Numeric assertions use displayed committed report, not injected save values."
+}
