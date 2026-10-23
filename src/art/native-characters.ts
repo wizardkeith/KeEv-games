@@ -42,7 +42,7 @@ function bob(width:number,color:string):NativeMesh {
   const a=j*Math.PI*2/segments,front=Math.max(0,Math.min(1,(-Math.sin(a)-.12)/.6));
   const end=2.12-front*.94+.07*Math.cos(a)*front,t=(1-i/rows)*end+.025;
   const r=layer?.008:0;
-  g.positions.push(Math.cos(a)*Math.sin(t)*(width*1.10-r),.18+Math.cos(t)*(.21-r),.028+Math.sin(a)*Math.sin(t)*(.192-r));
+  g.positions.push(Math.cos(a)*Math.sin(t)*(width*1.10-r),.18+Math.cos(t)*(.21-r),.028+Math.sin(a)*Math.sin(t)*(.211-r));
  }
  const count=(rows+1)*segments;
  for(let l=0;l<2;l++)for(let i=0;i<rows;i++)for(let j=0;j<segments;j++){
@@ -79,7 +79,7 @@ function head(kind:NativeCharacterKind):NativePart[]{
  const face:NativeSurface[]=[mesh([{y:-.025,x:.067,z:.075,cz:-.004},{y:.025,x:w*.70,z:.122,cz:-.012},{y:.090,x:w*.94,z:.164},{y:.170,x:w,z:.177},{y:.250,x:w*.94,z:.167},{y:.315,x:w*.72,z:.126},{y:.342,x:.045,z:.042}],skin,'skin'),p('sphere',[.018,.025,.016],[0,.114,-.173],skin,'skin'),...[-1,1].flatMap(side=>[p('sphere',[.045,.077,.031],[side*w,.139,.005],skin,'skin'),p('sphere',[.048,.015,.006],[side*.122,.093,-.150],P.blush,'skin')])];
  // Curved upper head silhouette; front hairline is a shaped canopy plus locks.
  const hair=a?'#3F3B35':misaki?P.hair:'#55473F';
- face.push(a?mesh([{y:.207,x:w*1.03,z:.177,cz:.029},{y:.295,x:w*1.04,z:.176,cz:.019},{y:.361,x:w*.78,z:.133,cz:.012},{y:.384,x:.031,z:.028}],hair,'hair'):bob(w,hair));
+ face.push(a?mesh([{y:.207,x:w*1.03,z:.198,cz:.020},{y:.295,x:w*1.04,z:.192,cz:.012},{y:.361,x:w*.78,z:.133,cz:.012},{y:.384,x:.031,z:.028}],hair,'hair'):bob(w,hair));
  if(misaki){
   face.push(lock([{y:.310,x:.055,z:.037,cx:-.115,cz:-.132},{y:.240,x:.072,z:.039,cx:-.121,cz:-.145},{y:.153,x:.048,z:.031,cx:-.165,cz:-.093},{y:.077,x:.016,z:.014,cx:-.182,cz:-.039}],hair),lock([{y:.348,x:.069,z:.037,cx:.054,cz:-.127},{y:.292,x:.084,z:.039,cx:.080,cz:-.162},{y:.218,x:.043,z:.029,cx:.154,cz:-.143},{y:.136,x:.010,z:.012,cx:.188,cz:-.095}],hair),lock([{y:.315,x:.047,z:.031,cx:-.020,cz:-.149},{y:.270,x:.038,z:.029,cx:-.039,cz:-.174},{y:.227,x:.005,z:.007,cx:-.060,cz:-.183}],hair));
   face.push(lock([{y:.301,x:.011,z:.005,cx:.078,cz:-.198},{y:.266,x:.016,z:.006,cx:.110,cz:-.198},{y:.232,x:.004,z:.003,cx:.141,cz:-.176}],P.hairLight));

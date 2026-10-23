@@ -4,7 +4,7 @@
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
-    "src/art/native-characters.ts": "afe9cac34f119a95c6cef8b02ba3174a68cab27dd82485b1b47eaca7855bbd82",
+    "src/art/native-characters.ts": "7718b16e05334cba6d6742597ac16240ccd5baf547624811f2a0b397673ea911",
     "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "dfb556cd2e813656f298fb39c988aaa27ce36af2370aa6717b3e0a18beff49eb",
@@ -43,7 +43,7 @@
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
       "bytes": 381872,
-      "sha256": "6d237363b48f2d4ed63ead47562fca0536f811320d35f5abc2ac33d1db82c36c",
+      "sha256": "ae5eb341b4fc84adb04761f1c2a1835a6ac8d6927be8142532eafda867e5da02",
       "nodes": [
         {
           "id": "body",
@@ -333,7 +333,7 @@
       "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
       "web": "public/assets/native-v3/visitor-a-native-v3.glb",
       "bytes": 335396,
-      "sha256": "3ffe4e05d95f404c1ae2dcc8c2eaf5d98e9889b0bacc6b049d83576854aced0c",
+      "sha256": "e98cdce91e94c50b4301687466638510a2dd7502dfeeeb09daa1069ee6e3beeb",
       "nodes": [
         {
           "id": "body",
@@ -623,7 +623,7 @@
       "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
       "web": "public/assets/native-v3/visitor-b-native-v3.glb",
       "bytes": 332124,
-      "sha256": "108fc8736de34c8c98663d5c5040f41f91fc7332af410625135c4aecb70fafd7",
+      "sha256": "7d4edf14a12e19796d0d8587b5cf31b1aaf0fbec2becb1b4252acdc07bc4bfa3",
       "nodes": [
         {
           "id": "body",
