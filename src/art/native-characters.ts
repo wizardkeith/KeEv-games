@@ -53,21 +53,23 @@ function smoothNormals(g:Geometry):Geometry {
 /** Closed sculpted shell: the fringe is the same surface as the crown, with
  * broad flowing ridges, an asymmetric part and a softly scalloped bob edge. */
 function bob(width:number,color:string):NativeMesh {
- const g:Geometry={positions:[],normals:[],indices:[]},segments=32,rows=12;
- for(let layer=0;layer<2;layer++)for(let i=0;i<=rows;i++)for(let j=0;j<segments;j++){
-  const a=j*Math.PI*2/segments,front=Math.max(0,Math.min(1,(-Math.sin(a)-.03)/.82)),sweep=.15*Math.cos(a)*front;
-  const end=2.32-front*(.94+.16*Math.cos(a*2)) + sweep + .045*Math.sin(a*7)*(1-front*.7),t=.025+(1-i/rows)*end;
-  const strand=.006*Math.cos(a*9+t*1.8)*Math.sin(t)**2,edge=layer*.009;
-  const x=Math.cos(a)*Math.sin(t)*(width*1.10-edge+strand);
-  g.positions.push(x,.18+Math.cos(t)*(.21-edge),.028+Math.sin(a)*Math.sin(t)*(.211-edge+strand));
+ const g:Geometry={positions:[],normals:[],indices:[]},segments=48,outerRows=14,innerRows=2,outerCount=(outerRows+1)*segments;
+ // The hidden inner lining needs only two longitudinal spans. This keeps the
+ // original per-actor budget while spending vertices on the visible silhouette.
+ for(let layer=0;layer<2;layer++){const rows=layer?innerRows:outerRows;
+  for(let i=0;i<=rows;i++)for(let j=0;j<segments;j++){
+   const a=j*Math.PI*2/segments,front=Math.max(0,Math.min(1,(-Math.sin(a)-.03)/.82)),sweep=.20*Math.cos(a)*front;
+   const end=2.56-front*(1.19+.16*Math.cos(a*2))+sweep+.065*Math.sin(a*7)*(1-front*.7),t=.025+(1-i/rows)*end;
+   const strand=(layer?0:.004)*Math.cos(a*8+t*2.2)*Math.sin(t)**2,edge=layer*.009;
+   const profile=t<1.6?Math.sin(t):Math.sin(1.6)-.24*(t-1.6);
+   g.positions.push(Math.cos(a)*profile*(width*1.10-edge+strand),.18+Math.cos(t)*(.21+Math.max(0,t-1.6)*.045-edge),.028+Math.sin(a)*profile*(.227-edge+strand));
+  }
  }
- const count=(rows+1)*segments;
- for(let l=0;l<2;l++)for(let i=0;i<rows;i++)for(let j=0;j<segments;j++){
-  const a=l*count+i*segments+j,b=l*count+i*segments+(j+1)%segments,c=a+segments,d=b+segments;
-  g.indices.push(...(l?[a,b,c,b,d,c]:[a,c,b,b,c,d]));
+ for(let layer=0;layer<2;layer++){const rows=layer?innerRows:outerRows,offset=layer?outerCount:0;
+  for(let i=0;i<rows;i++)for(let j=0;j<segments;j++){const a=offset+i*segments+j,b=offset+i*segments+(j+1)%segments,c=a+segments,d=b+segments;g.indices.push(...(layer?[a,b,c,b,d,c]:[a,c,b,b,c,d]));}
  }
- for(let j=0;j<segments;j++){const b=(j+1)%segments;g.indices.push(j,b,j+count,b,b+count,j+count);}
- for(let l=0;l<2;l++){const center=g.positions.length/3;g.positions.push(0,.391-l*.009,.028);for(let j=0;j<segments;j++){const a=l*count+rows*segments+j,b=l*count+rows*segments+(j+1)%segments;g.indices.push(...(l?[center,a,b]:[center,b,a]));}}
+ const rim=g.positions.length/3;for(let j=0;j<segments;j++){g.positions.push(...g.positions.slice(j*3,j*3+3),...g.positions.slice((j+outerCount)*3,(j+outerCount)*3+3));}for(let j=0;j<segments;j++){const a=rim+j*2,b=rim+(j+1)%segments*2;g.indices.push(a,b,a+1,b,b+1,a+1);}
+ for(let layer=0;layer<2;layer++){const center=g.positions.length/3,offset=layer?outerCount+innerRows*segments:outerRows*segments;g.positions.push(0,.391-layer*.009,.028);for(let j=0;j<segments;j++){const a=offset+j,b=offset+(j+1)%segments;g.indices.push(...(layer?[center,a,b]:[center,b,a]));}}
  return {shape:'mesh',at:[0,0,0],color,role:'hair',geometry:smoothNormals(g),roughness:.60};
 }
 /** Thin closed fabric panel follows the front of the dress; the rounded hem
@@ -98,15 +100,15 @@ export function nativeGrouped(recipe:NativeSurface[]){
 function eyes(kind:NativeCharacterKind):NativePart[]{
  const wider=kind==='visitor-b',skin=kind==='visitor-a'?P.skinB:P.skin,out:NativePart[]=[];
  for(const side of [-1,1]){const x=side*(wider?.085:.079),s=side<0?'left':'right',y=kind==='visitor-a'?.155:.16;
-  out.push({id:`eye-${s}`,parent:'head',pivot:[x,y,-.177],recipe:[p('sphere',[.080,.065,.014],[0,0,0],'#F2E8DB','ink'),p('sphere',[.052,.057,.015],[side*-.003,0,-.009],kind==='visitor-a'?'#554332':'#76513C','ink'),p('sphere',[.026,.039,.015],[side*-.003,.001,-.016],'#3F3330','ink'),p('sphere',[.012,.014,.004],[-.009,.015,-.027],'#FFF4DF','ink'),round([.082,.009,.014],[0,.033,-.010],P.ink,'hair',.004)]});
+  out.push({id:`eye-${s}`,parent:'head',pivot:[x,y,-.177],recipe:[p('sphere',[.080,.065,.014],[0,0,0],'#F2E8DB','ink'),p('sphere',[.052,.057,.015],[side*-.003,0,-.009],kind==='visitor-a'?'#554332':'#76513C','ink'),p('sphere',[.026,.039,.015],[side*-.003,.001,-.016],'#3F3330','ink'),p('sphere',[.012,.014,.004],[-.009,.015,-.027],'#FFF4DF','ink'),p('torus',[.083,.0045,.060],[0,0,-.013],P.ink,'hair',{turn:[Math.PI/2,0,0],arc:[Math.PI*1.05,Math.PI*1.95],segments:8})]});
   out.push({id:`eyelid-${s}`,parent:'head',pivot:[x,y+.005,-.201],recipe:[round([.083,.049,.010],[0,0,0],skin,'skin',.015),round([.077,.006,.012],[0,-.004,-.006],P.ink,'hair',.002)]});
-  out.push({id:`brow-${s}`,parent:'head',pivot:[x,y+.047,-.165],recipe:[round([.061,.006,.010],[0,0,0],kind==='visitor-a'?'#423D36':P.hair,'hair',.004)]});
+  out.push({id:`brow-${s}`,parent:'head',pivot:[x,y+.047,-.165],recipe:[p('torus',[.063,.0035,.021],[0,0,0],kind==='visitor-a'?'#423D36':P.hair,'hair',{turn:[Math.PI/2,0,0],arc:[Math.PI*1.12,Math.PI*1.88],segments:6})]});
  }
  return out;
 }
 function head(kind:NativeCharacterKind):NativePart[]{
  const misaki=kind==='misaki',a=kind==='visitor-a',skin=a?P.skinB:P.skin,w=a?.174:kind==='visitor-b'?.204:.193;
- const face:NativeSurface[]=[mesh([{y:-.025,x:.067,z:.075,cz:-.004},{y:.025,x:w*.70,z:.122,cz:-.012},{y:.090,x:w*.94,z:.164},{y:.170,x:w,z:.177},{y:.250,x:w*.94,z:.167},{y:.315,x:w*.72,z:.126},{y:.342,x:.045,z:.042}],skin,'skin'),p('sphere',[.018,.025,.016],[0,.114,-.173],skin,'skin'),...[-1,1].flatMap(side=>[p('sphere',[.045,.077,.031],[side*w,.139,.005],skin,'skin'),p('sphere',[.048,.015,.006],[side*.122,.093,-.150],P.blush,'skin')])];
+ const face:NativeSurface[]=[mesh([{y:-.025,x:.067,z:.075,cz:-.004},{y:.025,x:w*.70,z:.122,cz:-.012},{y:.090,x:w*.94,z:.164},{y:.170,x:w,z:.177},{y:.250,x:w*.94,z:.167},{y:.315,x:w*.72,z:.126},{y:.342,x:.045,z:.042}],skin,'skin'),p('sphere',[.018,.025,.016],[0,.114,-.173],skin,'skin'),...[-1,1].flatMap(side=>[p('sphere',[.045,.077,.031],[side*w,.139,.005],skin,'skin'),p('sphere',[.035,.012,.004],[side*.122,.093,-.150],P.blush,'skin')])];
  // Curved upper head silhouette; front hairline is a shaped canopy plus locks.
  const hair=a?'#3F3B35':misaki?P.hair:'#55473F';
  face.push(a?mesh([{y:.207,x:w*1.03,z:.198,cz:.020},{y:.295,x:w*1.04,z:.192,cz:.012},{y:.361,x:w*.78,z:.133,cz:.012},{y:.384,x:.031,z:.028}],hair,'hair'):bob(w,hair));

@@ -4,17 +4,17 @@
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
-    "src/art/native-characters.ts": "25d68e01e73aec706f93117fc1407e86797318b41e5a064ccdf54ac674318c67",
+    "src/art/native-characters.ts": "9a36fec811375eb944f0511ca214bed71cb93567447fee64929eb6993d573181",
     "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
-    "src/art/native-materials.ts": "dfb556cd2e813656f298fb39c988aaa27ce36af2370aa6717b3e0a18beff49eb",
+    "src/art/native-materials.ts": "3bf54ba8c589497a2014bced5758b4b30c4f57dd89f2982272b14217170cdaf6",
     "src/presentation/native-motion.ts": "215b955ec4b3fc83400a478545882b257fc244247fb16ea630748bbce8547000",
     "src/presentation/native-staff.ts": "bc24e60d90398f4fb1436820209c886ec631917e9531fbe2890de646adfcfa27",
     "src/presentation/native-staff-player.ts": "5f57bc4a85ca0b431b7eb81ba50a95d44954a9a10ac276595a79b686cd86acb1",
     "src/presentation/native-feet.ts": "440404e1bceabdb2bf8d8f9f699d030c40e4815f7b0e904ea15a3f6a180bdef3",
     "src/presentation/native-delivery.ts": "0f151cc4f9c293b20fc680fda7f6125ee93501a4c10f680e8563f66cdcf9b942",
     "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
-    "src/world.ts": "a94c1c113fbf810fe3572455cb2bc2862664e2064bba70b0b3266cf98de7fb95",
+    "src/world.ts": "c107805f8eb3a31c6a2d8877083339dfff4a9097b2ff2f9c731f0dda85411de1",
     "src/presentation/native-routes.ts": "248918d9a9942383431892aaf3dc9b6bd794be8c5ca85080f490cd40ff81beb1",
     "src/presentation/native-scene.ts": "db04429859b5c7adcf23a3730cc2244ae5e2620db8db1e2b50eee3f988736e3e",
     "tools/export-native-characters.ts": "45197631fc63a64397f8f64471e81a2be61f445841f6a1b47ae1fccbe557da00"
@@ -42,8 +42,8 @@
       "id": "actor.misaki.native.v3",
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
-      "bytes": 378468,
-      "sha256": "dc17dad12531ae9206e00925748e67a784aee540e55af6bfe915556bf834699c",
+      "bytes": 380352,
+      "sha256": "77f46cfcd7d7e0046194030f8171a3176f90c419dd6ca659ff74936c2ade38e0",
       "nodes": [
         {
           "id": "body",
@@ -65,7 +65,7 @@
             0
           ],
           "geometryGroups": 4,
-          "triangles": 3256
+          "triangles": 3320
         },
         {
           "id": "eye-left",
@@ -332,8 +332,8 @@
       "id": "actor.visitor-a.native.v3",
       "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
       "web": "public/assets/native-v3/visitor-a-native-v3.glb",
-      "bytes": 354284,
-      "sha256": "da9a2ab9a9d1d19de55991705ced79a7ff62eb24204479396a1d75895ad1a152",
+      "bytes": 352392,
+      "sha256": "caf1fce66409042e4fe105b78db30516d2c5aae357f9096f2db34a35d77d109d",
       "nodes": [
         {
           "id": "body",
@@ -622,8 +622,8 @@
       "id": "actor.visitor-b.native.v3",
       "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
       "web": "public/assets/native-v3/visitor-b-native-v3.glb",
-      "bytes": 372156,
-      "sha256": "c0ddea393a0465c22be544d8c6674bd509fc8c97bb01df96880db65d623d9480",
+      "bytes": 374052,
+      "sha256": "d230de55605b21c5949eb95aac32ad9cc76939b62ebc7c5c80230f150aadb54b",
       "nodes": [
         {
           "id": "body",
@@ -645,7 +645,7 @@
             0
           ],
           "geometryGroups": 4,
-          "triangles": 3432
+          "triangles": 3496
         },
         {
           "id": "eye-left",

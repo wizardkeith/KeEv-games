@@ -46,11 +46,12 @@ export function nativeCameraFrame(aspect:number,fov=.8,view:NativeView='shop'){
 /** A local face fill preserves the authored linear colour and soft surface
  * shading; restrict it to face skin/ink meshes, not all scene materials. */
 export const nativeLighting={
- id:'native.light.v3.1',
- key:{color:'#FFE8CA',intensity:1.62,direction:[.78,-.82,.22] as const,position:[-8,8,-2] as const},
- fill:{color:'#E9F0F4',ground:'#B3A494',intensity:.76},
+ id:'native.light.v5',
+ key:{color:'#FFE3C1',intensity:1.70,direction:[.78,-.82,.22] as const,position:[-8,8,-2] as const},
+ fill:{color:'#E3ECF3',ground:'#C2A58A',intensity:.58},
  faceFill:{color:'#FFF0DC',ground:'#B9B6B0',intensity:.43,direction:[.12,.35,-1] as const,parts:['head','eye-left','eye-right','eyelid-left','eyelid-right','brow-left','brow-right','mouth'] as readonly string[],roles:['skin','ink'] as readonly string[]},
- shadow:{size:1024,normalBias:.007,bias:.0005,darkness:.20},
+ shadow:{size:1024,normalBias:.007,bias:.0005,darkness:.30},
+ exteriorFill:{color:'#C3DCE4',ground:'#839D99',intensity:.42},
  exposure:1,
- note:'Standard PBR fallback. No tone-map/exposure boost, bloom or dynamic reflection. Face fill includes only face skin/ink meshes; hair/cloth retain key/fill volume. Visual balance is pending actual WebGL.',
+ note:'Standard PBR fallback. No tone-map/exposure boost, bloom or dynamic reflection. Face fill includes only face skin/ink meshes; hair/cloth retain key/fill volume. Warm window key, restrained cool sky and a separate cool exterior fill; assess actual WebGL evidence for visual acceptance.',
 } as const;

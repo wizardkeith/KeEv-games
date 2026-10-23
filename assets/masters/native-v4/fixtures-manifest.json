@@ -8,92 +8,92 @@
     {
       "id": "room",
       "file": "assets/masters/native-v4/room.glb",
-      "bytes": 238284,
-      "sha256": "8b40fb56be7b02ddb9815c1e589643894352c66d4cec273373bc2341564fd49e"
+      "bytes": 186832,
+      "sha256": "34171408d420d917fa2a0392323274f6c65cc5eeea48689af6f45a9ec837482c"
     },
     {
       "id": "counter",
       "file": "assets/masters/native-v4/counter.glb",
-      "bytes": 158060,
-      "sha256": "0113a164aa4a84e62d930f0d8c1078b4bbc77eca79952657fb797d5ea90cb525"
+      "bytes": 106588,
+      "sha256": "6e3e1ccfca2932243c91ad3be524b43321e33e9f862a1204f31c04d0e79549c7"
     },
     {
       "id": "display-1",
       "file": "assets/masters/native-v4/display-1.glb",
-      "bytes": 172284,
-      "sha256": "ca46e5fe855989cde35f6ae184d2ebed95e84aad74e8815ba73d56200836ab13"
+      "bytes": 120836,
+      "sha256": "7f24d6ce05882b20a6e7bdb2ee6eea5e2508295fa3ce1486ccea23a04be015a4"
     },
     {
       "id": "display-2",
       "file": "assets/masters/native-v4/display-2.glb",
-      "bytes": 172312,
-      "sha256": "a6b9c94f324603d8c5d400f5906d81395864c4c867e5f37c13ecc658701d803d"
+      "bytes": 120864,
+      "sha256": "95573cd14c8c9ce84f5243d6edfefba2591d8600cfc1913632f905e5a75263e5"
     },
     {
       "id": "display-3",
       "file": "assets/masters/native-v4/display-3.glb",
-      "bytes": 172284,
-      "sha256": "9d59fc7363756b8ee13b7ed083e479852f02f3d481e4fd3aec7c891b3bf09c77"
+      "bytes": 120836,
+      "sha256": "be6e8ab4f11e369258fcae9aa3e9351e609fa5aaed3ab03338d88d7d70cdb5b6"
     },
     {
       "id": "product-off.notebook",
       "file": "assets/masters/native-v4/product-off.notebook.glb",
-      "bytes": 124664,
-      "sha256": "7bb61236dbfbf9b5b00fc2b04f24fe1f6b3206c2db3d94e3fc8db7362568fbff"
+      "bytes": 73212,
+      "sha256": "d0036f3364eafe13d3eb4fdd96a03ad98c9903598557e43efc8a1868990ef854"
     },
     {
       "id": "product-off.pencil",
       "file": "assets/masters/native-v4/product-off.pencil.glb",
-      "bytes": 107316,
-      "sha256": "713d0a6bdcc65fe7249c6d072d1b74343c3eeb88d1272ffb959f6ebe3a4ebea3"
+      "bytes": 55852,
+      "sha256": "626058e5e3098fdccfb0600a52eda37e9478f104d870a60ad9224a2579c69e34"
     },
     {
       "id": "product-off.mug",
       "file": "assets/masters/native-v4/product-off.mug.glb",
-      "bytes": 127816,
-      "sha256": "a93b2c8a9308415c6f23f91515834b62f650e14179665117185675430c685347"
+      "bytes": 76344,
+      "sha256": "c0e1ec0998bd34d52e0448e09af79390bee71a4ff1cc31e47046b265b92206b0"
     },
     {
       "id": "product-off.tea",
       "file": "assets/masters/native-v4/product-off.tea.glb",
-      "bytes": 125708,
-      "sha256": "1af2067a1821597fe9412355bfac0054394e163e65735c92247386402d3d30f4"
+      "bytes": 74232,
+      "sha256": "f8a074e57cca69f6792580bee298da231432362f158b12a7878b32ce22658bc3"
     },
     {
       "id": "product-off.cookie",
       "file": "assets/masters/native-v4/product-off.cookie.glb",
-      "bytes": 118256,
-      "sha256": "3ba61654d14b105c76249a828d5e8f1ab2d8274d3cac49aacff85d1a47204071"
+      "bytes": 66780,
+      "sha256": "27c5c36441067a24ac24f1727690d7420ff2472b88caccf4436db2f432f7a93c"
     },
     {
       "id": "product-off.tote",
       "file": "assets/masters/native-v4/product-off.tote.glb",
-      "bytes": 120304,
-      "sha256": "d4ae2ad20a74ffbcae38f1833abba989db289093a03635819b342cf330729009"
+      "bytes": 68876,
+      "sha256": "fb8d4a82608acfdea801bf15e6c95d596b4ab9096025b38eea50f65f80b22a5d"
     },
     {
       "id": "product-off.card",
       "file": "assets/masters/native-v4/product-off.card.glb",
-      "bytes": 106844,
-      "sha256": "3b665cdf9fbde193cb4e399008c0c8eb3509b1fc6fb97fd63c104e34294ac0fa"
+      "bytes": 55372,
+      "sha256": "9691331de9ccf970871e3b833d53625bc3dd62c638aa6a17a0edec50e99a66ad"
     },
     {
       "id": "product-off.towel",
       "file": "assets/masters/native-v4/product-off.towel.glb",
-      "bytes": 102924,
-      "sha256": "5696674697dc5702eac6f8b957f79054e297a8fd7bc645539759b5daf63f31f6"
+      "bytes": 51460,
+      "sha256": "8ff2fae4393be79e4b5eb9399c9c7245d9a6b5dfc4431b8d02caf8eb6b2594d3"
     },
     {
       "id": "product-off.tray",
       "file": "assets/masters/native-v4/product-off.tray.glb",
-      "bytes": 115264,
-      "sha256": "6a5810bdc2da4b652ca4c4a8c3c4d20e7031293bbbe1d53a082d20d3fac356fb"
+      "bytes": 63792,
+      "sha256": "66bfaa4eee1814508ec43d0ed66bfb87cecf4fe127558c49021c4e2f115c11f7"
     },
     {
       "id": "product-off.vase",
       "file": "assets/masters/native-v4/product-off.vase.glb",
-      "bytes": 109000,
-      "sha256": "e4cb27934dfc28c5fa6cf2c4a0574108767d88a5bedc19b3eee839e7343119fc"
+      "bytes": 57528,
+      "sha256": "54d3289141788e95a0d6547d30d53472aac09885bce7f1a27d3585c50c7c9fe3"
     }
   ]
 }
