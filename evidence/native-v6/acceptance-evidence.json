@@ -1,0 +1,167 @@
+{
+  "updated_at": "2026-10-24T16:03:26+08:00",
+  "runtime_checkpoint": "2e31c7fb0fdaf4b17cb7a415f5368fbe6af3b43c",
+  "runtime_src_tree": "06973abf4511a56e0ff9bf03204778e5dde4ea83",
+  "target": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+  "targetPixelsInspected": true,
+  "bibleEmbeddedImagesInspected": 3,
+  "brief": {
+    "library_file_id": "libfile_397003d030608191bb01f12a5a8b2652",
+    "native_full_read_lines": 81,
+    "has_more": false,
+    "materialization": "Two supported transfer attempts failed; no local-byte claim"
+  },
+  "checks": {
+    "tests": 145,
+    "build": "pass",
+    "content": "10 offerings,5 locales",
+    "replay": {
+      "cash": 5020,
+      "stock": 4,
+      "net": 180,
+      "units": 6
+    },
+    "glbs": {
+      "files": 18,
+      "errors": 0,
+      "warnings": 0
+    },
+    "assetRebuildFiles": 212,
+    "payloadParityFiles": 121,
+    "narrowTouchCases": 20,
+    "cameraPanels": 5,
+    "sourceSaveCompatibility": "Prior v5 QA Sandbox import/reload/further purchase passed; isolated Normal baseline unchanged",
+    "actualInputMethods": [
+      "keyboard buy/Tab placement",
+      "previous/next controls",
+      "horizontal wheel delta",
+      "mouse drag",
+      "native touch-emulated swipe"
+    ],
+    "interruptedPurchases": "invalid/repeated/delayed/aborted writes pass"
+  },
+  "captureProvenance": {
+    "finalHighPNGs": "2e31c7fb0fdaf4b17cb7a415f5368fbe6af3b43c",
+    "motion": "Production working build using the exact art/world/motion component bytes committed at 259ee66ec2f5fdf4fb240558af64b819fc227503; presentation-preference persistence and final rail-step correction came later. No whole-src commit equivalence is claimed.",
+    "artWorldMotionHashesMatchFinal": {
+      "src/art": "93631e711bb702b0ce6abe78121c3e01b4b1804b",
+      "src/world.ts": "e14063f1ab217fc7e83e130e87e5d05c8aea7689",
+      "src/presentation": "87f345b0dfedb4cb427c497418f4abc9526985b5"
+    },
+    "finalControlRecording": "Same built source as final runtime checkpoint; actual arrow/wheel/drag/swipe checks",
+    "motionExcerpt": "30 seconds contiguous from retained full original; no internal cuts, speed changes or aesthetic retouching",
+    "chronologicalMotionFramesInspectedSeconds": [
+      3,
+      15,
+      27
+    ],
+    "renderer": "Chromium WebGL2 ANGLE SwiftShader software",
+    "physicalAcceptance": false
+  },
+  "remaining": [
+    "Final target hair/face/cloth/environment/lighting richness not accepted",
+    "Physical GPU/FPS/Safari/mobile keyboard/audio/true hidden-tab/native acceptance unverified",
+    "Original brief video not attached or watched; observations attributed to brief",
+    "Local Library byte transfer unavailable; authoritative full text read",
+    "No new Library output IDs; optional native delivery deferred"
+  ],
+  "publication": "Unmerged draft PR #3. No Site save/deploy in this implementation turn.",
+  "files": [
+    {
+      "path": "evidence/native-v6/art/after/character-close.png",
+      "bytes": 638605,
+      "sha256": "bf8c55e8aabca44b68747c4c3f816f8ec30d6429ea0bedb550edab37956e0767"
+    },
+    {
+      "path": "evidence/native-v6/art/after/panorama.png",
+      "bytes": 473927,
+      "sha256": "cc3debd86ebdc979e3ad5ad73b7c586fea29b2cdc5db02523bbc9c1872d3713b"
+    },
+    {
+      "path": "evidence/native-v6/art/after/rail-shop.png",
+      "bytes": 493061,
+      "sha256": "3b1a3375c77fe001610be3b56ee1610c179efd74535254fe36aa5c0a7eb2ea3f"
+    },
+    {
+      "path": "evidence/native-v6/art/after/render.json",
+      "bytes": 9678,
+      "sha256": "6cff975ad8621cc960192ce335d6cf713b327baa4d9b2c4dc0b1e81e71047e84"
+    },
+    {
+      "path": "evidence/native-v6/art/before/character-close.png",
+      "bytes": 715716,
+      "sha256": "ecadc5d25fab93925c5c9fe2c7ab085a05b002ee96b3ab6d444554e3e7ea605e"
+    },
+    {
+      "path": "evidence/native-v6/art/before/panorama.png",
+      "bytes": 494656,
+      "sha256": "ef0fb222128115524e9693e8ce9e9fb49c1f059dd8a1c433ffb9348f6771e7ec"
+    },
+    {
+      "path": "evidence/native-v6/motion/clip-provenance.json",
+      "bytes": 247,
+      "sha256": "436241711e6f16d8603c4ac3b3dcea99ecf0917388c6a2071d5ab30c7b52c6d6"
+    },
+    {
+      "path": "evidence/native-v6/motion/motion.json",
+      "bytes": 166535,
+      "sha256": "76bbd9a0c282ed3af9045f80cd1fd22dded95fa6cdcc434c2945b77fc739b473"
+    },
+    {
+      "path": "evidence/native-v6/motion/movement-work-purchase-30s.webm",
+      "bytes": 6769502,
+      "sha256": "d9acbd261618854012baaa478080c55ffad4122c180e89ab7519c3b72db6b5c5",
+      "video": {
+        "duration": "30.000000",
+        "size": "6769502"
+      }
+    },
+    {
+      "path": "evidence/native-v6/motion/movement-work-purchase-full.webm",
+      "bytes": 4685857,
+      "sha256": "8fa0bb5d48cf709a4efb08487418f829db12ced7545dbd6e93a75bab42d48e4f",
+      "video": {
+        "duration": "126.920000",
+        "size": "4685857"
+      }
+    },
+    {
+      "path": "evidence/native-v6/ui/interaction.webm",
+      "bytes": 10479663,
+      "sha256": "03c70a05136633cfafafbba1376bca6e907574e52c44994c5bd9314607ab554d",
+      "video": {
+        "duration": "220.000000",
+        "size": "10479663"
+      }
+    },
+    {
+      "path": "evidence/native-v6/ui/rail-end.png",
+      "bytes": 559310,
+      "sha256": "bd887698b790b5a92da07d9ed45dc49d540baed9be61ed72f2281c4c8ab106b8"
+    },
+    {
+      "path": "evidence/native-v6/ui/results.json",
+      "bytes": 106294,
+      "sha256": "9861baa6cb97eda9ef70161f80acf7dce8a7e3c69f2b3ce472733b94f0c70f16"
+    },
+    {
+      "path": "evidence/native-v6/ui/timeline.json",
+      "bytes": 1003,
+      "sha256": "08f4eb2f24cdf9500b469c0539a001986d21933affb56f01f39a5c8bce5e017e"
+    },
+    {
+      "path": "evidence/native-v6/controls/controls.webm",
+      "bytes": 3490711,
+      "sha256": "ac36a862549a4682484bdcb78828cb9c4920d8742957f5810063290eb432f04c",
+      "video": {
+        "duration": "35.480000",
+        "size": "3490711"
+      }
+    },
+    {
+      "path": "evidence/native-v6/controls/timeline.json",
+      "bytes": 649,
+      "sha256": "a865205aeba2e051ee17d18841a1ac35b8ac9ba153fc7e5ef4ca456997c9d656"
+    }
+  ]
+}
