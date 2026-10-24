@@ -1,0 +1,53 @@
+{
+  "projectId": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+  "version": 14,
+  "savedVersionId": "appgprj_6ad82a08ed2881918ebcc2dd206a122d~appgver_f435224711a08191b72a8f0ec78d65c3",
+  "deploymentId": "appgdep_6adcf635058c81919eb9f1ea60bb8687",
+  "status": "succeeded",
+  "publishedAt": "2026-10-24T18:17:50.553623+00:00",
+  "url": "https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site",
+  "audience": "public",
+  "accessPolicyRevision": 2,
+  "sourceCommit": "6019bf287d061bd090d2b07c73e31a984c74b241",
+  "reviewedCandidate": "1fe2bbbc28c0e90debae9f313faf066310bcbb78",
+  "reviewedRuntime": "8f12d614e3a1fc03a7940ac43e247913b387c834",
+  "srcTree": "18da5bd9d74d0e958adc4bce82362721ee88a5df",
+  "reviewMain": "1800389e633a0301d9751848d8c1a74631118050",
+  "pr": "https://github.com/wizardkeith/KeEv-games/pull/4",
+  "envSetRevision": 0,
+  "providerDeploymentId": "site---6ad82a08ed2881918ebcc2dd206a122d",
+  "originalArchive": {
+    "file": "evidence/native-v7-list/delivery/LittleShop-v7-inventory-list-deploy.tar.gz",
+    "sha256": "c94eb88a5de051e75e1a5b0502a8d1a0bb5d954f33c1be85c2dc179b81467c8e",
+    "bytes": 3177368,
+    "runtimeFiles": 121,
+    "archiveFiles": 122
+  },
+  "providerArchive": {
+    "archive_format": "tar",
+    "sediment_file_id": "file_0000000062708211a2d94ff3e6e2ba7a",
+    "content_hash": "sha256:af16f71bc6edda2d84818c9c0de8440f69d6be3659ca10a28b220df9687fa8a1",
+    "size_bytes": 7802880,
+    "file_count": 122
+  },
+  "sourceSynchronization": {
+    "sha": "6019bf287d061bd090d2b07c73e31a984c74b241",
+    "sourceBefore": "93c9aa87510ebffc08d36b01905dc119266d5e4e",
+    "estimatedPackBytes": 41690565,
+    "batches": 1,
+    "automaticPublication": false
+  },
+  "independentChecks": "148 tests, build/content/replay/asset-check;55 GLBs;212 tracked asset/public exporter parity;20 locale/touch transaction cases;15 boundary layouts;save compatibility",
+  "freshReleaseChecks": "Merged build and 121 runtime payloads + hosting byte-identical to reviewed actual archive; exact vertical-list src/assets/public/package/hosting match reviewed candidate;newer review main preserved",
+  "liveChecks": {
+    "nativeStatusVersionSourceUrlAudience": "verified",
+    "httpPayloadFetch": "not rerun: prior cloud proxy CONNECT403 access restriction",
+    "sandboxSmoke": "not run in cloud; parent can use authorized fresh isolated local Sandbox"
+  },
+  "credentialSession": "closed; no persistent credential written",
+  "limitations": [
+    "incremental art only; final approved visual target remains open",
+    "software WebGL is not physical GPU/FPS/Safari/mobile keyboard/audio/hidden-tab/native acceptance",
+    "No player Normal save or local Unity operation"
+  ]
+}
