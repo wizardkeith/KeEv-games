@@ -32,7 +32,8 @@ export function nativeRoomRecipe():NativeEnvironmentPart[]{
  });
  const {minX,maxX,topY}=nativeDoorContract.aperture;
  const wallMin=-4.55,wallMax=4.55,wallTop=3.5;
- return [...old,
+ // Original bounded floor geometry; the v6 material carries staggered joints.
+ return [...old,...[-1.65,-.90,-.15].flatMap(x=>[round([.70,.28,.025],[x,.35,2.656],'#AC8562',.015),round([.075,.018,.030],[x,.37,2.627],'#8C785A',.006,'metal')]),
   part('box',[minX-wallMin,wallTop,.16],[(wallMin+minX)/2,wallTop/2,3.3],palette.cream,'paint'),
   part('box',[wallMax-maxX,wallTop,.16],[(maxX+wallMax)/2,wallTop/2,3.3],palette.cream,'paint'),
   part('box',[maxX-minX,wallTop-topY,.16],[(minX+maxX)/2,(wallTop+topY)/2,3.3],palette.cream,'paint'),
@@ -118,9 +119,9 @@ export function exteriorRecipe():Part[]{
  for(const [x,z,h] of [[-5.55,-1.10,1.90],[-6.02,1.48,2.12]]){
   result.push(part('cylinder',[.13,h,.13],[x,h/2,z],'#899A83','wood',{top:.66}));
   for(let i=0;i<2;i++){
-   const a=i*2.3;
-   result.push(part('cylinder',[.045,.65,.045],[x+Math.sin(a)*.15,h-.44+i*.10,z+Math.cos(a)*.15],'#899A83','wood',{top:.5,turn:[Math.sin(a)*.65,0,Math.cos(a)*.65]}));
-   result.push(part('sphere',[1.04,.64,.88],[x+Math.sin(a)*.31,h-.06+i*.13,z+Math.cos(a)*.26],i?'#A9BEA0':'#BACBAB','leaf'));
+   const a=i*2.39996;
+   result.push(part('cylinder',[.035,.54,.035],[x+Math.sin(a)*.15,h-.40+(i%3)*.10,z+Math.cos(a)*.15],'#899A83','wood',{top:.5,turn:[Math.sin(a)*.65,0,Math.cos(a)*.65]}));
+   result.push(part('sphere',[.72+(i%2)*.12,.40+(i%3)*.06,.65],[x+Math.sin(a)*.40,h-.12+(i%3)*.15,z+Math.cos(a)*.34],i%3?'#A9BEA0':'#C0D0AB','leaf'));
   }
  }
  return result;
@@ -139,9 +140,9 @@ export function nativeCounterRecipe():NativeEnvironmentPart[]{return [...counter
 
 export function nativeDisplayRecipe(variant=0):NativeEnvironmentPart[]{return [...displayRecipe().map((p,i)=>i===0?{...p,color:'#D0AF85',roughness:.64}:p.role==='wood'&&p.color===palette.dark?{...p,color:'#806B58'}:p),
  round([1.49,.020,.86],[0,.879,0],'#B89268',.008),
- ...[-.59,.59].flatMap(x=>[-.28,.28].map(z=>round([.095,.028,.095],[x,.014,z],'#7F6652',.008))),
- round([.27,.042,.024],[-.49,.905,-.477],'#F0E5D0',.006,'paper'),
- part('box',[.11,.005,.027],[-.49,.907,-.492],'#A89A7E','ink'),
+ // Existing upright price card retained; spare underside trim budget moves
+ // to the visible back cabinet in the room recipe.
+
  // Three quiet textile runners have the same furniture footprint. They remain
  // identifiable as fixtures when no real products are displayed.
  round([variant===1?.65:1.30,.006,variant===1?.83:.54],[variant===1?-.16:0,.995,0],variant===2?'#D7DAC8':'#E0D1B5',.003,'fabric'),

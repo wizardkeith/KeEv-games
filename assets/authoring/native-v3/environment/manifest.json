@@ -3,14 +3,14 @@
   "version": "3.1",
   "master": {
     "path": "assets/masters/native-v3/environment-v3.json",
-    "sizeBytes": 113036,
-    "sha256": "2ccb2c129de41e5f72cc9a1c5d231410dbbb65e5d81985fe1833edf183d788de"
+    "sizeBytes": 108201,
+    "sha256": "552343aec4b00b8a22bd4b2631498b1ecc0dd5d0c03d4ef5c51bb94e88cbe760"
   },
   "sources": {
-    "src/art/native-characters.ts": "caa1189e97f88cffc75c2e96e606150d18494bc7fc3b24c0dc62eb0e66ed7950",
-    "src/art/native-environment.ts": "03eabe5c482cde2b56b1f86f78c9c2f5bf65bf6de752646f28663fe96995ef8e",
-    "src/art/native-display.ts": "2ee17c179f4aa8af8ccf7a70ff9ce6aca02e8ed9ac8c859d9292e234738eb95d",
-    "src/art/native-view.ts": "288bd8659f2f03f0a6853823d48ec36646e5594fcf02df82b5b8b48e01c0239e",
+    "src/art/native-characters.ts": "b793ba0efa61fb27a3c2ac19843df6032073808c748de36dd8f13d1cf7c92fa3",
+    "src/art/native-environment.ts": "1aca5d2b02dd8df56d370337ed167f02c5aaab315ecd5892d31524746375af27",
+    "src/art/native-display.ts": "70a18bc21754beede3fb2b50a8628e7ece56cdfa9c509eb88f9c29ea502c2744",
+    "src/art/native-view.ts": "b49470a84f6eb0b8216682035b15e1b3f00a8c8d1184b69622c43d6433ac34ba",
     "src/art/recipes.ts": "c20e2d9819bd5a60678c8e006318882a5ad10dcb290c228d71816add11b7dfef",
     "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",

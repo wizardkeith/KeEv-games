@@ -69,7 +69,7 @@ export class StaffMotionPlayer {
   * stale transition or midway idle task can reappear when playback resumes. */
  cancel():void {
   this.currentPose=neutral();this.transition=undefined;this.inputKey='idle';
-  this.idleTask=undefined;this.idleElapsed=0;this.idleWait=16;
+  this.idleTask=undefined;this.idleElapsed=0;this.idleWait=7;
   this.lastServiceProgress=0;this.lastGreetProgress=0;
  }
  reset():void {this.cancel();this.visibleTime=0;this.idleWait=6;this.nextIdle='tidy';this.repeat=0;}
@@ -91,11 +91,11 @@ export class StaffMotionPlayer {
   const hadExternal=this.inputKey.startsWith('service:')||this.inputKey.startsWith('greet:');
   if(externalKey!=='idle'){
    // Interrupt and discard work, never pause modulo into its middle later.
-   this.idleTask=undefined;this.idleElapsed=0;this.idleWait=16;
-  }else if(hadExternal){this.idleTask=undefined;this.idleElapsed=0;this.idleWait=16;}
+   this.idleTask=undefined;this.idleElapsed=0;this.idleWait=7;
+  }else if(hadExternal){this.idleTask=undefined;this.idleElapsed=0;this.idleWait=7;}
   else if(this.idleTask){
    this.idleElapsed+=dt;const duration=STAFF_CLIPS[this.idleTask.kind].duration;
-   if(this.idleElapsed>=duration){this.idleTask=undefined;this.idleElapsed=0;this.idleWait=16-duration;}
+   if(this.idleElapsed>=duration){this.idleTask=undefined;this.idleElapsed=0;this.idleWait=9-duration;}
    else this.idleTask={kind:this.idleTask.kind,progress:this.idleElapsed/duration};
   }else{
    this.idleWait-=dt;

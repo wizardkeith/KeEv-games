@@ -1,0 +1,29 @@
+{
+  "source": "tools/generate-v6-materials.py",
+  "rights": "Original deterministic project-authored inputs; no external images",
+  "floorUV": "face-plane metres; U scale 1/1.10, offset 4.525/1.10; V scale 1/2.20",
+  "clothUV": "face-plane metres; repeat 16 per metre",
+  "nativeStatus": "Lossless original masters retained; future engine material binding required; no native port claimed",
+  "assets": [
+    {
+      "name": "floor-planks",
+      "sha256": "6a2b414108dbeb42e6d761058d2073240e30760e85f3473d999c138446b9f419",
+      "bytes": 4876,
+      "size": [
+        512,
+        512
+      ],
+      "channels": "RGB sRGB base-colour multiplier; no alpha or baked shadows"
+    },
+    {
+      "name": "cloth-weave",
+      "sha256": "75a210ccac687212cdfd0e16184619f9f7e553934e9426e36fd1b135eb8a8686",
+      "bytes": 4716,
+      "size": [
+        512,
+        512
+      ],
+      "channels": "RGB sRGB base-colour multiplier; no alpha or baked shadows"
+    }
+  ]
+}
