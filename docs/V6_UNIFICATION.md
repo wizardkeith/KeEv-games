@@ -1,4 +1,6 @@
-# V6 Version Unification — implementation checkpoint
+# V6 Version Unification — implementation and review handoff
+
+Release follow-up: PR #3 is merged and published as Site v13. Exact release source/verification limits: [publication receipt](V6_PUBLICATION_RECEIPT_2026-10-24.md). The implementation-only restrictions below describe that original task.
 
 Base: main `9802f0ddbbcc5f7030a761c3009883777b321860`, public Site v12. Branch `codex/game-v6-unification`; unmerged implementation, no Site save/deploy.
 

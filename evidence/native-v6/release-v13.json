@@ -1,0 +1,45 @@
+{
+  "status": "succeeded",
+  "published_at": "2026-10-24T08:31:07.080466+00:00",
+  "project_id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+  "url": "https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site",
+  "audience": "public",
+  "version": 13,
+  "version_id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d~appgver_4aa16c221f148191bca29c3f2215501c",
+  "deployment_id": "appgdep_6adc6cb827a88191963c793b393c2cac",
+  "source_sha": "93c9aa87510ebffc08d36b01905dc119266d5e4e",
+  "reviewed_candidate": "4b0a211491799f88a2f4c0c099fdc0db84361260",
+  "reviewed_runtime": "2e31c7fb0fdaf4b17cb7a415f5368fbe6af3b43c",
+  "src_tree": "06973abf4511a56e0ff9bf03204778e5dde4ea83",
+  "archive_gzip_sha256": "c546faa106e7554ace7d5294fd74fbce14986d4cb95d2041d6c0133075d1679c",
+  "provider_archive_storage": {
+    "archive_format": "tar",
+    "sediment_file_id": "file_00000000bbd88206be2e1fc3f649449c",
+    "content_hash": "sha256:e1d03caf1159556a2c5c437bc4a57d4b20803b71b8b3a97b816e33ee08f0b443",
+    "size_bytes": 7802880,
+    "file_count": 122
+  },
+  "preupload_payload_matches": 121,
+  "hosting_files": 1,
+  "source_batches": [
+    "6b0185e6a6d85f6456f3492fd35ad5f2cff1f78b",
+    "2e31c7fb0fdaf4b17cb7a415f5368fbe6af3b43c",
+    "93c9aa87510ebffc08d36b01905dc119266d5e4e"
+  ],
+  "intermediate_publications": 0,
+  "merge_history_preserved": true,
+  "review_doc": "docs/reviews/V6_INDEPENDENT_RELEASE_REVIEW_2026-10-24_zh-HK.md",
+  "env_set_revision": 0,
+  "live_checks": {
+    "native_site_and_saved_version_readback": "pass",
+    "cloud_http_payloads": "Not retried after prior proxy CONNECT 403; no bypass",
+    "cloud_live_sandbox": "Unverified; no navigation attempted under denied route",
+    "local_handoff": "Parent may arrange fresh isolated Sandbox-only browser check on authorized KeiTHxMC; this executor did not operate that computer"
+  },
+  "nonblocking": [
+    "P3 rightmost product selected/aria-current restoration may shift to previous leading card; quantities/position/transaction target remain correct",
+    "Final target art and physical GPU/FPS/Safari/real mobile keyboard/audio/true hidden-tab/native acceptance remain open"
+  ],
+  "normal_save_mutated": false,
+  "credentials": "Ephemeral source session closed; memory reference cleared; no persistent credential/account/security change"
+}
