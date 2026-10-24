@@ -13,10 +13,10 @@
     "No device or WebGL visual validation is implied by this export."
   ],
   "sources": {
-    "src/art/native-characters.ts": "b793ba0efa61fb27a3c2ac19843df6032073808c748de36dd8f13d1cf7c92fa3",
-    "src/art/native-environment.ts": "1aca5d2b02dd8df56d370337ed167f02c5aaab315ecd5892d31524746375af27",
-    "src/art/native-display.ts": "70a18bc21754beede3fb2b50a8628e7ece56cdfa9c509eb88f9c29ea502c2744",
-    "src/art/native-view.ts": "b49470a84f6eb0b8216682035b15e1b3f00a8c8d1184b69622c43d6433ac34ba",
+    "src/art/native-characters.ts": "7a8fc446f8943a3ac677fdb17430f0c8292d26747593c79c28631fc94b5fa1c0",
+    "src/art/native-environment.ts": "424e7d3c1ba9839b313930927717d71ad3d7d35eb0b00931abdb1b12be177032",
+    "src/art/native-display.ts": "2d785ebeae1f7558662dbb69ebd0007f93266d6360a3c178cb09076335b86086",
+    "src/art/native-view.ts": "f0734aaff3c18fbc851232400f5c9ab443be3b4835a9cab01e37b2545bd075ca",
     "src/art/recipes.ts": "c20e2d9819bd5a60678c8e006318882a5ad10dcb290c228d71816add11b7dfef",
     "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
@@ -182,10 +182,10 @@
       "note": "Fit excludes decorative upper wall/plinth only. Preserve user zoom relative to this fit when the safe viewport changes; ordinary draw must not reset camera."
     },
     "lighting": {
-      "id": "native.light.v6",
+      "id": "native.light.v7",
       "key": {
         "color": "#FFE3C1",
-        "intensity": 1.7,
+        "intensity": 1.74,
         "direction": [
           0.78,
           -0.82,
@@ -200,7 +200,7 @@
       "fill": {
         "color": "#DFEAF4",
         "ground": "#C2A58A",
-        "intensity": 0.48
+        "intensity": 0.44
       },
       "faceFill": {
         "color": "#FFF0DC",
@@ -958,36 +958,36 @@
       "samples": [
         {
           "at": [
-            -0.25,
+            -0.26,
             0.009,
-            0.12
+            0.1
           ],
           "yaw": -0.18,
           "scale": 0.9776
         },
         {
           "at": [
-            0.13,
+            0.08,
             0.009,
-            -0.15
+            0.09
           ],
           "yaw": 0.14,
           "scale": 0.94
         },
         {
           "at": [
-            0.39,
+            0.37,
             0.009,
-            0.08
+            -0.13
           ],
           "yaw": -0.05,
           "scale": 0.94
         },
         {
           "at": [
-            -0.38,
+            -0.28,
             0.009,
-            -0.19
+            -0.22
           ],
           "yaw": 0.21,
           "scale": 0.846
@@ -999,36 +999,36 @@
       "samples": [
         {
           "at": [
-            -0.25,
+            -0.26,
             0.009,
-            0.12
+            0.1
           ],
           "yaw": -0.18,
           "scale": 0.9776
         },
         {
           "at": [
-            0.13,
+            0.08,
             0.009,
-            -0.15
+            0.09
           ],
           "yaw": 0.14,
           "scale": 0.94
         },
         {
           "at": [
-            0.39,
+            0.37,
             0.009,
-            0.08
+            -0.13
           ],
           "yaw": -0.05,
           "scale": 0.94
         },
         {
           "at": [
-            -0.38,
+            -0.28,
             0.009,
-            -0.19
+            -0.22
           ],
           "yaw": 0.21,
           "scale": 0.846
@@ -1040,36 +1040,36 @@
       "samples": [
         {
           "at": [
-            -0.25,
+            -0.26,
             0.009,
-            0.12
+            0.1
           ],
           "yaw": -0.18,
           "scale": 0.9776
         },
         {
           "at": [
-            0.13,
+            0.08,
             0.009,
-            -0.15
+            0.09
           ],
           "yaw": 0.14,
           "scale": 0.94
         },
         {
           "at": [
-            0.39,
+            0.37,
             0.009,
-            0.08
+            -0.13
           ],
           "yaw": -0.05,
           "scale": 0.94
         },
         {
           "at": [
-            -0.38,
+            -0.28,
             0.009,
-            -0.19
+            -0.22
           ],
           "yaw": 0.21,
           "scale": 0.846
@@ -1081,36 +1081,36 @@
       "samples": [
         {
           "at": [
-            -0.25,
+            -0.26,
             0.009,
-            0.12
+            0.1
           ],
           "yaw": -0.18,
           "scale": 0.9776
         },
         {
           "at": [
-            0.13,
+            0.08,
             0.009,
-            -0.15
+            0.09
           ],
           "yaw": 0.14,
           "scale": 0.94
         },
         {
           "at": [
-            0.39,
+            0.37,
             0.009,
-            0.08
+            -0.13
           ],
           "yaw": -0.05,
           "scale": 0.94
         },
         {
           "at": [
-            -0.38,
+            -0.28,
             0.009,
-            -0.19
+            -0.22
           ],
           "yaw": 0.21,
           "scale": 0.846
@@ -1163,36 +1163,36 @@
       "samples": [
         {
           "at": [
-            -0.25,
+            -0.26,
             0.009,
-            0.12
+            0.1
           ],
           "yaw": -0.18,
           "scale": 0.9776
         },
         {
           "at": [
-            0.13,
+            0.08,
             0.009,
-            -0.15
+            0.09
           ],
           "yaw": 0.14,
           "scale": 0.94
         },
         {
           "at": [
-            0.39,
+            0.37,
             0.009,
-            0.08
+            -0.13
           ],
           "yaw": -0.05,
           "scale": 0.94
         },
         {
           "at": [
-            -0.38,
+            -0.28,
             0.009,
-            -0.19
+            -0.22
           ],
           "yaw": 0.21,
           "scale": 0.846
@@ -1204,36 +1204,36 @@
       "samples": [
         {
           "at": [
-            -0.25,
+            -0.26,
             0.009,
-            0.12
+            0.1
           ],
           "yaw": -0.18,
           "scale": 0.9776
         },
         {
           "at": [
-            0.13,
+            0.08,
             0.009,
-            -0.15
+            0.09
           ],
           "yaw": 0.14,
           "scale": 0.94
         },
         {
           "at": [
-            0.39,
+            0.37,
             0.009,
-            0.08
+            -0.13
           ],
           "yaw": -0.05,
           "scale": 0.94
         },
         {
           "at": [
-            -0.38,
+            -0.28,
             0.009,
-            -0.19
+            -0.22
           ],
           "yaw": 0.21,
           "scale": 0.846
@@ -1245,36 +1245,36 @@
       "samples": [
         {
           "at": [
-            -0.25,
+            -0.26,
             0.009,
-            0.12
+            0.1
           ],
           "yaw": -0.18,
           "scale": 0.9776
         },
         {
           "at": [
-            0.13,
+            0.08,
             0.009,
-            -0.15
+            0.09
           ],
           "yaw": 0.14,
           "scale": 0.94
         },
         {
           "at": [
-            0.39,
+            0.37,
             0.009,
-            0.08
+            -0.13
           ],
           "yaw": -0.05,
           "scale": 0.94
         },
         {
           "at": [
-            -0.38,
+            -0.28,
             0.009,
-            -0.19
+            -0.22
           ],
           "yaw": 0.21,
           "scale": 0.846
@@ -5245,66 +5245,6 @@
       "role": "paint"
     },
     {
-      "shape": "box",
-      "size": [
-        0.014,
-        0.5,
-        0.035
-      ],
-      "at": [
-        -0.65,
-        0.54,
-        -0.4
-      ],
-      "color": "#CBA67D",
-      "role": "wood"
-    },
-    {
-      "shape": "box",
-      "size": [
-        0.014,
-        0.5,
-        0.035
-      ],
-      "at": [
-        -0.22,
-        0.54,
-        -0.4
-      ],
-      "color": "#CBA67D",
-      "role": "wood"
-    },
-    {
-      "shape": "box",
-      "size": [
-        0.014,
-        0.5,
-        0.035
-      ],
-      "at": [
-        0.22,
-        0.54,
-        -0.4
-      ],
-      "color": "#CBA67D",
-      "role": "wood"
-    },
-    {
-      "shape": "box",
-      "size": [
-        0.014,
-        0.5,
-        0.035
-      ],
-      "at": [
-        0.65,
-        0.54,
-        -0.4
-      ],
-      "color": "#CBA67D",
-      "role": "wood"
-    },
-    {
       "shape": "round",
       "size": [
         0.42,
@@ -5478,6 +5418,70 @@
       ],
       "color": "#C2AF94",
       "role": "wood"
+    },
+    {
+      "shape": "round",
+      "size": [
+        0.312,
+        0.326,
+        0.014
+      ],
+      "at": [
+        -0.61,
+        0.335,
+        -0.417
+      ],
+      "color": "#E8DDCB",
+      "role": "paint",
+      "radius": 0.012
+    },
+    {
+      "shape": "round",
+      "size": [
+        0.312,
+        0.326,
+        0.014
+      ],
+      "at": [
+        -0.205,
+        0.335,
+        -0.417
+      ],
+      "color": "#E8DDCB",
+      "role": "paint",
+      "radius": 0.012
+    },
+    {
+      "shape": "round",
+      "size": [
+        0.312,
+        0.326,
+        0.014
+      ],
+      "at": [
+        0.205,
+        0.335,
+        -0.417
+      ],
+      "color": "#E8DDCB",
+      "role": "paint",
+      "radius": 0.012
+    },
+    {
+      "shape": "round",
+      "size": [
+        0.312,
+        0.326,
+        0.014
+      ],
+      "at": [
+        0.61,
+        0.335,
+        -0.417
+      ],
+      "color": "#E8DDCB",
+      "role": "paint",
+      "radius": 0.012
     }
   ],
   "display": [

@@ -35,32 +35,32 @@
     },
     {
       "id": "native.staff.tidy.v3",
-      "duration": 2.6,
+      "duration": 3.6,
       "loop": false,
       "blend": 0.25,
       "markers": [
         {
-          "time": 0.55,
+          "time": 0.7,
           "event": "cloth-contact"
         },
         {
-          "time": 2.15,
+          "time": 3,
           "event": "cloth-release"
         }
       ]
     },
     {
       "id": "native.staff.check-note.v3",
-      "duration": 2.8,
+      "duration": 3.8,
       "loop": false,
       "blend": 0.25,
       "markers": [
         {
-          "time": 0.7,
+          "time": 0.9,
           "event": "note-held"
         },
         {
-          "time": 2.2,
+          "time": 3.1,
           "event": "note-return"
         }
       ]

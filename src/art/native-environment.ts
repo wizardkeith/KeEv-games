@@ -127,7 +127,7 @@ export function exteriorRecipe():Part[]{
  return result;
 }
 
-export function nativeCounterRecipe():NativeEnvironmentPart[]{return [...counterRecipe().map((p,i)=>i===0?{...p,color:'#DAB98F',roughness:.57}:i===1?{...p,color:'#B28C67'}:p),
+export function nativeCounterRecipe():NativeEnvironmentPart[]{return [...counterRecipe().filter((_,i)=>i<3||i>6).map((p,i)=>i===0?{...p,color:'#DAB98F',roughness:.57}:i===1?{...p,color:'#B28C67'}:p),
  // Recesses, a bevel beneath the thick top, and restrained drawer construction.
  round([1.79,.024,.80],[0,.847,0],'#8B664B',.009),
  round([1.65,.065,.65],[0,.050,0],'#77583F',.014),
@@ -136,6 +136,11 @@ export function nativeCounterRecipe():NativeEnvironmentPart[]{return [...counter
   round([.14,.018,.026],[x,.70,-.416],'#9B896B',.006,'metal'),
  ]),
  part('box',[1.52,.012,.009],[0,.577,-.409],'#C2AF94'),
+ // Inset lower panels and broad warm edging read at the normal shop camera.
+ ...[-.61,-.205,.205,.61].flatMap(x=>[
+  round([.312,.326,.014],[x,.335,-.417],'#E8DDCB',.012,'paint'),
+ ]),
+
  ];}
 
 export function nativeDisplayRecipe(variant=0):NativeEnvironmentPart[]{return [...displayRecipe().map((p,i)=>i===0?{...p,color:'#D0AF85',roughness:.64}:p.role==='wood'&&p.color===palette.dark?{...p,color:'#806B58'}:p),

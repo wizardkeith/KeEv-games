@@ -1,0 +1,9 @@
+{
+  "files": 207,
+  "identical": true,
+  "generators": [
+    "export-native-characters.ts",
+    "export-native-environment.ts",
+    "export-v4-fixtures.ts"
+  ]
+}
