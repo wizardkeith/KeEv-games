@@ -8,8 +8,8 @@
     {
       "id": "room",
       "file": "assets/masters/native-v4/room.glb",
-      "bytes": 186832,
-      "sha256": "34171408d420d917fa2a0392323274f6c65cc5eeea48689af6f45a9ec837482c"
+      "bytes": 214172,
+      "sha256": "43514ddaafa1acbcca435455c90fcefc9ad5c5140ea7c034425b272bea5c2e16"
     },
     {
       "id": "counter",
@@ -20,20 +20,20 @@
     {
       "id": "display-1",
       "file": "assets/masters/native-v4/display-1.glb",
-      "bytes": 120836,
-      "sha256": "7f24d6ce05882b20a6e7bdb2ee6eea5e2508295fa3ce1486ccea23a04be015a4"
+      "bytes": 95204,
+      "sha256": "44f6961a380fdca3cec893ed0ee63b0d552d9a761ca09d538ba30b6ee9a2191a"
     },
     {
       "id": "display-2",
       "file": "assets/masters/native-v4/display-2.glb",
-      "bytes": 120864,
-      "sha256": "95573cd14c8c9ce84f5243d6edfefba2591d8600cfc1913632f905e5a75263e5"
+      "bytes": 95232,
+      "sha256": "b78eae446eafd0f1858452bf703c461a1207525ee7254cd901d4461f14cd6633"
     },
     {
       "id": "display-3",
       "file": "assets/masters/native-v4/display-3.glb",
-      "bytes": 120836,
-      "sha256": "be6e8ab4f11e369258fcae9aa3e9351e609fa5aaed3ab03338d88d7d70cdb5b6"
+      "bytes": 95204,
+      "sha256": "bc8c7efe4e002e4d9deccdd6b8fc0b89fa247dd6c382b9e4671dbe852ad714f8"
     },
     {
       "id": "product-off.notebook",

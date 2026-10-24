@@ -1,4 +1,4 @@
-import {capturePurchase,newStockWorkspace,parseQuantity,quantityDraft,setQuantity} from './ui/stock-state';
+import {capturePurchase,newStockWorkspace,readStockWorkspace,saveStockWorkspace,parseQuantity,quantityDraft,setQuantity} from './ui/stock-state';
 import './style.css';
 import {FeedbackProjector} from './presentation/feedback';
 import {NativeCommitPresentation} from './presentation/native-commits';
@@ -25,9 +25,10 @@ import {panelContent,identityForm,button} from './ui/panels';import {render} fro
 import {commandId,draftFor,storeDraft,type UI} from './ui/session';
 const app=document.querySelector<HTMLDivElement>('#app')!,canvas=document.querySelector<HTMLCanvasElement>('#world')!;
 let mode:Mode=artReview?'sandbox':localStorage.getItem(modeKey)==='sandbox'?'sandbox':'normal';
+const stockWorkspaceKey=()=>presentationStorageKey+'.stock.'+mode;
 let state:Snapshot,saves:Saves,busy=false,world:Awaited<ReturnType<typeof import('./world')['createWorld']>>|undefined;
 let story:StoryRecord|undefined,storyBusy=false,storyReplay=false;
-const u:UI={panel:'',slot:0,zen:false,quality:'auto',sound:false,minimalFX:readPreferences(presentationStorageKey).minimalFX,feedbackKind:'',revealFx:false,reportDay:'',rename:false,draft:{quantity:'5',prices:{},shop:'',company:'',logo:'◇'},formError:'',formField:'',notice:'',blocking:'',worldFailed:false};
+const u:UI={panel:'',slot:0,zen:false,quality:'auto',sound:false,minimalFX:readPreferences(presentationStorageKey).minimalFX,feedbackKind:'',revealFx:false,reportDay:'',rename:false,draft:{quantity:'5',prices:{},shop:'',company:'',logo:'◇'},formError:'',formField:'',notice:'',blocking:'',worldFailed:false,stock:readStockWorkspace(stockWorkspaceKey())};
 let focusReturn:HTMLElement|null=null,readyMs:number|null=null,worldReadyMs:number|null=null,noticeTimer:ReturnType<typeof setTimeout>|undefined,revealTimer:ReturnType<typeof setTimeout>|undefined;
 const started=performance.now(),saleSound=new Audio('/assets/sale.wav');saleSound.volume=.12;
 function download(data:string,name:string){const url=URL.createObjectURL(new Blob([data],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
@@ -72,7 +73,7 @@ function draw(){
  ${u.zen?`<button class="zenbtn" data-action="zen">${esc(t('return'))}</button>`:''}
  ${!state.shopName||u.rename?identityForm(state,u,busy):''}`);
  if(activeId&&document.activeElement?.id!==activeId){const replacement=document.getElementById(activeId) as HTMLInputElement|null;if(replacement){replacement.focus({preventScroll:true});if(start!==null&&start!==undefined)try{replacement.setSelectionRange(start,end??start);}catch{}}}
- const rail=document.getElementById('stock-products');if(rail&&u.stock&&Math.abs(rail.scrollLeft-u.stock.railLeft)>1)rail.scrollLeft=u.stock.railLeft;
+ const rail=document.getElementById('stock-products');if(rail&&u.stock&&Math.abs(rail.scrollLeft-u.stock.railLeft)>1)rail.scrollLeft=u.stock.railLeft;if(u.stock)saveStockWorkspace(u.stock,stockWorkspaceKey());
  world?.minimal(u.minimalFX);world?.update(state);world?.selected(u.slot);world?.layout(!!u.panel&&!u.zen);world?.zen(u.zen);
 }
 function finishReveal(){clearTimeout(revealTimer);if(u.revealFx){u.revealFx=false;draw();}}
@@ -107,7 +108,7 @@ async function act(kind:string,data:Partial<Command>={}){const command={id:comma
 function openPanel(p:string,source?:HTMLElement){if(source)focusReturn=source;const changed=u.panel!==p;u.panel=p;u.formError='';draw();if(changed){const body=document.getElementById('panelbody');if(body)body.scrollTop=0;}document.getElementById('panel-title')?.focus({preventScroll:true});}
 function closePanel(){u.panel='';u.formError='';draw();focusReturn?.focus({preventScroll:true});}
 async function switchMode(next:Mode){
- storeDraft(mode,u.draft,draftPrefix);const loaded=await saves.loadOrCreate(next,next==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());mode=next;state=loaded;storyReplay=false;u.draft=draftFor(mode,state,draftPrefix);u.rename=false;u.reportDay='';u.slot=0;u.stock=newStockWorkspace();u.formError='';u.notice='';localStorage.setItem(modeKey,mode);returnPending=document.hidden||(mode==='normal'&&Date.now()-state.watermark>=60000);cancelFeedback();
+ storeDraft(mode,u.draft,draftPrefix);const loaded=await saves.loadOrCreate(next,next==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());mode=next;state=loaded;storyReplay=false;u.draft=draftFor(mode,state,draftPrefix);u.rename=false;u.reportDay='';u.slot=0;u.stock=readStockWorkspace(stockWorkspaceKey());u.formError='';u.notice='';localStorage.setItem(modeKey,mode);returnPending=document.hidden||(mode==='normal'&&Date.now()-state.watermark>=60000);cancelFeedback();
 }
 function moveRail(direction:number){
  const rail=document.getElementById('stock-products');if(!rail)return;
@@ -119,7 +120,7 @@ app.addEventListener('scroll',e=>{
  u.stock.railLeft=rail.scrollLeft;
  const cards=Array.from(rail.querySelectorAll<HTMLElement>('.stock-card'));
  const card=cards.reduce<HTMLElement|undefined>((best,c)=>!best||Math.abs(c.offsetLeft-rail.scrollLeft)<Math.abs(best.offsetLeft-rail.scrollLeft)?c:best,undefined);
- if(card)u.stock.selected=card.dataset.item??'';
+ if(card)u.stock.selected=card.dataset.item??'';saveStockWorkspace(u.stock,stockWorkspaceKey());
 },true);
 app.addEventListener('focusin',e=>{const card=(e.target as Element).closest<HTMLElement>('.stock-card');if(card&&u.stock)u.stock.selected=card.dataset.item??'';});
 app.addEventListener('keydown',e=>{if((e.target as HTMLElement).id!=='stock-products')return;if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();moveRail(e.key==='ArrowLeft'?-1:1);}if(e.key==='Home'||e.key==='End'){e.preventDefault();const r=e.target as HTMLElement;r.scrollLeft=e.key==='Home'?0:r.scrollWidth;}});
