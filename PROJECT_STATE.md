@@ -1,6 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-24T18:52:07+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-24T19:04:41+08:00** (Asia/Hong_Kong).
+
+## Current unmerged iteration — revised vertical inventory list — 2026-10-24T19:04:41+08:00
+
+- **Ready for revised independent review/local playtest:** same [draft PR #4](https://github.com/wizardkeith/KeEv-games/pull/4), branch `codex/game-v7-playtest`, pinned candidate `1fe2bbbc28c0e90debae9f313faf066310bcbb78`, runtime `8f12d614e3a1fc03a7940ac43e247913b387c834` / `src` tree `18da5bd9d74d0e958adc4bce82362721ee88a5df`. Owner's conventional vertical-list clarification supersedes the rail. **Not merged or published**; release gate remains paused pending revised review. Public V13/V6 is unchanged.
+- One product per aligned desktop row, small icons, stock/unit cost/editable quantity/total/buy/place; narrow rows wrap labeled fields within one native vertical scroll area. No stock carousel, horizontal overflow or nested row scrolling. Drafts, selected vase/007 and per-search/filter positions survive panels/reload, bounded by current content extent. Other V7 currency/Misaki/counter/staff/accessibility fixes remain.
+- Executing-agent checks: **148 tests**, build/content/replay/asset-check, **20 five-locale short/narrow touch/keyboard/repeated/delayed/aborted transaction cases**, aligned columns/native wheel, unchanged 580px drawer/orbit/zoom/target, JP¥48,200 at 375px, prior-save compatibility and **55 GLB validators** pass. **331 protected art/motion/master/public/economy/save/story/source/config files** match prior V7. These are implementation checks, not independent acceptance. No player Normal save, Site or local Unity change.
+- [Revised handoff](https://github.com/wizardkeith/KeEv-games/blob/codex/game-v7-playtest/docs/V7_INVENTORY_LIST.md) and `evidence/native-v7-list/` contain real desktop/narrow PNGs, uncut interaction/provenance and current 121-payload + hosting archive. Historical card-layout reports/archive are superseded. Software WebGL is not final art/physical-device/audio/Safari/true hidden-tab/native acceptance. Parent coordinates revised review/local playtest before integration/publication. The independent partial-review record below and its files are preserved unchanged.
 
 ## V7 independent review paused — 2026-10-24T18:52:07+08:00
 
@@ -9,7 +16,7 @@ Last updated: **2026-10-24T18:52:07+08:00** (Asia/Hong_Kong).
 - **Delivery:** actual 122-file archive matches this clean build byte-for-byte; gzip SHA-256 `b5e8847769c7c7c16f0d6a6546643734c639a00de6c0be1be9dd1b8c6bd13942`; 46 evidence provenance hashes/sizes match. Approved target and actual before/after pixels inspected; incremental art only. Current supported Library owner-ZIP materialization failed (`download failed`), no local ZIP/pixels read; no bypass. Full motion/final art/device/audio/Safari/true hidden-tab/native acceptance and independent 207-asset/55-GLB reruns remain incomplete after pause.
 - [Concise partial report and independent screenshots](docs/reviews/V7_PARTIAL_REVIEW_2026-10-24_zh-HK.md). Documentation-only handoff on `docs-v7-partial-review`; normal push and exact readback reported externally. Next: review corrected vertical-list candidate, preserving economy/saves, five locales, 580px drawer/camera and retained input/focus.
 
-## Current unmerged iteration — V7 local-playtest fixes — 2026-10-24T18:43:11+08:00
+## Historical pre-clarification V7 card candidate — 2026-10-24T18:43:11+08:00
 
 - **Ready for independent review/local playtest:** [draft PR #4](https://github.com/wizardkeith/KeEv-games/pull/4), branch `codex/game-v7-playtest`, candidate `01b5499` (exact full SHA returned externally), runtime `b323129040b1414f0e60cc3a05090c44cffab1cb`, `src` tree `5176ecfa2b54a27f8e6a5011f0ea744a17810aac`. Owner-approved five scoped findings implemented; **not merged or published**. Public Site remains V13/V6 below.
 - Stock cards retain quantity/total/buy/place (345px desktop, 192px short-screen in this executor), exact JP¥48,200 fits, vase `007` selection/reload passes; actual Misaki/counter/material/staging and calm staff work refined. Fresh 145 tests, build/content/replay/asset-check; 20 exact-runtime five-locale touch/keyboard/repeated/delayed/aborted flows, 15 final layout cases, 580px drawer/camera stability, prior-save compatibility, 207 deterministic asset/public rebuild checks and all 55 retained GLB validators pass. 94 protected files unchanged. No player Normal save, economy/schema/catalog/story/Site identity or local Unity change.
