@@ -1,6 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-24T19:04:41+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-24T19:13:57+08:00** (Asia/Hong_Kong).
+
+## Revised V7 independent gate — 2026-10-24T19:13:57+08:00
+
+- **Conditional pass for incremental release; no P1/P2 blocker found.** Exact independently tested PR #4 candidate `1fe2bbbc28c0e90debae9f313faf066310bcbb78`, runtime `8f12d614e3a1fc03a7940ac43e247913b387c834`, identical src tree `18da5bd9d74d0e958adc4bce82362721ee88a5df`. Owner's Excel-style vertical inventory requirement now matches actual desktop/narrow pixels and native wheel/touch: one product per row, small icons, aligned/labeled fields, no carousel/horizontal overflow/nested row scrolling. Prior rail-design gate is superseded; historical pause record retained.
+- **Fresh independent checks:** 148 tests (0 fail/skip), build/content/replay/asset-check; all 55 public GLBs zero errors/warnings; three exporters rerun with all 212 tracked assets/public hashes unchanged. 331 protected paths unchanged from prior V7. Actual production WebGL walkthrough passes 20 five-locale touch buy/place cases, 580px drawers/camera pose, keyboard focus, invalid/repeated/delayed/aborted writes, query/filter/per-view vertical position, vase selected/raw 007/reload, exact 375px zh-CN JP¥48,200 and reduced motion. Additional independent native vertical swipe, legacy preference migration, empty-search return and 15 locale/crossover/boundary layouts pass. Real previous-version QA Sandbox import/reload/further purchase passes; isolated Normal unchanged. No player Normal save used.
+- **Delivery:** current 122-file archive matches this fresh build byte-for-byte; SHA-256 `c94eb88a5de051e75e1a5b0502a8d1a0bb5d954f33c1be85c2dc179b81467c8e`; 58 provenance hash/size entries match. Actual target/before/after/live pixels and sampled continuous motion evidence inspected; live 35-second Low/Minimal staff tasks and Reduce Motion cancellation observed. Final target art/naturalness, physical FPS/GPU/Safari/mobile keyboard/audio/true hidden-tab/native remain open. Owner ZIP supported transfer previously failed; no unsupported retry or pixel claim. Public proxy 403 not retried/bypassed.
+- **Next/release boundary:** no specific software gap requires a KeiTHxMC pre-release playtest; recommend isolated Sandbox device smoke after an authorized incremental release. Final art/device acceptance remains separate. [Full concise review and independent screenshots](docs/reviews/V7_LIST_INDEPENDENT_RELEASE_REVIEW_2026-10-24_zh-HK.md). This executing reviewer changed documentation only on `docs-v7-list-independent`, with normal push/readback reported externally; no implementation/PR metadata/merge/deploy/Site/local Unity operation. Public remains V13/V6 until parent performs release.
 
 ## Current unmerged iteration — revised vertical inventory list — 2026-10-24T19:04:41+08:00
 
