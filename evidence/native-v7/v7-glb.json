@@ -1,0 +1,277 @@
+[
+  {
+    "file": "counter.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "skin-test.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "day1/misaki-calm-v1.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "day1/misaki-smile-v1.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "native-v3/misaki-native-v3.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "native-v3/visitor-a-native-v3.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "native-v3/visitor-b-native-v3.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1/card.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1/cookie.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1/counter-w1_1.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1/display-w1_1.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1/generic-staff-w1_1.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1/mug.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1/notebook.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1/pencil.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1/plant-w1_1.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1/room-w1_1.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1/tea.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1/tote.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1/towel.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1/tray.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1/vase.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a/card.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a/cookie.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a/counter-w1_1a.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a/display-w1_1a.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a/generic-staff-w1_1a.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a/mug.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a/notebook.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a/pencil.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a/plant-w1_1a.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a/room-w1_1a.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a/tea.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a/tote.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a/towel.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a/tray.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a/vase.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a1/counter-w1_1a1.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a1/mug.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1a1/room-w1_1a1.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1b/card.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1b/cookie.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1b/counter-w1_1b.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1b/display-w1_1b.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1b/generic-staff-w1_1b.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1b/mug.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1b/notebook.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1b/pencil.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1b/plant-w1_1b.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1b/room-w1_1b.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1b/tea.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1b/tote.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1b/towel.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1b/tray.glb",
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "w1_1b/vase.glb",
+    "errors": 0,
+    "warnings": 0
+  }
+]
