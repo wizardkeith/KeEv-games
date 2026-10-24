@@ -14,7 +14,7 @@
     "src/presentation/native-feet.ts": "440404e1bceabdb2bf8d8f9f699d030c40e4815f7b0e904ea15a3f6a180bdef3",
     "src/presentation/native-delivery.ts": "0f151cc4f9c293b20fc680fda7f6125ee93501a4c10f680e8563f66cdcf9b942",
     "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
-    "src/world.ts": "8aa841223b8f13a2f0942390cf937f2961d9ef123801398070a74a6fb3c035c3",
+    "src/world.ts": "a6f743b4a434f5ee4426f6663b6cc188937b86b4c57e02100005232dfc7a5db4",
     "src/presentation/native-routes.ts": "248918d9a9942383431892aaf3dc9b6bd794be8c5ca85080f490cd40ff81beb1",
     "src/presentation/native-scene.ts": "db04429859b5c7adcf23a3730cc2244ae5e2620db8db1e2b50eee3f988736e3e",
     "tools/export-native-characters.ts": "58354f50486e7ab5597bf759caa90e28a252adc23f9080b69afcabb4e4daf1b5",

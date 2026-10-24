@@ -1,8 +1,8 @@
 import {catalog,type Snapshot} from '../core/contracts';
 import {purchaseCost} from '../core/recovery';
 import type {Drafts} from './session';
-export interface StockWorkspace {query:string;filter:'all'|'displayed'|'empty';picker:string;recent:Record<string,boolean>}
-export const newStockWorkspace=():StockWorkspace=>({query:'',filter:'all',picker:'',recent:{}});
+export interface StockWorkspace {query:string;filter:'all'|'displayed'|'empty';picker:string;recent:Record<string,boolean>;railLeft:number;selected:string}
+export const newStockWorkspace=():StockWorkspace=>({query:'',filter:'all',picker:'',recent:{},railLeft:0,selected:''});
 export function quantityDraft(d:Drafts,id:string){return d.quantities?.[id]??'5';}
 export function setQuantity(d:Drafts,id:string,value:string){(d.quantities??={})[id]=value;}
 export function parseQuantity(raw:string):number|undefined {if(!/^\d+$/.test(raw.trim()))return;const q=Number(raw);return Number.isSafeInteger(q)&&q>=1&&q<=1000?q:undefined;}

@@ -95,13 +95,13 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  setQuality('high');
  const resize=()=>{
   if(disposed)return;engine.resize();const w=canvas.clientWidth,h=canvas.clientHeight,narrow=w<720;
-  const panel=document.querySelector<HTMLElement>('.sidebar');const rect=panel?.getBoundingClientRect();const visible=panelOpen||!!(rect&&rect.height>0);
-  const header=document.querySelector<HTMLElement>('.top')?.getBoundingClientRect();const footer=document.querySelector<HTMLElement>('.dock')?.getBoundingClientRect();
-  const controls=document.querySelector<HTMLElement>('.shop-controls')?.getBoundingClientRect();
-  const top=zen?20:Math.min(header?.bottom??110,h*.24)+10;let bottom=zen?20:Math.max(85,h-Math.min(footer?.top??h-85,controls&&controls.height>0?controls.top:h));let right=0;
-  if(visible&&rect&&!zen){if(narrow)bottom=Math.max(bottom,h-rect.top+8);else right=Math.min(w-120,w-rect.left+12);}
+  // Overlay UI never participates in the world viewport. Only a real canvas
+  // resize or an explicit camera-view choice may refit the composition.
+  const top=narrow?Math.min(112,h*.20):Math.min(136,h*.18);
+  const bottom=narrow?Math.min(92,h*.20):Math.min(118,h*.16);
+  const right=narrow?0:Math.min(220,w*.16);
   const vw=Math.max(120,w-right),vh=Math.max(80,h-top-bottom);camera.viewport=new Viewport(0,bottom/h,vw/w,vh/h);
-  const signature=[w,h,top,bottom,right,viewMode].join(':');if(signature===composition)return;composition=signature;
+  const signature=[w,h,viewMode].join(':');if(signature===composition)return;composition=signature;
   const fit=nativeCameraFrame(vw/vh,camera.fov,viewMode),zoom=lastFitRadius?camera.radius/lastFitRadius:1;camera.lowerRadiusLimit=fit.lowerRadiusLimit;camera.upperRadiusLimit=fit.upperRadiusLimit;camera.radius=Math.max(fit.lowerRadiusLimit,Math.min(fit.upperRadiusLimit,fit.radius*zoom));camera.target.set(...fit.target);lastFitRadius=fit.radius;
  };
  scene.onPointerPick=(_,pick)=>{const n=pick.pickedMesh?.metadata?.slot;if(typeof n==='number')onSlot(n);};
@@ -146,7 +146,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
   gesture(kind:'greet'){if(disposed)return false;return gestureClock.start(kind,{low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches},document.hidden);},
   skip(){finishFeedback();},
   skipReveal(){if(clock.active?.kind==='reveal'){clock.cancel();onFeedbackEnd();}},
-  metrics(){return {presentationActor:nativeActors.staff.root.metadata,nativeMotion:nativeActors.metrics(),nativeService:nativePresentation.metrics(),serviceFrame:nativePresentation.current,customers:currentRoutes?.actors,gesture:gestureClock.active?.kind??null,artDirection:nativeLighting.id,cameraView:viewMode,readyAtMs:readyAt,quality,effectiveQuality,adaptivePolicy:'auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged',minimalFX,reducedMotion:reduced.matches,feedback:clock.active?.kind??null,materials:scene.materials.length,dustCapacity:vfx.dust.capacity,customerRoots:nativeActors.visitors.map(c=>({position:c.root.position.asArray(),enabled:c.root.isEnabled()})),selectedSlot,visibleSamples,frameSamplesMs:[...frames],fps:frames.length?1000/(frames.reduce((a,b)=>a+b,0)/frames.length):null,meshes:scene.meshes.length,activeMeshes:scene.getActiveMeshes().length,renderer:engine.getGlInfo(),viewport:[canvas.width,canvas.height],cameraViewport:camera.viewport};},
+  metrics(){return {presentationActor:nativeActors.staff.root.metadata,nativeMotion:nativeActors.metrics(),nativeService:nativePresentation.metrics(),serviceFrame:nativePresentation.current,customers:currentRoutes?.actors,gesture:gestureClock.active?.kind??null,artDirection:nativeLighting.id,cameraView:viewMode,readyAtMs:readyAt,quality,effectiveQuality,adaptivePolicy:'auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged',minimalFX,reducedMotion:reduced.matches,feedback:clock.active?.kind??null,materials:scene.materials.length,dustCapacity:vfx.dust.capacity,customerRoots:nativeActors.visitors.map(c=>({position:c.root.position.asArray(),enabled:c.root.isEnabled()})),selectedSlot,visibleSamples,frameSamplesMs:[...frames],fps:frames.length?1000/(frames.reduce((a,b)=>a+b,0)/frames.length):null,meshes:scene.meshes.length,activeMeshes:scene.getActiveMeshes().length,renderer:engine.getGlInfo(),viewport:[canvas.width,canvas.height],cameraViewport:camera.viewport,cameraInertia:[camera.inertialAlphaOffset,camera.inertialBetaOffset,camera.inertialRadiusOffset],cameraPose:{alpha:camera.alpha,beta:camera.beta,radius:camera.radius,target:camera.target.asArray()}};},
   dispose(){finishFeedback();disposed=true;routes.dispose();nativeActors.dispose();clock.dispose();observer.disconnect();window.removeEventListener('resize',resize);document.removeEventListener('visibilitychange',visibility);canvas.removeEventListener('webglcontextlost',contextLost);engine.stopRenderLoop();scene.dispose();engine.dispose();}
  };
 }
