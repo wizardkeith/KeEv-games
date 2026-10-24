@@ -1,12 +1,12 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-24T18:33:44+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-24T18:43:11+08:00** (Asia/Hong_Kong).
 
-## Current unmerged iteration — V7 local-playtest fixes — 2026-10-24T18:33:44+08:00
+## Current unmerged iteration — V7 local-playtest fixes — 2026-10-24T18:43:11+08:00
 
-- [Draft PR #4](https://github.com/wizardkeith/KeEv-games/pull/4), branch `codex/game-v7-playtest`, implementation checkpoint `49180ebff4c83670a93cc8ed35724eff6d0a5cb3`. Owner approved the five scoped playtest findings; changes are **not merged or published**. Public Site remains V13 / V6 below.
-- Stock action footer/short-screen space, currency wrapping, explicit product selection, Misaki/counter/lighting/staging and readable calm staff work are implemented. 145 tests, build, content/replay/asset checks pass; final WebGL locale/transaction/motion/save evidence is being completed on the branch. Parent coordinates independent review and local playtest before any integration/publication.
-- No economy/schema/catalog/story/Normal-save/Site identity change. Existing 580px desktop drawer and orbit/zoom/target checks pass. Final visual target and physical-device/native acceptance remain open. Newly supplied owner screenshot ZIP could not be downloaded through the supported Library helper in this executor; no inspection claim is made.
+- **Ready for independent review/local playtest:** [draft PR #4](https://github.com/wizardkeith/KeEv-games/pull/4), branch `codex/game-v7-playtest`, candidate `01b5499` (exact full SHA returned externally), runtime `b323129040b1414f0e60cc3a05090c44cffab1cb`, `src` tree `5176ecfa2b54a27f8e6a5011f0ea744a17810aac`. Owner-approved five scoped findings implemented; **not merged or published**. Public Site remains V13/V6 below.
+- Stock cards retain quantity/total/buy/place (345px desktop, 192px short-screen in this executor), exact JP¥48,200 fits, vase `007` selection/reload passes; actual Misaki/counter/material/staging and calm staff work refined. Fresh 145 tests, build/content/replay/asset-check; 20 exact-runtime five-locale touch/keyboard/repeated/delayed/aborted flows, 15 final layout cases, 580px drawer/camera stability, prior-save compatibility, 207 deterministic asset/public rebuild checks and all 55 retained GLB validators pass. 94 protected files unchanged. No player Normal save, economy/schema/catalog/story/Site identity or local Unity change.
+- [Full handoff](https://github.com/wizardkeith/KeEv-games/blob/codex/game-v7-playtest/docs/V7_PLAYTEST_FIXES.md) includes before/after PNGs, actual staff tasks, original/25.8-second uncut motion and stock recordings, exact source attribution and 121-payload archive receipt. Art remains an incremental improvement; final target, physical-device/audio/Safari/true hidden-tab/native acceptance remain open. Owner screenshot ZIP Library transfer failed; no local-byte/pixel inspection or new Library ID is claimed. Parent coordinates independent review/local playtest before integration/publication; no release operation occurred in this task.
 
 ## Current public release — V6 / Site v13 — 2026-10-24T16:35:37+08:00
 
