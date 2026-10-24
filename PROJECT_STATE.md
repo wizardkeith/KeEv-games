@@ -1,6 +1,12 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-25T02:20:24+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-25T04:35:32+08:00** (Asia/Hong_Kong).
+
+## Current unmerged iteration — V8 art and operations pricing — 2026-10-25T04:35:32+08:00
+
+- [Draft PR #5](https://github.com/wizardkeith/KeEv-games/pull/5), branch `codex/game-v8-art-pricing`, checkpoint `45621b8715fb28f600f0f46a744f8f62669bb4f0`. Owner accepts the stock list and prioritizes established-target art plus a matching pricing row-list. Story/gameplay/new shops/sets are frozen. **Not merged or published**; public V14 below is unchanged.
+- Pricing rows and preserved pending-edit drafts are implemented without changing price rules. Real 3D face/fringe, foliage, counter/display surfaces and warm/contact lighting are refined; 150 tests and build pass. Matched WebGL before/after, motion and pricing/stock browser checks are in progress. This is not final visual acceptance.
+- Reattached existing reference resolves to `06-approved-target-browser.jpg` (`libfile_8331a41ec92c8191a12e7a908c4d770a`); supported download failed, so no new local bytes/pixels are claimed. Existing approved repo PNG and Bible references were inspected; owner confirms unchanged target. Economy/save/locales/camera/Normal saves/Site identity/local Unity remain protected. Parent coordinates independent review before release.
 
 ## Current public release — V7 vertical inventory list / Site v14 — 2026-10-25T02:20:24+08:00
 
