@@ -1,6 +1,12 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-24T16:35:37+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-24T18:33:44+08:00** (Asia/Hong_Kong).
+
+## Current unmerged iteration — V7 local-playtest fixes — 2026-10-24T18:33:44+08:00
+
+- [Draft PR #4](https://github.com/wizardkeith/KeEv-games/pull/4), branch `codex/game-v7-playtest`, implementation checkpoint `49180ebff4c83670a93cc8ed35724eff6d0a5cb3`. Owner approved the five scoped playtest findings; changes are **not merged or published**. Public Site remains V13 / V6 below.
+- Stock action footer/short-screen space, currency wrapping, explicit product selection, Misaki/counter/lighting/staging and readable calm staff work are implemented. 145 tests, build, content/replay/asset checks pass; final WebGL locale/transaction/motion/save evidence is being completed on the branch. Parent coordinates independent review and local playtest before any integration/publication.
+- No economy/schema/catalog/story/Normal-save/Site identity change. Existing 580px desktop drawer and orbit/zoom/target checks pass. Final visual target and physical-device/native acceptance remain open. Newly supplied owner screenshot ZIP could not be downloaded through the supported Library helper in this executor; no inspection claim is made.
 
 ## Current public release — V6 / Site v13 — 2026-10-24T16:35:37+08:00
 
