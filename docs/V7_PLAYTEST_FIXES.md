@@ -1,5 +1,7 @@
 # V7 scoped playtest fixes — review handoff
 
+> **Owner clarification in progress:** PR #4 now replaces the horizontal card rail with an aligned, vertically scrolling inventory table/list. The earlier card-layout evidence below is historical and is superseded by `evidence/native-v7-list/` and the completed revised handoff. Other V7 art/currency/selection/staff fixes are retained; no merge or publication is authorized.
+
 [Draft PR #4](https://github.com/wizardkeith/KeEv-games/pull/4), branch `codex/game-v7-playtest`. Implementation starts at canonical main `c3c706aabae0ff32b56ab7c4b733d0cbea722892`, public V13/V6. Runtime checkpoint **`b323129040b1414f0e60cc3a05090c44cffab1cb`**, `src` tree **`5176ecfa2b54a27f8e6a5011f0ea744a17810aac`**. Later commits contain evidence/documentation only. No merge, Site save, publication or audience change was performed. Parent arranges independent review and local playtest.
 
 ## Five scoped results

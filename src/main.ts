@@ -1,4 +1,4 @@
-import {capturePurchase,newStockWorkspace,readStockWorkspace,saveStockWorkspace,parseQuantity,quantityDraft,setQuantity} from './ui/stock-state';
+import {capturePurchase,changeStockView,stockViewKey,newStockWorkspace,readStockWorkspace,saveStockWorkspace,parseQuantity,quantityDraft,setQuantity} from './ui/stock-state';
 import './style.css';
 import {FeedbackProjector} from './presentation/feedback';
 import {NativeCommitPresentation} from './presentation/native-commits';
@@ -56,7 +56,7 @@ function nextAction(){
  return [{text:'nextBuy',label:'stock',panel:'stock'},{text:'nextDisplay',label:'navShelves',panel:'shelves'},{text:'nextOpen',label:'navShelves',panel:'shelves'},{text:state.open&&!trading(state)?'hours':'nextSale',label:mode==='sandbox'?'advance60':'report',panel:'report'},{text:'nextReveal',label:'journal',panel:'journal'}][Math.min(n,4)];
 }
 function draw(){
- if(!state)return;const previousRail=document.getElementById('stock-products');if(previousRail&&u.stock)u.stock.railLeft=previousRail.scrollLeft;document.documentElement.lang=locale;document.title=state.shopName?state.shopName+' · '+t('title'):t('title');document.body.classList.toggle('zen',u.zen);document.body.classList.toggle('drawer-open',!!u.panel);document.body.classList.toggle('minimal-fx',u.minimalFX);document.body.dataset.feedback=u.feedbackKind;
+ if(!state)return;const previousRail=document.getElementById('stock-products');if(previousRail&&u.stock&&previousRail.dataset.view===stockViewKey(u.stock))u.stock.listTop=previousRail.scrollTop;document.documentElement.lang=locale;document.title=state.shopName?state.shopName+' · '+t('title'):t('title');document.body.classList.toggle('zen',u.zen);document.body.classList.toggle('drawer-open',!!u.panel);document.body.classList.toggle('minimal-fx',u.minimalFX);document.body.dataset.feedback=u.feedbackKind;
  const status=trading(state)?'isOpen':state.open?'outsideHours':'isClosed',next=nextAction(),guidance=shopGuidance(state,locale,busy||storyBusy);
  const oldActive=document.activeElement as HTMLInputElement|null;const activeId=oldActive?.id;const start=oldActive?.selectionStart,end=oldActive?.selectionEnd;
  render(app,`<header class="top"><div class="brand"><div class="brand-title"><span class="mark">${esc(state.logo)}</span><h1>${esc(state.shopName||t('welcome'))}</h1></div><p>${esc(t('subtitle'))}</p><div class="shop-context"><span class="statusdot ${trading(state)?'':'closed'}"></span>${esc(t(status))}<span class="mode-badge">${esc(t(mode==='sandbox'?'sandboxShort':'normalShort'))}</span></div></div><div class="balance"><small>${esc(t('cash'))}</small><strong>${money(state.cash)}</strong><span>${esc(date(state.watermark))} · Tokyo</span></div></header>
@@ -73,7 +73,7 @@ function draw(){
  ${u.zen?`<button class="zenbtn" data-action="zen">${esc(t('return'))}</button>`:''}
  ${!state.shopName||u.rename?identityForm(state,u,busy):''}`);
  if(activeId&&document.activeElement?.id!==activeId){const replacement=document.getElementById(activeId) as HTMLInputElement|null;if(replacement){replacement.focus({preventScroll:true});if(start!==null&&start!==undefined)try{replacement.setSelectionRange(start,end??start);}catch{}}}
- const rail=document.getElementById('stock-products');if(rail&&u.stock&&Math.abs(rail.scrollLeft-u.stock.railLeft)>1)rail.scrollLeft=u.stock.railLeft;if(u.stock)saveStockWorkspace(u.stock,stockWorkspaceKey());
+ const rail=document.getElementById('stock-products');if(rail&&u.stock&&Math.abs(rail.scrollTop-u.stock.listTop)>1)rail.scrollTop=u.stock.listTop;if(u.stock)saveStockWorkspace(u.stock,stockWorkspaceKey());
  world?.minimal(u.minimalFX);world?.update(state);world?.selected(u.slot);world?.layout(!!u.panel&&!u.zen);world?.zen(u.zen);
 }
 function finishReveal(){clearTimeout(revealTimer);if(u.revealFx){u.revealFx=false;draw();}}
@@ -101,7 +101,7 @@ function fail(e:unknown,field='general'){
 async function run(action:()=>Promise<void>,field='general',success?:()=>void,cause='settle',targetSlot=u.slot){
  // Lock this intent synchronously, before the first await. Double clicks are
  // discarded rather than turned into a queue of fresh purchasing commands.
- if(busy)return;const actionFocus=document.activeElement as HTMLElement|null;const focusItem=actionFocus?.closest?.<HTMLElement>('.stock-card')?.dataset.item;busy=true;pendingCommand=undefined;u.notice='';u.formError='';u.formField='';draw();const previous=state,epoch=presentationEpoch;
+ if(busy)return;const actionFocus=document.activeElement as HTMLElement|null;const focusItem=actionFocus?.closest?.<HTMLElement>('.stock-row')?.dataset.item;busy=true;pendingCommand=undefined;u.notice='';u.formError='';u.formField='';draw();const previous=state,epoch=presentationEpoch;
  try{await action();u.blocking='';committed(previous,state,cause,targetSlot,epoch);await syncStory();success?.();}catch(e){fail(e,field);}finally{busy=false;storeDraft(mode,u.draft,draftPrefix);draw();if(focusItem&&actionFocus&&document.activeElement===document.body){const next=document.getElementById('place-'+focusItem)??document.getElementById('stock-search');next?.focus({preventScroll:true});}}
 }
 async function act(kind:string,data:Partial<Command>={}){const command={id:commandId(),kind,...data};pendingCommand={...command};state=await saves.command(state,command,mode==='normal'?Date.now():state.watermark,Date.now());}
@@ -110,29 +110,13 @@ function closePanel(){u.panel='';u.formError='';draw();focusReturn?.focus({preve
 async function switchMode(next:Mode){
  storeDraft(mode,u.draft,draftPrefix);const loaded=await saves.loadOrCreate(next,next==='sandbox'?Date.parse('2026-10-21T01:00:00Z'):Date.now());mode=next;state=loaded;storyReplay=false;u.draft=draftFor(mode,state,draftPrefix);u.rename=false;u.reportDay='';u.slot=0;u.stock=readStockWorkspace(stockWorkspaceKey());u.formError='';u.notice='';localStorage.setItem(modeKey,mode);returnPending=document.hidden||(mode==='normal'&&Date.now()-state.watermark>=60000);cancelFeedback();
 }
-function moveRail(direction:number){
- const rail=document.getElementById('stock-products');if(!rail)return;
- const cards=Array.from(rail.querySelectorAll<HTMLElement>('.stock-card'));if(!cards.length)return;
- const current=cards.reduce((best,c,n)=>Math.abs(c.offsetLeft-rail.scrollLeft)<Math.abs(cards[best].offsetLeft-rail.scrollLeft)?n:best,0);
- const next=Math.max(0,Math.min(cards.length-1,current+direction));
- rail.scrollTo({left:cards[next].offsetLeft,behavior:'instant'});
- if(u.stock){u.stock.railLeft=rail.scrollLeft;u.stock.selected=cards[next].dataset.item??'';saveStockWorkspace(u.stock,stockWorkspaceKey());}
-}
 app.addEventListener('scroll',e=>{
- const rail=e.target as HTMLElement;if(rail.id!=='stock-products'||!u.stock)return;
- u.stock.railLeft=rail.scrollLeft;
- // Scrolling (including restoration and snap) changes position, not explicit selection.
- saveStockWorkspace(u.stock,stockWorkspaceKey());
+ const list=e.target as HTMLElement;if(list.id!=='stock-products'||!u.stock||list.dataset.view!==stockViewKey(u.stock))return;
+ u.stock.listTop=list.scrollTop;saveStockWorkspace(u.stock,stockWorkspaceKey());
 },true);
-app.addEventListener('focusin',e=>{const card=(e.target as Element).closest<HTMLElement>('.stock-card');if(card&&u.stock){u.stock.selected=card.dataset.item??'';for(const c of Array.from(card.parentElement?.querySelectorAll<HTMLElement>('.stock-card')??[]))c.setAttribute('aria-current',String(c===card));saveStockWorkspace(u.stock,stockWorkspaceKey());}});
-app.addEventListener('keydown',e=>{if((e.target as HTMLElement).id!=='stock-products')return;if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();moveRail(e.key==='ArrowLeft'?-1:1);}if(e.key==='Home'||e.key==='End'){e.preventDefault();const r=e.target as HTMLElement;r.scrollLeft=e.key==='Home'?0:r.scrollWidth;}});
-app.addEventListener('wheel',e=>{const rail=(e.target as Element).closest<HTMLElement>('[data-rail]');if(!rail)return;if(Math.abs(e.deltaX)>Math.abs(e.deltaY)){if(rail.scrollWidth>rail.clientWidth){e.preventDefault();rail.scrollLeft+=e.deltaX;}return;}const details=(e.target as Element).closest<HTMLElement>('.stock-details');if(details&&details.scrollHeight>details.clientHeight+2)return;const card=(e.target as Element).closest<HTMLElement>('.stock-card');if(card&&card.scrollHeight>card.clientHeight+2)return;if(rail.scrollWidth<=rail.clientWidth)return;e.preventDefault();rail.scrollLeft+=e.deltaY;},{passive:false});
-let railDrag:{rail:HTMLElement;x:number;left:number;pointer:number}|undefined;
-app.addEventListener('pointerdown',e=>{const rail=(e.target as Element).closest<HTMLElement>('[data-rail]');if(!rail||e.pointerType!=='mouse'||e.button!==0||(e.target as Element).closest('button,input,select,label'))return;railDrag={rail,x:e.clientX,left:rail.scrollLeft,pointer:e.pointerId};rail.setPointerCapture(e.pointerId);});
-app.addEventListener('pointermove',e=>{if(!railDrag||e.pointerId!==railDrag.pointer)return;const dx=e.clientX-railDrag.x;if(Math.abs(dx)>4){e.preventDefault();railDrag.rail.scrollLeft=railDrag.left-dx;}});
-for(const event of ['pointerup','pointercancel']as const)app.addEventListener(event,()=>{railDrag=undefined;});
+app.addEventListener('focusin',e=>{const row=(e.target as Element).closest<HTMLElement>('.stock-row');if(row&&u.stock){u.stock.selected=row.dataset.item??'';for(const r of Array.from(row.parentElement?.querySelectorAll<HTMLElement>('.stock-row')??[]))r.setAttribute('aria-current',String(r===row));saveStockWorkspace(u.stock,stockWorkspaceKey());}});
 app.addEventListener('input',e=>{
- const input=e.target as HTMLInputElement;if(input.dataset.quantityId){setQuantity(u.draft,input.dataset.quantityId,input.value);u.formError='';storeDraft(mode,u.draft,draftPrefix);draw();return;}if(input.id==='stock-search'){const w=u.stock??=newStockWorkspace();w.query=input.value;w.recent={};w.railLeft=0;w.selected='';const rail=document.getElementById('stock-products');if(rail)rail.scrollLeft=0;draw();return;}switch(input.id){case 'qty':u.draft.quantity=input.value;break;case 'shop-name':u.draft.shop=input.value;break;case 'company-name':u.draft.company=input.value;break;case 'shop-logo':u.draft.logo=input.value;break;default:if(input.dataset.priceId)u.draft.prices[input.dataset.priceId]=input.value;}
+ const input=e.target as HTMLInputElement;if(input.dataset.quantityId){setQuantity(u.draft,input.dataset.quantityId,input.value);u.formError='';storeDraft(mode,u.draft,draftPrefix);draw();return;}if(input.id==='stock-search'){const w=u.stock??=newStockWorkspace();changeStockView(w,{query:input.value});draw();return;}switch(input.id){case 'qty':u.draft.quantity=input.value;break;case 'shop-name':u.draft.shop=input.value;break;case 'company-name':u.draft.company=input.value;break;case 'shop-logo':u.draft.logo=input.value;break;default:if(input.dataset.priceId)u.draft.prices[input.dataset.priceId]=input.value;}
  storeDraft(mode,u.draft,draftPrefix);if(input.id==='qty')draw();
 });
 app.addEventListener('change',e=>{
@@ -166,8 +150,7 @@ app.addEventListener('click',e=>{
   if(a==='story-settings'){openPanel('settings',target);return;}
   if(a==='story-sandbox'){void run(async()=>{state=await saves.settle(state,state.watermark+15*60000,Date.now());},'general',undefined,'advance');return;}
  }
- if(a==='stock-filter'){const w=u.stock??=newStockWorkspace();w.filter=target.dataset.filter as typeof w.filter;w.recent={};w.railLeft=0;w.selected='';const rail=document.getElementById('stock-products');if(rail)rail.scrollLeft=0;draw();return;}
- if(a==='rail-move'){moveRail(Number(target.dataset.direction));return;}
+ if(a==='stock-filter'){const w=u.stock??=newStockWorkspace();changeStockView(w,{filter:target.dataset.filter as typeof w.filter});draw();return;}
  if(a==='stock-picker'){const w=u.stock??=newStockWorkspace();w.picker=w.picker===id?'':id;draw();return;}
  if(a==='stock-step'||a==='stock-quantity'){const raw=quantityDraft(u.draft,id),q=parseQuantity(raw);if(a==='stock-quantity')setQuantity(u.draft,id,target.dataset.quantity!);else if(q!==undefined)setQuantity(u.draft,id,String(Math.max(1,Math.min(1000,q+Number(target.dataset.step)))));u.formError='';storeDraft(mode,u.draft,draftPrefix);draw();return;}
  if(a==='panel'){openPanel(target.dataset.panel!,target);return;}if(a==='hide'){closePanel();return;}
