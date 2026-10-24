@@ -1,0 +1,32 @@
+[
+  {
+    "seconds": 22.249,
+    "name": "All drawers use one width; open/switch/close preserves actual user orbit, zoom and target",
+    "initial": {
+      "alpha": -0.5153981633974483,
+      "beta": 0.8576646259971651,
+      "radius": 9.276926761590008,
+      "target": [
+        0.5,
+        1,
+        0.3
+      ]
+    },
+    "widths": [
+      580,
+      580,
+      580,
+      580,
+      580,
+      580
+    ]
+  },
+  {
+    "seconds": 32.571,
+    "name": "Actual previous/next control, horizontal wheel/trackpad delta and mouse drag move the native rail"
+  },
+  {
+    "seconds": 35.76,
+    "name": "Native 375px touch swipe advances the rail"
+  }
+]

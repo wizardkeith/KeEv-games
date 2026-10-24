@@ -1,0 +1,15 @@
+{
+  "base": "9802f0ddbbcc5f7030a761c3009883777b321860",
+  "candidate": "259ee66ec2f5fdf4fb240558af64b819fc227503",
+  "protectedTreesIdentical": [
+    "src/core",
+    "src/platform",
+    "src/content",
+    "src/narrative/day1.ts",
+    "source-inputs",
+    ".openai",
+    "package.json",
+    "package-lock.json"
+  ],
+  "originalV11IsAncestor": true
+}

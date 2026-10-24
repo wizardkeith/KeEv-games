@@ -112,8 +112,11 @@ async function switchMode(next:Mode){
 }
 function moveRail(direction:number){
  const rail=document.getElementById('stock-products');if(!rail)return;
- const card=rail.querySelector<HTMLElement>('.stock-card'),step=(card?.getBoundingClientRect().width??rail.clientWidth)+12;
- rail.scrollBy({left:direction*step,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+ const cards=Array.from(rail.querySelectorAll<HTMLElement>('.stock-card'));if(!cards.length)return;
+ const current=cards.reduce((best,c,n)=>Math.abs(c.offsetLeft-rail.scrollLeft)<Math.abs(cards[best].offsetLeft-rail.scrollLeft)?n:best,0);
+ const next=Math.max(0,Math.min(cards.length-1,current+direction));
+ rail.scrollTo({left:cards[next].offsetLeft,behavior:'instant'});
+ if(u.stock){u.stock.railLeft=rail.scrollLeft;u.stock.selected=cards[next].dataset.item??'';saveStockWorkspace(u.stock,stockWorkspaceKey());}
 }
 app.addEventListener('scroll',e=>{
  const rail=e.target as HTMLElement;if(rail.id!=='stock-products'||!u.stock)return;

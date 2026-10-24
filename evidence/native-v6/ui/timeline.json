@@ -1,6 +1,6 @@
 [
   {
-    "seconds": 19.251,
+    "seconds": 24.365,
     "name": "All drawers use one width; open/switch/close preserves actual user orbit, zoom and target",
     "initial": {
       "alpha": -0.5153981633974483,
@@ -22,19 +22,19 @@
     ]
   },
   {
-    "seconds": 22.673,
+    "seconds": 30.011,
     "name": "Horizontal browsing, keyboard purchase focus, same-card placement and transaction scroll retention"
   },
   {
-    "seconds": 24.534,
+    "seconds": 32.629,
     "name": "Closing/reopening through another panel preserves horizontal position and raw quantity draft"
   },
   {
-    "seconds": 25.893,
+    "seconds": 35.136,
     "name": "Invalid/repeated/delayed/aborted real writes preserve immutable capture and stored snapshot"
   },
   {
-    "seconds": 41.369,
-    "name": "Ten five-locale touch-width cases, 44px controls, reduced-motion rail, reload and isolated Normal"
+    "seconds": 219.64,
+    "name": "Twenty five-locale narrow/short touch buy/place cases, 44px controls, reduced-motion rail, reload and isolated Normal"
   }
 ]
