@@ -4,10 +4,10 @@
   "master": {
     "path": "assets/masters/native-v3/environment-v3.json",
     "sizeBytes": 105238,
-    "sha256": "19b87db39cddc90e3895cb4ee5da2237dc1091061c37562449d9a97403096810"
+    "sha256": "dfd2ed1f6e4b58c931700a4c8427c62decb858159c8fbb5667b783d21834ce2c"
   },
   "sources": {
-    "src/art/native-characters.ts": "c712491bf2b327970013e8e105f30195a8485296564546b6f309ca83242771f5",
+    "src/art/native-characters.ts": "0e694a3d7dd26dfc7fa4aa83265325d5c0f9c7ad176d72364295c5bc838b49ba",
     "src/art/native-environment.ts": "0974a2b9c50afa1d9ec777cf78e55be2d912dca1ceaff2b773b8ffcc5a622dc8",
     "src/art/native-display.ts": "2d785ebeae1f7558662dbb69ebd0007f93266d6360a3c178cb09076335b86086",
     "src/art/native-view.ts": "7fbf905e259049e713543c27f361dfc571a2c21dde52d26af5b6c70936111a70",

@@ -4,7 +4,7 @@
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
-    "src/art/native-characters.ts": "c712491bf2b327970013e8e105f30195a8485296564546b6f309ca83242771f5",
+    "src/art/native-characters.ts": "0e694a3d7dd26dfc7fa4aa83265325d5c0f9c7ad176d72364295c5bc838b49ba",
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "77d1f2cd62fc503fdd89d02c550878b39f8e73c0ceb213b95488874f8939454e",
@@ -45,8 +45,8 @@
       "id": "actor.misaki.native.v3",
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
-      "bytes": 709796,
-      "sha256": "3f1d3ebf4dadd0949fd3fc3b0de7f872c6285facb772d1b0a29d27cec6c47354",
+      "bytes": 714404,
+      "sha256": "210b5c75c7e93512de8e99eeffaec7c68a41962e9f15ed60e15226aa35de3de1",
       "nodes": [
         {
           "id": "body",
@@ -57,7 +57,7 @@
             0
           ],
           "geometryGroups": 7,
-          "triangles": 2660
+          "triangles": 2060
         },
         {
           "id": "head",
@@ -68,7 +68,7 @@
             0
           ],
           "geometryGroups": 4,
-          "triangles": 3224
+          "triangles": 3672
         },
         {
           "id": "eye-left",

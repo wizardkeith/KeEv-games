@@ -1,0 +1,11 @@
+{
+  "files": 212,
+  "identical": true,
+  "generators": [
+    "export-misaki.ts",
+    "export-native-products.ts",
+    "export-native-characters.ts",
+    "export-native-environment.ts",
+    "export-v4-fixtures.ts"
+  ]
+}
