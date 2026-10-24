@@ -1,0 +1,172 @@
+[
+  {
+    "width": 1280,
+    "height": 720,
+    "rail": {
+      "x": 691,
+      "y": 458.265625,
+      "width": 550,
+      "height": 136.734375,
+      "bottom": 595,
+      "right": 1241
+    },
+    "card": {
+      "x": 691,
+      "y": 460.265625,
+      "width": 316.46875,
+      "height": 122.734375,
+      "bottom": 583,
+      "right": 1007.46875
+    },
+    "total": {
+      "x": 704,
+      "y": 710.640625,
+      "width": 290.46875,
+      "height": 36.59375,
+      "bottom": 747.234375,
+      "right": 994.46875
+    },
+    "buy": {
+      "x": 704,
+      "y": 785.828125,
+      "width": 290.46875,
+      "height": 44,
+      "bottom": 829.828125,
+      "right": 994.46875
+    },
+    "place": {
+      "x": 704,
+      "y": 863.625,
+      "width": 290.46875,
+      "height": 44,
+      "bottom": 907.625,
+      "right": 994.46875
+    },
+    "cash": {
+      "x": 1077.796875,
+      "y": 56.59375,
+      "width": 153.203125,
+      "height": 42,
+      "bottom": 98.59375,
+      "right": 1231
+    },
+    "cashText": "JP¥50,000",
+    "cashScroll": 153,
+    "cashClient": 153
+  },
+  {
+    "width": 320,
+    "height": 420,
+    "rail": {
+      "x": 21,
+      "y": 232.046875,
+      "width": 278,
+      "height": 102.953125,
+      "bottom": 335,
+      "right": 299
+    },
+    "card": {
+      "x": 21,
+      "y": 234.046875,
+      "width": 278,
+      "height": 88.953125,
+      "bottom": 323,
+      "right": 299
+    },
+    "total": {
+      "x": 34,
+      "y": 495.96875,
+      "width": 252,
+      "height": 36.25,
+      "bottom": 532.21875,
+      "right": 286
+    },
+    "buy": {
+      "x": 34,
+      "y": 572.359375,
+      "width": 252,
+      "height": 44,
+      "bottom": 616.359375,
+      "right": 286
+    },
+    "place": {
+      "x": 34,
+      "y": 650.15625,
+      "width": 252,
+      "height": 44,
+      "bottom": 694.15625,
+      "right": 286
+    },
+    "cash": {
+      "x": 196.640625,
+      "y": 39.046875,
+      "width": 101.359375,
+      "height": 60,
+      "bottom": 99.046875,
+      "right": 298
+    },
+    "cashText": "JP¥50,000",
+    "cashScroll": 101,
+    "cashClient": 101
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "rail": {
+      "x": 21,
+      "y": 466.609375,
+      "width": 333,
+      "height": 258.390625,
+      "bottom": 725,
+      "right": 354
+    },
+    "card": {
+      "x": 21,
+      "y": 468.609375,
+      "width": 333,
+      "height": 244.390625,
+      "bottom": 713,
+      "right": 354
+    },
+    "total": {
+      "x": 34,
+      "y": 730.53125,
+      "width": 307,
+      "height": 36.25,
+      "bottom": 766.78125,
+      "right": 341
+    },
+    "buy": {
+      "x": 34,
+      "y": 806.921875,
+      "width": 307,
+      "height": 44,
+      "bottom": 850.921875,
+      "right": 341
+    },
+    "place": {
+      "x": 34,
+      "y": 884.71875,
+      "width": 307,
+      "height": 44,
+      "bottom": 928.71875,
+      "right": 341
+    },
+    "cash": {
+      "x": 234.609375,
+      "y": 39.046875,
+      "width": 116.390625,
+      "height": 66,
+      "bottom": 105.046875,
+      "right": 351
+    },
+    "cashText": "JP¥50,000",
+    "cashScroll": 116,
+    "cashClient": 116
+  },
+  {
+    "selected": "off.vase",
+    "draft": "007",
+    "left": 2628
+  }
+]

@@ -1,23 +1,23 @@
 {
-  "version": "native-characters-v6-r1",
+  "version": "native-characters-v7-r1",
   "authoring": "src/art/native-characters.ts",
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
-    "src/art/native-characters.ts": "b793ba0efa61fb27a3c2ac19843df6032073808c748de36dd8f13d1cf7c92fa3",
+    "src/art/native-characters.ts": "7a8fc446f8943a3ac677fdb17430f0c8292d26747593c79c28631fc94b5fa1c0",
     "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "f614aa78548aedb281c1a44dadba7ec63af4475abba0047fc9effc7bd709bc61",
     "src/presentation/native-motion.ts": "215b955ec4b3fc83400a478545882b257fc244247fb16ea630748bbce8547000",
-    "src/presentation/native-staff.ts": "bc24e60d90398f4fb1436820209c886ec631917e9531fbe2890de646adfcfa27",
+    "src/presentation/native-staff.ts": "25753440a567329a66e6468a02b682962711318be9b7f903236f448ac28fe802",
     "src/presentation/native-staff-player.ts": "5682232a31d05a2143b360a5831e7352ba9ff926760e69a139a5184d42be5069",
     "src/presentation/native-feet.ts": "440404e1bceabdb2bf8d8f9f699d030c40e4815f7b0e904ea15a3f6a180bdef3",
     "src/presentation/native-delivery.ts": "0f151cc4f9c293b20fc680fda7f6125ee93501a4c10f680e8563f66cdcf9b942",
     "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
     "src/world.ts": "92b5b95ec2cee4b558600be5ba6d348d22d4d534f586383f881233b03fc96276",
     "src/presentation/native-routes.ts": "248918d9a9942383431892aaf3dc9b6bd794be8c5ca85080f490cd40ff81beb1",
-    "src/presentation/native-scene.ts": "db04429859b5c7adcf23a3730cc2244ae5e2620db8db1e2b50eee3f988736e3e",
-    "tools/export-native-characters.ts": "58354f50486e7ab5597bf759caa90e28a252adc23f9080b69afcabb4e4daf1b5",
+    "src/presentation/native-scene.ts": "536a853d6ec9c804f7753eb3e00eaa5d85348809e2e434131f7f95ed8ce0ec1d",
+    "tools/export-native-characters.ts": "df07295ee2bae9a01fde03191fdb9a48566d6702d67e2b13a7fde9b233ccf76f",
     "tools/generate-v5-hair.py": "2708f0ecaab1a236d1338023a25da7a2ff4c620537391f0e9aef719e7a28016b",
     "assets/masters/native-v5/hair-strand-basecolor.png": "f735cf754d5333711f0809e11a1dbe09f2ae5e566d01e3625b3a94e98adc65e1",
     "assets/masters/native-v5/hair-strand-normal.png": "c5603902148920f86bf59a66920f357f7a6f845b7891e26bbb3845efeeb9091b"
@@ -45,8 +45,8 @@
       "id": "actor.misaki.native.v3",
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
-      "bytes": 709420,
-      "sha256": "4a5688a4ab138d09c7a81bf619797a88a08812f3169cd9f551cfa598fe50e623",
+      "bytes": 709448,
+      "sha256": "a3423241ced40e7635e16c22df2574255f105a3a4d9e359daf0207c91d58fcfe",
       "nodes": [
         {
           "id": "body",
@@ -335,8 +335,8 @@
       "id": "actor.visitor-a.native.v3",
       "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
       "web": "public/assets/native-v3/visitor-a-native-v3.glb",
-      "bytes": 353200,
-      "sha256": "3c1192e3edfcc5382daeeba65815356433b53d44feb9a3d55eaa3364c01da4f0",
+      "bytes": 353224,
+      "sha256": "f39b765614b62d1be1af24db176eec85e26fced9da3a8257702dd462ccc68e9b",
       "nodes": [
         {
           "id": "body",
@@ -625,8 +625,8 @@
       "id": "actor.visitor-b.native.v3",
       "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
       "web": "public/assets/native-v3/visitor-b-native-v3.glb",
-      "bytes": 699932,
-      "sha256": "1d9a1eda23e93fdbc8a97ccb51f61402181bc9277b0dbd4dbdbb04bf9dc60af1",
+      "bytes": 699960,
+      "sha256": "455f561cd473212b38cbbab2733d8482c8fe711cf99fd6319050c0294c7a5bbb",
       "nodes": [
         {
           "id": "body",

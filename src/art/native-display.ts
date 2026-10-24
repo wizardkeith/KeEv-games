@@ -7,7 +7,7 @@ export function displaySamples(id:string,stock:number,table:number){
   if(id==='off.notebook'||id==='off.card')return {at:[k%2===0?-.32:.29,Math.floor(k/2)*(id==='off.notebook'?.067:.025)*scale+.009,k%2===0?.07:-.08] as [number,number,number],yaw:k%2===0?-.14:.12,scale};
   if(id==='off.pencil')return {at:[-.20+k*.10,.01,-.17+k*.09] as [number,number,number],yaw:-.32+k*.14,scale};
   // A loose triangle plus a paired fourth sample replaces the even scatter.
-  const places=[[-.25,.12],[.13,-.15],[.39,.08],[-.38,-.19]];
+  const places=[[-.26,.10],[.08,.09],[.37,-.13],[-.28,-.22]];
   return {at:[places[k][0],.009,places[k][1]] as [number,number,number],yaw:[-.18,.14,-.05,.21][k]+table*.035,scale:scale*(k===0?1.04:k===3?.90:1)};
  });
 }

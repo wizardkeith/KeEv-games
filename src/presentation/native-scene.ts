@@ -33,8 +33,8 @@ export function createNativeActors(scene:Scene,model:NativeModel){
  const propRecipes:Record<string,Part[]>={
   bag:[paper([.23,.29,.12],[0,.145,0],'#C8AE88'),paper([.235,.015,.125],[0,.282,0],'#E2CEAA'),{shape:'torus',size:[.13,.015,.13],at:[0,.31,0],turn:[Math.PI/2,0,0],color:'#A08B6E',role:'paper'},paper([.055,.07,.003],[0,.16,-.062],'#8AA18D')],
   box:[paper([.32,.20,.25],[0,.10,0],'#BFA27E'),paper([.035,.204,.252],[0,.102,0],'#E7D6B5'),paper([.12,.06,.002],[.06,.12,-.127],'#F0E6D0')],
-  note:[paper([.15,.006,.11],[0,0,0],'#F3E8D2'),paper([.09,.002,.006],[0,.005,-.025],'#B5A38B')],
-  cloth:[{shape:'round',size:[.16,.018,.13],at:[0,0,0],color:'#A9BCAB',role:'fabric',radius:.012}],
+  note:[paper([.21,.008,.15],[0,0,0],'#F3E8D2'),...[-.035,0,.035].map(z=>paper([.14,.002,.006],[0,.006,z],'#A6977C'))],
+  cloth:[{shape:'round',size:[.21,.020,.16],at:[0,0,0],color:'#A9BCAB',role:'fabric',radius:.012}],
  };
  const props=new Map(Object.entries(propRecipes).map(([kind,p])=>[kind,model('native.prop.'+kind,p)]));props.forEach(p=>p.setEnabled(false));
  let carrySpare=model('native.prop.bag.reserve',propRecipes.bag),carried:{node:TransformNode;id:string;age:number;origin:Vector3}|undefined;carrySpare.setEnabled(false);
@@ -48,13 +48,13 @@ export function createNativeActors(scene:Scene,model:NativeModel){
   for(const p of props.values()){p.setEnabled(false);p.parent=null;p.rotationQuaternion=null;p.rotation.setAll(0);}
   const pose=staffPlayer.tick(seconds,service,greet,policy.nativeMotion);
   clip=policy.nativeMotion?pose.clip:'native.staff.still.v3';
-  if(policy.nativeMotion){for(const [id,r] of Object.entries(pose.rotations))staff.parts.get(id)?.rotation.set(...r);staff.parts.get('body')!.position.y+=pose.bodyLift;staff.root.rotation.y=pose.turn;staff.face(pose.eyelidClosure,pose.expression,pose.expressionWeights);
+  if(policy.nativeMotion){for(const [id,r] of Object.entries(pose.rotations))staff.parts.get(id)?.rotation.set(...r);staff.parts.get('body')!.position.y+=pose.bodyLift;staff.root.rotation.y=pose.turn;staff.parts.get('head')!.rotation.y-=.20;staff.face(pose.eyelidClosure,pose.expression,pose.expressionWeights);
    if(pose.prop.visible&&!(pose.prop.kind==='bag'&&service?.customerId&&routes.actors.some(a=>a.id===service.customerId&&a.hasBag))){const p=props.get(pose.prop.kind)!,key=pose.prop.kind+':'+pose.prop.owner,target=new Vector3(2.60,1.116,-1.20);p.setEnabled(true);
     if(pose.prop.owner!=='counter'){const socket=staff.parts.get(pose.prop.owner)!;socket.computeWorldMatrix(true);p.parent=socket;target.set(0,-.06,0);if(service?.customerId&&pose.prop.kind==='bag'){target.copyFrom(Vector3.TransformCoordinates(socket.getAbsolutePosition().add(new Vector3(0,-.33,0)),socket.getWorldMatrix().clone().invert()));}p.rotationQuaternion=socket.absoluteRotationQuaternion.conjugate();}
     if(key!==ownerKey){blendAge=0;blendOrigin=previousPosition?previousPosition.clone():target.clone();if(p.parent&&previousPosition)blendOrigin=Vector3.TransformCoordinates(blendOrigin,(p.parent as TransformNode).getWorldMatrix().clone().invert());ownerKey=key;}
     blendAge+=seconds;p.position.copyFrom(Vector3.Lerp(blendOrigin,target,Math.min(1,blendAge/.16)));for(const m of p.getChildMeshes())m.visibility=pose.propOpacity;
    }else ownerKey='';
-  }else{ownerKey='';staff.root.rotation.setAll(0);staff.face(0);}
+  }else{ownerKey='';staff.root.rotation.setAll(0);staff.parts.get('head')!.rotation.y=-.20;staff.face(0);}
   routes.actors.forEach((route,i)=>{const a=visitors[i];a.neutral();a.root.setEnabled(route.enabled);a.root.position.set(route.x,.065,route.z);a.root.rotation.y=route.yaw;
    const idle=sampleIdle(visibleTime,i*.43+.1,policy);a.parts.get('head')!.rotation.y=idle.headYawRadians;
    a.face(idle.eyelidClosure);

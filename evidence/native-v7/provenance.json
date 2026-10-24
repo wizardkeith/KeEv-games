@@ -1,0 +1,216 @@
+{
+  "baseline": "c3c706aabae0ff32b56ab7c4b733d0cbea722892",
+  "finalRuntime": "b323129040b1414f0e60cc3a05090c44cffab1cb",
+  "srcTree": "5176ecfa2b54a27f8e6a5011f0ea744a17810aac",
+  "artComponents": {
+    "src/art/native-characters.ts": "7a8fc446f8943a3ac677fdb17430f0c8292d26747593c79c28631fc94b5fa1c0",
+    "src/art/native-environment.ts": "424e7d3c1ba9839b313930927717d71ad3d7d35eb0b00931abdb1b12be177032",
+    "src/art/native-view.ts": "f0734aaff3c18fbc851232400f5c9ab443be3b4835a9cab01e37b2545bd075ca",
+    "src/art/native-display.ts": "2d785ebeae1f7558662dbb69ebd0007f93266d6360a3c178cb09076335b86086",
+    "src/presentation/native-scene.ts": "536a853d6ec9c804f7753eb3e00eaa5d85348809e2e434131f7f95ed8ce0ec1d",
+    "src/presentation/native-staff.ts": "25753440a567329a66e6468a02b682962711318be9b7f903236f448ac28fe802"
+  },
+  "motionRecordingSource": "49180ebff4c83670a93cc8ed35724eff6d0a5cb3",
+  "motionArtComponentsIdenticalToFinal": true,
+  "motionWholeSrcIdenticalToFinal": false,
+  "motionBoundary": "After recording, UI-only placeholder/accessibility/toast/short-screen quantity refinements were made; art/motion component bytes are unchanged. Final runtime receives a separate exact-candidate UI walkthrough.",
+  "videoExcerpt": {
+    "startSeconds": 139.197,
+    "durationSeconds": 25.8,
+    "method": "One chronological contiguous excerpt re-encoded from retained original; no cuts or synthetic frames. Original encoded FPS/duration is not physical game FPS."
+  },
+  "ownerEvidence": {
+    "libraryId": "libfile_7f2f9cdcea848191b3a4f13efcf23e93",
+    "status": "supported helper download failed; no local bytes/pixels inspected",
+    "attempts": 1
+  },
+  "renderer": "Chromium ANGLE SwiftShader software WebGL; not device GPU, audio, Safari or native acceptance",
+  "evidence": {
+    "evidence/native-v7/replay.log": {
+      "bytes": 213,
+      "sha256": "1289341a6da5804b03189ab50b84a750ab01ca9eab8c1e3ff4f902e37f6fe1df"
+    },
+    "evidence/native-v7/asset-check.log": {
+      "bytes": 2917,
+      "sha256": "ab3cdc4bcd16072edc5a9903291502cddb6e2294b27b8c8521693bbd17873ee6"
+    },
+    "evidence/native-v7/v7-save-compatibility.json": {
+      "bytes": 616,
+      "sha256": "d30f435dccfceac3342e0b85a91c093417359e449e0622965d86282d33bc7a1b"
+    },
+    "evidence/native-v7/v7-rebuild.json": {
+      "bytes": 161,
+      "sha256": "1e8389cce0a8d9f67485270be399899901e7dfee52068b476a8b0d3a03359003"
+    },
+    "evidence/native-v7/content.log": {
+      "bytes": 391,
+      "sha256": "166c507186dacecbe1bbec613b9409acf9dd35207e67d814822f7b106aae1b4b"
+    },
+    "evidence/native-v7/build.log": {
+      "bytes": 5941,
+      "sha256": "67654a72517889b07544942284d5e2f6f0bef649c616b0fa28e900ff903b6c5f"
+    },
+    "evidence/native-v7/v7-glb.json": {
+      "bytes": 4299,
+      "sha256": "13bc4bb6cb136cc25fbd849b7f9ef68c4e40a60a86f1b4e167e6ec45fd7bb511"
+    },
+    "evidence/native-v7/tests.log": {
+      "bytes": 18038,
+      "sha256": "1df97ed4a3c1f8f0cfca5504c72ab5fec01ac78505c4e5a05579e11fbd117353"
+    },
+    "evidence/native-v7/v7-preservation.json": {
+      "bytes": 122,
+      "sha256": "cd44fadf13cbdc3279c689c141a6c3cb62675a1c452e7418c6e52bb62015e4fc"
+    },
+    "evidence/native-v7/delivery/LittleShop-v7-deploy.tar.gz": {
+      "bytes": 3176879,
+      "sha256": "b5e8847769c7c7c16f0d6a6546643734c639a00de6c0be1be9dd1b8c6bd13942"
+    },
+    "evidence/native-v7/delivery/receipt.json": {
+      "bytes": 13943,
+      "sha256": "f20b0fb8ae2c0c3e3bc20a40ef73df483184a4e9f77ef4a5c1337ee27f12d232"
+    },
+    "evidence/native-v7/browser/movement-work-purchase-uncut-25s.webm": {
+      "bytes": 433190,
+      "sha256": "e7b7b838b3e261d025ef873c10b97605e97c244b99e7db61da07a5deabd31e26"
+    },
+    "evidence/native-v7/browser/motion.json": {
+      "bytes": 113040,
+      "sha256": "ebf2490554930bab3f8043a475c23c0f4466687636847902070941315eef5ccf"
+    },
+    "evidence/native-v7/browser/transaction-layout-results.json": {
+      "bytes": 106846,
+      "sha256": "e9c12f278668630d93cfdd10defd390f179248252ac4ee0ec17f9a0defab1663"
+    },
+    "evidence/native-v7/browser/stock-interaction-full.webm": {
+      "bytes": 6475075,
+      "sha256": "cf2c3c60b91b85bdf8295148e0e06901609cba2524801980e81526ad18b57269"
+    },
+    "evidence/native-v7/browser/exact-candidate-results.json": {
+      "bytes": 106846,
+      "sha256": "1e0b7ce52493168ec53765a53a1a4d3294e589629cf85afc60cd18f6b676ab54"
+    },
+    "evidence/native-v7/browser/movement-work-purchase-full.webm": {
+      "bytes": 5992243,
+      "sha256": "a6969dae4e4b9214123fc8e20bff0eda976f23d7f31b45d12f526da3e339739f"
+    },
+    "evidence/native-v7/browser/stock-before/stock-1280x720.png": {
+      "bytes": 263722,
+      "sha256": "a3c47e17e7d0ecc28497f371dbe9ef249fe443e27e160293af5adf5b551ac62a"
+    },
+    "evidence/native-v7/browser/stock-before/stock-320x420.png": {
+      "bytes": 30634,
+      "sha256": "bce725b8cf915801e70c8de69c4a58ea4f5a4c75d8647bd40b598e06e50f0cb5"
+    },
+    "evidence/native-v7/browser/stock-before/results.json": {
+      "bytes": 3169,
+      "sha256": "6d0345ce71ca9e5a5732326ae9ddb36b98937b4a1c6b8200ceb87bb00d7faaa0"
+    },
+    "evidence/native-v7/browser/stock-before/stock-375x812.png": {
+      "bytes": 59985,
+      "sha256": "99c825d73d8cf01294c3e031cfac0ed95978475412de24ee456d0bd93b872f51"
+    },
+    "evidence/native-v7/browser/before/character-close.png": {
+      "bytes": 638783,
+      "sha256": "6db263d79e4e2c8b62b0ed821c053e539da0e5361490bd81314712c79f25a994"
+    },
+    "evidence/native-v7/browser/before/panorama.png": {
+      "bytes": 473846,
+      "sha256": "a9dd670f0481f8693032e024721882d13c7a1d0232cfdde6ba9aa63b14b583f7"
+    },
+    "evidence/native-v7/browser/before/rail-shop.png": {
+      "bytes": 489665,
+      "sha256": "c4f685e2cd1486a9ed129fd5dd48e0f21df15a5b35ebb44ff67e9cdaa62650db"
+    },
+    "evidence/native-v7/browser/stock-after/stock-375x812-ja.png": {
+      "bytes": 67110,
+      "sha256": "a0f56d1c652503931857460a72f7b032f3424ba3e68c35203d74fd8883f952aa"
+    },
+    "evidence/native-v7/browser/stock-after/stock-375x812-th.png": {
+      "bytes": 64417,
+      "sha256": "2e0417601ab2ccfd15761f605f7c0a202bad81013568bec4cad4c165e33520e5"
+    },
+    "evidence/native-v7/browser/stock-after/stock-320x420-ja.png": {
+      "bytes": 32554,
+      "sha256": "0b0b9a00dd13b7c7695c7bd58323be14921eb81f07e5cd38951cd65c36abdc73"
+    },
+    "evidence/native-v7/browser/stock-after/stock-375x812-zh-CN.png": {
+      "bytes": 63963,
+      "sha256": "c5b55746b5ca780d0c6cd8909353abcc73780826c1b033c092509738b03858b1"
+    },
+    "evidence/native-v7/browser/stock-after/results.json": {
+      "bytes": 19716,
+      "sha256": "4cdd359d756e0c246de615a36660ab86240e99b493e09d160714983fe4068b28"
+    },
+    "evidence/native-v7/browser/stock-after/stock-320x420-zh-HK.png": {
+      "bytes": 31479,
+      "sha256": "6389d7bef29fb7cbaa4cb7c34608067a41680eb674db995999b5f9b432489706"
+    },
+    "evidence/native-v7/browser/stock-after/stock-1280x720-zh-CN.png": {
+      "bytes": 270746,
+      "sha256": "723edb4f11eeed4f78a49462f2ef686c7a7de9137c7e4bd408cd224204c4229f"
+    },
+    "evidence/native-v7/browser/stock-after/stock-320x420-en.png": {
+      "bytes": 33191,
+      "sha256": "d2ea2f6ad84ab30211297e5ff6eed1ecd1a17eb18c78669690bb1782c02b35e5"
+    },
+    "evidence/native-v7/browser/stock-after/stock-320x420-zh-CN.png": {
+      "bytes": 32010,
+      "sha256": "2c0956351b986c08b617052373da15bf12739f0e77eb1267e920a133ff948c7d"
+    },
+    "evidence/native-v7/browser/stock-after/stock-1280x720-zh-HK.png": {
+      "bytes": 271361,
+      "sha256": "ed81a4bee7993beea293d6c0a4018c913a80a2ee49e5de79f4899e7646b062ee"
+    },
+    "evidence/native-v7/browser/stock-after/stock-1280x720-en.png": {
+      "bytes": 273284,
+      "sha256": "382567c7891203e7155cb6266fbea77e592e3772ee47d57f7b8b5fcc9542728d"
+    },
+    "evidence/native-v7/browser/stock-after/stock-1280x720-ja.png": {
+      "bytes": 273441,
+      "sha256": "4709d58695a27ec11915e1d55068241fea242c25232f297ffaca1f6a35200dd4"
+    },
+    "evidence/native-v7/browser/stock-after/stock-375x812-zh-HK.png": {
+      "bytes": 63299,
+      "sha256": "fb0551b32cfbcaa9160b1404a813818f5abf120febbdac249bf70da6f4cb5d1d"
+    },
+    "evidence/native-v7/browser/stock-after/stock-320x420-th.png": {
+      "bytes": 31318,
+      "sha256": "a20b823dd5aa9adedb91913073a3de0d6b7fda2781f1fdd761177789b15413d9"
+    },
+    "evidence/native-v7/browser/stock-after/stock-375x812-en.png": {
+      "bytes": 66557,
+      "sha256": "f0522d05e5493205d41478205ea8a2fe5bb5241ee46c77f87671c2898eccc109"
+    },
+    "evidence/native-v7/browser/stock-after/stock-1280x720-th.png": {
+      "bytes": 267418,
+      "sha256": "0b283bad35f64ecf517c034c3a8e2ecc2b7d8076a91777325dab6c5ac2e4b9fb"
+    },
+    "evidence/native-v7/browser/after/character-close.png": {
+      "bytes": 646706,
+      "sha256": "0b82c010ef6ad927a91e8b889d433d3942116400805d2353dab44217aaa961f8"
+    },
+    "evidence/native-v7/browser/after/staff-work.json": {
+      "bytes": 743,
+      "sha256": "a6f634bdfbb79fb489cb3a23c15d353c21cde172d4bfc1e58da2c3e194288cc8"
+    },
+    "evidence/native-v7/browser/after/staff-inspection.png": {
+      "bytes": 666339,
+      "sha256": "41b4a352cd8d8be172215253cb2ffabbead3d6bc98f90d03820c2d740d723f92"
+    },
+    "evidence/native-v7/browser/after/panorama.png": {
+      "bytes": 472419,
+      "sha256": "6977c42db3eb8c2f4dd0d5a1bc250cd53c57f8ca629a2668b7c9ba534a1dac74"
+    },
+    "evidence/native-v7/browser/after/rail-shop.png": {
+      "bytes": 477016,
+      "sha256": "3a4457b334d6c150904eeb67581fe58679e679e41453983569be4885bce20a92"
+    },
+    "evidence/native-v7/browser/after/staff-arranging.png": {
+      "bytes": 663794,
+      "sha256": "efd7653c6492654edee17d5c5a49502e7c7ebba911cd094d1af84eadb7a47d90"
+    }
+  },
+  "exactCandidateBrowserSource": "b323129040b1414f0e60cc3a05090c44cffab1cb",
+  "exactCandidateBrowser": "20 narrow/short five-locale real touch purchase/place cases, keyboard/focus, delayed/repeated/aborted writes, 580px drawers/orbit/zoom/target, wheel/drag, reduced motion and isolated Normal baseline; no page errors"
+}

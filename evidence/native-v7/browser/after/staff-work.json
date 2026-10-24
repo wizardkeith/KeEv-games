@@ -1,0 +1,33 @@
+{
+  "seen": [
+    {
+      "rigVersion": "native-characters-v7-r1",
+      "staffClip": "native.staff.tidy.v3",
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [
+        {
+          "kind": "cloth",
+          "parent": "actor.misaki.native.v3.socket-right"
+        }
+      ],
+      "visibleTime": 11.164599999999652
+    },
+    {
+      "rigVersion": "native-characters-v7-r1",
+      "staffClip": "native.staff.check-note.v3",
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [
+        {
+          "kind": "note",
+          "parent": "actor.misaki.native.v3.socket-left"
+        }
+      ],
+      "visibleTime": 20.322699999995677
+    }
+  ],
+  "quality": "low",
+  "minimal": true,
+  "actualPlayback": true
+}
