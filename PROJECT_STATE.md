@@ -1,12 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-25T04:35:32+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-25T05:07:44+08:00** (Asia/Hong_Kong).
 
-## Current unmerged iteration — V8 art and operations pricing — 2026-10-25T04:35:32+08:00
+## Current unmerged iteration — V8 art and operations pricing — 2026-10-25T05:07:44+08:00
 
-- [Draft PR #5](https://github.com/wizardkeith/KeEv-games/pull/5), branch `codex/game-v8-art-pricing`, checkpoint `45621b8715fb28f600f0f46a744f8f62669bb4f0`. Owner accepts the stock list and prioritizes established-target art plus a matching pricing row-list. Story/gameplay/new shops/sets are frozen. **Not merged or published**; public V14 below is unchanged.
-- Pricing rows and preserved pending-edit drafts are implemented without changing price rules. Real 3D face/fringe, foliage, counter/display surfaces and warm/contact lighting are refined; 150 tests and build pass. Matched WebGL before/after, motion and pricing/stock browser checks are in progress. This is not final visual acceptance.
-- Reattached existing reference resolves to `06-approved-target-browser.jpg` (`libfile_8331a41ec92c8191a12e7a908c4d770a`); supported download failed, so no new local bytes/pixels are claimed. Existing approved repo PNG and Bible references were inspected; owner confirms unchanged target. Economy/save/locales/camera/Normal saves/Site identity/local Unity remain protected. Parent coordinates independent review before release.
+- **Ready for independent review:** [draft PR #5](https://github.com/wizardkeith/KeEv-games/pull/5), branch `codex/game-v8-art-pricing`, pinned candidate `972a9f6efb598ae40ec4bbb5c8b86da92b1aa383`, runtime `ac134fd5dec19f64aa00e0b4441e3006f07c8a0b` / `src` tree `6b0e747182b5b2ad498e27d23fec0ffc3478a244`. Main/public Site remain V14 below; **not merged or published**. Story/gameplay/new shops/sets are frozen while art remains the priority.
+- Real 3D fringe/face, foliage, cabinet panels/draped runners and warm/contact shadows refined against the unchanged approved target; matching-camera actual High before/after PNGs and 26-second uncut Low/Minimal motion are committed. Operations pricing is a vertical row list with existing actions/rules, persistent drafts, stable focus and captured/repeated/interrupted-save safety. Final visual target is **not accepted** merely from these implementation checks.
+- **150 tests**, build/content/replay/asset-check, **212-file deterministic asset rebuild**, **55 GLB validators**, **20 five-locale pricing cases + 20 accepted-stock regression cases**, 44px/overflow/reduced-motion/draft/focus/atomic-write checks, unchanged 580px drawers/camera, and real prior-save import/reload/purchase/price-update pass. **111 protected economy/save/story/motion/stock/config files** unchanged. No player Normal save, local Unity or Site operation; native readback still confirms public/active V14.
+- [Full handoff](https://github.com/wizardkeith/KeEv-games/blob/codex/game-v8-art-pricing/docs/V8_ART_PRICING.md), `evidence/native-v8/` and its 121-payload + hosting archive contain source/evidence provenance. Parent coordinates independent review before release. Physical GPU/FPS/Safari/keyboard/audio/true hidden-tab/native/final-art acceptance remain open. Reattached same-target JPEG resolved but supported download failed; existing repo target pixels were actually inspected. Supported four-file Library output save failed at tool discovery (`network`) before preparation, with no new IDs/uncertain writes; complete evidence is on the branch.
 
 ## Current public release — V7 vertical inventory list / Site v14 — 2026-10-25T02:20:24+08:00
 
