@@ -1,6 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-24T18:43:11+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-24T18:52:07+08:00** (Asia/Hong_Kong).
+
+## V7 independent review paused — 2026-10-24T18:52:07+08:00
+
+- **Release gate paused; current rail design not approved.** User clarified that stock must use an Excel inventory-style row-and-column list, one product per row, small icons retained, with ordinary vertical scrolling. Existing PR #4 candidate `01b54997075ecb324acce6a05d98ffc0f76b6980` remains unmerged/unpublished; no implementation or PR metadata change. Public Site remains V13/V6. Await revised candidate; parent coordinates implementation.
+- **Actual partial independent checks:** pinned candidate/runtime `b323129040b1414f0e60cc3a05090c44cffab1cb` share src tree `5176ecfa2b54a27f8e6a5011f0ea744a17810aac`; 145 tests (0 fail/skip), build/content/replay/asset-check pass; 94 protected files unchanged. Actual old QA Sandbox import/reload/further purchase passes; isolated Normal unchanged. Real software WebGL verifies 580px drawers/camera, keyboard focus, invalid/repeated/delayed/aborted writes, 20 five-locale short/narrow touch buy/place cases (0 page errors), reduced motion, 15 five-locale layouts, exact 375px zh-CN JP¥48,200 and vase raw `007` selection/reload. These validate technical preservation, not approval of the superseded horizontal design.
+- **Delivery:** actual 122-file archive matches this clean build byte-for-byte; gzip SHA-256 `b5e8847769c7c7c16f0d6a6546643734c639a00de6c0be1be9dd1b8c6bd13942`; 46 evidence provenance hashes/sizes match. Approved target and actual before/after pixels inspected; incremental art only. Current supported Library owner-ZIP materialization failed (`download failed`), no local ZIP/pixels read; no bypass. Full motion/final art/device/audio/Safari/true hidden-tab/native acceptance and independent 207-asset/55-GLB reruns remain incomplete after pause.
+- [Concise partial report and independent screenshots](docs/reviews/V7_PARTIAL_REVIEW_2026-10-24_zh-HK.md). Documentation-only handoff on `docs-v7-partial-review`; normal push and exact readback reported externally. Next: review corrected vertical-list candidate, preserving economy/saves, five locales, 580px drawer/camera and retained input/focus.
 
 ## Current unmerged iteration — V7 local-playtest fixes — 2026-10-24T18:43:11+08:00
 
