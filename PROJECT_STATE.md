@@ -1,6 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-24T03:35:11+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-24T15:06:35+08:00** (Asia/Hong_Kong).
+
+## Current unmerged update — Version Unification
+
+- Active branch: [`codex/game-v6-unification`](https://github.com/wizardkeith/KeEv-games/tree/codex/game-v6-unification), [draft PR #3](https://github.com/wizardkeith/KeEv-games/pull/3), first pushed checkpoint `6b0185e6a6d85f6456f3492fd35ad5f2cff1f78b`. Drawer framing and horizontal stock rail gates are implemented; actual browser camera/input/transaction/narrow-layout checks and 144 unit tests/build pass. Art/motion gate is in progress. Scope/evidence: branch `docs/V6_UNIFICATION.md` and `evidence/native-v6/`.
+- Full latest Library brief was read through native Library; supported local byte transfer failed twice and is not claimed successful. Approved target and Bible embedded image pixels inspected. No new economy/story/save/catalog scope. This main update is only a progress pointer: **no v6 feature is merged or published**. Existing public Site remains v12. Parent reviews before coordinating the same-Site release; local Unity and player Normal saves remain protected.
 
 ## Current v5 public release — 2026-10-24T03:35:11+08:00
 
