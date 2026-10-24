@@ -1,20 +1,20 @@
 {
-  "version": "native-characters-v7-r1",
+  "version": "native-characters-v8-r1",
   "authoring": "src/art/native-characters.ts",
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
-    "src/art/native-characters.ts": "7a8fc446f8943a3ac677fdb17430f0c8292d26747593c79c28631fc94b5fa1c0",
-    "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
+    "src/art/native-characters.ts": "c712491bf2b327970013e8e105f30195a8485296564546b6f309ca83242771f5",
+    "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
-    "src/art/native-materials.ts": "f614aa78548aedb281c1a44dadba7ec63af4475abba0047fc9effc7bd709bc61",
+    "src/art/native-materials.ts": "77d1f2cd62fc503fdd89d02c550878b39f8e73c0ceb213b95488874f8939454e",
     "src/presentation/native-motion.ts": "215b955ec4b3fc83400a478545882b257fc244247fb16ea630748bbce8547000",
     "src/presentation/native-staff.ts": "25753440a567329a66e6468a02b682962711318be9b7f903236f448ac28fe802",
     "src/presentation/native-staff-player.ts": "5682232a31d05a2143b360a5831e7352ba9ff926760e69a139a5184d42be5069",
     "src/presentation/native-feet.ts": "440404e1bceabdb2bf8d8f9f699d030c40e4815f7b0e904ea15a3f6a180bdef3",
     "src/presentation/native-delivery.ts": "0f151cc4f9c293b20fc680fda7f6125ee93501a4c10f680e8563f66cdcf9b942",
     "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
-    "src/world.ts": "92b5b95ec2cee4b558600be5ba6d348d22d4d534f586383f881233b03fc96276",
+    "src/world.ts": "fd1c4d6ef6d9558280f6d6b032889777a50810e72a99c13205b4886f05027a44",
     "src/presentation/native-routes.ts": "248918d9a9942383431892aaf3dc9b6bd794be8c5ca85080f490cd40ff81beb1",
     "src/presentation/native-scene.ts": "536a853d6ec9c804f7753eb3e00eaa5d85348809e2e434131f7f95ed8ce0ec1d",
     "tools/export-native-characters.ts": "df07295ee2bae9a01fde03191fdb9a48566d6702d67e2b13a7fde9b233ccf76f",
@@ -45,8 +45,8 @@
       "id": "actor.misaki.native.v3",
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
-      "bytes": 709448,
-      "sha256": "a3423241ced40e7635e16c22df2574255f105a3a4d9e359daf0207c91d58fcfe",
+      "bytes": 709796,
+      "sha256": "3f1d3ebf4dadd0949fd3fc3b0de7f872c6285facb772d1b0a29d27cec6c47354",
       "nodes": [
         {
           "id": "body",
@@ -335,8 +335,8 @@
       "id": "actor.visitor-a.native.v3",
       "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
       "web": "public/assets/native-v3/visitor-a-native-v3.glb",
-      "bytes": 353224,
-      "sha256": "f39b765614b62d1be1af24db176eec85e26fced9da3a8257702dd462ccc68e9b",
+      "bytes": 353192,
+      "sha256": "6dc0c61142c495bb31e0bc455668ff1a242df65ea25cc59a4a108a68d10f5002",
       "nodes": [
         {
           "id": "body",
@@ -625,8 +625,8 @@
       "id": "actor.visitor-b.native.v3",
       "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
       "web": "public/assets/native-v3/visitor-b-native-v3.glb",
-      "bytes": 699960,
-      "sha256": "455f561cd473212b38cbbab2733d8482c8fe711cf99fd6319050c0294c7a5bbb",
+      "bytes": 700308,
+      "sha256": "49ad1442d7a711e43de4b4ad70cfd4e5153071122a66433f5db3456cc5a4875a",
       "nodes": [
         {
           "id": "body",

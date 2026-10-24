@@ -6,9 +6,9 @@
   "rebuild": "node --import tsx tools/export-native-products.ts",
   "sourceSha256": {
     "src/art/native-products.ts": "eb2d2b537568cdbe69def1261a0f68531f67227c8bbced854aefe8ebf41ab3e1",
-    "src/art/recipes.ts": "c20e2d9819bd5a60678c8e006318882a5ad10dcb290c228d71816add11b7dfef",
+    "src/art/recipes.ts": "b3c6890ff3e025f14373f28f10a68f3eeeb54f8a733a26192233f81f0090b905",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
-    "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
+    "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "tools/export-native-products.ts": "b2c9c97bec85006a3b9e36015bd9b98cad747ccaf0174ac52afc90d1a110931d"
   }
 }

@@ -9,31 +9,31 @@
       "id": "room",
       "file": "assets/masters/native-v4/room.glb",
       "bytes": 214172,
-      "sha256": "43514ddaafa1acbcca435455c90fcefc9ad5c5140ea7c034425b272bea5c2e16"
+      "sha256": "7eaf5337ba8024a035f756761d30bff9ea229389d40d48c33d270ad6325bd56d"
     },
     {
       "id": "counter",
       "file": "assets/masters/native-v4/counter.glb",
-      "bytes": 119220,
-      "sha256": "1b085795560636709c38445554c30d9fd509a159f7c86e9143e07592a6583a1a"
+      "bytes": 120172,
+      "sha256": "5f49724f2b206a3f42af817df18350f837456a1ab96a98dc0fe769cde2f4c557"
     },
     {
       "id": "display-1",
       "file": "assets/masters/native-v4/display-1.glb",
-      "bytes": 95204,
-      "sha256": "44f6961a380fdca3cec893ed0ee63b0d552d9a761ca09d538ba30b6ee9a2191a"
+      "bytes": 102128,
+      "sha256": "8f584f10dabf015d8d9c5e2c7d8274b90a4e8a55e7142c80f876007415eb2c6e"
     },
     {
       "id": "display-2",
       "file": "assets/masters/native-v4/display-2.glb",
-      "bytes": 95232,
-      "sha256": "b78eae446eafd0f1858452bf703c461a1207525ee7254cd901d4461f14cd6633"
+      "bytes": 102156,
+      "sha256": "4676e090f8490fc0dd3c71b1afbffd253609c830996331ddf57278b35e2c9612"
     },
     {
       "id": "display-3",
       "file": "assets/masters/native-v4/display-3.glb",
-      "bytes": 95204,
-      "sha256": "bc8c7efe4e002e4d9deccdd6b8fc0b89fa247dd6c382b9e4671dbe852ad714f8"
+      "bytes": 102128,
+      "sha256": "51e2376c2e5e95ccfba4f6b2c26fd8b25bb736ce39367a3818d8b0c7b6f3229f"
     },
     {
       "id": "product-off.notebook",

@@ -11,8 +11,8 @@ export interface NativeMesh {shape:'mesh';at:V3;color:string;role:MaterialRole;g
 export type NativePrimitive=Part&{roughness?:number};
 export type NativeSurface=NativePrimitive|NativeMesh;
 export interface NativePart {id:string;parent?:string;pivot:V3;recipe:NativeSurface[];}
-export const nativeCharacterIdentity={version:'native-characters-v7-r1',misaki:{id:'actor.misaki.native.v3',economicBinding:'staff.graybox'},'visitor-a':{id:'actor.visitor-a.native.v3',economicBinding:null},'visitor-b':{id:'actor.visitor-b.native.v3',economicBinding:null}} as const;
-const P={skin:'#EAC3A8',skinB:'#E1B99D',blush:'#D99D91',hair:'#6B4B38',hairLight:'#87634C',sage:'#94AC92',sageDark:'#607B6A',cream:'#F5EBDD',ivory:'#F1E6CF',plum:'#826879',ink:'#57413D',shoe:'#59483F',sole:'#8C7764',terracotta:'#B77F62',blue:'#748F9D',trousers:'#555E61'};
+export const nativeCharacterIdentity={version:'native-characters-v8-r1',misaki:{id:'actor.misaki.native.v3',economicBinding:'staff.graybox'},'visitor-a':{id:'actor.visitor-a.native.v3',economicBinding:null},'visitor-b':{id:'actor.visitor-b.native.v3',economicBinding:null}} as const;
+const P={skin:'#F0C9B0',skinB:'#E1B99D',blush:'#D99D91',hair:'#704E39',hairLight:'#87634C',sage:'#94AC92',sageDark:'#607B6A',cream:'#F5EBDD',ivory:'#F1E6CF',plum:'#785A70',ink:'#57413D',shoe:'#59483F',sole:'#8C7764',terracotta:'#B77F62',blue:'#748F9D',trousers:'#555E61'};
 const p=(shape:Part['shape'],size:V3,at:V3,color:string,role:MaterialRole='fabric',extra:Partial<NativePrimitive>={}):NativePrimitive=>({shape,size,at,color,role,...extra});
 const round=(size:V3,at:V3,color:string,role:MaterialRole='fabric',radius=.014)=>p('round',size,at,color,role,{radius});
 interface Ring {y:number;x:number;z:number;cx?:number;cz?:number;}
@@ -59,10 +59,11 @@ function bob(width:number,color:string):NativeMesh {
  for(let layer=0;layer<2;layer++){const rows=layer?innerRows:outerRows;
   for(let i=0;i<=rows;i++)for(let j=0;j<segments;j++){
    const a=j*Math.PI*2/segments,front=Math.max(0,Math.min(1,(-Math.sin(a)+.05)/.76)),sweep=.20*Math.cos(a)*front;
-   const end=2.56-front*(1.19+.16*Math.cos(a*2))+sweep+.045*Math.sin(a*7)*(1-front*.7),t=.025+(1-i/rows)*end;
-   const strand=(layer?0:.0035)*Math.cos(a*9+t*2.2)*Math.sin(t)**2,edge=layer*.009;
+   const sweptBang=.23*Math.exp((Math.cos(a-4.28)-1)/.045)*front;
+   const end=sweptBang+2.48-front*(1.24+.22*Math.cos(a+.65))+sweep*.45+.045*Math.sin(a*5)*(1-front*.8),t=.025+(1-i/rows)*end;
+   const strand=(layer?0:.0045)*Math.cos(a*7+t*1.5+.45*Math.sin(a))*Math.sin(t)**2,edge=layer*.009;
    const profile=t<1.6?Math.sin(t):Math.sin(1.6)-.24*(t-1.6);
-   g.positions.push(Math.cos(a)*profile*(width*1.10-edge+strand),.18+Math.cos(t)*(.21+Math.max(0,t-1.6)*.045-edge),.028+Math.sin(a)*profile*(.227-edge+strand));
+   g.positions.push(Math.cos(a)*profile*(width*1.10-edge+strand),.18+Math.cos(t)*(.21+Math.max(0,t-1.6)*.045-edge),.024+Math.sin(a)*profile*(.219-edge+strand));
   }
  }
  for(let layer=0;layer<2;layer++){const rows=layer?innerRows:outerRows,offset=layer?outerCount:0;
@@ -78,8 +79,8 @@ function apron():NativeMesh {
  const g:Geometry={positions:[],normals:[],indices:[]},columns=16;
  const rows=[{y:.365,w:.180,z:-.189},{y:.395,w:.192,z:-.191},{y:.490,w:.184,z:-.186},{y:.590,w:.166,z:-.164},{y:.690,w:.145,z:-.142},{y:.783,w:.133,z:-.134}];
  for(let side=0;side<2;side++)for(let r=0;r<rows.length;r++)for(let c=0;c<=columns;c++){
-  const u=c/columns*2-1,p=rows[r],fold=.002*Math.cos(u*Math.PI*3)*(r<4?1:.25);
-  g.positions.push(u*p.w,p.y+(r===0?.012*Math.pow(u,8):0),p.z+.045*u*u+fold+side*.006);
+  const u=c/columns*2-1,p=rows[r],fold=.0035*Math.cos(u*Math.PI*3)*(r<4?1:.25);
+  g.positions.push(u*p.w,p.y+(r===0?.016*Math.pow(u,4):0),p.z+.045*u*u+fold+side*.006);
  }
  const stride=columns+1,count=rows.length*stride;
  for(let side=0;side<2;side++)for(let r=0;r<rows.length-1;r++)for(let c=0;c<columns;c++){const a=side*count+r*stride+c,b=a+1,d=a+stride,e=d+1;g.indices.push(...(side?[a,b,d,b,e,d]:[a,d,b,b,d,e]));}
@@ -112,7 +113,7 @@ export function nativeGrouped(recipe:NativeSurface[]){
 function eyes(kind:NativeCharacterKind):NativePart[]{
  const wider=kind==='visitor-b',skin=kind==='visitor-a'?P.skinB:P.skin,out:NativePart[]=[];
  for(const side of [-1,1]){const x=side*(wider?.085:.079),s=side<0?'left':'right',y=kind==='visitor-a'?.155:.16;
-  out.push({id:`eye-${s}`,parent:'head',pivot:[x,y,-.177],recipe:[p('sphere',[.086,.071,.012],[0,0,0],'#F2E8DB','ink'),p('sphere',[.060,.064,.014],[side*-.003,0,-.009],kind==='visitor-a'?'#554332':'#76513C','ink'),p('sphere',[.031,.043,.013],[side*-.003,.001,-.016],'#3F3330','ink'),p('sphere',[.016,.018,.004],[-.009,.015,-.027],'#FFF4DF','ink'),p('torus',[.083,.0045,.060],[0,0,-.013],P.ink,'hair',{turn:[Math.PI/2,0,0],arc:[Math.PI*1.05,Math.PI*1.95],segments:8})]});
+  out.push({id:`eye-${s}`,parent:'head',pivot:[x,y,-.177],recipe:[p('sphere',[.090,.080,.008],[0,0,0],'#F2E8DB','ink'),p('sphere',[.062,.073,.010],[side*-.003,0,-.009],kind==='visitor-a'?'#554332':'#92633D','ink'),p('sphere',[.031,.049,.008],[side*-.003,.004,-.016],'#3F3330','ink'),p('sphere',[.016,.018,.004],[-.009,.015,-.027],'#FFF4DF','ink'),p('torus',[.083,.0045,.060],[0,0,-.013],P.ink,'hair',{turn:[Math.PI/2,0,0],arc:[Math.PI*1.05,Math.PI*1.95],segments:8})]});
   out.push({id:`eyelid-${s}`,parent:'head',pivot:[x,y+.005,-.201],recipe:[round([.083,.049,.010],[0,0,0],skin,'skin',.015),round([.077,.006,.012],[0,-.004,-.006],P.ink,'hair',.002)]});
   out.push({id:`brow-${s}`,parent:'head',pivot:[x,y+.047,-.165],recipe:[p('torus',[.063,.0035,.021],[0,0,0],kind==='visitor-a'?'#423D36':P.hair,'hair',{turn:[Math.PI/2,0,0],arc:[Math.PI*1.12,Math.PI*1.88],segments:6})]});
  }

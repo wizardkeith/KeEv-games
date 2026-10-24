@@ -1,0 +1,74 @@
+
+> next-stop-little-shop-w1@0.1.1 build
+> tsc --noEmit && vite build
+
+vite v7.1.12 building for production...
+transforming...
+✓ 569 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                     0.69 kB │ gzip:   0.49 kB
+dist/assets/index-CycCNfHd.css                                     35.26 kB │ gzip:   7.69 kB
+dist/assets/kernelBlurVaryingDeclaration-BGMBtSfK.js                0.17 kB │ gzip:   0.15 kB
+dist/assets/kernelBlurVaryingDeclaration-jaJFdz2k.js                0.18 kB │ gzip:   0.16 kB
+dist/assets/pass.fragment-DLE0lWB2.js                               0.35 kB │ gzip:   0.27 kB
+dist/assets/shadowMapFragmentSoftTransparentShadow-CAG4AVEf.js      0.40 kB │ gzip:   0.29 kB
+dist/assets/shadowMapFragmentSoftTransparentShadow-BXbzgnSe.js      0.43 kB │ gzip:   0.30 kB
+dist/assets/rgbdEncode.fragment-D7Hdxwe3.js                         0.43 kB │ gzip:   0.32 kB
+dist/assets/rgbdDecode.fragment-BoEGzDro.js                         0.44 kB │ gzip:   0.32 kB
+dist/assets/pass.fragment-C29vt9uD.js                               0.48 kB │ gzip:   0.32 kB
+dist/assets/packingFunctions-BPXRXTom.js                            0.52 kB │ gzip:   0.29 kB
+dist/assets/meshUboDeclaration-Pprxxdgk.js                          0.56 kB │ gzip:   0.31 kB
+dist/assets/depthBoxBlur.fragment-CMfy9l__.js                       0.56 kB │ gzip:   0.37 kB
+dist/assets/meshUboDeclaration-BL2jfNEd.js                          0.56 kB │ gzip:   0.31 kB
+dist/assets/rgbdEncode.fragment-Cp5ITw2U.js                         0.57 kB │ gzip:   0.36 kB
+dist/assets/rgbdDecode.fragment-CvwuJ-ON.js                         0.58 kB │ gzip:   0.37 kB
+dist/assets/postprocess.vertex-CR0GEZVc.js                          0.61 kB │ gzip:   0.38 kB
+dist/assets/depthBoxBlur.fragment-C3vRpsP6.js                       0.74 kB │ gzip:   0.44 kB
+dist/assets/kernelBlur.vertex-CYNs_Ehm.js                           0.79 kB │ gzip:   0.44 kB
+dist/assets/passCube.fragment-B3oFgHBQ.js                           0.85 kB │ gzip:   0.37 kB
+dist/assets/kernelBlur.vertex-CQb_KViD.js                           0.93 kB │ gzip:   0.48 kB
+dist/assets/mesh.vertexData.functions-ayNlGC5K.js                   0.96 kB │ gzip:   0.49 kB
+dist/assets/instancesDeclaration-5-6H3rWO.js                        1.00 kB │ gzip:   0.34 kB
+dist/assets/passCube.fragment-Bj7lSmSz.js                           1.16 kB │ gzip:   0.42 kB
+dist/assets/clipPlaneFragment-DHMe-kom.js                           1.21 kB │ gzip:   0.34 kB
+dist/assets/depth.fragment-RCkFcBPh.js                              1.29 kB │ gzip:   0.57 kB
+dist/assets/ddsTextureLoader-Xv4ftfNv.js                            1.29 kB │ gzip:   0.63 kB
+dist/assets/depth.vertex-C_uZCzXy.js                                2.06 kB │ gzip:   0.77 kB
+dist/assets/kernelBlur.fragment-BybR3jG2.js                         2.13 kB │ gzip:   0.71 kB
+dist/assets/hdrTextureLoader-C6D0HR1t.js                            2.46 kB │ gzip:   1.19 kB
+dist/assets/kernelBlur.fragment-BkKcf54z.js                         2.70 kB │ gzip:   0.80 kB
+dist/assets/iesTextureLoader-Ch167IBE.js                            2.73 kB │ gzip:   1.18 kB
+dist/assets/shadowMap.fragment-BkFGkcN1.js                          3.06 kB │ gzip:   1.08 kB
+dist/assets/dumpTools-DqnCjd6x.js                                   3.21 kB │ gzip:   1.54 kB
+dist/assets/tgaTextureLoader-sid6Nm4n.js                            3.56 kB │ gzip:   1.39 kB
+dist/assets/shadowMap.fragment-DEu6Hful.js                          3.69 kB │ gzip:   1.19 kB
+dist/assets/shadowMap.vertex-P1zYvuaK.js                            4.36 kB │ gzip:   1.39 kB
+dist/assets/shadowMap.vertex-BFEysxZe.js                            4.45 kB │ gzip:   1.44 kB
+dist/assets/helperFunctions-B3EOWx4L.js                             5.30 kB │ gzip:   1.78 kB
+dist/assets/helperFunctions-BxiizcM9.js                             5.71 kB │ gzip:   1.89 kB
+dist/assets/envTextureLoader-DYq-DxQG.js                            6.79 kB │ gzip:   2.90 kB
+dist/assets/basisTextureLoader-CKwciE44.js                          8.21 kB │ gzip:   3.25 kB
+dist/assets/dds-CqCughsD.js                                         9.23 kB │ gzip:   3.49 kB
+dist/assets/clipPlaneVertex-CPnOrGij.js                            14.12 kB │ gzip:   2.40 kB
+dist/assets/logDepthDeclaration-DP24fnv0.js                        14.12 kB │ gzip:   4.79 kB
+dist/assets/exrTextureLoader-Bv5sAg2e.js                           15.56 kB │ gzip:   5.82 kB
+dist/assets/logDepthDeclaration-CrchPlfE.js                        15.70 kB │ gzip:   4.93 kB
+dist/assets/ktxTextureLoader-C9-qg8VA.js                           15.83 kB │ gzip:   4.63 kB
+dist/assets/pbr.vertex-DuNRVRZy.js                                 22.34 kB │ gzip:   4.28 kB
+dist/assets/pbr.vertex-CXd2QgM2.js                                 23.92 kB │ gzip:   4.72 kB
+dist/assets/index-C9o2HGkq.js                                     160.46 kB │ gzip:  58.60 kB
+dist/assets/pbr.fragment-BuZx8Nfh.js                              204.97 kB │ gzip:  38.14 kB
+dist/assets/pbr.fragment-V1pOr7-B.js                              213.80 kB │ gzip:  38.72 kB
+dist/assets/world-4epolBHF.js                                   1,307.17 kB │ gzip: 335.02 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.42s
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

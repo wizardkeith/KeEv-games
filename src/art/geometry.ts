@@ -15,6 +15,14 @@ export function geometry(p:Part):Geometry {
     ids[i][j]=vertex(...point as V3,...normal as V3);
    }}for(let i=0;i<us.length-1;i++)for(let j=0;j<vs.length-1;j++){const [a,b,c,e]=[ids[i][j],ids[i+1][j],ids[i+1][j+1],ids[i][j+1]];tri(a,b,c);tri(a,c,e);}
   }
+ }else if(p.shape==='leaf'){
+  // Closed curved botanical blade with tapered tips, shared by Web and GLB.
+  const rows=8,cols=12;
+  for(let i=0;i<=rows;i++){const t=i/rows,s=Math.sin(Math.PI*t),r=w*.5*Math.pow(Math.max(0,s),.80),depth=d*.5*s,bend=d*.55*s*s;
+   const dr=i===0||i===rows?0:w*.4*Math.PI*Math.pow(s,-.20)*Math.cos(Math.PI*t),dd=d*.5*Math.PI*Math.cos(Math.PI*t),db=d*1.10*Math.PI*s*Math.cos(Math.PI*t);
+   for(let j=0;j<=cols;j++){const a=j*Math.PI*2/cols,c=Math.cos(a),q=Math.sin(a);vertex(c*r,(t-.5)*h,q*depth+bend,...(i===0||i===rows?[0,i===0?-1:1,0]:[h*c*depth,-c*c*dr*depth-q*q*dd*r-q*r*db,h*q*r]) as V3);}
+  }
+  for(let i=0;i<rows;i++)for(let j=0;j<cols;j++){const a=i*(cols+1)+j,b=a+cols+1;tri(a,b,a+1);tri(a+1,b,b+1);}
  }else if(p.shape==='sphere'){
   const rows=8,cols=12;for(let i=0;i<=rows;i++){const t=i*Math.PI/rows;for(let j=0;j<=cols;j++){const a=j*2*Math.PI/cols,n=[Math.sin(t)*Math.cos(a),Math.cos(t),Math.sin(t)*Math.sin(a)];vertex(n[0]*w/2,n[1]*h/2,n[2]*d/2,n[0]*2/w,n[1]*2/h,n[2]*2/d);}}
   for(let i=0;i<rows;i++)for(let j=0;j<cols;j++){const a=i*(cols+1)+j,b=a+cols+1;tri(a,b,a+1);tri(a+1,b,b+1);}

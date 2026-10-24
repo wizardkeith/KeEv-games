@@ -28,6 +28,7 @@ export function nativeRoomRecipe():NativeEnvironmentPart[]{
   if(p.role==='wood'&&p.size[2]===6.45&&p.size[1]===.018)return {...p,size:[.545,p.size[1],p.size[2]] as V3,color:p.color===palette.floorLight?'#C2A481':'#B99A76',roughness:.83};
   // Retained wall shelves stay deeper and warmer than the new floor.
   if(p.role==='wood'&&p.size[0]===5.2)return {...p,color:'#967255',roughness:.76};
+  if(p.role==='ink'&&p.shape==='sphere')return {...p,shape:'leaf' as const};
   return p;
  });
  const {minX,maxX,topY}=nativeDoorContract.aperture;
@@ -88,8 +89,8 @@ export function plantParts(scale=1):NativePlantParts{
   const a=i*2.39996,pivot:V3=[Math.sin(a)*.018,.46+i*.062,Math.cos(a)*.018];
   const offset:V3=[Math.sin(a)*.104,.065,Math.cos(a)*.104];
   return {pivot:pivot.map(v=>v*scale) as V3,recipe:[
-   part('sphere',[.15,.29,.055],offset,i%2?'#789879':'#9DB48D','leaf',{turn:[.25*Math.cos(a),a,.40*Math.sin(a)]}),
-   part('cylinder',[.008,.14,.008],[offset[0]*.47,.027,offset[2]*.47],'#7B8C65','leaf',{top:.5,turn:[.75*Math.cos(a),0,-.75*Math.sin(a)]}),
+   part('leaf',[.18,.31,.035],offset,i%2?'#789879':'#9DB48D','leaf',{turn:[.25*Math.cos(a),a,.40*Math.sin(a)]}),
+   scale<.6?part('sphere',[.085,.070,.085],[offset[0]*.6,.105,offset[2]*.6],'#F2E4C8','leaf'):part('leaf',[.145,.235,.028],[-offset[0]*.72,-.018,-offset[2]*.72],i%2?'#9DB48D':'#789879','leaf',{turn:[-.25*Math.cos(a),a+.8,-.55*Math.sin(a)]}),
   ].map(scaled)};
  });
  return {base,leaves};
@@ -127,18 +128,19 @@ export function exteriorRecipe():Part[]{
  return result;
 }
 
-export function nativeCounterRecipe():NativeEnvironmentPart[]{return [...counterRecipe().filter((_,i)=>i<3||i>6).map((p,i)=>i===0?{...p,color:'#DAB98F',roughness:.57}:i===1?{...p,color:'#B28C67'}:p),
+export function nativeCounterRecipe():NativeEnvironmentPart[]{return [...counterRecipe().filter((_,i)=>i<3||i>6).map((p,i)=>i===0?{...p,color:'#D1AF86',roughness:.57}:i===1?{...p,color:'#B28C67'}:p),
  // Recesses, a bevel beneath the thick top, and restrained drawer construction.
  round([1.79,.024,.80],[0,.847,0],'#8B664B',.009),
  round([1.65,.065,.65],[0,.050,0],'#77583F',.014),
  ...[-.41,.41].flatMap(x=>[
   round([.76,.18,.026],[x,.70,-.393],'#E5D6C1',.012,'paint'),
-  round([.14,.018,.026],[x,.70,-.416],'#9B896B',.006,'metal'),
+  round([.14,.018,.026],[x,.70,-.416],'#B59A63',.006,'metal'),
  ]),
  part('box',[1.52,.012,.009],[0,.577,-.409],'#C2AF94'),
  // Inset lower panels and broad warm edging read at the normal shop camera.
- ...[-.61,-.205,.205,.61].flatMap(x=>[
-  round([.312,.326,.014],[x,.335,-.417],'#E8DDCB',.012,'paint'),
+ ...[-.41,.41].flatMap(x=>[
+  round([.74,.43,.023],[x,.34,-.404],'#C8B69C',.012,'paint'),
+  round([.65,.34,.015],[x,.34,-.423],'#EFE4D1',.014,'paint'),
  ]),
 
  ];}
@@ -148,8 +150,8 @@ export function nativeDisplayRecipe(variant=0):NativeEnvironmentPart[]{return [.
  // Existing upright price card retained; spare underside trim budget moves
  // to the visible back cabinet in the room recipe.
 
- // Three quiet textile runners have the same furniture footprint. They remain
- // identifiable as fixtures when no real products are displayed.
- round([variant===1?.65:1.30,.006,variant===1?.83:.54],[variant===1?-.16:0,.995,0],variant===2?'#D7DAC8':'#E0D1B5',.003,'fabric'),
- ...[-1,1].map(side=>part('box',[variant===1?.006:1.27,.001,variant===1?.80:.006],[variant===1?-.16+side*.28:0,.999,variant===1?0:side*.235],'#C1B698','fabric')),
+ // Narrow woven runners turn over the front edge rather than lying as mats.
+ round([.50,.008,.91],[variant===1?-.20:.12,.997,0],variant===2?'#DCE0CD':'#E9DCC3',.003,'fabric'),
+ round([.50,.27,.012],[variant===1?-.20:.12,.865,-.472],variant===2?'#DCE0CD':'#E9DCC3',.006,'fabric'),
+ round([.50,.016,.017],[variant===1?-.20:.12,.734,-.473],'#C2B49A',.005,'fabric'),
  ];}
