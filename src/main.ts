@@ -121,13 +121,12 @@ function moveRail(direction:number){
 app.addEventListener('scroll',e=>{
  const rail=e.target as HTMLElement;if(rail.id!=='stock-products'||!u.stock)return;
  u.stock.railLeft=rail.scrollLeft;
- const cards=Array.from(rail.querySelectorAll<HTMLElement>('.stock-card'));
- const card=cards.reduce<HTMLElement|undefined>((best,c)=>!best||Math.abs(c.offsetLeft-rail.scrollLeft)<Math.abs(best.offsetLeft-rail.scrollLeft)?c:best,undefined);
- if(card)u.stock.selected=card.dataset.item??'';saveStockWorkspace(u.stock,stockWorkspaceKey());
+ // Scrolling (including restoration and snap) changes position, not explicit selection.
+ saveStockWorkspace(u.stock,stockWorkspaceKey());
 },true);
-app.addEventListener('focusin',e=>{const card=(e.target as Element).closest<HTMLElement>('.stock-card');if(card&&u.stock)u.stock.selected=card.dataset.item??'';});
+app.addEventListener('focusin',e=>{const card=(e.target as Element).closest<HTMLElement>('.stock-card');if(card&&u.stock){u.stock.selected=card.dataset.item??'';for(const c of Array.from(card.parentElement?.querySelectorAll<HTMLElement>('.stock-card')??[]))c.setAttribute('aria-current',String(c===card));saveStockWorkspace(u.stock,stockWorkspaceKey());}});
 app.addEventListener('keydown',e=>{if((e.target as HTMLElement).id!=='stock-products')return;if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();moveRail(e.key==='ArrowLeft'?-1:1);}if(e.key==='Home'||e.key==='End'){e.preventDefault();const r=e.target as HTMLElement;r.scrollLeft=e.key==='Home'?0:r.scrollWidth;}});
-app.addEventListener('wheel',e=>{const rail=(e.target as Element).closest<HTMLElement>('[data-rail]');if(!rail||Math.abs(e.deltaX)>Math.abs(e.deltaY))return;const card=(e.target as Element).closest<HTMLElement>('.stock-card');if(card&&card.scrollHeight>card.clientHeight+2)return;if(rail.scrollWidth<=rail.clientWidth)return;e.preventDefault();rail.scrollLeft+=e.deltaY;},{passive:false});
+app.addEventListener('wheel',e=>{const rail=(e.target as Element).closest<HTMLElement>('[data-rail]');if(!rail)return;if(Math.abs(e.deltaX)>Math.abs(e.deltaY)){if(rail.scrollWidth>rail.clientWidth){e.preventDefault();rail.scrollLeft+=e.deltaX;}return;}const details=(e.target as Element).closest<HTMLElement>('.stock-details');if(details&&details.scrollHeight>details.clientHeight+2)return;const card=(e.target as Element).closest<HTMLElement>('.stock-card');if(card&&card.scrollHeight>card.clientHeight+2)return;if(rail.scrollWidth<=rail.clientWidth)return;e.preventDefault();rail.scrollLeft+=e.deltaY;},{passive:false});
 let railDrag:{rail:HTMLElement;x:number;left:number;pointer:number}|undefined;
 app.addEventListener('pointerdown',e=>{const rail=(e.target as Element).closest<HTMLElement>('[data-rail]');if(!rail||e.pointerType!=='mouse'||e.button!==0||(e.target as Element).closest('button,input,select,label'))return;railDrag={rail,x:e.clientX,left:rail.scrollLeft,pointer:e.pointerId};rail.setPointerCapture(e.pointerId);});
 app.addEventListener('pointermove',e=>{if(!railDrag||e.pointerId!==railDrag.pointer)return;const dx=e.clientX-railDrag.x;if(Math.abs(dx)>4){e.preventDefault();railDrag.rail.scrollLeft=railDrag.left-dx;}});

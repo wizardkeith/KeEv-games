@@ -24,8 +24,8 @@ export interface StaffPose {
 export const STAFF_CLIPS = Object.freeze({
  idle: {id:'native.staff.idle.v3',duration:6,loop:true,blend:.2,markers:[]},
  greet: {id:'native.staff.greet.v3',duration:1.8,loop:false,blend:.2,markers:[{time:.7,event:'outward-wave'}]},
- tidy: {id:'native.staff.tidy.v3',duration:2.6,loop:false,blend:.25,markers:[{time:.55,event:'cloth-contact'},{time:2.15,event:'cloth-release'}]},
- note: {id:'native.staff.check-note.v3',duration:2.8,loop:false,blend:.25,markers:[{time:.7,event:'note-held'},{time:2.2,event:'note-return'}]},
+ tidy: {id:'native.staff.tidy.v3',duration:3.6,loop:false,blend:.25,markers:[{time:.70,event:'cloth-contact'},{time:3.0,event:'cloth-release'}]},
+ note: {id:'native.staff.check-note.v3',duration:3.8,loop:false,blend:.25,markers:[{time:.9,event:'note-held'},{time:3.1,event:'note-return'}]},
  stock: {id:'native.staff.receive-stock.v3',duration:2,loop:false,blend:.2,markers:[{time:.4,event:'box-contact'},{time:.9,event:'count'},{time:1.65,event:'box-return'}]},
  sale: {id:'native.staff.pack-handover.v3',duration:2.8,loop:false,blend:.2,markers:[{time:.55,event:'pack'},{time:1.26,event:'bag-lift'},{time:2.1,event:'handover-or-counter-release'},{time:2.52,event:'recover'}]},
  display: {id:'native.staff.acknowledge-display.v3',duration:.65,loop:false,blend:.12,markers:[{time:.3,event:'acknowledge'}]},
@@ -94,13 +94,13 @@ export function sampleStaff(visibleSeconds:number, service?:StaffServiceFrame, g
    rotations.head=[.12*e,0,.012*e];
    if(action==='tidy'){
     rotations['arm-left']=[.4*lift,0,-.1*lift];rotations['forearm-left']=[elbow(.55),0,0];
-    rotations['arm-right']=[1.12*lift,.18*Math.sin(progress*Math.PI*4)*unfold,.22*lift];
+    rotations['arm-right']=[1.12*lift,.24*Math.sin(progress*Math.PI*4)*unfold,.22*lift];
     rotations['forearm-right']=[elbow(.87),0,0];
     prop={kind:'cloth',owner:'socket-right',visible:progress>.16&&progress<.84};
    } else if(action==='note'){
     rotations['arm-left']=[1.05*lift,0,-.20*lift];rotations['forearm-left']=[elbow(1.05),0,0];
     rotations['arm-right']=[.76*lift,.05*lift,.18*lift];rotations['forearm-right']=[elbow(1.0),0,0];
-    rotations.head=[.16*e,-.10*e,0];
+    rotations.head=[.20*e,-.14*e,0];rotations['hand-right']=[0,.12*Math.sin(progress*Math.PI*4)*unfold,0];
     prop={kind:'note',owner:'socket-left',visible:progress>.18&&progress<.82};
    } else if(action==='stock'){
     rotations['forearm-right']=[elbow(.95+.12*Math.sin(progress*Math.PI*6)),0,0];
