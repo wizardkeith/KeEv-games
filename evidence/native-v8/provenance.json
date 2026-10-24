@@ -1,0 +1,223 @@
+{
+  "runtimeSource": "ac134fd5dec19f64aa00e0b4441e3006f07c8a0b",
+  "srcTree": "6b0e747182b5b2ad498e27d23fec0ffc3478a244",
+  "baseline": "208c4452148e235bff1d3bd580b55a84a1a09bbc",
+  "artAndStockCaptureSource": "1d824cb02c94be44761a355ea2d5cc7420c42e96",
+  "artComponentsIdenticalToFinal": {
+    "src/art/native-characters.ts": "0e694a3d7dd26dfc7fa4aa83265325d5c0f9c7ad176d72364295c5bc838b49ba",
+    "src/art/native-materials.ts": "77d1f2cd62fc503fdd89d02c550878b39f8e73c0ceb213b95488874f8939454e",
+    "src/art/native-view.ts": "7fbf905e259049e713543c27f361dfc571a2c21dde52d26af5b6c70936111a70",
+    "src/art/native-environment.ts": "0974a2b9c50afa1d9ec777cf78e55be2d912dca1ceaff2b773b8ffcc5a622dc8",
+    "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
+    "src/art/recipes.ts": "b3c6890ff3e025f14373f28f10a68f3eeeb54f8a733a26192233f81f0090b905",
+    "src/world.ts": "fd1c4d6ef6d9558280f6d6b032889777a50810e72a99c13205b4886f05027a44"
+  },
+  "wholeSrcIdenticalToArtCapture": false,
+  "finalDifference": "Pricing-only immediate feedback clear; final pricing full walkthrough rerun against final code",
+  "newTarget": false,
+  "imageReference": "existing approved repo PNG; reattached Library image unavailable, owner confirms same target",
+  "renderer": "Chromium ANGLE SwiftShader software WebGL; encoded video FPS is not physical game FPS",
+  "motion": "One 26-second chronological excerpt from retained 58.84-second original; no synthetic frames or cuts",
+  "evidence": {
+    "evidence/native-v8/replay.log": {
+      "bytes": 421,
+      "sha256": "67beb9a30e2f137d3025faa962d635b85a8275a326918698204bc5e1becbf447"
+    },
+    "evidence/native-v8/v8-rebuild.json": {
+      "bytes": 218,
+      "sha256": "ddfb2bdf6c843beaef437f7e3d77fc34389bfe314d8f261eaa9d7f95863dc53e"
+    },
+    "evidence/native-v8/asset-check.log": {
+      "bytes": 2917,
+      "sha256": "ded5b60c4ea48cb2991a39421c7dd11cf695215f34f4dfa17faf49353167e3ed"
+    },
+    "evidence/native-v8/v8-glb.json": {
+      "bytes": 4299,
+      "sha256": "13bc4bb6cb136cc25fbd849b7f9ef68c4e40a60a86f1b4e167e6ec45fd7bb511"
+    },
+    "evidence/native-v8/tests-checkpoint.log": {
+      "bytes": 18644,
+      "sha256": "ede4ee2f7f5ce14057b3a5d9269876a24c7aa2c3e9f5406a888e7f168c29e352"
+    },
+    "evidence/native-v8/build-checkpoint.log": {
+      "bytes": 5941,
+      "sha256": "92d3fae7fa9250cc9b0759ba8dacaf20a6d6b44279b5f04a29d5964634805837"
+    },
+    "evidence/native-v8/library-status.json": {
+      "bytes": 907,
+      "sha256": "7ccf26a468e2be0bb6816f9d7fa23ae0c34f4082ddf65148ad65762bf76f0e56"
+    },
+    "evidence/native-v8/content.log": {
+      "bytes": 599,
+      "sha256": "d8cf77a1e38e0b04929bd0774b8f25dee39e9ff7717ea0b8ef7fe1e5a477369b"
+    },
+    "evidence/native-v8/build.log": {
+      "bytes": 5941,
+      "sha256": "8b196d2581573e4e2c59593d31d2b30b4605c3f6897d7b71526035fb150003fd"
+    },
+    "evidence/native-v8/save-compatibility.json": {
+      "bytes": 699,
+      "sha256": "54a7d1e82e4b84536ec8a80de98acd939461e50e4f814fb602f8511c216440d4"
+    },
+    "evidence/native-v8/tests.log": {
+      "bytes": 18644,
+      "sha256": "32df6189ecd50aa6d9bc615c4327dff3981101b6e5f9a11680aa418116cd3320"
+    },
+    "evidence/native-v8/v8-preservation.json": {
+      "bytes": 281,
+      "sha256": "98f447ac302b63d032a3b8a4ec9c8fe833af8fae24b1dcaa7ba41a692acdbb89"
+    },
+    "evidence/native-v8/delivery/receipt.json": {
+      "bytes": 13933,
+      "sha256": "dd463b9f62709ab032196ef1e63da9248e553300a6de768f0d4daae8fae20035"
+    },
+    "evidence/native-v8/delivery/LittleShop-v8-deploy.tar.gz": {
+      "bytes": 3184867,
+      "sha256": "0c199367f738d14af3e6472a7f9ff607e6a4ed6de67238933e26f2360e54221e"
+    },
+    "evidence/native-v8/browser/motion.json": {
+      "bytes": 208518,
+      "sha256": "8486aa8e34990037df5658f83d1a3be8c51c2305ab5ae17a51b5fac57e0482a9"
+    },
+    "evidence/native-v8/browser/matched-camera.json": {
+      "bytes": 611,
+      "sha256": "c5df18b950d1e001cddeea569f991865c82a358cc188a745bd3f4c168c32bcc2"
+    },
+    "evidence/native-v8/browser/stock-regression.json": {
+      "bytes": 39788,
+      "sha256": "9cf85568314aff3f85f41ee77d699e758d36ae8bfbc8b94e1d570fe7694254cd"
+    },
+    "evidence/native-v8/browser/movement-work-purchase-uncut-26s.webm": {
+      "bytes": 407160,
+      "sha256": "ae3c514505b5fafa05e94e3969fda0a41a94879485c03d16c4f13a94b2cb2a45"
+    },
+    "evidence/native-v8/browser/movement-work-purchase-full.webm": {
+      "bytes": 2772487,
+      "sha256": "eeb11b0fef33004583ffcfd760db5c8983ca9280396d2d9f0abb35d3001f405a"
+    },
+    "evidence/native-v8/browser/pricing/pricing-375x812-en.png": {
+      "bytes": 68792,
+      "sha256": "fbd3def7c32613b7c52eca9ceabbe92f950e1530d9b81a30a7dd0e1884798092"
+    },
+    "evidence/native-v8/browser/pricing/pricing-375x420-zh-CN.png": {
+      "bytes": 32649,
+      "sha256": "d0d8a5aa2627b4c75df1c0a60e3d2653dc58c9db723fc9e6ea12bf33dd072302"
+    },
+    "evidence/native-v8/browser/pricing/pricing-interaction-full.webm": {
+      "bytes": 4764544,
+      "sha256": "d5c7a6be86310d52dde9bf44cd4c58b7e6280a9fddf443ba97c9b1da68a0081a"
+    },
+    "evidence/native-v8/browser/pricing/pricing-375x420-th.png": {
+      "bytes": 31126,
+      "sha256": "e7da46571dd0d0a87b42f309d0edc6049f36c7f386a2ba9b68ae54b2cd5b9248"
+    },
+    "evidence/native-v8/browser/pricing/pricing-320x420-zh-CN.png": {
+      "bytes": 32612,
+      "sha256": "db901de53bf25dd486ed3a422c8eeb7c0cdc05b10381efeb2826b267ba4e4737"
+    },
+    "evidence/native-v8/browser/pricing/pricing-320x812-th.png": {
+      "bytes": 61622,
+      "sha256": "e1eef0fabeba41ff267cf633b1e10725414d719021d48b0d4c452cfe78d61c50"
+    },
+    "evidence/native-v8/browser/pricing/pricing-320x812-zh-CN.png": {
+      "bytes": 61510,
+      "sha256": "7150f155942657d575cd803481415e5d25895be46429301df9c57349abc460b5"
+    },
+    "evidence/native-v8/browser/pricing/pricing-375x812-zh-HK.png": {
+      "bytes": 64260,
+      "sha256": "e91a173c931993b8630fd1cd172009dee50e4f1eb9c2696936217f6a0dd077fc"
+    },
+    "evidence/native-v8/browser/pricing/pricing-320x812-ja.png": {
+      "bytes": 64940,
+      "sha256": "6ddfcb7fb366cb1858db48e59894a5bcdbd5837c01a3a43d95de8c9803140ad4"
+    },
+    "evidence/native-v8/browser/pricing/pricing-375x812-zh-CN.png": {
+      "bytes": 64510,
+      "sha256": "0aeee7ea6fa5a0959b34304b3ff2f26715ec1f80d4c3b67beec9befd01fef0a3"
+    },
+    "evidence/native-v8/browser/pricing/pricing-375x420-en.png": {
+      "bytes": 34294,
+      "sha256": "0e5e53cd6bc20ea13681b91da66963fb376986b57a143f45d2150be6350cf42e"
+    },
+    "evidence/native-v8/browser/pricing/pricing-320x420-ja.png": {
+      "bytes": 33872,
+      "sha256": "2ebabdb55f6dd40eb39dc485edcf6f5cc73da668b8c0b5927802102caf2403d0"
+    },
+    "evidence/native-v8/browser/pricing/empty-slots.png": {
+      "bytes": 258627,
+      "sha256": "5f3d2521176c73dd01330fd509cdd6a419f691f95434fdce00ee6973a12f2533"
+    },
+    "evidence/native-v8/browser/pricing/results.json": {
+      "bytes": 28899,
+      "sha256": "c2731494f7f33052520e978054b2605aa44b300df139e98d9b65590a943edcb5"
+    },
+    "evidence/native-v8/browser/pricing/pricing-375x420-zh-HK.png": {
+      "bytes": 32556,
+      "sha256": "1419c30f332cfdabd41ae65254c0cca84aeefe92b7a27f1df40d757337348363"
+    },
+    "evidence/native-v8/browser/pricing/timeline.json": {
+      "bytes": 1448,
+      "sha256": "a6bb660fdb63c8ba4306964b1ec4eb634dc641771e2c3c9fba8449f0e6a6e864"
+    },
+    "evidence/native-v8/browser/pricing/pricing-320x812-zh-HK.png": {
+      "bytes": 61628,
+      "sha256": "c57fd04f42aff0cf6650dddc7c96877fff4f57be8d73575e909c888d0bb02be3"
+    },
+    "evidence/native-v8/browser/pricing/pricing-375x812-th.png": {
+      "bytes": 62833,
+      "sha256": "ca0904a9a3c3c9b8c80a5cb1db384132e3c295048817f73ca85a9109beaac93c"
+    },
+    "evidence/native-v8/browser/pricing/pricing-320x420-en.png": {
+      "bytes": 33885,
+      "sha256": "3eac83ddffe17e81b2580a5776de44b2af9c09d0b606bfa1a511ec4878d78b7a"
+    },
+    "evidence/native-v8/browser/pricing/pricing-320x420-zh-HK.png": {
+      "bytes": 32762,
+      "sha256": "2493b3541f533dfe09131431fc6a3240ad8460b708844e41c61fd4449f5d8ae7"
+    },
+    "evidence/native-v8/browser/pricing/pricing-320x420-th.png": {
+      "bytes": 31231,
+      "sha256": "fc908543981e9b1a1462b7f521b071701a4952f0aedcec3d277a6ea3c016af5d"
+    },
+    "evidence/native-v8/browser/pricing/pricing-320x812-en.png": {
+      "bytes": 64244,
+      "sha256": "2865999102f983767c6a3655d20829c878167ae28187f692c54c343f06ac2414"
+    },
+    "evidence/native-v8/browser/pricing/pricing-375x812-ja.png": {
+      "bytes": 66176,
+      "sha256": "f07a017eceb3f1f4adc7ed1cf80c70d49ea33a7f41d9b60d6f0d13dd9b3aed01"
+    },
+    "evidence/native-v8/browser/pricing/pricing-desktop.png": {
+      "bytes": 269684,
+      "sha256": "e2379e6fcb823fdfd4ab8366261c9defe1ef36b2c509b6a3004b65e941e3712c"
+    },
+    "evidence/native-v8/browser/pricing/pricing-375x420-ja.png": {
+      "bytes": 33623,
+      "sha256": "5c5fcada7d556089e38c1447ba521f0b0341b452cafcbb9c7fa2ff4af68b426a"
+    },
+    "evidence/native-v8/browser/before/character-close.png": {
+      "bytes": 646914,
+      "sha256": "d47f56e6b0ba6b192f1b19d90b322334e98640a168a7c1966b721492106f4e7c"
+    },
+    "evidence/native-v8/browser/before/shop.png": {
+      "bytes": 529092,
+      "sha256": "620dae041daef197aab3580e19926d8aad22940a174ceee683a204c72ede9a34"
+    },
+    "evidence/native-v8/browser/before/panorama.png": {
+      "bytes": 472348,
+      "sha256": "2453c9ea616bf8a4caae65b5977c0e9c45b0a6dba3cb27e1d82e659fa6089f6e"
+    },
+    "evidence/native-v8/browser/after/character-close.png": {
+      "bytes": 620500,
+      "sha256": "903d087ac2898ef7050bfeb13d00cb8f3afe84df882c7169f221e748bbd1c004"
+    },
+    "evidence/native-v8/browser/after/shop.png": {
+      "bytes": 509713,
+      "sha256": "97a3bb5aee87f3007be7dda4f411862c68d15bf2d53ac4d83f1672fbb2ba5f6a"
+    },
+    "evidence/native-v8/browser/after/panorama.png": {
+      "bytes": 452233,
+      "sha256": "8485a76aa638b91546beda5bd96213f9fd827b53c72739fd17589bcc46a10ba3"
+    }
+  }
+}

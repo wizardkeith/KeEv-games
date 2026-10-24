@@ -1,0 +1,22 @@
+{
+  "input": {
+    "libraryId": "libfile_8331a41ec92c8191a12e7a908c4d770a",
+    "resolvedName": "06-approved-target-browser.jpg",
+    "mime": "image/jpeg",
+    "status": "supported download helper failed; no readable local bytes or pixels",
+    "attempts": 1,
+    "targetClarification": "Owner confirms reattachment reinforces the existing target, not a changed target",
+    "expectedRegistryBytes": 234489
+  },
+  "output": {
+    "files": [
+      "KeEv_Game_V8_Before.png",
+      "KeEv_Game_V8_After.png",
+      "KeEv_Game_V8_Character_After.png",
+      "KeEv_Game_V8_Uncut_Motion_26s.webm"
+    ],
+    "status": "prepared upload helper failed during tool discovery: network; no upload prepared or finalized",
+    "newLibraryIds": []
+  },
+  "fallback": "Actually inspected unchanged approved repository PNG and Bible images; complete produced evidence in GitHub, no alternate storage URL or access bypass"
+}

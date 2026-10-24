@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "source": "Real prior v5 QA Sandbox export; never a player Normal save",
+  "importSha256": "cea5fe053b801f8a007d564e1a8c197240eaa0ccf1bf491154a8d33db800a8b0",
+  "checkedFields": [
+    "mode",
+    "shopId",
+    "shopName",
+    "companyName",
+    "logo",
+    "cash",
+    "purchases",
+    "inventory",
+    "shelves",
+    "reports",
+    "eventSequence",
+    "commandIds",
+    "tutorial",
+    "recovery",
+    "rankingEligible",
+    "schemaVersion",
+    "watermark"
+  ],
+  "reload": "full snapshot equal",
+  "followupPurchase": "one real unit committed",
+  "followupPrice": "990 JPY applied through new pricing row with same cash/stock",
+  "normal": "isolated baseline unchanged"
+}
