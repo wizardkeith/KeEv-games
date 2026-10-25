@@ -1,0 +1,53 @@
+{
+  "status": "pass",
+  "unchangedNineRecipeParts": [
+    "off.notebook",
+    "off.pencil",
+    "off.mug",
+    "off.tea",
+    "off.cookie",
+    "off.card",
+    "off.towel",
+    "off.tray",
+    "off.vase"
+  ],
+  "beforeRecipeMatchesReviewedMaster": true,
+  "unchangedPaths": [
+    "src/core",
+    "src/platform",
+    "src/content",
+    "src/locales",
+    "src/narrative",
+    "src/ui",
+    "src/presentation",
+    "src/main.ts",
+    "src/world.ts",
+    "src/style.css",
+    "src/art/sculpt-v10.ts",
+    "src/art/characters-v10.ts",
+    "src/art/native-characters.ts",
+    "src/art/back-display-v10.ts",
+    "src/art/native-display.ts",
+    ".openai",
+    "package.json",
+    "package-lock.json"
+  ],
+  "unchangedOtherFixtureGLBs": [
+    "assets/masters/native-v4/counter.glb",
+    "assets/masters/native-v4/display-1.glb",
+    "assets/masters/native-v4/display-2.glb",
+    "assets/masters/native-v4/display-3.glb",
+    "assets/masters/native-v4/product-off.card.glb",
+    "assets/masters/native-v4/product-off.cookie.glb",
+    "assets/masters/native-v4/product-off.mug.glb",
+    "assets/masters/native-v4/product-off.notebook.glb",
+    "assets/masters/native-v4/product-off.pencil.glb",
+    "assets/masters/native-v4/product-off.tea.glb",
+    "assets/masters/native-v4/product-off.towel.glb",
+    "assets/masters/native-v4/product-off.tray.glb",
+    "assets/masters/native-v4/product-off.vase.glb",
+    "assets/masters/native-v4/room.glb",
+    "assets/masters/native-v4/styling-v9.glb",
+    "assets/masters/native-v4/window-canopy-v9.glb"
+  ]
+}

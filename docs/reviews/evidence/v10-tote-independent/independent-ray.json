@@ -1,0 +1,53 @@
+{
+  "status": "pass",
+  "tolerance": "10micrometres for paper picking,2micrometres for seam/root picking; engine ray epsilon differs from exact authored-double triangle tests.",
+  "method": "Independent Babylon Mesh.intersects +Z/-Z rays against actual indexed production meshes; reads swept-ring vertices and verifies each ring straddles cloth support, not fixed old attachment Z or implementation surfaceZ.",
+  "print": {
+    "samples": 285,
+    "maxFrontOffset": 0.000600000000000489,
+    "minBackOverlap": 0.000049999999998662226
+  },
+  "seams": {
+    "samples": 50,
+    "maxCenterGap": 0.0011431468580292868,
+    "minOverlap": 0.0008449891801731498
+  },
+  "handles": [
+    {
+      "part": 1,
+      "ring": 0,
+      "x": -0.095,
+      "y": 0.281,
+      "z": -0.022543172529721146,
+      "support": -0.022543172529721156,
+      "gapMetres": 1.0408340855860843e-17
+    },
+    {
+      "part": 1,
+      "ring": 12,
+      "x": 0.09499999999500001,
+      "y": 0.2810000005700001,
+      "z": -0.023679163999407123,
+      "support": -0.02367916394063374,
+      "gapMetres": 5.877338199455906e-11
+    },
+    {
+      "part": 2,
+      "ring": 0,
+      "x": -0.09499999999999999,
+      "y": 0.281,
+      "z": 0.06345682747027885,
+      "support": 0.06345682747027859,
+      "gapMetres": 2.636779683484747e-16
+    },
+    {
+      "part": 2,
+      "ring": 12,
+      "x": 0.094999999995,
+      "y": 0.2810000005700001,
+      "z": 0.06232083612059289,
+      "support": 0.06232083605936589,
+      "gapMetres": 6.122699569566237e-11
+    }
+  ]
+}

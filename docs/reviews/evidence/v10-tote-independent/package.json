@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "candidate": "be2486c45c8a5b0ea8c6660a96915c0e0b07e45e",
+  "application": "b06247fcae6d02a69e8cff56e2ace124f4bfc883",
+  "srcTree": "219e499f7421cdb7896a6e01fea825d53f269b54",
+  "archiveEntries": 135,
+  "archiveBytes": 6304337,
+  "archiveSha256": "4b6d1d360489bd0034d12202f71de32c9b37af5f99110e241c3d67c47dc8297a",
+  "freshBuildPayloadsEqual": true
+}
