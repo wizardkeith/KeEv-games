@@ -1,6 +1,12 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-25T17:11:02+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-25T17:37:40+08:00** (Asia/Hong_Kong).
+
+## V10 tote P2 author fix — awaiting independent re-review — 2026-10-25T17:37:40+08:00
+
+- [Draft PR #7](https://github.com/wizardkeith/KeEv-games/pull/7), branch `codex/game-v10-art-life`, pushed/read-back candidate **`be2486c45c8a5b0ea8c6660a96915c0e0b07e45e`**, application **`b06247fcae6d02a69e8cff56e2ace124f4bfc883`**, src tree `219e499f7421cdb7896a6e01fea825d53f269b54`. Only tote construction/anchors and derived assets changed: centred thickness/outward skins, actual touching paper layer/seams/four handle roots; shared cloth/apron,other9SKU/UI/core/saves/accounting/motion unchanged. [Fix report/before-after/actual play evidence](https://github.com/wizardkeith/KeEv-games/blob/be2486c45c8a5b0ea8c6660a96915c0e0b07e45e/docs/V10_TOTE_P2_FIX_zh-HK.md).
+- Author checks:174tests/build/validate/replay/asset-check;245 deterministic assets,276 protected files/original11commits,139GLBs0errors/warnings;21,144 actualGLB/Web values match. Matched front/side render plus actualHigh Sandbox buy2/place/reload/Normal-baseline preservation pass. New135-entry package6,304,337bytes SHA256 `4b6d1d360489bd0034d12202f71de32c9b37af5f99110e241c3d67c47dc8297a`; [receipt](https://github.com/wizardkeith/KeEv-games/blob/be2486c45c8a5b0ea8c6660a96915c0e0b07e45e/evidence/native-v10/tote-fix/delivery/receipt.json). Old package/evidence/LibraryZIP remain original review baseline, not the fixed revision.
+- **Release hold awaits independent P2 re-review; no author claim of acceptance.** Complete original review below preserved. Target art remains unaccepted;45s idle-close/physicalGPU/FPS/audio/native limits unchanged. **Not merged/published; publicV16 unchanged.** Main update is this documentation pointer only; no Site/playerNormal/localUnity/Blender/permissions or unrelated expansion. No denied/pending/uncertain mutation.
 
 ## V10 independent review — 2026-10-25T17:08:53+08:00
 
