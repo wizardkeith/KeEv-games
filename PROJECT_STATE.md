@@ -1,11 +1,12 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-25T09:38:33+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-25T10:33:24+08:00** (Asia/Hong_Kong).
 
-## Current unmerged iteration — V9 scene art and set-status clarity — 2026-10-25T09:38:33+08:00
+## Current unmerged iteration — V9 scene art and interactions — 2026-10-25T10:33:24+08:00
 
-- [Draft PR #6](https://github.com/wizardkeith/KeEv-games/pull/6), branch `codex/game-v9-scene-art`, first pushed checkpoint `14d573a098ef4f599ab641c9852433f8c08a40b9`. Art/source iteration in progress: 153 tests/build pass; first actual render judged too dark, second lighting/IBL comparison underway. This is not final visual acceptance or review-ready handoff. Owner separately authorized accessible set-status explanation with neutral tier fallback; implementation/checks still pending.
-- Public remains **V15**, source/receipt below. No merge/deploy, economy/save/stock/pricing/camera or local Unity change. Story/gameplay/new shops/set expansion frozen. Final exact candidate/evidence and independent review to follow; preserve this minimal pointer on main without presenting branch work as merged.
+- [Draft PR #6](https://github.com/wizardkeith/KeEv-games/pull/6), branch `codex/game-v9-scene-art`, pushed checkpoint `c99e157ededafe8053ad267c74778a4ec768a07b`; runtime source `0d8404c4a6b6b48faa2e2ad5494d1dead7ebbe8e`. **In final evidence/handoff preparation, not merged/published.** Whole-scene light/material/styling and real staff walk/greet/cashier/return are implemented; confirmed aggregate sale-margin annotations and accessible set status/help are separate presentation changes. Existing inventory/pricing lists, economy/saves/locales and camera behavior retained.
+- Current checks: **162 tests**, build/content/replay/asset-check; **72 GLBs** zero errors/warnings, 225 tracked asset/public rebuild parity, 192 protected files unchanged. Actual browser passes 20 pricing + 20 stock + 20 set five-locale short/narrow cases, old QA Sandbox import/reload/further buy/price, and 168.6s Low/Minimal real greeting/work/positive+negative settlement recording. Positive batch gross margin +JPY1400; loss batch −JPY1420; explicitly aggregate realized gross margin before overhead, no fictional per-customer income. Final visual target/physical GPU/audio/Safari/native remain open. Last export tangent warnings were fixed and rerun clean; final evidence/package SHA to follow.
+- Three HUD-placement PNGs not viewed: latest supported download plus one local retry failed. Per owner scope reduction, 本店加乘 remains handoff-only planned layout; no fake live ability values or guessed position. Desk prototype has no assigned tier; neutral fallback is explicit. Public remains **V15** below; no Site/local Unity/shutdown operation. Story/gameplay/new shops/set expansion frozen. Parent coordinates independent review before integration/publication.
 
 ## Current public release — V8 art and Operations pricing / Site v15 — 2026-10-25T09:07:53+08:00
 
