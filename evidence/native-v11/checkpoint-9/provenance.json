@@ -240,5 +240,31 @@
       "sha256": "6400c2ffb1187f663d86fe8e38393448abeb0ad7471ba983f8c83407b388c90d",
       "bytes": 965940
     }
+  },
+  "fresh66FemaleMovement": {
+    "directory": "female-movement",
+    "sourceCheckpoint": "44f445d50f8960de9740dba8660cc236756a0492",
+    "immutableBuild": "66",
+    "durationSeconds": 87.24,
+    "result": {
+      "leavingObserved": true,
+      "fullReturnObserved": true,
+      "errors": [],
+      "provenance": "Actual UI-created fresh Sandbox, High, natural visitor-b entry/browse/leave; no fabricated sale, no simulation/pose injection; only ordinary player camera input",
+      "limits": "Cloud SwiftShader; endpoint not observed is not passed; no physical device FPS/audio/native certification"
+    },
+    "viewed": [
+      "exit-walk.png",
+      "frame39.png"
+    ],
+    "limits": "Only 89 CDP frames across 87.24s in cloud software capture; observed lifecycle and sampled garment/bag contact, NOT certification of full smoothness or physical GPU FPS; no sale in ambient-only capture",
+    "hashes": {
+      "exit-walk.png": "e3d6d7e18d300b5d7b1755aa203bf27a4baf1fc09324efec60da5958d1d43513",
+      "frame39.png": "55f3e104078c25b89acd8c657c16d9ff6108f41d2d7cc6f4e70f0eabfdd2f7ae",
+      "results.json": "2924b7439a453465ff7d74fd632fc6e45c3d169a634d74b86868c6f24383a638",
+      "recording-provenance.json": "f5f9fb8408a7ff527c3fb245f3d381e01b653abfe7be3b4434f763ce48c265e9",
+      "timeline.json": "e1dbc44519e806b611fb78e7973fe74067c5b54df6b2cc390ce278efd6da45a0",
+      "uncut.webm": "3f8d65f847d785e2455701388e579b241bd99a98847e48765236257d769379e0"
+    }
   }
 }

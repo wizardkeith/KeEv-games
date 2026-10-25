@@ -16,7 +16,7 @@
 - [真正DEV遊戲50mm checker](../evidence/native-v11/checkpoint-9/checker-after-female-in-game.png)：檢查UV方向／密度，**不是發佈美術**。第一張RawTexture被clamp成藍邊已排除，現明確repeat；正式JS不含checker開關。未settle的camera A/B曾嚴格失敗，後改等inertia=0，沒有降低比較標準。
 - **193tests/build/validate/replay/asset-check，139GLB零error/warning，305protected/history通過**。Blender UV原座標／法線／pivot、stale拒絕、物理bag柄接觸／步行覆蓋、四種貼圖／ORM／repeat／sheen parity均通過。[全部來源／payload／原始紀錄與限制](../evidence/native-v11/checkpoint-9/provenance.json)。
 
-**尚非完成／不宣稱接受：**正常鏡頭材質差異仍須視覺覆核，整體原圖品質／畫風仍未達。fresh66女顧客完整運動實拍正在完成，不把較早64完整回店影片說成66；目前也不等於新一輪fullrelease或實體GPU/FPS/audio/native驗收。後續優先整束花的分枝／花團與留白、商品規律度、較淡遠屋頂／樹層。公開仍V17，PR8維持草稿，沒有合併／發佈或內容擴張。
+**尚非完成／不宣稱接受：**正常鏡頭材質差異仍須視覺覆核，整體原圖品質／畫風仍未達。fresh66女顧客[87.24秒自然入店／瀏覽／離店實拍](../evidence/native-v11/checkpoint-9/female-movement/uncut.webm)及[原始狀態](../evidence/native-v11/checkpoint-9/female-movement/results.json)已完成，0pageerror，leaving與outside觀察。已看離店及39秒frame；89個CDP畫面／87秒，不能由此宣稱完整流暢度或實體GPU/FPS。沒有銷售，不把較早64影片說成66；目前亦不等於新一輪fullrelease或audio/native驗收。後續優先整束花的分枝／花團與留白、商品規律度、較淡遠屋頂／樹層。公開仍V17，PR8維持草稿，沒有合併／發佈或內容擴張。
 
 ## 第八個 checkpoint — 有效布料UV、實體花瓣／樹冠，材質門檻仍開放
 

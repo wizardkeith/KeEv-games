@@ -1,0 +1,7 @@
+{
+  "leavingObserved": true,
+  "fullReturnObserved": true,
+  "errors": [],
+  "provenance": "Actual UI-created fresh Sandbox, High, natural visitor-b entry/browse/leave; no fabricated sale, no simulation/pose injection; only ordinary player camera input",
+  "limits": "Cloud SwiftShader; endpoint not observed is not passed; no physical device FPS/audio/native certification"
+}
