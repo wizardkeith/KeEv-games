@@ -2,9 +2,10 @@
  * Real indexed recipe geometry; metres/RH/Y-up. No sale/quest authority.
  * Fixed vignettes live outside customer corridors and interactive tabletop stock.
  */
+import {buildV10Styling,buildV10Canopy} from './shop-v10';
 import type {Part,V3} from './recipes';
 const p=(shape:Part['shape'],size:V3,at:V3,color:string,role:Part['role']='wood',extra:Partial<Part>={}):Part=>({shape,size,at,color,role,...extra});
-export function nativeStylingRecipe():Part[]{
+export function legacyV9StylingRecipe():Part[]{
  const out:Part[]=[];
  // Quiet wall panelling and cap rails give the large wall a material hierarchy.
  for(const x of [-3.48,-2.48,-1.48,-.48,.52,1.52])out.push(p('box',[.018,.79,.025],[x,.56,3.205],'#C7AF92'));
@@ -33,7 +34,7 @@ export function nativeStylingRecipe():Part[]{
  return out;
 }
 /** Airy branching canopy outside the existing window, never new terrain. */
-export function nativeWindowCanopy():Part[]{
+export function legacyV9WindowCanopy():Part[]{
  const out:Part[]=[];
  for(let i=0;i<26;i++){
   const a=i*2.39996,y=1.48+(i%5)*.15,z=Math.cos(a)*1.27,x=-5.51+Math.sin(a)*.38;
@@ -41,3 +42,5 @@ export function nativeWindowCanopy():Part[]{
  }
  return out;
 }
+
+export const nativeStylingRecipe=buildV10Styling,nativeWindowCanopy=buildV10Canopy;

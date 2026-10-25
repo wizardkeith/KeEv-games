@@ -1,14 +1,17 @@
 {
   "version": "native.products.v3",
   "file": "assets/masters/native-v3/products-v3.json",
-  "bytes": 19621,
-  "sha256": "339b628354146e487acb9a22ca3dce2105bace91948097f2ee9c9f1fc2afb05b",
+  "bytes": 1853024,
+  "sha256": "3822fef2a7da48941489272f4eb0b6a3a7de27f2c2731e7c6f3adc59a3bdf105",
   "rebuild": "node --import tsx tools/export-native-products.ts",
   "sourceSha256": {
-    "src/art/native-products.ts": "eb2d2b537568cdbe69def1261a0f68531f67227c8bbced854aefe8ebf41ab3e1",
+    "src/art/native-products.ts": "b96bc68161d184fd38855e3a482452a485ece3546f456b76107212449f1e933d",
+    "src/art/products-v10.ts": "cb0011769f27efe1169cef83ccf4c201bed26eab3843d3a435a22f40f18d753f",
+    "src/art/sculpt-v10.ts": "114a810e5245f58832dc5d12641e20e6ca1b7d159a2410d7d72cd3b3a141546c",
+    "src/art/shop-v10.ts": "3388383dcc9b072cc384250bb4168edebeb50fd9eaee1e264c5e9c0ba052fbde",
     "src/art/recipes.ts": "b3c6890ff3e025f14373f28f10a68f3eeeb54f8a733a26192233f81f0090b905",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
-    "tools/export-native-products.ts": "b2c9c97bec85006a3b9e36015bd9b98cad747ccaf0174ac52afc90d1a110931d"
+    "tools/export-native-products.ts": "d224207c198b0d8b0d1ca9a69ecee38cfe1dcb097b79b634d5e913482e9ab5a6"
   }
 }

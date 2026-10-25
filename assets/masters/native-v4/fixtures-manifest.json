@@ -8,104 +8,104 @@
     {
       "id": "room",
       "file": "assets/masters/native-v4/room.glb",
-      "bytes": 714720,
-      "sha256": "c72802d5c0ba9323f92ea073719191d91f4d68edb1d3ff964b2391ad9bf3272f"
+      "bytes": 3542020,
+      "sha256": "9e5eaa886649e98132dc4d255e5a8357a281dddbb96b90af62e888e9dd608e86"
     },
     {
       "id": "styling-v9",
       "file": "assets/masters/native-v4/styling-v9.glb",
-      "bytes": 384708,
-      "sha256": "97fad037a680007e5eb579ba842da8d0b45ef3fc9ad3211e53af5bde7122de6e"
+      "bytes": 343448,
+      "sha256": "055f896ee6e5c14881af2d17ad4b4f8dda92cf5011a95ee0a9b746deb13072d8"
     },
     {
       "id": "window-canopy-v9",
       "file": "assets/masters/native-v4/window-canopy-v9.glb",
-      "bytes": 153272,
-      "sha256": "8546d985fa1892bfb5cb8802819023c497f968d4b638a020fc65867d44ced067"
+      "bytes": 408872,
+      "sha256": "ef555e0e9952f38d92a513d519cd9300bfc8150e2ca63860c2fe0e11d30d5e5e"
     },
     {
       "id": "counter",
       "file": "assets/masters/native-v4/counter.glb",
-      "bytes": 248392,
-      "sha256": "312b2a147d861f7f2422b6fbe7951b40bae8458a894ced8220ca286af0198d02"
+      "bytes": 249640,
+      "sha256": "ce100e782f4a11fefc4a03a9b5f5d3acc1f5b72b46a0d5c90dffce4039a0c4d5"
     },
     {
       "id": "display-1",
       "file": "assets/masters/native-v4/display-1.glb",
-      "bytes": 258532,
-      "sha256": "3cb3f0eba869b64e3d1083c440d59524dd09c2f3f8a110f2a67b83975c7e163e"
+      "bytes": 261076,
+      "sha256": "edd2fccafba381db367aebb5481ab2f1fc2ef1d9cd950741ee8dde61dc978149"
     },
     {
       "id": "display-2",
       "file": "assets/masters/native-v4/display-2.glb",
-      "bytes": 258564,
-      "sha256": "92869e093b9eb5f7724d211e83920404fc3289636073e0c0935a313b7f869283"
+      "bytes": 261088,
+      "sha256": "001fb56688ee0893e338d6a1c3f74a425f3c98191a48ebc0bd3fc6970f534088"
     },
     {
       "id": "display-3",
       "file": "assets/masters/native-v4/display-3.glb",
-      "bytes": 258532,
-      "sha256": "11335e67f768baef419b5409fa56613de9acf4c868af5356416430c5bec1e1d0"
+      "bytes": 261076,
+      "sha256": "5c567d53cecbee53ea913b24c1ecb52ce86ce14f126298df94f386ccdb727238"
     },
     {
       "id": "product-off.notebook",
       "file": "assets/masters/native-v4/product-off.notebook.glb",
-      "bytes": 47760,
-      "sha256": "37916b618742c8e9a84ae809f122cbdb34227dc4858b1e320371102c6889e490"
+      "bytes": 2514708,
+      "sha256": "7716ca5e470ef09b02242863744d66efe8c8054e223d25cf5cdd1b30e14c1f6b"
     },
     {
       "id": "product-off.pencil",
       "file": "assets/masters/native-v4/product-off.pencil.glb",
-      "bytes": 195764,
-      "sha256": "6748bcddc171ab639ea4416bdc869ad2ac6eb3b9fd603b1c12bb0c24f39c2df0"
+      "bytes": 164260,
+      "sha256": "5b73e7633d866ef32259f99be3cec57b2bb84bdb4884f6c7b02acebf5c7c5a12"
     },
     {
       "id": "product-off.mug",
       "file": "assets/masters/native-v4/product-off.mug.glb",
-      "bytes": 36668,
-      "sha256": "3eb7fd7ca5d9371514fe9df11b87df4660c3bb13e651adac0500e78fc390651e"
+      "bytes": 46556,
+      "sha256": "70dc0d94b41226db8281af2569283f7ba43bc971a23341004cbff8bca4ff26d5"
     },
     {
       "id": "product-off.tea",
       "file": "assets/masters/native-v4/product-off.tea.glb",
-      "bytes": 34560,
-      "sha256": "311c03cb15d7b2d79fd97489818d57b0509c98f554c4fd6e7bb5428f7aef99a6"
+      "bytes": 2478056,
+      "sha256": "f2be4f9272ded4f00e3a27f5c374a430ac64ccd2a467f541684707774068dbfa"
     },
     {
       "id": "product-off.cookie",
       "file": "assets/masters/native-v4/product-off.cookie.glb",
-      "bytes": 27108,
-      "sha256": "388a90d01d5ba6387924d6613c285b2d0a71714a5800e9087ec38ecd4f4afd7d"
+      "bytes": 60216,
+      "sha256": "0808dcf4c2a33b3c8f93b5ba5e160806d5dcddd2ebcf6c19bf0742628a200cd8"
     },
     {
       "id": "product-off.tote",
       "file": "assets/masters/native-v4/product-off.tote.glb",
-      "bytes": 46924,
-      "sha256": "c469b0b85ce03ca26283e8a4f371536ab9fcc7991edce95dd22d1c09111e6278"
+      "bytes": 2492524,
+      "sha256": "c56f2a45f3d12b345859d425e1204791b301518b4caec5aedf81a9c776aa681f"
     },
     {
       "id": "product-off.card",
       "file": "assets/masters/native-v4/product-off.card.glb",
-      "bytes": 15696,
-      "sha256": "5bba32a3bd035bbdf97d84a59c785dc2091915d7c4650be30dfd70b4521027ae"
+      "bytes": 2448888,
+      "sha256": "2bd82a0478b1eb0f1e861d7330619199ef21877b0e68c09667ce434f158f9dd0"
     },
     {
       "id": "product-off.towel",
       "file": "assets/masters/native-v4/product-off.towel.glb",
-      "bytes": 23736,
-      "sha256": "a5113c5186e0d3e8d0a46f4d024ce5efd41e7bae4cd381bc41d06b91ea782d9e"
+      "bytes": 2478736,
+      "sha256": "080658fc59d760b49a5a49e642c87323c21316cd9808a5aa80c408ec92a497dd"
     },
     {
       "id": "product-off.tray",
       "file": "assets/masters/native-v4/product-off.tray.glb",
-      "bytes": 201244,
-      "sha256": "82055376561aa05ff56d729606b531778d2af6dc84b0c7b7af898c2d9b2e18f2"
+      "bytes": 165328,
+      "sha256": "1221d87924714025331d8b205cabb95aa3be99fa846f65bbfdd872bbbc2ff211"
     },
     {
       "id": "product-off.vase",
       "file": "assets/masters/native-v4/product-off.vase.glb",
-      "bytes": 17852,
-      "sha256": "c156cb910c7103840ba9efefd678079fe62d9b4abb2e9ac3ccc51e4c37531cbc"
+      "bytes": 54680,
+      "sha256": "28c6f15b48cb004d2e20a4c052d0f743f9ffe3bd8bd1efc893328fdd0b2d016c"
     }
   ]
 }
