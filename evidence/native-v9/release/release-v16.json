@@ -1,0 +1,77 @@
+{
+  "project_id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+  "url": "https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site",
+  "edition": 16,
+  "source_commit": "8277b326ddbdac71c128dc91b07b930a315904f5",
+  "merge_commit": "8277b326ddbdac71c128dc91b07b930a315904f5",
+  "reviewed_candidate": "85bebba9fc1419a8f01b18e46ed821cd1a1e24b2",
+  "application_commit": "cf28233398c8e492994908224cf9e3d4a462064c",
+  "src_tree": "8f668f05af7f5711c72afd5b9f9bbee59ea86e17",
+  "independent_review_commit": "4c5d9b6276f5b09047b4d1bb4f9174ccf0dc9366",
+  "saved_version_id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d~appgver_bda408a7746c8191a3fd020e77ac6be4",
+  "deployment": {
+    "id": "appgdep_6adda0ffd71481919eea0f00198fd3d8",
+    "project_id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+    "title": "下一站・小店物語 — W0+W1",
+    "version_id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d~appgver_bda408a7746c8191a3fd020e77ac6be4",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6ad82a08ed2881918ebcc2dd206a122d",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-25T06:26:22.572309+00:00"
+  },
+  "provider_archive": {
+    "archive_format": "tar",
+    "sediment_file_id": "file_0000000063488206b7cbd7903cb90c24",
+    "content_hash": "sha256:767910714bcebd6266854066ac9d449e1a7e98434ba937b7811e1b251563e0df",
+    "size_bytes": 8345600,
+    "file_count": 126
+  },
+  "original_gzip": {
+    "sha256": "4d3e846f0b487b02d1685a2fa2480fa43bc780e04c943af9a888c1b635d53606",
+    "bytes": 3690593,
+    "runtime_files": 125,
+    "archive_files": 126,
+    "all_payloads_match_fresh_merged_build": true
+  },
+  "site_readback": {
+    "id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+    "status": "active",
+    "latest_version_number": 16,
+    "current_live_url": "https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site",
+    "access_mode": "public",
+    "policy_revision": 2
+  },
+  "source_sync": {
+    "automatic_publication": false,
+    "publication_window": null,
+    "non_force_ancestor_batches": [
+      "600b539a23e577e83d014b4f4c809e59f3b7648e",
+      "0e4fff3c400ea02eedaa69e01dd08c79be171627",
+      "85bebba9fc1419a8f01b18e46ed821cd1a1e24b2",
+      "8277b326ddbdac71c128dc91b07b930a315904f5"
+    ],
+    "all_remote_readbacks_match": true,
+    "site_stayed_v15_until_final_save": true,
+    "credential_session_closed": true
+  },
+  "verification": {
+    "native_terminal_success": true,
+    "source_archive_version_url_public_audience_readback": true,
+    "cloud_live_payload_fetch": false,
+    "cloud_live_sandbox_smoke": false,
+    "reason": "Prior public proxy CONNECT403 remains a restriction; not retried or bypassed. Parent coordinates fresh isolated local Sandbox after Wix finishes.",
+    "independent_checks": "165 tests/build/content/replay/asset-check;139 retained GLBs;225 deterministic asset rebuild;247 protected files;179.32s actual Low/Minimal motion;60 unchanged locale UI cases explicitly reused.",
+    "fresh_release_checks": "Merged build, exact source/config/asset comparison, actual126-entry archive parity and deterministic fresh merged-source gzip parity.",
+    "limitations": [
+      "Two180s High work-capture timeouts remain failures;45s clock-lag diagnosis is not High acceptance.",
+      "Final target art, physical GPU/FPS/Safari/audio/true hidden-tab/native remain open.",
+      "No story/shop/set/ability expansion, player Normal mutation or local Unity operation.",
+      "Owner cancelled shutdown; no shutdown."
+    ]
+  }
+}

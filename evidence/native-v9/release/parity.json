@@ -1,0 +1,516 @@
+{
+  "source": "8277b326ddbdac71c128dc91b07b930a315904f5",
+  "reviewedCandidate": "85bebba9fc1419a8f01b18e46ed821cd1a1e24b2",
+  "srcTree": "8f668f05af7f5711c72afd5b9f9bbee59ea86e17",
+  "runtimeFiles": 125,
+  "archiveFiles": 126,
+  "archiveSHA256": "4d3e846f0b487b02d1685a2fa2480fa43bc780e04c943af9a888c1b635d53606",
+  "archiveBytes": 3690593,
+  "allPayloadsByteIdentical": true,
+  "runtimeAssets": {
+    "dist/index.html": {
+      "sha256": "c04e1b9d7eb09f9499125559b9c7fe5ebf8f31b1ec1500b6a92dc842aaa81a2a",
+      "bytes": 685
+    },
+    "dist/fonts/NotoSansHK.ttf": {
+      "sha256": "49ed803874550e473cd9ca117101dc0c52efcb4048c0db114aae80e4fbc98f18",
+      "bytes": 357952
+    },
+    "dist/fonts/NotoSansJP.ttf": {
+      "sha256": "61c98a4f9fac39f1f68f9f0a52a0b816fb69ba84d68c2780a2e364f96ad27390",
+      "bytes": 354672
+    },
+    "dist/fonts/PlusJakartaSans.ttf": {
+      "sha256": "99c2de7a89fa5af7facb4b4e6370787d86e63fa69711f38a35f9ecf304c9efcc",
+      "bytes": 34096
+    },
+    "dist/fonts/NotoSansThai.ttf": {
+      "sha256": "980bcfaee0273a4e5ba1d497646e26e0ac60abb578978955d9dd16ece7097182",
+      "bytes": 112488
+    },
+    "dist/fonts/NotoSansSC.ttf": {
+      "sha256": "6cc44f4ea674d50ed753938b75532400ba973cda0601c28af9c390f5f4c8b550",
+      "bytes": 410788
+    },
+    "dist/assets/shadowMap.vertex-C0gYP_LN.js": {
+      "sha256": "7bb685392fe5f1f66724bc41ba282da247315c8f79b078aa326865be10ec1d4c",
+      "bytes": 4362
+    },
+    "dist/assets/envTextureLoader-CfO7-0GX.js": {
+      "sha256": "a8ab0b21babb2bcf522fae0d9c6bfa4951e2dc2dcd5cd27880676abbed13875a",
+      "bytes": 581
+    },
+    "dist/assets/counter.glb": {
+      "sha256": "4abfa586bcd31bae50b75a264f32415e24d9a3f6592629cc71062bc66f5c68bb",
+      "bytes": 1592
+    },
+    "dist/assets/depthBoxBlur.fragment-DDqSY_oO.js": {
+      "sha256": "0d7d8a3cc873a646eb1905e355c047f573aa722f73d9aaf1af806982c186db9b",
+      "bytes": 561
+    },
+    "dist/assets/shadowMap.fragment-DtmUdJUI.js": {
+      "sha256": "78a80e92b025e4b365cfc18d97e54c480a07a3a637666673a5a254a3af5b6386",
+      "bytes": 3060
+    },
+    "dist/assets/pbr.fragment-DO6Kr7w6.js": {
+      "sha256": "e37ca238e6868165d5813068640785768ecfb3e673cfb1307a92903171a61428",
+      "bytes": 204966
+    },
+    "dist/assets/pbr.vertex-D03yfEGw.js": {
+      "sha256": "9318dd6ed82ccce6d799122223b89920e16abcd94230f2943a14353b2a6c0741",
+      "bytes": 23924
+    },
+    "dist/assets/shadowMap.vertex-DUFQzGDK.js": {
+      "sha256": "2e70fcedf6427e602cee0d6ac76257c51abe7cff131f5e42ab3812921ba658f7",
+      "bytes": 4451
+    },
+    "dist/assets/kernelBlur.vertex-BQ4LkFyZ.js": {
+      "sha256": "02f079dd309f08779f80a7e78fd7345bc48c4341e0be437e4e284f1d24194d15",
+      "bytes": 790
+    },
+    "dist/assets/shadowMap.fragment-DPtDNTiN.js": {
+      "sha256": "a5bd47cde5a7b2e52592e7f41b481b4d23913ab0462e72511e8c1a3533f2698e",
+      "bytes": 3691
+    },
+    "dist/assets/depth.vertex-CGBdbRtd.js": {
+      "sha256": "0d0af820af89b7a7a3f5acb8d68925f4de513612016e19985cbdb6a6964487d9",
+      "bytes": 2057
+    },
+    "dist/assets/shadowMapFragmentSoftTransparentShadow-BFgLBLpS.js": {
+      "sha256": "3a2d05ff5acce4c63b9de0c6fb7d5402033265d53b57aadd523c723b188cc15b",
+      "bytes": 397
+    },
+    "dist/assets/helperFunctions-BmpvPhGs.js": {
+      "sha256": "a49e3221abf7d31a6bc2cd0a846fc109054cf3dd8425569f71265c73477f0278",
+      "bytes": 5304
+    },
+    "dist/assets/meshUboDeclaration-Dt6f3WC7.js": {
+      "sha256": "460d4e787a2b73fa9a7a2a27c2a04e4e47a4c3d6efc0a4b8d778e8fee472b797",
+      "bytes": 561
+    },
+    "dist/assets/pbr.fragment-cncMsnRr.js": {
+      "sha256": "6eeb19ace4f98ef58a299a89f882f8d64206dd5c7ea74925b78f5986231f1fea",
+      "bytes": 213799
+    },
+    "dist/assets/dds-B6YgRjE6.js": {
+      "sha256": "9eda1874d36bfb9988535a402ecc9b03467cf68bbe69c81dd806d586bcaf12dc",
+      "bytes": 7025
+    },
+    "dist/assets/kernelBlurVaryingDeclaration-Rs3laCJV.js": {
+      "sha256": "7ad54f50d3093f805a344cd003cf81260c4c3d71d1f0620342fdb9f5ec09c28a",
+      "bytes": 180
+    },
+    "dist/assets/rgbdDecode.fragment-BulxUMNU.js": {
+      "sha256": "83aabd70c01f0f9c017c79b7b41963d65c423e2a27e8713578259b436f30b282",
+      "bytes": 576
+    },
+    "dist/assets/meshUboDeclaration-CB0TanC7.js": {
+      "sha256": "24b2a322248643f54f2909d34e51585c5fae413fd833b63e972c5aacbe83a715",
+      "bytes": 557
+    },
+    "dist/assets/kernelBlur.fragment-LqoGQ39l.js": {
+      "sha256": "0e5deb838ee1d0d1a88cc7f39fca82025d30e073242a243987dab722b16d2e4e",
+      "bytes": 2127
+    },
+    "dist/assets/packingFunctions-Ce3ZtJQv.js": {
+      "sha256": "79256694ef6ba81cbd580f586e97e2448437b26a839444615b8b914ae3e185da",
+      "bytes": 521
+    },
+    "dist/assets/iesTextureLoader-CnoF5oX7.js": {
+      "sha256": "a223d22859c7e4eb3b577e450297f008dc247ec6f160bbbfc4aad3772d453687",
+      "bytes": 2727
+    },
+    "dist/assets/logDepthDeclaration-Cp3N5dAZ.js": {
+      "sha256": "02adb23efe94ddc26e13bb3f5e29067a621cfe0d5cae94897b1d8afc8706f5e8",
+      "bytes": 15700
+    },
+    "dist/assets/rgbdDecode.fragment-C5-YJGLf.js": {
+      "sha256": "edbe82cda661fa0d5f238624937969ece1400a84b6a9972903bccc390d97a415",
+      "bytes": 441
+    },
+    "dist/assets/basisTextureLoader-6Jtnly0Q.js": {
+      "sha256": "09eb7692634273c0c8580b20acc3ecfbdf0572642ffce998ca4daac7e019ad23",
+      "bytes": 8209
+    },
+    "dist/assets/world-CnhgMqDs.js": {
+      "sha256": "484964103a3b9a57019d695bc8c5d559edf67350096266c4e2ccee6b54a1db90",
+      "bytes": 1340298
+    },
+    "dist/assets/pass.fragment-B_gJfQqm.js": {
+      "sha256": "1bd3313d680ca5adfc6c5d29de49844368bf7851d1372cb690ba037fdc64076e",
+      "bytes": 479
+    },
+    "dist/assets/instancesDeclaration-Dv0MV_Et.js": {
+      "sha256": "874fd139dc1f29cbebd7d30e61feca196c0354b572fee2e3db372a4fab84da01",
+      "bytes": 998
+    },
+    "dist/assets/shadowMapFragmentSoftTransparentShadow-BetnF3HZ.js": {
+      "sha256": "e5479ebe8a2fdd207fec7b2639e789e7042e2b0c1876285197affd1e0514a781",
+      "bytes": 432
+    },
+    "dist/assets/ddsTextureLoader-xhCQYRuA.js": {
+      "sha256": "e3b654b57fb0646a626d1dbac4de533a4975302b05b5e8e95bc2ee3fc04c8ade",
+      "bytes": 1289
+    },
+    "dist/assets/pass.fragment-BHsoCjve.js": {
+      "sha256": "c1865dddf248af64345dad9b88efa1287e9d7a00eef9c46ef8c82071c728f788",
+      "bytes": 345
+    },
+    "dist/assets/clipPlaneVertex-CCD548y0.js": {
+      "sha256": "f62bf730f379c7d6c3158151d6f57844bd2095afa525679dcdb5f37f7f9edaab",
+      "bytes": 14119
+    },
+    "dist/assets/passCube.fragment-svzS820I.js": {
+      "sha256": "5edb125203e939586738431ff8f15ab781065a640935af7067db0f2369f287f7",
+      "bytes": 850
+    },
+    "dist/assets/clipPlaneFragment-02pNJJ6W.js": {
+      "sha256": "168c1a9d5ded477b4cba518d88a4981e77a30dcc0b07e7dee8be704f894007f9",
+      "bytes": 1207
+    },
+    "dist/assets/depthBoxBlur.fragment-BfcctuZZ.js": {
+      "sha256": "4fd780b56829788e23b96dbab571f5ba4829b40633af31ad6f6bce25c6bb7cb3",
+      "bytes": 740
+    },
+    "dist/assets/kernelBlur.vertex-ClccdJE3.js": {
+      "sha256": "c52e6eb25d17e00f6253683910d3eafe7a29751a38d6acaf3434d2588b9199c0",
+      "bytes": 933
+    },
+    "dist/assets/postprocess.vertex-Djw75GSv.js": {
+      "sha256": "c28c22557cb07b4ba933dc3a3e184c06ac047ace6afd41503c39748ce6878b3f",
+      "bytes": 611
+    },
+    "dist/assets/hdrTextureLoader-Cyf6KG3Z.js": {
+      "sha256": "d5852dbfa697c5dad05d354e26d98b74a2b3550ef712dc74500ee9935e442911",
+      "bytes": 2458
+    },
+    "dist/assets/skin-test.glb": {
+      "sha256": "7472fe82516c54ad646d025ff9ad2115f9f3b2d6d06a8767a31f52b13376b01e",
+      "bytes": 3300
+    },
+    "dist/assets/kernelBlurVaryingDeclaration-C5IyAGPl.js": {
+      "sha256": "51f5052ad46b7e7ec15ef9e64f250eedacfc1ce7fe03b9276ac6e6f591b098fb",
+      "bytes": 170
+    },
+    "dist/assets/tgaTextureLoader-BuVgoBZQ.js": {
+      "sha256": "fde0392074b960d7ed8adb8c4311be0a0685be218250eb7b1f4a822e2e933387",
+      "bytes": 3556
+    },
+    "dist/assets/index-DOeg50K7.js": {
+      "sha256": "7ce79996ac4314847edaac25fef2c2fed2c3737b2f15aa33a02c7cf14942102a",
+      "bytes": 171328
+    },
+    "dist/assets/rgbdEncode.fragment-EejLpuQ9.js": {
+      "sha256": "4b89ae79095041a22218d779d59d7fe6e23d0a26e7381cc843ad56899327f55f",
+      "bytes": 433
+    },
+    "dist/assets/exrTextureLoader-uYqiTp68.js": {
+      "sha256": "2bf71a34c7fa052b534d626bff5e721afdc178311b6d62a8e047618aa0de9ed6",
+      "bytes": 15556
+    },
+    "dist/assets/depth.fragment-BJlTkSeu.js": {
+      "sha256": "0c8def68b8dae1f367dfdf77735d4f7aea9642707610bb95103389a6094c7bd7",
+      "bytes": 1288
+    },
+    "dist/assets/sale.wav": {
+      "sha256": "bdf0db6fb6b690878eaf0c01392768b873188bf9999b0d1091d4dcb7bc9da2ba",
+      "bytes": 9644
+    },
+    "dist/assets/logDepthDeclaration-BWNNiFm2.js": {
+      "sha256": "1ee61f335f54902e5e7410f553f1aac932e00b9f21fd2d87710c6c8a6f55e5bb",
+      "bytes": 14120
+    },
+    "dist/assets/ktxTextureLoader-Bngss2ov.js": {
+      "sha256": "5d98e3d29e70c9f548a4e509365965351253cba35ee7b7c0fc0e8b8b3438f514",
+      "bytes": 15826
+    },
+    "dist/assets/kernelBlur.fragment-BY04zcwx.js": {
+      "sha256": "3dde1d1c23fd46208f31320115a5589996078e896d5f0ad50691466479db0e3d",
+      "bytes": 2698
+    },
+    "dist/assets/mesh.vertexData.functions-ayNlGC5K.js": {
+      "sha256": "109b0c291f78ec6b98053b23c7a9ce01eb8bcee909a0964ce337a68a9b4bc61e",
+      "bytes": 960
+    },
+    "dist/assets/pbr.vertex-DmZ3F804.js": {
+      "sha256": "986bcc6996541ac4ca473b62a439e2fc2027eeb85b890285ac35816d8eabd059",
+      "bytes": 22337
+    },
+    "dist/assets/index-BbPA2Kl2.css": {
+      "sha256": "b1f80d1318693a1b640f75ffb7c796d94315b681bb7e220cf8ca7104ccab5682",
+      "bytes": 36757
+    },
+    "dist/assets/rgbdEncode.fragment-D5iBER76.js": {
+      "sha256": "58957c6cc534b9f780c79fd2de1b09774c331bfbc4595faf46e7f076bf45b809",
+      "bytes": 567
+    },
+    "dist/assets/passCube.fragment-HsgQS3XA.js": {
+      "sha256": "d6ed383e4792d98d80a38ff2633103532ed7d980e12b0267a998e0878b9c1a2f",
+      "bytes": 1159
+    },
+    "dist/assets/helperFunctions-BTt-Skc_.js": {
+      "sha256": "a9a9a4fb1fd829915fde57dfd1518a7c387441d3d51fcdd54a9cbf280a72d60e",
+      "bytes": 5711
+    },
+    "dist/assets/native-v3/visitor-b-native-v3.glb": {
+      "sha256": "970a5d5f6e0366810dfd14e2d38b97a073a1e42416bc32ab3c54406702ddb80f",
+      "bytes": 693608
+    },
+    "dist/assets/native-v3/visitor-a-native-v3.glb": {
+      "sha256": "5b6ccbf77abbfdf965b9147ca7e35f4131f18819b14d0a0c3aaf6ddc872fdc0a",
+      "bytes": 346552
+    },
+    "dist/assets/native-v3/misaki-native-v3.glb": {
+      "sha256": "67dc6db7fc6e5776ed6b15e54453e228a0c5a33e8921aaa1ca6001851262beb9",
+      "bytes": 707748
+    },
+    "dist/assets/w1_1a/tea.glb": {
+      "sha256": "601713d11fbb86696178740d7d9aed6f7b08b0f2053c18b9ca64bc1a5b186b00",
+      "bytes": 9092
+    },
+    "dist/assets/w1_1a/cookie.glb": {
+      "sha256": "56d3f7e37e3786194a50fd595ee34a551935a86410200744b4fee8dbed9669ef",
+      "bytes": 23008
+    },
+    "dist/assets/w1_1a/tray.glb": {
+      "sha256": "2a7b050d5c4c29b6fb8ca16c887ef78e2d1054d07c896306f7942d154cf30edc",
+      "bytes": 20136
+    },
+    "dist/assets/w1_1a/display-w1_1a.glb": {
+      "sha256": "27c93d6233cc1877b80d52ff82d8a994f811afb42a22d1a43953ab3e0ab1df30",
+      "bytes": 35704
+    },
+    "dist/assets/w1_1a/plant-w1_1a.glb": {
+      "sha256": "c21a3b5f469ec5ec3865ff1bacad6c84e204b3d5fa084138e522d9b005adc7c8",
+      "bytes": 44404
+    },
+    "dist/assets/w1_1a/pencil.glb": {
+      "sha256": "abcdda62d02b5f319f0a27e059ce325cc74b41a436cc0c83e68299fdb5a04ab3",
+      "bytes": 13772
+    },
+    "dist/assets/w1_1a/mug.glb": {
+      "sha256": "a89356583b9e07f76c8419f57d08393fc4d89b8272329b0a5a99e37e264a7d17",
+      "bytes": 20500
+    },
+    "dist/assets/w1_1a/card.glb": {
+      "sha256": "44b7c523c7b806460616372f5ec5eb14ebd13d945740c9266fca72edaefee6f1",
+      "bytes": 13576
+    },
+    "dist/assets/w1_1a/tote.glb": {
+      "sha256": "16195d570489bd0414fa70a311778343a59232856d68cdd9372cd12934dedd74",
+      "bytes": 24988
+    },
+    "dist/assets/w1_1a/generic-staff-w1_1a.glb": {
+      "sha256": "3b8cabce823bf59f194af946cf26882d4deb1eb82606b91ea73ead6d56ad1bc6",
+      "bytes": 102436
+    },
+    "dist/assets/w1_1a/vase.glb": {
+      "sha256": "ce8ff1db6ae3d9eba482896b2b03475a064c32d38e9f189f29c273420ee96b9f",
+      "bytes": 15248
+    },
+    "dist/assets/w1_1a/towel.glb": {
+      "sha256": "4d8732870b6cf02cbd12c74c7451e5b6f98bee26ee3030addc66d9521ff85c85",
+      "bytes": 10016
+    },
+    "dist/assets/w1_1a/notebook.glb": {
+      "sha256": "557a3e91d19bae5840e4040b64a26d39466385742340ea91c8c77379448a2942",
+      "bytes": 20796
+    },
+    "dist/assets/w1_1a/counter-w1_1a.glb": {
+      "sha256": "58e5cef53fb60bff7c364e478a71018aab31804f1c7027b83335a31f22fa8a7d",
+      "bytes": 29036
+    },
+    "dist/assets/w1_1a/room-w1_1a.glb": {
+      "sha256": "fb30caebe52c5e58bce3e23a6099b43d61c53fec43135c0b50ebb582cf7f929d",
+      "bytes": 108432
+    },
+    "dist/assets/native-v5/hair-strand-basecolor.png": {
+      "sha256": "f735cf754d5333711f0809e11a1dbe09f2ae5e566d01e3625b3a94e98adc65e1",
+      "bytes": 53435
+    },
+    "dist/assets/native-v5/hair-strand-normal.png": {
+      "sha256": "c5603902148920f86bf59a66920f357f7a6f845b7891e26bbb3845efeeb9091b",
+      "bytes": 250411
+    },
+    "dist/assets/native-v5/wood-grain-basecolor.png": {
+      "sha256": "005a27aa95a703c95006e872275a7dd3a837b62bb16acacf3e83e2558f754cd6",
+      "bytes": 39456
+    },
+    "dist/assets/day1/misaki-smile-v1.glb": {
+      "sha256": "b6c1ba01ac8c697f6230f745e86ceceefd47abd8af14eedc00e62aef72541283",
+      "bytes": 246948
+    },
+    "dist/assets/day1/misaki-calm-v1.glb": {
+      "sha256": "f61a3dd54935f4c88c6d341e2b2c7c07311bff4e58c84ddb40697343cc811b05",
+      "bytes": 270328
+    },
+    "dist/assets/w1_1b/tea.glb": {
+      "sha256": "305a59d15f07f158004f93b9bb1766de96e501a619efa170117c936b86d4edaf",
+      "bytes": 9644
+    },
+    "dist/assets/w1_1b/generic-staff-w1_1b.glb": {
+      "sha256": "ed48d9b32e99b290746006cf65c9082ed59d6c6380dd1177c43c0a9301f2d7bd",
+      "bytes": 103816
+    },
+    "dist/assets/w1_1b/cookie.glb": {
+      "sha256": "b3fe29d0193c385fa013f34f2cdb8e6cffe240341790d52a9ad69b3a45111a97",
+      "bytes": 23432
+    },
+    "dist/assets/w1_1b/tray.glb": {
+      "sha256": "a7f4a392e9627701f6cd86fc8aa14ed8f1d547f53f9433fe32a5e4af8dcaf389",
+      "bytes": 20408
+    },
+    "dist/assets/w1_1b/pencil.glb": {
+      "sha256": "222c5fac7895df7b0cda2421a960e7cc7e2ee62951ab047bbaccd650d1dc9d22",
+      "bytes": 14448
+    },
+    "dist/assets/w1_1b/mug.glb": {
+      "sha256": "d21c6a345c2b3798365803b2025af010ee89561af6fb53d58ed46c562c9ddc50",
+      "bytes": 21304
+    },
+    "dist/assets/w1_1b/plant-w1_1b.glb": {
+      "sha256": "e443fb165bc9a97937893db92e27d268ec8a7d741387746af760a255fd0b43fe",
+      "bytes": 45088
+    },
+    "dist/assets/w1_1b/card.glb": {
+      "sha256": "1b0ec45e2cc6bfe7e71adc856491edbb2f306f8e449aa03ce6e6c685b72fc33f",
+      "bytes": 14112
+    },
+    "dist/assets/w1_1b/tote.glb": {
+      "sha256": "7c258639cb378f4eb06f6df41004697665c6391ff128b3bc4c46458ad1ea9181",
+      "bytes": 25672
+    },
+    "dist/assets/w1_1b/display-w1_1b.glb": {
+      "sha256": "39dd49e91bee6c9fc305498adaac2f07783dde79cc03fca05a920f63a5753ee7",
+      "bytes": 36364
+    },
+    "dist/assets/w1_1b/room-w1_1b.glb": {
+      "sha256": "24ee1be4623e0745f06b950e5545fb8580d15393fa0c2b7fb2df3a89f79c8c4e",
+      "bytes": 110424
+    },
+    "dist/assets/w1_1b/vase.glb": {
+      "sha256": "188cfc7827eff27cb28a232e37d883a61b8d5990882d74a76d22d9c1ef6b5bdf",
+      "bytes": 15516
+    },
+    "dist/assets/w1_1b/towel.glb": {
+      "sha256": "0eadeb110572f5faffacb1e0d786fa5062cdc418390ac1ece4ecdc33c47444c5",
+      "bytes": 10284
+    },
+    "dist/assets/w1_1b/counter-w1_1b.glb": {
+      "sha256": "0210373d5cc9c3662996a8970e608b7e4c2dab9d76690a4610b8e1e83b299802",
+      "bytes": 31052
+    },
+    "dist/assets/w1_1b/notebook.glb": {
+      "sha256": "e9cf86b58ea868735e3bdc1763ac95f047a1043a6349bc387030466e6d807173",
+      "bytes": 21492
+    },
+    "dist/assets/w1_1/counter-w1_1.glb": {
+      "sha256": "6f7c049686f17feeabcdba3bcc6594b320013508336bd3d27c4f14e52358cd43",
+      "bytes": 28508
+    },
+    "dist/assets/w1_1/tea.glb": {
+      "sha256": "5700cf84d949c83e8cb1f5b2d44410294a9f7341e4ba42f972576d0364fd1862",
+      "bytes": 8644
+    },
+    "dist/assets/w1_1/cookie.glb": {
+      "sha256": "640f770550fc75352db0fce6fc3e151f9c29f8ec4e8d7bda4b19e8d4f708427d",
+      "bytes": 23548
+    },
+    "dist/assets/w1_1/tray.glb": {
+      "sha256": "8667182404da277a68c5066e0dbec5fd4bc35854694fb89315a0ad3ff56833b3",
+      "bytes": 19928
+    },
+    "dist/assets/w1_1/pencil.glb": {
+      "sha256": "7770a19a8b4d49e6c112493772abec5415e0cfd6d35f42a2d52a24c6bda4168f",
+      "bytes": 11080
+    },
+    "dist/assets/w1_1/mug.glb": {
+      "sha256": "1059b8569f028ec01dbe9f4d6524fd73fa22cf8f047f1e49d1900ac1eef472e9",
+      "bytes": 19276
+    },
+    "dist/assets/w1_1/display-w1_1.glb": {
+      "sha256": "262b5d19636fb1d7b0e3a2b4f4b55701e907b0bb1987b7890ec6213298164791",
+      "bytes": 34308
+    },
+    "dist/assets/w1_1/card.glb": {
+      "sha256": "aa8a32236fd5001e90c50bc1c25fe24159ac4627ed07e5c4713470a05f2659ac",
+      "bytes": 13724
+    },
+    "dist/assets/w1_1/tote.glb": {
+      "sha256": "16bc44b791fbed0b972b61778f24e4a26acad917f7f43f17c308c351c0a92f28",
+      "bytes": 21412
+    },
+    "dist/assets/w1_1/generic-staff-w1_1.glb": {
+      "sha256": "0424a2726d4236bd555731549062ff95ed01b64d1dee3e2ccca631f5697481c5",
+      "bytes": 56248
+    },
+    "dist/assets/w1_1/vase.glb": {
+      "sha256": "10d319300b0f14b535d2443655d11bc0c6030aca0ec0512b5774799ec73894ca",
+      "bytes": 15304
+    },
+    "dist/assets/w1_1/towel.glb": {
+      "sha256": "a1bb9dd4f7ca055fe15594f19c5caf1efe6929b063e43081291d848e68604045",
+      "bytes": 9792
+    },
+    "dist/assets/w1_1/notebook.glb": {
+      "sha256": "8543abae07663deb8897984fcdd1e391680c5f20e097df73c654fba66650129f",
+      "bytes": 10060
+    },
+    "dist/assets/w1_1/room-w1_1.glb": {
+      "sha256": "2a560e9c2e1d8e98299f4c10d70b0851f2d7fb960653db6303d9e96ede97d998",
+      "bytes": 105976
+    },
+    "dist/assets/w1_1/plant-w1_1.glb": {
+      "sha256": "a6a737f6f7513e448482b86dfbb265e822894262a4b1744a318802f56420fb66",
+      "bytes": 45028
+    },
+    "dist/assets/w1_1a1/mug.glb": {
+      "sha256": "cb3c59c5627d56ef6dbcc6d21b97a175393b038affd5174edf13ab3e85b27a41",
+      "bytes": 21128
+    },
+    "dist/assets/w1_1a1/counter-w1_1a1.glb": {
+      "sha256": "4602da938fde3b8dbbc5a3ec5a5bb64007c51729e1ddb3c3d8c004e39ec54cef",
+      "bytes": 29364
+    },
+    "dist/assets/w1_1a1/room-w1_1a1.glb": {
+      "sha256": "77ebd30600952ee370e20f598ee6f8a4c0202e54335d0dd654aa3d46ee0ca71a",
+      "bytes": 109132
+    },
+    "dist/assets/native-v9/plaster-normal.png": {
+      "sha256": "bb1aa91c204925502323ba741ec5d5e9bf7d57b54a56bda90e1d3576f990ff72",
+      "bytes": 273120
+    },
+    "dist/assets/native-v9/linen-normal.png": {
+      "sha256": "a814d8c51bbbb121dca3490105db31e0c4e075ec33137eab6fe3f01f77701f47",
+      "bytes": 3423
+    },
+    "dist/assets/native-v9/timber-normal.png": {
+      "sha256": "683024005f936016676d258605a22309e049f9cc5e342468aa5d9d412ac3cc29",
+      "bytes": 82382
+    },
+    "dist/assets/native-v9/timber-colour.png": {
+      "sha256": "743afc3951895b4a078d7dea1513f90ccafac20d411e255d92b7b2c76f47ce1e",
+      "bytes": 86038
+    },
+    "dist/assets/native-v9/floor-colour.png": {
+      "sha256": "f0a94632354f5d2b80ee5d0e129b59702c557eede3a4514f34ad6d00ceb8b24d",
+      "bytes": 64120
+    },
+    "dist/assets/native-v6/cloth-weave-basecolor.png": {
+      "sha256": "75a210ccac687212cdfd0e16184619f9f7e553934e9426e36fd1b135eb8a8686",
+      "bytes": 4716
+    },
+    "dist/assets/native-v6/floor-planks-basecolor.png": {
+      "sha256": "6a2b414108dbeb42e6d761058d2073240e30760e85f3473d999c138446b9f419",
+      "bytes": 4876
+    },
+    "dist/assets/native-v4/wood-grain-basecolor.png": {
+      "sha256": "a8b5b706fbc873b45a034816dc93829f6fb361a3326d33db97f3c04ee2aa88e1",
+      "bytes": 90925
+    },
+    ".openai/hosting.json": {
+      "sha256": "be11b3a4380c30a122687852a77040324cf2d3d620fc2a44bf91314c852cfef8",
+      "bytes": 106
+    }
+  }
+}

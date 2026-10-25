@@ -1,0 +1,22 @@
+[
+  {
+    "from": "730e316ffb2675f0f02add37142607fb84660817",
+    "to": "600b539a23e577e83d014b4f4c809e59f3b7648e",
+    "estimatedThinPackBytes": 2138829
+  },
+  {
+    "from": "600b539a23e577e83d014b4f4c809e59f3b7648e",
+    "to": "0e4fff3c400ea02eedaa69e01dd08c79be171627",
+    "estimatedThinPackBytes": 60730403
+  },
+  {
+    "from": "0e4fff3c400ea02eedaa69e01dd08c79be171627",
+    "to": "85bebba9fc1419a8f01b18e46ed821cd1a1e24b2",
+    "estimatedThinPackBytes": 28505593
+  },
+  {
+    "from": "85bebba9fc1419a8f01b18e46ed821cd1a1e24b2",
+    "to": "8277b326ddbdac71c128dc91b07b930a315904f5",
+    "estimatedThinPackBytes": 13976113
+  }
+]
