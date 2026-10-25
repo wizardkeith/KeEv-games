@@ -118,8 +118,9 @@ app.addEventListener('scroll',e=>{
  u.stock.listTop=list.scrollTop;saveStockWorkspace(u.stock,stockWorkspaceKey());
 },true);
 app.addEventListener('focusin',e=>{const row=(e.target as Element).closest<HTMLElement>('.stock-row');if(row&&u.stock){u.stock.selected=row.dataset.item??'';for(const r of Array.from(row.parentElement?.querySelectorAll<HTMLElement>('.stock-row')??[]))r.setAttribute('aria-current',String(r===row));saveStockWorkspace(u.stock,stockWorkspaceKey());}});
+function revealSetInfo(){draw();const card=document.querySelector('.set-status-card'),body=document.getElementById('panelbody');if(card&&body)body.scrollTop+=card.getBoundingClientRect().top-body.getBoundingClientRect().top;}
 // Disclosure is UI-only. Hover previews; click/tap or native Enter/Space pins it.
-app.addEventListener('pointerover',e=>{const target=(e.target as Element).closest('.set-status-card');if(target&&(e as PointerEvent).pointerType==='mouse'&&!u.setInfoOpen){u.setInfoOpen=true;draw();}});
+app.addEventListener('pointerover',e=>{const target=(e.target as Element).closest('.set-status-card');if(target&&(e as PointerEvent).pointerType==='mouse'&&!u.setInfoOpen){u.setInfoOpen=true;revealSetInfo();}});
 app.addEventListener('pointerout',e=>{const card=(e.target as Element).closest('.set-status-card'),next=(e as PointerEvent).relatedTarget as Node|null;if(card&&!card.contains(next)&&!u.setInfoPinned&&u.setInfoOpen){u.setInfoOpen=false;draw();}});
 app.addEventListener('keydown',e=>{if(e.key==='Escape'&&u.setInfoOpen){e.preventDefault();e.stopPropagation();u.setInfoOpen=false;u.setInfoPinned=false;draw();document.getElementById('set-info-toggle')?.focus({preventScroll:true});}});
 app.addEventListener('input',e=>{
@@ -145,7 +146,7 @@ app.addEventListener('submit',e=>{
 app.addEventListener('click',e=>{
  if(u.setInfoOpen&&!(e.target as Element).closest('.set-status-card')){u.setInfoOpen=false;u.setInfoPinned=false;draw();}
  const target=(e.target as Element).closest<HTMLButtonElement>('button[data-action]');if(!target||target.disabled||target.ariaDisabled==='true')return;const a=target.dataset.action!,id=target.dataset.id!,n=Number(target.dataset.slot??u.slot);
- if(a==='set-info'){u.setInfoPinned=!u.setInfoPinned;u.setInfoOpen=u.setInfoPinned;draw();return;}if(a==='set-info-close'){u.setInfoOpen=false;u.setInfoPinned=false;draw();document.getElementById('set-info-toggle')?.focus({preventScroll:true});return;}
+ if(a==='set-info'){u.setInfoPinned=!u.setInfoPinned;u.setInfoOpen=u.setInfoPinned;if(u.setInfoOpen)revealSetInfo();else draw();return;}if(a==='set-info-close'){u.setInfoOpen=false;u.setInfoPinned=false;draw();document.getElementById('set-info-toggle')?.focus({preventScroll:true});return;}
  if(a.startsWith('story-')){
   const beat=(target.dataset.beat??'welcome') as BeatId;
   if(a==='story-open'){if(busy||state.open)return;void run(async()=>{if(!state.open)await act('open');},'general',undefined,'open');return;}
