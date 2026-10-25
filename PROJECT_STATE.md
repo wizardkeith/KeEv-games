@@ -1,9 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T06:45:10+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T07:29:38+08:00** (Asia/Hong_Kong).
 
 
 
+
+## V11 fourteenth checkpoint — counter vignette / layered actual shadows, target still open — 2026-10-26T07:29:38+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed/readback **aceb2b451923cbf666bf8c5b958ecb67e3a73a8a**, runtime **c00c22002f24c1abd8a6429d6d13a9291f89c1a2**, immutable94. **Unmerged; main documentation only; publicV17 unchanged; target/style/textile NOT accepted, continuing.** Hollow fixed counter holder/5leaning pencils, existing print moved into retained central flower/book/riser group;35showroom samples unchanged. Reallocated microscopic wall-batten bevels;dressing15,704<16,000,17groups<18. Actual PCSS window/leaf projection and acne correction; retained camera/key/fill/practicals/4lightcap. Weak/washing fifth-cloth-light experiments rejected, not default.
+- **197tests/build/validate/replay,139GLB0errors/warnings,305protected/history,256fresh-export files byte-identical; fresh80frameclothJSON andUVJSON/provenance byte-identical.** [Matched normal-game/panorama, actual source hashes, rejected experiments and limits](https://github.com/wizardkeith/KeEv-games/blob/aceb2b451923cbf666bf8c5b958ecb67e3a73a8a/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md). Fresh94 **346.320s uncut /347.115s workflow** observes realBarrival/greeting/settlement/contact/bag/readable18item+8400batchgrossmargin/exit/staffhome/reload,0pageerrors,isolatedNormalunchanged. Slow cloudSwiftShader, not precise palm/fullwalk smoothness orphysicalGPU/FPS/audio/native acceptance. Prototype92 remainedNOTCOMPLETE; no economics/route correction made from polling alone.
+- C13 shelf-start screenshot relabelled, actual136s exit frame supplied. Parent-directed nextgate: fixedgeometry/camera/naturalfacing, currentmaterial/light vsneutral+single directional actual-renderer diagnostic; inspect primaryform vsnormal/material/fill before any further cloth change. **No blind complex-simulation rerun.** Whole-scene material/curation/soft-contact/exterior gaps remain. No releasearchive/merge/deploy/userChrome/Normal/Unity/shutdown/content expansion; old74locale/layout source distinguished from newchecks.
 
 ## V11 thirteenth checkpoint — authored cloth rest / same-facing actual game, target open — 2026-10-26T06:45:10+08:00
 
