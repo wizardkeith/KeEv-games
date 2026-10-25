@@ -1,0 +1,18 @@
+{
+  "previousCandidate": "0e4fff3c400ea02eedaa69e01dd08c79be171627",
+  "source": "cf28233398c8e492994908224cf9e3d4a462064c",
+  "unchangedPaths": [
+    "src/ui",
+    "src/core",
+    "src/platform",
+    "src/content",
+    "src/narrative",
+    "src/locales",
+    "src/art",
+    "src/style.css",
+    "package.json",
+    "package-lock.json",
+    ".openai/hosting.json"
+  ],
+  "status": "pass"
+}

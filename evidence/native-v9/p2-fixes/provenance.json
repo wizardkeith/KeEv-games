@@ -1,0 +1,132 @@
+{
+  "applicationCommit": "cf28233398c8e492994908224cf9e3d4a462064c",
+  "srcTree": "8f668f05af7f5711c72afd5b9f9bbee59ea86e17",
+  "rejectedCandidate": "0e4fff3c400ea02eedaa69e01dd08c79be171627",
+  "rendering": "Actual Low/Minimal Chromium WebGL2 ANGLE SwiftShader; High45s diagnosis is not a work-capture pass",
+  "files": {
+    "checks/asset-check.log": {
+      "bytes": 2709,
+      "sha256": "2ef1b7f739a60f6700a6acfedb529805de92d54a43bebb685f37a9fc5ffcafa6"
+    },
+    "checks/asset-rebuild.json": {
+      "bytes": 192,
+      "sha256": "f693556552ec698f5ea5a0ef34bc5da5a3ababb97826c799d09b34342ae332eb"
+    },
+    "checks/build-final.log": {
+      "bytes": 5845,
+      "sha256": "efe0878653e270d091cbd99e69ff03a1d60162a24ab1ef1d80d31338ccbe2157"
+    },
+    "checks/contact-measure.json": {
+      "bytes": 71572,
+      "sha256": "1e64f9139796884817926d2a91890cbdaa178d1e53c25bdbd5a5da0c8c57359a"
+    },
+    "checks/contact-measure.log": {
+      "bytes": 698,
+      "sha256": "853a151c8bb6930239f94a675025730b9cc024c1983ee41cce7b1534137f8338"
+    },
+    "checks/content.log": {
+      "bytes": 391,
+      "sha256": "166c507186dacecbe1bbec613b9409acf9dd35207e67d814822f7b106aae1b4b"
+    },
+    "checks/glb-validation.json": {
+      "bytes": 13057,
+      "sha256": "071c3ec6b7b3d2d79a0fafa72ca8faa46f501beaea243844e2fba50fd72121fe"
+    },
+    "checks/glb-validation.log": {
+      "bytes": 70,
+      "sha256": "40b8f4b3610b963e9ae2864257f2ac40b8f7bde6ac8fb1efda705a35c85e2eaf"
+    },
+    "checks/high-timing.log": {
+      "bytes": 61,
+      "sha256": "4a82cbf5d357637803dcf40ea1b73dc786d11a875ffe30f02b276c163f660497"
+    },
+    "checks/preservation.json": {
+      "bytes": 12426,
+      "sha256": "b6e53148143d85a5d0c8cb9460863485254eca05f1e777eebe42ff36f13471f7"
+    },
+    "checks/replay.log": {
+      "bytes": 213,
+      "sha256": "1289341a6da5804b03189ab50b84a750ab01ca9eab8c1e3ff4f902e37f6fe1df"
+    },
+    "checks/reviewer-probe.json": {
+      "bytes": 1437,
+      "sha256": "0e0ba2096ea182bb2a1989f8c6d120cca046d97ec973045d642ab1ac5c316263"
+    },
+    "checks/scope.json": {
+      "bytes": 390,
+      "sha256": "7a1364b7c1c10eeb65aa44a62ce77dd9bce491c820db6a0ece52d8a59aed77af"
+    },
+    "checks/tests-final.log": {
+      "bytes": 20834,
+      "sha256": "7db54a595e5401abdefa2009c1cef8621ead7594253d1e636e2e798040ffca2c"
+    },
+    "delivery/LittleShop-v9-p2-deploy.tar.gz": {
+      "bytes": 3690593,
+      "sha256": "4d3e846f0b487b02d1685a2fa2480fa43bc780e04c943af9a888c1b635d53606"
+    },
+    "delivery/receipt.json": {
+      "bytes": 20171,
+      "sha256": "3bf3658ae068c1554819d444912e6d96beba2a276bb0b70c0e98670a4c432a93"
+    },
+    "high-timing/results.json": {
+      "bytes": 32095,
+      "sha256": "d3331258c37cd418514f5e4ec51a4a1f6282ab4dff82544bd513588c944043d7"
+    },
+    "motion/contact-handoff-continuous.webm": {
+      "bytes": 4713834,
+      "sha256": "5034ce95a8a6c6f4222fe900efb5de689ec44a86c611c5c2218a08f0ac95fb01"
+    },
+    "motion/excerpts.json": {
+      "bytes": 636,
+      "sha256": "1cc43c55ca4d90071d96efcb01fded3b469d65a116674592936c60fec6e51a7d"
+    },
+    "motion/full-uncut.webm": {
+      "bytes": 8796840,
+      "sha256": "cb2006293e67a95034b1c70bec61d80224c8ed90a6ae1f4a2ae54cfed75fb255"
+    },
+    "motion/geometry-observations.json": {
+      "bytes": 86000,
+      "sha256": "125921cca46513b8363e091084e2005a287a4c0624af87b3575920045d72fc5a"
+    },
+    "motion/greeting-frame.png": {
+      "bytes": 506666,
+      "sha256": "44f4c12124146ba28b3c3abfb921fa4cb386c2b4da5a12afac9d93b130d94d67"
+    },
+    "motion/handoff-frame.png": {
+      "bytes": 507248,
+      "sha256": "c14ac8bbc96f75e40d9e5425072d626173bf30eded530b1bebebebfb3cefebde"
+    },
+    "motion/loss-margin.png": {
+      "bytes": 332026,
+      "sha256": "b1c0bc18f204ced37ce8906dcd0f16c650687752c0c22a15567103e4ad0ace82"
+    },
+    "motion/loss-return-continuous.webm": {
+      "bytes": 4667706,
+      "sha256": "d68b9848a2601a5f0b8c73ba966548085ad1282121c21548301cb8dd85de1879"
+    },
+    "motion/profit-margin.png": {
+      "bytes": 335428,
+      "sha256": "b0c13293e6427996a55943b42f8b2ea4e78a5f4e19448ee6a56d19c4a36948ec"
+    },
+    "motion/results.json": {
+      "bytes": 3359,
+      "sha256": "c76ba188d420732a70e5f8ca33fd3b2e8e93d50a26ac3be943ccced89d6195ca"
+    },
+    "motion/timeline.json": {
+      "bytes": 3503123,
+      "sha256": "590a3a3927271a72e0ef80beebe711c397309337e0bf0d48256eda62575cc148"
+    },
+    "motion/video-probe.json": {
+      "bytes": 1899,
+      "sha256": "28eae4fa10c256af99e5c9cb134bc5e1e7b292ef84e3f7836110ada9b07214ba"
+    },
+    "motion/welcome-continuous.webm": {
+      "bytes": 4785715,
+      "sha256": "bce68608df948fb075b66f4773d3670f0e339d5436d42565d1d93f64d4fc9b53"
+    },
+    "motion/welcome.png": {
+      "bytes": 345272,
+      "sha256": "afc09d8e473c18c1e7d088f49bdda8dd319e45ac28db34637337f0e396d24216"
+    }
+  }
+}

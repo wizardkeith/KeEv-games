@@ -1,4 +1,6 @@
-# V9 scene and interaction refinement — review candidate
+# V9 first-candidate scene and interaction record (historical)
+
+**Superseded for motion:** independent review rejected two P2 defects in this first candidate. Read [the corrected application and re-review evidence](V9_P2_FIXES.md). No release acceptance is implied by this historical record.
 
 Draft [PR #6](https://github.com/wizardkeith/KeEv-games/pull/6), branch `codex/game-v9-scene-art`. **Unmerged; not published.** Public Site remains V15. Application checkpoint `600b539a23e577e83d014b4f4c809e59f3b7648e`, `src` tree `4cd18b993557f435fa4760feea053f1f441a89f0`. The final evidence commit is a descendant with identical application inputs; use the PR's exact returned head for independent review.
 
