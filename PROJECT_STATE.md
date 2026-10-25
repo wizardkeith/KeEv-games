@@ -1,6 +1,6 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-25T17:08:53+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-25T17:11:02+08:00** (Asia/Hong_Kong).
 
 ## V10 independent review — 2026-10-25T17:08:53+08:00
 

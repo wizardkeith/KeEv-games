@@ -18,7 +18,7 @@ Parent 已確認最終 candidate **`486bc3609426023dcb4a53d25f2939c611c41ea9`**�
 
 重現：將本[商品 gallery probe](probes/v10-product-gallery.html)帶到上述 candidate checkout，以 Vite 開啟；用右手座標前上視角查看最左前方的 tote，或在遊戲購入及陳列 `off.tote` 後繞看。前提手端、兩條縫線及印畫都與袋面分離。[獨立實拍放大](evidence/v10-independent/tote-detail.png)。[測量 probe](probes/v10-attachment-measure.ts)直接與真正袋身三角形求交，在同(x,y)沿Z量得：印畫中心 **5.1217cm**、左右縫中心 **8.0305/8.0051cm**、前提手接點中心 **5.9457cm**。扣除1.5mm縫半徑／12mm提手半徑仍明顯懸空。[量測 JSON](evidence/v10-independent/tote-attachments.json)。
 
-修訂建議：統一袋身前後座標，按實際布面求印畫／縫／提手接點位置，再重建商品 master／Web GLB 及同角度拍攝；保留原SKU、尺寸預算和經濟規則。只需要這個資產的接點／渲染回歸及必要完整性檢查；沒有要求重做玩法或使用者本機 Unity/Blender。
+修訂建議：統一袋身前後座標，按實際布面求印畫／縫／提手接點位置，再重建商品 JSON master／interchange GLB／production bundle 及同角度拍攝；保留原SKU、尺寸預算和經濟規則。實際受影響的衍生檔是 `assets/masters/native-v3/products-v3.json`、`assets/authoring/native-v3/products-manifest.json`、`assets/masters/native-v4/product-off.tote.glb` 及 `fixtures-manifest.json`；Web 由 `nativeProductRecipe` 直接建模，背景 showroom 亦使用相同 recipe（`src/art/back-display-v10.ts`），所以要重建 bundle。優先修 `off.tote` 本身的共同座標／表面接點；若修改共享 `sculptCloth`，必須保住已修圍裙的 drape／clearance。只需要這個資產的接點／渲染回歸及必要完整性檢查；沒有要求重做玩法或使用者本機 Unity/Blender。
 
 ## 本次獨立執行與結果
 
