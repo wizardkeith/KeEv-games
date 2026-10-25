@@ -1,0 +1,34 @@
+{
+  "sourceBefore": "immutable60/C8",
+  "sourceAfter": "immutable66/C9, identical female on current74",
+  "cameraExactlyEqual": true,
+  "roots": {
+    "before": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1,
+      "yaw": 1.5707963267948966,
+      "speed": 0,
+      "distance": 7.50115387782208,
+      "state": "browsing",
+      "browseProgress": 0.7038152173906549,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "after": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1,
+      "yaw": 1.5707963267948966,
+      "speed": 0,
+      "distance": 7.50115387782208,
+      "state": "browsing",
+      "browseProgress": 0.739130434782607,
+      "hasBag": false,
+      "handoverProgress": 0
+    }
+  },
+  "assessment": "Actual same BACK coat/skirt surface, ordinary player min zoom; browse progress .704/.739 differs naturally. Visible textile improvement is still too slight; cloth/target visual gate NOT passed. UV correctness/checker is not visual acceptance. Next needs readable mid-scale drape/folds, not amplified weave."
+}

@@ -37,7 +37,7 @@
     "provenance": "Actual local production WebGL game, original PNG only used for comparison; fresh Sandbox real purchases/placement/settlement; no injected pose or sale; uncut original video",
     "limits": "SwiftShader cloud software rendering, not physical GPU/FPS/audio/native acceptance. Missing observed transitions remain unverified. Target art NOT accepted."
   },
-  "motionLimit": "Fresh73 continuous complete flow viewed via contact and123s actual readable margin/158s frames.74 adds only distant crown blades/local pivots; fresh74 full capture running, not falsely called passed.145CDPframes/187s cloudSwiftShader is not proof of physicalGPU or smooth physicalFPS. Original asynchronous04 screenshot missed float, excluded; uncut123s shows actual18/+8400/before expenses.",
+  "motionLimit": "Fresh74 complete actual flow observed: contact/bag/actual18item+8400 margin/served exit and staff home/reload,0pageerrors. Movie127s readable margin and145s exit frames viewed.136CDPframes/174s cloudSwiftShader, not physicalGPU or full smoothness certification.73 footage retained as distinct earlier source, never substituted.",
   "rejectedAttempts": [
     "67 open-floret twiglike arrangement insufficient; replaced as whole branched spray",
     "69 roof strips inadequate; rebuilt pitch direction/eaves/closed gables",
@@ -66,7 +66,26 @@
     "288-rebuild.log": "891763760d6387ed519dce9d48e3467dbb98de6a7e30ff112462de53b58fe45c",
     "vignette-after-staff-game.png": "13d48d2980b4078cdc90126214f2e4a2b715a2b3980c5e99937d22f2970b8db9",
     "vignette-results.json": "6807a5bb655fa0beebc3187d255fa58b6e883a9e97da2d3bcf2686a2303cdc0c",
+    "7-roof-final.log": "25d28145f0d858db5a2da8f1a8ecfd888ed7190a525b99e9773e762433055c32",
     "preservation.json": "225ce8a0134296dcf0f160c6f66ba97b1bc9e5be6a4271d4053274c9294f9baa",
+    "build74-motion/margin-dom-trace.json": "3087d290bcbf5f3815a7ca726a786904777911a1505025e076c2aa32213a889c",
+    "build74-motion/cashier.png": "8fedf6e6da8a873b5f19deeddac8dd022cdda4064754a8b6d0ab7bd69ef84b60",
+    "build74-motion/results.json": "07de3d83d549d6de6e74a92b6f4f5465b12c6132fadc2846046f6ef30abd5267",
+    "build74-motion/recording-provenance.json": "8ed1a51b53c23e733695a26b549568ce2e44e9933705101c45fd76f7dc371e34",
+    "build74-motion/margin-video127s.png": "9ed0fe0fc8ec0543cb943099cf24498937b46fb3ad904566b0cd04e186f178e2",
+    "build74-motion/panorama.png": "1d7cc334b54a2a0f6730d490ca859d9161ad53982753ea3c0586102a34a2e94d",
+    "build74-motion/timeline.json": "c770e0cbc7ee362f2e2b7f2f00942e395d1003554726c8825d28ff4d5621be27",
+    "build74-motion/staff.png": "ea772fdcf8918d4b1ba43281888f8f728a87f8a03d0e6f53d4d556741ebb7f4d",
+    "build74-motion/exit-video145s.png": "f0f282c9de9515c656000ffbb9393ae66b7ca4510038c947d675f5ce822cfa17",
+    "build74-motion/uncut.webm": "270c591e11e2b7690b87d284d5ba8b7d169b252c87513a4809664c0bc007e402",
+    "cloth-same-facing-close/results.json": "75e8b96c092d113fecda396be51b783d7c0b2b5950ba59543323efab77ed432b",
+    "cloth-same-facing-close/assessment.json": "b7bff12936bb6e2469e957588415ed918e8b853e6c1cbaaba33557bd58b7dd02",
+    "cloth-same-facing-close/before-female-in-game.png": "3b32f32983582d51e1fbbae0670eae1990d43f06a1a684fa3a16b83b87681cc6",
+    "cloth-same-facing-close/after-female-in-game.png": "179e8f73e40e569eb092f9d09349dd931bdd5ac7ffb833617aeba889a35a9791",
+    "five-locale-framing/1280-zh-HK.png": "68535804b6d7ea247172de850db95cf1d5f96981b4a6e1e977206f23768928d4",
+    "five-locale-framing/results.json": "d2b76867599ad9d51ce6f65f24cfe44679d6498dc38483b6150d8c8546352eb4",
+    "five-locale-framing/320-th.png": "305db99e8476305bd0f5a4a9798dc02268b5ec8c1b418682f0625a2d05ca6d73",
+    "five-locale-framing/375-zh-CN.png": "5551ad4d0450f845755d5ae85d6481ef19b099642be9e060ba24a219b8aac81b",
     "build73-motion/frame122.png": "00d19b3c75b45f473671e1471483e249faba8ab8199620297769c5d2c5070e2a",
     "build73-motion/margin-video123s.png": "1c6222e384a99f13c72853c177bf25f1c9f8ccfaca431cb184bcaa42cfbe688f",
     "build73-motion/frame158.png": "65813d93ec8a487f0c84bad8ab6394eacaf32f8fd6ea7fbc1eb85e78a9a6aede",
@@ -78,5 +97,192 @@
     "build73-motion/timeline.json": "d13a606dc574a7e3629982d26a2617a992536df836b1b15f4b2025f0fbd85f2d",
     "build73-motion/staff.png": "06c47ba770ab62122d0d0587a7f27236b6c40eb0f9b4375228d5f433a4c327e9",
     "build73-motion/uncut.webm": "eb2ab60f4db64bb219e36035b16a097bb64184544de6773c9c66068613da6f7b"
+  },
+  "motion74": {
+    "status": "rendered",
+    "greeted": true,
+    "contact": true,
+    "realSettlement": true,
+    "actualMargin": true,
+    "servedCustomer": "visitor-a",
+    "servedExitAndStaffReturn": true,
+    "marginDOMVisible": true,
+    "elapsedSeconds": 175,
+    "errors": [],
+    "normal": "isolated QA baseline unchanged; no owner save access",
+    "provenance": "Actual local production WebGL game, original PNG only used for comparison; fresh Sandbox real purchases/placement/settlement; no injected pose or sale; uncut original video",
+    "limits": "SwiftShader cloud software rendering, not physical GPU/FPS/audio/native acceptance. Missing observed transitions remain unverified. Target art NOT accepted.",
+    "videoDuration": 174.08,
+    "viewed": [
+      "margin-video127s.png",
+      "exit-video145s.png"
+    ]
+  },
+  "focusedTestClarification": "Roof pitch explicitly X/Z axes only; Y yaw does not satisfy pitch.7focused tests rerun passed after strengthening assertion; runtime unchanged.",
+  "clothCloseComparison": {
+    "sourceBefore": "immutable60/C8",
+    "sourceAfter": "immutable66/C9, identical female on current74",
+    "cameraExactlyEqual": true,
+    "roots": {
+      "before": {
+        "id": "visitor-b",
+        "enabled": true,
+        "x": -0.65,
+        "z": 1.1,
+        "yaw": 1.5707963267948966,
+        "speed": 0,
+        "distance": 7.50115387782208,
+        "state": "browsing",
+        "browseProgress": 0.7038152173906549,
+        "hasBag": false,
+        "handoverProgress": 0
+      },
+      "after": {
+        "id": "visitor-b",
+        "enabled": true,
+        "x": -0.65,
+        "z": 1.1,
+        "yaw": 1.5707963267948966,
+        "speed": 0,
+        "distance": 7.50115387782208,
+        "state": "browsing",
+        "browseProgress": 0.739130434782607,
+        "hasBag": false,
+        "handoverProgress": 0
+      }
+    },
+    "assessment": "Actual same BACK coat/skirt surface, ordinary player min zoom; browse progress .704/.739 differs naturally. Visible textile improvement is still too slight; cloth/target visual gate NOT passed. UV correctness/checker is not visual acceptance. Next needs readable mid-scale drape/folds, not amplified weave."
+  },
+  "freshFiveLocaleFraming": {
+    "status": "pass",
+    "cases": [
+      {
+        "width": 1280,
+        "height": 720,
+        "locale": "zh-HK",
+        "panels": 5,
+        "cameraStable": true,
+        "desktopDrawer": 580,
+        "buyHeight": 44
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "locale": "en",
+        "panels": 5,
+        "cameraStable": true,
+        "desktopDrawer": 580,
+        "buyHeight": 44
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "locale": "ja",
+        "panels": 5,
+        "cameraStable": true,
+        "desktopDrawer": 580,
+        "buyHeight": 44
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "locale": "th",
+        "panels": 5,
+        "cameraStable": true,
+        "desktopDrawer": 580,
+        "buyHeight": 44
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "locale": "zh-CN",
+        "panels": 5,
+        "cameraStable": true,
+        "desktopDrawer": 580,
+        "buyHeight": 44
+      },
+      {
+        "width": 375,
+        "height": 812,
+        "locale": "zh-HK",
+        "panels": 5,
+        "cameraStable": true,
+        "buyHeight": 44
+      },
+      {
+        "width": 375,
+        "height": 812,
+        "locale": "en",
+        "panels": 5,
+        "cameraStable": true,
+        "buyHeight": 44
+      },
+      {
+        "width": 375,
+        "height": 812,
+        "locale": "ja",
+        "panels": 5,
+        "cameraStable": true,
+        "buyHeight": 44
+      },
+      {
+        "width": 375,
+        "height": 812,
+        "locale": "th",
+        "panels": 5,
+        "cameraStable": true,
+        "buyHeight": 44
+      },
+      {
+        "width": 375,
+        "height": 812,
+        "locale": "zh-CN",
+        "panels": 5,
+        "cameraStable": true,
+        "buyHeight": 44
+      },
+      {
+        "width": 320,
+        "height": 420,
+        "locale": "zh-HK",
+        "panels": 5,
+        "cameraStable": true,
+        "buyHeight": 44
+      },
+      {
+        "width": 320,
+        "height": 420,
+        "locale": "en",
+        "panels": 5,
+        "cameraStable": true,
+        "buyHeight": 44
+      },
+      {
+        "width": 320,
+        "height": 420,
+        "locale": "ja",
+        "panels": 5,
+        "cameraStable": true,
+        "buyHeight": 44
+      },
+      {
+        "width": 320,
+        "height": 420,
+        "locale": "th",
+        "panels": 5,
+        "cameraStable": true,
+        "buyHeight": 44
+      },
+      {
+        "width": 320,
+        "height": 420,
+        "locale": "zh-CN",
+        "panels": 5,
+        "cameraStable": true,
+        "buyHeight": 44
+      }
+    ],
+    "errors": [],
+    "provenance": "Actual production WebGL and UI; touch emulation/Reduce Motion, isolated Sandbox, software renderer; no physical device claim"
   }
 }

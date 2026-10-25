@@ -14,9 +14,13 @@
 
 - [正常遊戲改前](../evidence/native-v11/checkpoint-10/vignette-before-normal-game.png)／[改後](../evidence/native-v11/checkpoint-10/vignette-after-normal-game.png)；[改後實際店員鏡頭](../evidence/native-v11/checkpoint-10/vignette-after-staff-game.png)：immutable66→74，同一真實UI購買／上架Sandbox，normal及staff camera diagnostics完全相等；人物自然相位不同，不當人物同姿勢比較。
 - **194tests/build/validate/replay/asset-check；139GLB零error/warning；305protected/history；288files全新重建byte-identical；152actual archive payload parity。**新增遠屋實際window rays／遠樹局部pivot檢查。舊Z向屋坡測試改為任何水平軸真正坡度，仍要求4塊屋坡／4個窗／原低建築及預算限制。
-- [build73完整188秒未剪遊戲](../evidence/native-v11/checkpoint-10/build73-motion/uncut.webm)：真入貨／陳列／結算／招呼／收銀接觸／交袋／已服務客人離店及店員回位／reload，0pageerror，隔離Normal基線不變。[影片123秒毛利畫面](../evidence/native-v11/checkpoint-10/build73-motion/margin-video123s.png)可讀18件/+¥8,400/未扣人工租金；最初非同步04截圖錯過浮字，沒有拿空畫面充數。[全部原始數據／來源hash／界線](../evidence/native-v11/checkpoint-10/provenance.json)。build74只再加遠樹葉片；fresh74完整實拍仍在跑，不說73等於74。
+- [build73完整188秒未剪遊戲](../evidence/native-v11/checkpoint-10/build73-motion/uncut.webm)：真入貨／陳列／結算／招呼／收銀接觸／交袋／已服務客人離店及店員回位／reload，0pageerror，隔離Normal基線不變。[影片123秒毛利畫面](../evidence/native-v11/checkpoint-10/build73-motion/margin-video123s.png)可讀18件/+¥8,400/未扣人工租金；最初非同步04截圖錯過浮字，沒有拿空畫面充數。[全部原始數據／來源hash／界線](../evidence/native-v11/checkpoint-10/provenance.json)。build74只再加遠樹葉片；[fresh74完整175秒流程／未剪影片](../evidence/native-v11/checkpoint-10/build74-motion/uncut.webm)已另外完成：同樣觀察所有結點／0pageerror／reload及隔離Normal基線一致。[影片127秒真毛利](../evidence/native-v11/checkpoint-10/build74-motion/margin-video127s.png)／[145秒離店](../evidence/native-v11/checkpoint-10/build74-motion/exit-video145s.png)已查看。136CDPframes／174秒影片不能當物理FPS或全段流暢度驗收。屋坡測試已再明確只認X/Z水平軸，不把Y向yaw當pitch；7focused重跑通過，runtime沒改。
 
-**繼續工作，非美術接受／非release完成。**C9一般鏡頭布料差異仍偏細，須進一步同面近距離實際遊戲比較；整體造形／材質／商品規律度與原圖仍有距離。雲端SwiftShader低密度截取不證明實體GPU/FPS或完整流暢度，audio/native仍未驗收。公開V17不變，PR8草稿，沒有合併／發佈／內容擴張。
+[C9同面較近實際遊戲改前](../evidence/native-v11/checkpoint-10/cloth-same-facing-close/before-female-in-game.png)／[改後](../evidence/native-v11/checkpoint-10/cloth-same-facing-close/after-female-in-game.png)已補完：immutable60→66，camera完全相等、B的x/z/yaw相等、同背面coat/skirt；browse progress .704/.739自然相位不同，不宣稱完全同姿勢。**自查可見提升仍太細，布料門檻不通過。**不是把UV/checker當美術完成；下一步須可讀的中尺度衣褶／垂墜，不再放大weave。[量測與評估](../evidence/native-v11/checkpoint-10/cloth-same-facing-close/assessment.json)。
+
+fresh74[五語×3尺寸／75面板](../evidence/native-v11/checkpoint-10/five-locale-framing/results.json)亦通過：camera完全相等、桌面580pxdrawer、44pxbuy、無pageoverflow/pageerror，touch emulation/ReduceMotion，不是實體手機驗收。
+
+**繼續工作，非美術接受／非release完成。**C9一般及較近鏡頭的布料差異仍偏細；整體造形／材質／商品規律度與原圖仍有距離。雲端SwiftShader低密度截取不證明實體GPU/FPS或完整流暢度，audio/native仍未驗收。公開V17不變，PR8草稿，沒有合併／發佈／內容擴張。
 
 ## 第九個 checkpoint — 一套coat／skirt實際UV與材質切片，視覺門檻仍未通過
 

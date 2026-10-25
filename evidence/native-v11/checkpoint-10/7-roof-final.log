@@ -1,0 +1,22 @@
+✔ exterior portal preserves real window rays across allowed orbit angles and rejects cutaway spill (1.841133ms)
+✔ atmospheric geometry fits within the original whole fixed-scene authoring budget (401.909953ms)
+✔ distant roof planes intersect the actual default window rays and animated crowns keep local tree pivots (22.756031ms)
+BJS - [20:47:38]: Babylon.js v8.32.0 - Null engine
+BJS - [20:47:38]: Babylon.js v8.32.0 - Null engine
+BJS - [20:47:38]: Babylon.js v8.32.0 - Null engine
+BJS - [20:47:38]: Babylon.js v8.32.0 - Null engine
+BJS - [20:47:38]: Babylon.js v8.32.0 - Null engine
+BJS - [20:47:38]: Babylon.js v8.32.0 - Null engine
+BJS - [20:47:38]: Babylon.js v8.32.0 - Null engine
+✔ v3.1 candidate fits actual Babylon RH critical points within UI-safe viewports and moves closer without clipping entry, feet or shelves (120.097241ms)
+✔ v3.1 staff view has separate intent; lighting preserves exposure and limits supplemental fill to facial surfaces (1.259486ms)
+✔ v3.1 exterior replaces exposed high blocks with low gable/eave/window geometry and preserves warm indoor / cool outdoor material separation (114.146405ms)
+✔ v3.1 environment master preserves actual runtime camera/light intent and native surface roughness (73.592723ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1453.452939
