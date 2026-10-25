@@ -1,8 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-25T17:58:16+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-25T21:06:30+08:00** (Asia/Hong_Kong).
 
-## V10 publication checkpoint — V17 saved, deployment blocked — 2026-10-25T17:58:16+08:00
+## V10 published as Site V17 — 2026-10-25T21:06:30+08:00
+
+- **Native provider confirms production publication succeeded** at [the existing public Site](https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site), V17, deployment `appgdep_6addfea011708191ad55e03cab7460a9`, terminal timestamp `2026-10-25T13:05:51.492716+00:00`. Same project/URL/public audience, access policy revision2,envrevision0 unchanged. Exact saved version `appgprj_6ad82a08ed2881918ebcc2dd206a122d~appgver_81159819e2008191b1c05e5ed9a1bc38` now reads back that deployment ID.
+- Published source **`be2486c45c8a5b0ea8c6660a96915c0e0b07e45e`**, application `b06247fcae6d02a69e8cff56e2ace124f4bfc883`,src tree `219e499f7421cdb7896a6e01fea825d53f269b54`; independently reviewed below. Existing135-file saved package reused exactly, no re-save/rebuild/code change: gzip SHA256 `4b6d1d360489bd0034d12202f71de32c9b37af5f99110e241c3d67c47dc8297a`; provider tar SHA256 `183e358ce858921a58c767aec3efb2fadb43e06d5ebaef2373d3e4240222e8fa` and135files/11,008,000bytes match. **[PR #7](https://github.com/wizardkeith/KeEv-games/pull/7) remains unmerged; main contains documentation only, not these runtime changes.**
+- Prior automatic-approval block below is resolved by owner's subsequent explicit confirmation of this exact savedV17 publication; confirmed no existing deployment, retried once, success. No merge/Ready action, credential issuance, account change or shutdown. [Exact publication/source/provider receipt and bounded local handoff](docs/releases/V10_V17_PUBLICATION_RECEIPT_2026-10-25.json).
+- **Live browser/assets verification remains blocked:** one ordinary anonymous GET after publication at13:06:12UTC returned `Tunnel connection failed: 403 Forbidden`. No bypass/retry/alternate route or userChrome operation; actual live asset hashes and post-deploy Sandbox smoke **not verified here**. Expected outgoing assets are `index-CeiXVy8O.js`, `index-CiMc3Tjj.css`, `world-njBSRei6.js`; exact expectedhashes in receipt. Parent coordinates fresh isolatedSandbox smoke after Wix releases Chrome. Pre-publication174tests/asset checks/actualHigh WebGL evidence remain valid for unchangedsource,not a new live/physical pass. **Original target-art quality/style still unaccepted**;45s idleclose/physicalGPU/FPS/audio/native limits retained. No playerNormal access or localUnity work.
+
+## Historical V10 publication checkpoint — V17 saved, deployment blocked — 2026-10-25T17:58:16+08:00
 
 - Reviewed [PR #7](https://github.com/wizardkeith/KeEv-games/pull/7) source `be2486c45c8a5b0ea8c6660a96915c0e0b07e45e` successfully synchronized to the **existing Site source repository** using five verified, non-force ancestor fast-forwards. No automatic publication window; no intermediate publish. **PR7 remains unmerged; main receives documentation only.**
 - Native saved **V17**, version `appgprj_6ad82a08ed2881918ebcc2dd206a122d~appgver_81159819e2008191b1c05e5ed9a1bc38`. All135actual tar entries match reviewed receipt/dist; gzip SHA256 `4b6d1d360489bd0034d12202f71de32c9b37af5f99110e241c3d67c47dc8297a`. Provider uncompressed tar hash `183e358ce858921a58c767aec3efb2fadb43e06d5ebaef2373d3e4240222e8fa`,135files/11,008,000bytes matches local archive exactly.

@@ -1,0 +1,102 @@
+{
+  "project_id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+  "url": "https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site",
+  "edition": 17,
+  "status": "native_deployment_succeeded_cloud_live_verification_blocked",
+  "checked_at": "2026-10-25T13:06:30Z",
+  "source_commit": "be2486c45c8a5b0ea8c6660a96915c0e0b07e45e",
+  "application_commit": "b06247fcae6d02a69e8cff56e2ace124f4bfc883",
+  "src_tree": "219e499f7421cdb7896a6e01fea825d53f269b54",
+  "review_commit": "b53502f429bf81bca943c1a28d87b0a31d7cd0f3",
+  "pull_request": "https://github.com/wizardkeith/KeEv-games/pull/7",
+  "pr_merged": false,
+  "merge_commit": null,
+  "source_or_package_resaved": false,
+  "new_source_credential_issued": false,
+  "deployment": {
+    "id": "appgdep_6addfea011708191ad55e03cab7460a9",
+    "project_id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+    "title": "下一站・小店物語 — W0+W1",
+    "version_id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d~appgver_81159819e2008191b1c05e5ed9a1bc38",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6ad82a08ed2881918ebcc2dd206a122d",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-25T13:05:51.492716+00:00"
+  },
+  "saved_version": {
+    "id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d~appgver_81159819e2008191b1c05e5ed9a1bc38",
+    "project_id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+    "version_number": 17,
+    "source": {
+      "commit_sha": "be2486c45c8a5b0ea8c6660a96915c0e0b07e45e"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_0000000073208206992740221e9ada3f",
+      "content_hash": "sha256:183e358ce858921a58c767aec3efb2fadb43e06d5ebaef2373d3e4240222e8fa",
+      "size_bytes": 11008000,
+      "file_count": 135
+    },
+    "screenshot_url": null,
+    "deployment_id": "appgdep_6addfea011708191ad55e03cab7460a9"
+  },
+  "site_readback": {
+    "id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+    "status": "active",
+    "access_mode": "public",
+    "policy_revision": 2,
+    "url": "https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site",
+    "latest_version_number": 17,
+    "updated_at": "2026-10-25T13:05:51.153876+00:00"
+  },
+  "original_gzip": {
+    "sha256": "4b6d1d360489bd0034d12202f71de32c9b37af5f99110e241c3d67c47dc8297a",
+    "bytes": 6304337,
+    "archive_files": 135,
+    "runtime_files": 134,
+    "provider_tar_sha256": "183e358ce858921a58c767aec3efb2fadb43e06d5ebaef2373d3e4240222e8fa",
+    "provider_tar_bytes": 11008000,
+    "all135actual_payloads_match_reviewed_receipt_and_dist": true
+  },
+  "expected_runtime_assets": {
+    "index-CeiXVy8O.js": "1aee1fb070d11f319c2c96b8e5d8aeafc4528d5fad0ee0b4fc25469c4e00375c",
+    "index-CiMc3Tjj.css": "b72a538aa1adb953dec6bfd06831209f0ae61aea8aa3e385ac07154c91c96c72",
+    "world-njBSRei6.js": "b5d68e21ca3d402033aec92ea125ea7d98e151b7b155ded002a92667bd21e9ac",
+    "index.html": "ce9647c1f01e325ac4ba70c27d541fa76131a28b9c5c6dd8c87c9cf4e2d25c1d"
+  },
+  "verification": {
+    "provider_terminal_succeeded": true,
+    "provider_source_archive_deployment_url_and_public_policy_readback": true,
+    "live_asset_hashes_checked": false,
+    "post_deploy_sandbox_smoke_passed": false,
+    "root_https_check": {
+      "checked_at": "2026-10-25T13:06:12.134567+00:00",
+      "method": "ordinary anonymous HTTPS GET of original public URL; configured default transport; no auth/bypass headers/cookies",
+      "outcome": "blocked",
+      "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    "restriction_respected": "No retry, alternate route, bypass bearer token, proxy override or user Chrome access. No browser smoke attempted after transport denial.",
+    "independent_checks_reused": "Exact unchanged candidate:174tests/build/validate/replay/asset-check;245deterministic files;276protected paths+original11ancestry;139GLBs0errors/warnings;21,144GLB/Web values;39.48s actual High isolatedSandbox purchase2/place/reload. These are cloud software-rendered pre-publication evidence, not a new live/physical-device pass.",
+    "limits": [
+      "Original target art quality/style NOT accepted; content expansion frozen.",
+      "45-second High idle-work close-up, physical GPU/FPS/audio/Safari/true hidden-tab/native remain open.",
+      "Player Normal saves untouched; no local Unity, shutdown, Site access change or PR merge."
+    ]
+  },
+  "authorization_recovery": {
+    "previous_deployment_denied": true,
+    "previous_attempt_not_executed_confirmed_by_deployment_id_null": true,
+    "new_explicit_confirmation_received": true,
+    "retry_count_with_new_evidence": 1,
+    "result": "succeeded"
+  },
+  "local_handoff": {
+    "owner": "parent after Wix releases user Chrome",
+    "scope": "Use fresh isolated browser context and Sandbox only. Verify live root and three expected bundle names/hashes, worldReady, tote buy2/place/reload and unchanged isolated Normal baseline; bounded120s stop on access/error/timeout. Preserve user sessions and Normal saves. Report actual renderer and unmet physical limits. No source/deployment/account changes."
+  }
+}
