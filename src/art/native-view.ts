@@ -47,11 +47,11 @@ export function nativeCameraFrame(aspect:number,fov=.8,view:NativeView='shop'){
  * shading; restrict it to face skin/ink meshes, not all scene materials. */
 export const nativeLighting={
  id:'native.light.v11-slice',
- key:{color:'#FFE0B7',intensity:2.65,direction:[.78,-.71,.32] as const,position:[-8,8,-2] as const},
- fill:{color:'#DFE9EF',ground:'#B6A38C',intensity:.44},
+ key:{color:'#FFE0B7',intensity:3.30,direction:[.88,-.48,.25] as const,position:[-8,8,-2] as const},
+ fill:{color:'#DFE9EF',ground:'#B6A38C',intensity:.36},
  faceFill:{color:'#FFF0DC',ground:'#B9B6B0',intensity:.43,direction:[.12,.35,-1] as const,parts:['head','eye-left','eye-right','eyelid-left','eyelid-right','brow-left','brow-right','mouth'] as readonly string[],roles:['skin','ink'] as readonly string[]},
  shadow:{size:2048,normalBias:.0035,bias:.0005,darkness:.16},
  exteriorFill:{color:'#C3DCE4',ground:'#839D99',intensity:.42},
  exposure:1,
- note:'V9 analytic original room IBL plus stronger directional window light; exposure stays 1. Standard PBR fallback. No tone-map/exposure boost, bloom or dynamic reflection. Face fill includes only face skin/ink meshes; hair/cloth retain key/fill volume. Warm window key, restrained cool sky and a separate cool exterior fill; assess actual WebGL evidence for visual acceptance.',
+ note:'V11 static warm low-angle window key and cool exterior, original room IBL, soft contact-hardening shadows and actual floor AO. ACES exposure1/contrast1.06. No bloom or dynamic reflection. Face fill remains restricted to skin/ink. Actual game render, not metadata or tests, determines visual fidelity.',
 } as const;

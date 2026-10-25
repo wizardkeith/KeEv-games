@@ -22,8 +22,8 @@ for y in range(512):
    edge=max(0,(r-.77)/.23);shade=.5+.5*v;fiber=(math.sin(a*74+r*11)+math.sin(a*113-r*7))*.5
    color=[143+39*(1-shade)+fiber*7,91+32*(1-shade)+fiber*5,47+24*(1-shade)+fiber*3]
    color=[c*(1-.66*edge) for c in color]
-   if math.hypot(u/.30,(v-.06)/.68)<1:color=[55,34,25]
-   for cx,cy,rx,ry in [(-.25,.40,.17,.21),(.26,-.40,.075,.095)]:
+   if math.hypot(u/.38,(v-.04)/.56)<1:color=[55,34,25]
+   for cx,cy,rx,ry in [(-.25,.40,.125,.17),(.26,-.40,.055,.065)]:
     if ((u-cx)/rx)**2+((v-cy)/ry)**2<1:color=[255,250,233]
   p[x,y]=tuple(max(0,min(255,round(c))) for c in color)
 im.save(out/'misaki-eyes.png')

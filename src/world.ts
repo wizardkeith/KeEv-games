@@ -51,12 +51,12 @@ import {counterFocusRecipe} from './art/day1-focus';
 
 export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>void,onFeedbackEnd:()=>void=()=>{},nativePresentation=new NativeCommitPresentation()){
  const engine=new Engine(canvas,true,{preserveDrawingBuffer:false,stencil:true,adaptToDeviceRatio:false});
- const scene=new Scene(engine);scene.useRightHandedSystem=true;scene.clearColor=Color4.FromHexString('#F4EFE8FF');scene.imageProcessingConfiguration.toneMappingEnabled=true;scene.imageProcessingConfiguration.toneMappingType=ImageProcessingConfiguration.TONEMAPPING_ACES;scene.imageProcessingConfiguration.exposure=1.42;scene.imageProcessingConfiguration.contrast=1.06;
+ const scene=new Scene(engine);scene.useRightHandedSystem=true;scene.clearColor=Color4.FromHexString('#F4EFE8FF');scene.imageProcessingConfiguration.toneMappingEnabled=true;scene.imageProcessingConfiguration.toneMappingType=ImageProcessingConfiguration.TONEMAPPING_ACES;scene.imageProcessingConfiguration.exposure=nativeLighting.exposure;scene.imageProcessingConfiguration.contrast=1.06;
  const camera=new ArcRotateCamera('curated.40deg',-Math.PI/4,50*Math.PI/180,18,new Vector3(0,1,0),scene);
  camera.attachControl(canvas,true);camera.lowerBetaLimit=45*Math.PI/180;camera.upperBetaLimit=55*Math.PI/180;camera.lowerAlphaLimit=-Math.PI/4-.27;camera.upperAlphaLimit=-Math.PI/4+.27;camera.lowerRadiusLimit=13;camera.upperRadiusLimit=26;camera.panningSensibility=0;camera.wheelDeltaPercentage=.012;camera.minZ=.1;camera.maxZ=90;
  const sky=new HemisphericLight('soft cream sky',new Vector3(0,1,0),scene);sky.intensity=nativeLighting.fill.intensity;sky.diffuse=Color3.FromArray(linearColor(nativeLighting.fill.color));sky.groundColor=Color3.FromArray(linearColor(nativeLighting.fill.ground));
  const sun=new DirectionalLight('static window sunlight',Vector3.FromArray([...nativeLighting.key.direction]),scene);sun.position.set(...nativeLighting.key.position);sun.diffuse=Color3.FromArray(linearColor(nativeLighting.key.color));sun.intensity=nativeLighting.key.intensity;sun.shadowMinZ=.1;sun.shadowMaxZ=35;
- const shadow=new ShadowGenerator(nativeLighting.shadow.size,sun);shadow.useContactHardeningShadow=true;shadow.contactHardeningLightSizeUVRatio=.04;shadow.filteringQuality=ShadowGenerator.QUALITY_MEDIUM;shadow.bias=nativeLighting.shadow.bias;shadow.normalBias=nativeLighting.shadow.normalBias;shadow.darkness=nativeLighting.shadow.darkness;
+ const shadow=new ShadowGenerator(nativeLighting.shadow.size,sun);shadow.useContactHardeningShadow=true;shadow.contactHardeningLightSizeUVRatio=.085;shadow.filteringQuality=ShadowGenerator.QUALITY_MEDIUM;shadow.bias=nativeLighting.shadow.bias;shadow.normalBias=nativeLighting.shadow.normalBias;shadow.darkness=nativeLighting.shadow.darkness;
  const probeData=roomProbeData(),probe=new RawCubeTexture(scene,probeData.faces,roomProbeContract.size,Engine.TEXTUREFORMAT_RGB,Engine.TEXTURETYPE_UNSIGNED_BYTE,true,false,Texture.TRILINEAR_SAMPLINGMODE);probe.name=roomProbeContract.id;probe.gammaSpace=false;
  const harmonics=new SphericalHarmonics();for(const s of probeData.samples)harmonics.addLight(Vector3.FromArray(s.direction),Color3.FromArray(s.color),s.weight);harmonics.convertIncidentRadianceToIrradiance();harmonics.convertIrradianceToLambertianRadiance();probe.sphericalPolynomial=SphericalPolynomial.FromHarmonics(harmonics);scene.environmentTexture=probe;
  const botanicalAtlas=new Texture(botanicalPrintMaterial.path,scene,false,false);botanicalAtlas.gammaSpace=true;botanicalAtlas.name='native.v10.botanical.print';
@@ -79,7 +79,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  for(const mesh of focus.getChildMeshes()){const m=mesh.material as PBRMaterial;m.emissiveColor=Color3.FromArray(linearColor('#DAB57B')).scale(.035);}
  const leafNodes:TransformNode[]=[];
  function plant(name:string,x:number,y:number,z:number,scale:number){const data=plantParts(scale),base=model(name,data.base);base.position.set(x,y,z);for(const [i,leaf] of data.leaves.entries()){const node=model(`${name}.leaf.${i}`,leaf.recipe,base);node.position.set(...leaf.pivot);leafNodes.push(node);}}
- plant('counter.plant',2.0,1.111,-1.45,.38);
+ // Counter flowers are original static fixture dressing in buildV11Styling.
  for(const [i,[x,z,scale]] of [[-3.9,2.6,1.15],[-3.95,-2.7,1.4],[1.2,2.95,.52],[4.10,2.50,1.45]].entries())plant(`plant.original.${i}`,x,scale===.52?1.5235:artDirection.fixtureBaseY,z,scale);
  const exteriorData=[...exteriorRecipe(),...nativeWindowCanopy()],exterior=model('native.window.exterior',exteriorData.filter(p=>p.role!=='leaf'),undefined,undefined,false);
  for(const [i,p] of exteriorData.filter(p=>p.role==='leaf').entries()){const node=model(`native.window.foliage.${i}`,[{...p,at:[0,0,0]}],exterior,undefined,true);node.position.set(...p.at);leafNodes.push(node);}
@@ -128,9 +128,9 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
   if(disposed)return;engine.resize();const w=canvas.clientWidth,h=canvas.clientHeight,narrow=w<720;
   // Overlay UI never participates in the world viewport. Only a real canvas
   // resize or an explicit camera-view choice may refit the composition.
-  const top=zen?0:narrow?Math.min(112,h*.20):Math.min(136,h*.18);
-  const bottom=zen?0:narrow?Math.min(92,h*.20):Math.min(118,h*.16);
-  const right=zen||narrow?0:Math.min(220,w*.16);
+  const top=zen?0:narrow?Math.min(112,h*.20):Math.min(88,h*.13);
+  const bottom=zen?0:narrow?Math.min(92,h*.20):Math.min(104,h*.15);
+  const right=0;
   const vw=Math.max(120,w-right),vh=Math.max(80,h-top-bottom);camera.viewport=new Viewport(0,bottom/h,vw/w,vh/h);
   const signature=[w,h,viewMode,zen].join(':');if(signature===composition)return;composition=signature;
   const fit=nativeCameraFrame(vw/vh,camera.fov,viewMode),zoom=lastFitRadius?camera.radius/lastFitRadius:1;camera.lowerRadiusLimit=fit.lowerRadiusLimit;camera.upperRadiusLimit=fit.upperRadiusLimit;camera.radius=Math.max(fit.lowerRadiusLimit,Math.min(fit.upperRadiusLimit,fit.radius*zoom));camera.target.set(...fit.target);lastFitRadius=fit.radius;

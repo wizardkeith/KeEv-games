@@ -1,0 +1,403 @@
+{
+  "status": "in progress, target NOT accepted; no merge or publication",
+  "runtime": "Actual production local build31; same source geometry/light/camera bundled by this checkpoint. Fresh isolated Sandbox, actual UI commands.",
+  "imageProvenance": {
+    "game-normal-ui.png": "Actual WebGL, reduced motion static real purchased/displayed stock.",
+    "game-zen.png": "Actual explicit Zen in same game, not normal UI framing.",
+    "game-cashier.png": "Actual High cashier hand contact with rebuilt Misaki, not a posed asset gallery.",
+    "game-margin.png": "Actual committed18-item batch gross margin, not revenue or single-visitor earnings.",
+    "model-studio-body.png": "SUPPLEMENTAL actual production3D recipe, matched neutral studio NOT gameplay",
+    "model-studio-face.png": "SUPPLEMENTAL actual production3D recipe closeup, NOT gameplay"
+  },
+  "video": "172second whole original CDP recording, real timestamps, no cuts/time acceleration; encoded rate not physical deviceFPS.",
+  "qaCorrection": "Reviewer saw build23 margin at110–113s (111s readable). Original actualMargin:false poll result is a false negative, not proof of runtime loss. Raw old evidence retained. New DOM observer and non-blocking screenshot scheduling avoid blind polling gap; no gameplay/accounting change. Current build31 poll, screenshot, DOM trace all see actual margin.",
+  "rebuilt": "Hero torso/blouse/cardigan collar, short neck, skirt/sleeves, actual individual fingers, rounded shoe/outsole. Original rig/pivots/contact timing preserved.",
+  "retained": "Two customer models largelyV10, remaining catalog forms and other original assets retain history. Not all assets remade.",
+  "limits": "Style/quality visibly below approved target. Both customer rebuilds, soft garment/facial richness, dense rounded flora, atmospheric exterior/GI remain open. Cloud SwiftShader, no physicalGPU/FPS/audio/native acceptance.",
+  "files": {
+    "game-margin.png": {
+      "bytes": 674863,
+      "sha256": "accc2977eb32490927f31ffd699a2891ee8406283be06984a20f7483f611c2b1"
+    },
+    "game-cashier.png": {
+      "bytes": 685132,
+      "sha256": "d044cfa8b6a2bb1f79983c02d3cff493c0aa4a35d8880a1682a64c64d0c37cc2"
+    },
+    "replay.log": {
+      "bytes": 421,
+      "sha256": "67beb9a30e2f137d3025faa962d635b85a8275a326918698204bc5e1becbf447"
+    },
+    "model-studio-body.json": {
+      "bytes": 534,
+      "sha256": "346ec3f8241c9563143638edc67ad5776ca7771d6eb07967d4e693516b7c04f3"
+    },
+    "game-staff.png": {
+      "bytes": 971759,
+      "sha256": "6eb462602d1f954c4059ea0b4a7b9e40719db2a89532fe4ed4a614522f7d8e96"
+    },
+    "game-zen.png": {
+      "bytes": 1012794,
+      "sha256": "8d0da0040616ab636ac03e58d944402bf2dcb921a687574899bfc636668a5e95"
+    },
+    "game-uncut.webm": {
+      "bytes": 1067499,
+      "sha256": "4062f1faed258bd6f2702c7b2201a99d0a8425802d9cc4dbe0c0802d835ce238"
+    },
+    "model-studio-face.json": {
+      "bytes": 534,
+      "sha256": "a0c90424d47f5cee54287203aa5f6bc4e81a82631f6317a9a47a2ba4a7c2957d"
+    },
+    "177-tests.log": {
+      "bytes": 22567,
+      "sha256": "25579f51446569d6fc03c86d631b40bf1a3d28d1dbdfc05babb0c32b60ce9d65"
+    },
+    "validate.log": {
+      "bytes": 599,
+      "sha256": "d8cf77a1e38e0b04929bd0774b8f25dee39e9ff7717ea0b8ef7fe1e5a477369b"
+    },
+    "locomotion.json": {
+      "bytes": 1642,
+      "sha256": "02316d0a033e40b6d9dc2355c88e3f29c7d7d2b20c35e64c85614ec96ac72a45"
+    },
+    "asset-check.log": {
+      "bytes": 2917,
+      "sha256": "a3c06634d1522afd9bd544dfae1db37f8cf2ef6aca3fc42b227aa580fbc5b005"
+    },
+    "margin-dom-trace.json": {
+      "bytes": 390,
+      "sha256": "755d30eeb4ab2388a1e6ca2288823cc7e9ce3aec0adcc9585d4327ac37c093a2"
+    },
+    "results.json": {
+      "bytes": 619,
+      "sha256": "4ed1bfe500912b9ec0642177a9f4429bcc5cdb1fa44e78cff86ca686c4852f49"
+    },
+    "timeline.json": {
+      "bytes": 1536505,
+      "sha256": "2c472aa0b95a27fd3d446398524d35ebf7f301e90d078e1024125e4c118b7100"
+    },
+    "build.log": {
+      "bytes": 5845,
+      "sha256": "9438ba165c88cafdfce365ea1a1df5c9498c64598fa606dc34f64d92d470a872"
+    },
+    "139-glbs.json": {
+      "bytes": 36015,
+      "sha256": "03bd130ab0186fd8f92aab0d4783e16ea7266e151afdd04ca8322040286f7155"
+    },
+    "deterministic-head.log": {
+      "bytes": 171,
+      "sha256": "df72a8d15f8723f954c0e2b8a3743cc3c92615562fb75d509fc301c65485f287"
+    },
+    "game-normal-ui.png": {
+      "bytes": 874160,
+      "sha256": "5af0a17343aade6e01d2e69c2e9391acdc438807719ceb7c18bd0641ee123ae1"
+    },
+    "model-studio-face.png": {
+      "bytes": 205354,
+      "sha256": "7668598b12fc05ec558f8be431d46181c7c645a7c27dabf6a6680e433d721caa"
+    },
+    "recording.json": {
+      "bytes": 15082,
+      "sha256": "18cec04b80367d1bcad1d23d0b2d30a727e1751b5f38af455b772f61ffc639b6"
+    },
+    "model-studio-body.png": {
+      "bytes": 120308,
+      "sha256": "8751b8aaf895b797f7d89b4fa31202d061009c7b358f484e614de546a1bae846"
+    },
+    "preservation.json": {
+      "bytes": 15652,
+      "sha256": "5d0f8ab5b8efd7ffaa0e4856ba10aa06e990d09c132a608f8fee07feeb1d7955"
+    },
+    "five-locale-framing/320-en.png": {
+      "bytes": 32455,
+      "sha256": "fd53970be8dd5d7803b344b75f1339d2f85fa5775450d9b8ad016b84b193b33a"
+    },
+    "five-locale-framing/375-ja.png": {
+      "bytes": 68704,
+      "sha256": "a0658043583786cdf86b80b768c1f97f951c4e953378a8c49456981749eca820"
+    },
+    "five-locale-framing/375-th.png": {
+      "bytes": 67223,
+      "sha256": "aebec2fb2ba903c832091d1891d09f97ae8753b06703cbf078a8d6417e72293c"
+    },
+    "five-locale-framing/1280-zh-HK.png": {
+      "bytes": 312507,
+      "sha256": "4876e9e1f63c7e2663fac33592e9646187b233dfde499a8ecb05a7179580f626"
+    },
+    "five-locale-framing/results.json": {
+      "bytes": 2537,
+      "sha256": "d2b76867599ad9d51ce6f65f24cfe44679d6498dc38483b6150d8c8546352eb4"
+    },
+    "five-locale-framing/320-ja.png": {
+      "bytes": 31914,
+      "sha256": "cf851a6cbb08d02fb850b9120bba408f01b21e5ce5df22d05352868f768ed650"
+    },
+    "five-locale-framing/375-en.png": {
+      "bytes": 68774,
+      "sha256": "e437326318216109385edad6bda7d0afb218cac9a598c7b62c50374d7d467fda"
+    },
+    "five-locale-framing/1280-ja.png": {
+      "bytes": 312370,
+      "sha256": "ad45a33842a78b1c16a92a0491837ad30d3e8271920b51d93573d480c8d7f966"
+    },
+    "five-locale-framing/320-th.png": {
+      "bytes": 30858,
+      "sha256": "b9d888d7435f4c1038f4fd1c4acd3a99e8035a04fec87d756fa90f01de584cdf"
+    },
+    "five-locale-framing/1280-zh-CN.png": {
+      "bytes": 313934,
+      "sha256": "d74aa8d5221e81a880aa38eadaaf105ff724cf53dfac7336334dae1b9c9d52a0"
+    },
+    "five-locale-framing/1280-th.png": {
+      "bytes": 307107,
+      "sha256": "b72fbd8e38d70634c6c504ac5ebf589c33d2509d7cf985d53e8c9d977ea08f87"
+    },
+    "five-locale-framing/375-zh-CN.png": {
+      "bytes": 64764,
+      "sha256": "0e36e34bd3f02dd5dd1893604b68f40a0676f1772ef092bd440f08eab45a768f"
+    },
+    "five-locale-framing/375-zh-HK.png": {
+      "bytes": 63958,
+      "sha256": "3d306fec262d9db075043aea71d4e344bfc76f9ef05a657964b802b5952c019f"
+    },
+    "five-locale-framing/320-zh-CN.png": {
+      "bytes": 31044,
+      "sha256": "f6d52526b1ee8041d34bba5cccdfd90fc73a53285b7f3d51a35befd88e9be975"
+    },
+    "five-locale-framing/1280-en.png": {
+      "bytes": 310902,
+      "sha256": "d53a4e69511f7c7b7cf22cf8bc166f5519f9fa0165036f37df907b53b098cd17"
+    },
+    "five-locale-framing/320-zh-HK.png": {
+      "bytes": 30258,
+      "sha256": "c0ee3d193f32075cfb09fe287aa91823968c89a8b01ae3ef5c3d9cb38f73515b"
+    }
+  },
+  "framing": "15 actual five-locale x1280x720/375x812/320x420 cases,75 panel switches, unchanged camera pose,580pxdesktopdrawer,44pxbuy target; touch emulation/Reduce Motion, no physical-device claim.",
+  "runtimePayload": {
+    "assets/basisTextureLoader-BR0Ale65.js": "31debbf144599f9d570f17b14b9656dd373597f3475fb5d533a1e283f53093ee",
+    "assets/clipPlaneFragment-69KcICMD.js": "bf38cc71f351db3e2de9020725636f4f9bd0a5c4657f26f7f0148aa31bb889e9",
+    "assets/clipPlaneVertex-B7crsJcb.js": "0144090f363ff7f2e30abda42aeb69b4f11a99607a3a24f2bd2c4d41b28711a5",
+    "assets/counter.glb": "4abfa586bcd31bae50b75a264f32415e24d9a3f6592629cc71062bc66f5c68bb",
+    "assets/day1/misaki-calm-v1.glb": "f61a3dd54935f4c88c6d341e2b2c7c07311bff4e58c84ddb40697343cc811b05",
+    "assets/day1/misaki-smile-v1.glb": "b6c1ba01ac8c697f6230f745e86ceceefd47abd8af14eedc00e62aef72541283",
+    "assets/dds-CNi2kAAT.js": "e767baa3a79b5a1a857056c69a4e0b3d669ca87ce55f80d3fa5e8d24c595b776",
+    "assets/ddsTextureLoader-ChdSuG5Q.js": "493c862685d09f7ba6bdc295f50a83848bd9b3a98860491dff5fca0f5556e120",
+    "assets/depth.fragment-D7kFRbvn.js": "49be052684b432f3310f7553dcdfe5aec7b1b029b874605c28ceee6fea8d6dcf",
+    "assets/depth.vertex-BLohsGCm.js": "9b739ca716a937af1652480f596f47ac1ded1d8a59a33b1bb83e2eebc3714bb3",
+    "assets/depthBoxBlur.fragment-BFUfme1H.js": "7486d8f4056eacbd707d62d7551e0f93a936736e3bc00e6f8ca4e3843fb4c2c2",
+    "assets/depthBoxBlur.fragment-Co8xjBp7.js": "3e8c3c064c84ad0f7e29396737981470b020e7be29a412dbac0738d7e6a2d623",
+    "assets/envTextureLoader-DeGBWBvy.js": "51778fe0e9862610a961b8f4b6a140de6f4dc2602f5ae63edb38673b7ffc6bc1",
+    "assets/exrTextureLoader-DgcNiiPs.js": "7cd4603cf8771d3095d2fe4243398b9d7a37d75adcbfa67e85f7113cea0c7f5d",
+    "assets/hdrTextureLoader-BEZL8Zoq.js": "3d7186fc2d4f18291e85feedc73d3094ff90423a3a71fba1f185172b534b4f4b",
+    "assets/helperFunctions-BhCFA5OW.js": "578de3e342cb47622c394717574ebd2de0ddbe4b47d418bfc709ae10481ecb8a",
+    "assets/helperFunctions-bSc4J3-1.js": "bd336453c831caf6d441c7ddf940b781b70e35e60f832d9223da779a92ccecf6",
+    "assets/iesTextureLoader-nko2oWZn.js": "163434ef3eeab52c17d64a3f0495d8110e17b44fc064597fd09d34a27d3510ac",
+    "assets/index-CiMc3Tjj.css": "b72a538aa1adb953dec6bfd06831209f0ae61aea8aa3e385ac07154c91c96c72",
+    "assets/index-Co-Xf8O5.js": "8c846852fd9c2103f2f75fb2944d659edb5660f83ad30ded9ac5a98d00a3145b",
+    "assets/instancesDeclaration-WWf_99b3.js": "6f42bd8560032e58321193e52a40fb199ff898543b2da6cbe7a2c490677186d5",
+    "assets/kernelBlur.fragment-BtTiQebs.js": "3e19ba9a83f9690ffc77be50edde48ddcadf7e3759af2cebfa1ed0b6bb5cafb6",
+    "assets/kernelBlur.fragment-eLF3RPu3.js": "18e595dd760e5d0f3661069352a9943b4b3f284b37973fd60a23b0eaa0fe5d78",
+    "assets/kernelBlur.vertex-BVG1w3xn.js": "f43eb0f4845e4e5c12494e0801615ff5f5759426ac9884f9885258b4d3853933",
+    "assets/kernelBlur.vertex-Bl1hHVO4.js": "85ee5ed8b8a77b25e843414783bed1e31526f99fe8f7bdc6c0450334e069610b",
+    "assets/kernelBlurVaryingDeclaration-B8JyLH_O.js": "ab45fba73e2f06f765ef089c68dd6457cfc50c155c4ed1b795af7cf014e14804",
+    "assets/kernelBlurVaryingDeclaration-hUXYT8Kz.js": "e33c6967c30b68ebddacef4470dac4b5401d386bf27776f02bf5da34fb872870",
+    "assets/ktxTextureLoader-CcrbxMcI.js": "4cab5e78ddfaefa92b92363c2ecfcd5f7843f7c4c02fb3ad85f12b2a650a7454",
+    "assets/logDepthDeclaration-C9PE070n.js": "1078c34cd1ee3dab2d273b4b08656fe4fb79b3a1e90b50fb05cbeb9db12ea4db",
+    "assets/logDepthDeclaration-CwIGuUsq.js": "e576ad8bb84fbd6abacdfcd0ab000418f4057bcf4dcdff9ee33a95b26c27fa46",
+    "assets/mesh.vertexData.functions-ayNlGC5K.js": "109b0c291f78ec6b98053b23c7a9ce01eb8bcee909a0964ce337a68a9b4bc61e",
+    "assets/meshUboDeclaration-CTQJDFLa.js": "8013d559d8c934a71afee9e306c727669f774fb50fee329497b787528ef4fb6a",
+    "assets/meshUboDeclaration-CuCvTj8Z.js": "36eed1d914e17f1a1cac875173d88148ec24173a5d8ed1d7c132afb17d0e994d",
+    "assets/native-v10/botanical-print-atlas.png": "0b0b41604dc76a1215b781c91246b12c2b82bbd8b79817655b898c435189976e",
+    "assets/native-v10/cloth-weave-basecolor.png": "e6a6af427f293bddccd02aec231f2d17a161e5f72a4c16b73b1e64da6a5c0443",
+    "assets/native-v10/floor-colour.png": "17b4565e60bf82382a33522515361a9f4607529fc7a9dd5e3794b4149d3ddeea",
+    "assets/native-v10/hair-strand-basecolor.png": "2476f73f419fa1c57b05eeef611f3712959356c1e71df4896357df0838fb8e67",
+    "assets/native-v10/hair-strand-normal.png": "530c689078f71ffddbd8637da000d235933a5b103cb01cfb8e34b1163855d1b7",
+    "assets/native-v10/linen-normal.png": "a814d8c51bbbb121dca3490105db31e0c4e075ec33137eab6fe3f01f77701f47",
+    "assets/native-v10/plaster-normal.png": "bb1aa91c204925502323ba741ec5d5e9bf7d57b54a56bda90e1d3576f990ff72",
+    "assets/native-v10/timber-colour.png": "2728a1d96d612394b6e8738528a87ca1e6421678a30fbfc8eb18f9398d1d9fb0",
+    "assets/native-v10/timber-normal.png": "969ef91ba8bf2c858531c49a50736f3c2e87f62e45fbfd172a46ac66197646ef",
+    "assets/native-v11/broadleaf-albedo.png": "a84a25481cfc8c3a3a12c4c9f3ce8cf648af8e97c9f90ed2bb34f48626c9f8e1",
+    "assets/native-v11/honey-oak-albedo.png": "ead247b61ee9e42f6ea3432696a5d68f6326dbd2d31362d4c303350514fb16b5",
+    "assets/native-v11/misaki-eyes.png": "b08f6b8258493b4a3beebcca07b58231aa34b1de4a78e1b9792f271cee43262c",
+    "assets/native-v11/misaki-skin.png": "c199646690241981c4bca688020aba8ea331a0a04c37c93c4fe6f1daf8f682a5",
+    "assets/native-v11/shop-floor-contact.png": "392b1e7c9f014199b60f75e4aede6345a5e1f2a72fd4b8f72effacf70f496bb2",
+    "assets/native-v3/misaki-native-v3.glb": "c0b66f25794b472f7dfa16c4bd59dda0d6bdc9711e2aa6b510f553f097f92040",
+    "assets/native-v3/visitor-a-native-v3.glb": "ed9ea4106d785dbd964a629ea4aff7bace96bdd9f935b17ea87616280a9f7926",
+    "assets/native-v3/visitor-b-native-v3.glb": "17b4cd2895f89b4c3d174c7f6525677d404f63919d6e557f4d8011289d7eea98",
+    "assets/native-v4/wood-grain-basecolor.png": "a8b5b706fbc873b45a034816dc93829f6fb361a3326d33db97f3c04ee2aa88e1",
+    "assets/native-v5/hair-strand-basecolor.png": "f735cf754d5333711f0809e11a1dbe09f2ae5e566d01e3625b3a94e98adc65e1",
+    "assets/native-v5/hair-strand-normal.png": "c5603902148920f86bf59a66920f357f7a6f845b7891e26bbb3845efeeb9091b",
+    "assets/native-v5/wood-grain-basecolor.png": "005a27aa95a703c95006e872275a7dd3a837b62bb16acacf3e83e2558f754cd6",
+    "assets/native-v6/cloth-weave-basecolor.png": "75a210ccac687212cdfd0e16184619f9f7e553934e9426e36fd1b135eb8a8686",
+    "assets/native-v6/floor-planks-basecolor.png": "6a2b414108dbeb42e6d761058d2073240e30760e85f3473d999c138446b9f419",
+    "assets/native-v9/floor-colour.png": "f0a94632354f5d2b80ee5d0e129b59702c557eede3a4514f34ad6d00ceb8b24d",
+    "assets/native-v9/linen-normal.png": "a814d8c51bbbb121dca3490105db31e0c4e075ec33137eab6fe3f01f77701f47",
+    "assets/native-v9/plaster-normal.png": "bb1aa91c204925502323ba741ec5d5e9bf7d57b54a56bda90e1d3576f990ff72",
+    "assets/native-v9/timber-colour.png": "743afc3951895b4a078d7dea1513f90ccafac20d411e255d92b7b2c76f47ce1e",
+    "assets/native-v9/timber-normal.png": "683024005f936016676d258605a22309e049f9cc5e342468aa5d9d412ac3cc29",
+    "assets/packingFunctions-C9kw82rB.js": "bf62e8d12a74ed02cf9fc8eb05dbadc248ea88ae1b4301fe9d2bb09610a35b58",
+    "assets/pass.fragment-DKgQ1K6W.js": "4f419186e38af952f8c615b1da2aac5a0a46c20507d22cb7280c116823257ec1",
+    "assets/pass.fragment-QXNIn6CT.js": "5b06ff4557a0793c0b18c5a733a168b15cd2f04630c653a55d41e96ce000ddc5",
+    "assets/passCube.fragment-B38U9Jlb.js": "069960fc688b25199964c6f4ee594f403349f997ab367a27ec4d58bf9fb29a24",
+    "assets/passCube.fragment-DxVAoagq.js": "bef4c0fc9b608892581030fae3f618a272ce8e8f972d385b83458878ca3336a4",
+    "assets/pbr.fragment-0XINeSa8.js": "ee11cf0f36a63ece28e5347b9c8474260357a806bb621a5be9728b7ed93296ca",
+    "assets/pbr.fragment-BjwoXwsb.js": "ff9f7ce5931352fe353e0794a696294c6ede990068ec8ed77e10ceb581ea9fa0",
+    "assets/pbr.vertex-DE1-Sl3Q.js": "b09fc47870760ccba275a3cd636752342601027b20ea4c31a5fa36d173613c64",
+    "assets/pbr.vertex-Vvgi1yIf.js": "ca35341cc94ea053e76530ff0c0fc8eb8fad537c4bba4a8ef2f81c6867bf7a83",
+    "assets/postprocess.vertex-D7sTXNO7.js": "664c8f61c2a0c1ae7e07a2cf9ac903d3d501792240e25a398b2ee9c2221f69d3",
+    "assets/rgbdDecode.fragment-DbU3qd1j.js": "434c1113a5f02b4e44ca002607fb2998ba8080f8859dacbbd970f2e67feb2bdc",
+    "assets/rgbdDecode.fragment-DfReQsJX.js": "90bb505ef41817ca22875013caa76a461315fdd3948eb03db97a091971e0af3e",
+    "assets/rgbdEncode.fragment-5kP3b6Q6.js": "3e29b3cc207b5188bcc12543be5c940ee107be598c50e8ae0d2f722afe85d07a",
+    "assets/rgbdEncode.fragment-Bvdw5Cge.js": "05a1e4507ac44cd99e3b5d6fbf65b47954f64debd8111c3a7859fb37afc03cf2",
+    "assets/sale.wav": "bdf0db6fb6b690878eaf0c01392768b873188bf9999b0d1091d4dcb7bc9da2ba",
+    "assets/shadowMap.fragment-CJGjyVuf.js": "5ded3722300525e52d6a0bae31f970931819fe2616e640b5e0734e0f26a64efb",
+    "assets/shadowMap.fragment-D3QY-YlS.js": "b39b5e406de910efb5dd23ed6d42f0d81704514b41d80fdcd94eb600795a637b",
+    "assets/shadowMap.vertex-BlfLRV_b.js": "f28e5ccb41c1127872bb02ab65efda7b2cb29c454c566c13cf12bffac37ef22d",
+    "assets/shadowMap.vertex-irGCzf-g.js": "7360031169c9d3e4d82135320a3c2d02910e1b514cff60d39f15553b8a994303",
+    "assets/shadowMapFragmentSoftTransparentShadow-BQDLp550.js": "43046fb3ebfee930d90c8d139f34aa6bb9029d8db31b1b9308ab159061facd2e",
+    "assets/shadowMapFragmentSoftTransparentShadow-Bp3fTqSp.js": "d711da29838b30370d58cf50b395a5128ede2aea396765ad54438f08ef2e2d44",
+    "assets/skin-test.glb": "7472fe82516c54ad646d025ff9ad2115f9f3b2d6d06a8767a31f52b13376b01e",
+    "assets/tgaTextureLoader-D5iy8wiA.js": "6e7a574b7d572f2077bc6e5220e72463d79e7bf05d22b8fce2adcb4e28b8717f",
+    "assets/w1_1/card.glb": "aa8a32236fd5001e90c50bc1c25fe24159ac4627ed07e5c4713470a05f2659ac",
+    "assets/w1_1/cookie.glb": "640f770550fc75352db0fce6fc3e151f9c29f8ec4e8d7bda4b19e8d4f708427d",
+    "assets/w1_1/counter-w1_1.glb": "6f7c049686f17feeabcdba3bcc6594b320013508336bd3d27c4f14e52358cd43",
+    "assets/w1_1/display-w1_1.glb": "262b5d19636fb1d7b0e3a2b4f4b55701e907b0bb1987b7890ec6213298164791",
+    "assets/w1_1/generic-staff-w1_1.glb": "0424a2726d4236bd555731549062ff95ed01b64d1dee3e2ccca631f5697481c5",
+    "assets/w1_1/mug.glb": "1059b8569f028ec01dbe9f4d6524fd73fa22cf8f047f1e49d1900ac1eef472e9",
+    "assets/w1_1/notebook.glb": "8543abae07663deb8897984fcdd1e391680c5f20e097df73c654fba66650129f",
+    "assets/w1_1/pencil.glb": "7770a19a8b4d49e6c112493772abec5415e0cfd6d35f42a2d52a24c6bda4168f",
+    "assets/w1_1/plant-w1_1.glb": "a6a737f6f7513e448482b86dfbb265e822894262a4b1744a318802f56420fb66",
+    "assets/w1_1/room-w1_1.glb": "2a560e9c2e1d8e98299f4c10d70b0851f2d7fb960653db6303d9e96ede97d998",
+    "assets/w1_1/tea.glb": "5700cf84d949c83e8cb1f5b2d44410294a9f7341e4ba42f972576d0364fd1862",
+    "assets/w1_1/tote.glb": "16bc44b791fbed0b972b61778f24e4a26acad917f7f43f17c308c351c0a92f28",
+    "assets/w1_1/towel.glb": "a1bb9dd4f7ca055fe15594f19c5caf1efe6929b063e43081291d848e68604045",
+    "assets/w1_1/tray.glb": "8667182404da277a68c5066e0dbec5fd4bc35854694fb89315a0ad3ff56833b3",
+    "assets/w1_1/vase.glb": "10d319300b0f14b535d2443655d11bc0c6030aca0ec0512b5774799ec73894ca",
+    "assets/w1_1a/card.glb": "44b7c523c7b806460616372f5ec5eb14ebd13d945740c9266fca72edaefee6f1",
+    "assets/w1_1a/cookie.glb": "56d3f7e37e3786194a50fd595ee34a551935a86410200744b4fee8dbed9669ef",
+    "assets/w1_1a/counter-w1_1a.glb": "58e5cef53fb60bff7c364e478a71018aab31804f1c7027b83335a31f22fa8a7d",
+    "assets/w1_1a/display-w1_1a.glb": "27c93d6233cc1877b80d52ff82d8a994f811afb42a22d1a43953ab3e0ab1df30",
+    "assets/w1_1a/generic-staff-w1_1a.glb": "3b8cabce823bf59f194af946cf26882d4deb1eb82606b91ea73ead6d56ad1bc6",
+    "assets/w1_1a/mug.glb": "a89356583b9e07f76c8419f57d08393fc4d89b8272329b0a5a99e37e264a7d17",
+    "assets/w1_1a/notebook.glb": "557a3e91d19bae5840e4040b64a26d39466385742340ea91c8c77379448a2942",
+    "assets/w1_1a/pencil.glb": "abcdda62d02b5f319f0a27e059ce325cc74b41a436cc0c83e68299fdb5a04ab3",
+    "assets/w1_1a/plant-w1_1a.glb": "c21a3b5f469ec5ec3865ff1bacad6c84e204b3d5fa084138e522d9b005adc7c8",
+    "assets/w1_1a/room-w1_1a.glb": "fb30caebe52c5e58bce3e23a6099b43d61c53fec43135c0b50ebb582cf7f929d",
+    "assets/w1_1a/tea.glb": "601713d11fbb86696178740d7d9aed6f7b08b0f2053c18b9ca64bc1a5b186b00",
+    "assets/w1_1a/tote.glb": "16195d570489bd0414fa70a311778343a59232856d68cdd9372cd12934dedd74",
+    "assets/w1_1a/towel.glb": "4d8732870b6cf02cbd12c74c7451e5b6f98bee26ee3030addc66d9521ff85c85",
+    "assets/w1_1a/tray.glb": "2a7b050d5c4c29b6fb8ca16c887ef78e2d1054d07c896306f7942d154cf30edc",
+    "assets/w1_1a/vase.glb": "ce8ff1db6ae3d9eba482896b2b03475a064c32d38e9f189f29c273420ee96b9f",
+    "assets/w1_1a1/counter-w1_1a1.glb": "4602da938fde3b8dbbc5a3ec5a5bb64007c51729e1ddb3c3d8c004e39ec54cef",
+    "assets/w1_1a1/mug.glb": "cb3c59c5627d56ef6dbcc6d21b97a175393b038affd5174edf13ab3e85b27a41",
+    "assets/w1_1a1/room-w1_1a1.glb": "77ebd30600952ee370e20f598ee6f8a4c0202e54335d0dd654aa3d46ee0ca71a",
+    "assets/w1_1b/card.glb": "1b0ec45e2cc6bfe7e71adc856491edbb2f306f8e449aa03ce6e6c685b72fc33f",
+    "assets/w1_1b/cookie.glb": "b3fe29d0193c385fa013f34f2cdb8e6cffe240341790d52a9ad69b3a45111a97",
+    "assets/w1_1b/counter-w1_1b.glb": "0210373d5cc9c3662996a8970e608b7e4c2dab9d76690a4610b8e1e83b299802",
+    "assets/w1_1b/display-w1_1b.glb": "39dd49e91bee6c9fc305498adaac2f07783dde79cc03fca05a920f63a5753ee7",
+    "assets/w1_1b/generic-staff-w1_1b.glb": "ed48d9b32e99b290746006cf65c9082ed59d6c6380dd1177c43c0a9301f2d7bd",
+    "assets/w1_1b/mug.glb": "d21c6a345c2b3798365803b2025af010ee89561af6fb53d58ed46c562c9ddc50",
+    "assets/w1_1b/notebook.glb": "e9cf86b58ea868735e3bdc1763ac95f047a1043a6349bc387030466e6d807173",
+    "assets/w1_1b/pencil.glb": "222c5fac7895df7b0cda2421a960e7cc7e2ee62951ab047bbaccd650d1dc9d22",
+    "assets/w1_1b/plant-w1_1b.glb": "e443fb165bc9a97937893db92e27d268ec8a7d741387746af760a255fd0b43fe",
+    "assets/w1_1b/room-w1_1b.glb": "24ee1be4623e0745f06b950e5545fb8580d15393fa0c2b7fb2df3a89f79c8c4e",
+    "assets/w1_1b/tea.glb": "305a59d15f07f158004f93b9bb1766de96e501a619efa170117c936b86d4edaf",
+    "assets/w1_1b/tote.glb": "7c258639cb378f4eb06f6df41004697665c6391ff128b3bc4c46458ad1ea9181",
+    "assets/w1_1b/towel.glb": "0eadeb110572f5faffacb1e0d786fa5062cdc418390ac1ece4ecdc33c47444c5",
+    "assets/w1_1b/tray.glb": "a7f4a392e9627701f6cd86fc8aa14ed8f1d547f53f9433fe32a5e4af8dcaf389",
+    "assets/w1_1b/vase.glb": "188cfc7827eff27cb28a232e37d883a61b8d5990882d74a76d22d9c1ef6b5bdf",
+    "assets/world-Cyi1Idrd.js": "87edaccb213a2a42245a74ae49e7cd23163f9549bc98633b402994f2645329df",
+    "fonts/NotoSansHK.ttf": "49ed803874550e473cd9ca117101dc0c52efcb4048c0db114aae80e4fbc98f18",
+    "fonts/NotoSansJP.ttf": "61c98a4f9fac39f1f68f9f0a52a0b816fb69ba84d68c2780a2e364f96ad27390",
+    "fonts/NotoSansSC.ttf": "6cc44f4ea674d50ed753938b75532400ba973cda0601c28af9c390f5f4c8b550",
+    "fonts/NotoSansThai.ttf": "980bcfaee0273a4e5ba1d497646e26e0ac60abb578978955d9dd16ece7097182",
+    "fonts/PlusJakartaSans.ttf": "99c2de7a89fa5af7facb4b4e6370787d86e63fa69711f38a35f9ecf304c9efcc",
+    "index.html": "caaf5c0303696402c41b2d8cc6c480c8b3ee6e4cb5e430feca96eb5a2723b78a"
+  },
+  "sourceInputsSHA256": {
+    "src/art/back-display-v10.ts": "432505c907ff308a866cfdd30c372107c1ac85854f29998a9b2239504d789b09",
+    "src/art/character-v11.ts": "035f174bb2bdc4ea7c63bb80e36c08c05fe934448a4bad12b3d139563eb1e3e6",
+    "src/art/characters-v10.ts": "08c5e5a78576475e0c9f1dbd2de8c6d8e9867ffcfa9010649455e4dab3a24413",
+    "src/art/day1-focus.ts": "02b6c678e4fbbb4df15a718741fd2f27df1e517b1383b30da4e627157e378209",
+    "src/art/direction.ts": "d78660a0952e04d1ed3f6feb9d95364405bd91a8eaf3365c0011ce4a14d8993e",
+    "src/art/fixtures-v11.ts": "0f96beae0dd531ac4e1821d87db90dc14fe5f2c07bc687e74e30fbe70becf9cf",
+    "src/art/floor-bake-v11.ts": "d05b07109a3068f0a6a6ead039125c5c4a0d8b40aa84e6bbafd8456a50f7c73c",
+    "src/art/garments-v11.ts": "d37a2cbe3a7f7c6819b455b67a936c067d1cedc0550222199796df8d692c180f",
+    "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
+    "src/art/hairclip-v11.ts": "ced2890db88fd9418e048bcde478c91edd08b21c7f7e774b899a64c5de178bec",
+    "src/art/hands-v11.ts": "444cc6b6d18bac3c628dfde10dc76824a3c7bed3258cf78d316d7b1a1d915548",
+    "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
+    "src/art/misaki.ts": "a357d337d3e0ba769f463c5dc6750bd27191de6e7ec6a7c93e27fd08c00b7d74",
+    "src/art/native-characters.ts": "22f51fc54fdd222a9fc0d2c553b5c1522aac059c2d043fad3b502c310a881462",
+    "src/art/native-display.ts": "330a02dc6be78a7e38086e27319d23c74252a0d42aaae97c4bdc50ae9717e6e6",
+    "src/art/native-environment.ts": "381f0f1c87782b5fb250e5bde29b22bb2732ad5eb7d5bdff4ec4243dd6c7f17a",
+    "src/art/native-materials.ts": "c1b2eadc57991f9b4441cee44de7d15af9f8fc4420f853d5941ee0c68a2f6a5d",
+    "src/art/native-products.ts": "da515d2fd618c6bb16f9b7fa0a168bbb899944e53b3293d901e0ea7f1769665c",
+    "src/art/native-room-probe.ts": "fde6f98d1aa353404852c2ad7006240505dc3f1e70c03bd315721270e16382eb",
+    "src/art/native-styling.ts": "aab8cef5b6d260df51f5dd9eab5f7444bd8f154e4c92eda708b1b8846ca821d1",
+    "src/art/native-view.ts": "22fb13615f8aa0be69d39fda766abfd7ee76301980e7a693ac618f03664793ca",
+    "src/art/products-v10.ts": "ce5609e36e69b3c8c68985860461a6ecb5df33c7484b2e095a74689bea0dda04",
+    "src/art/products-v11.ts": "3a3653e1a1085de208e5c8813a7e7d3ca80e43b24e193e2b7b140edd8fc95056",
+    "src/art/recipes.ts": "b3c6890ff3e025f14373f28f10a68f3eeeb54f8a733a26192233f81f0090b905",
+    "src/art/sculpt-v10.ts": "114a810e5245f58832dc5d12641e20e6ca1b7d159a2410d7d72cd3b3a141546c",
+    "src/art/shoes-v11.ts": "9301cc97453fe09ff5aa3773da0942d1f876b39ef69d7fa478c04d3b4f1efe2a",
+    "src/art/shop-v10.ts": "0ac65000bb42de57c335410b3e1af6f12ab2557d78c89b9eac3d548ae12c0623",
+    "src/art/shop-v11.ts": "b9b4b671eab2ea07d010c305a5d7418fdae6ac1e95b546ae6ea951fd3b94d8f0",
+    "src/art/staged-products-v11.ts": "13bce9c2fece7f8dd45f02e1b4f41de819241f55d2d7349c4d28f5de47877a91",
+    "src/art/tote-v10.ts": "2b357b54c9f233b5f4ba398b04ac384632ea0c582978840c886266f0fa25fe74",
+    "src/content/catalog.json": "da87299143bb23e12c8c708d77232b97b229c423ffc89ef79449d6b02c970937",
+    "src/content/en.json": "e0158be3e70a2e1201d176092182a3f4db03abee2b09946170a16e36eb47ca4e",
+    "src/content/ja.json": "d2d673a2d39a6289e1820d479ab48abf0d95b352015a249e209c3267dde6250b",
+    "src/content/layout.json": "be6add3214958370cf4a59d4e7e0fb4ef351ba5c2159057882befda06bb1ce97",
+    "src/content/th.json": "67bb2dd2e581d0bff9a5aee19c7d267b850d97cfef498d13610771795c07e3da",
+    "src/content/zh-CN.json": "48f82eb461e63b90e759b279f939daaf4595b69c262949479bd9cf75a17cc594",
+    "src/content/zh-HK.json": "b479fe6964a132b8da81e04a13fb264cec88a36d2f5002d77a94550372ff2097",
+    "src/core/contracts.ts": "49858d8dacb33592a12584574feb920268893422b3df66f07b23d1b8c7909d8d",
+    "src/core/recovery.ts": "63829734eb20eeb12898793887c05cd5714a8a2c4fcc6f2d7a91dc2e3e7b4254",
+    "src/core/simulation.ts": "6677c50e89c4d8345041ea75bdac01d3252236c23b51309a72417f3314b7fbe8",
+    "src/core/validation.ts": "7ce8068f6a0288f29e736aebf11d11f1627d5748208d6fc00cb4859ce57063f6",
+    "src/env.d.ts": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+    "src/main.ts": "8b2cee69aec509716726dfc7d8d0e23095c05712601dc11011ec35dd94b9d9c2",
+    "src/narrative/day1-copy.ts": "42c6c61a249bf87381f330e83f5aaa8a3417d14ca85f6216fead798270ba7013",
+    "src/narrative/day1.ts": "dadc239445dc05ef6d3ba2ce9123287c69f4079278312c908d1491232e10b461",
+    "src/platform/loader.ts": "33bdb55dfbae1432a33dde8863dfc5c8caaa4224ac1768005dc3bcc14442615e",
+    "src/platform/online-contracts.ts": "eaf601c72ba0c40d02e6522f6841a37ae5a35475d58ccd99b00623407bc356c2",
+    "src/platform/storage.ts": "f72257fa99e2943ab7b596d4cd4f48c0470e8f3ab241b7f0f57a7f27c40199d3",
+    "src/presentation/config.ts": "42fad7e794ec70b0464fc6b63f1cf7c6163f1b4aaffc019ada5faaec2e6e377d",
+    "src/presentation/day1.ts": "d957c556bfb7da0144b32388152726b675c97d9a09609e81badd2a5197b31d5a",
+    "src/presentation/feedback.ts": "4cadc31dbf0b5cb00e4b556195c8035a912dd461a9cd7549f3a15d0f5f073146",
+    "src/presentation/native-attention.ts": "477d24e55c90c6ff3dd07865092e0c3dc0adee5891116e4214eff5908a05903c",
+    "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
+    "src/presentation/native-delivery.ts": "92ab544352360caa1463f62f0f93e5d22f5d8a09b791aec6aa93057c8ab06ab6",
+    "src/presentation/native-feet.ts": "440404e1bceabdb2bf8d8f9f699d030c40e4815f7b0e904ea15a3f6a180bdef3",
+    "src/presentation/native-handoff.ts": "c13f02b2846cd5936265e4f0c2148738b3ab107767b7f60d788b7f2c981b02dc",
+    "src/presentation/native-motion.ts": "215b955ec4b3fc83400a478545882b257fc244247fb16ea630748bbce8547000",
+    "src/presentation/native-routes.ts": "2bdfc7fab4b8c190c12b8f2d96a100b759086ebbbfb60740af4fca378428b040",
+    "src/presentation/native-scene.ts": "bed32138150cdbf9e5441a3af30b190d0b34f7ffe70e3d4f6ff6b43ddd04ae70",
+    "src/presentation/native-shop-life.ts": "f047081d626af8df730adf60ceea9757493ff24e0e52fc781c080b0722a0b0a1",
+    "src/presentation/native-staff-player.ts": "3b75972728599f831d5eda10c3623ac830393969d4bb71e63a08711b38a32538",
+    "src/presentation/native-staff-routine.ts": "9b1bfe70c17704ca7a3f49605a6702be52b6c451b3c46ddd0895f2988990ccb1",
+    "src/presentation/native-staff.ts": "ce0262e97426b5e326c5e6db9e58d5d6a97de4865d5148a3b9274a8350d653bf",
+    "src/presentation/native-visible-clock.ts": "aebff05c819ef1e25d8c71cb1ce5e088f42d6cd7c8f55008d97c45790b0468d4",
+    "src/presentation/poses.ts": "b024cb68505423cd9732d1160c755cbcf642da659c007c7d16278a99dc0e7e10",
+    "src/presentation/preferences.ts": "50733bde035ade3b4553f27d329cffd80e4927b14cba643b35a8f9f94490858f",
+    "src/presentation/sale-accounting.ts": "cddd8d9163c88f12cb1a47e5a5de4a29c0cd416dd5ec432a16acb8eb1c914f09",
+    "src/style.css": "24ff6b1b65cab94fdd9e43288e6a14134ff4b83bc6205f03a681b60ad2e64055",
+    "src/ui/copy.ts": "d15b9a61aafd840f5e2892b97b016b99c8dded65432bc7b863a9398a1fe84b3e",
+    "src/ui/day1.ts": "eb2644452ca134becbb4a5d5a22a3caffa2263c4756069c646d046a7422f2c3c",
+    "src/ui/dom.ts": "20e0f5a9d3e9c04b88cb5c242a4c9b78be47adde6e213d1f045cd12de72add36",
+    "src/ui/icons.ts": "aea0d364ca7bd929a8cf3b16c425903e6de1eb7a16947eb00d40e4124e28b414",
+    "src/ui/panels.ts": "0b095fa80728756b1b824afe0b6f9a9cc09d3d04a72341b68f301b86e38fe105",
+    "src/ui/price-state.ts": "c65559cbea1fe71c0e134bca788b9464d06a69ef2967839a15bdeaa2e8327c13",
+    "src/ui/pricing.ts": "16e64eb2c125673499fda2745a1dcc65868d8a40b80189a623b11e37c4b3b81c",
+    "src/ui/session.ts": "e3dd17f41a180db9e4c9ca41d06ac8802e7d16752f77c09e76fff2193bbebc84",
+    "src/ui/set-status.ts": "4e97f48bdeb314f1bc9d7796f279cec0050bf12bc2fe24e99ebbbc7fc5c46acb",
+    "src/ui/shop-guidance.ts": "126c45ff76b66b3773a9e039b6b08764b94b4b58751adfd07d12a4e3a0f263d3",
+    "src/ui/stock-copy.ts": "b465d7e414493963a9fea267eef7d9eb3e66c17f5ca213c46cb10e49c582cadb",
+    "src/ui/stock-state.ts": "bc0fe2b6782c366cd293b8805a94a17cba1068f534248a9f7b7ddd89a57687e1",
+    "src/ui/stock.ts": "6aa43e5691053bf3906c95e02aafd4bb5edf8596d00e49e2a9f7a06e36cb032a",
+    "src/ui/thumbnails.ts": "91344354e79cca2bb84f7590c7e913e6d2e5b005ddda54cb7799315d1342f3be",
+    "src/world.ts": "6a3ac3b98fc90379d6cbd33e1b8158345c17cbe493167b59d9722e8993193452",
+    "assets/masters/native-v11/misaki-head.json": "9370f009d5d9f8d7726d2a1cc3acdadbdeda065886bd80e3c790bee90e08aac5"
+  }
+}

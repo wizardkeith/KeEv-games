@@ -101,7 +101,7 @@ for k in range(9):
 # non-destructive high surface remains in the .blend; collapse is evaluated only
 # for the game mesh and preserves material/UV seam boundaries.
 for ob,color,role,texture in pieces:
-    lod=ob.modifiers.new('Runtime retopology - source sculpt retained','DECIMATE');lod.ratio=.10;lod.use_collapse_triangulate=True;lod.delimit={'UV','MATERIAL'}
+    lod=ob.modifiers.new('Runtime retopology - source sculpt retained','DECIMATE');lod.ratio=.23 if role=='skin' else .08;lod.use_collapse_triangulate=True;lod.delimit={'UV','MATERIAL'}
 # Preserve a fully editable Blender master with explicit local-space surfaces.
 out=Path(os.environ.get('V11_MASTER_OUT',str(ROOT/'assets/masters/native-v11')));out.mkdir(parents=True,exist_ok=True)
 bpy.context.preferences.filepaths.save_version=0

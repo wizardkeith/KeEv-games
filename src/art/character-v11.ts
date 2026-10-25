@@ -1,3 +1,5 @@
+import {rebuildV11Shoes} from './shoes-v11';
+import {rebuildV11Hands} from './hands-v11';
 import {leafHairclip} from './hairclip-v11';
 import {rebuildV11Garments} from './garments-v11';
 /** V11 target slice: original editable Blender subdivision sculpt + authored UV
@@ -39,5 +41,5 @@ export function rebuildV11Misaki(parts:NativePart[]):NativePart[]{
   const brow=parts.find(p=>p.id==='brow-'+id)!;brow.pivot=[side*.084,.226,0];brow.recipe=[stroke([[-.034,-.002,0],[-.010,.007,0],[.017,.005,0],[.034,-.003,0]],brow.pivot,.0018)];
  }
  const mouth=parts.find(p=>p.id==='mouth')!;mouth.pivot=[0,.055,0];mouth.recipe=[{...stroke([[-.023,.003,0],[-.008,-.005,0],[.008,-.005,0],[.023,.003,0]],mouth.pivot,.0013),color:'#B46D60'}];
- cached=rebuildV11Garments(parts);return cached;
+ cached=rebuildV11Shoes(rebuildV11Hands(rebuildV11Garments(parts)));return cached;
 }

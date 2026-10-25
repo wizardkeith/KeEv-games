@@ -39,3 +39,16 @@
 - [177測試](../evidence/native-v11/checkpoint-2/177-tests.log)、build/validate/replay/asset-check通過；139 GLB零error/warning；305受保護檔案與原11commit歷史檢查通過。真正圖面仍優先於這些技術結果。[完整來源／限制](../evidence/native-v11/checkpoint-2/provenance.json)。
 
 **尚未解決／不能宣稱通過：**整體仍與目標有明顯距離。軀幹胸肩／短頸和兩位顧客仍大幅沿用V10，下一步須實際重塑；商品組合／花材與室內窗光層次不足。現有一輪High錄影確實見到招呼、實際結算、手部接觸與交袋，但輪詢沒觀察到短暫毛利提示；正核對原始CDP畫面與事件時間，尚未判定是QA截圖阻塞而錯過或真正presentation缺失，**不能將完整流程稱pass**。較早build11曾實拍全部流程通過，但不拿舊版結果代替當前驗證。雲端SwiftShader不是實體GPU/FPS/audio/native驗收。未發佈、未合併，公開仍V17。
+
+
+## 第三個 checkpoint — 實際新模型／正常鏡頭，仍在重建
+
+- 上衣不再保留V10直立衣片：新胸背曲面、依實際胸背貼合的厚裁片、斜肩／短頸／折領；手掌重建為掌心、四指及拇指，鞋／鞋底改為連續圓曲面。既有手腕、socket、肢長與接觸／行走時間保留。完整Misaki11,944tri；兩位顧客仍沿用V10，未冒稱全部角色重建。
+- 臉面獲較多重拓撲預算，髮片保留流向／分層而減去冗餘內側面；可編輯高細分來源不刪。生成到獨立暫存目錄的JSON與master逐byte相同。花材／空心器皿重新構建，置於窗邊、中心陳列角及櫃檯；窗外枝葉更完整。這些都是固定裝飾，沒有增加庫存、SKU或獎勵。
+- 正常UI鏡頭移除固定右側空白、縮小頂部預留；抽屜仍580px、開關不重設orbit／zoom／target。回到曝光1，由實際光源與材質調整畫面，未用提高曝光代替模型工作。窗光陰影做柔化，但畫面仍未達目標的柔和／豐富程度。
+
+[正常遊戲畫面](../evidence/native-v11/checkpoint-3/game-normal-ui.png)／[明確切換Zen](../evidence/native-v11/checkpoint-3/game-zen.png)／[真正收銀接觸](../evidence/native-v11/checkpoint-3/game-cashier.png)／[實際毛利顯示](../evidence/native-v11/checkpoint-3/game-margin.png)／[172秒未剪遊戲錄影](../evidence/native-v11/checkpoint-3/game-uncut.webm)。[人物補充studio](../evidence/native-v11/checkpoint-3/model-studio-body.png)是同一production模型與相同比例的中性studio，**不是遊戲畫面，也不取代前述證據**。
+
+**QA更正：**獨立檢視已在build23原始錄影110–113秒（111秒可讀）找到「18件／+¥8,400／未扣人工、租金」。原`actualMargin:false`是輪詢漏看，不是遊戲經濟出錯；保留原始紀錄並解釋差異，沒有為這個假陰性修改遊戲。QA已加只讀DOM觀察及非阻塞截圖；fresh build31真正Sandbox招呼／結算／交袋／批次毛利均被輪詢、畫面和DOM記錄捕捉，重載快照相同，0pageerror、隔離Normal基線未變。[完整來源／限制](../evidence/native-v11/checkpoint-3/provenance.json)。177 tests、build/validate/replay/assets、139GLB零error/warning、305受保護檔案通過。另實測五語×1280×720／375×812／320×420共15組、75次panel切換，鏡頭pose不變、desktop drawer580px、buy target≥44px；只屬touch emulation/Reduce Motion，不是實體手機驗收。較早未觀察／timeout不因此被改稱歷史pass。
+
+**下一步與未通過項目：**原目標品質／風格仍未達到，正常店景仍偏平，人物服裝／臉部層次、兩位顧客、自然混合高度與白花密度、窗外天空／屋頂深度仍有明顯差距。正在另行試實際靜態幾何的Cycles間接光烘焙，尚未接入；它是光照資料試驗，不是替代遊戲的概念圖／完成畫面。沒有新故事／玩法／店舖／套裝、沒有merge/deploy/Normal玩家資料/使用者Chrome/Unity/關機。持續重建，不把技術回歸通過冒充目標美術驗收。

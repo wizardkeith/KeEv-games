@@ -6,6 +6,7 @@ import type {NativePlantParts} from './native-environment';
 import {geometry,type Geometry} from './geometry';
 import {sculptSweep,sculptLoft,finishSculpt} from './sculpt-v10';
 import type {V3} from './recipes';
+import {buildV10Styling} from './shop-v10';
 const M=(g:Geometry,color:string,role:NativeMesh['role']='leaf',at:V3=[0,0,0]):NativeMesh=>({shape:'mesh',at,geometry:g,color,role});
 const twig=(points:V3[],r:number,color='#738353')=>M(sculptSweep(points,points.map(()=>r),points.map(()=>r),points.length>12?24:6,4),color,'wood');
 function leaf(at:V3,length:number,width:number,angle:number,tilt:number,color:string):NativeMesh{
@@ -31,7 +32,7 @@ export function buildV11Garden():NativeSurface[]{
  const out:NativeSurface[]=[];
  for(let i=0;i<4;i++){const x=-5.45-i*.33,z=-2.5+i*1.60,y=.55+i%2*.20;out.push(twig([[x,.1,z],[x+.13,1.4,z+.12],[x-.06,2.80,z-.05]],.032,'#8B8061'));
   for(let b=0;b<6;b++){const a=b*2.399+i,cy=y+b*.15,cx=x+Math.cos(a)*.28,cz=z+Math.sin(a)*.35;out.push(twig([[x,cy-.4,z],[cx,cy,cz],[cx+Math.cos(a)*.23,cy+.14,cz+Math.sin(a)*.23]],.008,'#8B8061'));
-   for(let k=0;k<10;k++)out.push(leaf([cx+Math.cos(k*2.4)*.28,cy+Math.sin(k*2.4)*.11,cz+Math.sin(k*2.4)*.28],.18+k%2*.06,.10+k%3*.025,a+k*.7,.8+k%3*.4,['#A4BA75','#7E9D58','#BAC98B','#90AB69'][k%4]));
+   for(let k=0;k<10;k++)out.push(leaf([cx+Math.cos(k*2.4)*.28,cy+Math.sin(k*2.4)*.11,cz+Math.sin(k*2.4)*.28],.30+k%2*.07,.17+k%3*.03,a+k*.7,.8+k%3*.4,['#A4BA75','#7E9D58','#BAC98B','#90AB69'][k%4]));
   }
  }
  const groups=new Map<string,NativeSurface[]>();for(const part of out){const key=part.role+':'+part.color+':'+(part.baseColorTexture??'');groups.set(key,[...(groups.get(key)??[]),part]);}return [...groups.values()].map(parts=>{const g:Geometry&{uvs:number[]}={positions:[],normals:[],indices:[],uvs:[]};for(const p of parts){const a=p.shape==='mesh'?p.geometry:geometry(p),at=p.shape==='mesh'?p.at:[0,0,0],n=g.positions.length/3;g.positions.push(...a.positions.map((v,i)=>v+at[i%3]));g.normals.push(...a.normals);g.indices.push(...a.indices.map(v=>v+n));g.uvs.push(...((a as Geometry&{uvs?:number[]}).uvs??Array(a.positions.length/3*2).fill(0)));}for(let i=0;i<g.positions.length;i++)g.positions[i]-=[-5.8,2,0][i%3];return {...M(g,parts[0].color,parts[0].role??'leaf',[-5.8,2,0]),...(parts[0].baseColorTexture?{baseColorTexture:parts[0].baseColorTexture}:{})};});
@@ -44,6 +45,32 @@ export function buildV11TrailingGreenery():NativeSurface[]{
   for(let branch=0;branch<3;branch++){const points:V3[]=Array.from({length:6},(_,j)=>[x+(branch-1)*.13+.045*Math.sin(j),y+.18-j*.20,z-.06-.06*j]);out.push(twig(points,.0035));
    for(let k=1;k<6;k++)for(const side of [-1,1])out.push(leaf([points[k][0]+side*.025,points[k][1],points[k][2]],.13,.10,side*(.7+branch*.3),2.35+side*.20,['#738C54','#91A665','#A6B97C'][(k+branch)%3]));
   }
+ }
+ return batch(out);
+}
+
+/** Original non-stock floral arrangements. They replace the retired window
+ * flower primitive group and decorate furniture; they never imply inventory. */
+function bouquet():NativeSurface[]{
+ const g:Geometry={positions:[],normals:[],indices:[]},profile=[[.001,0],[.075,0],[.10,.05],[.094,.18],[.043,.25],[.043,.28],[.034,.28],[.034,.25],[.083,.18],[.089,.05],[.066,.014],[.001,.014]],n=12;
+ for(const [r,y]of profile)for(let j=0;j<n;j++){const a=j/n*Math.PI*2;g.positions.push(r*Math.cos(a),y,r*Math.sin(a));}
+ for(let r=0;r<profile.length-1;r++)for(let j=0;j<n;j++){const a=r*n+j,b=r*n+(j+1)%n;g.indices.push(a,a+n,b,b,a+n,b+n);}
+ const out:NativeSurface[]=[M(finishSculpt(g),'#91A08A','ceramic')];
+ for(let i=0;i<9;i++){
+  const a=i*2.39996,r=.08+(i%3)*.046,tip:V3=[Math.cos(a)*r,.42+(i%4)*.055,Math.sin(a)*r];
+  out.push(twig([[0,.17,0],[tip[0]*.4,.32,tip[2]*.4],tip],.0028,'#738C54'));
+  if(i%3===0)out.push(leaf([tip[0]*.5,.32,tip[2]*.5],.13,.055,a,.9,'#91A665'));
+  const f:Geometry={positions:[],normals:[],indices:[]},lobes=10;
+  const rotate=(x:number,y:number,z:number)=>{const t=.35+Math.sin(i)*.35;return [x+tip[0],y*Math.cos(t)-z*Math.sin(t)+tip[1],y*Math.sin(t)+z*Math.cos(t)+tip[2]];};
+  for(let side=0;side<2;side++){f.positions.push(...rotate(0,.007+side*.002,0));for(let j=0;j<lobes;j++){const q=j/lobes*Math.PI*2,r=.024*(j%2?.67:1);f.positions.push(...rotate(Math.cos(q)*r,side*.002,Math.sin(q)*r));}for(let j=0;j<lobes;j++)f.indices.push(...(side?[side*11,side*11+1+j,side*11+1+(j+1)%lobes]:[0,1+(j+1)%lobes,1+j]));}
+  for(let j=0;j<lobes;j++){const a=1+j,b=1+(j+1)%lobes;f.indices.push(a,b,a+11,b,b+11,a+11);}out.push(M(finishSculpt(f),'#F1E6C8','leaf'));
+ }
+ return out;
+}
+export function buildV11Styling():NativeSurface[]{
+ const out=[...buildV10Styling().slice(0,14),...buildV11TrailingGreenery()];
+ for(const [x,y,z,scale]of [[-4.18,.89,-.91,1.1],[-.70,1.0575,.25,.95],[1.35,1.111,-1.47,.90]])for(const part of bouquet()){
+  const p=scaled(part,scale);out.push({...p,at:[p.at[0]+x,p.at[1]+y,p.at[2]+z]});
  }
  return batch(out);
 }

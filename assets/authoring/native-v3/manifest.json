@@ -5,16 +5,18 @@
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
     "src/art/characters-v10.ts": "08c5e5a78576475e0c9f1dbd2de8c6d8e9867ffcfa9010649455e4dab3a24413",
-    "src/art/character-v11.ts": "bb5459d30eea73c30b3380bb0817ac38ed3137506f9a87f0abf5e2906e95acb5",
-    "src/art/garments-v11.ts": "37fca9759035a381c3b300ff31134bc70cb08322c1f77cea38c1c5ad8d39f56c",
+    "src/art/character-v11.ts": "035f174bb2bdc4ea7c63bb80e36c08c05fe934448a4bad12b3d139563eb1e3e6",
+    "src/art/hands-v11.ts": "444cc6b6d18bac3c628dfde10dc76824a3c7bed3258cf78d316d7b1a1d915548",
+    "src/art/shoes-v11.ts": "9301cc97453fe09ff5aa3773da0942d1f876b39ef69d7fa478c04d3b4f1efe2a",
+    "src/art/garments-v11.ts": "d37a2cbe3a7f7c6819b455b67a936c067d1cedc0550222199796df8d692c180f",
     "src/art/hairclip-v11.ts": "ced2890db88fd9418e048bcde478c91edd08b21c7f7e774b899a64c5de178bec",
     "src/art/floor-bake-v11.ts": "d05b07109a3068f0a6a6ead039125c5c4a0d8b40aa84e6bbafd8456a50f7c73c",
     "assets/masters/native-v11/shop-floor-contact.png": "392b1e7c9f014199b60f75e4aede6345a5e1f2a72fd4b8f72effacf70f496bb2",
-    "tools/build-v11-character.py": "89e26f0eb5e1db6682530f04d5175f3d1dcfe4970cf0e59a9d1acd513bb63018",
-    "tools/paint-v11-face.py": "d6eac0de2212db1146ddc9ffddad2a85be12dc83c892723d68f6a38b72ae53a5",
-    "assets/masters/native-v11/misaki-head.json": "12810963856586539190a87f9d78b248a66e8ef6c0e1f67f39f7cf92afef3162",
+    "tools/build-v11-character.py": "55661ad29b27aacc88199a111a454a9a003f057761437a15a8c25f4880d7d81e",
+    "tools/paint-v11-face.py": "091b14f20ac23a0632a888557dc503f194005854ba412308a2f45b46b4b2f160",
+    "assets/masters/native-v11/misaki-head.json": "9370f009d5d9f8d7726d2a1cc3acdadbdeda065886bd80e3c790bee90e08aac5",
     "assets/masters/native-v11/misaki-skin.png": "c199646690241981c4bca688020aba8ea331a0a04c37c93c4fe6f1daf8f682a5",
-    "assets/masters/native-v11/misaki-eyes.png": "0eac942837df40d82974eb8270bc11c952982d72c4ef76263505f3b73596fe72",
+    "assets/masters/native-v11/misaki-eyes.png": "b08f6b8258493b4a3beebcca07b58231aa34b1de4a78e1b9792f271cee43262c",
     "src/art/sculpt-v10.ts": "114a810e5245f58832dc5d12641e20e6ca1b7d159a2410d7d72cd3b3a141546c",
     "src/presentation/native-visible-clock.ts": "aebff05c819ef1e25d8c71cb1ce5e088f42d6cd7c8f55008d97c45790b0468d4",
     "src/art/native-characters.ts": "22f51fc54fdd222a9fc0d2c553b5c1522aac059c2d043fad3b502c310a881462",
@@ -30,10 +32,10 @@
     "src/presentation/native-feet.ts": "440404e1bceabdb2bf8d8f9f699d030c40e4815f7b0e904ea15a3f6a180bdef3",
     "src/presentation/native-delivery.ts": "92ab544352360caa1463f62f0f93e5d22f5d8a09b791aec6aa93057c8ab06ab6",
     "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
-    "src/world.ts": "0b44964826815dd143e00d96f3dfabe02f26f8c092e3ef06cb2c34b7f5dbbd48",
+    "src/world.ts": "6a3ac3b98fc90379d6cbd33e1b8158345c17cbe493167b59d9722e8993193452",
     "src/presentation/native-routes.ts": "2bdfc7fab4b8c190c12b8f2d96a100b759086ebbbfb60740af4fca378428b040",
     "src/presentation/native-scene.ts": "bed32138150cdbf9e5441a3af30b190d0b34f7ffe70e3d4f6ff6b43ddd04ae70",
-    "tools/export-native-characters.ts": "bdae2741d2f659437c86e5d2915ce64f9ba556a65154eaae9596a3cba156be37",
+    "tools/export-native-characters.ts": "482950da17868acd950cc57938aca1fbeea37dcaaff3b5c9d7304a1492708289",
     "tools/generate-v10-surfaces.py": "e550229e751c35e818e74188652b8153525595c74d6e3e5a6430d8c1ba66e11d",
     "assets/masters/native-v10/hair-strand-basecolor.png": "2476f73f419fa1c57b05eeef611f3712959356c1e71df4896357df0838fb8e67",
     "assets/masters/native-v10/hair-strand-normal.png": "530c689078f71ffddbd8637da000d235933a5b103cb01cfb8e34b1163855d1b7"
@@ -64,8 +66,8 @@
       "id": "actor.misaki.native.v3",
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
-      "bytes": 598872,
-      "sha256": "a6fa4fb7315b254e97c853c7c25c03ff4ae8de460a3f5df058a04a65306b1e97",
+      "bytes": 594048,
+      "sha256": "c0b66f25794b472f7dfa16c4bd59dda0d6bdc9711e2aa6b510f553f097f92040",
       "nodes": [
         {
           "id": "body",
@@ -76,7 +78,7 @@
             0
           ],
           "geometryGroups": 7,
-          "triangles": 2868
+          "triangles": 2728
         },
         {
           "id": "head",
@@ -87,7 +89,7 @@
             0
           ],
           "geometryGroups": 5,
-          "triangles": 4468
+          "triangles": 4452
         },
         {
           "id": "eye-left",
@@ -131,7 +133,7 @@
             0.048
           ],
           "geometryGroups": 1,
-          "triangles": 134
+          "triangles": 106
         },
         {
           "id": "eye-right",
@@ -175,7 +177,7 @@
             0.048
           ],
           "geometryGroups": 1,
-          "triangles": 134
+          "triangles": 106
         },
         {
           "id": "mouth",
@@ -219,7 +221,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 276
+          "triangles": 376
         },
         {
           "id": "socket-left",
@@ -263,7 +265,7 @@
             0
           ],
           "geometryGroups": 3,
-          "triangles": 440
+          "triangles": 424
         },
         {
           "id": "arm-right",
@@ -296,7 +298,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 276
+          "triangles": 376
         },
         {
           "id": "socket-right",
@@ -340,7 +342,7 @@
             0
           ],
           "geometryGroups": 3,
-          "triangles": 440
+          "triangles": 424
         }
       ],
       "validation": {
