@@ -1,0 +1,836 @@
+[
+  {
+    "file": "assets/masters/counter.glb",
+    "bytes": 1592,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/day1/misaki-calm-v1.glb",
+    "bytes": 270328,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/day1/misaki-smile-v1.glb",
+    "bytes": 246948,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v3/misaki-native-v3.glb",
+    "bytes": 490732,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+    "bytes": 458368,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+    "bytes": 459800,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/counter.glb",
+    "bytes": 249640,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/display-1.glb",
+    "bytes": 261076,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/display-2.glb",
+    "bytes": 261088,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/display-3.glb",
+    "bytes": 261076,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/product-off.card.glb",
+    "bytes": 2448888,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/product-off.cookie.glb",
+    "bytes": 60216,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/product-off.mug.glb",
+    "bytes": 46556,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/product-off.notebook.glb",
+    "bytes": 2514708,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/product-off.pencil.glb",
+    "bytes": 164260,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/product-off.tea.glb",
+    "bytes": 2478056,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/product-off.tote.glb",
+    "bytes": 2492524,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/product-off.towel.glb",
+    "bytes": 2478736,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/product-off.tray.glb",
+    "bytes": 165328,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/product-off.vase.glb",
+    "bytes": 54680,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/room.glb",
+    "bytes": 3542020,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/styling-v9.glb",
+    "bytes": 343448,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/native-v4/window-canopy-v9.glb",
+    "bytes": 408872,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/skin-test.glb",
+    "bytes": 3300,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1/card.glb",
+    "bytes": 13724,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1/cookie.glb",
+    "bytes": 23548,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1/counter-w1_1.glb",
+    "bytes": 28508,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1/display-w1_1.glb",
+    "bytes": 34308,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1/generic-staff-w1_1.glb",
+    "bytes": 56248,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1/mug.glb",
+    "bytes": 19276,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1/notebook.glb",
+    "bytes": 10060,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1/pencil.glb",
+    "bytes": 11080,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1/plant-w1_1.glb",
+    "bytes": 45028,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1/room-w1_1.glb",
+    "bytes": 105976,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1/tea.glb",
+    "bytes": 8644,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1/tote.glb",
+    "bytes": 21412,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1/towel.glb",
+    "bytes": 9792,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1/tray.glb",
+    "bytes": 19928,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1/vase.glb",
+    "bytes": 15304,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a/card.glb",
+    "bytes": 13576,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a/cookie.glb",
+    "bytes": 23008,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a/counter-w1_1a.glb",
+    "bytes": 29036,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a/display-w1_1a.glb",
+    "bytes": 35704,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a/generic-staff-w1_1a.glb",
+    "bytes": 102436,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a/mug.glb",
+    "bytes": 20500,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a/notebook.glb",
+    "bytes": 20796,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a/pencil.glb",
+    "bytes": 13772,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a/plant-w1_1a.glb",
+    "bytes": 44404,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a/room-w1_1a.glb",
+    "bytes": 108432,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a/tea.glb",
+    "bytes": 9092,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a/tote.glb",
+    "bytes": 24988,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a/towel.glb",
+    "bytes": 10016,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a/tray.glb",
+    "bytes": 20136,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a/vase.glb",
+    "bytes": 15248,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a1/card.glb",
+    "bytes": 13764,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a1/cookie.glb",
+    "bytes": 23152,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a1/counter-w1_1a1.glb",
+    "bytes": 29364,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a1/display-w1_1a1.glb",
+    "bytes": 35956,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a1/generic-staff-w1_1a1.glb",
+    "bytes": 102932,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a1/mug.glb",
+    "bytes": 21128,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a1/notebook.glb",
+    "bytes": 21036,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a1/pencil.glb",
+    "bytes": 14012,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a1/plant-w1_1a1.glb",
+    "bytes": 44656,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a1/room-w1_1a1.glb",
+    "bytes": 109132,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a1/tea.glb",
+    "bytes": 9288,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a1/tote.glb",
+    "bytes": 25228,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a1/towel.glb",
+    "bytes": 10112,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a1/tray.glb",
+    "bytes": 20232,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1a1/vase.glb",
+    "bytes": 15340,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1b/card.glb",
+    "bytes": 14112,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1b/cookie.glb",
+    "bytes": 23432,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1b/counter-w1_1b.glb",
+    "bytes": 31052,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1b/display-w1_1b.glb",
+    "bytes": 36364,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1b/generic-staff-w1_1b.glb",
+    "bytes": 103816,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1b/mug.glb",
+    "bytes": 21304,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1b/notebook.glb",
+    "bytes": 21492,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1b/pencil.glb",
+    "bytes": 14448,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1b/plant-w1_1b.glb",
+    "bytes": 45088,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1b/room-w1_1b.glb",
+    "bytes": 110424,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1b/tea.glb",
+    "bytes": 9644,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1b/tote.glb",
+    "bytes": 25672,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1b/towel.glb",
+    "bytes": 10284,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1b/tray.glb",
+    "bytes": 20408,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "assets/masters/w1_1b/vase.glb",
+    "bytes": 15516,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/counter.glb",
+    "bytes": 1592,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/day1/misaki-calm-v1.glb",
+    "bytes": 270328,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/day1/misaki-smile-v1.glb",
+    "bytes": 246948,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/native-v3/misaki-native-v3.glb",
+    "bytes": 490732,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/native-v3/visitor-a-native-v3.glb",
+    "bytes": 458368,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/native-v3/visitor-b-native-v3.glb",
+    "bytes": 459800,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/skin-test.glb",
+    "bytes": 3300,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1/card.glb",
+    "bytes": 13724,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1/cookie.glb",
+    "bytes": 23548,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1/counter-w1_1.glb",
+    "bytes": 28508,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1/display-w1_1.glb",
+    "bytes": 34308,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1/generic-staff-w1_1.glb",
+    "bytes": 56248,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1/mug.glb",
+    "bytes": 19276,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1/notebook.glb",
+    "bytes": 10060,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1/pencil.glb",
+    "bytes": 11080,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1/plant-w1_1.glb",
+    "bytes": 45028,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1/room-w1_1.glb",
+    "bytes": 105976,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1/tea.glb",
+    "bytes": 8644,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1/tote.glb",
+    "bytes": 21412,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1/towel.glb",
+    "bytes": 9792,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1/tray.glb",
+    "bytes": 19928,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1/vase.glb",
+    "bytes": 15304,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a/card.glb",
+    "bytes": 13576,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a/cookie.glb",
+    "bytes": 23008,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a/counter-w1_1a.glb",
+    "bytes": 29036,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a/display-w1_1a.glb",
+    "bytes": 35704,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a/generic-staff-w1_1a.glb",
+    "bytes": 102436,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a/mug.glb",
+    "bytes": 20500,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a/notebook.glb",
+    "bytes": 20796,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a/pencil.glb",
+    "bytes": 13772,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a/plant-w1_1a.glb",
+    "bytes": 44404,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a/room-w1_1a.glb",
+    "bytes": 108432,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a/tea.glb",
+    "bytes": 9092,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a/tote.glb",
+    "bytes": 24988,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a/towel.glb",
+    "bytes": 10016,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a/tray.glb",
+    "bytes": 20136,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a/vase.glb",
+    "bytes": 15248,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a1/counter-w1_1a1.glb",
+    "bytes": 29364,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a1/mug.glb",
+    "bytes": 21128,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1a1/room-w1_1a1.glb",
+    "bytes": 109132,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1b/card.glb",
+    "bytes": 14112,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1b/cookie.glb",
+    "bytes": 23432,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1b/counter-w1_1b.glb",
+    "bytes": 31052,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1b/display-w1_1b.glb",
+    "bytes": 36364,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1b/generic-staff-w1_1b.glb",
+    "bytes": 103816,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1b/mug.glb",
+    "bytes": 21304,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1b/notebook.glb",
+    "bytes": 21492,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1b/pencil.glb",
+    "bytes": 14448,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1b/plant-w1_1b.glb",
+    "bytes": 45088,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1b/room-w1_1b.glb",
+    "bytes": 110424,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1b/tea.glb",
+    "bytes": 9644,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1b/tote.glb",
+    "bytes": 25672,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1b/towel.glb",
+    "bytes": 10284,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1b/tray.glb",
+    "bytes": 20408,
+    "errors": 0,
+    "warnings": 0
+  },
+  {
+    "file": "public/assets/w1_1b/vase.glb",
+    "bytes": 15516,
+    "errors": 0,
+    "warnings": 0
+  }
+]

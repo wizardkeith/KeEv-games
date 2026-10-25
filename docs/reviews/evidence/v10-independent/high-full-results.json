@@ -1,0 +1,126 @@
+{
+  "status": "pass",
+  "recordBegan": 1792918230811,
+  "welcomeStart": 33.096,
+  "shots": [
+    {
+      "loss": false,
+      "commitTime": 52.317,
+      "shownTime": 77.402,
+      "revision": 9,
+      "revenue": 285,
+      "cost": 145,
+      "margin": 140,
+      "units": 3,
+      "text": "本次結算毛利 · 3件\n+¥1,400\n未扣人工、租金等費用",
+      "transfer": true,
+      "staffPosition": {
+        "x": 3.31,
+        "z": -0.65,
+        "yaw": -0.49626559483317284,
+        "speed": 0,
+        "distance": 4.6578258640727,
+        "intent": "checkout",
+        "target": {
+          "x": 3.31,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "customers": [
+        {
+          "id": "visitor-a",
+          "enabled": true,
+          "x": 3.88,
+          "z": -1.22,
+          "yaw": 8.639379797371932,
+          "speed": 0,
+          "distance": 10.8654213027257,
+          "state": "receiving",
+          "browseProgress": 0.8827893990926353,
+          "hasBag": true,
+          "serviceRevision": 9,
+          "handoverProgress": 1
+        },
+        {
+          "id": "visitor-b",
+          "enabled": true,
+          "x": 0.5387347142847466,
+          "z": 2.05,
+          "yaw": 4.71238898038469,
+          "speed": 0.505,
+          "distance": 9.51374391778827,
+          "state": "leaving",
+          "browseProgress": 1,
+          "hasBag": false,
+          "handoverProgress": 0
+        }
+      ]
+    },
+    {
+      "loss": true,
+      "commitTime": 117.544,
+      "shownTime": 129.986,
+      "revision": 13,
+      "revenue": 3,
+      "cost": 145,
+      "margin": -142,
+      "units": 3,
+      "text": "本次結算毛利 · 3件\n−¥1,420\n未扣人工、租金等費用",
+      "transfer": false,
+      "staffPosition": {
+        "x": 2.6,
+        "z": -0.65,
+        "yaw": 6.090484548517221,
+        "speed": 0,
+        "distance": 13.40881033883916,
+        "intent": "checkout",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": true,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "customers": [
+        {
+          "id": "visitor-a",
+          "enabled": true,
+          "x": 1.4228020073123986,
+          "z": 1.9036025808302264,
+          "yaw": 0.6960891579446451,
+          "speed": 0.54,
+          "distance": 22.733204985606854,
+          "state": "entering",
+          "browseProgress": 0,
+          "hasBag": false,
+          "handoverProgress": 0
+        },
+        {
+          "id": "visitor-b",
+          "enabled": true,
+          "x": -0.65,
+          "z": 1.1,
+          "yaw": 1.5707963267948966,
+          "speed": 0,
+          "distance": 22.503461633466287,
+          "state": "browsing",
+          "browseProgress": 0.6015340579706037,
+          "hasBag": false,
+          "handoverProgress": 0
+        }
+      ]
+    }
+  ],
+  "renderer": {
+    "vendor": "Google Inc. (Google)",
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+  },
+  "normal": "isolated baseline unchanged",
+  "errors": [],
+  "limits": "Original uncut WebGL recording; encoded fps is not physical GPU/FPS/audio acceptance; amounts label aggregate realized gross margin, not net profit or a fictional buyer"
+}

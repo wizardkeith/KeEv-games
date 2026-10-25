@@ -1,0 +1,38 @@
+{
+  "source": "0626469e7d376fe7cd1962370e2955017154bacf",
+  "method": "Actual production bag surface triangles intersected along Z at authored attachment centres. Gap is to accessory centre; seam radius1.5mm/handle12mm do not close it.",
+  "samples": [
+    {
+      "name": "print centre",
+      "x": 0,
+      "y": 0.164,
+      "accessoryZ": -0.047,
+      "bodyFrontZ": 0.004217004986183714,
+      "gapMetres": 0.051217004986183715
+    },
+    {
+      "name": "left seam middle",
+      "x": -0.139,
+      "y": 0.16,
+      "accessoryZ": -0.047,
+      "bodyFrontZ": 0.03330467144935859,
+      "gapMetres": 0.0803046714493586
+    },
+    {
+      "name": "right seam middle",
+      "x": 0.139,
+      "y": 0.16,
+      "accessoryZ": -0.047,
+      "bodyFrontZ": 0.03305088161242704,
+      "gapMetres": 0.08005088161242704
+    },
+    {
+      "name": "front handle left attachment",
+      "x": -0.095,
+      "y": 0.281,
+      "accessoryZ": -0.039,
+      "bodyFrontZ": 0.02045682747027885,
+      "gapMetres": 0.05945682747027885
+    }
+  ]
+}

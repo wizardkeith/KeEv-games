@@ -1,0 +1,11 @@
+{
+  "candidate": "486bc3609426023dcb4a53d25f2939c611c41ea9",
+  "application": "0626469e7d376fe7cd1962370e2955017154bacf",
+  "srcTree": "fcb228bf2463353dcc70d6eb01d899d59a6fab6e",
+  "status": "pass",
+  "archiveEntries": 135,
+  "archiveSha256": "aefd19fe29059aeca7f79c557f39ed3a8d0c2983b02f48ed2b5f1f530df6cc50",
+  "archiveBytes": 6302965,
+  "provenanceEntries": 157,
+  "freshBuildPayloadParity": true
+}

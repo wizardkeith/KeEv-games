@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "source": "Retained real v4 QA Sandbox export; never a player Normal save",
+  "importSha256": "7b35ab7623564a50f1dd2aa98a7029442ae9f954320769c7d59c92581ba3a325",
+  "checkedFields": [
+    "mode",
+    "shopId",
+    "shopName",
+    "companyName",
+    "logo",
+    "cash",
+    "purchases",
+    "inventory",
+    "shelves",
+    "reports",
+    "eventSequence",
+    "commandIds",
+    "tutorial",
+    "recovery",
+    "rankingEligible",
+    "schemaVersion",
+    "watermark"
+  ],
+  "reload": "full snapshot equal",
+  "followupPurchase": "one real unit committed",
+  "followupPrice": "990 JPY applied through new pricing row with same cash/stock",
+  "normal": "isolated baseline unchanged"
+}

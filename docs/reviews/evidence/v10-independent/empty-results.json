@@ -1,0 +1,54 @@
+{
+  "status": "pass",
+  "samples": [
+    {
+      "time": 22.358999999985087,
+      "bubble": null
+    },
+    {
+      "time": 22.719199999988057,
+      "bubble": null
+    },
+    {
+      "time": 23.249599999986565,
+      "bubble": null
+    },
+    {
+      "time": 23.62309999998657,
+      "bubble": null
+    },
+    {
+      "time": 24.16059999998658,
+      "bubble": null
+    },
+    {
+      "time": 24.49309999998658,
+      "bubble": null
+    },
+    {
+      "time": 25.022299999989553,
+      "bubble": null
+    },
+    {
+      "time": 25.505199999988054,
+      "bubble": null
+    },
+    {
+      "time": 25.860299999989554,
+      "bubble": null
+    },
+    {
+      "time": 26.466699999988073,
+      "bubble": null
+    },
+    {
+      "time": 26.848899999991062,
+      "bubble": null
+    },
+    {
+      "time": 27.389399999991056,
+      "bubble": null
+    }
+  ],
+  "preparation": "Fresh Sandbox, no purchase or display commands before this actual browse"
+}

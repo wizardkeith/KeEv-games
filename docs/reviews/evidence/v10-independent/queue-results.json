@@ -1,0 +1,19 @@
+{
+  "source": "486bc3609426023dcb4a53d25f2939c611c41ea9",
+  "commitMs": [
+    455,
+    466,
+    450
+  ],
+  "units": [
+    1,
+    3,
+    4
+  ],
+  "pending": 2,
+  "batches": 2,
+  "reducedBatches": 0,
+  "reducedProps": [],
+  "reloadNoMargin": true,
+  "noEconomicReplay": true
+}

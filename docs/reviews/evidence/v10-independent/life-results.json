@@ -1,0 +1,76 @@
+{
+  "status": "pass",
+  "kinds": [
+    "welcome",
+    "reply",
+    "browse",
+    "farewell",
+    "goodbye"
+  ],
+  "departure": true,
+  "cases": [
+    {
+      "locale": "zh-HK",
+      "left": 16.203125,
+      "right": 236.203125,
+      "top": 325.765625,
+      "bottom": 368.765625,
+      "scroll": 218,
+      "width": 218,
+      "text": "歡迎進來，隨意看看。",
+      "count": 1,
+      "document": 375
+    },
+    {
+      "locale": "zh-CN",
+      "left": 67.484375,
+      "right": 287.484375,
+      "top": 334.90625,
+      "bottom": 377.90625,
+      "scroll": 218,
+      "width": 218,
+      "text": "这几件小物的配色很柔和。",
+      "count": 1,
+      "document": 375
+    },
+    {
+      "locale": "en",
+      "left": 20.390625,
+      "right": 240.390625,
+      "top": 307.734375,
+      "bottom": 371.734375,
+      "scroll": 218,
+      "width": 218,
+      "text": "Take care, and have a lovely day.",
+      "count": 1,
+      "document": 375
+    },
+    {
+      "locale": "ja",
+      "left": 16.203125,
+      "right": 236.203125,
+      "top": 304.765625,
+      "bottom": 368.765625,
+      "scroll": 218,
+      "width": 218,
+      "text": "こんにちは。ゆっくりご覧ください。",
+      "count": 1,
+      "document": 375
+    },
+    {
+      "locale": "th",
+      "left": 67.484375,
+      "right": 287.484375,
+      "top": 334.90625,
+      "bottom": 377.90625,
+      "scroll": 218,
+      "width": 218,
+      "text": "อยากเลือกของที่ได้ใช้ในทุกวัน",
+      "count": 1,
+      "document": 375
+    }
+  ],
+  "errors": [],
+  "quality": "Low + Minimal retains basic life; Reduce Motion freezes without hidden replay",
+  "limits": "Actual cloud SwiftShader WebGL. No physical hardware/FPS/audio claim; ambient guests are presentation, not accounting buyers."
+}
