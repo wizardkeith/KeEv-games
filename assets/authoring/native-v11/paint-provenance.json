@@ -1,0 +1,8 @@
+{
+  "source": "tools/paint-v11-face.py",
+  "method": "Original mathematical UV paint, no borrowed face/target pixels",
+  "files": {
+    "misaki-skin.png": "e376a752f4ab71707dd43cd78a2a124150c14cb985aa860e6cf6581b49ef5ea9",
+    "misaki-eyes.png": "58a657a392e6546f5ea2c55fc13d07897c3b7623e359982b467d69254f447028"
+  }
+}

@@ -46,9 +46,9 @@ export function nativeCameraFrame(aspect:number,fov=.8,view:NativeView='shop'){
 /** A local face fill preserves the authored linear colour and soft surface
  * shading; restrict it to face skin/ink meshes, not all scene materials. */
 export const nativeLighting={
- id:'native.light.v9',
+ id:'native.light.v11-slice',
  key:{color:'#FFE0B7',intensity:2.65,direction:[.78,-.71,.32] as const,position:[-8,8,-2] as const},
- fill:{color:'#DFE9EF',ground:'#B6A38C',intensity:.42},
+ fill:{color:'#DFE9EF',ground:'#B6A38C',intensity:.44},
  faceFill:{color:'#FFF0DC',ground:'#B9B6B0',intensity:.43,direction:[.12,.35,-1] as const,parts:['head','eye-left','eye-right','eyelid-left','eyelid-right','brow-left','brow-right','mouth'] as readonly string[],roles:['skin','ink'] as readonly string[]},
  shadow:{size:2048,normalBias:.0035,bias:.0005,darkness:.16},
  exteriorFill:{color:'#C3DCE4',ground:'#839D99',intensity:.42},

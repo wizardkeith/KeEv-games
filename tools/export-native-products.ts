@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {catalog} from '../src/core/contracts';
 import {nativeProductRecipe} from '../src/art/native-products';
 const sha=(b:string|Buffer)=>createHash('sha256').update(b).digest('hex');
-const source=['src/art/native-products.ts','src/art/products-v10.ts','src/art/sculpt-v10.ts','src/art/shop-v10.ts','src/art/tote-v10.ts','src/art/recipes.ts','src/art/materials.ts','src/art/geometry.ts','tools/export-native-products.ts'];
+const source=['src/art/native-products.ts','src/art/products-v10.ts','src/art/products-v11.ts','src/art/sculpt-v10.ts','src/art/shop-v10.ts','src/art/tote-v10.ts','src/art/recipes.ts','src/art/materials.ts','src/art/geometry.ts','tools/export-native-products.ts'];
 const file='assets/masters/native-v3/products-v3.json',bytes=JSON.stringify({version:'native.products.v3',units:'metres',axes:'RH Y up',material:'existing linear-sRGB semantic PBR',recipes:catalog.offerings.map(o=>({id:o.id,parts:nativeProductRecipe(o.id,o.color)}))},null,2)+'\n';
 fs.mkdirSync('assets/masters/native-v3',{recursive:true});fs.mkdirSync('assets/authoring/native-v3',{recursive:true});fs.writeFileSync(file,bytes);
 fs.writeFileSync('assets/authoring/native-v3/products-manifest.json',JSON.stringify({version:'native.products.v3',file,bytes:Buffer.byteLength(bytes),sha256:sha(bytes),rebuild:'node --import tsx tools/export-native-products.ts',sourceSha256:Object.fromEntries(source.map(p=>[p,sha(fs.readFileSync(p))]))},null,2)+'\n');

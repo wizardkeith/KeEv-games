@@ -1,3 +1,4 @@
+import {rebuildV11Misaki} from './character-v11';
 /** Native v3 original character authoring. Metres; RH +Y up, face -Z.
  * All node translations are LOCAL to the named parent. All surfaces are LOCAL
  * to their node. A rigid articulated hierarchy, deliberately no skin/clip claims.
@@ -9,11 +10,11 @@ import type {MaterialRole} from './materials';
 import {nativeMaterialIntent} from './native-materials';
 import type {Part,V3} from './recipes';
 export type NativeCharacterKind='misaki'|'visitor-a'|'visitor-b';
-export interface NativeMesh {shape:'mesh';at:V3;color:string;role:MaterialRole;geometry:Geometry&{uvs?:number[]};alpha?:number;roughness?:number;}
-export type NativePrimitive=Part&{roughness?:number};
+export interface NativeMesh {shape:'mesh';at:V3;color:string;role:MaterialRole;geometry:Geometry&{uvs?:number[]};alpha?:number;roughness?:number;baseColorTexture?:string;}
+export type NativePrimitive=Part&{roughness?:number;baseColorTexture?:string};
 export type NativeSurface=NativePrimitive|NativeMesh;
 export interface NativePart {id:string;parent?:string;pivot:V3;recipe:NativeSurface[];}
-export const nativeCharacterIdentity={version:'native-characters-v10-r1',misaki:{id:'actor.misaki.native.v3',economicBinding:'staff.graybox'},'visitor-a':{id:'actor.visitor-a.native.v3',economicBinding:null},'visitor-b':{id:'actor.visitor-b.native.v3',economicBinding:null}} as const;
+export const nativeCharacterIdentity={version:'native-characters-v11-target-slice-r1',misaki:{id:'actor.misaki.native.v3',economicBinding:'staff.graybox'},'visitor-a':{id:'actor.visitor-a.native.v3',economicBinding:null},'visitor-b':{id:'actor.visitor-b.native.v3',economicBinding:null}} as const;
 const P={skin:'#F0C9B0',skinB:'#E1B99D',blush:'#D99D91',hair:'#654735',hairLight:'#87634C',sage:'#89A189',sageDark:'#607B6A',cream:'#F5EBDD',ivory:'#F1E6CF',plum:'#785A70',ink:'#57413D',shoe:'#59483F',sole:'#8C7764',terracotta:'#B77F62',blue:'#748F9D',trousers:'#555E61'};
 const p=(shape:Part['shape'],size:V3,at:V3,color:string,role:MaterialRole='fabric',extra:Partial<NativePrimitive>={}):NativePrimitive=>({shape,size,at,color,role,...extra});
 const round=(size:V3,at:V3,color:string,role:MaterialRole='fabric',radius=.014)=>p('round',size,at,color,role,{radius});
@@ -107,8 +108,8 @@ export function nativeSurfaceGeometry(surface:NativeSurface):Geometry & {uvs?:nu
  return {...g,...(!g.uvs.length?{uvs:undefined}:{})};
 }
 export function nativeGrouped(recipe:NativeSurface[]){
- const groups=new Map<string,{role:MaterialRole;materialId:string;color:string;alpha:number;roughness:number;geometry:Geometry & {uvs:number[];tangents?:number[]}} >();
- for(const surface of recipe){const role=surface.role??'paint',alpha=surface.alpha??1,intent=nativeMaterialIntent(surface),key=intent.materialId;let group=groups.get(key);if(!group){group={role,materialId:key,color:surface.color,alpha,roughness:intent.roughness,geometry:{positions:[],normals:[],indices:[],uvs:[]}};groups.set(key,group);}const a=nativeSurfaceGeometry(surface),offset=group.geometry.positions.length/3;group.geometry.positions.push(...a.positions);group.geometry.normals.push(...a.normals);group.geometry.indices.push(...a.indices.map(x=>x+offset));group.geometry.uvs!.push(...(a.uvs??Array(a.positions.length/3*2).fill(0)));}
+ const groups=new Map<string,{role:MaterialRole;materialId:string;color:string;alpha:number;roughness:number;baseColorTexture?:string;geometry:Geometry & {uvs:number[];tangents?:number[]}} >();
+ for(const surface of recipe){const role=surface.role??'paint',alpha=surface.alpha??1,intent=nativeMaterialIntent(surface),key=intent.materialId;let group=groups.get(key);if(!group){group={role,materialId:key,color:surface.color,alpha,roughness:intent.roughness,...(surface.baseColorTexture?{baseColorTexture:surface.baseColorTexture}:{}),geometry:{positions:[],normals:[],indices:[],uvs:[]}};groups.set(key,group);}const a=nativeSurfaceGeometry(surface),offset=group.geometry.positions.length/3;group.geometry.positions.push(...a.positions);group.geometry.normals.push(...a.normals);group.geometry.indices.push(...a.indices.map(x=>x+offset));group.geometry.uvs!.push(...(a.uvs??Array(a.positions.length/3*2).fill(0)));}
  for(const g of groups.values())if(g.role==='hair'&&g.roughness===.60)g.geometry.tangents=sculptTangents(g.geometry);
  return [...groups.values()];
 }
@@ -190,4 +191,4 @@ export function legacyV9CharacterParts(kind:NativeCharacterKind):NativePart[]{
 export const nativeRigContract={version:'native-rigid-rig.v4-v3-compatible',units:'metres',axes:'right-handed; +Y up; face -Z; positive local X pitch moves hanging hands/feet toward -Z',pivotSpace:'local to parent; surfaces local to node; body is actor-local root',soleRestY:.015,rootMotion:'Only route adapter translates actor root; local gesture clips have no root motion',binding:'Misaki remains staff.graybox; visitors have no economic identity or capability',expressions:{eyelids:'eyelid-left/right are thin curved closed-lid strokes without opaque face patches; disabled at rest; animate scale.y or enable only for blink, iris geometry stays on same face; GLB master has scale Y=.001 at rest because glTF has no visibility property; runtime adapter restores scale=1 then disables until blink',mouth:'independent curved mouth; scale/tilt for smile/focus; no head replacement',brows:'independent stable brow pivots'},attachments:['socket-left','socket-right'],motion:'rigid articulated parts; external flat-floor world-foot anchoring and two-link leg IK; no skeleton, skins or embedded glTF clips',restArms:'shoulder→forearm→hand hangs downward; elbow and wrist local rotations blend on authored rest',restLegs:'hips at y=.65; knees -.25; ankles -.30; actual rest sole .015; NativeFootPlant solves .25/.30m links from immutable world stance anchors and bounded swing targets; apply bodyDrop and local hip/knee/foot quaternions',material:'Existing IEC sRGB→linear PBR semantic material intent; opaque soft fallback; custom lofts use finite smooth normals; shared native bob UVs and original strand colour/normal inputs; no external image dependency'} as const;
 
 /** Active V10 remake; old builder retained for historical/native comparison. */
-export const nativeCharacterParts=buildV10Character;
+export const nativeCharacterParts=(kind:NativeCharacterKind)=>kind==='misaki'?rebuildV11Misaki(buildV10Character(kind)):buildV10Character(kind);

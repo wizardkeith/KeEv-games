@@ -21,4 +21,4 @@ export function legacyV9ProductRecipe(id:string,color:string):Part[]{
  return base;
 }
 
-export {buildV10Product as nativeProductRecipe} from './products-v10';
+export {buildV11Product as nativeProductRecipe} from './products-v11';

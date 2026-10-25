@@ -1,16 +1,22 @@
 {
-  "version": "native-characters-v10-r1",
+  "version": "native-characters-v11-target-slice-r1",
   "authoring": "src/art/native-characters.ts",
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
     "src/art/characters-v10.ts": "08c5e5a78576475e0c9f1dbd2de8c6d8e9867ffcfa9010649455e4dab3a24413",
+    "src/art/character-v11.ts": "6933c6f6fa0dc78b13087d2dc9bdee6de309488ea2f537760b13584f4a46d69d",
+    "tools/build-v11-character.py": "ac52934fc7383a750d9bd3ccd0238699f1ef43167159f755ee248b7b9491e807",
+    "tools/paint-v11-face.py": "224b33bf1047b875c69987ec5d7e27ad7f41e1e491a1ed69cc3b7267e8d59a9b",
+    "assets/masters/native-v11/misaki-head.json": "c2eb39c6fe163a0b5875730ec0b33ee77062f48df5e4ddb18dd11c3d51373b89",
+    "assets/masters/native-v11/misaki-skin.png": "e376a752f4ab71707dd43cd78a2a124150c14cb985aa860e6cf6581b49ef5ea9",
+    "assets/masters/native-v11/misaki-eyes.png": "58a657a392e6546f5ea2c55fc13d07897c3b7623e359982b467d69254f447028",
     "src/art/sculpt-v10.ts": "114a810e5245f58832dc5d12641e20e6ca1b7d159a2410d7d72cd3b3a141546c",
     "src/presentation/native-visible-clock.ts": "aebff05c819ef1e25d8c71cb1ce5e088f42d6cd7c8f55008d97c45790b0468d4",
-    "src/art/native-characters.ts": "524c6674605c8a6aaab2356091efc8c5cdee3ececae17a9096fda6bfb7bdf77d",
+    "src/art/native-characters.ts": "22f51fc54fdd222a9fc0d2c553b5c1522aac059c2d043fad3b502c310a881462",
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
-    "src/art/native-materials.ts": "364843c8e15e25cebf5b431f13ddbeac6280cfbc4a944366e4284c4a111fd9ee",
+    "src/art/native-materials.ts": "e6b871f5c58d6cefb6f0a402b3b8f2104145470a0c0cdcb2524b47abe8a69b49",
     "src/presentation/native-handoff.ts": "c13f02b2846cd5936265e4f0c2148738b3ab107767b7f60d788b7f2c981b02dc",
     "src/presentation/native-staff-routine.ts": "9b1bfe70c17704ca7a3f49605a6702be52b6c451b3c46ddd0895f2988990ccb1",
     "src/presentation/native-attention.ts": "477d24e55c90c6ff3dd07865092e0c3dc0adee5891116e4214eff5908a05903c",
@@ -20,10 +26,10 @@
     "src/presentation/native-feet.ts": "440404e1bceabdb2bf8d8f9f699d030c40e4815f7b0e904ea15a3f6a180bdef3",
     "src/presentation/native-delivery.ts": "92ab544352360caa1463f62f0f93e5d22f5d8a09b791aec6aa93057c8ab06ab6",
     "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
-    "src/world.ts": "21ba06762fbb5db0e88ce1ea68ed8be05c1251dfc5e73138c6ec1ae11ebfb328",
+    "src/world.ts": "52eb68cf2af3861be1153b4626ef684db1c0b222a814a6ee5da51880579edb2d",
     "src/presentation/native-routes.ts": "126569ec0bce93cdffb7572d7b7ab0783053c7d6efb0bee0fd6a407aa3c1de1b",
     "src/presentation/native-scene.ts": "bed32138150cdbf9e5441a3af30b190d0b34f7ffe70e3d4f6ff6b43ddd04ae70",
-    "tools/export-native-characters.ts": "0de210ecd28716db517df216457fd218fdc054a15c5947ca98c9ed0e327a38a0",
+    "tools/export-native-characters.ts": "576729724fde91e841b2d5e31822e077b4dcd775cb64a151a1998c192b28864e",
     "tools/generate-v10-surfaces.py": "e550229e751c35e818e74188652b8153525595c74d6e3e5a6430d8c1ba66e11d",
     "assets/masters/native-v10/hair-strand-basecolor.png": "2476f73f419fa1c57b05eeef611f3712959356c1e71df4896357df0838fb8e67",
     "assets/masters/native-v10/hair-strand-normal.png": "530c689078f71ffddbd8637da000d235933a5b103cb01cfb8e34b1163855d1b7"
@@ -54,8 +60,8 @@
       "id": "actor.misaki.native.v3",
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
-      "bytes": 490732,
-      "sha256": "8392b7ad59ceb3fa9bec8a2ec24661be5a9b4f223b2315213af2133db87b9f3a",
+      "bytes": 573556,
+      "sha256": "3d33336e09df916e92e293423b2a8f41df77144f975fb151c86d8f7a427ce77c",
       "nodes": [
         {
           "id": "body",
@@ -77,40 +83,40 @@
             0
           ],
           "geometryGroups": 4,
-          "triangles": 4144
+          "triangles": 4372
         },
         {
           "id": "eye-left",
           "parent": "head",
           "pivot": [
-            -0.08,
-            0.16,
-            -0.168
+            -0.083,
+            0.161,
+            0
           ],
-          "geometryGroups": 6,
-          "triangles": 300
+          "geometryGroups": 2,
+          "triangles": 248
         },
         {
           "id": "eyelid-left",
           "parent": "head",
           "pivot": [
-            -0.08,
-            0.164,
-            -0.167
+            -0.083,
+            0.161,
+            0
           ],
           "geometryGroups": 1,
-          "triangles": 180
+          "triangles": 104
         },
         {
           "id": "brow-left",
           "parent": "head",
           "pivot": [
-            -0.08,
-            0.213,
-            -0.157
+            -0.084,
+            0.226,
+            0
           ],
           "geometryGroups": 1,
-          "triangles": 132
+          "triangles": 104
         },
         {
           "id": "hair-secondary-left",
@@ -121,40 +127,40 @@
             0.048
           ],
           "geometryGroups": 1,
-          "triangles": 208
+          "triangles": 134
         },
         {
           "id": "eye-right",
           "parent": "head",
           "pivot": [
-            0.08,
-            0.16,
-            -0.168
+            0.083,
+            0.161,
+            0
           ],
-          "geometryGroups": 6,
-          "triangles": 300
+          "geometryGroups": 2,
+          "triangles": 248
         },
         {
           "id": "eyelid-right",
           "parent": "head",
           "pivot": [
-            0.08,
-            0.164,
-            -0.167
+            0.083,
+            0.161,
+            0
           ],
           "geometryGroups": 1,
-          "triangles": 180
+          "triangles": 104
         },
         {
           "id": "brow-right",
           "parent": "head",
           "pivot": [
-            0.08,
-            0.213,
-            -0.157
+            0.084,
+            0.226,
+            0
           ],
           "geometryGroups": 1,
-          "triangles": 132
+          "triangles": 104
         },
         {
           "id": "hair-secondary-right",
@@ -165,18 +171,18 @@
             0.048
           ],
           "geometryGroups": 1,
-          "triangles": 208
+          "triangles": 134
         },
         {
           "id": "mouth",
           "parent": "head",
           "pivot": [
             0,
-            0.064,
-            -0.156
+            0.055,
+            0
           ],
           "geometryGroups": 1,
-          "triangles": 180
+          "triangles": 104
         },
         {
           "id": "arm-left",
