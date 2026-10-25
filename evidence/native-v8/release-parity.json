@@ -1,0 +1,13 @@
+{
+  "source": "730e316ffb2675f0f02add37142607fb84660817",
+  "reviewedCandidate": "972a9f6efb598ae40ec4bbb5c8b86da92b1aa383",
+  "runtimeTree": "6b0e747182b5b2ad498e27d23fec0ffc3478a244",
+  "freshBuildRuntimeFiles": 121,
+  "archiveFiles": 122,
+  "archiveSha256": "0c199367f738d14af3e6472a7f9ff607e6a4ed6de67238933e26f2360e54221e",
+  "archiveBytes": 3184867,
+  "payloadParity": true,
+  "hostingParity": true,
+  "runtimeProtectedInputsUnchanged": true,
+  "newerDocumentationPreserved": true
+}

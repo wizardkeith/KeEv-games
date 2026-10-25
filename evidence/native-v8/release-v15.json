@@ -1,0 +1,62 @@
+{
+  "projectId": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+  "version": 15,
+  "savedVersionId": "appgprj_6ad82a08ed2881918ebcc2dd206a122d~appgver_b4d34f3aa7d881918763ea168af28899",
+  "deploymentId": "appgdep_6add5625181c8191ac357b679f51c07b",
+  "status": "succeeded",
+  "publishedAt": "2026-10-25T01:06:53.695539+00:00",
+  "url": "https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site",
+  "source": "730e316ffb2675f0f02add37142607fb84660817",
+  "reviewedCandidate": "972a9f6efb598ae40ec4bbb5c8b86da92b1aa383",
+  "reviewedRuntime": "ac134fd5dec19f64aa00e0b4441e3006f07c8a0b",
+  "srcTree": "6b0e747182b5b2ad498e27d23fec0ffc3478a244",
+  "reviewMain": "d7729950dc1383b418ad87478cb8c4f10ca2f5fc",
+  "pr": "https://github.com/wizardkeith/KeEv-games/pull/5",
+  "envSetRevision": 0,
+  "providerDeploymentId": "site---6ad82a08ed2881918ebcc2dd206a122d",
+  "originalArchive": {
+    "file": "evidence/native-v8/delivery/LittleShop-v8-deploy.tar.gz",
+    "sha256": "0c199367f738d14af3e6472a7f9ff607e6a4ed6de67238933e26f2360e54221e",
+    "bytes": 3184867,
+    "runtimeFiles": 121,
+    "archiveFiles": 122
+  },
+  "providerArchive": {
+    "archive_format": "tar",
+    "sediment_file_id": "file_000000003bf081f581aaacf5b383fff2",
+    "content_hash": "sha256:fea87fdb37d00c260b1b5f81a8dc547c36b0123fb66b672dbfb56c68721a6470",
+    "size_bytes": 7823360,
+    "file_count": 122
+  },
+  "sourceSynchronization": {
+    "sha": "730e316ffb2675f0f02add37142607fb84660817",
+    "sourceBefore": "6019bf287d061bd090d2b07c73e31a984c74b241",
+    "estimatedPackBytes": 16820028,
+    "batches": 1,
+    "automaticPublication": false
+  },
+  "independentChecks": "150 tests; build/content/replay/asset-check;55 GLBs;212 tracked asset/public exporter parity;20 pricing +20 accepted-stock locale/touch cases;15 boundary layouts;save compatibility",
+  "freshReleaseChecks": "Merged build passes;121 runtime payloads + hosting byte-identical to reviewed archive; reviewed runtime/protected inputs unchanged;newer independent review main retained",
+  "siteReadback": {
+    "id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+    "version": 15,
+    "url": "https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site",
+    "status": "active",
+    "access": "public",
+    "revision": 2
+  },
+  "liveChecks": {
+    "nativeStatusVersionSourceUrlAudience": "verified",
+    "httpPayloadFetch": "not rerun: prior cloud proxy CONNECT403 access restriction",
+    "sandboxSmoke": "not run in cloud; parent can use authorized fresh isolated local Sandbox"
+  },
+  "credentialSession": "closed; no persistent credential written",
+  "limitations": [
+    "Incremental art; final approved visual target remains open;story/gameplay/new shops/sets remain frozen",
+    "Physical GPU/FPS/Safari/mobile keyboard/audio/hidden-tab/native acceptance open",
+    "P3 fixed-250ms wheel QA timing limitation remains, no unreviewed harness/runtime fix",
+    "No player Normal save or local Unity operation; no new Library IDs",
+    "No denied, pending or uncertain release mutation remains"
+  ],
+  "recordedAt": "2026-10-25T09:07:53+08:00"
+}
