@@ -77,7 +77,7 @@ function bob(width:number,color:string):NativeMesh {
  * and subtle broad folds are geometry, with no oval end caps or rigid slab. */
 function apron():NativeMesh {
  const g:Geometry={positions:[],normals:[],indices:[]},columns=16;
- const rows=[{y:.365,w:.180,z:-.189},{y:.395,w:.192,z:-.191},{y:.490,w:.184,z:-.186},{y:.590,w:.166,z:-.164},{y:.690,w:.145,z:-.142},{y:.783,w:.133,z:-.134}];
+ const rows=[{y:.365,w:.180,z:-.253},{y:.395,w:.192,z:-.251},{y:.490,w:.184,z:-.233},{y:.590,w:.166,z:-.191},{y:.690,w:.145,z:-.142},{y:.783,w:.133,z:-.134}];
  for(let side=0;side<2;side++)for(let r=0;r<rows.length;r++)for(let c=0;c<=columns;c++){
   const u=c/columns*2-1,p=rows[r],fold=.0035*Math.cos(u*Math.PI*3)*(r<4?1:.25);
   g.positions.push(u*p.w,p.y+(r===0?.016*Math.pow(u,4):0),p.z+.045*u*u+fold+side*.006);
@@ -155,11 +155,11 @@ function body(kind:NativeCharacterKind):NativeSurface[]{
  }
  if(misaki){
   for(const side of [-1,1])torso.push(mesh([{y:1.086,x:.021,z:.006,cx:side*.058,cz:-.135},{y:1.121,x:.033,z:.010,cx:side*.047,cz:-.121},{y:1.158,x:.025,z:.010,cx:side*.035,cz:-.088},{y:1.172,x:.008,z:.006,cx:side*.032,cz:-.071}],P.cream,'fabric',[0,0,0],0,0,4));
-  torso.push(mesh([{y:.305,x:.238,z:.175},{y:.350,x:.249,z:.180},{y:.490,x:.229,z:.166},{y:.620,x:.189,z:.134},{y:.750,x:.152,z:.109}],P.plum,'fabric',[0,0,0],.035));
+  torso.push(mesh([{y:.305,x:.267,z:.234},{y:.350,x:.274,z:.242},{y:.490,x:.252,z:.222},{y:.620,x:.194,z:.153},{y:.750,x:.152,z:.109}],P.plum,'fabric',[0,0,0],.035));
   torso.push(apron());
   for(const y of [1.104,1.045,.986,.927,.868])torso.push(p('cylinder',[.012,.004,.012],[0,y,-.150],'#B3A181','metal',{turn:[Math.PI/2,0,0],top:1}));
   // Thin continuous waistband; rounded pocket follows the apron front.
-  torso.push(mesh([{y:.768,x:.151,z:.116},{y:.779,x:.154,z:.119},{y:.796,x:.151,z:.116}],P.cream,'fabric'),round([.103,.084,.009],[.058,.579,-.168],'#E4D6BD','fabric',.017),round([.100,.006,.010],[.058,.621,-.171],P.cream,'fabric',.003));
+  torso.push(mesh([{y:.768,x:.151,z:.116},{y:.779,x:.154,z:.119},{y:.796,x:.151,z:.116}],P.cream,'fabric'),round([.103,.084,.009],[.058,.579,-.205],'#E4D6BD','fabric',.017),round([.100,.006,.010],[.058,.621,-.187],P.cream,'fabric',.003));
  }else if(a){
   torso.push(mesh([{y:.624,x:.156,z:.103},{y:.702,x:.165,z:.110}],P.trousers,'fabric'),round([.110,.106,.020],[-.114,.923,-.145],'#AA7055','fabric',.009),round([.102,.017,.023],[-.114,.974,-.147],'#D0A088','fabric',.004));
   torso.push(p('round',[.027,.590,.026],[.050,.967,-.156],'#C8B595','fabric',{radius:.004,turn:[0,0,.52]}),round([.212,.203,.087],[.212,.711,-.076],'#D6C5A3','fabric',.022),round([.212,.026,.091],[.212,.810,-.076],'#B3A180','fabric',.007));

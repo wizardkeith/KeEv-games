@@ -4,7 +4,7 @@
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
-    "src/art/native-characters.ts": "bd3f2e61e9095224071211b6af8a1ddab0c18a93c847474853d4e9538d4b4a17",
+    "src/art/native-characters.ts": "bcbe7f400bedaadba0ee0ac53e859f0ae2bec26ac2ab69264d0459a734ae7d14",
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "77d1f2cd62fc503fdd89d02c550878b39f8e73c0ceb213b95488874f8939454e",
@@ -16,7 +16,7 @@
     "src/presentation/native-feet.ts": "440404e1bceabdb2bf8d8f9f699d030c40e4815f7b0e904ea15a3f6a180bdef3",
     "src/presentation/native-delivery.ts": "035211812f00bd77ee89013e39bb2a75331f3f62eb57743aa70fc22ee61d70a2",
     "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
-    "src/world.ts": "5a0644dd3f00f4484e63ecf37518fa95cdd5d16ebf93bcd7ce6358efcaad60e0",
+    "src/world.ts": "ee2eef3248be8d12e95f20b9c7586a5fdb0c1a4c233661aa9fc5f11384e8405a",
     "src/presentation/native-routes.ts": "3fb45426d084f25423180f96207f8a929b8d6dbac9a6f6a82e80ca161071d8d8",
     "src/presentation/native-scene.ts": "8edf5e14a585f91e9b0ded660b1fe88575809998a718bf27ac97b4f064717aa3",
     "tools/export-native-characters.ts": "4dc64fb6568df92e70978bf3bacaaa564d7bc76208c84ab1e7411748a877f2f6",
@@ -49,8 +49,8 @@
       "id": "actor.misaki.native.v3",
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
-      "bytes": 714844,
-      "sha256": "aaa8c5ee78bcca8eb447a1645096d713c6188c10851ad50ec5160ed1c5d50cec",
+      "bytes": 714808,
+      "sha256": "26fd8d0cddf5da488821500c21d01c868475adff4696964f22c860496b1218cc",
       "nodes": [
         {
           "id": "body",

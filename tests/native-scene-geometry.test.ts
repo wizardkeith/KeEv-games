@@ -51,3 +51,11 @@ test('sale bag preserves its prior world pose across hand-to-counter ownership a
   for(const prop of f.actors.metrics().activeProps){assert.equal(prop.kind,'bag');owners.add(prop.parent);const node=f.scene.getTransformNodeByName('native.prop.bag')!;for(const v of vertices(node)){assert.ok(!counterContains(v),`bag intersects counter at phase${n/100}: ${v.asArray()}`);assert.ok(v.y>=1.11,'bag stays at/above counter while packed and handed forward');}}
  }assert.ok(owners.has('counter'));assert.ok([...owners].some(s=>s.includes('socket-right')),'real hand socket owns bag during lift');assert.deepEqual(f.actors.metrics().activeProps,[],'bag released at end');}finally{f.dispose();}
 });
+
+test('v9 walking staff keeps real full thighs covered by skirt while feet retain floor contact',()=>{
+ const f=fixture(),surfaces=nativeCharacterParts('misaki').find(p=>p.id==='body')!.recipe.filter(s=>s.shape==='mesh'&&s.role==='fabric'&&Math.min(...nativeSurfaceGeometry(s).positions.filter((_,i)=>i%3===1))<.36).map(inside);let moving=0,covered=0;
+ try{for(let n=0;n<3000;n++){f.actors.frame(1/30,HIGH,{actors:[],doorOpen:false,doorAngle:0,corridorOwner:null},undefined,undefined);if(f.actors.metrics().staffRoutine.speed>.1)moving++;if(n%5)continue;const body=f.actors.staff.parts.get('body')!;body.computeWorldMatrix(true);const inv=Matrix.Invert(body.getWorldMatrix());for(const side of ['left','right']){
+  for(const v of vertices(f.actors.staff.parts.get('leg-'+side)!)){const p=Vector3.TransformCoordinates(v,inv);if(p.y>.36&&p.y<.62){covered++;assert.ok(surfaces.some(contains=>contains(p)),`walking staff thigh outside skirt frame${n}: ${p.asArray()}`);}}
+  const lowest=Math.min(...vertices(f.actors.staff.parts.get('foot-'+side)!).map(v=>v.y));assert.ok(lowest>=.0799,'staff foot below floor');
+ }}assert.ok(moving>100&&covered>1000);}finally{f.dispose();}
+});
