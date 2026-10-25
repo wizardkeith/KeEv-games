@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "source": "85bebba9fc1419a8f01b18e46ed821cd1a1e24b2",
+  "deterministicAssets": 225,
+  "packageFiles": 126,
+  "packageBytes": 3690593,
+  "packageSha256": "4d3e846f0b487b02d1685a2fa2480fa43bc780e04c943af9a888c1b635d53606",
+  "provenanceFiles": 31,
+  "protectedFiles": 247,
+  "unchangedScope": [
+    "src/ui",
+    "src/core",
+    "src/platform",
+    "src/content",
+    "src/narrative",
+    "src/locales",
+    "src/art",
+    "src/style.css",
+    "package.json",
+    "package-lock.json",
+    ".openai/hosting.json"
+  ]
+}
