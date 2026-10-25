@@ -1,8 +1,8 @@
 """Deterministic reviewed runtime only: dist plus original hosting identity."""
 from pathlib import Path
-import gzip,tarfile,io,hashlib,json,subprocess
+import gzip,tarfile,io,hashlib,json,subprocess,os
 sha=lambda b:hashlib.sha256(b).hexdigest();git=lambda *a:subprocess.check_output(['git',*a]).decode().strip()
-files={p.as_posix():p.read_bytes() for p in Path('dist').rglob('*') if p.is_file()};runtime=len(files);files['.openai/hosting.json']=Path('.openai/hosting.json').read_bytes();out=Path('evidence/native-v10/delivery');out.mkdir(parents=True,exist_ok=True);archive=out/'NextStopLittleShop-v10-deploy.tar.gz'
+files={p.as_posix():p.read_bytes() for p in Path('dist').rglob('*') if p.is_file()};runtime=len(files);files['.openai/hosting.json']=Path('.openai/hosting.json').read_bytes();out=Path(os.environ.get('V10_PACKAGE_OUT','evidence/native-v10/delivery'));out.mkdir(parents=True,exist_ok=True);archive=out/'NextStopLittleShop-v10-deploy.tar.gz'
 with archive.open('wb') as raw:
  with gzip.GzipFile(fileobj=raw,mode='wb',filename='',mtime=0) as g:
   with tarfile.open(fileobj=g,mode='w') as t:

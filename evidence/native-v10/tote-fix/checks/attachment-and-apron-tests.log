@@ -1,0 +1,11 @@
+BJS - [09:23:13]: Babylon.js v8.32.0 - Null engine
+✔ actual rebuilt apron triangles stay in front of skirt/torso across the visible panel, without depth tricks or a torn silhouette (56.710406ms)
+✔ actual tote print layer touches cloth, both seams contact it and all four handle roots join their actual surfaces (61.69209ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 414.292782
