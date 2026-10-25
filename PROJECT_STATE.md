@@ -1,9 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T04:52:40+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T05:16:04+08:00** (Asia/Hong_Kong).
 
 
 
+
+## V11 eleventh checkpoint — authored cloth drape / reference back scarf — 2026-10-26T05:16:04+08:00
+
+- [DraftPR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed/readback **fc0ae6df2dd248d669c926d8333efcc5774037b3**, unmerged. **Main documentation only; publicV17 unchanged; original target-quality/style still not accepted, continuing.** Female medium-scale waist tension folds/gathered cuffs/skirt drape are real geometry,not more texture resolution/weave. Original target's wide burgundy BACK scarf panel replaces old narrow front tail, closed thickness/fitted actual back/outwardCCW. Female11,930<12,000;accepted neck/shoulder/hair/rig/camera/light/furniture/grouping retained.
+- **194tests/build/validate/replay/assets,139GLB0errors/warnings,305protected/history;21garment surfaces freshBlenderUVJSON/provenance byte-identical.** Newfold initial1.364mm panel-interior penetration fixed in actual12→14mm drape, threshold unchanged. [Actual same-facing closer game A/B, metrics/logs/source and limits](https://github.com/wizardkeith/KeEv-games/blob/fc0ae6df2dd248d669c926d8333efcc5774037b3/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md): camera/root/yaw exact, sameback; natural gesture phase differs. Scarf silhouette now visible; normal-scale waist folds still weak. Textile gate remains OPEN.
+- Targeted B-cashier first uninterrupted QA did not find eligible window, did NOT settle/contact and is explicitlyNOTPASSED. New ordinary pause/drain/reopen scenario committed a real settlement/margin, but Bcontact not observed yet: initial greeting screenshot delayed the subsequent click beyond the sampled eligibility position. **QA ordering/timing under diagnosis; no route/economy change or invented transaction association.** Existing74completeHighflow/five-localelayout evidence retained by unchanged controllers/UI,not falselyrerun77. No newreleasepackage while visualfidelityunmet. Whole scene still lacks target material richness/natural product variation/softwindow/contact lighting/distant detail; not onlytextile. No merge/deploy/userChrome/Normal/Unity/shutdown/content expansion; physicalGPU/FPS/audio/native open.
 
 ## V11 tenth checkpoint — branched bouquets / window gables / distant foliage — 2026-10-26T04:46:01+08:00
 
