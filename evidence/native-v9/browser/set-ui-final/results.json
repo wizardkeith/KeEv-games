@@ -1,0 +1,430 @@
+{
+  "status": "pass",
+  "hoverTapKeyboardEscape": "pass; UI-only actions did not mutate snapshot",
+  "currentVsLast": "0 while configured active; next settlement1000bp without sales; removal inactive while stored1000bp",
+  "tier": "prototype unassigned; neutral fallback, explicit state/icons",
+  "cases": [
+    {
+      "width": 266,
+      "height": 420,
+      "locale": "zh-HK",
+      "active": false,
+      "scroll": 266,
+      "document": 320,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(101, 97, 91)",
+      "targets": [
+        {
+          "w": 266,
+          "h": 48
+        },
+        {
+          "w": 114,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 266,
+      "height": 420,
+      "locale": "en",
+      "active": false,
+      "scroll": 266,
+      "document": 320,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(101, 97, 91)",
+      "targets": [
+        {
+          "w": 266,
+          "h": 48
+        },
+        {
+          "w": 139.765625,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 266,
+      "height": 420,
+      "locale": "ja",
+      "active": false,
+      "scroll": 266,
+      "document": 320,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(101, 97, 91)",
+      "targets": [
+        {
+          "w": 266,
+          "h": 48
+        },
+        {
+          "w": 170,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 266,
+      "height": 420,
+      "locale": "th",
+      "active": false,
+      "scroll": 266,
+      "document": 320,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(101, 97, 91)",
+      "targets": [
+        {
+          "w": 266,
+          "h": 48
+        },
+        {
+          "w": 115.8125,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 266,
+      "height": 420,
+      "locale": "zh-CN",
+      "active": false,
+      "scroll": 266,
+      "document": 320,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(101, 97, 91)",
+      "targets": [
+        {
+          "w": 266,
+          "h": 48
+        },
+        {
+          "w": 114,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 321,
+      "height": 420,
+      "locale": "zh-HK",
+      "active": false,
+      "scroll": 321,
+      "document": 375,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(101, 97, 91)",
+      "targets": [
+        {
+          "w": 321,
+          "h": 48
+        },
+        {
+          "w": 114,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 321,
+      "height": 420,
+      "locale": "en",
+      "active": false,
+      "scroll": 321,
+      "document": 375,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(101, 97, 91)",
+      "targets": [
+        {
+          "w": 321,
+          "h": 48
+        },
+        {
+          "w": 139.765625,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 321,
+      "height": 420,
+      "locale": "ja",
+      "active": false,
+      "scroll": 321,
+      "document": 375,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(101, 97, 91)",
+      "targets": [
+        {
+          "w": 321,
+          "h": 48
+        },
+        {
+          "w": 170,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 321,
+      "height": 420,
+      "locale": "th",
+      "active": false,
+      "scroll": 321,
+      "document": 375,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(101, 97, 91)",
+      "targets": [
+        {
+          "w": 321,
+          "h": 48
+        },
+        {
+          "w": 115.8125,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 321,
+      "height": 420,
+      "locale": "zh-CN",
+      "active": false,
+      "scroll": 321,
+      "document": 375,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(101, 97, 91)",
+      "targets": [
+        {
+          "w": 321,
+          "h": 48
+        },
+        {
+          "w": 114,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 266,
+      "height": 812,
+      "locale": "zh-HK",
+      "active": true,
+      "scroll": 266,
+      "document": 320,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(81, 72, 62)",
+      "targets": [
+        {
+          "w": 266,
+          "h": 74.59375
+        },
+        {
+          "w": 114,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 266,
+      "height": 812,
+      "locale": "en",
+      "active": true,
+      "scroll": 266,
+      "document": 320,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(81, 72, 62)",
+      "targets": [
+        {
+          "w": 266,
+          "h": 74.59375
+        },
+        {
+          "w": 139.765625,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 266,
+      "height": 812,
+      "locale": "ja",
+      "active": true,
+      "scroll": 266,
+      "document": 320,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(81, 72, 62)",
+      "targets": [
+        {
+          "w": 266,
+          "h": 74.59375
+        },
+        {
+          "w": 170,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 266,
+      "height": 812,
+      "locale": "th",
+      "active": true,
+      "scroll": 266,
+      "document": 320,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(81, 72, 62)",
+      "targets": [
+        {
+          "w": 266,
+          "h": 74.59375
+        },
+        {
+          "w": 115.8125,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 266,
+      "height": 812,
+      "locale": "zh-CN",
+      "active": true,
+      "scroll": 266,
+      "document": 320,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(81, 72, 62)",
+      "targets": [
+        {
+          "w": 266,
+          "h": 74.59375
+        },
+        {
+          "w": 114,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 321,
+      "height": 812,
+      "locale": "zh-HK",
+      "active": true,
+      "scroll": 321,
+      "document": 375,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(81, 72, 62)",
+      "targets": [
+        {
+          "w": 321,
+          "h": 48
+        },
+        {
+          "w": 114,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 321,
+      "height": 812,
+      "locale": "en",
+      "active": true,
+      "scroll": 321,
+      "document": 375,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(81, 72, 62)",
+      "targets": [
+        {
+          "w": 321,
+          "h": 74.59375
+        },
+        {
+          "w": 139.765625,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 321,
+      "height": 812,
+      "locale": "ja",
+      "active": true,
+      "scroll": 321,
+      "document": 375,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(81, 72, 62)",
+      "targets": [
+        {
+          "w": 321,
+          "h": 64.59375
+        },
+        {
+          "w": 170,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 321,
+      "height": 812,
+      "locale": "th",
+      "active": true,
+      "scroll": 321,
+      "document": 375,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(81, 72, 62)",
+      "targets": [
+        {
+          "w": 321,
+          "h": 74.59375
+        },
+        {
+          "w": 115.8125,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    },
+    {
+      "width": 321,
+      "height": 812,
+      "locale": "zh-CN",
+      "active": true,
+      "scroll": 321,
+      "document": 375,
+      "effectColor": "rgb(81, 72, 62)",
+      "statusColor": "rgb(81, 72, 62)",
+      "targets": [
+        {
+          "w": 321,
+          "h": 48
+        },
+        {
+          "w": 114,
+          "h": 44
+        }
+      ],
+      "nested": 0
+    }
+  ],
+  "normal": "isolated baseline unchanged",
+  "errors": []
+}

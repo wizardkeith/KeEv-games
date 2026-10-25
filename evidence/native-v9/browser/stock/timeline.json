@@ -1,0 +1,57 @@
+[
+  {
+    "seconds": 32.118,
+    "name": "Aligned six-column inventory table; native vertical wheel; no rail; all 580px drawers preserve orbit/zoom/target",
+    "columns": [
+      [
+        691,
+        823,
+        867,
+        944,
+        1010,
+        1093
+      ],
+      [
+        691,
+        823,
+        867,
+        944,
+        1010,
+        1093
+      ],
+      [
+        691,
+        823,
+        867,
+        944,
+        1010,
+        1093
+      ]
+    ],
+    "widths": [
+      580,
+      580,
+      580,
+      580,
+      580,
+      580
+    ]
+  },
+  {
+    "seconds": 42.989,
+    "name": "Keyboard quantity → buy → place → real shelf placement; buy focus and vertical position retained"
+  },
+  {
+    "seconds": 46.804,
+    "name": "Invalid, repeated, delayed and aborted real writes remain atomic and capture original quantity once"
+  },
+  {
+    "seconds": 54.885,
+    "name": "Selected vase, raw 007 and per-filter vertical position survive search/filter round trip, panels and reload",
+    "savedTop": 344
+  },
+  {
+    "seconds": 130.507,
+    "name": "20 five-locale short/narrow touch buy/place cases; 44px controls; no horizontal or nested scrolling; reduced motion; Normal unchanged"
+  }
+]

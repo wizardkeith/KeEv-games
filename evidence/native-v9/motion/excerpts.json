@@ -1,0 +1,35 @@
+{
+  "source": "full-uncut.webm",
+  "sourceSha256": "45a0717893fbb8d4bd07c7758f87cf910a480d2a7a079ea4ac99e2be2b62ac7d",
+  "clips": [
+    {
+      "file": "welcome-continuous.webm",
+      "startSeconds": 16,
+      "lengthSeconds": 30,
+      "speed": 1,
+      "cutsWithinClip": 0
+    },
+    {
+      "file": "return-to-cashier-continuous.webm",
+      "startSeconds": 54,
+      "lengthSeconds": 30,
+      "speed": 1,
+      "cutsWithinClip": 0
+    },
+    {
+      "file": "checkout-profit-continuous.webm",
+      "startSeconds": 83,
+      "lengthSeconds": 30,
+      "speed": 1,
+      "cutsWithinClip": 0
+    },
+    {
+      "file": "counter-loss-continuous.webm",
+      "startSeconds": 132,
+      "lengthSeconds": 25,
+      "speed": 1,
+      "cutsWithinClip": 0
+    }
+  ],
+  "note": "Encoded 25fps is not a measured physical game frame rate. Positive sale is aggregate gross margin, not one buyer ledger. Loss has generic counter fallback."
+}
