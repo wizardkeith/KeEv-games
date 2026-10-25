@@ -2,7 +2,7 @@
 // Engine-neutral recipes feed both runtime meshes and versioned interchange GLBs.
 import type {MaterialRole} from './materials';
 export type V3 = [number,number,number];
-export interface Part {shape:'box'|'round'|'sphere'|'cylinder'|'torus';size:V3;at:V3;color:string;role?:MaterialRole;turn?:V3;radius?:number;top?:number;alpha?:number;open?:boolean;inside?:boolean;segments?:number;arc?:[number,number];}
+export interface Part {shape:'box'|'round'|'sphere'|'cylinder'|'torus'|'leaf';size:V3;at:V3;color:string;role?:MaterialRole;turn?:V3;radius?:number;top?:number;alpha?:number;open?:boolean;inside?:boolean;segments?:number;arc?:[number,number];}
 export const palette={cream:'#F0E6D8',wood:'#A77A54',edge:'#CBA67D',dark:'#6A4E3C',lavender:'#BDA9CC',sage:'#7B9783',ivory:'#FFF7E9',clay:'#C28F73',ink:'#443B3C',floorLight:'#C6A37F',floorDark:'#BE9975',tableTop:'#D3B18B',hair:'#554237',skin:'#E8BEA1',apron:'#F1E3CB',staff:'#9277A4',customerSage:'#688977',customerRose:'#AC818B'};
 const p=(shape:Part['shape'],size:V3,at:V3,color:string,extra:Partial<Part>={}):Part=>({shape,size,at,color,role:'paint',...extra});
 const round=(size:V3,at:V3,color:string,radius=.035,role:MaterialRole='wood')=>p('round',size,at,color,{radius,role});

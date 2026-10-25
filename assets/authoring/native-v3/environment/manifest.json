@@ -3,18 +3,18 @@
   "version": "3.1",
   "master": {
     "path": "assets/masters/native-v3/environment-v3.json",
-    "sizeBytes": 108321,
-    "sha256": "ac4b3dcf4e2a11f6e0de603539c4e0f44c74d8c30aa157146f81f3b331209464"
+    "sizeBytes": 105238,
+    "sha256": "dfd2ed1f6e4b58c931700a4c8427c62decb858159c8fbb5667b783d21834ce2c"
   },
   "sources": {
-    "src/art/native-characters.ts": "7a8fc446f8943a3ac677fdb17430f0c8292d26747593c79c28631fc94b5fa1c0",
-    "src/art/native-environment.ts": "424e7d3c1ba9839b313930927717d71ad3d7d35eb0b00931abdb1b12be177032",
+    "src/art/native-characters.ts": "0e694a3d7dd26dfc7fa4aa83265325d5c0f9c7ad176d72364295c5bc838b49ba",
+    "src/art/native-environment.ts": "0974a2b9c50afa1d9ec777cf78e55be2d912dca1ceaff2b773b8ffcc5a622dc8",
     "src/art/native-display.ts": "2d785ebeae1f7558662dbb69ebd0007f93266d6360a3c178cb09076335b86086",
-    "src/art/native-view.ts": "f0734aaff3c18fbc851232400f5c9ab443be3b4835a9cab01e37b2545bd075ca",
-    "src/art/recipes.ts": "c20e2d9819bd5a60678c8e006318882a5ad10dcb290c228d71816add11b7dfef",
-    "src/art/geometry.ts": "f8bb1787826311d28779af727124a90ed4dbebaa2a004163221a6232b1dcbcc8",
+    "src/art/native-view.ts": "7fbf905e259049e713543c27f361dfc571a2c21dde52d26af5b6c70936111a70",
+    "src/art/recipes.ts": "b3c6890ff3e025f14373f28f10a68f3eeeb54f8a733a26192233f81f0090b905",
+    "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
-    "src/art/native-materials.ts": "f614aa78548aedb281c1a44dadba7ec63af4475abba0047fc9effc7bd709bc61",
+    "src/art/native-materials.ts": "77d1f2cd62fc503fdd89d02c550878b39f8e73c0ceb213b95488874f8939454e",
     "tools/export-native-environment.ts": "69e461a0ebb17e26542c4af7bf82eaca7870f9b8cf84ac837cc26cce4a50addf"
   },
   "rebuild": "node --import tsx tools/export-native-environment.ts",
