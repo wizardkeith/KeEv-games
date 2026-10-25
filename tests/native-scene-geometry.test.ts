@@ -54,8 +54,8 @@ test('sale bag preserves its prior world pose across hand-to-counter ownership a
 
 test('v9 walking staff keeps real full thighs covered by skirt while feet retain floor contact',()=>{
  const f=fixture(),surfaces=nativeCharacterParts('misaki').find(p=>p.id==='body')!.recipe.filter(s=>s.shape==='mesh'&&s.role==='fabric'&&Math.min(...nativeSurfaceGeometry(s).positions.filter((_,i)=>i%3===1))<.36).map(inside);let moving=0,covered=0;
- try{for(let n=0;n<3000;n++){f.actors.frame(1/30,HIGH,{actors:[],doorOpen:false,doorAngle:0,corridorOwner:null},undefined,undefined);if(f.actors.metrics().staffRoutine.speed>.1)moving++;if(n%5)continue;const body=f.actors.staff.parts.get('body')!;body.computeWorldMatrix(true);const inv=Matrix.Invert(body.getWorldMatrix());for(const side of ['left','right']){
+ try{for(let n=0;n<3000;n++){f.actors.frame(1/30,HIGH,{actors:[],doorOpen:false,doorAngle:0,corridorOwner:null},undefined,undefined);if(f.actors.metrics().staffRoutine.speed>.1)moving++;if(n%5)continue;const body=f.actors.staff.parts.get('body')!;body.computeWorldMatrix(true);const inv=Matrix.Invert(body.getWorldMatrix()),heights:number[]=[];for(const side of ['left','right']){
   for(const v of vertices(f.actors.staff.parts.get('leg-'+side)!)){const p=Vector3.TransformCoordinates(v,inv);if(p.y>.36&&p.y<.62){covered++;assert.ok(surfaces.some(contains=>contains(p)),`walking staff thigh outside skirt frame${n}: ${p.asArray()}`);}}
-  const lowest=Math.min(...vertices(f.actors.staff.parts.get('foot-'+side)!).map(v=>v.y));assert.ok(lowest>=.0799,'staff foot below floor');
- }}assert.ok(moving>100&&covered>1000);}finally{f.dispose();}
+  const lowest=Math.min(...vertices(f.actors.staff.parts.get('foot-'+side)!).map(v=>v.y));assert.ok(lowest>=.0799,'staff foot below floor');heights.push(lowest);
+ }assert.ok(Math.abs(Math.min(...heights)-.08)<1e-5,'at least one staff sole remains in contact');}assert.ok(moving>100&&covered>1000);}finally{f.dispose();}
 });
