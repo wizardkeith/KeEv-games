@@ -1,0 +1,54 @@
+{
+  "version": "native.v9.surfaces",
+  "source": "tools/generate-v9-surfaces.py",
+  "rights": "Original procedural KeEv Games inputs. No third-party/ref-image pixels.",
+  "colourEncoding": "sRGB colour maps; linear OpenGL tangent-space normals",
+  "projection": "nativeSurfaceGeometry per-face metre UV. Timber repeat1/m; floor repeat1.10x2.20m; plaster1/m; linen16/m. Runtime levels timber.20/plaster.15/linen.13. Prior original masters retained.",
+  "assets": [
+    {
+      "file": "timber-colour.png",
+      "sha256": "743afc3951895b4a078d7dea1513f90ccafac20d411e255d92b7b2c76f47ce1e",
+      "bytes": 86038,
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "timber-normal.png",
+      "sha256": "683024005f936016676d258605a22309e049f9cc5e342468aa5d9d412ac3cc29",
+      "bytes": 82382,
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "plaster-normal.png",
+      "sha256": "bb1aa91c204925502323ba741ec5d5e9bf7d57b54a56bda90e1d3576f990ff72",
+      "bytes": 273120,
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "linen-normal.png",
+      "sha256": "a814d8c51bbbb121dca3490105db31e0c4e075ec33137eab6fe3f01f77701f47",
+      "bytes": 3423,
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "file": "floor-colour.png",
+      "sha256": "f0a94632354f5d2b80ee5d0e129b59702c557eede3a4514f34ad6d00ceb8b24d",
+      "bytes": 64120,
+      "size": [
+        512,
+        512
+      ]
+    }
+  ]
+}

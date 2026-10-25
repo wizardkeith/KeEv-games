@@ -3,19 +3,21 @@
   "version": "3.1",
   "master": {
     "path": "assets/masters/native-v3/environment-v3.json",
-    "sizeBytes": 105238,
-    "sha256": "dfd2ed1f6e4b58c931700a4c8427c62decb858159c8fbb5667b783d21834ce2c"
+    "sizeBytes": 127341,
+    "sha256": "e11fd35ca23bb0b19ddf06aaa8e76372f129cac82f6d61f34c73e85fd6013229"
   },
   "sources": {
-    "src/art/native-characters.ts": "0e694a3d7dd26dfc7fa4aa83265325d5c0f9c7ad176d72364295c5bc838b49ba",
-    "src/art/native-environment.ts": "0974a2b9c50afa1d9ec777cf78e55be2d912dca1ceaff2b773b8ffcc5a622dc8",
+    "src/art/native-room-probe.ts": "fde6f98d1aa353404852c2ad7006240505dc3f1e70c03bd315721270e16382eb",
+    "src/art/native-styling.ts": "de7de0a7a2ec06cb4820ebb7e0a0c19fbb82c36a043b0a9ea0d5ce1b4ca4fa05",
+    "src/art/native-characters.ts": "f1702febb42f214943bcec0315d8b4b87157144255b458e011d7db77dac8000d",
+    "src/art/native-environment.ts": "37eab9a54676e00ce6e7b5bbdd7d6e378154179d96223fd79cb8951fa86fcbe4",
     "src/art/native-display.ts": "2d785ebeae1f7558662dbb69ebd0007f93266d6360a3c178cb09076335b86086",
-    "src/art/native-view.ts": "7fbf905e259049e713543c27f361dfc571a2c21dde52d26af5b6c70936111a70",
+    "src/art/native-view.ts": "e6f05e65e87d3a56db794a57436e7af1685640660d62b09953eb7190de6c1f66",
     "src/art/recipes.ts": "b3c6890ff3e025f14373f28f10a68f3eeeb54f8a733a26192233f81f0090b905",
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "77d1f2cd62fc503fdd89d02c550878b39f8e73c0ceb213b95488874f8939454e",
-    "tools/export-native-environment.ts": "69e461a0ebb17e26542c4af7bf82eaca7870f9b8cf84ac837cc26cce4a50addf"
+    "tools/export-native-environment.ts": "6ade08f8c5eca9490714accd66dbe288240bd2355f53f5083cd9e5f16e14070c"
   },
   "rebuild": "node --import tsx tools/export-native-environment.ts",
   "runtime": "src/world.ts imports native-environment.ts and native-view.ts; geometry.ts builds the same authored recipes. nativeGrouped/nativeMaterialIntent respect per-surface roughness while shared legacy materials remain unchanged.",

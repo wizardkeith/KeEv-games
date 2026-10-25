@@ -28,6 +28,7 @@ export function nativeRoomRecipe():NativeEnvironmentPart[]{
   if(p.role==='wood'&&p.size[2]===6.45&&p.size[1]===.018)return {...p,size:[.545,p.size[1],p.size[2]] as V3,color:p.color===palette.floorLight?'#C2A481':'#B99A76',roughness:.83};
   // Retained wall shelves stay deeper and warmer than the new floor.
   if(p.role==='wood'&&p.size[0]===5.2)return {...p,color:'#967255',roughness:.76};
+  if(p.color===palette.cream&&p.size[1]>.65)return {...p,color:'#EBD9BD',role:'paint' as const,roughness:.94};
   if(p.role==='ink'&&p.shape==='sphere')return {...p,shape:'leaf' as const};
   return p;
  });
@@ -86,11 +87,11 @@ export function plantParts(scale=1):NativePlantParts{
   part('cylinder',[.021,.58,.021],[0,.60,0],'#728065','wood',{top:.72}),
  ].map(scaled);
  const leaves=Array.from({length:7},(_,i)=>{
-  const a=i*2.39996,pivot:V3=[Math.sin(a)*.018,.46+i*.062,Math.cos(a)*.018];
-  const offset:V3=[Math.sin(a)*.104,.065,Math.cos(a)*.104];
+  const a=i*2.39996,pivot:V3=[Math.sin(a)*.09,.44+i*.057,Math.cos(a)*.09];
+  const offset:V3=[Math.sin(a)*.155,.055,Math.cos(a)*.155];
   return {pivot:pivot.map(v=>v*scale) as V3,recipe:[
-   part('leaf',[.18,.31,.035],offset,i%2?'#789879':'#9DB48D','leaf',{turn:[.25*Math.cos(a),a,.40*Math.sin(a)]}),
-   scale<.6?part('sphere',[.085,.070,.085],[offset[0]*.6,.105,offset[2]*.6],'#F2E4C8','leaf'):part('leaf',[.145,.235,.028],[-offset[0]*.72,-.018,-offset[2]*.72],i%2?'#9DB48D':'#789879','leaf',{turn:[-.25*Math.cos(a),a+.8,-.55*Math.sin(a)]}),
+   part('leaf',[.22,.35,.035],offset,i%2?'#789879':'#9DB48D','leaf',{turn:[.25*Math.cos(a),a,.40*Math.sin(a)]}),
+   scale<.6?part('sphere',[.085,.070,.085],[offset[0]*.6,.105,offset[2]*.6],'#F2E4C8','leaf'):part('leaf',[.19,.28,.028],[-offset[0]*.85,-.05,-offset[2]*.85],i%2?'#9DB48D':'#789879','leaf',{turn:[-.25*Math.cos(a),a+.8,-.55*Math.sin(a)]}),
   ].map(scaled)};
  });
  return {base,leaves};

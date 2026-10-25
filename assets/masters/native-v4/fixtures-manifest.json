@@ -8,8 +8,8 @@
     {
       "id": "room",
       "file": "assets/masters/native-v4/room.glb",
-      "bytes": 214172,
-      "sha256": "7eaf5337ba8024a035f756761d30bff9ea229389d40d48c33d270ad6325bd56d"
+      "bytes": 215120,
+      "sha256": "094b6ce62f08f2fbb5b9b4f5cc1ba82df5125cd1df165e8aa3ff55c7a77fcab8"
     },
     {
       "id": "counter",

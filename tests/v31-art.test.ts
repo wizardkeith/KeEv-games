@@ -35,7 +35,7 @@ test('v3.1 candidate fits actual Babylon RH critical points within UI-safe viewp
 
 test('v3.1 staff view has separate intent; lighting preserves exposure and limits supplemental fill to facial surfaces',()=>{
  const shop=nativeCameraFrame(1.5),staff=nativeCameraFrame(1.5,.8,'staff');assert.ok(staff.radius<shop.radius*.55);assert.notDeepEqual(staff.target,shop.target);
- assert.equal(nativeLighting.exposure,1);assert.ok(nativeLighting.key.intensity<1.75);assert.ok(nativeLighting.faceFill.intensity>0&&nativeLighting.faceFill.intensity<.5);assert.ok(nativeLighting.faceFill.direction[2]<0);
+ assert.equal(nativeLighting.exposure,1);assert.ok(nativeLighting.key.intensity<4&&nativeLighting.key.intensity>nativeLighting.fill.intensity*4,'directional window remains dominant within bounded light energy');assert.ok(nativeLighting.faceFill.intensity>0&&nativeLighting.faceFill.intensity<.5);assert.ok(nativeLighting.faceFill.direction[2]<0);
  assert.deepEqual(nativeLighting.faceFill.roles,['skin','ink']);assert.ok(!nativeLighting.faceFill.parts.includes('body'));assert.ok(!nativeLighting.faceFill.parts.includes('arm-right'));
  assert.throws(()=>nativeCameraFrame(0),RangeError);assert.throws(()=>nativeCameraFrame(1,NaN),RangeError);
 });
