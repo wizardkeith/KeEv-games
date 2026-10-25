@@ -1,0 +1,954 @@
+{
+  "status": "diagnostic completed",
+  "workWindowObserved": true,
+  "wallSeconds": 38.74,
+  "samples": [
+    {
+      "wallSeconds": 0.003,
+      "visibleTime": 5.733699999995529,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.6,
+        "z": -0.65,
+        "yaw": 0,
+        "speed": 0,
+        "distance": 0,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": true,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 1.013,
+      "visibleTime": 6.6653999999985105,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.6,
+        "z": -0.65,
+        "yaw": 0,
+        "speed": 0,
+        "distance": 0,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": true,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 2.022,
+      "visibleTime": 7.6381000000014945,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.6,
+        "z": -0.65,
+        "yaw": 0,
+        "speed": 0,
+        "distance": 0,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": true,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 3.025,
+      "visibleTime": 8.70989999999851,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.6,
+        "z": -0.65,
+        "yaw": 0,
+        "speed": 0,
+        "distance": 0,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": true,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 4.044,
+      "visibleTime": 9.301799999997014,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.6,
+        "z": -0.65,
+        "yaw": 0.7596049999980877,
+        "speed": 0,
+        "distance": 0,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": true,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 5.049,
+      "visibleTime": 10.557499999999989,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.5799660159957463,
+        "z": -0.5904252580926111,
+        "yaw": 2.817189585520146,
+        "speed": 0.2796733333354195,
+        "distance": 0.06285308575093766,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 6.054,
+      "visibleTime": 11.187499999999984,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.502074732950717,
+        "z": -0.35880117956397306,
+        "yaw": 2.8171895855201465,
+        "speed": 0.4,
+        "distance": 0.30722322657964335,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 7.058,
+      "visibleTime": 12.406799999997018,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.3466173745443233,
+        "z": 0.10347991253924518,
+        "yaw": 2.8171895855201496,
+        "speed": 0.4,
+        "distance": 0.7949432265784518,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 8.088,
+      "visibleTime": 13.599999999999985,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.22,
+        "z": 0.48,
+        "yaw": 2.817189585520173,
+        "speed": 0.06313876362504146,
+        "distance": 1.1921828718783034,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 9.095,
+      "visibleTime": 14.208899999998488,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.22,
+        "z": 0.48,
+        "yaw": 2.817189585520173,
+        "speed": 0,
+        "distance": 1.1921828718783034,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 10.106,
+      "visibleTime": 15.470999999999984,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.22,
+        "z": 0.48,
+        "yaw": 2.817189585520173,
+        "speed": 0,
+        "distance": 1.1921828718783034,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 11.113,
+      "visibleTime": 16.688299999997003,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.22,
+        "z": 0.48,
+        "yaw": 2.817189585520173,
+        "speed": 0,
+        "distance": 1.1921828718783034,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 12.117,
+      "visibleTime": 17.294899999998485,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.2195031251928974,
+        "z": 0.5028562411267083,
+        "yaw": 3.119856946748001,
+        "speed": 0.16331538461578582,
+        "distance": 1.215044513180191,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 13.122,
+      "visibleTime": 18.487899999998515,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.209886023062172,
+        "z": 0.9452429391401337,
+        "yaw": 3.1198569467479977,
+        "speed": 0.4,
+        "distance": 1.6575357325649545,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 14.137,
+      "visibleTime": 19.133499999999998,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.204273436087683,
+        "z": 1.2034219399666177,
+        "yaw": 3.1198569467479964,
+        "speed": 0.4,
+        "distance": 1.9157757325655518,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 15.142,
+      "visibleTime": 20.157300000004483,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 3.1198569467480612,
+        "speed": 0,
+        "distance": 2.1124002375044935,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 16.151,
+      "visibleTime": 21.276700000002975,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 3.1198569467480612,
+        "speed": 0,
+        "distance": 2.1124002375044935,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 17.183,
+      "visibleTime": 22.528600000001497,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 3.1198569467480612,
+        "speed": 0,
+        "distance": 2.1124002375044935,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 18.189,
+      "visibleTime": 23.150200000003,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 3.1198569467480612,
+        "speed": 0,
+        "distance": 2.1124002375044935,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 19.193,
+      "visibleTime": 24.367800000004472,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 3.1198569467480612,
+        "speed": 0,
+        "distance": 2.1124002375044935,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 20.209,
+      "visibleTime": 25.57239999999851,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 4.441176946734949,
+        "speed": 0,
+        "distance": 2.1124002375044935,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 21.218,
+      "visibleTime": 26.207800000004493,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 5.839056946748066,
+        "speed": 0,
+        "distance": 2.1124002375044935,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 22.228,
+      "visibleTime": 27.433500000000024,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.2701653938520523,
+        "z": 1.0404023565082396,
+        "yaw": 6.0904845485172014,
+        "speed": 0.4,
+        "distance": 2.478779341301696,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 23.247,
+      "visibleTime": 28.671700000002993,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.3650166446656407,
+        "z": 0.5542896960885813,
+        "yaw": 6.090484548517199,
+        "speed": 0.4,
+        "distance": 2.9740593413028837,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 24.252,
+      "visibleTime": 29.28850000000002,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.4122660805414275,
+        "z": 0.31213633722517076,
+        "yaw": 6.090484548517198,
+        "speed": 0.4,
+        "distance": 3.2207793413016925,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 25.283,
+      "visibleTime": 30.4753000000045,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.503179878365465,
+        "z": -0.15379687662302388,
+        "yaw": 6.090484548517195,
+        "speed": 0.4,
+        "distance": 3.6954993413034813,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 26.292,
+      "visibleTime": 31.73600000000002,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.5950682381672414,
+        "z": -0.6247247206071112,
+        "yaw": 6.090484548517203,
+        "speed": 0.22658359686415325,
+        "distance": 4.175308162508931,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 27.297,
+      "visibleTime": 32.353899999998525,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.6,
+        "z": -0.65,
+        "yaw": 6.090484548517254,
+        "speed": 0,
+        "distance": 4.200625094037122,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": true,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 28.309,
+      "visibleTime": 33.511999999999965,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.6,
+        "z": -0.65,
+        "yaw": 6.090484548517254,
+        "speed": 0,
+        "distance": 4.200625094037122,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": true,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 29.316,
+      "visibleTime": 34.12469999999553,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.6,
+        "z": -0.65,
+        "yaw": 6.090484548517254,
+        "speed": 0,
+        "distance": 4.200625094037122,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": true,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 30.329,
+      "visibleTime": 35.365699999995485,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.6,
+        "z": -0.65,
+        "yaw": 6.090484548517254,
+        "speed": 0,
+        "distance": 4.200625094037122,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": true,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 31.34,
+      "visibleTime": 36.560599999994,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.6,
+        "z": -0.65,
+        "yaw": 6.090484548517254,
+        "speed": 0,
+        "distance": 4.200625094037122,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": true,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 32.345,
+      "visibleTime": 37.15619999999552,
+      "clip": "native.staff.idle.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.6,
+        "z": -0.65,
+        "yaw": 6.090484548517254,
+        "speed": 0,
+        "distance": 4.200625094037122,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": true,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 35.502,
+      "visibleTime": 38.414699999995435,
+      "clip": "native.staff.tidy.v3",
+      "entry": 0,
+      "routine": {
+        "x": 2.6,
+        "z": -0.65,
+        "yaw": 6.090484548517254,
+        "speed": 0,
+        "distance": 4.200625094037122,
+        "intent": "checkout",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": true,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    {
+      "wallSeconds": 36.514,
+      "visibleTime": 39.42779999999687,
+      "clip": "native.staff.tidy.v3",
+      "entry": 1,
+      "routine": {
+        "x": 2.6,
+        "z": -0.65,
+        "yaw": 6.090484548517254,
+        "speed": 0,
+        "distance": 4.200625094037122,
+        "intent": "checkout",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": true,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "quality": "high",
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    }
+  ],
+  "errors": [],
+  "limit": "Single bounded45s observation, not a repeat/pass of reviewer two180s High captures, not physical GPU/FPS/audio acceptance."
+}

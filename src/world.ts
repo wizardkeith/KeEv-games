@@ -1,3 +1,4 @@
+import {nativeVisibleSteps} from './presentation/native-visible-clock';
 import type {SaleMarginPayload} from './presentation/sale-accounting';
 import {roomProbeContract,roomProbeData} from './art/native-room-probe';
 import {RawCubeTexture} from '@babylonjs/core/Materials/Textures/rawCubeTexture';
@@ -9,7 +10,7 @@ import {Texture} from '@babylonjs/core/Materials/Textures/texture';
 import {displaySamples} from './art/native-display';
 import {Material} from '@babylonjs/core/Materials/material';
 import {nativeCameraFrame,nativeLighting,type NativeView} from './art/native-view';
-import {NativeDelivery} from './presentation/native-delivery';
+import {NativeDelivery,type DeliveryFrame} from './presentation/native-delivery';
 import {nativeProductRecipe as productRecipe} from './art/native-products';
 import {Engine} from '@babylonjs/core/Engines/engine';
 import {Scene} from '@babylonjs/core/scene';
@@ -32,7 +33,7 @@ import {materialRenderState,linearColor,type MaterialRole} from './art/materials
 import {artDirection} from './art/direction';
 import {FeedbackClock,motionAllowed,vfx} from './presentation/config';
 import type {Feedback} from './presentation/feedback';
-import {NativeCustomerRoutes} from './presentation/native-routes';
+import {NativeCustomerRoutes,type RouteFrame} from './presentation/native-routes';
 import {createNativeActors} from './presentation/native-scene';
 import {NativeCommitPresentation} from './presentation/native-commits';
 import {resolveMotionPolicy} from './presentation/native-motion';
@@ -131,30 +132,37 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  function advanceFeedback(dt:number){if(disposed||document.hidden){finishFeedback();return;}const reveal=clock.active?.kind==='reveal';if(reduced.matches){gestureClock.cancel();nativePresentation.cancel();nativeActors.clearProps();}if(!motionAllowed({low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches})){clock.cancel();if(reveal)onFeedbackEnd();return;}clock.step(dt);if(reveal&&!clock.active)onFeedbackEnd();}
  const visibility=()=>{last=undefined;if(document.hidden)finishFeedback();};document.addEventListener('visibilitychange',visibility);
  resize();await scene.whenReadyAsync();readyAt=performance.now();
+ let nativeTiming={steps:0,wallMs:0,consumedMs:0,droppedMs:0};
  engine.runRenderLoop(()=>{
   if(disposed||document.hidden){last=undefined;return;}
-  const now=performance.now(),dt=last===undefined?0:Math.max(0,Math.min(vfx.policy.maxDt,now-last));if(last!==undefined){const sample=now-last;if(sample>0&&sample<250){frames.push(sample);visibleSamples++;if(frames.length>180)frames.shift();}}last=now;
+  const now=performance.now(),elapsed=last===undefined?0:Math.max(0,now-last),dt=Math.min(vfx.policy.maxDt,elapsed);if(last!==undefined){const sample=now-last;if(sample>0&&sample<250){frames.push(sample);visibleSamples++;if(frames.length>180)frames.shift();}}last=now;
   if(quality==='auto'&&frames.length>=90&&now-qualityCheckedAt>3000){const sorted=[...frames].sort((a,b)=>a-b);const p75=sorted[Math.floor(sorted.length*.75)];if(p75>35&&effectiveQuality!=='low')setQuality('low');qualityCheckedAt=now;}
+  const nativeElapsed=nativeVisibleSteps(elapsed);nativeTiming.steps=nativeElapsed.steps.length;nativeTiming.wallMs+=elapsed;nativeTiming.consumedMs+=nativeElapsed.milliseconds;nativeTiming.droppedMs+=nativeElapsed.droppedMilliseconds;
   const policy={low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches},animate=motionAllowed(policy);
-  advanceFeedback(dt);selectionTime=animate?Math.min(vfx.selection.duration,selectionTime+dt):vfx.selection.duration;
+  selectionTime=animate?Math.min(vfx.selection.duration,selectionTime+nativeElapsed.milliseconds):vfx.selection.duration;
   const nativePolicy=resolveMotionPolicy({quality:effectiveQuality==='low'?'low':'high',minimalFx:minimalFX,reduceMotion:reduced.matches,visible:!document.hidden});
-  gestureClock.step(dt,policy,document.hidden);
   const hour=state?new Date(state.watermark+9*3600000).getUTCHours():0;const trading=!!state?.open&&hour>=config.openHour&&hour<config.closeHour;
-  // Milliseconds enter the engine-neutral motion clock exactly once as seconds.
-  const seconds=dt/1000;let routeFrame=routes.tick(seconds,{open:trading,visible:true,reduceMotion:reduced.matches,capacity:nativePolicy.customerCapacity,staff:nativeActors.staffPosition(),serviceStaffReady:nativeActors.workReady()});
+  // One render may contain several bounded physics/pose steps. Low render FPS
+  // must not stretch a14-second approach into minutes or erase release markers.
+  let service:DeliveryFrame|undefined,routeFrame:RouteFrame=routes.tick(0,{open:trading,visible:true,reduceMotion:reduced.matches,capacity:nativePolicy.customerCapacity});
+  for(const seconds of nativeElapsed.steps){
+   advanceFeedback(seconds*1000);gestureClock.step(seconds*1000,policy,document.hidden);
+   routeFrame=routes.tick(seconds,{open:trading,visible:true,reduceMotion:reduced.matches,capacity:nativePolicy.customerCapacity,staff:nativeActors.staffPosition(),serviceStaffReady:nativeActors.workReady()});
   const arrival=routeFrame.actors.some(a=>a.enabled&&a.state==='entering');if(arrival&&!previousArrival&&!nativePresentation.current)gestureClock.start('greet',policy);previousArrival=arrival;
-  const service=delivery.tick(seconds,nativePresentation,routes,nativePolicy,nativeActors.workReady(),nativeActors.handoffReady()),greet=gestureClock.active;routeFrame=routes.tick(0,{open:trading,visible:true,reduceMotion:reduced.matches,capacity:nativePolicy.customerCapacity,staff:nativeActors.staffPosition(),serviceStaffReady:nativeActors.workReady()});
-  currentRoutes=routeFrame;nativeActors.frame(seconds,nativePolicy,routeFrame,service,greet?.kind==='greet'?greet.elapsed/greet.duration:undefined,!!nativePresentation.current);
+   service=delivery.tick(seconds,nativePresentation,routes,nativePolicy,nativeActors.workReady(),nativeActors.handoffReady());const greet=gestureClock.active;routeFrame=routes.tick(0,{open:trading,visible:true,reduceMotion:reduced.matches,capacity:nativePolicy.customerCapacity,staff:nativeActors.staffPosition(),serviceStaffReady:nativeActors.workReady()});
+   nativeActors.frame(seconds,nativePolicy,routeFrame,service,greet?.kind==='greet'?greet.elapsed/greet.duration:undefined,!!nativePresentation.current);
+   if(service?.cue.kind==='sale'&&service.progress>=.72){const item=pendingMargins.get(service.receiptRevision);if(item){showMargin(item.payload);pendingMargins.delete(service.receiptRevision);}}
+  }
+  currentRoutes=routeFrame;
   door.rotation.y=routeFrame.doorAngle;sign.rotation.z=nativePolicy.decorativeMotion?Math.sin(ambientTime/1000*1.4)*.024*Math.abs(routeFrame.doorAngle):0;
   leafNodes.forEach((leaf,i)=>{leaf.rotation.z=nativePolicy.decorativeMotion?Math.sin(ambientTime/1000*.43+i*1.7)*.025:0;leaf.rotation.x=nativePolicy.decorativeMotion?Math.sin(ambientTime/1000*.31+i*.8)*.012:0;});
   exterior.setEnabled(true);
   highlights.forEach((m,i)=>{m.visibility=i===selectedSlot?(.62+.18*(1-selectionTime/vfx.selection.duration)):0;});
   productRoots.forEach(r=>r.position.y=artDirection.displaySurfaceY+artDirection.restingGap);if(service?.cue.kind==='display'&&nativePolicy.decorativeMotion)productRoots[service.cue.slot].position.y+=.025*Math.sin(service.progress*Math.PI)**2;receipt.setEnabled(false);revealProxy.setEnabled(false);
   const fx=clock.active;if(fx){const p=fx.elapsed/fx.duration;if(fx.kind==='display'){productRoots[fx.slot].position.y=artDirection.displaySurfaceY+artDirection.restingGap+vfx.display.lift*(1-p)*(1-p);}else if(fx.kind==='reveal'){revealProxy.setEnabled(true);revealLid.rotation.x=-Math.sin(Math.min(1,p*2)*Math.PI/2)*1.12;localLight.scaling.setAll(.75+.25*Math.sin(p*Math.PI));}else{receipt.setEnabled(true);receipt.position.set(2.2,1.16+.08*p,-1.5);for(const m of receipt.getChildMeshes()){m.material=receiptMaterials[fx.kind];m.visibility=Math.sin(p*Math.PI)*.7;}}}
-  ambientTime=(ambientTime+dt)%120000;dustRoot.setEnabled(nativePolicy.decorativeMotion);if(nativePolicy.decorativeMotion){dust.forEach((m,i)=>{const phase=((ambientTime/vfx.dust.lifetime)+i/vfx.dust.capacity)%1;m.position.set(-4.0+(i%3)*.34+phase*.14,.7+phase*1.6,-.75+(i%4)*.39);for(const mesh of m.getChildMeshes())mesh.visibility=Math.sin(phase*Math.PI)*.8;});}
-  for(const [revision,item]of pendingMargins){item.age+=dt;if(item.age>40000)pendingMargins.delete(revision);}
-  if(service?.cue.kind==='sale'&&service.progress>=.72){const item=pendingMargins.get(service.receiptRevision);if(item){showMargin(item.payload);pendingMargins.delete(service.receiptRevision);}}
-  if(activeMargin){activeMargin.age+=dt;marginNode.hidden=false;const rect=canvas.getBoundingClientRect(),point=Vector3.Project(new Vector3(nativeActors.staff.root.position.x,1.90,nativeActors.staff.root.position.z),Matrix.Identity(),scene.getTransformMatrix(),camera.viewport.toGlobal(engine.getRenderWidth(),engine.getRenderHeight()));
+  ambientTime=(ambientTime+nativeElapsed.milliseconds)%120000;dustRoot.setEnabled(nativePolicy.decorativeMotion);if(nativePolicy.decorativeMotion){dust.forEach((m,i)=>{const phase=((ambientTime/vfx.dust.lifetime)+i/vfx.dust.capacity)%1;m.position.set(-4.0+(i%3)*.34+phase*.14,.7+phase*1.6,-.75+(i%4)*.39);for(const mesh of m.getChildMeshes())mesh.visibility=Math.sin(phase*Math.PI)*.8;});}
+  for(const [revision,item]of pendingMargins){item.age+=nativeElapsed.milliseconds;if(item.age>40000)pendingMargins.delete(revision);}
+  if(activeMargin){activeMargin.age+=nativeElapsed.milliseconds;marginNode.hidden=false;const rect=canvas.getBoundingClientRect(),point=Vector3.Project(new Vector3(nativeActors.staff.root.position.x,1.90,nativeActors.staff.root.position.z),Matrix.Identity(),scene.getTransformMatrix(),camera.viewport.toGlobal(engine.getRenderWidth(),engine.getRenderHeight()));
    const width=Math.min(240,rect.width-24),x=point.x*rect.width/engine.getRenderWidth(),y=point.y*rect.height/engine.getRenderHeight();marginNode.style.width=width+'px';marginNode.style.left=Math.max(width/2+8,Math.min(rect.width-width/2-8,x))+rect.left+'px';marginNode.style.top=Math.max(Math.max(170,(document.querySelector('.top')?.getBoundingClientRect().bottom??120)+marginNode.offsetHeight+8),Math.min(rect.height-110,y-8-(reduced.matches?0:Math.min(14,activeMargin.age/300))))+rect.top+'px';marginNode.hidden=panelOpen||activeMargin.age>4400;if(activeMargin.age>4400)activeMargin=undefined;
   }else marginNode.hidden=true;
   scene.render();
@@ -172,7 +180,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
   gesture(kind:'greet'){if(disposed)return false;return gestureClock.start(kind,{low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches},document.hidden);},
   skip(){finishFeedback();},
   skipReveal(){if(clock.active?.kind==='reveal'){clock.cancel();onFeedbackEnd();}},
-  metrics(){return {presentationActor:nativeActors.staff.root.metadata,nativeMotion:nativeActors.metrics(),nativeService:nativePresentation.metrics(),serviceFrame:nativePresentation.current,customers:currentRoutes?.actors,gesture:gestureClock.active?.kind??null,artDirection:nativeLighting.id,cameraView:viewMode,readyAtMs:readyAt,quality,effectiveQuality,adaptivePolicy:'auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged',minimalFX,reducedMotion:reduced.matches,feedback:clock.active?.kind??null,saleMargin:activeMargin?.payload??null,pendingSaleMargins:pendingMargins.size,materials:scene.materials.length,dustCapacity:vfx.dust.capacity,customerRoots:nativeActors.visitors.map(c=>({position:c.root.position.asArray(),enabled:c.root.isEnabled()})),selectedSlot,visibleSamples,frameSamplesMs:[...frames],fps:frames.length?1000/(frames.reduce((a,b)=>a+b,0)/frames.length):null,meshes:scene.meshes.length,activeMeshes:scene.getActiveMeshes().length,renderer:engine.getGlInfo(),viewport:[canvas.width,canvas.height],cameraViewport:camera.viewport,cameraInertia:[camera.inertialAlphaOffset,camera.inertialBetaOffset,camera.inertialRadiusOffset],cameraPose:{alpha:camera.alpha,beta:camera.beta,radius:camera.radius,target:camera.target.asArray()}};},
+  metrics(){return {presentationActor:nativeActors.staff.root.metadata,nativeMotion:nativeActors.metrics(),nativeTiming:{...nativeTiming},nativeService:nativePresentation.metrics(),serviceFrame:nativePresentation.current,customers:currentRoutes?.actors,gesture:gestureClock.active?.kind??null,artDirection:nativeLighting.id,cameraView:viewMode,readyAtMs:readyAt,quality,effectiveQuality,adaptivePolicy:'auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged',minimalFX,reducedMotion:reduced.matches,feedback:clock.active?.kind??null,saleMargin:activeMargin?.payload??null,pendingSaleMargins:pendingMargins.size,materials:scene.materials.length,dustCapacity:vfx.dust.capacity,customerRoots:nativeActors.visitors.map(c=>({position:c.root.position.asArray(),enabled:c.root.isEnabled()})),selectedSlot,visibleSamples,frameSamplesMs:[...frames],fps:frames.length?1000/(frames.reduce((a,b)=>a+b,0)/frames.length):null,meshes:scene.meshes.length,activeMeshes:scene.getActiveMeshes().length,renderer:engine.getGlInfo(),viewport:[canvas.width,canvas.height],cameraViewport:camera.viewport,cameraInertia:[camera.inertialAlphaOffset,camera.inertialBetaOffset,camera.inertialRadiusOffset],cameraPose:{alpha:camera.alpha,beta:camera.beta,radius:camera.radius,target:camera.target.asArray()}};},
   dispose(){finishFeedback();marginNode.remove();disposed=true;routes.dispose();nativeActors.dispose();clock.dispose();observer.disconnect();window.removeEventListener('resize',resize);document.removeEventListener('visibilitychange',visibility);canvas.removeEventListener('webglcontextlost',contextLost);engine.stopRenderLoop();scene.dispose();engine.dispose();}
  };
 }

@@ -1,10 +1,13 @@
 {
-  "version": "native-characters-v9-r1",
+  "version": "native-characters-v10-r1",
   "authoring": "src/art/native-characters.ts",
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
-    "src/art/native-characters.ts": "b742dc423fa7a22db48018df0db1861295183312052e1243d954f490fe7c45f4",
+    "src/art/characters-v10.ts": "3fdac6a5a8f912d7864731b8c9bd8d0d058f734634a189ac5fc3083ce9445be7",
+    "src/art/sculpt-v10.ts": "114a810e5245f58832dc5d12641e20e6ca1b7d159a2410d7d72cd3b3a141546c",
+    "src/presentation/native-visible-clock.ts": "aebff05c819ef1e25d8c71cb1ce5e088f42d6cd7c8f55008d97c45790b0468d4",
+    "src/art/native-characters.ts": "524c6674605c8a6aaab2356091efc8c5cdee3ececae17a9096fda6bfb7bdf77d",
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "77d1f2cd62fc503fdd89d02c550878b39f8e73c0ceb213b95488874f8939454e",
@@ -17,10 +20,10 @@
     "src/presentation/native-feet.ts": "440404e1bceabdb2bf8d8f9f699d030c40e4815f7b0e904ea15a3f6a180bdef3",
     "src/presentation/native-delivery.ts": "92ab544352360caa1463f62f0f93e5d22f5d8a09b791aec6aa93057c8ab06ab6",
     "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
-    "src/world.ts": "52220b2e03e15e414b132f40ffd8f4f38b1d74091eba54aff532ff3644beb3bd",
+    "src/world.ts": "5373189b5de931ce5f457c1a9b44a358d5c35ba77b6f9de3f77ca04b7b1a81ee",
     "src/presentation/native-routes.ts": "126569ec0bce93cdffb7572d7b7ab0783053c7d6efb0bee0fd6a407aa3c1de1b",
     "src/presentation/native-scene.ts": "62bc89ee7afd5423218cbd6511e00eeac930e03214621bef4a4a931cee4f0c68",
-    "tools/export-native-characters.ts": "f609a735bc86220cdee94b3cd0321f542a6b6b02e962ea217650d293efc89566",
+    "tools/export-native-characters.ts": "10c0f2d40bd0447302a10a4b45a0bbaa79fdd3d12b8571a7f5f19e60c9526d1f",
     "tools/generate-v5-hair.py": "2708f0ecaab1a236d1338023a25da7a2ff4c620537391f0e9aef719e7a28016b",
     "assets/masters/native-v5/hair-strand-basecolor.png": "f735cf754d5333711f0809e11a1dbe09f2ae5e566d01e3625b3a94e98adc65e1",
     "assets/masters/native-v5/hair-strand-normal.png": "c5603902148920f86bf59a66920f357f7a6f845b7891e26bbb3845efeeb9091b"
@@ -51,8 +54,8 @@
       "id": "actor.misaki.native.v3",
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
-      "bytes": 707748,
-      "sha256": "67dc6db7fc6e5776ed6b15e54453e228a0c5a33e8921aaa1ca6001851262beb9",
+      "bytes": 715460,
+      "sha256": "5655bd5213f3491a3f4b9ecea13bd2e12bd0c9466b74b52b7ff5493af5e4c776",
       "nodes": [
         {
           "id": "body",
@@ -63,7 +66,7 @@
             0
           ],
           "geometryGroups": 7,
-          "triangles": 2060
+          "triangles": 2860
         },
         {
           "id": "head",
@@ -74,106 +77,106 @@
             0
           ],
           "geometryGroups": 4,
-          "triangles": 3672
+          "triangles": 4144
         },
         {
           "id": "eye-left",
           "parent": "head",
           "pivot": [
-            -0.07806999999999999,
-            0.1688,
-            -0.180405
+            -0.08,
+            0.16,
+            -0.168
           ],
-          "geometryGroups": 5,
-          "triangles": 780
+          "geometryGroups": 6,
+          "triangles": 300
         },
         {
           "id": "eyelid-left",
           "parent": "head",
           "pivot": [
-            -0.07806999999999999,
-            0.174075,
-            -0.178295
+            -0.08,
+            0.164,
+            -0.167
           ],
           "geometryGroups": 1,
-          "triangles": 132
+          "triangles": 180
         },
         {
           "id": "brow-left",
           "parent": "head",
           "pivot": [
-            -0.07806999999999999,
-            0.218385,
-            -0.174075
-          ],
-          "geometryGroups": 1,
-          "triangles": 84
-        },
-        {
-          "id": "eye-right",
-          "parent": "head",
-          "pivot": [
-            0.07806999999999999,
-            0.1688,
-            -0.180405
-          ],
-          "geometryGroups": 5,
-          "triangles": 780
-        },
-        {
-          "id": "eyelid-right",
-          "parent": "head",
-          "pivot": [
-            0.07806999999999999,
-            0.174075,
-            -0.178295
+            -0.08,
+            0.213,
+            -0.157
           ],
           "geometryGroups": 1,
           "triangles": 132
         },
         {
+          "id": "hair-secondary-left",
+          "parent": "head",
+          "pivot": [
+            -0.177,
+            0.214,
+            0.048
+          ],
+          "geometryGroups": 1,
+          "triangles": 208
+        },
+        {
+          "id": "eye-right",
+          "parent": "head",
+          "pivot": [
+            0.08,
+            0.16,
+            -0.168
+          ],
+          "geometryGroups": 6,
+          "triangles": 300
+        },
+        {
+          "id": "eyelid-right",
+          "parent": "head",
+          "pivot": [
+            0.08,
+            0.164,
+            -0.167
+          ],
+          "geometryGroups": 1,
+          "triangles": 180
+        },
+        {
           "id": "brow-right",
           "parent": "head",
           "pivot": [
-            0.07806999999999999,
-            0.218385,
-            -0.174075
+            0.08,
+            0.213,
+            -0.157
           ],
           "geometryGroups": 1,
-          "triangles": 84
+          "triangles": 132
+        },
+        {
+          "id": "hair-secondary-right",
+          "parent": "head",
+          "pivot": [
+            0.177,
+            0.214,
+            0.048
+          ],
+          "geometryGroups": 1,
+          "triangles": 208
         },
         {
           "id": "mouth",
           "parent": "head",
           "pivot": [
             0,
-            0.070685,
-            -0.165635
+            0.064,
+            -0.156
           ],
           "geometryGroups": 1,
-          "triangles": 204
-        },
-        {
-          "id": "hair-secondary-left",
-          "parent": "head",
-          "pivot": [
-            -0.18673499999999998,
-            0.22576999999999997,
-            0.05064
-          ],
-          "geometryGroups": 1,
-          "triangles": 224
-        },
-        {
-          "id": "hair-secondary-right",
-          "parent": "head",
-          "pivot": [
-            0.18673499999999998,
-            0.22576999999999997,
-            0.05064
-          ],
-          "geometryGroups": 1,
-          "triangles": 224
+          "triangles": 180
         },
         {
           "id": "arm-left",
@@ -183,8 +186,8 @@
             1.1,
             0
           ],
-          "geometryGroups": 2,
-          "triangles": 576
+          "geometryGroups": 1,
+          "triangles": 456
         },
         {
           "id": "forearm-left",
@@ -228,7 +231,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 160
+          "triangles": 120
         },
         {
           "id": "shin-left",
@@ -239,7 +242,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 160
+          "triangles": 120
         },
         {
           "id": "foot-left",
@@ -250,7 +253,7 @@
             0
           ],
           "geometryGroups": 3,
-          "triangles": 328
+          "triangles": 440
         },
         {
           "id": "arm-right",
@@ -260,8 +263,8 @@
             1.1,
             0
           ],
-          "geometryGroups": 2,
-          "triangles": 576
+          "geometryGroups": 1,
+          "triangles": 456
         },
         {
           "id": "forearm-right",
@@ -305,7 +308,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 160
+          "triangles": 120
         },
         {
           "id": "shin-right",
@@ -316,7 +319,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 160
+          "triangles": 120
         },
         {
           "id": "foot-right",
@@ -327,7 +330,7 @@
             0
           ],
           "geometryGroups": 3,
-          "triangles": 328
+          "triangles": 440
         }
       ],
       "validation": {
@@ -341,8 +344,8 @@
       "id": "actor.visitor-a.native.v3",
       "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
       "web": "public/assets/native-v3/visitor-a-native-v3.glb",
-      "bytes": 346552,
-      "sha256": "5b6ccbf77abbfdf965b9147ca7e35f4131f18819b14d0a0c3aaf6ddc872fdc0a",
+      "bytes": 683120,
+      "sha256": "b535eda5d13ddbbf23d1ffd174367f679edbb9b006e5a7c8fb3f6937e6408081",
       "nodes": [
         {
           "id": "body",
@@ -352,8 +355,8 @@
             0,
             0
           ],
-          "geometryGroups": 9,
-          "triangles": 1860
+          "geometryGroups": 7,
+          "triangles": 2064
         },
         {
           "id": "head",
@@ -363,107 +366,107 @@
             1.25,
             0
           ],
-          "geometryGroups": 4,
-          "triangles": 2600
+          "geometryGroups": 3,
+          "triangles": 3824
         },
         {
           "id": "eye-left",
           "parent": "head",
           "pivot": [
-            -0.07806999999999999,
-            0.16352499999999998,
-            -0.180405
+            -0.08,
+            0.153,
+            -0.168
           ],
-          "geometryGroups": 5,
-          "triangles": 780
+          "geometryGroups": 6,
+          "triangles": 300
         },
         {
           "id": "eyelid-left",
           "parent": "head",
           "pivot": [
-            -0.07806999999999999,
-            0.1688,
-            -0.178295
+            -0.08,
+            0.157,
+            -0.167
           ],
           "geometryGroups": 1,
-          "triangles": 132
+          "triangles": 180
         },
         {
           "id": "brow-left",
           "parent": "head",
           "pivot": [
-            -0.07806999999999999,
-            0.21311,
-            -0.174075
-          ],
-          "geometryGroups": 1,
-          "triangles": 84
-        },
-        {
-          "id": "eye-right",
-          "parent": "head",
-          "pivot": [
-            0.07806999999999999,
-            0.16352499999999998,
-            -0.180405
-          ],
-          "geometryGroups": 5,
-          "triangles": 780
-        },
-        {
-          "id": "eyelid-right",
-          "parent": "head",
-          "pivot": [
-            0.07806999999999999,
-            0.1688,
-            -0.178295
+            -0.08,
+            0.206,
+            -0.157
           ],
           "geometryGroups": 1,
           "triangles": 132
         },
         {
+          "id": "hair-secondary-left",
+          "parent": "head",
+          "pivot": [
+            -0.177,
+            0.214,
+            0.048
+          ],
+          "geometryGroups": 1,
+          "triangles": 208
+        },
+        {
+          "id": "eye-right",
+          "parent": "head",
+          "pivot": [
+            0.08,
+            0.153,
+            -0.168
+          ],
+          "geometryGroups": 6,
+          "triangles": 300
+        },
+        {
+          "id": "eyelid-right",
+          "parent": "head",
+          "pivot": [
+            0.08,
+            0.157,
+            -0.167
+          ],
+          "geometryGroups": 1,
+          "triangles": 180
+        },
+        {
           "id": "brow-right",
           "parent": "head",
           "pivot": [
-            0.07806999999999999,
-            0.21311,
-            -0.174075
+            0.08,
+            0.206,
+            -0.157
           ],
           "geometryGroups": 1,
-          "triangles": 84
+          "triangles": 132
+        },
+        {
+          "id": "hair-secondary-right",
+          "parent": "head",
+          "pivot": [
+            0.177,
+            0.214,
+            0.048
+          ],
+          "geometryGroups": 1,
+          "triangles": 208
         },
         {
           "id": "mouth",
           "parent": "head",
           "pivot": [
             0,
-            0.070685,
-            -0.165635
+            0.064,
+            -0.156
           ],
           "geometryGroups": 1,
-          "triangles": 204
-        },
-        {
-          "id": "hair-secondary-left",
-          "parent": "head",
-          "pivot": [
-            -0.18673499999999998,
-            0.22576999999999997,
-            0.05064
-          ],
-          "geometryGroups": 1,
-          "triangles": 224
-        },
-        {
-          "id": "hair-secondary-right",
-          "parent": "head",
-          "pivot": [
-            0.18673499999999998,
-            0.22576999999999997,
-            0.05064
-          ],
-          "geometryGroups": 1,
-          "triangles": 224
+          "triangles": 180
         },
         {
           "id": "arm-left",
@@ -473,8 +476,8 @@
             1.1,
             0
           ],
-          "geometryGroups": 2,
-          "triangles": 576
+          "geometryGroups": 1,
+          "triangles": 456
         },
         {
           "id": "forearm-left",
@@ -518,7 +521,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 160
+          "triangles": 120
         },
         {
           "id": "shin-left",
@@ -529,7 +532,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 160
+          "triangles": 120
         },
         {
           "id": "foot-left",
@@ -540,7 +543,7 @@
             0
           ],
           "geometryGroups": 3,
-          "triangles": 324
+          "triangles": 440
         },
         {
           "id": "arm-right",
@@ -550,8 +553,8 @@
             1.1,
             0
           ],
-          "geometryGroups": 2,
-          "triangles": 576
+          "geometryGroups": 1,
+          "triangles": 456
         },
         {
           "id": "forearm-right",
@@ -595,7 +598,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 160
+          "triangles": 120
         },
         {
           "id": "shin-right",
@@ -606,7 +609,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 160
+          "triangles": 120
         },
         {
           "id": "foot-right",
@@ -617,7 +620,7 @@
             0
           ],
           "geometryGroups": 3,
-          "triangles": 324
+          "triangles": 440
         }
       ],
       "validation": {
@@ -631,8 +634,8 @@
       "id": "actor.visitor-b.native.v3",
       "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
       "web": "public/assets/native-v3/visitor-b-native-v3.glb",
-      "bytes": 693608,
-      "sha256": "970a5d5f6e0366810dfd14e2d38b97a073a1e42416bc32ab3c54406702ddb80f",
+      "bytes": 684552,
+      "sha256": "c992c83c8447ca242d4624fedc004dea2684f367577cfc0d3bd56af964b62b45",
       "nodes": [
         {
           "id": "body",
@@ -642,8 +645,8 @@
             0,
             0
           ],
-          "geometryGroups": 7,
-          "triangles": 2052
+          "geometryGroups": 5,
+          "triangles": 2640
         },
         {
           "id": "head",
@@ -653,107 +656,107 @@
             1.25,
             0
           ],
-          "geometryGroups": 4,
-          "triangles": 3400
+          "geometryGroups": 3,
+          "triangles": 3536
         },
         {
           "id": "eye-left",
           "parent": "head",
           "pivot": [
-            -0.087565,
-            0.1688,
-            -0.180405
+            -0.08,
+            0.16,
+            -0.168
           ],
-          "geometryGroups": 5,
-          "triangles": 780
+          "geometryGroups": 6,
+          "triangles": 300
         },
         {
           "id": "eyelid-left",
           "parent": "head",
           "pivot": [
-            -0.087565,
-            0.174075,
-            -0.178295
+            -0.08,
+            0.164,
+            -0.167
           ],
           "geometryGroups": 1,
-          "triangles": 132
+          "triangles": 180
         },
         {
           "id": "brow-left",
           "parent": "head",
           "pivot": [
-            -0.087565,
-            0.218385,
-            -0.174075
-          ],
-          "geometryGroups": 1,
-          "triangles": 84
-        },
-        {
-          "id": "eye-right",
-          "parent": "head",
-          "pivot": [
-            0.087565,
-            0.1688,
-            -0.180405
-          ],
-          "geometryGroups": 5,
-          "triangles": 780
-        },
-        {
-          "id": "eyelid-right",
-          "parent": "head",
-          "pivot": [
-            0.087565,
-            0.174075,
-            -0.178295
+            -0.08,
+            0.213,
+            -0.157
           ],
           "geometryGroups": 1,
           "triangles": 132
         },
         {
+          "id": "hair-secondary-left",
+          "parent": "head",
+          "pivot": [
+            -0.177,
+            0.214,
+            0.048
+          ],
+          "geometryGroups": 1,
+          "triangles": 208
+        },
+        {
+          "id": "eye-right",
+          "parent": "head",
+          "pivot": [
+            0.08,
+            0.16,
+            -0.168
+          ],
+          "geometryGroups": 6,
+          "triangles": 300
+        },
+        {
+          "id": "eyelid-right",
+          "parent": "head",
+          "pivot": [
+            0.08,
+            0.164,
+            -0.167
+          ],
+          "geometryGroups": 1,
+          "triangles": 180
+        },
+        {
           "id": "brow-right",
           "parent": "head",
           "pivot": [
-            0.087565,
-            0.218385,
-            -0.174075
+            0.08,
+            0.213,
+            -0.157
           ],
           "geometryGroups": 1,
-          "triangles": 84
+          "triangles": 132
+        },
+        {
+          "id": "hair-secondary-right",
+          "parent": "head",
+          "pivot": [
+            0.177,
+            0.214,
+            0.048
+          ],
+          "geometryGroups": 1,
+          "triangles": 208
         },
         {
           "id": "mouth",
           "parent": "head",
           "pivot": [
             0,
-            0.070685,
-            -0.165635
+            0.064,
+            -0.156
           ],
           "geometryGroups": 1,
-          "triangles": 204
-        },
-        {
-          "id": "hair-secondary-left",
-          "parent": "head",
-          "pivot": [
-            -0.18673499999999998,
-            0.22576999999999997,
-            0.05064
-          ],
-          "geometryGroups": 1,
-          "triangles": 224
-        },
-        {
-          "id": "hair-secondary-right",
-          "parent": "head",
-          "pivot": [
-            0.18673499999999998,
-            0.22576999999999997,
-            0.05064
-          ],
-          "geometryGroups": 1,
-          "triangles": 224
+          "triangles": 180
         },
         {
           "id": "arm-left",
@@ -763,8 +766,8 @@
             1.1,
             0
           ],
-          "geometryGroups": 2,
-          "triangles": 576
+          "geometryGroups": 1,
+          "triangles": 456
         },
         {
           "id": "forearm-left",
@@ -808,7 +811,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 160
+          "triangles": 120
         },
         {
           "id": "shin-left",
@@ -819,7 +822,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 160
+          "triangles": 120
         },
         {
           "id": "foot-left",
@@ -830,7 +833,7 @@
             0
           ],
           "geometryGroups": 3,
-          "triangles": 328
+          "triangles": 440
         },
         {
           "id": "arm-right",
@@ -840,8 +843,8 @@
             1.1,
             0
           ],
-          "geometryGroups": 2,
-          "triangles": 576
+          "geometryGroups": 1,
+          "triangles": 456
         },
         {
           "id": "forearm-right",
@@ -885,7 +888,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 160
+          "triangles": 120
         },
         {
           "id": "shin-right",
@@ -896,7 +899,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 160
+          "triangles": 120
         },
         {
           "id": "foot-right",
@@ -907,7 +910,7 @@
             0
           ],
           "geometryGroups": 3,
-          "triangles": 328
+          "triangles": 440
         }
       ],
       "validation": {
