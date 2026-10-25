@@ -4,7 +4,7 @@
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
-    "src/art/characters-v10.ts": "be6b931ceedf899f9fe036274dd8c786511d920108762b51afa3c4e7b3c05307",
+    "src/art/characters-v10.ts": "08c5e5a78576475e0c9f1dbd2de8c6d8e9867ffcfa9010649455e4dab3a24413",
     "src/art/sculpt-v10.ts": "114a810e5245f58832dc5d12641e20e6ca1b7d159a2410d7d72cd3b3a141546c",
     "src/presentation/native-visible-clock.ts": "aebff05c819ef1e25d8c71cb1ce5e088f42d6cd7c8f55008d97c45790b0468d4",
     "src/art/native-characters.ts": "524c6674605c8a6aaab2356091efc8c5cdee3ececae17a9096fda6bfb7bdf77d",
@@ -54,8 +54,8 @@
       "id": "actor.misaki.native.v3",
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
-      "bytes": 490708,
-      "sha256": "03209c766bfe4d4ca0f964105730c4fc39c5f2f21572ffa7f43268b5aea0f13b",
+      "bytes": 490732,
+      "sha256": "8392b7ad59ceb3fa9bec8a2ec24661be5a9b4f223b2315213af2133db87b9f3a",
       "nodes": [
         {
           "id": "body",

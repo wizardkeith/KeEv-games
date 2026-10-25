@@ -1,7 +1,7 @@
 /** V10 character remake. New sculpted head/hair/garments/limb/shoe surfaces;
  * compatible named rigid hierarchy and immutable limb lengths for contact IK.
  * Historical builders/masters remain in the canonical repository/history. */
-import type {NativeCharacterKind,NativeMesh,NativePart,NativeSurface} from './native-characters';import type {Part,V3} from './recipes';import type {MaterialRole} from './materials';import {sculptLoft,sculptSweep,sculptCloth,finishSculpt} from './sculpt-v10';import type {Geometry} from './geometry';
+import type {NativeCharacterKind,NativeMesh,NativePart,NativeSurface} from './native-characters';import type {Part,V3} from './recipes';import type {MaterialRole} from './materials';import {sculptLoft,sculptSweep,sculptCloth,finishSculpt} from './sculpt-v10';import {geometry,type Geometry} from './geometry';
 const C={skin:'#F2CBB2',skinA:'#DFB799',hair:'#654633',hairA:'#473E35',hairB:'#705240',sage:'#819880',cream:'#F3E8D4',apron:'#EEE0C6',plum:'#795D70',ink:'#59423A',leather:'#59483F',terra:'#B47E62',blue:'#708C99'};
 const p=(shape:Part['shape'],size:V3,at:V3,color:string,role:MaterialRole='fabric',extra:Partial<Part>={}):NativeSurface=>({shape,size,at,color,role,...extra});
 const mesh=(geometry:Geometry,color:string,role:MaterialRole,roughness?:number):NativeMesh=>({shape:'mesh',at:[0,0,0],geometry,color,role,...(roughness===undefined?{}:{roughness})});
@@ -35,13 +35,20 @@ function makeHead(kind:NativeCharacterKind):NativePart[]{
  }
  parts.push({id:'mouth',parent:'head',pivot:[0,.064,-.156],recipe:[sweep([[-.025,.002,-.004],[-.009,-.006,-.008],[.010,-.006,-.008],[.025,.003,-.004]],[.001,.0025,.0025,.001],[.001,.0016,.0016,.001],'#AF7567','ink',14,6)]});return parts;
 }
+/** Move both sides of a closed garment panel together, preserving thickness.
+ * Actual support triangles determine front clearance, not a shader/depth bias. */
+function drapeOutside(g:Geometry,supports:NativeSurface[],gap=.018){
+ const surfaces=supports.filter((p):p is NativeMesh=>p.shape==='mesh').map(p=>p.geometry),rows=new Map<string,{ids:number[];front:number;x:number;y:number}>();
+ for(let i=0;i<g.positions.length;i+=3){const [x,y,z]=g.positions.slice(i,i+3),key=x.toFixed(10)+':'+y.toFixed(10),row=rows.get(key)??{ids:[],front:z,x,y};row.ids.push(i);row.front=Math.min(row.front,z);rows.set(key,row);}
+ for(const row of rows.values()){let front=Infinity;for(const body of surfaces)for(let k=0;k<body.indices.length;k+=3){const [a,b,c]=body.indices.slice(k,k+3).map(i=>body.positions.slice(i*3,i*3+3)),det=(b[0]-a[0])*(c[1]-a[1])-(c[0]-a[0])*(b[1]-a[1]);if(Math.abs(det)<1e-12)continue;const u=((row.x-a[0])*(c[1]-a[1])-(c[0]-a[0])*(row.y-a[1]))/det,v=((b[0]-a[0])*(row.y-a[1])-(row.x-a[0])*(b[1]-a[1]))/det;if(u>=-1e-8&&v>=-1e-8&&u+v<=1+1e-8)front=Math.min(front,a[2]+u*(b[2]-a[2])+v*(c[2]-a[2]));}const delta=Math.min(0,front-gap-row.front);if(Number.isFinite(delta))for(const i of row.ids)g.positions[i+2]+=delta;}return finishSculpt(g);
+}
 function makeBody(kind:NativeCharacterKind):NativeSurface[]{
  const misaki=kind==='misaki',a=kind==='visitor-a',coat=misaki?C.sage:a?C.terra:C.blue,skin=a?C.skinA:C.skin;
  const out:NativeSurface[]=[loft([{y:.64,x:.147,z:.105},{y:.78,x:.151,z:.111},{y:.94,x:.171,z:.115},{y:1.08,x:.182,z:.106},{y:1.12,x:.172,z:.099},{y:1.153,x:.104,z:.065}],coat,'fabric',20,.012),loft([{y:.78,x:.069,z:.011,cz:-.117},{y:1.02,x:.075,z:.013,cz:-.120},{y:1.13,x:.050,z:.012,cz:-.089}],C.cream,'fabric',16),p('cylinder',[.097,.102,.097],[0,1.18,0],skin,'skin',{top:1})];
  for(const side of [-1,1]){out.push(loft([{y:.76,x:.035,z:.012,cx:side*.100,cz:-.115},{y:.86,x:.047,z:.019,cx:side*.104,cz:-.118},{y:1.03,x:.051,z:.021,cx:side*.108,cz:-.126},{y:1.13,x:.030,z:.016,cx:side*.070,cz:-.095}],coat,'fabric',16,.016),sweep([[side*.027,1.155,-.066],[side*.048,1.125,-.112],[side*.064,1.092,-.127]],[.015,.026,.012],[.005,.006,.003],C.cream,'fabric',10,6));}
  if(!a){
   out.push(loft([{y:misaki?.307:.235,x:.262,z:.238},{y:.355,x:.272,z:.246},{y:.47,x:.254,z:.232},{y:.60,x:.207,z:.174},{y:.74,x:.151,z:.109}],misaki?C.plum:C.cream,'fabric',32,.045));
-  if(misaki){out.push(mesh(sculptCloth([{y:.363,w:.180,z:-.253},{y:.405,w:.194,z:-.254},{y:.50,w:.181,z:-.230},{y:.60,w:.160,z:-.187},{y:.70,w:.142,z:-.144},{y:.79,w:.134,z:-.130}],.005,.005),C.apron,'fabric',.91));out.push(p('round',[.108,.090,.008],[.055,.578,-.211],'#E5D3B5','fabric',{radius:.020}),sweep([[-.145,.785,-.126],[0,.789,-.142],[.145,.785,-.126]],[.008,.010,.008],[.005,.005,.005],C.cream,'fabric',12,6));}
+  if(misaki){const apron=mesh(drapeOutside(sculptCloth([{y:.363,w:.180,z:-.253},{y:.405,w:.194,z:-.254},{y:.50,w:.181,z:-.230},{y:.60,w:.160,z:-.187},{y:.70,w:.142,z:-.144},{y:.79,w:.134,z:-.130}],.005,.005),out),C.apron,'fabric',.91);out.push(apron);out.push(mesh(drapeOutside(geometry({shape:'round',size:[.108,.090,.008],at:[.055,.578,-.15],color:'#E5D3B5',role:'fabric',radius:.020}),[apron],.010),'#E5D3B5','fabric'),sweep([[-.145,.785,-.126],[0,.789,-.142],[.145,.785,-.126]],[.008,.010,.008],[.005,.005,.005],C.cream,'fabric',12,6));}
   else out.push(sweep([[-.132,1.113,-.064],[0,1.116,-.142],[.129,1.113,-.064]],[.028,.042,.028],[.018,.020,.018],C.plum,'fabric',16),mesh(sculptCloth([{y:.85,w:.031,z:-.153},{y:1.02,w:.033,z:-.155},{y:1.13,w:.035,z:-.132}],.010,.004),C.plum,'fabric'));
  }else{out.push(loft([{y:.63,x:.150,z:.102},{y:.71,x:.158,z:.110}], '#596368','fabric',20),p('round',[.103,.100,.018],[-.107,.927,-.145],'#A86F56','fabric',{radius:.014}),p('round',[.19,.19,.082],[.211,.72,-.071],'#CDBA96','fabric',{radius:.027}),sweep([[.14,1.10,-.078],[-.02,.92,-.149],[-.15,.75,-.089]],[.012,.012,.012],[.006,.006,.006],'#CDBA96','fabric',12));}
  for(const y of [1.094,1.033,.972,.911])out.push(p('cylinder',[.010,.003,.010],[0,y,-.143],'#AB9370','metal',{turn:[Math.PI/2,0,0],top:1}));return out;
