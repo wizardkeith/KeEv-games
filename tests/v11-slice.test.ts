@@ -10,7 +10,7 @@ test('V11 painted facial features attach to actual sculpt while preserving conta
  for(const side of ['left','right']){const hand=parts.find(p=>p.id==='hand-'+side)!;assert.deepEqual(hand.pivot,old.find(p=>p.id===hand.id)!.pivot);assert.equal(hand.recipe.length,6,'actual palm, four fingers, thumb');}
  for(const id of ['eye-left','eye-right','eyelid-left','eyelid-right','mouth','brow-left','brow-right']){
   const p=parts.find(p=>p.id===id)!;
-  for(const s of p.recipe){assert.equal(s.shape,'mesh');if(s.shape!=='mesh')continue;for(let i=0;i<s.geometry.positions.length;i+=3){const [x,y,z]=s.geometry.positions.slice(i,i+3).map((v,k)=>v+p.pivot[k]);const gap=v11FaceZ(x,y)-z;assert.ok(s.baseColorTexture?gap>=.0007&&gap<=.0012:gap>=-.00006&&gap<=.0045,`${id}: actual skin gap ${gap}`);}}
+  for(const s of p.recipe){assert.equal(s.shape,'mesh');if(s.shape!=='mesh')continue;for(let i=0;i<s.geometry.positions.length;i+=3){const [x,y,z]=s.geometry.positions.slice(i,i+3).map((v,k)=>v+p.pivot[k]);const gap=v11FaceZ(x,y)-z;assert.ok(s.baseColorTexture&&s.role==='ink'?gap>=.0007&&gap<=.0012:gap>=-.00006&&gap<=.0045,`${id}: actual skin gap ${gap}`);}}
  }
  const face=nativeGrouped(parts.find(p=>p.id==='head')!.recipe).find(g=>g.baseColorTexture?.endsWith('misaki-skin.png'));assert.ok(face);assert.equal(face!.color,'#FFFFFF');assert.equal(face!.geometry.uvs.length,face!.geometry.positions.length/3*2);
 });

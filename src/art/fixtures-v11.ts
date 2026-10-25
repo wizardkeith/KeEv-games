@@ -43,7 +43,7 @@ export function buildV11Room(door:Parameters<typeof buildV10Room>[0]):NativeSurf
   if(near(b.center[0],-4.32)&&near(b.size[2],3.40)){out.push(zScale(p,0,4.5/3.4));continue;}
   out.push(p);
  }
- for(const z of [-2.1,-.7,.7,2.1])out.push(board([.12,1.94,.065],[-4.40,1.84,z],'#9E7854','wood',.014));return out;
+ const mullions=[-2.1,-.7,.7,2.1].map(z=>board([.12,1.94,.065],[-4.40,1.84,z],'#9E7854','wood',.014));out.push(...nativeGrouped(mullions).map(g=>({shape:'mesh' as const,geometry:g.geometry,at:[0,0,0] as V3,color:g.color,role:g.role,roughness:g.roughness})));return out;
 }
 /** The oblique play camera looks down through the window. Lowering the distant
  * courtyard brings real neighbour windows/roofs into view instead of exposing

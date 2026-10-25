@@ -14,14 +14,14 @@
     {
       "id": "styling-v9",
       "file": "assets/masters/native-v4/styling-v9.glb",
-      "bytes": 2507804,
-      "sha256": "d143a80b3cdf625ed4224e078f28417be9ff0bf902312e81d559ff2ca0c2fc31"
+      "bytes": 2549444,
+      "sha256": "1d8a79be7436a6b80cc168d8d11e769691f1ba4b7de1f70760039c9abfde054b"
     },
     {
       "id": "window-canopy-v9",
       "file": "assets/masters/native-v4/window-canopy-v9.glb",
-      "bytes": 2441060,
-      "sha256": "c08508d40ca9a0164b1a8c2804fff0340b63509aef36cb937e54ea9837aa832c"
+      "bytes": 2403556,
+      "sha256": "2f258a5336a04aca18980a4339de525daffc20fbed2a0d4d9e6e53aa720378df"
     },
     {
       "id": "counter",

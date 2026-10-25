@@ -52,3 +52,14 @@
 **QA更正：**獨立檢視已在build23原始錄影110–113秒（111秒可讀）找到「18件／+¥8,400／未扣人工、租金」。原`actualMargin:false`是輪詢漏看，不是遊戲經濟出錯；保留原始紀錄並解釋差異，沒有為這個假陰性修改遊戲。QA已加只讀DOM觀察及非阻塞截圖；fresh build31真正Sandbox招呼／結算／交袋／批次毛利均被輪詢、畫面和DOM記錄捕捉，重載快照相同，0pageerror、隔離Normal基線未變。[完整來源／限制](../evidence/native-v11/checkpoint-3/provenance.json)。177 tests、build/validate/replay/assets、139GLB零error/warning、305受保護檔案通過。另實測五語×1280×720／375×812／320×420共15組、75次panel切換，鏡頭pose不變、desktop drawer580px、buy target≥44px；只屬touch emulation/Reduce Motion，不是實體手機驗收。較早未觀察／timeout不因此被改稱歷史pass。
 
 **下一步與未通過項目：**原目標品質／風格仍未達到，正常店景仍偏平，人物服裝／臉部層次、兩位顧客、自然混合高度與白花密度、窗外天空／屋頂深度仍有明顯差距。正在另行試實際靜態幾何的Cycles間接光烘焙，尚未接入；它是光照資料試驗，不是替代遊戲的概念圖／完成畫面。沒有新故事／玩法／店舖／套裝、沒有merge/deploy/Normal玩家資料/使用者Chrome/Unity/關機。持續重建，不把技術回歸通過冒充目標美術驗收。
+
+
+## 第四個 checkpoint — 新貼圖映射／外景與實際遊戲內 GI 試驗，尚未達標
+
+保留第三個checkpoint已改善的胸肩／短頸／服裝連續輪廓，不再反覆重做。新改的是：皮膚眼瞼、薄眉／眼線、實際臉部與眼睛UV上下／左右映射（glTF貼圖座標方向；原錯位令腮紅／高光位置不正確）；更圓潤的葉片與成簇白花；真正窗洞幾何portal及程序遠天空，背景不再穿出剖開牆外。原160固定場景authoring預算連天空仍保留，Misaki11,960tri仍低於12,000。新增Web薄透光材質，標準glTF保留opaque PBR fallback及native extras，不冒稱兩個renderer最終外觀相同。
+
+[實際預設遊戲／正常UI](../evidence/native-v11/checkpoint-4/game-default-normal.png)／[實際預設Zen](../evidence/native-v11/checkpoint-4/game-default-panorama.png)／[同一遊戲、同一鏡頭GI試驗](../evidence/native-v11/checkpoint-4/game-experimental-gi-panorama.png)／[明確標示非遊戲的補充人物studio](../evidence/native-v11/checkpoint-4/supplemental-studio-face.png)。179tests、139GLB零error/warning、305protected路徑通過；原純投影演算法、core/save/會計/五語/UI未改。最新完整High未剪動作證據仍是第三checkpoint的172秒，不假稱這次新shader已重跑該流程。
+
+**有改變方法，但沒有假稱成功：**用實際245個靜態mesh／原始材質貼圖在Cycles烘焙2048²間接光atlas，再以compact UV sidecar接入真正遊戲。A/B確實有222個mesh套用，9個簽名未匹配；效果太弱且牆面出現噪點，因此**未採納為預設，也未算通過**。預設build不啟用該flag、不需要試驗資料；工具／原始試驗資料仍保留於saved cloud QA，沒有用圖片替代可玩3D。完整來源／雜湊／限制見[provenance](../evidence/native-v11/checkpoint-4/provenance.json)。
+
+下一個重點依獨立覆核：實際暖焦點光／窗光與冷外景A/B；完成櫃檯＋中央桌的一組高中低、白花與既有非庫存展示樣品陳列；然後把男顧客的髮／胸肩／領口／手／袋提升至目前Misaki品質。兩位顧客仍未重建，不以studio或技術pass冒充原目標藝術驗收。沒有merge/deploy/Normal玩家資料/使用者Chrome/Unity/關機／故事玩法擴張。

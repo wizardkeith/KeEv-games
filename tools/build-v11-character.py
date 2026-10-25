@@ -35,7 +35,7 @@ for i in range(rows+1):
         a=j*math.tau/cols;x=math.cos(a)*rx;z=math.sin(a)*rz+cz
         front=max(0,-math.sin(a))**10
         z-=front*(.010*math.exp(-((y-.116)/.052)**2)*math.exp(-(x/.029)**2)+.006*math.exp(-((y-.045)/.026)**2))
-        verts.append((x,y,z));uv.append((x/.46+.5,(y+.035)/.44))
+        verts.append((x,y,z));uv.append((.5-x/.46,1-(y+.035)/.44))
 for i in range(rows):
     for j in range(cols):
         a=i*cols+j;b=i*cols+(j+1)%cols;faces.append((a,a+cols,b+cols,b))

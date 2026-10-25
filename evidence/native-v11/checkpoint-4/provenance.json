@@ -1,0 +1,59 @@
+{
+  "status": "IN PROGRESS. Target art not accepted. PublicV17 unchanged.",
+  "default": "Actual production build40 default, real Sandbox purchases/display, same fixed camera and reduced-motion setup as experimental comparison.",
+  "experimental": "Actual SAME game compiled with VITE_STATIC_GI=1 and generated atlas/UV sidecars. Actual static Cycles diffuse indirect colour applied222/stale9; not adopted, noise and inadequate focal improvement. Not a generated mockup/scene replacement. Art experiment only, not release-ready.",
+  "studio": "Face UV/facial geometry supplement is actual production asset in neutral studio, NOT gameplay. Eye glint/cheek paint orientation corrected to glTF top-down image UV.",
+  "changes": "Rounded leaf outline/cluster blossom geometry; actual window portal/distant procedural sky; mapped skin eyelid rims/thin brows; native thin diffuse transmission (standard glTF retains explicit opaque PBR fallback with extras). Shoulder/neck/body continuity from checkpoint3 preserved.",
+  "checks": "179tests,139GLB0errors/warnings,305protectedfiles. Latest complete actualHigh motion remains checkpoint3 build31 (172s); not rerun or claimed as new default40 motion.",
+  "limits": "Still visibly below original target quality/style. Not accepted. Prototype needs source signature/corner matching and noise correction. No physicalGPU/FPS/audio/native acceptance.",
+  "files": {
+    "game-default-panorama.png": {
+      "bytes": 1001852,
+      "sha256": "003ffb784871f5870a7eb32748777bbc7bb82ae9d3ffe279c5af5d15ef2280f7"
+    },
+    "experimental-render.json": {
+      "bytes": 11409,
+      "sha256": "fe7a43a1b1cd46e59351506789636b63f7969e73ec786970e41bc6d55f451214"
+    },
+    "game-experimental-gi-normal.png": {
+      "bytes": 955068,
+      "sha256": "3287b59614d5ed73077a73d84659ccb3c6a8192da2eaec84ed88fded4db4d70f"
+    },
+    "locomotion.json": {
+      "bytes": 1642,
+      "sha256": "02316d0a033e40b6d9dc2355c88e3f29c7d7d2b20c35e64c85614ec96ac72a45"
+    },
+    "supplemental-studio-face.png": {
+      "bytes": 213587,
+      "sha256": "a75313c8220791fc1cf60c9587ebd8542eee0c60097cc18fd73c2986c0776286"
+    },
+    "179-tests.log": {
+      "bytes": 22781,
+      "sha256": "660a95837142c28739b6c0dd4719f88b67483c76ea1588812677f604281d7fc1"
+    },
+    "gi-prototype-provenance.json": {
+      "bytes": 586,
+      "sha256": "114e8b0912ea92bd027ff3b57c0f51809aedfb9b4dd0ac03fdd8e24330d2d7d4"
+    },
+    "139-glbs.json": {
+      "bytes": 14514,
+      "sha256": "642488ffc2e99351a23e1bdaafcf5c7a57ff3a9e6da475f4b03bc35bad840ca9"
+    },
+    "game-default-normal.png": {
+      "bytes": 866221,
+      "sha256": "4c55e8ba0b6e37ba9a27fd7b7a70c4beb6ff7f25134f909b453ea65f597c8d89"
+    },
+    "game-experimental-gi-panorama.png": {
+      "bytes": 1108895,
+      "sha256": "95921245f0af66f6627ed686dad18df2fbf9ab4a660253c6814455bf3bfbb0ab"
+    },
+    "preservation.json": {
+      "bytes": 15652,
+      "sha256": "747bf2db5fc1369606f727b8e8465efc7f1aac83057d1f5cc390dfa9bcce4964"
+    },
+    "default-render.json": {
+      "bytes": 10587,
+      "sha256": "1f01fc6e551b4cca546a946b50c0c2d6cf423aef290c2b75d1cae311b79b2208"
+    }
+  }
+}

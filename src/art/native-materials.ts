@@ -10,3 +10,8 @@ export function nativeMaterialIntent(surface:{role?:MaterialRole;color:string;al
 
 /** Original authored strand colour and OpenGL tangent normal inputs, shared by Web/GLB. */
 export const nativeHairMaterial={roughness:.60,baseColor:'/assets/native-v10/hair-strand-basecolor.png',normal:'/assets/native-v10/hair-strand-normal.png',normalScale:.22} as const;
+
+/** Thin diffuse transmission is a Web PBR extension, not an economy feature.
+ * Exported in native extras for a later engine adapter; standard glTF keeps the
+ * same opaque PBR fallback. No refraction, screen-space scattering or prepass. */
+export const nativeTransmission=(role:MaterialRole)=>role==='skin'?{intensity:.10,color:'#FFE0CD',minimumThickness:.005,maximumThickness:.035}:role==='leaf'?{intensity:.24,color:'#D4E3A2',minimumThickness:.0008,maximumThickness:.002}:undefined;
