@@ -6,6 +6,18 @@
 
 
 
+## 第十三個 checkpoint — 離線衣料休止形態及真正摺峰邊線，視覺門檻仍開放
+
+以原C11衣殼在雲端Blender做受限80frame休止布料／waist seam tension，再作主要V形受力摺雕塑，保留5,472vertex高模、碰撞支撐、pin／shape keys及低模在可編輯master。第一個均勻水平低模沒有接住摺峰，實際game84仍弱；後續在**相同410vertex／720tri拓撲**把三條腰部邊線改沿主要V摺，沒有提高面數或加強weave。**女顧客11,994tri<12,000**，原肩頸Y≥.99逐座標保留、接點／手臂長度／既有rig不變。寬酒紅背巾保留並加寬緩弧度；裙身改5道不等距重力摺；袖口改真正中空雙捲邊，有內壁／腕部空隙，原實心帽面退役。
+
+[實際遊戲改前77](../evidence/native-v11/checkpoint-13/before-game77.png)／[改後86](../evidence/native-v11/checkpoint-13/after-game86.png)／[完整原始量測](../evidence/native-v11/checkpoint-13/provenance.json)：普通玩家wheel、同camera／B的root與yaw，前後capture均自然瀏覽；頭／手自然相位不完全一致。[4倍nearest evidence crop改前](../evidence/native-v11/checkpoint-13/before-detail-4x-nearest.png)／[改後](../evidence/native-v11/checkpoint-13/after-detail-4x-nearest.png)只是放大原像素，不是生成／補畫。已實看：袖口／腰襬輪廓有變，但正常遊玩尺寸的背部主要衣褶仍弱，**布料及整體原圖門檻未通過，不把高模或tests當視覺成功。**
+
+[全程未剪實際遊戲片](../evidence/native-v11/checkpoint-13/uncut.webm)／[自然B入店瀏覽離店結果](../evidence/native-v11/checkpoint-13/motion-results.json)，96CDP畫面約145秒、0pageerror；只觀察自然入店／瀏覽／離店，**未做新結算或收銀驗證**，C11的真實B交易仍只屬其自身source。稀疏雲端SwiftShader畫面不聲稱全步態／接觸精度／實體GPU/FPS/audio/native通過。
+
+**196tests/build/validate/replay/asset-check、139GLB零error/warning、305protected/history通過**；兩項新geometry測試檢查肩頸逐點不變／中空袖口實際ray穿透及內壁。前片／blouse初次新摺導致layer clearance不足，已改實際層距，原測試門檻沒變。首次未先重建GLB的suite失敗，巨型binary assertion耗盡worker；新增SHA先驗檢查讓stale master先簡短失敗，仍保留exact byte比較，正常export後全數通過。失敗log保留。現有五語UI／經濟／save／鏡頭／燈光／傢俬／已驗證陳列沒有改動；未重稱新版15locale/layout或完整收銀已跑。
+
+後續繼續解決正常尺度衣褶光照可讀性，以及整店仍顯著存在的自然混合商品／材質反應、柔和窗光／接觸層次及遠景差距。沒有為弱視覺試驗再做release archive；PR8仍draft、未合併、未發佈、publicV17不變。
+
 ## 第十二個 checkpoint — 實際自身遮蔽試驗，不採用為runtime／主要解法
 
 C11形體已進可玩模型，但正常距離衣褶仍弱。本輪以雲端Blender對5個獨立rigid衣物組件／21面做原創Cycles自身AO，避免把移動手臂陰影烘在身體；實驗WebGL真正套在14mesh／4,456vertex，沒有改任何座標／UV／關節／三角形，也沒有加強weave或貼圖解析度。這是artist-directed diffuse vertex tint，**不是fullGI**。

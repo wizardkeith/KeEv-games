@@ -4,14 +4,18 @@
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
+    "tools/build-v11-coat-cloth.py": "2e19c12f141b38fa9f45ba08eeb68451d4c8ab39b859c926ecc12df8ff76fa4d",
+    "assets/masters/native-v11/coat-rest-input.json": "a0ee69e780e94d7097b0c024444a9e141077601a6ecae6f6b649d9814c6ea7b5",
+    "assets/masters/native-v11/coat-rest/coat-rest-retopo.json": "184028af0817438ca03896b6927b2c2147ac4cec15a22363466df9346b7e6c15",
+    "assets/masters/native-v11/coat-rest/coat-rest-authoring.blend": "3c7a3486c233949c6e187f0ba086f822ff65bc5ca0095b496015c9087786ad40",
     "src/art/surface-finish-v11.ts": "924628ff2fe94ad09abe873054e2827c8b4460dfc3c6ea6f9181c2ede923fa45",
     "src/art/garment-uv-v11.ts": "4f45eeec19f5d170e570e3b841623171f7cd1fb2ef87387791d881e43aa5077b",
     "tools/paint-v11-fabrics.py": "85f96d2c7b42bf12409dddf612473137d3c771984311b06e687a09d494526dbe",
     "tools/export-v11-garment-input.ts": "b20bedff29a87f4a366767a5a52d7cfb9587e18dcbc7f22ceb0b7fc08f9b798a",
     "tools/unwrap-v11-garments.py": "fe9439856dcf197721f7099318d33c7b5a7577e687f523713cb646bd02095332",
-    "assets/masters/native-v11/visitor-b-cloth-input.json": "a0ee69e780e94d7097b0c024444a9e141077601a6ecae6f6b649d9814c6ea7b5",
-    "assets/masters/native-v11/visitor-b-cloth-uv.json": "8436e1a954df400040e9c3e2bb683e044416a102e34f588828842630035c2da9",
-    "assets/authoring/native-v11/garment-uv-provenance.json": "15987ba74c016717a4baa63b8583d1250266520cdd9b3d05992d37606807ddc6",
+    "assets/masters/native-v11/visitor-b-cloth-input.json": "b754c60eb1285ce5e48c12625940039b45377b620af69650fbcf0eabf446790e",
+    "assets/masters/native-v11/visitor-b-cloth-uv.json": "6812a81fe2282c9e3ef343e6aaa3aede6864a9ab5cc00137d3bf42dc5ebf6e49",
+    "assets/authoring/native-v11/garment-uv-provenance.json": "740ae38aa386a951cb7942a215502f037daafce580deca414dd3a9af9ed6c308",
     "assets/masters/native-v11/knit-albedo.png": "12e1137bb442b70a7e55fffb1962e542902c07c9e6c95afa4aee704b2c3dbf6e",
     "assets/masters/native-v11/knit-normal.png": "5a248b4c45da36300f534c7f45f851cccf2b8a337bb67c6d0a2126e8630f7149",
     "assets/masters/native-v11/knit-orm.png": "4ec3830e661e15016f38621a917e005eddf39ebbe3a46e71d63b69cc57165fc8",
@@ -25,7 +29,7 @@
     "assets/masters/native-v11/leather-normal.png": "7043c2b98d32736cffebb8e63277e79e1eecc6b58d82aee8aaff12cfc75ed37b",
     "assets/masters/native-v11/leather-orm.png": "bc273714fbf81a77b3a3323e27db1367d8f48da58c1eea60b37b6f4847bb94b7",
     "src/art/metre-uv-v11.ts": "6eba06aac522fadce8dbd376e74bf8db2034f43944bc3f51a0a2058aa91e5c73",
-    "src/art/customer-female-v11.ts": "0fd9c871b9174ba1b034b915473a07a2fef890942129494ffcf485195cc98e7d",
+    "src/art/customer-female-v11.ts": "88d90de8287f9c0cd81e018479c84877c3fbd299dfa6a720d2e32ed139cf26c3",
     "tools/build-v11-female.py": "6f85226ee4b9d577c8c917334ab2687434a0079e2f33340668920bc2a2dc8475",
     "assets/masters/native-v11/visitor-b-head.json": "013e8abce6d974bafb2f95a1df8bc9654d7aa9a4e4b961f443a339c99bd77575",
     "src/art/customer-male-v11.ts": "fb7d6ab4d8e888b5fb88b2f24b63bf7051bde6b2129f2fa7c2bd34dcd1aab801",
@@ -65,7 +69,7 @@
     "src/world.ts": "7431499f9197d61db9d58c356dce79112f326ddad57223e5fd415dd95f96a05e",
     "src/presentation/native-routes.ts": "2bdfc7fab4b8c190c12b8f2d96a100b759086ebbbfb60740af4fca378428b040",
     "src/presentation/native-scene.ts": "bed32138150cdbf9e5441a3af30b190d0b34f7ffe70e3d4f6ff6b43ddd04ae70",
-    "tools/export-native-characters.ts": "fd0c92784ee05b5cb846087348ae5004d933880b7cc34be56116ee46e65e10b7",
+    "tools/export-native-characters.ts": "bdda4abcbe6ecef035e03df08690dc05cf89ae82ac85ec26799e77bd29f09eee",
     "tools/generate-v10-surfaces.py": "e550229e751c35e818e74188652b8153525595c74d6e3e5a6430d8c1ba66e11d",
     "assets/masters/native-v10/hair-strand-basecolor.png": "2476f73f419fa1c57b05eeef611f3712959356c1e71df4896357df0838fb8e67",
     "assets/masters/native-v10/hair-strand-normal.png": "530c689078f71ffddbd8637da000d235933a5b103cb01cfb8e34b1163855d1b7",
@@ -678,8 +682,8 @@
       "id": "actor.visitor-b.native.v3",
       "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
       "web": "public/assets/native-v3/visitor-b-native-v3.glb",
-      "bytes": 1882008,
-      "sha256": "5c66463b1f99610137e8d3a50e4af30044a132bcf2ed9324804f9ce45f88e0c8",
+      "bytes": 1888140,
+      "sha256": "75272ae3b1c4c20cfd92129c88ff5482bb6e2b6fa1db0cb879901c3751387abd",
       "nodes": [
         {
           "id": "body",
@@ -690,7 +694,7 @@
             0
           ],
           "geometryGroups": 7,
-          "triangles": 3536
+          "triangles": 3600
         },
         {
           "id": "head",

@@ -1,5 +1,6 @@
+import coatRest from '../../assets/masters/native-v11/coat-rest/coat-rest-retopo.json';
 import garmentUV from '../../assets/masters/native-v11/visitor-b-cloth-uv.json';
-import {applyGarmentUV,type GarmentUV} from './garment-uv-v11';
+import {applyGarmentUV,garmentSignature,type GarmentUV} from './garment-uv-v11';
 /** Original low gathered hair and blue jacket / scarf / full cream skirt.
  * Same named rigid rig and rest joints; real shapes, never image billboards. */
 import sculpt from '../../assets/masters/native-v11/visitor-b-head.json';
@@ -18,8 +19,19 @@ function ribbon(rows:{x:number;y:number}[],width:number,support:NativeMesh,gap:n
  for(let i=0;i<rows.length-1;i++){const a=rows[i],b=rows[i+1],n=Math.ceil(Math.abs(b.y-a.y)/.025);for(let j=0;j<n;j++){const t=j/n,x=a.x+(b.x-a.x)*t;dense.push({y:a.y+(b.y-a.y)*t,inner:x-width/2,outer:x+width/2});}}
  const end=rows.at(-1)!;dense.push({y:end.y,inner:end.x-width/2,outer:end.x+width/2});return fittedPattern(dense,support,1,gap,color,width>.05?6:2);
 }
-function pattern(rows:{y:number;inner:number;outer:number}[],support:NativeMesh,side:number,gap:number,color:string){
- const dense:typeof rows=[];for(let i=0;i<rows.length-1;i++){const a=rows[i],b=rows[i+1],n=Math.ceil(Math.abs(b.y-a.y)/.045);for(let j=0;j<n;j++){const t=j/n;dense.push({y:a.y+(b.y-a.y)*t,inner:a.inner+(b.inner-a.inner)*t,outer:a.outer+(b.outer-a.outer)*t});}}dense.push(rows.at(-1)!);return fittedPattern(dense,support,side,gap,color,4);
+function sectionX(support:NativeMesh,y:number){
+ const g=support.geometry,xs:number[]=[];
+ for(let i=0;i<g.indices.length;i+=3){const ids=g.indices.slice(i,i+3);for(let j=0;j<3;j++){const a=ids[j]*3,b=ids[(j+1)%3]*3,ya=g.positions[a+1],yb=g.positions[b+1];if(Math.abs(yb-ya)<1e-12){if(Math.abs(y-ya)<1e-9)xs.push(g.positions[a],g.positions[b]);}else if((ya-y)*(yb-y)<=0){const t=(y-ya)/(yb-ya);xs.push(g.positions[a]+(g.positions[b]-g.positions[a])*t);}}}
+ if(!xs.length)throw Error('garment row outside actual support height');return [Math.min(...xs)+.004,Math.max(...xs)-.004];
+}
+function rolledCuff(side:number):NativeMesh{
+ const profile=[[-.175,.053],[-.194,.073],[-.210,.055],[-.224,.065],[-.236,.045],[-.236,.037],[-.175,.044],[-.175,.053]],n=12,g:Geometry={positions:[],normals:[],indices:[]};
+ for(const [y,r]of profile)for(let j=0;j<n;j++){const a=j/n*Math.PI*2;g.positions.push(side*.006+Math.cos(a)*r,y,Math.sin(a)*r*.94);}
+ for(let k=0;k<profile.length-1;k++)for(let j=0;j<n;j++){const a=k*n+j,b=k*n+(j+1)%n;g.indices.push(a,a+n,b,b,a+n,b+n);}
+ return fabric(finishSculpt(g),'#7C96A1');
+}
+function pattern(rows:{y:number;inner:number;outer:number}[],support:NativeMesh,side:number,gap:number,color:string,cols=4){
+ const dense:typeof rows=[];for(let i=0;i<rows.length-1;i++){const a=rows[i],b=rows[i+1],n=Math.ceil(Math.abs(b.y-a.y)/.045);for(let j=0;j<n;j++){const t=j/n;dense.push({y:a.y+(b.y-a.y)*t,inner:a.inner+(b.inner-a.inner)*t,outer:a.outer+(b.outer-a.outer)*t});}}dense.push(rows.at(-1)!);const fitted=dense.map(row=>{const [lo,hi]=sectionX(support,row.y),clamp=(x:number)=>Math.max(lo,Math.min(hi,x)),inner=clamp(side*row.inner)/side,outer=clamp(side*row.outer)/side;if(Math.abs(outer-inner)<.005)throw Error('tailored panel collapsed at actual support');return {...row,inner,outer};});return fittedPattern(fitted,support,side,gap,color,cols);
 }
 /** Fit a real closed scarf panel to the BACK support, not the front chest.
  * Reflecting both winding and normals twice preserves outward CCW surfaces. */
@@ -41,19 +53,26 @@ function clothes(parts:NativePart[]){
   if(z<0)torso.geometry.positions[i+2]-=.0016*Math.max(0,1-Math.abs(y-1.17)/.035)*Math.sin(x*83);
  }
  finishSculpt(torso.geometry);
- const skirt=fabric(sculptLoft([{y:.224,x:.248,z:.236},{y:.254,x:.258,z:.244},{y:.40,x:.245,z:.235},{y:.55,x:.213,z:.201},{y:.68,x:.158,z:.126},{y:.76,x:.135,z:.098}],32,.058),'#E7DBBF');
+ // Actual offline-authored cloth rest, retopologized to the same 720 triangles.
+ // Upper accepted controls stay exact; front layers fit this resulting surface.
+ if(coatRest.sourceSignature!==garmentSignature(torso.geometry)||coatRest.positions.length!==torso.geometry.positions.length||JSON.stringify(coatRest.indices)!==JSON.stringify(torso.geometry.indices))throw Error('stale authored coat rest');
+ torso.geometry=finishSculpt({positions:[...coatRest.positions],normals:[],indices:[...coatRest.indices]});
+ const skirt=fabric(sculptLoft([{y:.224,x:.248,z:.236},{y:.254,x:.258,z:.244},{y:.40,x:.245,z:.235},{y:.55,x:.213,z:.201},{y:.68,x:.158,z:.126},{y:.76,x:.135,z:.098}],32,0),'#E7DBBF');
  for(let i=0;i<skirt.geometry.positions.length;i+=3){
-  const x=skirt.geometry.positions[i],y=skirt.geometry.positions[i+1],z=skirt.geometry.positions[i+2],a=Math.atan2(z,x),fall=ease((.72-y)/.32),r=Math.hypot(x,z)||1;
-  const gather=(.006+.013*Math.pow(.5+.5*Math.cos(6*a+.42*(y-.224)+.30),3))*fall;
+  const x=skirt.geometry.positions[i],y=skirt.geometry.positions[i+1],z=skirt.geometry.positions[i+2],a=Math.atan2(z,x),fall=ease((.72-y)/.42),r=Math.hypot(x,z)||1;
+  const centres=[-.25,1.05,2.40,3.68,4.90],depths=[.025,.032,.024,.029,.027];let gather=0;for(let k=0;k<centres.length;k++){const centre=centres[k]+.12*(1-fall)*Math.sin(centres[k]),d=Math.atan2(Math.sin(a-centre),Math.cos(a-centre));gather+=depths[k]*Math.exp(-.5*(d/(.30+(k%2)*.025))**2)*fall;}
   skirt.geometry.positions[i]+=x/r*gather;skirt.geometry.positions[i+2]+=z/r*gather;
   skirt.geometry.positions[i+1]+=.004*Math.sin(a*5+.4)*Math.max(0,Math.min(1,(.45-y)/.22));
  }
  finishSculpt(skirt.geometry);
  const neck:NativeMesh={...fabric(sculptLoft([{y:1.19,x:.044,z:.042},{y:1.226,x:.042,z:.040},{y:1.263,x:.046,z:.043}],12),'#F2CBB2'),role:'skin',roughness:.78};
- const blouse=pattern([{y:.76,inner:-.053,outer:.053},{y:.88,inner:-.061,outer:.061},{y:1.02,inner:-.063,outer:.063},{y:1.14,inner:-.041,outer:.041},{y:1.193,inner:-.025,outer:.025}],torso,1,.009,'#F0E3CA');
- const fronts=[-1,1].map(side=>pattern([{y:.75,inner:.052,outer:.140},{y:.85,inner:.056,outer:.150},{y:.98,inner:.058,outer:.175},{y:1.065,inner:.055,outer:.190},{y:1.12,inner:.041,outer:.179},{y:1.17,inner:.025,outer:.123},{y:1.194,inner:.019,outer:.058}],torso,side,.014,'#708C99'));
+ const blouse=pattern([{y:.76,inner:-.053,outer:.053},{y:.88,inner:-.061,outer:.061},{y:1.02,inner:-.063,outer:.063},{y:1.14,inner:-.041,outer:.041},{y:1.193,inner:-.025,outer:.025}],torso,1,.010,'#F0E3CA');
+ const fronts=[-1,1].map(side=>pattern([{y:.75,inner:.052,outer:.140},{y:.85,inner:.056,outer:.150},{y:.98,inner:.058,outer:.175},{y:1.065,inner:.055,outer:.190},{y:1.12,inner:.041,outer:.179},{y:1.17,inner:.025,outer:.123},{y:1.194,inner:.019,outer:.058}],torso,side,.016,'#708C99'));
  const scarf=fabric(sculptSweep([[-.089,1.179,.040],[-.077,1.170,-.056],[0,1.153,-.103],[.078,1.17,-.056],[.091,1.181,.035],[0,1.188,.080],[-.089,1.179,.040]],[.023,.025,.030,.025,.023,.022,.023],[.010,.012,.014,.012,.010,.010,.010],24,6),'#826575');
- const tail=mirrorCloth(pattern([{y:.94,inner:-.050,outer:.050},{y:.985,inner:-.064,outer:.064},{y:1.07,inner:-.087,outer:.087},{y:1.146,inner:-.088,outer:.088},{y:1.176,inner:-.054,outer:.054}],mirrorCloth(torso),1,.010,'#826575'));
+ const tail=mirrorCloth(pattern([{y:.94,inner:-.050,outer:.050},{y:.985,inner:-.064,outer:.064},{y:1.07,inner:-.087,outer:.087},{y:1.146,inner:-.088,outer:.088},{y:1.176,inner:-.054,outer:.054}],mirrorCloth(torso),1,.010,'#826575',6));
+ // Two broad resting bends in the preserved wide back scarf, not noise.
+ for(let i=0;i<tail.geometry.positions.length;i+=3){const x=tail.geometry.positions[i],y=tail.geometry.positions[i+1],t=Math.max(0,Math.min(1,(y-.94)/.236)),hang=Math.sin(Math.PI*t);tail.geometry.positions[i+2]+=Math.max(0,.006*hang*(1+.45*Math.cos(Math.PI*x/.075+.5*t))+.002*Math.sin(Math.PI*x/.09+1.2)*hang);}
+ finishSculpt(tail.geometry);
  const pouch=fabric(sculptLoft([{y:.602,x:.052,z:.023,cx:-.196,cz:.130},{y:.619,x:.074,z:.034,cx:-.196,cz:.130},{y:.728,x:.079,z:.037,cx:-.196,cz:.130},{y:.789,x:.071,z:.031,cx:-.196,cz:.130},{y:.802,x:.058,z:.023,cx:-.196,cz:.130}],16,.013),'#88705A');
  const flap=ribbon([{x:-.196,y:.795},{x:-.196,y:.771},{x:-.196,y:.735},{x:-.196,y:.714}],.105,pouch,.008,'#947C64');
  const strap=ribbon([{x:.112,y:1.17},{x:.094,y:1.10},{x:.05,y:1.015},{x:0,y:.93},{x:-.05,y:.85},{x:-.09,y:.79},{x:-.114,y:.76}],.020,torso,.013,'#947C64');
@@ -61,20 +80,17 @@ function clothes(parts:NativePart[]){
  body.recipe=[torso,blouse,neck,...fronts,skirt,scarf,tail,pouch,flap,strap,end];
  for(const side of [-1,1]){
   const p=parts.find(p=>p.id==='arm-'+(side<0?'left':'right'))!;
-  p.recipe=[fabric(sculptLoft([{y:-.224,x:.051,z:.048,cx:side*.006},{y:-.18,x:.067,z:.062,cx:side*.007},{y:-.10,x:.078,z:.068},{y:-.025,x:.075,z:.065},{y:.018,x:.061,z:.056,cx:-side*.014},{y:.056,x:.018,z:.023,cx:-side*.055}],16,.035)),fabric(sculptLoft([{y:-.230,x:.044,z:.043,cx:side*.006},{y:-.222,x:.063,z:.058,cx:side*.006},{y:-.195,x:.070,z:.064,cx:side*.006},{y:-.177,x:.053,z:.049,cx:side*.006}],12,.018),'#7C96A1')];
-  const sleeve=p.recipe[0] as NativeMesh,cuff=p.recipe[1] as NativeMesh;
+  p.recipe=[fabric(sculptLoft([{y:-.224,x:.051,z:.048,cx:side*.006},{y:-.18,x:.067,z:.062,cx:side*.007},{y:-.10,x:.078,z:.068},{y:-.025,x:.075,z:.065},{y:.018,x:.061,z:.056,cx:-side*.014},{y:.056,x:.018,z:.023,cx:-side*.055}],16,.035)),rolledCuff(side)];
+  const sleeve=p.recipe[0] as NativeMesh;
   for(let i=0;i<sleeve.geometry.positions.length;i+=3){
    const x=sleeve.geometry.positions[i],y=sleeve.geometry.positions[i+1],z=sleeve.geometry.positions[i+2],a=Math.atan2(z,x),r=Math.hypot(x,z)||1;
    const bunch=.007*ridge(y-(-.171+.025*Math.cos(a+side*.4)),.026)*ease((-.08-y)/.06)*ease((y+.224)/.035);
    sleeve.geometry.positions[i]+=x/r*bunch;sleeve.geometry.positions[i+2]+=z/r*bunch;
   }
   finishSculpt(sleeve.geometry);
-  for(let i=0;i<cuff.geometry.positions.length;i+=3){
-   const x=cuff.geometry.positions[i]-side*.006,y=cuff.geometry.positions[i+1],z=cuff.geometry.positions[i+2],a=Math.atan2(z,x),r=Math.hypot(x,z)||1;
-   const bunch=.0035*(.5+.5*Math.cos(5*a+.7))*ease((y+.23)/.018)*ease((-.177-y)/.018);
-   cuff.geometry.positions[i]+=x/r*bunch;cuff.geometry.positions[i+2]+=z/r*bunch;
-  }
-  finishSculpt(cuff.geometry);
+  // Taper only hidden cloth inside the hollow roll, avoiding layer poke-through.
+  for(let i=0;i<sleeve.geometry.positions.length;i+=3){const y=sleeve.geometry.positions[i+1];if(y>-.18)continue;const x=sleeve.geometry.positions[i]-side*.006,z=sleeve.geometry.positions[i+2],r=Math.hypot(x,z),limit=.034+Math.max(0,Math.min(1,(y+.224)/.044))*.007;if(r>limit){sleeve.geometry.positions[i]=side*.006+x/r*limit;sleeve.geometry.positions[i+2]=z/r*limit;}}
+  finishSculpt(sleeve.geometry);
  }
  rebuildV11Hands(parts);rebuildV11Shoes(parts);
  for(const part of parts)part.recipe=part.recipe.map(s=>s.role==='fabric'&&!part.id.startsWith('shin-')?{...s,finish:['#708C99','#7C96A1','#826575'].includes(s.color)?'knit':['#88705A','#947C64'].includes(s.color)?'canvas':'linen'}:part.id.startsWith('foot-')&&s.color==='#59483F'?{...s,finish:'leather'}:s);
