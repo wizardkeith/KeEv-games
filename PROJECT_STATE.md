@@ -1,9 +1,14 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T03:23:47+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T04:24:29+08:00** (Asia/Hong_Kong).
 
 
 
+
+## V11 ninth checkpoint — same-facing coat/skirt UV and material slice — 2026-10-26T04:24:29+08:00
+
+- [DraftPR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed/readback **`44f445d50f8960de9740dba8660cc236756a0492`**, unmerged. **Main documentation pointer only; publicV17 unchanged; original target art still unaccepted.** Female 21-surface editable Blender UV master, metre-area/warp direction, original knit/linen/canvas/leather albedo/normal/ORM and portable sheen; minor collar/waist/hem drape. Female11,910tri<12,000, Misaki/male GLBs byte-identical toC8. Hair/camera/light/furniture/grouping/limb contact/economy retained. Actual normal-game before/after has exactly same camera and female root/yaw, both arms at rest; separate actual DEV-game50mmchecker is diagnostic,not release art.
+- **193tests/16focused/build/validate/replay/assets,139GLB0errors-warnings,305protected/history pass.** [Source, actual matched images, checker, raw results and limitations](https://github.com/wizardkeith/KeEv-games/blob/44f445d50f8960de9740dba8660cc236756a0492/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md). Fresh66 natural female entry/browse/leave recording just completed with leaving/return observed and0pageerrors; footage inspection/evidence follow-up pending. Not a fresh complete transaction release pass. **Normal-scale textile difference remains subtle and visual gate OPEN**; whole bouquet branching/mass/negative-space and lower-window distant roofs/trees next. Cloud SwiftShader only; physicalGPU/FPS/audio/native notcertified. No merge/deploy/userChrome/Normal/Unity/shutdown/content expansion.
 
 ## V11 eighth checkpoint — cloth UV / real petals / canopy — 2026-10-26T03:23:47+08:00
 
