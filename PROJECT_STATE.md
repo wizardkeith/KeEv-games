@@ -1,7 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T02:36:50+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T02:59:02+08:00** (Asia/Hong_Kong).
 
+
+
+## V11 seventh checkpoint — both customer assets / fitted moving surfaces — 2026-10-26T02:59:02+08:00
+
+- [DraftPR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed **`c0852269c64fe6ad6e3ec1365dd2b1770d5753e7`**, unmerged. **Main pointer only; publicV17 unchanged; original target art remains unaccepted; continuing.** Female editable low-bun head/gathered hair, blue jacket/scarf/full cream skirt/hands/shoes/personal bag integrated. Both customers' strips/flaps now fit triangle interiors; personal bags clear actual arm swing behind the hip. Male11,712/female11,710tri under unchanged12,000; Misaki raw recipe/camera/light/furniture/grouping/rig contacts retained.
+- **187tests/build/validate/replay/assets/139GLB0errors-warnings/305protected pass**; fresh female Blender JSON byte-identical. Actual-game female before/after camera diagnostics match; **174.112s High/Minimal=false uncut** real purchases/settlement/greeting/contact/transfer/margin/reload,0pageerrors and isolatedNormalbaselineunchanged. New both-customer actual forward-IK feet/thigh/satchel and hand-to-bag-handle surface checks pass. QA backward-heading path error corrected without changing locomotion; no hand-to-hand-contact assumption. [Images/clip/source hashes and limits](https://github.com/wizardkeith/KeEv-games/blob/c0852269c64fe6ad6e3ec1365dd2b1770d5753e7/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md). Next material UV/flower/product/exterior readability; not target/device/native acceptance. No merge/deploy/userChrome/Normal/Unity/shutdown/content expansion.
 
 ## V11 sixth visual checkpoint — male customer rebuild — 2026-10-26T02:36:50+08:00
 
