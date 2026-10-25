@@ -1,8 +1,8 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-25T11:10:52+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-25T11:17:20+08:00** (Asia/Hong_Kong).
 
-## V9 independent release gate — 2026-10-25T11:10:52+08:00
+## V9 independent release gate — 2026-10-25T11:17:20+08:00
 
 - **Release hold / not accepted: two P2 motion defects**, rather than withholding solely for remaining target-art gap. Parent-confirmed final candidate `0e4fff3c400ea02eedaa69e01dd08c79be171627`, application `600b539a23e577e83d014b4f4c809e59f3b7648e`, src tree `4cd18b993557f435fa4760feea053f1f441a89f0`. **P2:** greeting target uses cashier origin after staff moved; final recording still36.92°off, own initial runtime up to38.20°. **P2:** cashier hand sockets1.0055m apart; actual final scene-adapter probe moves bag0.8906m in0.20visual seconds. Fix current-coordinate attention and reachable handoff meeting/attachment, then targeted actual-motion/clearance/cancel regression. No implementation fix launched.
 - **Final independent checks:**162 tests/build/content/replay/asset-check;225 tracked asset/public hashes unchanged after rebuild;all139 retained GLBs (broader than implementation72)zero errors/warnings;247 protected files byte-identical to base. Final126-file archive matches fresh build byte-for-byte, SHA256 `15c8c5388c1874f16fc688687cf5bf8ac62dc0ffb6af80b11104621ecc9b008f`,140 provenance entries match.60 actual pricing/stock/set locale/narrow cases,old QA Sandbox compatibility and independent168.76s +/-settlement motion ran atinitial c99e157;UI/core/involved motion are byte-identical atfinal, eyelid-onlyart difference separately reconciled with final source/tests/GLBs/render evidence. No false claim of rerunning all60 atfinal.

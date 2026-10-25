@@ -55,4 +55,4 @@ Parent 已確認最後 immutable candidate **`0e4fff3c400ea02eedaa69e01dd08c79be
 
 **Limit：** Chromium ANGLE SwiftShader 軟件 WebGL，不是 physical GPU/FPS、Safari、真手機鍵盤／safe area、audio、true hidden-tab 或 Unity/C#/URP 驗收。之前 public proxy403／Library attachment transfer 沒重試或繞過；沒有操作本機 Unity、玩家存檔、Site或任何 permission/security設定。沒有 denied external mutation；最後候選版／package已確認，**release hold源於兩項P2新動作缺陷**，不是permission denial或pending external write。文件操作只有reviewer交接。
 
-記錄時間：2026-10-25T11:15:56+08:00。
+記錄時間：2026-10-25T11:17:20+08:00。
