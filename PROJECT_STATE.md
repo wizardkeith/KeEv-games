@@ -1,9 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T05:56:54+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T06:45:10+08:00** (Asia/Hong_Kong).
 
 
 
+
+## V11 thirteenth checkpoint — authored cloth rest / same-facing actual game, target open — 2026-10-26T06:45:10+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed/readback **0618a49157b2edda7b1e7e8baf12d63e600758ab**, unmerged. **Main documentation only; public V17 unchanged; original target NOT met, continuing.** Actual offline80frame resting cloth + primary V-fold sculpt/retopology, original720tri body topology/upper shoulder coordinates retained; hollow double-roll cuffs, broad skirt folds and retained wide burgundy back scarf. Female11,994<12,000. Editable high-detail/simulation/retopo .blend/input/source retained.
+- **196tests/build/validate/replay/asset-check,139GLB0errors/warnings,305protected/history pass.** [Actual matched77→86 game frames, raw metrics and145s uncut naturalBentry/browse/exit](https://github.com/wizardkeith/KeEv-games/blob/0618a49157b2edda7b1e7e8baf12d63e600758ab/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md). Exactcamera/root/yaw andpre/postbrowsing; naturalhead/arm phases differ. Source-layer clearance corrected, no threshold weakening. Initial staleGLBtest worker failed; export thenfull196passed, originalfailure retained. No new cashier/settlement/fullwalk precision claim;C11 transaction is its own source evidence.
+- Actual frame inspection: cuff/waist/hem contours change, **normal-scale primary folds still weak; textile visual gate OPEN**. Next: directionally readable cloth response plus natural mixed merchandise/materials and soft window/contact-light layers. Preserve improved hair/shoulders/camera/furniture/grouping; no further texture-resolution/AO-only success claim. No releasearchive/merge/deploy/userChrome/Normal/Unity/shutdown/content expansion or physicalGPU/FPS/audio/native acceptance.
 
 ## V11 twelfth checkpoint — actual self-shade experiment rejected, method changing — 2026-10-26T05:56:54+08:00
 
