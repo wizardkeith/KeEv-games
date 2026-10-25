@@ -21,22 +21,20 @@ function collar(side:number):NativeMesh{
 /** Thick narrow ribbon mounted on actual support triangles, including the
  * diagonal strap. Both layers move together; no depth bias or floating bar. */
 function ribbon(rows:{x:number;y:number}[],width:number,support:NativeMesh,gap:number,color:string):NativeMesh{
- const g:Geometry={positions:[],normals:[],indices:[]},count=rows.length*2;
- for(let layer=0;layer<2;layer++)for(const {x,y}of rows)for(const dx of [-width/2,width/2]){const z=frontZ(x+dx,y,[support]);if(!Number.isFinite(z))throw Error('visitor ribbon outside support');g.positions.push(x+dx,y,z-gap+layer*.003);}
- for(let layer=0;layer<2;layer++)for(let i=0;i<rows.length-1;i++){const a=layer*count+i*2;g.indices.push(...(layer?[a,a+1,a+2,a+1,a+3,a+2]:[a,a+2,a+1,a+1,a+2,a+3]));}
- const edge=(a:number,b:number)=>{const n=g.positions.length/3;for(const k of [a,b,a+count,b+count])g.positions.push(...g.positions.slice(k*3,k*3+3));g.indices.push(n,n+1,n+2,n+1,n+3,n+2);};
- edge(1,0);edge(count-2,count-1);for(let i=0;i<rows.length-1;i++){edge(i*2,(i+1)*2);edge((i+1)*2+1,i*2+1);}return fabric(finishSculpt(g),color);
+ const dense:{y:number;inner:number;outer:number}[]=[];
+ for(let i=0;i<rows.length-1;i++){const a=rows[i],b=rows[i+1],n=Math.ceil(Math.abs(b.y-a.y)/.025);for(let j=0;j<n;j++){const t=j/n,x=a.x+(b.x-a.x)*t;dense.push({y:a.y+(b.y-a.y)*t,inner:x-width/2,outer:x+width/2});}}
+ const end=rows.at(-1)!;dense.push({y:end.y,inner:end.x-width/2,outer:end.x+width/2});return fittedPattern(dense,support,1,gap,color,width>.05?6:2);
 }
 function clothes(parts:NativePart[]){
  const body=parts.find(p=>p.id==='body')!,old=body.recipe;
  const torso=fabric(sculptLoft([{y:.68,x:.144,z:.106},{y:.79,x:.156,z:.116},{y:.95,x:.183,z:.134,cz:-.003},{y:1.07,x:.199,z:.127,cz:-.003},{y:1.125,x:.188,z:.109},{y:1.173,x:.132,z:.082},{y:1.201,x:.063,z:.052}],20,.014));
- const placket=ribbon([{x:0,y:.71},{x:0,y:.85},{x:0,y:1.0},{x:0,y:1.13},{x:0,y:1.19}],.018,torso,.004,'#BF876A');
+ const placket=ribbon([{x:0,y:.71},{x:0,y:.85},{x:0,y:1.0},{x:0,y:1.13},{x:0,y:1.19}],.018,torso,.006,'#BF876A');
  const neck:NativeMesh={...fabric(sculptLoft([{y:1.19,x:.044,z:.042},{y:1.226,x:.042,z:.040},{y:1.263,x:.046,z:.043}],12),'#DFB799'),role:'skin',roughness:.78};
  const insert=fittedPattern([{y:1.15,inner:-.025,outer:.025},{y:1.185,inner:-.025,outer:.025},{y:1.195,inner:-.019,outer:.019}],torso,1,.005,'#E7D6BB');
- const pouch=fabric(sculptLoft([{y:.619,x:.066,z:.025,cx:.208,cz:-.090},{y:.633,x:.086,z:.038,cx:.208,cz:-.090},{y:.746,x:.090,z:.040,cx:.208,cz:-.090},{y:.812,x:.080,z:.035,cx:.208,cz:-.090},{y:.830,x:.068,z:.024,cx:.208,cz:-.090}],16,.012),'#B19A76');
- const flap=ribbon([{x:.208,y:.819},{x:.208,y:.797},{x:.208,y:.765},{x:.208,y:.744}],.125,pouch,.004,'#BEAA86');
+ const pouch=fabric(sculptLoft([{y:.619,x:.066,z:.025,cx:.196,cz:.130},{y:.633,x:.086,z:.038,cx:.196,cz:.130},{y:.746,x:.090,z:.040,cx:.196,cz:.130},{y:.812,x:.080,z:.035,cx:.196,cz:.130},{y:.830,x:.068,z:.024,cx:.196,cz:.130}],16,.012),'#B19A76');
+ const flap=ribbon([{x:.196,y:.819},{x:.196,y:.797},{x:.196,y:.765},{x:.196,y:.744}],.125,pouch,.008,'#BEAA86');
  const strap=ribbon([{x:-.112,y:1.17},{x:-.094,y:1.10},{x:-.05,y:1.015},{x:0,y:.93},{x:.05,y:.85},{x:.09,y:.78},{x:.114,y:.75}],.024,torso,.010,'#BEAA86');
- const strapEnd=fabric(sculptSweep([[.114,.75,frontZ(.114,.75,[torso])-.010],[.132,.78,-.111],[.147,.810,frontZ(.147,.810,[pouch])-.003]],[.012,.012,.012],[.003,.003,.003],6,4),'#BEAA86');
+ const strapEnd=fabric(sculptSweep([[.114,.75,frontZ(.114,.75,[torso])-.010],[.132,.77,frontZ(.132,.77,[torso])-.008],[.153,.785,-.025],[.165,.795,.025],[.159,.805,.078],[.147,.810,frontZ(.147,.810,[pouch])-.003]],[.012,.012,.012],[.003,.003,.003],6,4),'#BEAA86');
  const pocket=fittedPattern([{y:.91,inner:.078,outer:.143},{y:.945,inner:.077,outer:.146},{y:.985,inner:.076,outer:.142}],torso,-1,.004,'#AC745A');
  body.recipe=[torso,insert,neck,placket,collar(-1),collar(1),pocket,old[7],pouch,flap,strap,strapEnd];
  for(let i=0;i<4;i++){const y=1.12-i*.10;body.recipe.push({...old[11+i],at:[0,y,frontZ(0,y,[torso])-.009]});}

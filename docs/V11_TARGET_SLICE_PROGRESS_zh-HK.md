@@ -3,6 +3,20 @@
 使用 Keith 2026-10-25 再確認的唯一原圖：`docs/codex-v4/reference/Approved_Visual_Target_Misaki.png`，1536×1024，SHA256 `9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114`。Library 原樣副本 `libfile_df47ac9baf04819182f496bbb7ff40b6`。已實際讀取原圖與 V17 完整遊戲截圖；原圖是目標店景／人物合成圖，不是已達成的遊戲畫面。Bible §28：真正3D、35–45°、約3.5–4頭身、柔和anime toon人物／soft stylized PBR環境。
 
 
+
+## 第七個 checkpoint — 第二顧客與實際曲面／行走檢查
+
+保留目前鏡頭、燈光、傢俬及商品組合；第二顧客另建可編輯Blender臉／耳／側分髮束／聚攏側髮／低髻，藍外衣、短頸、圍巾、奶油長裙、手指、鞋與個人斜揹袋。女顧客11,710tri、男顧客11,712tri，原12,000限制不變。Misaki recipe仍完全相等，角色limb/socket/rest transforms、下肢與原購物交接袋保留。不是所有模型皆重做；材質／整體目標仍未通過。
+
+**新增實際幾何檢查也找到並修正：**男／女門襟、細肩帶及闊袋蓋原本只有頂點貼合，三角形中間仍切入曲面；改為按實際支撐面細分貼合，測四組三角形內點。兩人個人袋原位置進入行走手臂擺幅，已移到手臂後方、肩帶繞過腰側，保持原移動範圍；不改交接物件或動作時間。最初新QA路徑朝向與前進方向相反，造成錯誤的裙／腳判斷；修正QA方向後恢復原預定裙形，沒有因此改足步／經濟。收銀測實際手到袋柄，而非要求兩手彼此相碰；兩位顧客皆通過。
+
+- [真正遊戲第二顧客改前](../evidence/native-v11/checkpoint-7/customer-before-female-in-game.png)／[改後](../evidence/native-v11/checkpoint-7/customer-after-female-in-game.png)：相同normal shop camera及普通wheel input，camera diagnostics完全相等；自然觀看動作相位不同。這組無入貨，不宣稱任何銷售。
+- [真正完整遊戲](../evidence/native-v11/checkpoint-7/game-panorama.png)／[收銀](../evidence/native-v11/checkpoint-7/game-cashier.png)／[實際批次毛利](../evidence/native-v11/checkpoint-7/game-margin.png)／[174.112秒未剪連續High/Minimal=false](../evidence/native-v11/checkpoint-7/game-uncut.webm)。真實Sandbox買貨／上架／結算，招呼／接觸／交袋／毛利／reload皆觀察，0pageerror，隔離Normal基線一致。
+- [補充模型改前](../evidence/native-v11/checkpoint-7/female-before-studio.png)／[改後](../evidence/native-v11/checkpoint-7/female-after-studio.png)／[低髻背面](../evidence/native-v11/checkpoint-7/female-back-studio.png)：同尺度production模型studio，**不是遊戲畫面**。
+- **187tests/build/validate/replay/asset-check，139GLB零error/warning，305protectedfiles/history通過。**新Blender女顧客JSON可全新byte-identical重建。新增兩位顧客真實IK前進步行、裙覆蓋、鞋底、手與個人袋清除、手到交接袋柄接觸測試。[完整來源／雜湊／原始證據／限制](../evidence/native-v11/checkpoint-7/provenance.json)。
+
+仍明顯不是原圖的材質豐富度與全景品質。下一步針對布料未有有效UV造成平面反應的根因，以及白花、陶器／書本規律度、窗外深度；不是再改鏡頭或擺位。公開仍V17，沒有合併／發佈或新內容。
+
 ## 第六個 checkpoint — 男顧客實際重建，目標仍未達標
 
 保留第五輪已經實拍的燈光、櫃檯／中央桌高低陳列與鏡頭，沒有再排列傢俬。男顧客另建可編輯Blender頭／耳／短髮，實體分層髮束與側後輪廓；衣身、斜肩、短頸、厚領片／門襟／袖口、手掌與四指／拇指、帆布鞋及個人斜揹袋重建。**11,172tri，原12,000限制不變**。第一次肩帶末端約5cm浮離衣身、抬高髮束超出3.5–4頭身檢查，已按實際三角面修正並重跑；沒有降低檢查標準。原購物交接袋、IK／所有肢體與接觸關節、交易／存檔完全保留。共用臉面定位函式抽出後，Misaki所有原始recipe幾何／材質／pivot與第五輪snapshot完全相等；第二顧客仍未整合新模型。

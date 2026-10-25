@@ -20,8 +20,8 @@ function redrape(part:NativeMesh,supports:NativeMesh[],gap:number):NativeMesh{
 interface PatternRow {y:number;inner:number;outer:number}
 /** A closed, cut-and-sewn front pattern fitted to the actual curved torso.
  * It has thickness and continuous sloping shoulders, rather than upright bars. */
-export function fittedPattern(rows:PatternRow[],support:NativeMesh,side:number,gap:number,color:string):NativeMesh{
- const cols=6,stride=cols+1,count=rows.length*stride,g:Geometry={positions:[],normals:[],indices:[]};
+export function fittedPattern(rows:PatternRow[],support:NativeMesh,side:number,gap:number,color:string,cols=6):NativeMesh{
+ const stride=cols+1,count=rows.length*stride,g:Geometry={positions:[],normals:[],indices:[]};
  for(let layer=0;layer<2;layer++)for(const [r,row]of rows.entries())for(let j=0;j<=cols;j++){
   const u=j/cols,x=side*(row.inner+(row.outer-row.inner)*u),sample=frontZ(x,row.y,[support]);
   if(!Number.isFinite(sample))throw Error('tailored garment outside torso '+x+','+row.y);

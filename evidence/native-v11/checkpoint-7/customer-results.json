@@ -1,0 +1,791 @@
+{
+  "results": [
+    {
+      "name": "before",
+      "url": "http://127.0.0.1:4348",
+      "diagnostic": {
+        "core": "PORT_REQUIRED_FOR_UNITY",
+        "artReview": false,
+        "uiReadyMs": 60.20000000298023,
+        "startupMs": 3037,
+        "worldReady": true,
+        "worldEverReady": true,
+        "worldAvailable": true,
+        "world": {
+          "presentationActor": {
+            "id": "actor.misaki.native.v3",
+            "economicBinding": "staff.graybox"
+          },
+          "nativeMotion": {
+            "rigVersion": "native-characters-v11-target-slice-r1",
+            "staffClip": "native.staff.idle.v3",
+            "staffRoutine": {
+              "x": 2.22,
+              "z": 0.48,
+              "yaw": 6.261449600337745,
+              "speed": 0,
+              "distance": 3.0080391086563365,
+              "intent": "inspect",
+              "target": {
+                "x": 2.22,
+                "z": 0.48
+              },
+              "atHome": false,
+              "atWorkplace": true,
+              "moving": false
+            },
+            "greetedVisitors": [
+              "visitor-a",
+              "visitor-b"
+            ],
+            "farewelledVisitors": [
+              "visitor-a"
+            ],
+            "greetingKind": "departure",
+            "localGreeting": null,
+            "greetingTargetId": null,
+            "contactDistance": null,
+            "contact": null,
+            "attention": {
+              "yaw": 8.06674004653378,
+              "target": 1.7835547393541935,
+              "entry": 1,
+              "work": false,
+              "mode": "customer"
+            },
+            "propCount": 5,
+            "carriedBag": null,
+            "activeProps": [],
+            "visibleTime": 48.62700000001427
+          },
+          "nativeTiming": {
+            "steps": 20,
+            "wallMs": 73282.90000002086,
+            "consumedMs": 48627.0000000149,
+            "droppedMs": 24655.90000000596
+          },
+          "staticGIExperiment": null,
+          "practicalLights": [
+            {
+              "id": "native.practical.cashier",
+              "enabled": true,
+              "intensity": 12,
+              "position": [
+                2.2,
+                2.615,
+                -1.5
+              ]
+            },
+            {
+              "id": "native.practical.central",
+              "enabled": true,
+              "intensity": 9,
+              "position": [
+                0.1,
+                2.615,
+                -0.1
+              ]
+            }
+          ],
+          "shopLife": {
+            "bubble": null,
+            "pending": false,
+            "serial": 6
+          },
+          "nativeService": {
+            "epoch": 2,
+            "stream": "[\"sandbox\",\"shop.player.1\",\"2\"]",
+            "consumedRevision": 2,
+            "batches": 0
+          },
+          "customers": [
+            {
+              "id": "visitor-a",
+              "enabled": true,
+              "x": 3.114399999999999,
+              "z": 4.05,
+              "yaw": 4.71238898038469,
+              "speed": 0.322,
+              "distance": 12.270315821792256,
+              "state": "leaving",
+              "browseProgress": 1,
+              "hasBag": false,
+              "handoverProgress": 0
+            },
+            {
+              "id": "visitor-b",
+              "enabled": true,
+              "x": -0.65,
+              "z": 1.1,
+              "yaw": 1.5707963267948966,
+              "speed": 0,
+              "distance": 7.50115387782208,
+              "state": "browsing",
+              "browseProgress": 0.8478260869565196,
+              "hasBag": false,
+              "handoverProgress": 0
+            }
+          ],
+          "gesture": null,
+          "artDirection": "native.light.v11-slice",
+          "cameraView": "shop",
+          "readyAtMs": 3077.2000000029802,
+          "quality": "high",
+          "effectiveQuality": "high",
+          "adaptivePolicy": "auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged",
+          "minimalFX": false,
+          "reducedMotion": false,
+          "feedback": null,
+          "saleMargin": null,
+          "pendingSaleMargins": 0,
+          "materials": 204,
+          "dustCapacity": 8,
+          "customerRoots": [
+            {
+              "position": [
+                3.114399999999999,
+                0.065,
+                4.05
+              ],
+              "enabled": true
+            },
+            {
+              "position": [
+                -0.65,
+                0.065,
+                1.1
+              ],
+              "enabled": true
+            }
+          ],
+          "selectedSlot": 0,
+          "visibleSamples": 9,
+          "frameSamplesMs": [
+            195.70000000298023,
+            43.20000000298023,
+            21.19999998807907
+          ],
+          "fps": 11.53402537512014,
+          "meshes": 420,
+          "activeMeshes": 394,
+          "renderer": {
+            "vendor": "Google Inc. (Google)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+          },
+          "viewport": [
+            1280,
+            900
+          ],
+          "cameraViewport": {
+            "x": 0,
+            "y": 0.11555555555555555,
+            "width": 1,
+            "height": 0.7866666666666666
+          },
+          "cameraInertia": [
+            0,
+            0,
+            0.04412742969317944
+          ],
+          "cameraPose": {
+            "alpha": -0.7853981633974483,
+            "beta": 0.8726646259971648,
+            "radius": 9.816171739148805,
+            "target": [
+              0.7,
+              1.15,
+              0
+            ]
+          }
+        },
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4348/assets/index-CzS9Az0l.js",
+            "duration": 19.700000002980232,
+            "transferSize": 63099,
+            "encodedBodySize": 62799
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/index-CiMc3Tjj.css",
+            "duration": 16,
+            "transferSize": 8450,
+            "encodedBodySize": 8150
+          },
+          {
+            "name": "http://127.0.0.1:4348/fonts/PlusJakartaSans.ttf",
+            "duration": 23.5,
+            "transferSize": 34396,
+            "encodedBodySize": 34096
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/sale.wav",
+            "duration": 4.200000002980232,
+            "transferSize": 9944,
+            "encodedBodySize": 9644
+          },
+          {
+            "name": "http://127.0.0.1:4348/fonts/NotoSansHK.ttf",
+            "duration": 11.599999994039536,
+            "transferSize": 358252,
+            "encodedBodySize": 357952
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/world-Bqh2FK6V.js",
+            "duration": 81,
+            "transferSize": 755541,
+            "encodedBodySize": 755241
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/shadowMap.fragment-B67XbBeS.js",
+            "duration": 6.700000002980232,
+            "transferSize": 1378,
+            "encodedBodySize": 1078
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/shadowMap.vertex-BTm2Jow8.js",
+            "duration": 7.0999999940395355,
+            "transferSize": 1739,
+            "encodedBodySize": 1439
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/helperFunctions-K6jVcLRq.js",
+            "duration": 7,
+            "transferSize": 2193,
+            "encodedBodySize": 1893
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/meshUboDeclaration-BxD1yR8F.js",
+            "duration": 5.799999997019768,
+            "transferSize": 861,
+            "encodedBodySize": 561
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/shadowMapFragmentSoftTransparentShadow-BmytaidQ.js",
+            "duration": 6,
+            "transferSize": 697,
+            "encodedBodySize": 397
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/depthBoxBlur.fragment-D6Bofvf_.js",
+            "duration": 5.800000011920929,
+            "transferSize": 861,
+            "encodedBodySize": 561
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/native-v10/botanical-print-atlas.png",
+            "duration": 39.5,
+            "transferSize": 2442223,
+            "encodedBodySize": 2441923
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/native-v11/shop-floor-contact.png",
+            "duration": 13.5,
+            "transferSize": 335775,
+            "encodedBodySize": 335475
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/native-v11/honey-oak-albedo.png",
+            "duration": 22.600000008940697,
+            "transferSize": 2072659,
+            "encodedBodySize": 2072359
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/native-v10/floor-colour.png",
+            "duration": 10,
+            "transferSize": 43536,
+            "encodedBodySize": 43236
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/native-v10/cloth-weave-basecolor.png",
+            "duration": 9.299999997019768,
+            "transferSize": 3443,
+            "encodedBodySize": 3143
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/native-v10/hair-strand-basecolor.png",
+            "duration": 10.099999994039536,
+            "transferSize": 25249,
+            "encodedBodySize": 24949
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/native-v10/hair-strand-normal.png",
+            "duration": 15.399999991059303,
+            "transferSize": 55209,
+            "encodedBodySize": 54909
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/native-v10/timber-normal.png",
+            "duration": 15.700000002980232,
+            "transferSize": 72006,
+            "encodedBodySize": 71706
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/native-v10/plaster-normal.png",
+            "duration": 20.299999997019768,
+            "transferSize": 273420,
+            "encodedBodySize": 273120
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/native-v10/linen-normal.png",
+            "duration": 18.899999991059303,
+            "transferSize": 3723,
+            "encodedBodySize": 3423
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/native-v11/broadleaf-albedo.png",
+            "duration": 18.799999997019768,
+            "transferSize": 43397,
+            "encodedBodySize": 43097
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/native-v11/misaki-skin.png",
+            "duration": 19,
+            "transferSize": 16696,
+            "encodedBodySize": 16396
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/native-v11/misaki-eyes.png",
+            "duration": 21.400000005960464,
+            "transferSize": 83167,
+            "encodedBodySize": 82867
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/native-v11/visitor-a-skin.png",
+            "duration": 21.099999994039536,
+            "transferSize": 10803,
+            "encodedBodySize": 10503
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/rgbdDecode.fragment-D9T9oUUA.js",
+            "duration": 9.099999994039536,
+            "transferSize": 741,
+            "encodedBodySize": 441
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/pbr.vertex-Yd-Mv0Ws.js",
+            "duration": 16.099999994039536,
+            "transferSize": 5022,
+            "encodedBodySize": 4722
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/logDepthDeclaration-DtY0G9WF.js",
+            "duration": 15.899999991059303,
+            "transferSize": 5085,
+            "encodedBodySize": 4785
+          },
+          {
+            "name": "http://127.0.0.1:4348/assets/pbr.fragment-EZbBTNct.js",
+            "duration": 18.799999997019768,
+            "transferSize": 38439,
+            "encodedBodySize": 38139
+          },
+          {
+            "name": "http://127.0.0.1:4348/favicon.ico",
+            "duration": 1.7000000029802322,
+            "transferSize": 300,
+            "encodedBodySize": 0
+          }
+        ]
+      },
+      "errors": [],
+      "provenance": "Actual production WebGL shop and naturally browsing visitor-b, normal shop view with ordinary wheel zoom input; no pose or simulation injection, no sales claimed"
+    },
+    {
+      "name": "after",
+      "url": "http://127.0.0.1:4350",
+      "diagnostic": {
+        "core": "PORT_REQUIRED_FOR_UNITY",
+        "artReview": false,
+        "uiReadyMs": 53.6000000089407,
+        "startupMs": 2307.2999999970198,
+        "worldReady": true,
+        "worldEverReady": true,
+        "worldAvailable": true,
+        "world": {
+          "presentationActor": {
+            "id": "actor.misaki.native.v3",
+            "economicBinding": "staff.graybox"
+          },
+          "nativeMotion": {
+            "rigVersion": "native-characters-v11-target-slice-r1",
+            "staffClip": "native.staff.idle.v3",
+            "staffRoutine": {
+              "x": 2.22,
+              "z": 0.48,
+              "yaw": 6.613872356484931,
+              "speed": 0,
+              "distance": 3.037223635165262,
+              "intent": "inspect",
+              "target": {
+                "x": 2.22,
+                "z": 0.48
+              },
+              "atHome": false,
+              "atWorkplace": true,
+              "moving": false
+            },
+            "greetedVisitors": [
+              "visitor-a",
+              "visitor-b"
+            ],
+            "farewelledVisitors": [
+              "visitor-a"
+            ],
+            "greetingKind": "departure",
+            "localGreeting": null,
+            "greetingTargetId": null,
+            "contactDistance": null,
+            "contact": null,
+            "attention": {
+              "yaw": 8.06674004653378,
+              "target": 1.7835547393541935,
+              "entry": 1,
+              "work": false,
+              "mode": "customer"
+            },
+            "propCount": 5,
+            "carriedBag": null,
+            "activeProps": [],
+            "visibleTime": 43.46880000001159
+          },
+          "nativeTiming": {
+            "steps": 1,
+            "wallMs": 75215.5,
+            "consumedMs": 43468.80000001192,
+            "droppedMs": 31746.69999998808
+          },
+          "staticGIExperiment": null,
+          "practicalLights": [
+            {
+              "id": "native.practical.cashier",
+              "enabled": true,
+              "intensity": 12,
+              "position": [
+                2.2,
+                2.615,
+                -1.5
+              ]
+            },
+            {
+              "id": "native.practical.central",
+              "enabled": true,
+              "intensity": 9,
+              "position": [
+                0.1,
+                2.615,
+                -0.1
+              ]
+            }
+          ],
+          "shopLife": {
+            "bubble": null,
+            "pending": false,
+            "serial": 6
+          },
+          "nativeService": {
+            "epoch": 2,
+            "stream": "[\"sandbox\",\"shop.player.1\",\"2\"]",
+            "consumedRevision": 2,
+            "batches": 0
+          },
+          "customers": [
+            {
+              "id": "visitor-a",
+              "enabled": true,
+              "x": 3.05,
+              "z": 3.2119339999967815,
+              "yaw": 3.1415926535897936,
+              "speed": 0.54,
+              "distance": 11.367849821789058,
+              "state": "leaving",
+              "browseProgress": 1,
+              "hasBag": false,
+              "handoverProgress": 0
+            },
+            {
+              "id": "visitor-b",
+              "enabled": true,
+              "x": -0.65,
+              "z": 1.1,
+              "yaw": 1.5707963267948966,
+              "speed": 0,
+              "distance": 7.50115387782208,
+              "state": "browsing",
+              "browseProgress": 0.5513152173906555,
+              "hasBag": false,
+              "handoverProgress": 0
+            }
+          ],
+          "gesture": null,
+          "artDirection": "native.light.v11-slice",
+          "cameraView": "shop",
+          "readyAtMs": 2371.0999999940395,
+          "quality": "high",
+          "effectiveQuality": "high",
+          "adaptivePolicy": "auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged",
+          "minimalFX": false,
+          "reducedMotion": false,
+          "feedback": null,
+          "saleMargin": null,
+          "pendingSaleMargins": 0,
+          "materials": 203,
+          "dustCapacity": 8,
+          "customerRoots": [
+            {
+              "position": [
+                3.05,
+                0.065,
+                3.2119339999967815
+              ],
+              "enabled": true
+            },
+            {
+              "position": [
+                -0.65,
+                0.065,
+                1.1
+              ],
+              "enabled": true
+            }
+          ],
+          "selectedSlot": 0,
+          "visibleSamples": 7,
+          "frameSamplesMs": [
+            216.20000000298023,
+            17.900000005960464,
+            10.200000002980232,
+            22.099999994039536
+          ],
+          "fps": 15.015015014679067,
+          "meshes": 419,
+          "activeMeshes": 389,
+          "renderer": {
+            "vendor": "Google Inc. (Google)",
+            "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+            "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+          },
+          "viewport": [
+            1280,
+            900
+          ],
+          "cameraViewport": {
+            "x": 0,
+            "y": 0.11555555555555555,
+            "width": 1,
+            "height": 0.7866666666666666
+          },
+          "cameraInertia": [
+            0,
+            0,
+            0.04412742969317944
+          ],
+          "cameraPose": {
+            "alpha": -0.7853981633974483,
+            "beta": 0.8726646259971648,
+            "radius": 9.816171739148805,
+            "target": [
+              0.7,
+              1.15,
+              0
+            ]
+          }
+        },
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4350/assets/index-7tO_lFqE.js",
+            "duration": 23.900000005960464,
+            "transferSize": 63098,
+            "encodedBodySize": 62798
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/index-CiMc3Tjj.css",
+            "duration": 18.599999994039536,
+            "transferSize": 8450,
+            "encodedBodySize": 8150
+          },
+          {
+            "name": "http://127.0.0.1:4350/fonts/PlusJakartaSans.ttf",
+            "duration": 18.700000002980232,
+            "transferSize": 34396,
+            "encodedBodySize": 34096
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/sale.wav",
+            "duration": 4.700000002980232,
+            "transferSize": 9944,
+            "encodedBodySize": 9644
+          },
+          {
+            "name": "http://127.0.0.1:4350/fonts/NotoSansHK.ttf",
+            "duration": 7.0999999940395355,
+            "transferSize": 358252,
+            "encodedBodySize": 357952
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/world-Sf0I7fnt.js",
+            "duration": 109.20000000298023,
+            "transferSize": 916134,
+            "encodedBodySize": 915834
+          },
+          {
+            "name": "http://127.0.0.1:4350/favicon.ico",
+            "duration": 1.0999999940395355,
+            "transferSize": 300,
+            "encodedBodySize": 0
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/shadowMap.fragment-DKC0umCC.js",
+            "duration": 5.9000000059604645,
+            "transferSize": 1376,
+            "encodedBodySize": 1076
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/shadowMap.vertex-C-Te15ET.js",
+            "duration": 9.400000005960464,
+            "transferSize": 1734,
+            "encodedBodySize": 1434
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/meshUboDeclaration-C3v2r2t2.js",
+            "duration": 7.100000008940697,
+            "transferSize": 861,
+            "encodedBodySize": 561
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/helperFunctions-BE3sEK0U.js",
+            "duration": 8.900000005960464,
+            "transferSize": 2191,
+            "encodedBodySize": 1891
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/depthBoxBlur.fragment-CPqHtvUg.js",
+            "duration": 6.9000000059604645,
+            "transferSize": 861,
+            "encodedBodySize": 561
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/shadowMapFragmentSoftTransparentShadow-dFbSd_pm.js",
+            "duration": 8.600000008940697,
+            "transferSize": 697,
+            "encodedBodySize": 397
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/native-v11/shop-floor-contact.png",
+            "duration": 11.699999988079071,
+            "transferSize": 335775,
+            "encodedBodySize": 335475
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/native-v10/botanical-print-atlas.png",
+            "duration": 29.599999994039536,
+            "transferSize": 2442223,
+            "encodedBodySize": 2441923
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/native-v11/honey-oak-albedo.png",
+            "duration": 28.299999997019768,
+            "transferSize": 2072659,
+            "encodedBodySize": 2072359
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/native-v10/cloth-weave-basecolor.png",
+            "duration": 7.200000002980232,
+            "transferSize": 3443,
+            "encodedBodySize": 3143
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/native-v10/floor-colour.png",
+            "duration": 7.600000008940697,
+            "transferSize": 43536,
+            "encodedBodySize": 43236
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/native-v10/hair-strand-basecolor.png",
+            "duration": 10.900000005960464,
+            "transferSize": 25249,
+            "encodedBodySize": 24949
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/native-v10/hair-strand-normal.png",
+            "duration": 20.700000002980232,
+            "transferSize": 55209,
+            "encodedBodySize": 54909
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/native-v10/plaster-normal.png",
+            "duration": 24.299999997019768,
+            "transferSize": 273420,
+            "encodedBodySize": 273120
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/native-v10/linen-normal.png",
+            "duration": 19.899999991059303,
+            "transferSize": 3723,
+            "encodedBodySize": 3423
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/native-v10/timber-normal.png",
+            "duration": 22.799999997019768,
+            "transferSize": 72006,
+            "encodedBodySize": 71706
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/native-v11/broadleaf-albedo.png",
+            "duration": 24.19999998807907,
+            "transferSize": 43397,
+            "encodedBodySize": 43097
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/native-v11/misaki-skin.png",
+            "duration": 24.799999997019768,
+            "transferSize": 16696,
+            "encodedBodySize": 16396
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/native-v11/misaki-eyes.png",
+            "duration": 25.099999994039536,
+            "transferSize": 83167,
+            "encodedBodySize": 82867
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/native-v11/visitor-a-skin.png",
+            "duration": 25.299999997019768,
+            "transferSize": 10803,
+            "encodedBodySize": 10503
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/rgbdDecode.fragment-B7tybyR0.js",
+            "duration": 5.199999988079071,
+            "transferSize": 741,
+            "encodedBodySize": 441
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/pbr.vertex-CRp-Gj1a.js",
+            "duration": 15.099999994039536,
+            "transferSize": 5019,
+            "encodedBodySize": 4719
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/logDepthDeclaration-DP2LJJbH.js",
+            "duration": 15.300000011920929,
+            "transferSize": 5083,
+            "encodedBodySize": 4783
+          },
+          {
+            "name": "http://127.0.0.1:4350/assets/pbr.fragment-OgmtArcl.js",
+            "duration": 17.400000005960464,
+            "transferSize": 38437,
+            "encodedBodySize": 38137
+          }
+        ]
+      },
+      "errors": [],
+      "provenance": "Actual production WebGL shop and naturally browsing visitor-b, normal shop view with ordinary wheel zoom input; no pose or simulation injection, no sales claimed"
+    }
+  ],
+  "matchedCamera": true,
+  "limits": "Natural browsing phase can differ. Cloud SwiftShader only; not physical GPU/FPS/audio/native. Original target remains unaccepted."
+}

@@ -10,6 +10,7 @@ import {createNativeActors} from '../src/presentation/native-scene';
 import {nativeGrouped,nativeCharacterParts,nativeSurfaceGeometry,type NativeSurface} from '../src/art/native-characters';
 import {resolveMotionPolicy,type ServiceFrame} from '../src/presentation/native-motion';
 import type {RouteFrame} from '../src/presentation/native-routes';
+import {CUSTOMER_ROUTE_CONTRACT} from '../src/presentation/native-routes';
 const HIGH=resolveMotionPolicy({quality:'high',visible:true,reduceMotion:false,minimalFx:false});
 function fixture(){
  const engine=new NullEngine(),scene=new Scene(engine);scene.useRightHandedSystem=true;
@@ -58,4 +59,34 @@ test('v9 walking staff keeps real full thighs covered by skirt while feet retain
   for(const v of vertices(f.actors.staff.parts.get('leg-'+side)!)){const p=Vector3.TransformCoordinates(v,inv);if(p.y>.36&&p.y<.62){covered++;assert.ok(surfaces.some(contains=>contains(p)),`walking staff thigh outside skirt frame${n}: ${p.asArray()}`);}}
   const lowest=Math.min(...vertices(f.actors.staff.parts.get('foot-'+side)!).map(v=>v.y));assert.ok(lowest>=.0799,'staff foot below floor');heights.push(lowest);
  }assert.ok(Math.abs(Math.min(...heights)-.08)<1e-5,'at least one staff sole remains in contact');}assert.ok(moving>100&&covered>1000);}finally{f.dispose();}
+});
+
+test('rebuilt visitors walk with feet grounded, covered full thighs and hands outside personal satchels',()=>{
+ const f=fixture(),bags=['visitor-a','visitor-b'].map(k=>inside(nativeCharacterParts(k as 'visitor-a'|'visitor-b').find(p=>p.id==='body')!.recipe[8])),skirt=inside(nativeCharacterParts('visitor-b').find(p=>p.id==='body')!.recipe[5]);let checked=0;const outside:{frame:number;p:number[]}[]=[];
+ try{for(let n=0;n<=180;n++){
+  const actors=['visitor-a','visitor-b'].map((id,i)=>({id,enabled:true,x:-2+i,z:-n*.01,yaw:0,speed:.48,distance:n*.01,state:'entering',browseProgress:0,hasBag:false,handoverProgress:0}));
+  f.actors.frame(.02,HIGH,{actors,doorOpen:false,doorAngle:0,corridorOwner:null} as unknown as RouteFrame,undefined,undefined);
+  for(const [i,rig]of f.actors.visitors.entries()){
+   const body=rig.parts.get('body')!;body.computeWorldMatrix(true);const inv=Matrix.Invert(body.getWorldMatrix());
+   for(const id of ['forearm-left','forearm-right','hand-left','hand-right'])for(const v of vertices(rig.parts.get(id)!)){checked++;assert.ok(!bags[i](Vector3.TransformCoordinates(v,inv)),`${i} ${id} enters personal satchel at walk frame${n}`);}
+   const heights=['left','right'].map(s=>Math.min(...vertices(rig.parts.get('foot-'+s)!).map(v=>v.y)));assert.ok(heights.every(y=>y>=.0799));assert.ok(Math.abs(Math.min(...heights)-.08)<1e-5,`${i} frame${n} soles ${heights}`);
+   if(i===1)for(const side of ['left','right'])for(const v of vertices(rig.parts.get('leg-'+side)!)){const p=Vector3.TransformCoordinates(v,inv);if(p.y>.28&&p.y<.62&&!skirt(p))outside.push({frame:n,p:p.asArray()});}
+  }
+ }assert.ok(checked>10000);assert.equal(outside.length,0,JSON.stringify({outside:outside.length,first:outside.slice(0,5),bounds:[0,1,2].map(k=>[Math.min(...outside.map(a=>a.p[k])),Math.max(...outside.map(a=>a.p[k]))])}));}finally{f.dispose();}
+});
+
+test('both rebuilt visitors retain cashier contact with actual hand-to-bag-handle surface reach',()=>{
+ for(const selected of [0,1]){const f=fixture();try{
+  const actors=['visitor-a','visitor-b'].map((id,i)=>({id,enabled:i===selected,...CUSTOMER_ROUTE_CONTRACT.servicePoint,yaw:CUSTOMER_ROUTE_CONTRACT.serviceFacingYaw,speed:0,distance:0,state:'receiving',browseProgress:0,hasBag:false,handoverProgress:0,serviceRevision:1}));
+  const routes={actors,doorOpen:false,doorAngle:0,corridorOwner:null} as unknown as RouteFrame;
+  const frame=(progress:number)=>({...{cue:{kind:'sale' as const,soldUnits:5},receiptRevision:1,progress,stage:'act' as const},customerId:actors[selected].id});
+  for(let i=0;i<400;i++)f.actors.frame(.05,HIGH,routes,frame(.02),undefined,true);
+  assert.ok(f.actors.workReady());
+  for(let n=60;n<=74;n++){
+   f.actors.frame(.02,HIGH,routes,frame(n/100),undefined,true);assert.ok(f.actors.metrics().contactDistance!<.06);
+   const bag=f.scene.getTransformNodeByName('native.prop.bag')!,handle=bag.getChildMeshes().find(m=>m.name.endsWith('.2'))!;assert.ok(handle);handle.computeWorldMatrix(true);const positions=handle.getVerticesData('position')!,grip:Vector3[]=[];for(let i=0;i<positions.length;i+=3)grip.push(Vector3.TransformCoordinates(Vector3.FromArray(positions,i),handle.getWorldMatrix()));
+   for(const hand of [f.actors.staff.parts.get('hand-right')!,f.actors.visitors[selected].parts.get('hand-left')!]){let gap=Infinity;for(const x of vertices(hand))for(const y of grip)gap=Math.min(gap,Vector3.Distance(x,y));assert.ok(gap<.035,`${actors[selected].id} ${hand.name} real hand-to-handle distance ${gap}`);}
+   for(const rig of [f.actors.staff,f.actors.visitors[selected]])for(const id of ['forearm-left','forearm-right','hand-left','hand-right'])for(const p of vertices(rig.parts.get(id)!))assert.ok(!counterContains(p),`${actors[selected].id} ${id} intersects counter`);
+  }
+ }finally{f.dispose();}}
 });
