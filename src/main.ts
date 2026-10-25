@@ -116,6 +116,10 @@ app.addEventListener('scroll',e=>{
  u.stock.listTop=list.scrollTop;saveStockWorkspace(u.stock,stockWorkspaceKey());
 },true);
 app.addEventListener('focusin',e=>{const row=(e.target as Element).closest<HTMLElement>('.stock-row');if(row&&u.stock){u.stock.selected=row.dataset.item??'';for(const r of Array.from(row.parentElement?.querySelectorAll<HTMLElement>('.stock-row')??[]))r.setAttribute('aria-current',String(r===row));saveStockWorkspace(u.stock,stockWorkspaceKey());}});
+// Disclosure is UI-only. Hover previews; click/tap or native Enter/Space pins it.
+app.addEventListener('pointerover',e=>{const target=(e.target as Element).closest('.set-status-card');if(target&&(e as PointerEvent).pointerType==='mouse'&&!u.setInfoOpen){u.setInfoOpen=true;draw();}});
+app.addEventListener('pointerout',e=>{const card=(e.target as Element).closest('.set-status-card'),next=(e as PointerEvent).relatedTarget as Node|null;if(card&&!card.contains(next)&&!u.setInfoPinned&&u.setInfoOpen){u.setInfoOpen=false;draw();}});
+app.addEventListener('keydown',e=>{if(e.key==='Escape'&&u.setInfoOpen){e.preventDefault();e.stopPropagation();u.setInfoOpen=false;u.setInfoPinned=false;draw();document.getElementById('set-info-toggle')?.focus({preventScroll:true});}});
 app.addEventListener('input',e=>{
  const input=e.target as HTMLInputElement;if(input.dataset.quantityId){setQuantity(u.draft,input.dataset.quantityId,input.value);u.formError='';storeDraft(mode,u.draft,draftPrefix);draw();return;}if(input.id==='stock-search'){const w=u.stock??=newStockWorkspace();changeStockView(w,{query:input.value});draw();return;}switch(input.id){case 'qty':u.draft.quantity=input.value;break;case 'shop-name':u.draft.shop=input.value;break;case 'company-name':u.draft.company=input.value;break;case 'shop-logo':u.draft.logo=input.value;break;default:if(input.dataset.priceId){u.draft.prices[input.dataset.priceId]=input.value;u.formError='';u.formField='';input.setAttribute('aria-invalid','false');const note=document.getElementById(input.getAttribute('aria-describedby')??'');if(note){note.textContent='';note.className='price-status muted';note.setAttribute('role','status');}}}
  storeDraft(mode,u.draft,draftPrefix);if(input.id==='qty')draw();
@@ -137,7 +141,9 @@ app.addEventListener('submit',e=>{
  void run(async()=>{await act('identity',{text:u.draft.shop,company:u.draft.company,logo:u.draft.logo});u.rename=false;},'identity',()=>{notice(t('identitySaved'));});
 });
 app.addEventListener('click',e=>{
+ if(u.setInfoOpen&&!(e.target as Element).closest('.set-status-card')){u.setInfoOpen=false;u.setInfoPinned=false;draw();}
  const target=(e.target as Element).closest<HTMLButtonElement>('button[data-action]');if(!target||target.disabled||target.ariaDisabled==='true')return;const a=target.dataset.action!,id=target.dataset.id!,n=Number(target.dataset.slot??u.slot);
+ if(a==='set-info'){u.setInfoPinned=!u.setInfoPinned;u.setInfoOpen=u.setInfoPinned;draw();return;}if(a==='set-info-close'){u.setInfoOpen=false;u.setInfoPinned=false;draw();document.getElementById('set-info-toggle')?.focus({preventScroll:true});return;}
  if(a.startsWith('story-')){
   const beat=(target.dataset.beat??'welcome') as BeatId;
   if(a==='story-open'){if(busy||state.open)return;void run(async()=>{if(!state.open)await act('open');},'general',undefined,'open');return;}
