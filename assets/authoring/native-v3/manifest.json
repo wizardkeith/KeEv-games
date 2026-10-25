@@ -20,7 +20,7 @@
     "src/presentation/native-feet.ts": "440404e1bceabdb2bf8d8f9f699d030c40e4815f7b0e904ea15a3f6a180bdef3",
     "src/presentation/native-delivery.ts": "92ab544352360caa1463f62f0f93e5d22f5d8a09b791aec6aa93057c8ab06ab6",
     "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
-    "src/world.ts": "a3407c5c2cdf85c35966417b0e29c1d274f467f1f0682240a1b1d757cb1dc927",
+    "src/world.ts": "32b5ce26db0633df0ed824eb0a440d18acf889ab40bf0667ba7dc00be0fad51f",
     "src/presentation/native-routes.ts": "126569ec0bce93cdffb7572d7b7ab0783053c7d6efb0bee0fd6a407aa3c1de1b",
     "src/presentation/native-scene.ts": "bed32138150cdbf9e5441a3af30b190d0b34f7ffe70e3d4f6ff6b43ddd04ae70",
     "tools/export-native-characters.ts": "0de210ecd28716db517df216457fd218fdc054a15c5947ca98c9ed0e327a38a0",
