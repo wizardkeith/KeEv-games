@@ -1,6 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T00:02:59+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T00:36:12+08:00** (Asia/Hong_Kong).
+
+## V11 rebuild — third actual-render checkpoint, target still open — 2026-10-26T00:36:12+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed **`a88ada535b5abadea3ee2cddf9639ae5273620ad`**, `codex/game-v11-target-slice`. Unmerged runtime; **main documentation only, public V17 unchanged. Art target NOT accepted; continue rebuilding.** New actual torso/chest/back, fitted thick cardigan/blouse/collar/shortneck, individual fingers, rounded shoes/sole, floral arrangements;11,944tri under12,000cap. Both customers still largelyV10, not allassetsremade. NormalUI framing removes reserved right blankspace; drawer switches still do not refit camera.
+- **Fresh177tests/build/validate/replay/asset-check,139GLB0errors/warnings,305protectedfiles/history pass.** Blender runtime head JSON deterministically rebuilt byte-identical. Actual High production Sandbox172.04s continuous clip: greeting, committed settlement, reachable cashier handoff, actual18-item +¥8,400 batch gross margin, reload equality,0pageerrors,isolatedNormal unchanged. Five locales×3viewports15cases/75panel switches preserve exactcameraPose,580pxdesktopdrawer,44pxbuy targets (touch emulation/ReduceMotion only).
+- **QA correction:** reviewer found build23 margin in original footage110–113s (111s readable); original actualMargin:false was a polling false negative. No economic/gameplay fix was made. New read-onlyDOM observer/non-blocking screenshots and build31 screenshot/trace all confirm the margin. Old raw findings retained. [Actual normal/Zen/cashier/margin/uncut clip, supplemental labelled model studio and honest gaps](https://github.com/wizardkeith/KeEv-games/blob/a88ada535b5abadea3ee2cddf9639ae5273620ad/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md).
+- Still visibly short of reference: soft sculpt/material richness, both customers, natural mixed-height display/white blossoms, atmospheric exterior and indirect lighting. Actual-geometry Cycles indirect bake prototype is local, **not integrated/not a gameplay image/not accepted**. Continue changing asset/render method; no final fidelity or physicalGPU/FPS/audio/native claim. No merge/deploy/userChrome/playerNormal/Unity/shutdown or content expansion.
 
 ## V11 target rebuild — second checkpoint, still in progress — 2026-10-26T00:02:59+08:00
 
