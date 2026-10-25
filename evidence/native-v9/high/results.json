@@ -1,0 +1,465 @@
+{
+  "status": "pass",
+  "workCapture": {
+    "before": {
+      "presentationActor": {
+        "id": "actor.misaki.native.v3",
+        "economicBinding": "staff.graybox"
+      },
+      "nativeMotion": {
+        "rigVersion": "native-characters-v9-r1",
+        "staffClip": "native.staff.tidy.v3",
+        "staffRoutine": {
+          "x": 2.6,
+          "z": -0.65,
+          "yaw": 0,
+          "speed": 0,
+          "distance": 0,
+          "intent": "checkout",
+          "target": {
+            "x": 2.6,
+            "z": -0.65
+          },
+          "atHome": true,
+          "moving": false
+        },
+        "greetedVisitors": [],
+        "localGreeting": null,
+        "attention": {
+          "yaw": 0,
+          "target": 0,
+          "entry": 1,
+          "work": true,
+          "mode": "work"
+        },
+        "propCount": 5,
+        "carriedBag": null,
+        "activeProps": [
+          {
+            "kind": "cloth",
+            "parent": "actor.misaki.native.v3.socket-right"
+          }
+        ],
+        "visibleTime": 9.01759999999776
+      },
+      "nativeService": {
+        "epoch": 2,
+        "stream": "[\"sandbox\",\"shop.player.1\",\"2\"]",
+        "consumedRevision": 1,
+        "batches": 0
+      },
+      "customers": [
+        {
+          "id": "visitor-a",
+          "enabled": false,
+          "x": 4.18,
+          "z": 4.05,
+          "yaw": 1.5707963267948966,
+          "speed": 0,
+          "distance": 0,
+          "state": "outside",
+          "browseProgress": 0,
+          "hasBag": false,
+          "handoverProgress": 0
+        },
+        {
+          "id": "visitor-b",
+          "enabled": false,
+          "x": 4.18,
+          "z": 4.05,
+          "yaw": 1.5707963267948966,
+          "speed": 0,
+          "distance": 0,
+          "state": "outside",
+          "browseProgress": 0,
+          "hasBag": false,
+          "handoverProgress": 0
+        }
+      ],
+      "gesture": null,
+      "artDirection": "native.light.v9",
+      "cameraView": "staff",
+      "readyAtMs": 2329.5,
+      "quality": "high",
+      "effectiveQuality": "high",
+      "adaptivePolicy": "auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged",
+      "minimalFX": false,
+      "reducedMotion": false,
+      "feedback": null,
+      "saleMargin": null,
+      "pendingSaleMargins": 0,
+      "materials": 181,
+      "dustCapacity": 8,
+      "customerRoots": [
+        {
+          "position": [
+            4.18,
+            0.065,
+            4.05
+          ],
+          "enabled": false
+        },
+        {
+          "position": [
+            4.18,
+            0.065,
+            4.05
+          ],
+          "enabled": false
+        }
+      ],
+      "selectedSlot": 0,
+      "visibleSamples": 11,
+      "frameSamplesMs": [
+        137.89999999850988,
+        138.09999999776483,
+        182.30000000074506,
+        70.30000000074506,
+        15.200000002980232,
+        13.299999997019768,
+        56.100000001490116
+      ],
+      "fps": 11.415525114169121,
+      "meshes": 545,
+      "activeMeshes": 301,
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "viewport": [
+        1000,
+        760
+      ],
+      "cameraViewport": {
+        "x": 0,
+        "y": 0.15526315789473685,
+        "width": 0.84,
+        "height": 0.6657894736842105
+      },
+      "cameraInertia": [
+        0,
+        0,
+        0
+      ],
+      "cameraPose": {
+        "alpha": -0.7853981633974483,
+        "beta": 0.8726646259971648,
+        "radius": 4.715026689543029,
+        "target": [
+          2.55,
+          1.02,
+          -0.73
+        ]
+      }
+    },
+    "after": {
+      "presentationActor": {
+        "id": "actor.misaki.native.v3",
+        "economicBinding": "staff.graybox"
+      },
+      "nativeMotion": {
+        "rigVersion": "native-characters-v9-r1",
+        "staffClip": "native.staff.tidy.v3",
+        "staffRoutine": {
+          "x": 2.6,
+          "z": -0.65,
+          "yaw": 0,
+          "speed": 0,
+          "distance": 0,
+          "intent": "checkout",
+          "target": {
+            "x": 2.6,
+            "z": -0.65
+          },
+          "atHome": true,
+          "moving": false
+        },
+        "greetedVisitors": [],
+        "localGreeting": null,
+        "attention": {
+          "yaw": 0,
+          "target": 0,
+          "entry": 1,
+          "work": true,
+          "mode": "work"
+        },
+        "propCount": 5,
+        "carriedBag": null,
+        "activeProps": [
+          {
+            "kind": "cloth",
+            "parent": "actor.misaki.native.v3.socket-right"
+          }
+        ],
+        "visibleTime": 9.184699999999252
+      },
+      "nativeService": {
+        "epoch": 2,
+        "stream": "[\"sandbox\",\"shop.player.1\",\"2\"]",
+        "consumedRevision": 1,
+        "batches": 0
+      },
+      "customers": [
+        {
+          "id": "visitor-a",
+          "enabled": false,
+          "x": 4.18,
+          "z": 4.05,
+          "yaw": 1.5707963267948966,
+          "speed": 0,
+          "distance": 0,
+          "state": "outside",
+          "browseProgress": 0,
+          "hasBag": false,
+          "handoverProgress": 0
+        },
+        {
+          "id": "visitor-b",
+          "enabled": false,
+          "x": 4.18,
+          "z": 4.05,
+          "yaw": 1.5707963267948966,
+          "speed": 0,
+          "distance": 0,
+          "state": "outside",
+          "browseProgress": 0,
+          "hasBag": false,
+          "handoverProgress": 0
+        }
+      ],
+      "gesture": null,
+      "artDirection": "native.light.v9",
+      "cameraView": "staff",
+      "readyAtMs": 2329.5,
+      "quality": "high",
+      "effectiveQuality": "high",
+      "adaptivePolicy": "auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged",
+      "minimalFX": false,
+      "reducedMotion": false,
+      "feedback": null,
+      "saleMargin": null,
+      "pendingSaleMargins": 0,
+      "materials": 181,
+      "dustCapacity": 8,
+      "customerRoots": [
+        {
+          "position": [
+            4.18,
+            0.065,
+            4.05
+          ],
+          "enabled": false
+        },
+        {
+          "position": [
+            4.18,
+            0.065,
+            4.05
+          ],
+          "enabled": false
+        }
+      ],
+      "selectedSlot": 0,
+      "visibleSamples": 12,
+      "frameSamplesMs": [
+        137.89999999850988,
+        138.09999999776483,
+        182.30000000074506,
+        70.30000000074506,
+        15.200000002980232,
+        13.299999997019768,
+        56.100000001490116,
+        17.100000001490116
+      ],
+      "fps": 12.69236871329612,
+      "meshes": 545,
+      "activeMeshes": 301,
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "viewport": [
+        1000,
+        760
+      ],
+      "cameraViewport": {
+        "x": 0,
+        "y": 0.15526315789473685,
+        "width": 0.84,
+        "height": 0.6657894736842105
+      },
+      "cameraInertia": [
+        0,
+        0,
+        0
+      ],
+      "cameraPose": {
+        "alpha": -0.7853981633974483,
+        "beta": 0.8726646259971648,
+        "radius": 4.715026689543029,
+        "target": [
+          2.55,
+          1.02,
+          -0.73
+        ]
+      }
+    }
+  },
+  "twoVisitors": {
+    "presentationActor": {
+      "id": "actor.misaki.native.v3",
+      "economicBinding": "staff.graybox"
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v9-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 2.948891894927349,
+        "speed": 0,
+        "distance": 2.087161859800669,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "moving": false
+      },
+      "greetedVisitors": [
+        "visitor-a"
+      ],
+      "localGreeting": null,
+      "attention": {
+        "yaw": 2.553590050042226,
+        "target": 2.553590050042226,
+        "entry": 1,
+        "work": false,
+        "mode": "customer"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 21.684699999999427
+    },
+    "nativeService": {
+      "epoch": 2,
+      "stream": "[\"sandbox\",\"shop.player.1\",\"2\"]",
+      "consumedRevision": 2,
+      "batches": 0
+    },
+    "customers": [
+      {
+        "id": "visitor-a",
+        "enabled": true,
+        "x": 1.35,
+        "z": 1.2250000000000012,
+        "yaw": 0,
+        "speed": 0.54,
+        "distance": 5.342957910896176,
+        "state": "entering",
+        "browseProgress": 0,
+        "hasBag": false,
+        "handoverProgress": 0
+      },
+      {
+        "id": "visitor-b",
+        "enabled": true,
+        "x": 4.18,
+        "z": 4.05,
+        "yaw": 1.5707963267948966,
+        "speed": 0,
+        "distance": 0,
+        "state": "entering",
+        "browseProgress": 0,
+        "hasBag": false,
+        "handoverProgress": 0
+      }
+    ],
+    "gesture": null,
+    "artDirection": "native.light.v9",
+    "cameraView": "shop",
+    "readyAtMs": 2329.5,
+    "quality": "high",
+    "effectiveQuality": "high",
+    "adaptivePolicy": "auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged",
+    "minimalFX": false,
+    "reducedMotion": false,
+    "feedback": null,
+    "saleMargin": null,
+    "pendingSaleMargins": 0,
+    "materials": 181,
+    "dustCapacity": 8,
+    "customerRoots": [
+      {
+        "position": [
+          1.35,
+          0.065,
+          1.2250000000000012
+        ],
+        "enabled": true
+      },
+      {
+        "position": [
+          4.18,
+          0.065,
+          4.05
+        ],
+        "enabled": true
+      }
+    ],
+    "selectedSlot": 0,
+    "visibleSamples": 15,
+    "frameSamplesMs": [
+      137.89999999850988,
+      138.09999999776483,
+      182.30000000074506,
+      70.30000000074506,
+      15.200000002980232,
+      13.299999997019768,
+      56.100000001490116,
+      17.100000001490116,
+      66.5,
+      193.89999999850988,
+      61
+    ],
+    "fps": 11.558264158882643,
+    "meshes": 545,
+    "activeMeshes": 519,
+    "renderer": {
+      "vendor": "Google Inc. (Google)",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+    },
+    "viewport": [
+      1000,
+      760
+    ],
+    "cameraViewport": {
+      "x": 0,
+      "y": 0.15526315789473685,
+      "width": 0.84,
+      "height": 0.6657894736842105
+    },
+    "cameraInertia": [
+      0,
+      0,
+      0
+    ],
+    "cameraPose": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 10.359278851060857,
+      "target": [
+        0.5,
+        1,
+        0.3
+      ]
+    }
+  },
+  "errors": [],
+  "scope": "Actual existing High setting, real idle work and two visual guests; no economy/animation injection or physical FPS claim"
+}

@@ -1,0 +1,28 @@
+{
+  "source": "full-uncut.webm",
+  "sourceSha256": "cb2006293e67a95034b1c70bec61d80224c8ed90a6ae1f4a2ae54cfed75fb255",
+  "duration": 169.16,
+  "clips": [
+    {
+      "file": "welcome-continuous.webm",
+      "startSeconds": 35.058,
+      "lengthSeconds": 30,
+      "speed": 1,
+      "cutsWithinClip": 0
+    },
+    {
+      "file": "contact-handoff-continuous.webm",
+      "startSeconds": 89.757,
+      "lengthSeconds": 30,
+      "speed": 1,
+      "cutsWithinClip": 0
+    },
+    {
+      "file": "loss-return-continuous.webm",
+      "startSeconds": 139.16,
+      "lengthSeconds": 30,
+      "speed": 1,
+      "cutsWithinClip": 0
+    }
+  ]
+}

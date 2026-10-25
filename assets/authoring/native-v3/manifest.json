@@ -1,23 +1,26 @@
 {
-  "version": "native-characters-v8-r1",
+  "version": "native-characters-v9-r1",
   "authoring": "src/art/native-characters.ts",
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
-    "src/art/native-characters.ts": "0e694a3d7dd26dfc7fa4aa83265325d5c0f9c7ad176d72364295c5bc838b49ba",
+    "src/art/native-characters.ts": "b742dc423fa7a22db48018df0db1861295183312052e1243d954f490fe7c45f4",
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "77d1f2cd62fc503fdd89d02c550878b39f8e73c0ceb213b95488874f8939454e",
+    "src/presentation/native-handoff.ts": "c13f02b2846cd5936265e4f0c2148738b3ab107767b7f60d788b7f2c981b02dc",
+    "src/presentation/native-staff-routine.ts": "e627f089e1b4def206c0007f97941c30b9414344bdcca469ded7ae69d1463f46",
+    "src/presentation/native-attention.ts": "51d9081334e8cdca50e614d3e55107cd6e35b1ffadd6fd760bbd5ca5bab97180",
     "src/presentation/native-motion.ts": "215b955ec4b3fc83400a478545882b257fc244247fb16ea630748bbce8547000",
-    "src/presentation/native-staff.ts": "25753440a567329a66e6468a02b682962711318be9b7f903236f448ac28fe802",
-    "src/presentation/native-staff-player.ts": "5682232a31d05a2143b360a5831e7352ba9ff926760e69a139a5184d42be5069",
+    "src/presentation/native-staff.ts": "ce0262e97426b5e326c5e6db9e58d5d6a97de4865d5148a3b9274a8350d653bf",
+    "src/presentation/native-staff-player.ts": "3b75972728599f831d5eda10c3623ac830393969d4bb71e63a08711b38a32538",
     "src/presentation/native-feet.ts": "440404e1bceabdb2bf8d8f9f699d030c40e4815f7b0e904ea15a3f6a180bdef3",
-    "src/presentation/native-delivery.ts": "0f151cc4f9c293b20fc680fda7f6125ee93501a4c10f680e8563f66cdcf9b942",
+    "src/presentation/native-delivery.ts": "92ab544352360caa1463f62f0f93e5d22f5d8a09b791aec6aa93057c8ab06ab6",
     "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
-    "src/world.ts": "fd1c4d6ef6d9558280f6d6b032889777a50810e72a99c13205b4886f05027a44",
-    "src/presentation/native-routes.ts": "248918d9a9942383431892aaf3dc9b6bd794be8c5ca85080f490cd40ff81beb1",
-    "src/presentation/native-scene.ts": "536a853d6ec9c804f7753eb3e00eaa5d85348809e2e434131f7f95ed8ce0ec1d",
-    "tools/export-native-characters.ts": "df07295ee2bae9a01fde03191fdb9a48566d6702d67e2b13a7fde9b233ccf76f",
+    "src/world.ts": "52220b2e03e15e414b132f40ffd8f4f38b1d74091eba54aff532ff3644beb3bd",
+    "src/presentation/native-routes.ts": "126569ec0bce93cdffb7572d7b7ab0783053c7d6efb0bee0fd6a407aa3c1de1b",
+    "src/presentation/native-scene.ts": "62bc89ee7afd5423218cbd6511e00eeac930e03214621bef4a4a931cee4f0c68",
+    "tools/export-native-characters.ts": "f609a735bc86220cdee94b3cd0321f542a6b6b02e962ea217650d293efc89566",
     "tools/generate-v5-hair.py": "2708f0ecaab1a236d1338023a25da7a2ff4c620537391f0e9aef719e7a28016b",
     "assets/masters/native-v5/hair-strand-basecolor.png": "f735cf754d5333711f0809e11a1dbe09f2ae5e566d01e3625b3a94e98adc65e1",
     "assets/masters/native-v5/hair-strand-normal.png": "c5603902148920f86bf59a66920f357f7a6f845b7891e26bbb3845efeeb9091b"
@@ -26,6 +29,9 @@
   "motion": {
     "contract": "assets/authoring/native-v3/motion-contract.json",
     "samplers": [
+      "src/presentation/native-handoff.ts",
+      "src/presentation/native-staff-routine.ts",
+      "src/presentation/native-attention.ts",
       "src/presentation/native-motion.ts",
       "src/presentation/native-staff.ts",
       "src/presentation/native-staff-player.ts",
@@ -45,8 +51,8 @@
       "id": "actor.misaki.native.v3",
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
-      "bytes": 714404,
-      "sha256": "210b5c75c7e93512de8e99eeffaec7c68a41962e9f15ed60e15226aa35de3de1",
+      "bytes": 707748,
+      "sha256": "67dc6db7fc6e5776ed6b15e54453e228a0c5a33e8921aaa1ca6001851262beb9",
       "nodes": [
         {
           "id": "body",
@@ -74,9 +80,9 @@
           "id": "eye-left",
           "parent": "head",
           "pivot": [
-            -0.083345,
+            -0.07806999999999999,
             0.1688,
-            -0.18673499999999998
+            -0.180405
           ],
           "geometryGroups": 5,
           "triangles": 780
@@ -85,18 +91,18 @@
           "id": "eyelid-left",
           "parent": "head",
           "pivot": [
-            -0.083345,
+            -0.07806999999999999,
             0.174075,
-            -0.212055
+            -0.178295
           ],
-          "geometryGroups": 2,
-          "triangles": 192
+          "geometryGroups": 1,
+          "triangles": 132
         },
         {
           "id": "brow-left",
           "parent": "head",
           "pivot": [
-            -0.083345,
+            -0.07806999999999999,
             0.218385,
             -0.174075
           ],
@@ -107,9 +113,9 @@
           "id": "eye-right",
           "parent": "head",
           "pivot": [
-            0.083345,
+            0.07806999999999999,
             0.1688,
-            -0.18673499999999998
+            -0.180405
           ],
           "geometryGroups": 5,
           "triangles": 780
@@ -118,18 +124,18 @@
           "id": "eyelid-right",
           "parent": "head",
           "pivot": [
-            0.083345,
+            0.07806999999999999,
             0.174075,
-            -0.212055
+            -0.178295
           ],
-          "geometryGroups": 2,
-          "triangles": 192
+          "geometryGroups": 1,
+          "triangles": 132
         },
         {
           "id": "brow-right",
           "parent": "head",
           "pivot": [
-            0.083345,
+            0.07806999999999999,
             0.218385,
             -0.174075
           ],
@@ -335,8 +341,8 @@
       "id": "actor.visitor-a.native.v3",
       "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
       "web": "public/assets/native-v3/visitor-a-native-v3.glb",
-      "bytes": 353192,
-      "sha256": "6dc0c61142c495bb31e0bc455668ff1a242df65ea25cc59a4a108a68d10f5002",
+      "bytes": 346552,
+      "sha256": "5b6ccbf77abbfdf965b9147ca7e35f4131f18819b14d0a0c3aaf6ddc872fdc0a",
       "nodes": [
         {
           "id": "body",
@@ -364,9 +370,9 @@
           "id": "eye-left",
           "parent": "head",
           "pivot": [
-            -0.083345,
+            -0.07806999999999999,
             0.16352499999999998,
-            -0.18673499999999998
+            -0.180405
           ],
           "geometryGroups": 5,
           "triangles": 780
@@ -375,18 +381,18 @@
           "id": "eyelid-left",
           "parent": "head",
           "pivot": [
-            -0.083345,
+            -0.07806999999999999,
             0.1688,
-            -0.212055
+            -0.178295
           ],
-          "geometryGroups": 2,
-          "triangles": 192
+          "geometryGroups": 1,
+          "triangles": 132
         },
         {
           "id": "brow-left",
           "parent": "head",
           "pivot": [
-            -0.083345,
+            -0.07806999999999999,
             0.21311,
             -0.174075
           ],
@@ -397,9 +403,9 @@
           "id": "eye-right",
           "parent": "head",
           "pivot": [
-            0.083345,
+            0.07806999999999999,
             0.16352499999999998,
-            -0.18673499999999998
+            -0.180405
           ],
           "geometryGroups": 5,
           "triangles": 780
@@ -408,18 +414,18 @@
           "id": "eyelid-right",
           "parent": "head",
           "pivot": [
-            0.083345,
+            0.07806999999999999,
             0.1688,
-            -0.212055
+            -0.178295
           ],
-          "geometryGroups": 2,
-          "triangles": 192
+          "geometryGroups": 1,
+          "triangles": 132
         },
         {
           "id": "brow-right",
           "parent": "head",
           "pivot": [
-            0.083345,
+            0.07806999999999999,
             0.21311,
             -0.174075
           ],
@@ -625,8 +631,8 @@
       "id": "actor.visitor-b.native.v3",
       "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
       "web": "public/assets/native-v3/visitor-b-native-v3.glb",
-      "bytes": 700308,
-      "sha256": "49ad1442d7a711e43de4b4ad70cfd4e5153071122a66433f5db3456cc5a4875a",
+      "bytes": 693608,
+      "sha256": "970a5d5f6e0366810dfd14e2d38b97a073a1e42416bc32ab3c54406702ddb80f",
       "nodes": [
         {
           "id": "body",
@@ -654,9 +660,9 @@
           "id": "eye-left",
           "parent": "head",
           "pivot": [
-            -0.089675,
+            -0.087565,
             0.1688,
-            -0.18673499999999998
+            -0.180405
           ],
           "geometryGroups": 5,
           "triangles": 780
@@ -665,18 +671,18 @@
           "id": "eyelid-left",
           "parent": "head",
           "pivot": [
-            -0.089675,
+            -0.087565,
             0.174075,
-            -0.212055
+            -0.178295
           ],
-          "geometryGroups": 2,
-          "triangles": 192
+          "geometryGroups": 1,
+          "triangles": 132
         },
         {
           "id": "brow-left",
           "parent": "head",
           "pivot": [
-            -0.089675,
+            -0.087565,
             0.218385,
             -0.174075
           ],
@@ -687,9 +693,9 @@
           "id": "eye-right",
           "parent": "head",
           "pivot": [
-            0.089675,
+            0.087565,
             0.1688,
-            -0.18673499999999998
+            -0.180405
           ],
           "geometryGroups": 5,
           "triangles": 780
@@ -698,18 +704,18 @@
           "id": "eyelid-right",
           "parent": "head",
           "pivot": [
-            0.089675,
+            0.087565,
             0.174075,
-            -0.212055
+            -0.178295
           ],
-          "geometryGroups": 2,
-          "triangles": 192
+          "geometryGroups": 1,
+          "triangles": 132
         },
         {
           "id": "brow-right",
           "parent": "head",
           "pivot": [
-            0.089675,
+            0.087565,
             0.218385,
             -0.174075
           ],

@@ -11,6 +11,8 @@ export interface RouteSettings {
  readonly visible:boolean;
  readonly reduceMotion:boolean;
  readonly capacity:1|2;
+ readonly serviceStaffReady?:boolean;
+ readonly staff?:{x:number;z:number;radius:number};
 }
 export interface CustomerRouteFrame {
  readonly id:'visitor-a'|'visitor-b';
@@ -38,8 +40,8 @@ export const CUSTOMER_ROUTE_CONTRACT = Object.freeze({
  maxSpeed:.54, acceleration:.92, turnRadiansPerSecond:2.2,
  doorHinge:Object.freeze({x:2.34,z:3.20}), doorLeafWidth:1.42,
  doorMaxAngle:-1.42, doorPassAngle:-1.30, maxDeltaSeconds:.05,
- servicePoint:Object.freeze({x:3.40,z:-.65}), serviceFacingYaw:Math.PI/2,
- serviceAcquireSeconds:8.5, serviceReadySeconds:4.5,
+ servicePoint:Object.freeze({x:3.88,z:-1.22}), staffServicePoint:Object.freeze({x:3.31,z:-.65}), serviceFacingYaw:Math.atan2(3.88-3.31,-1.22+.65),
+ serviceAcquireSeconds:14.5, serviceReadySeconds:4.5,
  staffAvoidance:Object.freeze({x:2.6,z:-.65,radius:.25}),
 });
 const point=(x:number,z:number):RoutePoint=>Object.freeze({x,z});
@@ -79,7 +81,7 @@ function roundedPath(path:readonly RoutePoint[]):readonly RoutePoint[]{
   if(r<.06){out.push(b);continue;}
   const start=point(b.x+(a.x-b.x)*r/ab,b.z+(a.z-b.z)*r/ab),end=point(b.x+(c.x-b.x)*r/bc,b.z+(c.z-b.z)*r/bc);
   const curve=Array.from({length:9},(_,n)=>{const t=n/8,v=1-t;return point(v*v*start.x+2*v*t*b.x+t*t*end.x,v*v*start.z+2*v*t*b.z+t*t*end.z);});
-  if(curve.every(p=>fixtureClearance(p)>=.26&&distance(p,CUSTOMER_ROUTE_CONTRACT.staffAvoidance)>=.51)&&b.z<2.55)out.push(...curve);else out.push(b);
+  if(curve.every(p=>fixtureClearance(p)>=.26&&distance(p,CUSTOMER_ROUTE_CONTRACT.staffServicePoint)>=.66)&&b.z<2.55)out.push(...curve);else out.push(b);
  }
  out.push(path.at(-1)!);return out;
 }
@@ -97,6 +99,7 @@ function visitor(index:0|1):Visitor {
 }
 
 export class NativeCustomerRoutes {
+ private staff:Readonly<{x:number;z:number;radius:number}>=CUSTOMER_ROUTE_CONTRACT.staffAvoidance;
  private visitors:[Visitor,Visitor]=[visitor(0),visitor(1)];
  private owner:Visitor|undefined;
  private time=0;
@@ -118,8 +121,8 @@ export class NativeCustomerRoutes {
   const candidates=this.visitors.filter(v=>v.enabled&&!v.wantsExit&&!v.hasBag&&(v.state==='browsing'||v.state==='entering')&&v.x>=1.3&&v.z<=2.1&&v.z>=-.12)
    .map(v=>{
     const end=CUSTOMER_ROUTE_CONTRACT.servicePoint;
-    const direct=Array.from({length:25},(_,i)=>point(v.x+(end.x-v.x)*i/24,v.z+(end.z-v.z)*i/24)).every(p=>fixtureClearance(p)>=.25&&distance(p,CUSTOMER_ROUTE_CONTRACT.staffAvoidance)>=.51);
-    const path=direct?[point(v.x,v.z),end]:[point(v.x,v.z),point(3.4,v.z),end];
+    const direct=Array.from({length:25},(_,i)=>point(v.x+(end.x-v.x)*i/24,v.z+(end.z-v.z)*i/24)).every(p=>fixtureClearance(p)>=.25&&distance(p,CUSTOMER_ROUTE_CONTRACT.staffServicePoint)>=.66);
+    const bypassZ=Math.max(.15,v.z),path=direct?[point(v.x,v.z),end]:[point(v.x,v.z),point(v.x,bypassZ),point(4.0,bypassZ),point(4.0,end.z),end];
     let heading=v.yaw,estimate=.4;
     for(let i=1;i<path.length;i++){const a=path[i-1],b=path[i],yaw=Math.atan2(a.x-b.x,a.z-b.z);estimate+=distance(a,b)/CUSTOMER_ROUTE_CONTRACT.maxSpeed+Math.abs(angleDelta(heading,yaw))/CUSTOMER_ROUTE_CONTRACT.turnRadiansPerSecond;heading=yaw;}
     estimate+=Math.abs(angleDelta(heading,CUSTOMER_ROUTE_CONTRACT.serviceFacingYaw))/CUSTOMER_ROUTE_CONTRACT.turnRadiansPerSecond;
@@ -147,7 +150,7 @@ export class NativeCustomerRoutes {
  private departService(v:Visitor):void {
   // At the service bay, leave along the clear right aisle. If interrupted
   // earlier, undo only traversed private segments before rejoining the old route.
-  v.path=roundedPath([point(v.x,v.z),point(3.40,v.z),point(3.40,2.05),point(3.05,2.05),point(3.05,3.20),point(3.05,4.05),point(4.18,4.05)]);
+  v.path=roundedPath([point(v.x,v.z),point(4.0,v.z),point(4.0,2.05),point(3.05,2.05),point(3.05,3.20),point(3.05,4.05),point(4.18,4.05)]);
   v.next=1;v.goal='outside';v.state='service-exit-wait';v.wantsExit=true;v.speed=0;v.pause=.10;
   if(!this.owner||this.owner===v){v.state='leaving';v.wantsExit=false;this.owner=v;}
  }
@@ -207,7 +210,7 @@ export class NativeCustomerRoutes {
   const step=Math.min(remaining,v.speed*dt);
   const proposed={x:v.x+dx/remaining*step,z:v.z+dz/remaining*step};
   const clear=this.visitors.every(other=>!other.enabled||other===v||distance(proposed,other)>=CUSTOMER_ROUTE_CONTRACT.radius*2+.04);
-  if(!clear||fixtureClearance(proposed)<CUSTOMER_ROUTE_CONTRACT.radius||distance(proposed,CUSTOMER_ROUTE_CONTRACT.staffAvoidance)<CUSTOMER_ROUTE_CONTRACT.radius+CUSTOMER_ROUTE_CONTRACT.staffAvoidance.radius){v.speed=0;return;}
+  if(!clear||fixtureClearance(proposed)<CUSTOMER_ROUTE_CONTRACT.radius||distance(proposed,this.staff)<CUSTOMER_ROUTE_CONTRACT.radius+this.staff.radius+.07){v.speed=0;return;}
   v.x=proposed.x;v.z=proposed.z;v.distance+=step;
   // The other visitor can enter once this one clears the shared aisle by a
   // full body diameter. Private branches remain distinct, not shared targets.
@@ -224,8 +227,9 @@ export class NativeCustomerRoutes {
   // Hidden/reduced frames neither move roots nor accumulate arrival/browse time.
   // Leave the door stable too, including when a visitor straddles the threshold.
   if(!settings.visible||settings.reduceMotion){if(this.service)this.cancelPresentation();return this.frame(true);}
+  this.staff=settings.staff??CUSTOMER_ROUTE_CONTRACT.staffAvoidance;
   this.time+=dt;
-  if(this.service){const s=this.service;
+  if(this.service){const s=this.service;if(settings.serviceStaffReady===false&&s.readyAt===undefined)s.deadline+=dt;
    if(!settings.open||s.visitor.index>=settings.capacity||
     (s.readyAt===undefined&&this.time>s.deadline)||
     (s.readyAt!==undefined&&this.time-s.readyAt>CUSTOMER_ROUTE_CONTRACT.serviceReadySeconds))this.cancelPresentation();
@@ -256,7 +260,7 @@ export class NativeCustomerRoutes {
   const request=!!this.owner;
   const desired=request?CUSTOMER_ROUTE_CONTRACT.doorMaxAngle:0;
   this.door+=Math.max(-2.8*dt,Math.min(2.8*dt,desired-this.door));
-  for(const v of this.visitors)if(v.enabled&&(v.state==='entering'||v.state==='leaving'||v.state==='to-service'))this.move(v,dt);
+  for(const v of this.visitors)if(v.enabled&&(v.state==='entering'||v.state==='leaving'||v.state==='to-service')){if(v.state==='to-service'&&settings.serviceStaffReady===false){v.speed=0;continue;}this.move(v,dt);}
   return this.frame();
  }
  private frame(stable=false):RouteFrame {

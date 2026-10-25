@@ -4,7 +4,7 @@ Rebuild from repository root:
   node --import tsx tools/export-native-environment.ts
 
 Master: assets/masters/native-v3/environment-v3.json
-This engine-neutral JSON preserves the complete recipes, material roles, local pivots and source hashes used by the actual Web scene. The standard geometry builder produces actual indexed meshes with normals; the material adapter converts authored sRGB colours to linear PBR factors. It is not glTF and does not contain skeletal clips, texture atlases or UVs.
+This engine-neutral JSON preserves the complete recipes, material roles, local pivots and source hashes used by the actual Web scene. The standard geometry builder produces actual indexed meshes with normals; the material adapter converts authored sRGB colours to linear PBR factors. This JSON is not glTF and has no skeletal clips. It retains the procedural surface/probe contracts; nativeSurfaceGeometry derives metre UVs and the separate fixture GLBs embed the original surface maps.
 
 Metres; right handed; Y-up. Door root at [2.34,0.08,3.20], negative local Y rotation opens into exterior +Z. The back wall and skirting are split around the aperture, not hidden behind glass. Door sign is a separate child at contract.signPivot. Route controller must fully open the door before crossing and keep it open until travelers clear the sweep.
 

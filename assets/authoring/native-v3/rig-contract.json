@@ -7,7 +7,7 @@
   "rootMotion": "Only route adapter translates actor root; local gesture clips have no root motion",
   "binding": "Misaki remains staff.graybox; visitors have no economic identity or capability",
   "expressions": {
-    "eyelids": "eyelid-left/right are closed-lid geometry; disabled at rest; animate scale.y or enable only for blink, iris geometry stays on same face; GLB master has scale Y=.001 at rest because glTF has no visibility property; runtime adapter restores scale=1 then disables until blink",
+    "eyelids": "eyelid-left/right are thin curved closed-lid strokes without opaque face patches; disabled at rest; animate scale.y or enable only for blink, iris geometry stays on same face; GLB master has scale Y=.001 at rest because glTF has no visibility property; runtime adapter restores scale=1 then disables until blink",
     "mouth": "independent curved mouth; scale/tilt for smile/focus; no head replacement",
     "brows": "independent stable brow pivots"
   },

@@ -1,0 +1,1239 @@
+{
+  "renderer": {
+    "vendor": "Google Inc. (Google)",
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+  },
+  "diagnostic": {
+    "core": "PORT_REQUIRED_FOR_UNITY",
+    "artReview": false,
+    "uiReadyMs": 93.59999999776483,
+    "startupMs": 1127.8999999985099,
+    "worldReady": true,
+    "worldEverReady": true,
+    "worldAvailable": true,
+    "world": {
+      "presentationActor": {
+        "id": "actor.misaki.native.v3",
+        "economicBinding": "staff.graybox"
+      },
+      "nativeMotion": {
+        "rigVersion": "native-characters-v8-r1",
+        "staffClip": "native.staff.still.v3",
+        "propCount": 5,
+        "carriedBag": null,
+        "activeProps": [],
+        "visibleTime": 0
+      },
+      "nativeService": {
+        "epoch": 1,
+        "stream": "[\"sandbox\",\"shop.player.1\",\"2\"]",
+        "consumedRevision": 7,
+        "batches": 0
+      },
+      "customers": [
+        {
+          "id": "visitor-a",
+          "enabled": false,
+          "x": 4.18,
+          "z": 4.05,
+          "yaw": 1.5707963267948966,
+          "speed": 0,
+          "distance": 0,
+          "state": "outside",
+          "browseProgress": 0,
+          "hasBag": false,
+          "handoverProgress": 0
+        },
+        {
+          "id": "visitor-b",
+          "enabled": false,
+          "x": 4.18,
+          "z": 4.05,
+          "yaw": 1.5707963267948966,
+          "speed": 0,
+          "distance": 0,
+          "state": "outside",
+          "browseProgress": 0,
+          "hasBag": false,
+          "handoverProgress": 0
+        }
+      ],
+      "gesture": null,
+      "artDirection": "native.light.v8",
+      "cameraView": "staff",
+      "readyAtMs": 1277.6000000014901,
+      "quality": "high",
+      "effectiveQuality": "high",
+      "adaptivePolicy": "auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged",
+      "minimalFX": false,
+      "reducedMotion": true,
+      "feedback": null,
+      "materials": 162,
+      "dustCapacity": 8,
+      "customerRoots": [
+        {
+          "position": [
+            4.18,
+            0.065,
+            4.05
+          ],
+          "enabled": false
+        },
+        {
+          "position": [
+            4.18,
+            0.065,
+            4.05
+          ],
+          "enabled": false
+        }
+      ],
+      "selectedSlot": 0,
+      "visibleSamples": 5,
+      "frameSamplesMs": [
+        12.5,
+        21.599999997764826,
+        6.300000000745058
+      ],
+      "fps": 74.25742574531317,
+      "meshes": 484,
+      "activeMeshes": 273,
+      "renderer": {
+        "vendor": "Google Inc. (Google)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      },
+      "viewport": [
+        1440,
+        1000
+      ],
+      "cameraViewport": {
+        "x": 0,
+        "y": 0.118,
+        "width": 0.8472222222222222,
+        "height": 0.746
+      },
+      "cameraInertia": [
+        0,
+        0,
+        0
+      ],
+      "cameraPose": {
+        "alpha": -0.7853981633974483,
+        "beta": 0.8726646259971648,
+        "radius": 4.715026689543029,
+        "target": [
+          2.55,
+          1.02,
+          -0.73
+        ]
+      }
+    },
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "resources": [
+      {
+        "name": "http://127.0.0.1:4189/@vite/client",
+        "duration": 32.899999998509884,
+        "transferSize": 179425,
+        "encodedBodySize": 179125
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/main.ts",
+        "duration": 34.600000001490116,
+        "transferSize": 95520,
+        "encodedBodySize": 95220
+      },
+      {
+        "name": "http://127.0.0.1:4189/@fs/workspace/KeEv-games/node_modules/vite/dist/client/env.mjs",
+        "duration": 9.900000002235174,
+        "transferSize": 3778,
+        "encodedBodySize": 3478
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/ui/price-state.ts",
+        "duration": 9.899999998509884,
+        "transferSize": 2395,
+        "encodedBodySize": 2095
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/ui/stock-state.ts",
+        "duration": 12.699999999254942,
+        "transferSize": 10033,
+        "encodedBodySize": 9733
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/presentation/feedback.ts",
+        "duration": 12.799999997019768,
+        "transferSize": 6026,
+        "encodedBodySize": 5726
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/presentation/native-commits.ts",
+        "duration": 13,
+        "transferSize": 6570,
+        "encodedBodySize": 6270
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/presentation/native-motion.ts",
+        "duration": 14.399999998509884,
+        "transferSize": 47723,
+        "encodedBodySize": 47423
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/ui/icons.ts",
+        "duration": 14.299999997019768,
+        "transferSize": 2615,
+        "encodedBodySize": 2315
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/presentation/config.ts",
+        "duration": 14.5,
+        "transferSize": 7003,
+        "encodedBodySize": 6703
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/narrative/day1.ts",
+        "duration": 14.5,
+        "transferSize": 16500,
+        "encodedBodySize": 16200
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/style.css",
+        "duration": 12.699999999254942,
+        "transferSize": 37278,
+        "encodedBodySize": 36978
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/narrative/day1-copy.ts",
+        "duration": 18.599999997764826,
+        "transferSize": 64491,
+        "encodedBodySize": 64191
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/presentation/preferences.ts",
+        "duration": 18.399999998509884,
+        "transferSize": 1999,
+        "encodedBodySize": 1699
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/ui/day1.ts",
+        "duration": 18.5,
+        "transferSize": 17199,
+        "encodedBodySize": 16899
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/core/contracts.ts",
+        "duration": 18.699999999254942,
+        "transferSize": 5012,
+        "encodedBodySize": 4712
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/ui/shop-guidance.ts",
+        "duration": 18.600000001490116,
+        "transferSize": 19336,
+        "encodedBodySize": 19036
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/core/recovery.ts",
+        "duration": 18.300000000745058,
+        "transferSize": 3865,
+        "encodedBodySize": 3565
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/platform/loader.ts",
+        "duration": 20.300000000745058,
+        "transferSize": 1010,
+        "encodedBodySize": 710
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/platform/storage.ts",
+        "duration": 20.5,
+        "transferSize": 16961,
+        "encodedBodySize": 16661
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/ui/copy.ts",
+        "duration": 20.5,
+        "transferSize": 6213,
+        "encodedBodySize": 5913
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/ui/panels.ts",
+        "duration": 21.699999999254942,
+        "transferSize": 26233,
+        "encodedBodySize": 25933
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/ui/dom.ts",
+        "duration": 21.600000001490116,
+        "transferSize": 6599,
+        "encodedBodySize": 6299
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/ui/session.ts",
+        "duration": 21.600000001490116,
+        "transferSize": 5941,
+        "encodedBodySize": 5641
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/content/en.json?import",
+        "duration": 4.699999999254942,
+        "transferSize": 11973,
+        "encodedBodySize": 11673
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/content/zh-HK.json?import",
+        "duration": 4.699999999254942,
+        "transferSize": 11961,
+        "encodedBodySize": 11661
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/content/th.json?import",
+        "duration": 4.699999999254942,
+        "transferSize": 19432,
+        "encodedBodySize": 19132
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/content/ja.json?import",
+        "duration": 4.599999997764826,
+        "transferSize": 13578,
+        "encodedBodySize": 13278
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/content/zh-CN.json?import",
+        "duration": 4.699999999254942,
+        "transferSize": 11937,
+        "encodedBodySize": 11637
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/ui/pricing.ts",
+        "duration": 6.300000000745058,
+        "transferSize": 11175,
+        "encodedBodySize": 10875
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/core/simulation.ts",
+        "duration": 6.199999999254942,
+        "transferSize": 29264,
+        "encodedBodySize": 28964
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/content/catalog.json?import",
+        "duration": 4.599999997764826,
+        "transferSize": 4602,
+        "encodedBodySize": 4302
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/ui/stock.ts",
+        "duration": 6.300000000745058,
+        "transferSize": 18485,
+        "encodedBodySize": 18185
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/ui/stock-copy.ts",
+        "duration": 4,
+        "transferSize": 21324,
+        "encodedBodySize": 21024
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/ui/thumbnails.ts",
+        "duration": 4.300000000745058,
+        "transferSize": 7579,
+        "encodedBodySize": 7279
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/core/validation.ts",
+        "duration": 4.399999998509884,
+        "transferSize": 16901,
+        "encodedBodySize": 16601
+      },
+      {
+        "name": "http://127.0.0.1:4189/fonts/PlusJakartaSans.ttf",
+        "duration": 68.19999999925494,
+        "transferSize": 34396,
+        "encodedBodySize": 34096
+      },
+      {
+        "name": "http://127.0.0.1:4189/assets/sale.wav",
+        "duration": 6.400000002235174,
+        "transferSize": 9944,
+        "encodedBodySize": 9644
+      },
+      {
+        "name": "http://127.0.0.1:4189/fonts/NotoSansHK.ttf",
+        "duration": 6.899999998509884,
+        "transferSize": 358252,
+        "encodedBodySize": 357952
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/world.ts",
+        "duration": 1.9000000022351742,
+        "transferSize": 84295,
+        "encodedBodySize": 83995
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/art/native-materials.ts",
+        "duration": 2.300000000745058,
+        "transferSize": 3382,
+        "encodedBodySize": 3082
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/@babylonjs_core_Materials_Textures_texture.js?v=57756b3e",
+        "duration": 5.5,
+        "transferSize": 7705,
+        "encodedBodySize": 7405
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/art/native-display.ts",
+        "duration": 5.600000001490116,
+        "transferSize": 3767,
+        "encodedBodySize": 3467
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/@babylonjs_core_Materials_material.js?v=fed85ff2",
+        "duration": 6.200000002980232,
+        "transferSize": 10807,
+        "encodedBodySize": 10507
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/art/native-view.ts",
+        "duration": 6.5,
+        "transferSize": 15425,
+        "encodedBodySize": 15125
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/presentation/native-delivery.ts",
+        "duration": 6.700000002980232,
+        "transferSize": 6696,
+        "encodedBodySize": 6396
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/art/native-products.ts",
+        "duration": 8.5,
+        "transferSize": 5280,
+        "encodedBodySize": 4980
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/@babylonjs_core_scene.js?v=36b078f7",
+        "duration": 10.600000001490116,
+        "transferSize": 19073,
+        "encodedBodySize": 18773
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/@babylonjs_core_Engines_engine.js?v=6429751a",
+        "duration": 18.399999998509884,
+        "transferSize": 9689,
+        "encodedBodySize": 9389
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/@babylonjs_core_Maths_math__color.js?v=632baea7",
+        "duration": 11,
+        "transferSize": 2444,
+        "encodedBodySize": 2144
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/@babylonjs_core_Maths_math__vector.js?v=96b6bacd",
+        "duration": 12.399999998509884,
+        "transferSize": 3396,
+        "encodedBodySize": 3096
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/@babylonjs_core_Maths_math__viewport.js?v=92fe88f4",
+        "duration": 14,
+        "transferSize": 1334,
+        "encodedBodySize": 1034
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/@babylonjs_core_Lights_hemisphericLight.js?v=53a73f1f",
+        "duration": 19.600000001490116,
+        "transferSize": 8794,
+        "encodedBodySize": 8494
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/@babylonjs_core_Cameras_arcRotateCamera.js?v=3e5756ca",
+        "duration": 23.699999999254942,
+        "transferSize": 104488,
+        "encodedBodySize": 104188
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/@babylonjs_core_Lights_directionalLight.js?v=4b07abc3",
+        "duration": 19.599999997764826,
+        "transferSize": 9343,
+        "encodedBodySize": 9043
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/@babylonjs_core_Lights_Shadows_shadowGenerator.js?v=71590591",
+        "duration": 19.700000002980232,
+        "transferSize": 13500,
+        "encodedBodySize": 13200
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/@babylonjs_core_Lights_Shadows_shadowGeneratorSceneComponent.js?v=2fcc48ee",
+        "duration": 23,
+        "transferSize": 8002,
+        "encodedBodySize": 7702
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/@babylonjs_core_Meshes_mesh.js?v=fa9f9513",
+        "duration": 23.899999998509884,
+        "transferSize": 14099,
+        "encodedBodySize": 13799
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/@babylonjs_core_Meshes_mesh__vertexData.js?v=840f435d",
+        "duration": 24.100000001490116,
+        "transferSize": 6295,
+        "encodedBodySize": 5995
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/@babylonjs_core_Meshes_transformNode.js?v=54ac2ca4",
+        "duration": 24.100000001490116,
+        "transferSize": 4515,
+        "encodedBodySize": 4215
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/@babylonjs_core_Materials_PBR_pbrMaterial.js?v=28e949d0",
+        "duration": 24.800000000745058,
+        "transferSize": 21233,
+        "encodedBodySize": 20933
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/content/layout.json?import",
+        "duration": 24.399999998509884,
+        "transferSize": 813,
+        "encodedBodySize": 513
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/art/recipes.ts",
+        "duration": 25.5,
+        "transferSize": 43443,
+        "encodedBodySize": 43143
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/art/materials.ts",
+        "duration": 32.600000001490116,
+        "transferSize": 11304,
+        "encodedBodySize": 11004
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/presentation/native-scene.ts",
+        "duration": 41,
+        "transferSize": 35429,
+        "encodedBodySize": 35129
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/art/native-characters.ts",
+        "duration": 41.5,
+        "transferSize": 91519,
+        "encodedBodySize": 91219
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/presentation/native-routes.ts",
+        "duration": 40.400000002235174,
+        "transferSize": 51546,
+        "encodedBodySize": 51246
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/art/direction.ts",
+        "duration": 40.30000000074506,
+        "transferSize": 7590,
+        "encodedBodySize": 7290
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/art/native-environment.ts",
+        "duration": 44.19999999925494,
+        "transferSize": 34109,
+        "encodedBodySize": 33809
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/presentation/day1.ts",
+        "duration": 42.30000000074506,
+        "transferSize": 2817,
+        "encodedBodySize": 2517
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/art/day1-focus.ts",
+        "duration": 42.29999999701977,
+        "transferSize": 1158,
+        "encodedBodySize": 858
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-NAJAH6EK.js",
+        "duration": 33,
+        "transferSize": 36536,
+        "encodedBodySize": 36236
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-SYKR5ARE.js",
+        "duration": 32.900000002235174,
+        "transferSize": 37752,
+        "encodedBodySize": 37452
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-RIFWASY5.js?v=46ada9bc",
+        "duration": 34.30000000074506,
+        "transferSize": 4542,
+        "encodedBodySize": 4242
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-GYYIXNCY.js?v=46ada9bc",
+        "duration": 36.599999997764826,
+        "transferSize": 1521,
+        "encodedBodySize": 1221
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-T6AKC2QS.js",
+        "duration": 38.30000000074506,
+        "transferSize": 16699,
+        "encodedBodySize": 16399
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-VJI6QHED.js",
+        "duration": 38.30000000074506,
+        "transferSize": 23013,
+        "encodedBodySize": 22713
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-CBJZNL6H.js?v=46ada9bc",
+        "duration": 38.099999997764826,
+        "transferSize": 630,
+        "encodedBodySize": 330
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-5VPKEJEA.js?v=46ada9bc",
+        "duration": 38.30000000074506,
+        "transferSize": 4752,
+        "encodedBodySize": 4452
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-L3SD2HBV.js",
+        "duration": 38.80000000074506,
+        "transferSize": 188970,
+        "encodedBodySize": 188670
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-LUZILI25.js?v=46ada9bc",
+        "duration": 42.70000000298023,
+        "transferSize": 1358,
+        "encodedBodySize": 1058
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-2UAN57WE.js?v=46ada9bc",
+        "duration": 42.70000000298023,
+        "transferSize": 1686,
+        "encodedBodySize": 1386
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-L5VEDEML.js?v=46ada9bc",
+        "duration": 42.80000000074506,
+        "transferSize": 6151,
+        "encodedBodySize": 5851
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-O2WXEXXZ.js?v=46ada9bc",
+        "duration": 42.69999999925494,
+        "transferSize": 1771,
+        "encodedBodySize": 1471
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-FMSTY7JG.js?v=46ada9bc",
+        "duration": 43.399999998509884,
+        "transferSize": 279934,
+        "encodedBodySize": 279634
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-JSFM7UYX.js?v=46ada9bc",
+        "duration": 42.19999999925494,
+        "transferSize": 1837,
+        "encodedBodySize": 1537
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-YZI5K327.js?v=46ada9bc",
+        "duration": 45.69999999925494,
+        "transferSize": 3991,
+        "encodedBodySize": 3691
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-5Q63I4K7.js?v=46ada9bc",
+        "duration": 45.69999999925494,
+        "transferSize": 681,
+        "encodedBodySize": 381
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-ZLG4IIBL.js?v=46ada9bc",
+        "duration": 45.69999999925494,
+        "transferSize": 2320,
+        "encodedBodySize": 2020
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-XKRXUMJH.js?v=46ada9bc",
+        "duration": 46,
+        "transferSize": 11270,
+        "encodedBodySize": 10970
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-EEIWWIIU.js?v=46ada9bc",
+        "duration": 45.80000000074506,
+        "transferSize": 2155,
+        "encodedBodySize": 1855
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-F3PIBJAD.js?v=46ada9bc",
+        "duration": 45.900000002235174,
+        "transferSize": 56448,
+        "encodedBodySize": 56148
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-OB3EHFNG.js?v=46ada9bc",
+        "duration": 48.5,
+        "transferSize": 615,
+        "encodedBodySize": 315
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-4NAMSCAF.js?v=46ada9bc",
+        "duration": 48.600000001490116,
+        "transferSize": 2117,
+        "encodedBodySize": 1817
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-PZ5AY32C.js?v=46ada9bc",
+        "duration": 48.5,
+        "transferSize": 1494,
+        "encodedBodySize": 1194
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-GHGWXGRT.js",
+        "duration": 47.69999999925494,
+        "transferSize": 55673,
+        "encodedBodySize": 55373
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-MZEAM6GK.js?v=46ada9bc",
+        "duration": 47.69999999925494,
+        "transferSize": 24830,
+        "encodedBodySize": 24530
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-MFP4O4ZA.js",
+        "duration": 47.599999997764826,
+        "transferSize": 56005,
+        "encodedBodySize": 55705
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-S6OJ4TBW.js?v=46ada9bc",
+        "duration": 48.899999998509884,
+        "transferSize": 24590,
+        "encodedBodySize": 24290
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-PH5ZZOXM.js?v=46ada9bc",
+        "duration": 49,
+        "transferSize": 527,
+        "encodedBodySize": 227
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-MAAGDGNR.js?v=46ada9bc",
+        "duration": 49.5,
+        "transferSize": 32132,
+        "encodedBodySize": 31832
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-LNOE7CP2.js?v=46ada9bc",
+        "duration": 49,
+        "transferSize": 776,
+        "encodedBodySize": 476
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-CIW4JZRB.js",
+        "duration": 49.599999997764826,
+        "transferSize": 31890,
+        "encodedBodySize": 31590
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-4VKEZH2P.js?v=46ada9bc",
+        "duration": 49,
+        "transferSize": 1743,
+        "encodedBodySize": 1443
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-H42CFG25.js",
+        "duration": 50.69999999925494,
+        "transferSize": 57349,
+        "encodedBodySize": 57049
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-Q4QPNJ3J.js?v=46ada9bc",
+        "duration": 50.399999998509884,
+        "transferSize": 1366,
+        "encodedBodySize": 1066
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-XMBJ2WNO.js",
+        "duration": 52.80000000074506,
+        "transferSize": 349742,
+        "encodedBodySize": 349442
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-MNWLYY63.js",
+        "duration": 54,
+        "transferSize": 12201,
+        "encodedBodySize": 11901
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-B4Q37GGP.js",
+        "duration": 53.5,
+        "transferSize": 10354,
+        "encodedBodySize": 10054
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-XNQNTAFW.js?v=46ada9bc",
+        "duration": 54,
+        "transferSize": 2947,
+        "encodedBodySize": 2647
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-QWN5NBCI.js",
+        "duration": 54.30000000074506,
+        "transferSize": 68043,
+        "encodedBodySize": 67743
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-RCK3D7Z7.js?v=46ada9bc",
+        "duration": 53.80000000074506,
+        "transferSize": 2628,
+        "encodedBodySize": 2328
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-P5SO53RB.js?v=46ada9bc",
+        "duration": 54.099999997764826,
+        "transferSize": 1502,
+        "encodedBodySize": 1202
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-LDS46IMK.js?v=46ada9bc",
+        "duration": 54.5,
+        "transferSize": 1812,
+        "encodedBodySize": 1512
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-M7CZSCD6.js?v=46ada9bc",
+        "duration": 54.70000000298023,
+        "transferSize": 2584,
+        "encodedBodySize": 2284
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-ELM5OFYA.js?v=46ada9bc",
+        "duration": 55,
+        "transferSize": 742,
+        "encodedBodySize": 442
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-EWFRP25R.js?v=46ada9bc",
+        "duration": 55.400000002235174,
+        "transferSize": 1433,
+        "encodedBodySize": 1133
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-DJON2APU.js?v=46ada9bc",
+        "duration": 54,
+        "transferSize": 4772,
+        "encodedBodySize": 4472
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-YVGGKXXN.js?v=46ada9bc",
+        "duration": 54,
+        "transferSize": 9261,
+        "encodedBodySize": 8961
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-L4AEKO3K.js?v=46ada9bc",
+        "duration": 53.399999998509884,
+        "transferSize": 1025,
+        "encodedBodySize": 725
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-YH34BMI6.js",
+        "duration": 54,
+        "transferSize": 79315,
+        "encodedBodySize": 79015
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-M2GWDX5Y.js",
+        "duration": 55.5,
+        "transferSize": 124846,
+        "encodedBodySize": 124546
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-VQZCNHXU.js?v=46ada9bc",
+        "duration": 54.400000002235174,
+        "transferSize": 1008,
+        "encodedBodySize": 708
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-LVKNI63N.js",
+        "duration": 55,
+        "transferSize": 16355,
+        "encodedBodySize": 16055
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-ZFQK7YCU.js",
+        "duration": 57.20000000298023,
+        "transferSize": 147726,
+        "encodedBodySize": 147426
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-2DE3GBMK.js",
+        "duration": 56.900000002235174,
+        "transferSize": 135178,
+        "encodedBodySize": 134878
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-IFNHKIAH.js",
+        "duration": 56.29999999701977,
+        "transferSize": 24158,
+        "encodedBodySize": 23858
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-XJFACCF2.js?v=46ada9bc",
+        "duration": 56.599999997764826,
+        "transferSize": 2338,
+        "encodedBodySize": 2038
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-RMFQS23G.js?v=46ada9bc",
+        "duration": 56.80000000074506,
+        "transferSize": 2933,
+        "encodedBodySize": 2633
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-Y2SWI7WZ.js?v=46ada9bc",
+        "duration": 57.80000000074506,
+        "transferSize": 4285,
+        "encodedBodySize": 3985
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-RMJPSD56.js",
+        "duration": 57.5,
+        "transferSize": 44754,
+        "encodedBodySize": 44454
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-3DA4ZPTW.js?v=46ada9bc",
+        "duration": 57.100000001490116,
+        "transferSize": 6173,
+        "encodedBodySize": 5873
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-HXOLUWU3.js?v=46ada9bc",
+        "duration": 58.399999998509884,
+        "transferSize": 31104,
+        "encodedBodySize": 30804
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-NNED6AAK.js",
+        "duration": 58.5,
+        "transferSize": 5131,
+        "encodedBodySize": 4831
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-2NPK62IJ.js?v=46ada9bc",
+        "duration": 58.19999999925494,
+        "transferSize": 1986,
+        "encodedBodySize": 1686
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-7RWUJDX5.js?v=46ada9bc",
+        "duration": 58.30000000074506,
+        "transferSize": 1013,
+        "encodedBodySize": 713
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-4MGESQPZ.js",
+        "duration": 58.5,
+        "transferSize": 26238,
+        "encodedBodySize": 25938
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-V6IHW6CX.js",
+        "duration": 55.70000000298023,
+        "transferSize": 4891,
+        "encodedBodySize": 4591
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-NL53D3Q5.js?v=46ada9bc",
+        "duration": 53.5,
+        "transferSize": 563,
+        "encodedBodySize": 263
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-65LJUX4V.js?v=46ada9bc",
+        "duration": 53.600000001490116,
+        "transferSize": 6241,
+        "encodedBodySize": 5941
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-3ZBBUKSX.js",
+        "duration": 53.79999999701977,
+        "transferSize": 24103,
+        "encodedBodySize": 23803
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-O4W6XCTX.js",
+        "duration": 53.69999999925494,
+        "transferSize": 49125,
+        "encodedBodySize": 48825
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-QEMDHIU5.js?v=46ada9bc",
+        "duration": 56,
+        "transferSize": 2052,
+        "encodedBodySize": 1752
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-FSMWYQ6C.js",
+        "duration": 56,
+        "transferSize": 53508,
+        "encodedBodySize": 53208
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-XNFKETHX.js",
+        "duration": 56.900000002235174,
+        "transferSize": 337235,
+        "encodedBodySize": 336935
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-EAENJFDQ.js",
+        "duration": 63.900000002235174,
+        "transferSize": 80865,
+        "encodedBodySize": 80565
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-6CID2TMX.js",
+        "duration": 57.100000001490116,
+        "transferSize": 58329,
+        "encodedBodySize": 58029
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-OKPC434G.js",
+        "duration": 57.20000000298023,
+        "transferSize": 183737,
+        "encodedBodySize": 183437
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-ZRYYC25X.js",
+        "duration": 63.20000000298023,
+        "transferSize": 1991,
+        "encodedBodySize": 1691
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-VECT7FTL.js",
+        "duration": 63.5,
+        "transferSize": 7417,
+        "encodedBodySize": 7117
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-YPUEPGPN.js",
+        "duration": 63.400000002235174,
+        "transferSize": 4185,
+        "encodedBodySize": 3885
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-IFCMD2SQ.js",
+        "duration": 62.099999997764826,
+        "transferSize": 11364,
+        "encodedBodySize": 11064
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-VG2BL6KS.js",
+        "duration": 61.69999999925494,
+        "transferSize": 2729,
+        "encodedBodySize": 2429
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/presentation/native-feet.ts",
+        "duration": 53.80000000074506,
+        "transferSize": 28278,
+        "encodedBodySize": 27978
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/art/geometry.ts",
+        "duration": 54,
+        "transferSize": 27172,
+        "encodedBodySize": 26872
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/presentation/native-staff-player.ts",
+        "duration": 53.600000001490116,
+        "transferSize": 22361,
+        "encodedBodySize": 22061
+      },
+      {
+        "name": "http://127.0.0.1:4189/favicon.ico",
+        "duration": 53.80000000074506,
+        "transferSize": 300,
+        "encodedBodySize": 0
+      },
+      {
+        "name": "http://127.0.0.1:4189/src/presentation/native-staff.ts",
+        "duration": 2.100000001490116,
+        "transferSize": 28509,
+        "encodedBodySize": 28209
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/shadowMap.fragment-VGM52NNQ.js",
+        "duration": 4.800000000745058,
+        "transferSize": 4282,
+        "encodedBodySize": 3982
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/depthBoxBlur.fragment-JVKTVDO5.js",
+        "duration": 4.600000001490116,
+        "transferSize": 1164,
+        "encodedBodySize": 864
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/shadowMap.vertex-VCWYBKHQ.js",
+        "duration": 4.800000000745058,
+        "transferSize": 6370,
+        "encodedBodySize": 6070
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/shadowMapFragmentSoftTransparentShadow-OGVCDZI3.js?v=46ada9bc",
+        "duration": 4.600000001490116,
+        "transferSize": 1064,
+        "encodedBodySize": 764
+      },
+      {
+        "name": "http://127.0.0.1:4189/assets/native-v5/wood-grain-basecolor.png",
+        "duration": 7.099999997764826,
+        "transferSize": 39756,
+        "encodedBodySize": 39456
+      },
+      {
+        "name": "http://127.0.0.1:4189/assets/native-v6/floor-planks-basecolor.png",
+        "duration": 7.099999997764826,
+        "transferSize": 5176,
+        "encodedBodySize": 4876
+      },
+      {
+        "name": "http://127.0.0.1:4189/assets/native-v6/cloth-weave-basecolor.png",
+        "duration": 7.099999997764826,
+        "transferSize": 5016,
+        "encodedBodySize": 4716
+      },
+      {
+        "name": "http://127.0.0.1:4189/assets/native-v5/hair-strand-basecolor.png",
+        "duration": 7.199999999254942,
+        "transferSize": 53735,
+        "encodedBodySize": 53435
+      },
+      {
+        "name": "http://127.0.0.1:4189/assets/native-v5/hair-strand-normal.png",
+        "duration": 7.5,
+        "transferSize": 250711,
+        "encodedBodySize": 250411
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/rgbdDecode.fragment-WXHTPOTY.js",
+        "duration": 3.400000002235174,
+        "transferSize": 1064,
+        "encodedBodySize": 764
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-PZII4QPJ.js?v=46ada9bc",
+        "duration": 4.800000000745058,
+        "transferSize": 1258,
+        "encodedBodySize": 958
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-JMCV5ZDR.js?v=46ada9bc",
+        "duration": 4.899999998509884,
+        "transferSize": 6248,
+        "encodedBodySize": 5948
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/postprocess.vertex-TMPQUEAL.js",
+        "duration": 1.5999999977648258,
+        "transferSize": 1680,
+        "encodedBodySize": 1380
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/pbr.vertex-GQRY6YFL.js",
+        "duration": 2.800000000745058,
+        "transferSize": 17285,
+        "encodedBodySize": 16985
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/pbr.fragment-SUGZ2ZIO.js",
+        "duration": 2.800000000745058,
+        "transferSize": 97630,
+        "encodedBodySize": 97330
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-KBJJJ277.js?v=46ada9bc",
+        "duration": 6.5,
+        "transferSize": 1429,
+        "encodedBodySize": 1129
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-VLPXD6C4.js?v=46ada9bc",
+        "duration": 8.400000002235174,
+        "transferSize": 1082,
+        "encodedBodySize": 782
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-KE35ILU6.js?v=46ada9bc",
+        "duration": 8.100000001490116,
+        "transferSize": 2176,
+        "encodedBodySize": 1876
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-X5DUZSYS.js?v=46ada9bc",
+        "duration": 8.300000000745058,
+        "transferSize": 8829,
+        "encodedBodySize": 8529
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-FIAMDK6P.js?v=46ada9bc",
+        "duration": 8.5,
+        "transferSize": 1508,
+        "encodedBodySize": 1208
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-GA3CGVVZ.js?v=46ada9bc",
+        "duration": 9,
+        "transferSize": 12839,
+        "encodedBodySize": 12539
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-TUQ5MJMP.js?v=46ada9bc",
+        "duration": 9.599999997764826,
+        "transferSize": 41745,
+        "encodedBodySize": 41445
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-URSF46EA.js?v=46ada9bc",
+        "duration": 10.300000000745058,
+        "transferSize": 27471,
+        "encodedBodySize": 27171
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-KCS6237L.js?v=46ada9bc",
+        "duration": 10.300000000745058,
+        "transferSize": 48420,
+        "encodedBodySize": 48120
+      },
+      {
+        "name": "http://127.0.0.1:4189/node_modules/.vite/deps/chunk-OR35ZDGN.js?v=46ada9bc",
+        "duration": 11.100000001490116,
+        "transferSize": 1710,
+        "encodedBodySize": 1410
+      }
+    ]
+  },
+  "provenance": "Fresh isolated Sandbox, real buy/display commands; actual WebGL geometry",
+  "limitations": [
+    "SwiftShader software; no physical mobile GPU/FPS/audio/native claim"
+  ]
+}

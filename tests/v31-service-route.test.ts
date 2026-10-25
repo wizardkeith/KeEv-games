@@ -22,15 +22,15 @@ function browsing(capacity:1|2=2){
 }
 function toReady(routes:NativeCustomerRoutes,frame:RouteFrame,revision:number){
  let elapsed=0;
- while(routes.serviceStatus(revision)==='approaching'&&elapsed<9){const next=routes.tick(dt,settings);check(next,frame);frame=next;elapsed+=dt;}
- assert.equal(routes.serviceStatus(revision),'ready');assert.ok(elapsed<=8.5);return {frame,elapsed};
+ while(routes.serviceStatus(revision)==='approaching'&&elapsed<CUSTOMER_ROUTE_CONTRACT.serviceAcquireSeconds+.05){const next=routes.tick(dt,settings);check(next,frame);frame=next;elapsed+=dt;}
+ assert.equal(routes.serviceStatus(revision),'ready');assert.ok(elapsed<=CUSTOMER_ROUTE_CONTRACT.serviceAcquireSeconds);return {frame,elapsed};
 }
 
 test('one recent receipt reserves an existing reachable guest, transfers one generic bag, nods and exits through the door',()=>{
  const fixture=browsing(),r=fixture.routes;let frame=fixture.frame;
  assert.ok(frame.actors[0].enabled);assert.equal(r.requestService(11),'visitor-a');assert.equal(r.requestService(11),undefined);
  assert.equal(r.handover(11),false,'cannot give a bag before guest reaches service point');assert.equal(r.handover(10),false);
- ({frame}=toReady(r,frame,11));const a=frame.actors[0];assert.deepEqual([a.x,a.z],[3.4,-.65]);assert.ok(Math.abs(a.yaw-Math.PI/2)<.04);assert.equal(a.hasBag,false);
+ ({frame}=toReady(r,frame,11));const a=frame.actors[0];assert.deepEqual([a.x,a.z],[CUSTOMER_ROUTE_CONTRACT.servicePoint.x,CUSTOMER_ROUTE_CONTRACT.servicePoint.z]);assert.ok(Math.abs(a.yaw-CUSTOMER_ROUTE_CONTRACT.serviceFacingYaw)<.04);assert.equal(a.hasBag,false);
  assert.equal(r.handover(10),false);assert.equal(r.handover(11),true);assert.equal(r.handover(11),false,'one owner transfer per summary');
  for(let n=0;n<30;n++){const next=r.tick(dt,settings);check(next,frame);frame=next;}
  assert.ok(frame.actors[0].handoverProgress>.5);assert.equal(frame.actors[0].hasBag,true);
@@ -65,7 +65,7 @@ test('hidden/Reduce/close/cancel preserve root positions, remove ownership and l
 
 test('ready reservation has a strict visual deadline; Low keeps a legitimate handoff and stale callbacks cannot attach a bag',()=>{
  const f=browsing(1),r=f.routes;let frame=f.frame;assert.equal(r.requestService(50),'visitor-a');
- for(let n=0;n<60*9;n++){const next=r.tick(dt,{...settings,capacity:1});check(next,frame);frame=next;if(r.serviceStatus(50)==='ready')break;}
+ for(let n=0;n<60*(CUSTOMER_ROUTE_CONTRACT.serviceAcquireSeconds+.05);n++){const next=r.tick(dt,{...settings,capacity:1});check(next,frame);frame=next;if(r.serviceStatus(50)==='ready')break;}
  assert.equal(r.serviceStatus(50),'ready');assert.equal(frame.actors[1].enabled,false);assert.equal(r.handover(50),true);
  for(let n=0;n<60*6;n++){const next=r.tick(dt,{...settings,capacity:1});check(next,frame);frame=next;}
  assert.equal(r.serviceStatus(50),'none','abandoned service cannot reserve indefinitely');assert.equal(frame.actors[0].hasBag,false);assert.equal(r.handover(50),false);

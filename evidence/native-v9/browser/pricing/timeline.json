@@ -1,0 +1,61 @@
+[
+  {
+    "seconds": 17.805,
+    "name": "Three existing shelf slots use aligned five-column pricing rows; empty slots and all 580px drawers/camera are preserved",
+    "columns": [
+      [
+        691,
+        829,
+        878,
+        988,
+        1093
+      ],
+      [
+        691,
+        829,
+        878,
+        988,
+        1093
+      ],
+      [
+        691,
+        829,
+        878,
+        988,
+        1093
+      ]
+    ],
+    "widths": [
+      580,
+      580,
+      580,
+      580,
+      580,
+      580
+    ]
+  },
+  {
+    "seconds": 22.218,
+    "name": "Leading-zero price draft survives panels/reload; Enter commits the same price rule once and retains keyboard focus"
+  },
+  {
+    "seconds": 29.281,
+    "name": "Invalid values show same-row errors without state changes; cancel restores the actual price"
+  },
+  {
+    "seconds": 32.449,
+    "name": "Delayed/repeated save captures 830 once, blocks cancel while busy, and preserves the newer 940 draft"
+  },
+  {
+    "seconds": 36.988,
+    "name": "Interrupted real price persistence leaves snapshot/draft intact; retry then save succeeds"
+  },
+  {
+    "seconds": 44.549,
+    "name": "Existing remove/restock/placement actions remain available and retain inventory and price"
+  },
+  {
+    "seconds": 114.451,
+    "name": "Twenty five-locale narrow/short touch pricing cases: 44px targets, no horizontal/nested scrolling, unchanged economy/Normal and reduced-motion draft retention"
+  }
+]
