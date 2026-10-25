@@ -1,8 +1,14 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T02:59:02+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T03:23:47+08:00** (Asia/Hong_Kong).
 
 
+
+
+## V11 eighth checkpoint — cloth UV / real petals / canopy — 2026-10-26T03:23:47+08:00
+
+- [DraftPR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed **`08e3063e08a2cf1fcef4d37c244cc10b9292fcfc`**, unmerged. **Main documentation pointer only; publicV17 unchanged; target art still unaccepted.** Sculpt cloth no longer samples one texel: real metre UV/tangent/endcap/seam and Web/portable-map parity; every cloth triangle and face atlas retained. First flat-star flower experiment rejected, replaced with closed curved five-petal flowers/smoother vase rim and fuller raised216-leaf crowns. Tapered leaf construction retains contour and reallocates hidden-edge triangles:fixed dressing15,464<16,000. Standard pottery glaze shared Web/KHR; no GI/camera/light/furniture/grouping changes.
+- **190tests/build/content/replay/assets/139GLB0errors-warnings/305protected pass.** Actual same-camera/source-save A/B and **184.601s High/Minimal=false uncut** real buy/display/settlement/greeting/contact/transfer/margin/reload,0pageerrors,isolatedNormalbaselineunchanged. [Actual game images/clip/source and limits](https://github.com/wizardkeith/KeEv-games/blob/08e3063e08a2cf1fcef4d37c244cc10b9292fcfc/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md). Parent's c085226 visual review accepts customer improvement only,not187/fullrelease certification. **Next focused gate: one coat+skirt visible textile finish/checker scale/direction, canvas/leather distinction and minor collar/waist folds**; technical UV correctness is not target-level cloth. PhysicalGPU/FPS/audio/native,object regularity/exterior depth remain open. No merge/deploy/userChrome/Normal/Unity/shutdown/content expansion.
 
 ## V11 seventh checkpoint — both customer assets / fitted moving surfaces — 2026-10-26T02:59:02+08:00
 
