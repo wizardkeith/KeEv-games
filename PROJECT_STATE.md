@@ -1,6 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-25T09:07:53+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-25T09:38:33+08:00** (Asia/Hong_Kong).
+
+## Current unmerged iteration — V9 scene art and set-status clarity — 2026-10-25T09:38:33+08:00
+
+- [Draft PR #6](https://github.com/wizardkeith/KeEv-games/pull/6), branch `codex/game-v9-scene-art`, first pushed checkpoint `14d573a098ef4f599ab641c9852433f8c08a40b9`. Art/source iteration in progress: 153 tests/build pass; first actual render judged too dark, second lighting/IBL comparison underway. This is not final visual acceptance or review-ready handoff. Owner separately authorized accessible set-status explanation with neutral tier fallback; implementation/checks still pending.
+- Public remains **V15**, source/receipt below. No merge/deploy, economy/save/stock/pricing/camera or local Unity change. Story/gameplay/new shops/set expansion frozen. Final exact candidate/evidence and independent review to follow; preserve this minimal pointer on main without presenting branch work as merged.
 
 ## Current public release — V8 art and Operations pricing / Site v15 — 2026-10-25T09:07:53+08:00
 
