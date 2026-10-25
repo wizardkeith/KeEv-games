@@ -9,9 +9,9 @@
     "tools/paint-v11-fabrics.py": "85f96d2c7b42bf12409dddf612473137d3c771984311b06e687a09d494526dbe",
     "tools/export-v11-garment-input.ts": "b20bedff29a87f4a366767a5a52d7cfb9587e18dcbc7f22ceb0b7fc08f9b798a",
     "tools/unwrap-v11-garments.py": "fe9439856dcf197721f7099318d33c7b5a7577e687f523713cb646bd02095332",
-    "assets/masters/native-v11/visitor-b-cloth-input.json": "9d750c68e95afdf49b2ab6cd1e861bbfe7592f37357c8e1832f15bb643f6a4c1",
-    "assets/masters/native-v11/visitor-b-cloth-uv.json": "c2dc0165fbe44331d410f0f52b4ebb01b2cb3cc5837b63474c5617ab797615dd",
-    "assets/authoring/native-v11/garment-uv-provenance.json": "8ebefaef00bca11be2f384c2a2613f46ff3aaa0dbd95f9ed348484954cf6656d",
+    "assets/masters/native-v11/visitor-b-cloth-input.json": "a0ee69e780e94d7097b0c024444a9e141077601a6ecae6f6b649d9814c6ea7b5",
+    "assets/masters/native-v11/visitor-b-cloth-uv.json": "8436e1a954df400040e9c3e2bb683e044416a102e34f588828842630035c2da9",
+    "assets/authoring/native-v11/garment-uv-provenance.json": "15987ba74c016717a4baa63b8583d1250266520cdd9b3d05992d37606807ddc6",
     "assets/masters/native-v11/knit-albedo.png": "12e1137bb442b70a7e55fffb1962e542902c07c9e6c95afa4aee704b2c3dbf6e",
     "assets/masters/native-v11/knit-normal.png": "5a248b4c45da36300f534c7f45f851cccf2b8a337bb67c6d0a2126e8630f7149",
     "assets/masters/native-v11/knit-orm.png": "4ec3830e661e15016f38621a917e005eddf39ebbe3a46e71d63b69cc57165fc8",
@@ -25,7 +25,7 @@
     "assets/masters/native-v11/leather-normal.png": "7043c2b98d32736cffebb8e63277e79e1eecc6b58d82aee8aaff12cfc75ed37b",
     "assets/masters/native-v11/leather-orm.png": "bc273714fbf81a77b3a3323e27db1367d8f48da58c1eea60b37b6f4847bb94b7",
     "src/art/metre-uv-v11.ts": "6eba06aac522fadce8dbd376e74bf8db2034f43944bc3f51a0a2058aa91e5c73",
-    "src/art/customer-female-v11.ts": "b1f3e1e9178791ccb96b690d491c518587995a270af4fb967d3861b3ffc53ab0",
+    "src/art/customer-female-v11.ts": "0fd9c871b9174ba1b034b915473a07a2fef890942129494ffcf485195cc98e7d",
     "tools/build-v11-female.py": "6f85226ee4b9d577c8c917334ab2687434a0079e2f33340668920bc2a2dc8475",
     "assets/masters/native-v11/visitor-b-head.json": "013e8abce6d974bafb2f95a1df8bc9654d7aa9a4e4b961f443a339c99bd77575",
     "src/art/customer-male-v11.ts": "fb7d6ab4d8e888b5fb88b2f24b63bf7051bde6b2129f2fa7c2bd34dcd1aab801",
@@ -678,8 +678,8 @@
       "id": "actor.visitor-b.native.v3",
       "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
       "web": "public/assets/native-v3/visitor-b-native-v3.glb",
-      "bytes": 1880516,
-      "sha256": "ba91927620d0bfed162864be02d36af8a895613ae30d895ce60a43f72e9e8fe1",
+      "bytes": 1882008,
+      "sha256": "5c66463b1f99610137e8d3a50e4af30044a132bcf2ed9324804f9ce45f88e0c8",
       "nodes": [
         {
           "id": "body",
@@ -690,7 +690,7 @@
             0
           ],
           "geometryGroups": 7,
-          "triangles": 3516
+          "triangles": 3536
         },
         {
           "id": "head",

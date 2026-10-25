@@ -1,0 +1,48 @@
+{
+  "checkpoint": "V11 C11 model/drape slice IN PROGRESS, original target not accepted",
+  "baseline": "05365dde097d09ec6dfed89c9bc9def843e131f8 /build74",
+  "currentImmutableBuild": "77",
+  "actualBeforeAfter": "ordinary actual-game same-facing back comparison, build74→77, viewed original PNG and both actual game frames",
+  "changes": [
+    "About1cm authored mid-scale torso tension folds, gathered cuff ridges and fuller uneven skirt drape; no higher-resolution or amplified weave",
+    "Original reference female scarf has wide burgundy back panel; prior narrow front tail replaced by closed2.5mm thick fitted back panel, reflected winding/normals preserve outwardCCW",
+    "Female11930tri<12000; accepted neck/shoulder controls, hair/face/hands/shoes/rig/action sockets preserved; scene/camera/light/grouping unchanged"
+  ],
+  "tests": "194pass/build/content/replay/assets/139GLB0errors-warnings/305protected/history,21surfaces fresh Blender UV JSON/provenance byte-identical",
+  "rejectedAttempts": [
+    "Initial edit script syntax failure did not apply changes; old input export not claimed as new geometry",
+    "75 triangle-interior test found1.364mm cardigan-front penetration; actual front drape clearance changed12→14mm, threshold unchanged",
+    "Initial B-only uninterrupted flow did not find eligible window and did NOT settle/contact; no gameplay fix or invented transaction, bounded UI-close/reopen scenario now recording"
+  ],
+  "sourceSha256": {
+    "src/art/customer-female-v11.ts": "0fd9c871b9174ba1b034b915473a07a2fef890942129494ffcf485195cc98e7d",
+    "tests/v11-customer.test.ts": "af7543ccd8361a592d79009eea2420fdf764a2c6c8593e3862575dc4bea43236",
+    "tools/v11-playable-art-qa.cjs": "b60d6babaef76891e9b3d7974adda63985ea68d79669c2dd8c2b50bcc7951179",
+    "assets/masters/native-v11/visitor-b-cloth-input.json": "a0ee69e780e94d7097b0c024444a9e141077601a6ecae6f6b649d9814c6ea7b5",
+    "assets/masters/native-v11/visitor-b-cloth-uv.json": "8436e1a954df400040e9c3e2bb683e044416a102e34f588828842630035c2da9",
+    "assets/masters/native-v3/visitor-b-native-v3.glb": "5c66463b1f99610137e8d3a50e4af30044a132bcf2ed9324804f9ce45f88e0c8"
+  },
+  "remaining": [
+    "Textile/whole-scene target-quality/style remain OPEN; normal-scale waist folds still weak",
+    "Merchandise remains too regular, material response less rich and warm/cool/window/contact-shadow layering less nuanced than target; distant trees/roofs simplified",
+    "Fresh77 B-cashier/closure motion pending; prior74 complete real flow and five-locale layout evidence apply to unchanged controllers/UI, not falsely rerun77",
+    "Cloud SwiftShader only, no physicalGPU/FPS/audio/native acceptance",
+    "No new release archive this checkpoint; old74 package is not77",
+    "PublicV17 unchanged, PR8draft/unmerged, no deploy/merge/ownerChrome/Normal/Unity/shutdown/content expansion"
+  ],
+  "fileSha256": {
+    "replay.log": "67beb9a30e2f137d3025faa962d635b85a8275a326918698204bc5e1becbf447",
+    "B-only-initial-explanation.txt": "86dbcff3343818e945eaa61565bf1f98be8844e7844c1576024df83d87376204",
+    "validate.log": "d8cf77a1e38e0b04929bd0774b8f25dee39e9ff7717ea0b8ef7fe1e5a477369b",
+    "locomotion.json": "63421b7352949ec68171069091268ec7d3d0feffe28deca878d0aa6e6f13760f",
+    "asset-check.log": "ceaf741bb02e5f81f06021e1435e0255611bed88068d34bceb2099245c8edd3a",
+    "194-tests.log": "a99a5b148e2160ec3cb9c622dd3485bb1ff596668af7cf09de3fcf299c72daae",
+    "same-facing.json": "65e436e55b8796dea299ddb663d1439d4952246ced0118614a817793497d7ee6",
+    "139-glbs.json": "6d0ef9cb5262cffa4230371878d63a7ffac4c8efb896a7637855803dc0c38adc",
+    "B-only-initial-NOT-PASSED.json": "ecfd0992839cdd62ae0423a47415387c23e19bf84c2658f0fc5fba612860a2f5",
+    "after-same-facing-game.png": "daf832a1a5aa9c23416f6cc8ef5c07aee2f5dd87fda915c3f6e50a3f9b2315b7",
+    "uv-fresh-blender.log": "cce077d4f4f6c9790d5cbf36cfc7450e29badc7ad87afbd06223fa341667c345",
+    "before-same-facing-game.png": "6e252dee44bba6d4074adcdcc754b9c79eeb2e6159f6087c84cfaf15a4511b5b",
+    "preservation.json": "225ce8a0134296dcf0f160c6f66ba97b1bc9e5be6a4271d4053274c9294f9baa"
+  }
+}

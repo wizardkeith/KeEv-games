@@ -30,7 +30,7 @@ test('both customers closed garment and satchel panels clear support at triangle
   const ids=kind==='visitor-a'?[3,9,10]:[1,3,4,7,9,10];
   for(const id of ids){const p=b.recipe[id],support=b.recipe[id===9?8:0];assert.equal(p.shape,'mesh');assert.equal(support.shape,'mesh');if(p.shape!=='mesh'||support.shape!=='mesh')continue;
    const g=p.geometry;for(let i=0;i<g.indices.length;i+=3)for(const weights of [[1/3,1/3,1/3],[.6,.2,.2],[.2,.6,.2],[.2,.2,.6]]){
-    const q=[0,1,2].map(k=>g.indices.slice(i,i+3).reduce((n,a,j)=>n+g.positions[a*3+k]*weights[j],0)),gap=frontZ(q[0],q[1],[support])-q[2];
+    const q=[0,1,2].map(k=>g.indices.slice(i,i+3).reduce((n,a,j)=>n+g.positions[a*3+k]*weights[j],0)),gap=kind==='visitor-b'&&id===7?q[2]+frontZ(q[0],q[1],[{...support,geometry:{...support.geometry,positions:support.geometry.positions.map((v,i)=>i%3===2?-v:v)}}]):frontZ(q[0],q[1],[support])-q[2];
     assert.ok(gap>=.0001&&gap<.025,`${kind} panel${id} intersects/floats at triangle interior: ${gap}`);
    }
   }

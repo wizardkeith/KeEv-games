@@ -6,6 +6,18 @@
 
 
 
+## 第十一個 checkpoint — 真正衣褶／背部圍巾重建，並非貼圖解析度
+
+保留C10已驗證鏡頭／燈光／髮型／肩頸／人物關節／傢俬及陳列。女顧客coat下身改成約1cm中尺度受力褶，袖口堆疊、裙身重力垂墜／不完全一致的裙襬；沒有加強weave或提高貼圖解析度。原圖背後寬酒紅圍巾垂片在舊模型卻是正面窄尾，已重建成貼合真實背面的有厚度垂片，反射時同時處理winding／normals，保留outwardCCW。**女顧客11,930tri<12,000**，沒有為預算削掉既有髮型／手部或提高上限。
+
+[真正同面遊戲改前](../evidence/native-v11/checkpoint-11/before-same-facing-game.png)／[改後](../evidence/native-v11/checkpoint-11/after-same-facing-game.png)：immutable74→77，同camera及B的x/z/yaw，都是背面coat/scarf/skirt；普通玩家wheel到最小允許半徑，沒有pose注入。自然頭／手／browse相位不同，[完整量測](../evidence/native-v11/checkpoint-11/same-facing.json)。已實看：背部圍巾輪廓明顯更接近原圖，腰褶在一般距離仍偏弱；**不把這次形體改動當布料／最終美術通過。**
+
+**194tests/build/validate/replay/assets；139GLB零error/warning；305protected/history通過。**21個衣物面重新做Blender UV，freshJSON/provenance byte-identical。初次新褶令門襟三角形中間穿入1.364mm，已調整實際drape間隙12→14mm，沒有放寬測試。背巾按真實背面測貼合，不沿用錯誤的正面假設。[原始紀錄／sourcehash／限制](../evidence/native-v11/checkpoint-11/provenance.json)。
+
+女顧客針對性收銀初次QA沒有可服務的自然視窗，沒有按結算，所以**未通過，不是交易成功卻沒有動畫**；原始false結果保留。已讀source確認服務座標範圍，沒有改遊戲規則，正在以普通暫停→旅客離場→重開讓原有下一位B自然入店，再做真結算／接觸的連續實拍；目前pending。C10fresh74完整流程／五語版面保留，未說成77重跑。按parent要求，沒有為這個視覺切片再做release archive。
+
+整體仍有商品規律度／材質豐富度、暖窗光與柔和接觸層次、遠景簡化等差距；不是只剩布料。**原圖畫風／畫質仍未達，繼續。**公開V17、PR8draft／未合併／未發佈，經濟／存檔／五語／現有list沒有變動；雲端軟體渲染不當實體GPU/FPS/audio/native驗收。
+
 ## 第十個 checkpoint — 整束花材／真實窗外遠近層次，原目標仍未達
 
 保留C9三人、髮型、鏡頭、focal light、傢俬／商品組合／庫存。三個原花瓶位置各8主枝，改為12朵開放實體花＋24閉合圓花苞的分叉花團，具下層花頭、葉團與枝間留白；不是再只增加單片花瓣細節。固定dressing合計**15,728tri<16,000**，不提高上限。第一版仍像細枝、第一版遠屋像橫條，均在實際遊戲檢查後退回修正。
