@@ -9,20 +9,20 @@ function corners(min:Point,max:Point):Point[]{return [min[0],max[0]].flatMap(x=>
 export const nativeViewContract={
  id:'native.view.v3.1',alpha:-Math.PI/4,alphaRange:[-Math.PI/4-.27,-Math.PI/4+.27] as const,
  beta:50*Math.PI/180,betaRange:[45*Math.PI/180,55*Math.PI/180] as const,
- shopTarget:[.50,1,.30] as Point,staffTarget:[2.55,1.02,-.73] as Point,
+ shopTarget:[.70,1.15,0] as Point,staffTarget:[2.55,1.02,-.73] as Point,
  margin:.965,guard:1.002,
  criticalBoxes:[
-  {id:'display.1',min:[-2.85,.08,-2.05] as Point,max:[-1.15,1.34,-.95] as Point},
-  {id:'display.2',min:[-.75,.08,-.65] as Point,max:[.95,1.34,.45] as Point},
-  {id:'display.3',min:[-2.85,.08,.55] as Point,max:[-1.15,1.34,1.65] as Point},
-  {id:'counter-and-staff',min:[1.62,.08,-2.01] as Point,max:[3.58,1.67,-.35] as Point},
+  {id:'display.1',min:[-3,.08,-2.10] as Point,max:[-1,1.70,-.90] as Point},
+  {id:'display.2',min:[-.9,.08,-.70] as Point,max:[1.1,1.70,.50] as Point},
+  {id:'display.3',min:[-3,.08,.50] as Point,max:[-1,1.70,1.70] as Point},
+  {id:'counter-and-staff',min:[.80,.08,-2.01] as Point,max:[3.58,1.78,-.35] as Point},
   {id:'doorway',min:[2.21,.08,3.08] as Point,max:[3.89,2.71,3.36] as Point},
   {id:'entry-visitor',min:[2.68,.08,2.55] as Point,max:[4.60,1.67,4.42] as Point},
   {id:'service-visitor',min:[3.00,.08,-1.04] as Point,max:[3.82,1.67,-.25] as Point},
-  {id:'window',min:[-4.58,.82,-1.65] as Point,max:[-4.20,2.84,1.65] as Point},
+  {id:'window',min:[-4.58,.82,-2.22] as Point,max:[-4.20,2.84,2.22] as Point},
   {id:'back-shelves',min:[-3.45,1.20,2.50] as Point,max:[1.85,2.60,3.17] as Point},
  ] as const,
- staffBox:{min:[1.90,.08,-2.01] as Point,max:[3.35,1.72,-.22] as Point},
+ staffBox:{min:[1.90,.08,-2.01] as Point,max:[3.35,1.78,-.22] as Point},
  note:'Fit excludes decorative upper wall/plinth only. Preserve user zoom relative to this fit when the safe viewport changes; ordinary draw must not reset camera.',
 } as const;
 export const nativeShopHull:readonly Point[]=Object.freeze(nativeViewContract.criticalBoxes.flatMap(b=>corners(b.min,b.max)));

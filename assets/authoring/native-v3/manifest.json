@@ -5,18 +5,22 @@
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
     "src/art/characters-v10.ts": "08c5e5a78576475e0c9f1dbd2de8c6d8e9867ffcfa9010649455e4dab3a24413",
-    "src/art/character-v11.ts": "6933c6f6fa0dc78b13087d2dc9bdee6de309488ea2f537760b13584f4a46d69d",
-    "tools/build-v11-character.py": "ac52934fc7383a750d9bd3ccd0238699f1ef43167159f755ee248b7b9491e807",
-    "tools/paint-v11-face.py": "224b33bf1047b875c69987ec5d7e27ad7f41e1e491a1ed69cc3b7267e8d59a9b",
-    "assets/masters/native-v11/misaki-head.json": "c2eb39c6fe163a0b5875730ec0b33ee77062f48df5e4ddb18dd11c3d51373b89",
-    "assets/masters/native-v11/misaki-skin.png": "e376a752f4ab71707dd43cd78a2a124150c14cb985aa860e6cf6581b49ef5ea9",
-    "assets/masters/native-v11/misaki-eyes.png": "58a657a392e6546f5ea2c55fc13d07897c3b7623e359982b467d69254f447028",
+    "src/art/character-v11.ts": "bb5459d30eea73c30b3380bb0817ac38ed3137506f9a87f0abf5e2906e95acb5",
+    "src/art/garments-v11.ts": "37fca9759035a381c3b300ff31134bc70cb08322c1f77cea38c1c5ad8d39f56c",
+    "src/art/hairclip-v11.ts": "ced2890db88fd9418e048bcde478c91edd08b21c7f7e774b899a64c5de178bec",
+    "src/art/floor-bake-v11.ts": "d05b07109a3068f0a6a6ead039125c5c4a0d8b40aa84e6bbafd8456a50f7c73c",
+    "assets/masters/native-v11/shop-floor-contact.png": "392b1e7c9f014199b60f75e4aede6345a5e1f2a72fd4b8f72effacf70f496bb2",
+    "tools/build-v11-character.py": "89e26f0eb5e1db6682530f04d5175f3d1dcfe4970cf0e59a9d1acd513bb63018",
+    "tools/paint-v11-face.py": "d6eac0de2212db1146ddc9ffddad2a85be12dc83c892723d68f6a38b72ae53a5",
+    "assets/masters/native-v11/misaki-head.json": "12810963856586539190a87f9d78b248a66e8ef6c0e1f67f39f7cf92afef3162",
+    "assets/masters/native-v11/misaki-skin.png": "c199646690241981c4bca688020aba8ea331a0a04c37c93c4fe6f1daf8f682a5",
+    "assets/masters/native-v11/misaki-eyes.png": "0eac942837df40d82974eb8270bc11c952982d72c4ef76263505f3b73596fe72",
     "src/art/sculpt-v10.ts": "114a810e5245f58832dc5d12641e20e6ca1b7d159a2410d7d72cd3b3a141546c",
     "src/presentation/native-visible-clock.ts": "aebff05c819ef1e25d8c71cb1ce5e088f42d6cd7c8f55008d97c45790b0468d4",
     "src/art/native-characters.ts": "22f51fc54fdd222a9fc0d2c553b5c1522aac059c2d043fad3b502c310a881462",
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
-    "src/art/native-materials.ts": "e6b871f5c58d6cefb6f0a402b3b8f2104145470a0c0cdcb2524b47abe8a69b49",
+    "src/art/native-materials.ts": "c1b2eadc57991f9b4441cee44de7d15af9f8fc4420f853d5941ee0c68a2f6a5d",
     "src/presentation/native-handoff.ts": "c13f02b2846cd5936265e4f0c2148738b3ab107767b7f60d788b7f2c981b02dc",
     "src/presentation/native-staff-routine.ts": "9b1bfe70c17704ca7a3f49605a6702be52b6c451b3c46ddd0895f2988990ccb1",
     "src/presentation/native-attention.ts": "477d24e55c90c6ff3dd07865092e0c3dc0adee5891116e4214eff5908a05903c",
@@ -26,10 +30,10 @@
     "src/presentation/native-feet.ts": "440404e1bceabdb2bf8d8f9f699d030c40e4815f7b0e904ea15a3f6a180bdef3",
     "src/presentation/native-delivery.ts": "92ab544352360caa1463f62f0f93e5d22f5d8a09b791aec6aa93057c8ab06ab6",
     "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
-    "src/world.ts": "52eb68cf2af3861be1153b4626ef684db1c0b222a814a6ee5da51880579edb2d",
-    "src/presentation/native-routes.ts": "126569ec0bce93cdffb7572d7b7ab0783053c7d6efb0bee0fd6a407aa3c1de1b",
+    "src/world.ts": "0b44964826815dd143e00d96f3dfabe02f26f8c092e3ef06cb2c34b7f5dbbd48",
+    "src/presentation/native-routes.ts": "2bdfc7fab4b8c190c12b8f2d96a100b759086ebbbfb60740af4fca378428b040",
     "src/presentation/native-scene.ts": "bed32138150cdbf9e5441a3af30b190d0b34f7ffe70e3d4f6ff6b43ddd04ae70",
-    "tools/export-native-characters.ts": "576729724fde91e841b2d5e31822e077b4dcd775cb64a151a1998c192b28864e",
+    "tools/export-native-characters.ts": "bdae2741d2f659437c86e5d2915ce64f9ba556a65154eaae9596a3cba156be37",
     "tools/generate-v10-surfaces.py": "e550229e751c35e818e74188652b8153525595c74d6e3e5a6430d8c1ba66e11d",
     "assets/masters/native-v10/hair-strand-basecolor.png": "2476f73f419fa1c57b05eeef611f3712959356c1e71df4896357df0838fb8e67",
     "assets/masters/native-v10/hair-strand-normal.png": "530c689078f71ffddbd8637da000d235933a5b103cb01cfb8e34b1163855d1b7"
@@ -60,8 +64,8 @@
       "id": "actor.misaki.native.v3",
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
-      "bytes": 573556,
-      "sha256": "3d33336e09df916e92e293423b2a8f41df77144f975fb151c86d8f7a427ce77c",
+      "bytes": 598872,
+      "sha256": "a6fa4fb7315b254e97c853c7c25c03ff4ae8de460a3f5df058a04a65306b1e97",
       "nodes": [
         {
           "id": "body",
@@ -82,8 +86,8 @@
             1.25,
             0
           ],
-          "geometryGroups": 4,
-          "triangles": 4372
+          "geometryGroups": 5,
+          "triangles": 4468
         },
         {
           "id": "eye-left",
@@ -193,7 +197,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 448
+          "triangles": 568
         },
         {
           "id": "forearm-left",
@@ -270,7 +274,7 @@
             0
           ],
           "geometryGroups": 1,
-          "triangles": 448
+          "triangles": 568
         },
         {
           "id": "forearm-right",

@@ -11,18 +11,18 @@ for y in range(512):
  for x in range(512):
   # UV v is bottom-up. Broad cheek and lip colour follows the actual head UV.
   u=x/511;v=1-y/511;blush=gauss(u,v,.23,.31,.115,.078)+gauss(u,v,.77,.31,.115,.078);nose=gauss(u,v,.5,.35,.045,.075);lip=gauss(u,v,.5,.20,.075,.036)
-  base=[250,217,192];t=.21*blush+.09*nose+.12*lip;warm=[227,126,119]
+  base=[250,217,192];t=.32*blush+.09*nose+.12*lip;warm=[227,126,119]
   p[x,y]=tuple(round(base[k]*(1-t)+warm[k]*t) for k in range(3))
 im.save(out/'misaki-skin.png')
 im=Image.new('RGB',(512,512));p=im.load()
 for y in range(512):
  for x in range(512):
-  u=(x/511-.5)*2;v=(1-y/511-.5)*2;r=math.hypot(u/.69,v/.92);a=math.atan2(v,u);color=[250,241,224]
+  u=(x/511-.5)*2;v=(1-y/511-.5)*2;r=math.hypot(u/.75,v/.98);a=math.atan2(v,u);color=[250,241,224]
   if r<1:
    edge=max(0,(r-.77)/.23);shade=.5+.5*v;fiber=(math.sin(a*74+r*11)+math.sin(a*113-r*7))*.5
    color=[143+39*(1-shade)+fiber*7,91+32*(1-shade)+fiber*5,47+24*(1-shade)+fiber*3]
    color=[c*(1-.66*edge) for c in color]
-   if math.hypot(u/.27,(v-.06)/.68)<1:color=[55,34,25]
+   if math.hypot(u/.30,(v-.06)/.68)<1:color=[55,34,25]
    for cx,cy,rx,ry in [(-.25,.40,.17,.21),(.26,-.40,.075,.095)]:
     if ((u-cx)/rx)**2+((v-cy)/ry)**2<1:color=[255,250,233]
   p[x,y]=tuple(max(0,min(255,round(c))) for c in color)

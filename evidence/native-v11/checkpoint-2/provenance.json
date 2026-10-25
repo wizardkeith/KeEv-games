@@ -1,0 +1,100 @@
+{
+  "status": "in-progress; target art NOT accepted; not a release candidate",
+  "provenance": {
+    "reference": "Original confirmed composite concept target, not gameplay",
+    "game-panorama-build24.png": "Actual production WebGL game, real UI Sandbox buy/display. Build24 full Zen viewport; no injected pose/inventory/scene replacement.",
+    "game-cashier-build23.png": "Actual production WebGL earlier build23 cashier contact. Later build24 changes camera framing only.",
+    "game-build23-uncut.webm": "Actual uncut local production game. Greeting/contact/real settlement observed. Margin NOT observed by polling; diagnosis pending, do not call complete flow passed.",
+    "v17-body-studio.png": "Original V17 production V10 recipe; matched neutral studio, NOT actual gameplay.",
+    "v11-body-studio.png": "Current V11 production recipe/textures; same camera/scale as before, neutral studio, NOT actual gameplay."
+  },
+  "renderer": "Chromium WebGL2 ANGLE SwiftShader software renderer; no physical GPU/FPS/audio/native acceptance",
+  "testedSource": "Uncommitted working tree based on ea949de, exact source committed with this checkpoint; no independent review of these later changes",
+  "checks": "177 tests/build/validate/replay/asset-check,139 GLBs zero errors/warnings,305 protected paths and original11history. These do not prove target fidelity.",
+  "files": {
+    "replay.log": {
+      "bytes": 421,
+      "sha256": "67beb9a30e2f137d3025faa962d635b85a8275a326918698204bc5e1becbf447"
+    },
+    "game-panorama-build24.png": {
+      "bytes": 964935,
+      "sha256": "1b9e42dc6ca6c0d2f8746d7c6244aa4d68b72cf425655bfbcf595b632f4f881c"
+    },
+    "locomotion-after.json": {
+      "bytes": 1642,
+      "sha256": "02316d0a033e40b6d9dc2355c88e3f29c7d7d2b20c35e64c85614ec96ac72a45"
+    },
+    "177-tests.log": {
+      "bytes": 22597,
+      "sha256": "cc7aac005a7657116eed4f4f1242910e750078f741a3ca0c56e17a4780f1118f"
+    },
+    "validate.log": {
+      "bytes": 599,
+      "sha256": "d8cf77a1e38e0b04929bd0774b8f25dee39e9ff7717ea0b8ef7fe1e5a477369b"
+    },
+    "asset-check.log": {
+      "bytes": 2917,
+      "sha256": "9d2c1f590deb8b5e946459df72ed8125a9105bff89c8861027c1bbb856940829"
+    },
+    "game-build23-recording.json": {
+      "bytes": 30272,
+      "sha256": "76326319a3af92bbc3772f3e9d8d341004e247a211f53b1d8e8c58ef9897b81f"
+    },
+    "game-ui-build24.png": {
+      "bytes": 738218,
+      "sha256": "b179546a97521f3c1d30d8460e5c0590c56e86cac4c3be6a044c38d5c43c68ad"
+    },
+    "build.log": {
+      "bytes": 5845,
+      "sha256": "72709623c888210030abbdc1f8419c117d0201d2b4b881742d1a155eb2e611f6"
+    },
+    "139-glbs.json": {
+      "bytes": 17572,
+      "sha256": "5b610b5f05aca02a3491e4f990bcd6a3c6f2b62fe115075eefddefb9e9b55583"
+    },
+    "game-cashier-build23.png": {
+      "bytes": 565907,
+      "sha256": "05c58a256effaf24a3d2d7efb457f2f29169add6b0c6a1143dda59e514f4aee8"
+    },
+    "game-staff-build23.png": {
+      "bytes": 775144,
+      "sha256": "48b76d7725285bc2a0a6616d02cd651246d925447e79111b41dbd6760a63a68a"
+    },
+    "game-build23-uncut.webm": {
+      "bytes": 1602807,
+      "sha256": "e652e231d3aca2b3be9ceadeb1c201ac755bd1fbf8b1d78f3bd50c52540ac7f4"
+    },
+    "game-build23-timeline.json": {
+      "bytes": 3604602,
+      "sha256": "edadaef89ed3b916c9ec4af3f5d54f105f5056675afc660dd322fe611082c8ec"
+    },
+    "game-build23-results.json": {
+      "bytes": 592,
+      "sha256": "8ad9a4ca907792538836208068608fecb59ee8aab8e3d6be05f095e878a1d05d"
+    },
+    "game-build24-render.json": {
+      "bytes": 10590,
+      "sha256": "0c6b82b371bf506ad71b1a7954692a43b711b7271ecf858156b290d83902ad92"
+    },
+    "preservation.json": {
+      "bytes": 15652,
+      "sha256": "80335003ce5f0b6c101a624dcfc2db077fb3928b7e4156086d30a7a59d122cf0"
+    },
+    "v17-body-studio.png": {
+      "bytes": 95573,
+      "sha256": "d9aee775783e17435f4781ab571edb66ea76993488b598ab33b33dc5ceec06d7"
+    },
+    "v11-body-studio.png": {
+      "bytes": 118826,
+      "sha256": "bca387735497bbe19e49c1aa119e57919be0943d09b1494103c660e880eb2e20"
+    },
+    "v17-body-studio.json": {
+      "bytes": 535,
+      "sha256": "70da0533f32f943844033b305f92faa83e505a570a3fabeecdc059ebce54246f"
+    },
+    "v11-body-studio.json": {
+      "bytes": 534,
+      "sha256": "7992e47bfe99783eb7fda956c12815b30b2d06098c25a19fe113ac3cf9187188"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "source": "OpenAI image_gen, original material generation exec-b9a330c9-421d-40e5-ad2e-f25113a36781",
+  "purpose": "PBR albedo mapped to actual3D furniture; NOT a concept/game screenshot/reference replacement",
+  "originalUnedited": true,
+  "sourceFile": "/workspace/generated_images/exec-b9a330c9-421d-40e5-ad2e-f25113a36781.png",
+  "master": "assets/masters/native-v11/honey-oak-albedo.png",
+  "web": "public/assets/native-v11/honey-oak-albedo.png",
+  "size": [
+    1254,
+    1254
+  ],
+  "bytes": 2072359,
+  "sha256": "ead247b61ee9e42f6ea3432696a5d68f6326dbd2d31362d4c303350514fb16b5",
+  "brief": "Seamless quiet warm honey oak, vertical fine grain, flat diffuse albedo, no illumination/shadows/objects/labels. Actual seam quality requires in-game inspection."
+}

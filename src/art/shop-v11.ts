@@ -9,12 +9,12 @@ import type {V3} from './recipes';
 const M=(g:Geometry,color:string,role:NativeMesh['role']='leaf',at:V3=[0,0,0]):NativeMesh=>({shape:'mesh',at,geometry:g,color,role});
 const twig=(points:V3[],r:number,color='#738353')=>M(sculptSweep(points,points.map(()=>r),points.map(()=>r),points.length>12?24:6,4),color,'wood');
 function leaf(at:V3,length:number,width:number,angle:number,tilt:number,color:string):NativeMesh{
- const rim:[[number,number],...Array<[number,number]>]=[[0,0],[.80,.23],[.83,.67],[0,1],[-.83,.67],[-.80,.23]],g:Geometry={positions:[],normals:[],indices:[]};
+ const rim:[[number,number],...Array<[number,number]>]=[[0,0],[.80,.23],[.83,.67],[0,1],[-.83,.67],[-.80,.23]],g:Geometry&{uvs:number[]}={positions:[],normals:[],indices:[],uvs:[]};
  const rotate=(x:number,y:number,z:number)=>{[y,z]=[y*Math.cos(tilt)-z*Math.sin(tilt),y*Math.sin(tilt)+z*Math.cos(tilt)];return [x*Math.cos(angle)+z*Math.sin(angle)+at[0],y+at[1],-x*Math.sin(angle)+z*Math.cos(angle)+at[2]];};
- for(let side=0;side<2;side++){g.positions.push(...rotate(0,length*.48,length*.13+side*.0015));for(const [u,t]of rim)g.positions.push(...rotate(u*width*.5,t*length,.06*length*Math.sin(t*Math.PI)+side*.0015));for(let j=0;j<6;j++){const a=side*7,b=a+1+j,c=a+1+(j+1)%6;g.indices.push(...(side?[a,b,c]:[a,c,b]));}}
- for(let j=0;j<6;j++){const a=1+j,b=1+(j+1)%6;g.indices.push(a,b,a+7,b,b+7,a+7);}return M(finishSculpt(g),color);
+ for(let side=0;side<2;side++){g.positions.push(...rotate(0,length*.48,length*.13+side*.0015));g.uvs.push(.5,.48);for(const [u,t]of rim){g.positions.push(...rotate(u*width*.5,t*length,.06*length*Math.sin(t*Math.PI)+side*.0015));g.uvs.push(u*.5+.5,t);}for(let j=0;j<6;j++){const a=side*7,b=a+1+j,c=a+1+(j+1)%6;g.indices.push(...(side?[a,b,c]:[a,c,b]));}}
+ for(let j=0;j<6;j++){const a=1+j,b=1+(j+1)%6;g.indices.push(a,b,a+7,b,b+7,a+7);}return {...M(finishSculpt(g),color),baseColorTexture:'/assets/native-v11/broadleaf-albedo.png'};
 }
-function batch(parts:NativeSurface[]):NativeSurface[]{const groups=new Map<string,NativeSurface[]>();for(const p of parts){const key=p.role+':'+p.color;groups.set(key,[...(groups.get(key)??[]),p]);}return [...groups.values()].map(parts=>{const g:Geometry={positions:[],normals:[],indices:[]};for(const p of parts){const a=p.shape==='mesh'?p.geometry:geometry(p),at=p.shape==='mesh'?p.at:[0,0,0],n=g.positions.length/3;g.positions.push(...a.positions.map((v,i)=>v+at[i%3]));g.normals.push(...a.normals);g.indices.push(...a.indices.map(v=>v+n));}return M(g,parts[0].color,parts[0].role??'leaf');});}
+function batch(parts:NativeSurface[]):NativeSurface[]{const groups=new Map<string,NativeSurface[]>();for(const p of parts){const key=p.role+':'+p.color+':'+(p.baseColorTexture??'');groups.set(key,[...(groups.get(key)??[]),p]);}return [...groups.values()].map(parts=>{const g:Geometry&{uvs:number[]}={positions:[],normals:[],indices:[],uvs:[]};for(const p of parts){const a=p.shape==='mesh'?p.geometry:geometry(p),at=p.shape==='mesh'?p.at:[0,0,0],n=g.positions.length/3;g.positions.push(...a.positions.map((v,i)=>v+at[i%3]));g.normals.push(...a.normals);g.indices.push(...a.indices.map(v=>v+n));g.uvs.push(...((a as Geometry&{uvs?:number[]}).uvs??Array(a.positions.length/3*2).fill(0)));}return {...M(g,parts[0].color,parts[0].role??'leaf'),...(parts[0].baseColorTexture?{baseColorTexture:parts[0].baseColorTexture}:{})};});}
 function scaled(s:NativeSurface,scale:number):NativeSurface{return s.shape==='mesh'?{...s,at:s.at.map(v=>v*scale) as V3,geometry:{...s.geometry,positions:s.geometry.positions.map(v=>v*scale)}}:{...s,at:s.at.map(v=>v*scale) as V3,size:s.size.map(v=>v*scale) as V3};}
 export function buildV11Plant(scale=1):NativePlantParts{
  if(!Number.isFinite(scale)||scale<=0)throw new RangeError('positive plant scale');
@@ -24,17 +24,17 @@ export function buildV11Plant(scale=1):NativePlantParts{
  base.push({shape:'cylinder',size:[.299,.012,.299],at:[0,.329,0],top:1,color:'#5C4C34',role:'paint'});
  const leaves=Array.from({length:7},(_,i)=>{const a=i*2.39996,pivot:V3=[Math.cos(a)*.025,.34,Math.sin(a)*.025],recipe:NativeSurface[]=[];const height=.38+i%3*.13;const tip:V3=[Math.cos(a)*(.18+i%2*.08),height,Math.sin(a)*(.18+i%2*.08)];recipe.push(twig([[0,0,0],[tip[0]*.3,height*.6,tip[2]*.3],tip],.0045));
   for(let k=0;k<4;k++){const t=.30+k*.19,pos:V3=[tip[0]*t,height*t,tip[2]*t];recipe.push(leaf(pos,.20+(3-k)*.025,.10+(3-k)*.017,a+(k%2?1.2:-1.2),.8+(i%3)*.28,['#64804D','#8BA665','#A4B877','#758F55'][(i+k)%4]));}
-  return {pivot:pivot.map(v=>v*scale) as V3,recipe:batch(recipe.map(s=>({...s,role:'leaf' as const,color:s.role==='wood'?'#64804D':s.color}))).map(s=>scaled(s,scale))};});
+  return {pivot:pivot.map(v=>v*scale) as V3,recipe:batch(recipe.map(s=>({...s,role:'leaf' as const,color:s.role==='wood'?'#64804D':s.color,baseColorTexture:'/assets/native-v11/broadleaf-albedo.png'}))).map(s=>scaled(s,scale))};});
  return {base:batch(base).map(s=>scaled(s,scale)),leaves};
 }
 export function buildV11Garden():NativeSurface[]{
  const out:NativeSurface[]=[];
- for(let i=0;i<4;i++){const x=-5.45-i*.33,z=-2.5+i*1.60,y=1.4+i%2*.22;out.push(twig([[x,.1,z],[x+.13,1.4,z+.12],[x-.06,2.80,z-.05]],.032,'#8B8061'));
+ for(let i=0;i<4;i++){const x=-5.45-i*.33,z=-2.5+i*1.60,y=.55+i%2*.20;out.push(twig([[x,.1,z],[x+.13,1.4,z+.12],[x-.06,2.80,z-.05]],.032,'#8B8061'));
   for(let b=0;b<6;b++){const a=b*2.399+i,cy=y+b*.15,cx=x+Math.cos(a)*.28,cz=z+Math.sin(a)*.35;out.push(twig([[x,cy-.4,z],[cx,cy,cz],[cx+Math.cos(a)*.23,cy+.14,cz+Math.sin(a)*.23]],.008,'#8B8061'));
    for(let k=0;k<10;k++)out.push(leaf([cx+Math.cos(k*2.4)*.28,cy+Math.sin(k*2.4)*.11,cz+Math.sin(k*2.4)*.28],.18+k%2*.06,.10+k%3*.025,a+k*.7,.8+k%3*.4,['#A4BA75','#7E9D58','#BAC98B','#90AB69'][k%4]));
   }
  }
- const groups=new Map<string,NativeSurface[]>();for(const part of out){const key=part.role+':'+part.color;groups.set(key,[...(groups.get(key)??[]),part]);}return [...groups.values()].map(parts=>{const g:Geometry={positions:[],normals:[],indices:[]};for(const p of parts){const a=p.shape==='mesh'?p.geometry:geometry(p),at=p.shape==='mesh'?p.at:[0,0,0],n=g.positions.length/3;g.positions.push(...a.positions.map((v,i)=>v+at[i%3]));g.normals.push(...a.normals);g.indices.push(...a.indices.map(v=>v+n));}for(let i=0;i<g.positions.length;i++)g.positions[i]-=[-5.8,2,0][i%3];return M(g,parts[0].color,parts[0].role??'leaf',[-5.8,2,0]);});
+ const groups=new Map<string,NativeSurface[]>();for(const part of out){const key=part.role+':'+part.color+':'+(part.baseColorTexture??'');groups.set(key,[...(groups.get(key)??[]),part]);}return [...groups.values()].map(parts=>{const g:Geometry&{uvs:number[]}={positions:[],normals:[],indices:[],uvs:[]};for(const p of parts){const a=p.shape==='mesh'?p.geometry:geometry(p),at=p.shape==='mesh'?p.at:[0,0,0],n=g.positions.length/3;g.positions.push(...a.positions.map((v,i)=>v+at[i%3]));g.normals.push(...a.normals);g.indices.push(...a.indices.map(v=>v+n));g.uvs.push(...((a as Geometry&{uvs?:number[]}).uvs??Array(a.positions.length/3*2).fill(0)));}for(let i=0;i<g.positions.length;i++)g.positions[i]-=[-5.8,2,0][i%3];return {...M(g,parts[0].color,parts[0].role??'leaf',[-5.8,2,0]),...(parts[0].baseColorTexture?{baseColorTexture:parts[0].baseColorTexture}:{})};});
 }
 /** Hanging greenery is fixture decoration, not stock, a collectible or a grant. */
 export function buildV11TrailingGreenery():NativeSurface[]{

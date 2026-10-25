@@ -2,7 +2,7 @@
 Creates editable subdivision surfaces, not an imported illustration/model.
 Coordinates deliberately retain the game's RH Y-up metres and head pivot.
 """
-import bpy, math, json
+import bpy, math, json, os
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
@@ -27,14 +27,14 @@ def smooth_profile(controls,t):
     return [((2*b[k])+(-a[k]+c[k])*u+(2*a[k]-5*b[k]+4*c[k]-d[k])*u*u+(-a[k]+3*b[k]-3*c[k]+d[k])*u*u*u)/2 for k in range(len(b))]
 # Face is one smooth closed surface with a rounded jaw, full cheeks, integrated
 # nose bridge and a softly projecting chin. No sphere nose attached to a ball.
-profile=[(-.025,.025,.024,.012),(.005,.085,.077,.007),(.048,.151,.128,.003),(.112,.204,.166,.005),(.184,.215,.174,.010),(.270,.198,.165,.018),(.340,.144,.123,.024),(.385,.015,.014,.025)]
+profile=[(-.025,.025,.024,.012),(.005,.105,.077,.007),(.048,.168,.128,.003),(.112,.204,.166,.005),(.184,.215,.174,.010),(.270,.198,.165,.018),(.340,.144,.123,.024),(.385,.015,.014,.025)]
 verts=[];uv=[];faces=[];rows=18;cols=40
 for i in range(rows+1):
     y,rx,rz,cz=smooth_profile(profile,i/rows)
     for j in range(cols):
         a=j*math.tau/cols;x=math.cos(a)*rx;z=math.sin(a)*rz+cz
         front=max(0,-math.sin(a))**10
-        z-=front*(.016*math.exp(-((y-.116)/.052)**2)*math.exp(-(x/.029)**2)+.006*math.exp(-((y-.045)/.026)**2))
+        z-=front*(.010*math.exp(-((y-.116)/.052)**2)*math.exp(-(x/.029)**2)+.006*math.exp(-((y-.045)/.026)**2))
         verts.append((x,y,z));uv.append((x/.46+.5,(y+.035)/.44))
 for i in range(rows):
     for j in range(cols):
@@ -60,7 +60,7 @@ for layer in range(2):
             a=layer*n+i*cols+j;b=layer*n+i*cols+(j+1)%cols;f=(a,b,b+cols,a+cols);faces.append(f if layer else tuple(reversed(f)))
 for j in range(cols):
     b=(j+1)%cols;faces.extend([(j,b,b+n,j+n),(rows*cols+j,rows*cols+j+n,rows*cols+b+n,rows*cols+b)])
-surface('Misaki shaped bob foundation',verts,faces,'#69412B','hair',uv,1)
+surface('Misaki shaped bob foundation',verts,faces,'#674330','hair',uv,1)
 def ribbon(name,points,width,color,depth=.012,facing=-1):
     verts=[];uv=[];faces=[];steps=16;cols=4
     for layer in range(2):
@@ -86,24 +86,25 @@ def ribbon(name,points,width,color,depth=.012,facing=-1):
             a=i*stride+j;faces.append((a,a+n,a+n+1,a+1))
     surface(name,verts,faces,color,'hair',uv,1)
 # Off-centre part; broad swept bangs, tapered side layers and fine free tips.
-ribbon('Swept fringe left',[(.005,.424,-.003),(-.035,.365,-.147),(-.118,.284,-.190),(-.194,.195,-.128)],.039,'#754A31',.018)
-ribbon('Swept fringe right',[(.011,.421,-.010),(.069,.361,-.159),(.133,.289,-.182),(.194,.223,-.115)],.041,'#69412B',.016)
-ribbon('Inner fringe lock',[(.004,.413,-.058),(.022,.352,-.177),(.060,.284,-.192),(.108,.248,-.172)],.026,'#855638',.012)
+ribbon('Swept fringe left',[(.005,.424,-.003),(-.035,.365,-.147),(-.118,.284,-.190),(-.194,.195,-.128)],.039,'#704A35',.018)
+ribbon('Swept fringe right',[(.011,.421,-.010),(.069,.361,-.159),(.133,.289,-.182),(.194,.223,-.115)],.041,'#674330',.016)
+ribbon('Inner fringe lock',[(.004,.413,-.058),(.022,.352,-.177),(.060,.284,-.192),(.108,.248,-.172)],.026,'#78513B',.012)
 for side in (-1,1):
     for k in range(5):
         z=.005+k*.039;x=side*(.172+.013*math.sin(k))
-        ribbon('Bob flow %s %s'%(side,k),[(side*.070,.390,.039),(side*.204,.293,z-.020),(side*(.245+.006*k),.145,z),(side*(.224+.009*math.sin(k)),.022+.013*k,z+.013)],.027,['#69412B','#754A31','#855638'][k%3],.016)
-    ribbon('Loose cheek curl %s'%side,[(side*.165,.307,-.106),(side*.227,.213,-.106),(side*.245,.089,-.087),(side*.206,.030,-.102)],.020,'#754A31',.013)
+        ribbon('Bob flow %s %s'%(side,k),[(side*.070,.390,.039),(side*.204,.293,z-.020),(side*(.245+.006*k),.145,z),(side*(.224+.009*math.sin(k)),.022+.013*k,z+.013)],.027,['#674330','#704A35','#78513B'][k%3],.016)
+    ribbon('Loose cheek curl %s'%side,[(side*.165,.307,-.106),(side*.227,.213,-.106),(side*.245,.089,-.087),(side*.206,.030,-.102)],.020,'#704A35',.013)
 for k in range(9):
     x=(k-4)*.052;z=.036+.222*math.sqrt(max(.05,1-(x/.27)**2));
-    ribbon('Layered back bob %s'%k,[(x*.22,.418,.049),(x*.65,.338,z*.81),(x,.193,z),(x+.012*math.sin(k),.022+.009*math.cos(k*2),z-.030)],.034,['#69412B','#754A31','#855638'][k%3],.015,1)
+    ribbon('Layered back bob %s'%k,[(x*.22,.418,.049),(x*.65,.338,z*.81),(x,.193,z),(x+.012*math.sin(k),.022+.009*math.cos(k*2),z-.030)],.034,['#674330','#704A35','#78513B'][k%3],.006,1)
 # A sculpt master and a bounded runtime retopology are separate stages. The
 # non-destructive high surface remains in the .blend; collapse is evaluated only
 # for the game mesh and preserves material/UV seam boundaries.
 for ob,color,role,texture in pieces:
     lod=ob.modifiers.new('Runtime retopology - source sculpt retained','DECIMATE');lod.ratio=.10;lod.use_collapse_triangulate=True;lod.delimit={'UV','MATERIAL'}
 # Preserve a fully editable Blender master with explicit local-space surfaces.
-out=ROOT/'assets/masters/native-v11';out.mkdir(parents=True,exist_ok=True)
+out=Path(os.environ.get('V11_MASTER_OUT',str(ROOT/'assets/masters/native-v11')));out.mkdir(parents=True,exist_ok=True)
+bpy.context.preferences.filepaths.save_version=0
 bpy.ops.wm.save_as_mainfile(filepath=str(out/'misaki-head.blend'))
 result=[];deps=bpy.context.evaluated_depsgraph_get()
 for ob,color,role,texture in pieces:
