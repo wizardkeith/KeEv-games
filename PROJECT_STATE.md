@@ -1,6 +1,12 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-25T22:28:21+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T00:02:59+08:00** (Asia/Hong_Kong).
+
+## V11 target rebuild — second checkpoint, still in progress — 2026-10-26T00:02:59+08:00
+
+- [Draft PR #8](https://github.com/wizardkeith/KeEv-games/pull/8), `codex/game-v11-target-slice`, pushed checkpoint **`80f164ab959a42372c0c5c667e4065a300426816`**. **Unmerged runtime; main documentation only. Public stays V17. Original target art remains unaccepted; rebuild continues.**
+- New actual thick counter/display furniture, height tiers carrying only real selected stock (up to8visible units), broader window/layered leafy exterior, face/hair/leafclip refinements and continuous skirt/sleeve surfaces. Original oak albedo and actual-static-scene Cycles contact bake, editable masters/source/provenance, matching Web/glTF material inputs retained. Misaki11,988tri under unchanged12,000cap; V10 torso/neck and two customers still need meaningful rebuilding. No economy/save/UI/locales expansion.
+- Fresh177tests/build/validate/replay/asset-check pass;139GLBs0errors/warnings;305protectedfiles/original11history pass. [Full game panorama, cashier closeup, same-scale3/4 actual-model studio comparison (explicitly not gameplay), continuous clip, evidence and gaps](https://github.com/wizardkeith/KeEv-games/blob/80f164ab959a42372c0c5c667e4065a300426816/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md). Build23 High greeting/real settlement/contact observed, but polling missed gross-margin float; diagnosis remains open, **not a complete passed flow**. Newer24frame tightens explicitZen viewport; not independently reviewed. PhysicalGPU/FPS/audio/native notaccepted. No merge/deploy/playerNormal/userChrome/Unity/shutdown. Continue targeted visual and actual-flow correction, no false target acceptance.
 
 ## V11 original-target rebuild — early checkpoint, in progress — 2026-10-25T22:28:21+08:00
 
