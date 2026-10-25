@@ -1,9 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T04:24:29+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T04:46:01+08:00** (Asia/Hong_Kong).
 
 
 
+
+## V11 tenth checkpoint — branched bouquets / window gables / distant foliage — 2026-10-26T04:46:01+08:00
+
+- [DraftPR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed/readback **f1e1af70a83a46674a599637e19a4799ed59fcfd**, unmerged. **Main documentation pointer only; publicV17 unchanged; original target art still unaccepted, continuing.** Three retained vase positions now each12open florets+24closed buds with real forks/leaf mass/negative-space. Fixed dressing15,728<16,000. Original2neighbours/4windows receive proper roof direction/closed gables/eave joins; pale distant leaf crowns use localwindpivots and actual window rays;216nearcanopyleaves retained. Camera/focal light/hair/characters/furniture/product staging/economy/saves unchanged fromC9.
+- **194tests/build/content/replay/assets,139GLB0errors/warnings,305protected/history,288files fresh rebuild byte-identical,152actual package parity pass.** [Actual normal/staff before-after, source hashes and limits](https://github.com/wizardkeith/KeEv-games/blob/f1e1af70a83a46674a599637e19a4799ed59fcfd/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md). Full build73 High/Minimal=false **188s uncut** realbuy/display/settlement/greeting/contact/transfer/18item+8400margin/servedexit+staffhome/reload,0pageerrors,isolatedNormalunchanged. Actual123s video frame proves readable margin; original asynchronous screenshot missed it and is excluded. Fresh74 adds distant leaf silhouettes only, fullcaptureinprogress; not falsely called73=74. C9fresh66female87.24s natural entry/browse/leave/outside evidence now in3475758; lowCDPdensity not physicalFPS/smoothness certification.
+- **Remaining visual gates OPEN:** C9normal textile effect subtle; same-facing closer actualgame comparison next. Whole scene still less rich/natural than reference, distant forms simplified. No independent194/fullrelease certification or physicalGPU/audio/native claim. No merge/deploy/userChrome/Normal/Unity/shutdown/content expansion.
 
 ## V11 ninth checkpoint — same-facing coat/skirt UV and material slice — 2026-10-26T04:24:29+08:00
 
