@@ -1,0 +1,156 @@
+{
+  "status": "EXPERIMENTAL not adopted",
+  "source": "tools/bake-v11-self-ao.py",
+  "inputSha256": "a0ee69e780e94d7097b0c024444a9e141077601a6ecae6f6b649d9814c6ea7b5",
+  "parts": 5,
+  "stats": {
+    "body:0": {
+      "vertices": 410,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.5607176780487805,
+      "belowPoint99": 322
+    },
+    "body:1": {
+      "vertices": 258,
+      "min": 0.0,
+      "max": 0.997233,
+      "mean": 0.22081353100775192,
+      "belowPoint99": 246
+    },
+    "body:3": {
+      "vertices": 276,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.5714813260869566,
+      "belowPoint99": 205
+    },
+    "body:4": {
+      "vertices": 276,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.578424,
+      "belowPoint99": 220
+    },
+    "body:5": {
+      "vertices": 418,
+      "min": 0.010417,
+      "max": 1.0,
+      "mean": 0.84989404784689,
+      "belowPoint99": 242
+    },
+    "body:6": {
+      "vertices": 164,
+      "min": 0.0,
+      "max": 0.974121,
+      "mean": 0.5160755426829268,
+      "belowPoint99": 164
+    },
+    "body:7": {
+      "vertices": 168,
+      "min": 0.000977,
+      "max": 1.0,
+      "mean": 0.5437689880952381,
+      "belowPoint99": 137
+    },
+    "body:8": {
+      "vertices": 178,
+      "min": 0.0,
+      "max": 0.999023,
+      "mean": 0.686361011235955,
+      "belowPoint99": 159
+    },
+    "body:9": {
+      "vertices": 150,
+      "min": 0.015625,
+      "max": 0.949219,
+      "mean": 0.4440202066666667,
+      "belowPoint99": 150
+    },
+    "body:10": {
+      "vertices": 302,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.2581746920529801,
+      "belowPoint99": 280
+    },
+    "body:11": {
+      "vertices": 38,
+      "min": 0.0,
+      "max": 0.686523,
+      "mean": 0.2732105,
+      "belowPoint99": 38
+    },
+    "arm-left:0": {
+      "vertices": 210,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.7544534428571429,
+      "belowPoint99": 133
+    },
+    "arm-left:1": {
+      "vertices": 110,
+      "min": 0.062826,
+      "max": 1.0,
+      "mean": 0.7045602272727273,
+      "belowPoint99": 73
+    },
+    "foot-left:0": {
+      "vertices": 146,
+      "min": 0.839518,
+      "max": 1.0,
+      "mean": 0.9879735616438355,
+      "belowPoint99": 53
+    },
+    "foot-left:2": {
+      "vertices": 30,
+      "min": 0.007487,
+      "max": 0.875,
+      "mean": 0.5440917666666666,
+      "belowPoint99": 30
+    },
+    "foot-left:3": {
+      "vertices": 30,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "belowPoint99": 30
+    },
+    "arm-right:0": {
+      "vertices": 210,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.7551370238095239,
+      "belowPoint99": 128
+    },
+    "arm-right:1": {
+      "vertices": 110,
+      "min": 0.059896,
+      "max": 1.0,
+      "mean": 0.6993045818181818,
+      "belowPoint99": 73
+    },
+    "foot-right:0": {
+      "vertices": 146,
+      "min": 0.839518,
+      "max": 1.0,
+      "mean": 0.9879735616438355,
+      "belowPoint99": 53
+    },
+    "foot-right:2": {
+      "vertices": 30,
+      "min": 0.007487,
+      "max": 0.875,
+      "mean": 0.5440917666666666,
+      "belowPoint99": 30
+    },
+    "foot-right:3": {
+      "vertices": 30,
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "belowPoint99": 30
+    }
+  },
+  "limits": "Artist-directed diffuse self-shading approximation, not full GI or dynamic contact lighting. No geometry returned from Blender; Web/GLB geometry must retain original doubles."
+}

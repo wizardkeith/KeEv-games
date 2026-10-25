@@ -6,6 +6,16 @@
 
 
 
+## 第十二個 checkpoint — 實際自身遮蔽試驗，不採用為runtime／主要解法
+
+C11形體已進可玩模型，但正常距離衣褶仍弱。本輪以雲端Blender對5個獨立rigid衣物組件／21面做原創Cycles自身AO，避免把移動手臂陰影烘在身體；實驗WebGL真正套在14mesh／4,456vertex，沒有改任何座標／UV／關節／三角形，也沒有加強weave或貼圖解析度。這是artist-directed diffuse vertex tint，**不是fullGI**。
+
+[真正同面改前](../evidence/native-v11/checkpoint-12/before-female-in-game.png)／[改後](../evidence/native-v11/checkpoint-12/after-female-in-game.png)及[原始量測](../evidence/native-v11/checkpoint-12/results.json)：同camera/root/yaw；pre/postcapture都保持瀏覽。早前一張已離店轉身、另一張仍在轉到瀏覽方向，嚴格guard已排除，沒有拿front/back變化當材質改善。最終有效A/B已實看：有局部暗部變化，但正常距離改善仍太細，不能解決原圖衣料形體／質感差距。**不採用為runtime或主要解法，布料及原圖門檻仍未通過。**
+
+原始可編輯.blend／輸入／scalar值保存在assets/masters/native-v11/experiments/c12-*，baker／runtime patch／glue及[完整來源／限制](../evidence/native-v11/checkpoint-12/provenance.json)保留作研究；原生GLB沒有COLOR_0套用，不聲稱native parity。Default應用恢復C11基線，沒有為試驗再做release archive／完整release測試。
+
+下一步改用較完整的衣物休止形態雕塑／cloth authoring及高模細節烘焙至受限面數可玩mesh，先取同面實際遊戲證據才擴展。保留已驗證髮型／肩頸／關節／鏡頭／燈光／陳列。全景材質／商品規律度／光影接觸／植物遠近細節仍有差距，不只布料；公開V17不變、PR8draft／不合併／不發佈，未稱最終美術或實體GPU/FPS/audio/native通過。
+
 ## 第十一個 checkpoint — 真正衣褶／背部圍巾重建，並非貼圖解析度
 
 保留C10已驗證鏡頭／燈光／髮型／肩頸／人物關節／傢俬及陳列。女顧客coat下身改成約1cm中尺度受力褶，袖口堆疊、裙身重力垂墜／不完全一致的裙襬；沒有加強weave或提高貼圖解析度。原圖背後寬酒紅圍巾垂片在舊模型卻是正面窄尾，已重建成貼合真實背面的有厚度垂片，反射時同時處理winding／normals，保留outwardCCW。**女顧客11,930tri<12,000**，沒有為預算削掉既有髮型／手部或提高上限。
