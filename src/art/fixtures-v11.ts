@@ -5,7 +5,9 @@ import {buildV10Counter,buildV10Display,buildV10Room,buildV10Exterior} from './s
 import type {NativeSurface,NativeMesh} from './native-characters';
 import {nativeGrouped,nativeSurfaceGeometry} from './native-characters';
 import type {V3,Part} from './recipes';
-import {geometry} from './geometry';
+import {geometry,type Geometry} from './geometry';
+import {sculptSweep,finishSculpt} from './sculpt-v10';
+import {leaf as foliageBlade} from './shop-v11';
 const board=(size:V3,at:V3,color:string,role:Part['role']='wood',radius=.015):NativeMesh=>{
  const g=geometry({shape:'round',size,at,color,role,radius}),uvs:number[]=[],long=size.indexOf(Math.max(...size));
  for(let i=0;i<g.positions.length;i+=3){const normal=g.normals.slice(i,i+3).map(Math.abs),face=normal.indexOf(Math.max(...normal)),axes=[0,1,2].filter(k=>k!==face),v=axes.includes(long)?long:axes[1],u=axes.find(k=>k!==v)!;uvs.push(g.positions[i+u],g.positions[i+v]);}
@@ -45,7 +47,49 @@ export function buildV11Room(door:Parameters<typeof buildV10Room>[0]):NativeSurf
  }
  const mullions=[-2.1,-.7,.7,2.1].map(z=>board([.12,1.94,.065],[-4.40,1.84,z],'#9E7854','wood',.014));out.push(...nativeGrouped(mullions).map(g=>({shape:'mesh' as const,geometry:g.geometry,at:[0,0,0] as V3,color:g.color,role:g.role,roughness:g.roughness})));return out;
 }
-/** The oblique play camera looks down through the window. Lowering the distant
- * courtyard brings real neighbour windows/roofs into view instead of exposing
- * their blank lower walls. This vignette has no paths, shops or gameplay. */
-export function buildV11Exterior():NativeSurface[]{return buildV10Exterior().map(p=>({...p,at:[p.at[0],p.at[1]-.90,p.at[2]] as V3}));}
+/** Atmospheric neighbour vignette, framed through the real window portal.
+ * Lower distant eaves expose pitched roof silhouettes instead of blank walls;
+ * pale layered crowns sit behind the retained detailed near-window canopy. */
+function distantTree(x:number,z:number,color:string):NativeSurface[]{
+ const parts:NativeSurface[]=[];
+ for(let k=0;k<3;k++){
+  const a=k*2.399,at:V3=[x+Math.cos(a)*.32,-1.12+k*.29,z+Math.sin(a)*.35];
+  const g=geometry({shape:'sphere',size:[1.16,.94,1.05],at:[0,0,0],color,role:'leaf'});
+  for(let j=0;j<g.positions.length;j+=3){const [px,py,pz]=g.positions.slice(j,j+3),phi=Math.atan2(pz,px),lobes=1+.085*Math.sin(phi*5+py*4+k)+.035*Math.cos(phi*9-py*7);g.positions[j]*=lobes;g.positions[j+2]*=lobes;}
+  // Recompute normals for the actual lobed crown, not the old sphere normals.
+  parts.push({shape:'mesh',at,color,role:'leaf',geometry:finishSculpt(g),roughness:.91});
+  // Real broad blades break each distant crown edge; same pale material keeps
+  // this distance LOD batched, while near-window leaves retain their paint map.
+  for(let j=0;j<18;j++){
+   const yy=1-2*(j+.5)/18,phi=j*2.39996+k*.7,rr=Math.sqrt(1-yy*yy),v:V3=[Math.sin(phi)*rr,yy,Math.cos(phi)*rr];
+   const q=foliageBlade([at[0]+v[0]*.49,at[1]+v[1]*.38,at[2]+v[2]*.44],.19+(j%3)*.022,.13,phi,Math.acos(yy),color,6);
+   delete q.baseColorTexture;parts.push({...q,roughness:.91});
+  }
+  const end:V3=[at[0],at[1]-.12,at[2]];
+  parts.push({shape:'mesh',at:[0,0,0],color:'#A7AE95',role:'wood',geometry:sculptSweep([[x,-2.8,z],[x,-1.8,z],end],[.036,.025,.009],undefined,4,5)});
+ }
+ return nativeGrouped(parts).map(g=>{const at:V3=[x,-1,z];return {shape:'mesh',at,geometry:{...g.geometry,positions:g.geometry.positions.map((v,i)=>v-at[i%3])},color:g.color,role:g.role,roughness:g.roughness};});
+}
+export function buildV11Exterior():NativeSurface[]{
+ const old=buildV10Exterior(),out:NativeSurface[]=[];
+ const houses=[{x:-7.15,z:-1.05,w:1.5,h:1.8,d:1.3,drop:1.60},{x:-7.8,z:1.75,w:1.2,h:2.1,d:1.5,drop:2.30}];
+ const gables:NativeSurface[]=[];
+ // Original two houses/four window bays/ground; proper pitched roofs now run
+ // toward the viewer, so their triangular end silhouettes read through glass.
+ for(let i=0;i<15;i++){
+  const p=old[i],house=i<8?0:1,h=houses[house],delta:V3=i===0?[0,-.90,0]:house?[-.50,-h.drop,-.05]:[-.15,-h.drop,1.05];
+  const roof=p.shape!=='mesh'&&p.turn?.[2],rise=h.d*.32*Math.sin(.64),eave=h.h-h.drop-rise;
+  if(roof){const side=Math.sign(p.turn![2]);out.push({...p,at:[h.x,h.h-h.drop,h.z+side*h.d*.25],size:[h.w+.20,.065,h.d*.64],turn:[side*.64,0,0],color:house?'#AFBCC4':'#9DAEB4'});continue;}
+  const q={...p,at:p.at.map((v,k)=>v+delta[k]) as V3,...(p.role==='paint'&&i!==0?{color:house?'#D7DFD2':'#C7D3C5'}:{})};
+  if(i===1||i===8){const g=nativeSurfaceGeometry(q);for(let j=1;j<g.positions.length;j+=3)g.positions[j]=-h.drop+(g.positions[j]+h.drop)*(h.h-rise)/h.h;out.push({shape:'mesh',at:[0,0,0],geometry:g,color:q.color,role:q.role??'paint'});
+   for(const side of [-1,1]){
+    const x=h.x+side*h.w*.5,half=h.d*.5,g:Geometry={positions:[],normals:[],indices:[0,1,2,3,5,4,0,3,1,1,3,4,1,4,2,2,4,5,2,5,0,0,5,3]};
+    for(const depth of [0,-side*.025])g.positions.push(x+depth,eave,h.z-half,x+depth,eave,h.z+half,x+depth,h.h-h.drop+rise-.02,h.z);
+    gables.push({shape:'mesh',at:[0,0,0],geometry:finishSculpt(g),color:q.color,role:'paint'});
+   }
+  }else out.push(q);
+ }
+ out.push(...nativeGrouped(gables).map(g=>({shape:'mesh' as const,at:[0,0,0] as V3,geometry:g.geometry,color:g.color,role:g.role,roughness:g.roughness})));
+ out.push(...distantTree(-8.90,1.20,'#C2CEAA'),...distantTree(-9.35,4.60,'#D0DAB8'));
+ return out;
+}

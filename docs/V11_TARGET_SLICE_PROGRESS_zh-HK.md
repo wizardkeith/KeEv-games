@@ -6,6 +6,18 @@
 
 
 
+## 第十個 checkpoint — 整束花材／真實窗外遠近層次，原目標仍未達
+
+保留C9三人、髮型、鏡頭、focal light、傢俬／商品組合／庫存。三個原花瓶位置各8主枝，改為12朵開放實體花＋24閉合圓花苞的分叉花團，具下層花頭、葉團與枝間留白；不是再只增加單片花瓣細節。固定dressing合計**15,728tri<16,000**，不提高上限。第一版仍像細枝、第一版遠屋像橫條，均在實際遊戲檢查後退回修正。
+
+原兩棟遠屋／四窗保留，重建屋脊方向、封閉山牆及牆／簷連接，較低視差位置讓山牆落入真正window portal。兩層淡色分葉樹團有局部wind pivot，避免遠樹繞店原點擺；近窗216葉樹冠原樣保留。全authoring仍<160，沒有新可玩建築／庫存或背景圖片。天空／遠景仍明顯簡化，不宣稱原圖氛圍已達。
+
+- [正常遊戲改前](../evidence/native-v11/checkpoint-10/vignette-before-normal-game.png)／[改後](../evidence/native-v11/checkpoint-10/vignette-after-normal-game.png)；[改後實際店員鏡頭](../evidence/native-v11/checkpoint-10/vignette-after-staff-game.png)：immutable66→74，同一真實UI購買／上架Sandbox，normal及staff camera diagnostics完全相等；人物自然相位不同，不當人物同姿勢比較。
+- **194tests/build/validate/replay/asset-check；139GLB零error/warning；305protected/history；288files全新重建byte-identical；152actual archive payload parity。**新增遠屋實際window rays／遠樹局部pivot檢查。舊Z向屋坡測試改為任何水平軸真正坡度，仍要求4塊屋坡／4個窗／原低建築及預算限制。
+- [build73完整188秒未剪遊戲](../evidence/native-v11/checkpoint-10/build73-motion/uncut.webm)：真入貨／陳列／結算／招呼／收銀接觸／交袋／已服務客人離店及店員回位／reload，0pageerror，隔離Normal基線不變。[影片123秒毛利畫面](../evidence/native-v11/checkpoint-10/build73-motion/margin-video123s.png)可讀18件/+¥8,400/未扣人工租金；最初非同步04截圖錯過浮字，沒有拿空畫面充數。[全部原始數據／來源hash／界線](../evidence/native-v11/checkpoint-10/provenance.json)。build74只再加遠樹葉片；fresh74完整實拍仍在跑，不說73等於74。
+
+**繼續工作，非美術接受／非release完成。**C9一般鏡頭布料差異仍偏細，須進一步同面近距離實際遊戲比較；整體造形／材質／商品規律度與原圖仍有距離。雲端SwiftShader低密度截取不證明實體GPU/FPS或完整流暢度，audio/native仍未驗收。公開V17不變，PR8草稿，沒有合併／發佈／內容擴張。
+
 ## 第九個 checkpoint — 一套coat／skirt實際UV與材質切片，視覺門檻仍未通過
 
 以第二顧客為切片，保留三人髮型／鏡頭／focal light／傢俬／陳列。21個衣物曲面另存可編輯Blender UV master；SmartProject後按實際面積縮放至metre，逐島調整warp向Y，保留每個原頂點／法線／三角形與pivot，只分UV seam。coat／skirt前面加權warp角度在5°內，UV與3D總面積相等；不是保證每個局部都無投影變形。raw guard改為nanometre比較以避免Node/Chrome末位浮點誤判，仍拒絕10micron變形與stale atlas。

@@ -1,0 +1,11 @@
+✔ exterior portal preserves real window rays across allowed orbit angles and rejects cutaway spill (6.372987ms)
+✔ atmospheric geometry fits within the original whole fixed-scene authoring budget (350.225456ms)
+✔ distant roof planes intersect the actual default window rays and animated crowns keep local tree pivots (13.42081ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 629.190893

@@ -9,7 +9,7 @@ import type {V3} from './recipes';
 import {buildV10Styling} from './shop-v10';
 const M=(g:Geometry,color:string,role:NativeMesh['role']='leaf',at:V3=[0,0,0]):NativeMesh=>({shape:'mesh',at,geometry:g,color,role});
 const twig=(points:V3[],r:number,color='#738353')=>M(sculptSweep(points,points.map(()=>r),points.map(()=>r),points.length>12?24:6,4),color,'wood');
-function leaf(at:V3,length:number,width:number,angle:number,tilt:number,color:string,segments=8):NativeMesh{
+export function leaf(at:V3,length:number,width:number,angle:number,tilt:number,color:string,segments=8):NativeMesh{
  const rim=Array.from({length:segments},(_,j)=>{const a=j/segments*Math.PI*2,t=(1-Math.cos(a))/2;return [Math.sin(a)*(.76+.24*t),t];}),g:Geometry&{uvs:number[]}={positions:[],normals:[],indices:[],uvs:[]};
  const rotate=(x:number,y:number,z:number)=>{[y,z]=[y*Math.cos(tilt)-z*Math.sin(tilt),y*Math.sin(tilt)+z*Math.cos(tilt)];return [x*Math.cos(angle)+z*Math.sin(angle)+at[0],y+at[1],-x*Math.sin(angle)+z*Math.cos(angle)+at[2]];};
  // Two curved fans meet on the same tapered rim. This closed lens keeps the
@@ -55,21 +55,37 @@ export function buildV11TrailingGreenery():NativeSurface[]{
 /** Original non-stock floral arrangements. They replace the retired window
  * flower primitive group and decorate furniture; they never imply inventory. */
 function bouquet():NativeSurface[]{
- const g:Geometry={positions:[],normals:[],indices:[]},profile=[[.001,0],[.075,0],[.10,.05],[.094,.18],[.043,.25],[.043,.28],[.034,.28],[.034,.25],[.083,.18],[.089,.05],[.066,.014],[.001,.014]],n=18;
+ const g:Geometry={positions:[],normals:[],indices:[]},profile=[[.001,0],[.075,0],[.10,.05],[.094,.18],[.043,.25],[.043,.28],[.034,.28],[.034,.25],[.083,.18],[.089,.05],[.066,.014],[.001,.014]],n=16;
  for(const [r,y]of profile)for(let j=0;j<n;j++){const a=j/n*Math.PI*2;g.positions.push(r*Math.cos(a),y,r*Math.sin(a));}
  for(let r=0;r<profile.length-1;r++)for(let j=0;j<n;j++){const a=r*n+j,b=r*n+(j+1)%n;g.indices.push(a,a+n,b,b,a+n,b+n);}
  for(const row of [0,profile.length-1]){const center=g.positions.length/3;g.positions.push(0,profile[row][1],0);for(let j=0;j<n;j++)g.indices.push(...(row===0?[center,j,(j+1)%n]:[center,row*n+(j+1)%n,row*n+j]));}
  const out:NativeSurface[]=[M(finishSculpt(g),'#91A08A','ceramic')];
  for(let i=0;i<8;i++){
-  const a=i*2.39996,r=.08+(i%3)*.046,tip:V3=[Math.cos(a)*r,.42+(i%4)*.055,Math.sin(a)*r];
-  out.push(M(sculptSweep([[0,.17,0],[tip[0]*.4,.32,tip[2]*.4],tip],[.0028,.0028,.0028],[.0028,.0028,.0028],4,4),'#738C54','wood'));
-  if(i%3===0)out.push(leaf([tip[0]*.5,.32,tip[2]*.5],.13,.055,a,.9,'#91A665'));
-  for(let blossom=0;blossom<2;blossom++){
-   const rotate=(x:number,y:number,z:number)=>{const t=.35+Math.sin(i)*.35;return [x+tip[0]+.024*Math.cos(blossom*2.4+i*.71),y*Math.cos(t)-z*Math.sin(t)+tip[1]+.013*(blossom-.5),y*Math.sin(t)+z*Math.cos(t)+tip[2]+.024*Math.sin(blossom*2.4+i*.71)];};
+  // A tiered, branching dome: flower heads sit on actual stem/fork ends,
+  // with lower axillary heads and leaf mass rather than pairs floating at tips.
+  const a=i*2.39996,r=.075+(i%3)*.038,tip:V3=[Math.cos(a)*r,.625-r*.56+(i%2)*.018,Math.sin(a)*r];
+  const axis=(t:number):V3=>[tip[0]*t,.17+(tip[1]-.17)*t,tip[2]*t];
+  out.push(M(sculptSweep([axis(0),axis(.5),tip],[.0028,.0028,.0028],[.0028,.0028,.0028],4,4),'#738C54','wood'));
+  out.push(leaf(axis(.46),.115,.068,a+.45,.95,'#91A665'));
+  // Three closed, rounded buds around each open floret form a branched spray,
+  // with empty intervals between sprays rather than a uniform solid sphere.
+  for(let k=0;k<3;k++){
+   const theta=a+k*Math.PI*2/3,head:V3=[tip[0]+.052*Math.cos(theta),tip[1]-.028+(k%2)*.047,tip[2]+.052*Math.sin(theta)];
+   out.push(M(sculptSweep([axis(.83),head],[.0017,.0011],[.0017,.0011],1,3),'#738C54','wood'));
+   const bud:Geometry={positions:[0,.021,0,0,-.018,0],normals:[],indices:[]};
+   for(let ring=0;ring<2;ring++)for(let j=0;j<5;j++){const t=j/5*Math.PI*2+ring*Math.PI/5;bud.positions.push(Math.cos(t)*.018,ring?-.009:.010,Math.sin(t)*.018);}
+   for(let j=0;j<5;j++){const u=2+j,un=2+(j+1)%5,l=7+j,ln=7+(j+1)%5;bud.indices.push(0,u,un,1,ln,l,u,l,un,un,l,ln);}
+   for(let j=0;j<bud.positions.length;j++)bud.positions[j]+=head[j%3];
+   out.push({...M(finishSculpt(bud),k===1?'#F8EEDD':'#FFF8E8','paint'),roughness:.84});
+  }
+  const heads:V3[]=[tip,...(i%2===0?[axis(.68)]:[])];
+  for(let blossom=0;blossom<heads.length;blossom++){
+   const head=heads[blossom];
+   const rotate=(x:number,y:number,z:number)=>{const t=.35+Math.sin(i)*.35;return [x+head[0],y*Math.cos(t)-z*Math.sin(t)+head[1],y*Math.sin(t)+z*Math.cos(t)+head[2]];};
    // Five independent closed, curved teardrop petals replace the flat star.
    // Shared tapered rims keep thickness and rounded silhouettes in real 3D.
    for(let petal=0;petal<5;petal++){
-    const f:Geometry={positions:[],normals:[],indices:[]},n=8,angle=petal/5*Math.PI*2+i*.31;
+    const f:Geometry={positions:[],normals:[],indices:[]},n=5,angle=petal/5*Math.PI*2+i*.31;
     const place=(x:number,y:number,z:number)=>rotate(x*Math.cos(angle)+z*Math.sin(angle),y,-x*Math.sin(angle)+z*Math.cos(angle));
     for(let side=0;side<2;side++){
      f.positions.push(...place(0,.004-side*.002,.023));
