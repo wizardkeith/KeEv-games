@@ -1,6 +1,12 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-25T14:28:21+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-25T15:25:40+08:00** (Asia/Hong_Kong).
+
+## Current unmerged V10 — model/asset remake and living-store interactions — 2026-10-25T15:25:40+08:00
+
+- [Draft PR #7](https://github.com/wizardkeith/KeEv-games/pull/7), branch `codex/game-v10-art-life`, pushed gate1 **`8776a7f6db12947684af005ec639863f3dc99775`**. **In progress, not merged/published; public remains V16 below.** Original approved target/Bible re-read; whole-scene component audit and optional owner-ready asset brief committed. Latest owner preference is internal Codex/Work asset generation, no Grok dependency/outreach. Target quality/style is the art gate, not relative improvement.
+- Gate1 implements new compatible Misaki/A/B head/hair/face/clothing/limb/shoe sculpt construction (<12k triangles each), with old builder retained;168tests pass, including UV/tangents/outward normals, actual contact/clearance and slow-render schedules. Visible-clock substeps remove the old50ms-per-render time loss without touching economics/hidden/offline authority. Actual cloud High flow with V16 assets completes true checkout/+/-margin/exit/ReduceMotion/close; positive receipt-to-float23.178s, negative12.419s. Rebuilt character High work view inspected separately; neither is physicalFPS/final-art acceptance. [Honest gate/status](https://github.com/wizardkeith/KeEv-games/blob/8776a7f6db12947684af005ec639863f3dc99775/docs/V10_PROGRESS.md).
+- Remaining: rebuild architecture/furniture/catalogue props/plants and material detail, integrate original Work-generated1254px botanical albedo, add restrained five-locale arrival/departure/customer dialogue and smoother all transitions, matched target/before/after/motion and final self-check/package, then independent review. No economy/save/progression/newshop/set change; no merge/Site/localPC/Unity/shutdown. Local V16 smoke reported High187s without verified checkout/float; not calledpassed or a fully diagnosed rootcause. PriorHigh failures remain disclosed.
 
 ## Current public release — V9 scene / interactions / Site v16 — 2026-10-25T14:28:21+08:00
 
