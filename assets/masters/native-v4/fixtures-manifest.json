@@ -8,104 +8,104 @@
     {
       "id": "room",
       "file": "assets/masters/native-v4/room.glb",
-      "bytes": 5940084,
-      "sha256": "50ea40d79a7608411b7d033ee044fd4a155e8794032429aa689e9775287e7b71"
+      "bytes": 5940208,
+      "sha256": "f990a07054209fac82239e058000bdeee3ad9ec09c742d53aecbd90e34be49f8"
     },
     {
       "id": "styling-v9",
       "file": "assets/masters/native-v4/styling-v9.glb",
-      "bytes": 2550508,
-      "sha256": "3a3bfbc1d2b6ac5367a4adb4446a19eaedaa382f2ca6ee8e4eb18c8e0265ea7d"
+      "bytes": 2671032,
+      "sha256": "74a44b65d7cb76ccacfb26c60711dfd812664a5662d1db5c6ddaaf3b720ae83c"
     },
     {
       "id": "window-canopy-v9",
       "file": "assets/masters/native-v4/window-canopy-v9.glb",
-      "bytes": 2403556,
-      "sha256": "2f258a5336a04aca18980a4339de525daffc20fbed2a0d4d9e6e53aa720378df"
+      "bytes": 2431204,
+      "sha256": "21b3ade3ccf42e978c7df0e3fec5030007a3f3f53a535e1a8519d76cfe84acf7"
     },
     {
       "id": "counter",
       "file": "assets/masters/native-v4/counter.glb",
       "bytes": 2305520,
-      "sha256": "1315d6b4b110cf4432951b56fb2d839b9c14f75ba2f10d6afc3bee6b537edf0e"
+      "sha256": "d6707dc97f9bf844598eb24726bd9404aab14fda272f883b87e0a94f298f0420"
     },
     {
       "id": "display-1",
       "file": "assets/masters/native-v4/display-1.glb",
       "bytes": 2284156,
-      "sha256": "bc4a28ead771a06fad6237826a3da3c2c00370d50bce06ca7261e58f9b3c2b61"
+      "sha256": "6c7d624336986c05ae34e76a4fea93394884f4922d9e6d3876d3061d03a39b36"
     },
     {
       "id": "display-2",
       "file": "assets/masters/native-v4/display-2.glb",
       "bytes": 2284176,
-      "sha256": "922e6d52e0df57cfbba38ec85bef7462fd8f645121d2f385416469502aab8c18"
+      "sha256": "f04be98d58d7c4872eb6c9ba488d964a98bcc63913e3ef3b80fe9b7238f14d68"
     },
     {
       "id": "display-3",
       "file": "assets/masters/native-v4/display-3.glb",
       "bytes": 2284156,
-      "sha256": "637f8462a414b74d09eb24ee5485c47f05bf75626e4215e45eb060d5829f9096"
+      "sha256": "ed226343a841825b17695a84e367188a70176ccac8ccbfa8376b8460aa9711a8"
     },
     {
       "id": "product-off.notebook",
       "file": "assets/masters/native-v4/product-off.notebook.glb",
-      "bytes": 2514708,
-      "sha256": "0c212ed30c6907a4c308b5f3dc7c56aa9da82c34b4da9cf40b958b605513101a"
+      "bytes": 2517260,
+      "sha256": "6001eaf6a2df3172b2d8e12d9c9eb4e4530db4ab3cd654e89141e43c2503cbcc"
     },
     {
       "id": "product-off.pencil",
       "file": "assets/masters/native-v4/product-off.pencil.glb",
-      "bytes": 2177220,
-      "sha256": "6bd81cbba19e15748baf75eb06571c44c7f52c8229df5fd8f1420d6b010a53c7"
+      "bytes": 2178088,
+      "sha256": "777a5e1db47458dc6f05bd57127b1a42f93df286cd42d7032cedb4ea3bef2654"
     },
     {
       "id": "product-off.mug",
       "file": "assets/masters/native-v4/product-off.mug.glb",
-      "bytes": 149412,
-      "sha256": "bf03896eeb91c5940761e5b1597b410fd156a643a3eae79103a6fd3d73ff4197"
+      "bytes": 149556,
+      "sha256": "59cc5b59b55b10a81c75ed9b81d74ce21d7796e2831121c34ef7e406ae3ddbb0"
     },
     {
       "id": "product-off.tea",
       "file": "assets/masters/native-v4/product-off.tea.glb",
       "bytes": 2478056,
-      "sha256": "f2be4f9272ded4f00e3a27f5c374a430ac64ccd2a467f541684707774068dbfa"
+      "sha256": "519332346e8ff6c09b1988c6a6627d9d700ff4c12f9a75df67634a7197f8baa9"
     },
     {
       "id": "product-off.cookie",
       "file": "assets/masters/native-v4/product-off.cookie.glb",
-      "bytes": 60216,
-      "sha256": "0808dcf4c2a33b3c8f93b5ba5e160806d5dcddd2ebcf6c19bf0742628a200cd8"
+      "bytes": 60360,
+      "sha256": "e36da81b33559855e72bbf3b58f0418759203b74cfb2f907eed972368b47da14"
     },
     {
       "id": "product-off.tote",
       "file": "assets/masters/native-v4/product-off.tote.glb",
       "bytes": 2552172,
-      "sha256": "298854ceb6cc9e10e2232f5aa8e620a8317176ed353ba1f2ae3196699108b249"
+      "sha256": "78965953b670414b76dd4b929d2c01eed2bc14bdf948f61a8db7de615cf3724c"
     },
     {
       "id": "product-off.card",
       "file": "assets/masters/native-v4/product-off.card.glb",
       "bytes": 2448888,
-      "sha256": "2bd82a0478b1eb0f1e861d7330619199ef21877b0e68c09667ce434f158f9dd0"
+      "sha256": "b45d3d3fe29a2a7447f53eeffc2ddd6ddd9bf33e5205eaf3e9b6d4a45af183cd"
     },
     {
       "id": "product-off.towel",
       "file": "assets/masters/native-v4/product-off.towel.glb",
-      "bytes": 2478736,
-      "sha256": "080658fc59d760b49a5a49e642c87323c21316cd9808a5aa80c408ec92a497dd"
+      "bytes": 2480468,
+      "sha256": "da48b91dd571fdeb73b581bcffed224998845f9f5f1255ec1e8175d575118a34"
     },
     {
       "id": "product-off.tray",
       "file": "assets/masters/native-v4/product-off.tray.glb",
       "bytes": 2178304,
-      "sha256": "896785f48ae9d3e27dc5da3be782b4283c79b0b62c60c027cc8e356b49a466c8"
+      "sha256": "4a74a6951d4e277c536b4858163d097c026ceec5234006212b2c257f0adcfdab"
     },
     {
       "id": "product-off.vase",
       "file": "assets/masters/native-v4/product-off.vase.glb",
-      "bytes": 189112,
-      "sha256": "1c6da6e2b4f734d3f449ba10c6dc8c44f305ffd332d0189f331ecb0d80d7965b"
+      "bytes": 189256,
+      "sha256": "75da7bbad5556fb08700c75323fa34c3943a0ccf7ea1f9fe786cead4620cba05"
     }
   ]
 }

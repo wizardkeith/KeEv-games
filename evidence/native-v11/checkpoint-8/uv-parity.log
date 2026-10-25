@@ -1,0 +1,16 @@
+BJS - [19:03:55]: Babylon.js v8.32.0 - Null engine
+✔ native v3 characters have distinct custom silhouettes, full local articulation and grounded 3.5–4 head proportions (401.380211ms)
+✔ native v3 GLB outputs match runtime vertices, material linear factors, local pivots and parent hierarchy (863.863651ms)
+✔ new native Misaki greeting keeps actual articulated palm/thumb vertices outside new torso, apron and skirt (118.037256ms)
+✔ sculpted clothes receive varied metre UVs without changing any rendered triangle or authored atlas (317.345619ms)
+✔ all portable actor fabric embeds exact Web weave/normal bytes, repeat and tangent frame (169.190804ms)
+✔ v10 rebuilt textured hair UV seams preserve triangle locality and supply unit orthogonal tangent frames without adding triangles (323.333823ms)
+✔ v5 GLB carries the exact original colour/linear-normal bytes, UVs and tangents used by the Web bob (156.092986ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2089.987827

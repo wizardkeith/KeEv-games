@@ -4,6 +4,20 @@
 
 
 
+
+## 第八個 checkpoint — 有效布料UV、實體花瓣／樹冠，材質門檻仍開放
+
+確認根因：多個sculpt布料mesh沒有UV，原weave只取同一texel。新metre unwrap保留每個實際三角形座標／法線、既有臉／眼atlas，處理cylindrical seam與端蓋，提供正交tangent；Web與GLB嵌入同一原創布色／normal、16/m repeat及KHR_texture_transform。這是必要的正確性修正，**不是聲稱藍外衣已達原圖質感**。原圖式柔和布料／袋／皮革差異仍不足，下一輪集中於一件coat＋skirt的checker方向／尺度、可見材質及少量領／腰褶。
+
+花材第一版仍是平星形，已改成五片獨立、閉合彎曲花瓣和花心；保留三個花瓶位置／組合，瓶口增加圓度。薄葉改為同外輪廓的閉合漸薄lens，省去不可見重邊面數；把預算轉到真正花瓣與窗外216片葉（原144）和較高樹冠，沒有將上限放寬。固定dressing共**15,464tri <16,000**，camera／key／focal lights、傢俬與商品組合保留。陶器新增restrained標準clearcoat，Web／KHR_materials_clearcoat同參數；不是GI或native外觀驗收。
+
+- [UV修正改前遊戲](../evidence/native-v11/checkpoint-8/uv-before-normal-game.png)／[改後](../evidence/native-v11/checkpoint-8/uv-after-normal-game.png)：56→57，同camera／真實QA入貨存檔，角色自然idle相位不同；不把這兩張當同姿勢布料品質通過。
+- [花瓣／樹冠改前](../evidence/native-v11/checkpoint-8/flowers-before-normal-game.png)／[改後](../evidence/native-v11/checkpoint-8/flowers-after-normal-game.png)，[實際店員鏡頭](../evidence/native-v11/checkpoint-8/flowers-after-staff-game.png)：59平星試驗→60閉合花瓣，真正遊戲，非概念圖／gallery。
+- [最新完整遊戲](../evidence/native-v11/checkpoint-8/game-panorama.png)／[收銀](../evidence/native-v11/checkpoint-8/game-cashier.png)／[毛利](../evidence/native-v11/checkpoint-8/game-margin.png)／[184.601秒連續未剪High/Minimal=false](../evidence/native-v11/checkpoint-8/game-uncut.webm)。真正Sandbox購買／陳列／結算／招呼／接觸／交袋／毛利／reload，0pageerror，隔離Normal基線不變。
+- **190tests/build/validate/replay/asset-check，139GLB零error/warning，305protected/history通過**。[原始紀錄／shader與payload雜湊／限制](../evidence/native-v11/checkpoint-8/provenance.json)。目前無fresh190獨立認證，不把parent對c085226的視覺檢查當完整測試認證。
+
+原圖品質／畫風仍未達標。保留已改善髮型與全景，接續可見布料／袋／皮革、自然紙品器物與遠近建築。公開仍V17；草稿PR8，沒有合併／發佈／新內容。
+
 ## 第七個 checkpoint — 第二顧客與實際曲面／行走檢查
 
 保留目前鏡頭、燈光、傢俬及商品組合；第二顧客另建可編輯Blender臉／耳／側分髮束／聚攏側髮／低髻，藍外衣、短頸、圍巾、奶油長裙、手指、鞋與個人斜揹袋。女顧客11,710tri、男顧客11,712tri，原12,000限制不變。Misaki recipe仍完全相等，角色limb/socket/rest transforms、下肢與原購物交接袋保留。不是所有模型皆重做；材質／整體目標仍未通過。

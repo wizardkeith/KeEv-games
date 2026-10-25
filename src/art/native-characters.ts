@@ -1,3 +1,4 @@
+import {unwrapMetres} from './metre-uv-v11';
 import {rebuildV11Female} from './customer-female-v11';
 import {rebuildV11Male} from './customer-male-v11';
 import {rebuildV11Misaki} from './character-v11';
@@ -107,12 +108,13 @@ export function nativeSurfaceGeometry(surface:NativeSurface):Geometry & {uvs?:nu
   // corner at the adjacent strand mean, rather than stretching a wrap seam.
   if(!authoredUV)for(let i=0;i<g.indices.length;i+=3)for(let k=0;k<3;k++){const n=g.indices[i+k];if(Math.hypot(g.positions[n*3],g.positions[n*3+2]-.028)<1e-10){const a=g.indices[i+(k+1)%3],b=g.indices[i+(k+2)%3],copy=g.positions.length/3;g.positions.push(...g.positions.slice(n*3,n*3+3));g.normals.push(...g.normals.slice(n*3,n*3+3));g.uvs.push((g.uvs[a*2]+g.uvs[b*2])/2,g.uvs[n*2+1]);g.indices[i+k]=copy;}}
  }
+ if(!authoredUV&&surface.role==='fabric')return unwrapMetres(g);
  return {...g,...(!g.uvs.length?{uvs:undefined}:{})};
 }
 export function nativeGrouped(recipe:NativeSurface[]){
  const groups=new Map<string,{role:MaterialRole;materialId:string;color:string;alpha:number;roughness:number;baseColorTexture?:string;geometry:Geometry & {uvs:number[];tangents?:number[]}} >();
  for(const surface of recipe){const role=surface.role??'paint',alpha=surface.alpha??1,intent=nativeMaterialIntent(surface),key=intent.materialId;let group=groups.get(key);if(!group){group={role,materialId:key,color:surface.color,alpha,roughness:intent.roughness,...(surface.baseColorTexture?{baseColorTexture:surface.baseColorTexture}:{}),geometry:{positions:[],normals:[],indices:[],uvs:[]}};groups.set(key,group);}const a=nativeSurfaceGeometry(surface),offset=group.geometry.positions.length/3;group.geometry.positions.push(...a.positions);group.geometry.normals.push(...a.normals);group.geometry.indices.push(...a.indices.map(x=>x+offset));group.geometry.uvs!.push(...(a.uvs??Array(a.positions.length/3*2).fill(0)));}
- for(const g of groups.values())if(g.role==='hair'&&g.roughness===.60)g.geometry.tangents=sculptTangents(g.geometry);
+ for(const g of groups.values())if(g.role==='fabric'||g.role==='hair'&&g.roughness===.60)g.geometry.tangents=sculptTangents(g.geometry);
  return [...groups.values()];
 }
 function eyes(kind:NativeCharacterKind):NativePart[]{
