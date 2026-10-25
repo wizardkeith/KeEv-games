@@ -1,0 +1,297 @@
+{
+  "status": "in progress; target art remains unaccepted",
+  "before": "immutable checkpoint5 b82b1a3 build47; actual production Sandbox cashier run",
+  "after": "build49 from current reviewed-in-progress worktree; source SHA256 pinned below; actual production Sandbox cashier run",
+  "camera": "same actual staff/cashier camera, same real purchase/display/one-hour settlement; natural gesture phases differ, NOT identical frozen poses",
+  "studio": "supplemental actual model/texture comparison at same scale/camera, NOT gameplay",
+  "completed": "both real High/Minimal=false flows observed greeting, real settlement, cashier contact/transfer and actual signed batch margin; reload equality and isolated QA Normal baseline unchanged; 0 page errors",
+  "timing": "before398.428s/after362.621s includes full setup and UI actions; recordings preserve actual elapsed time; overlapping cloud captures contend for SwiftShader. Not physical GPU FPS or a fresh mobile performance certification",
+  "geometry": "male11172tri < unchanged12000; original pivots/limb lengths/feet/sockets; shirt collar/torso/sleeves/cuffs/hands/shoes/personal satchel rebuilt; transactional shopping bag and accounting controller retained",
+  "retained": "Misaki raw recipe exact deep equality to pre-refactor checkpoint5; camera/light/environment/display byte unchanged; female still V10 at this checkpoint",
+  "sources": {
+    "src/art/customer-male-v11.ts": "0aa7690d2d9225cf4fc5550dfe97bc609ae2cb17d0549ee7c5216bacd5baa8bd",
+    "src/art/portrait-v11.ts": "e5e71a3d11ba5dc819dcf5666ad1e05f6ab7a2bc86211543264c1bb6bbb00f87",
+    "src/art/character-v11.ts": "ee8576b9ca09ac9dd0795376065b36701f41e006c62736c83fbcbd37494228d2",
+    "src/art/garments-v11.ts": "faa1c496552cc7c7c3fa436d1dc548c241d997c5fc19a9ffdbe41b8ce658a53c",
+    "src/art/native-characters.ts": "6b5c0a0c5b7e96d565a2500807de5674ef3eae1745d16c2aec6179b3c018e201",
+    "tools/build-v11-male.py": "5e3018223e818d1de1ea6d206d32447a2eb6d12b06de1f4436413429b872792c",
+    "tools/paint-v11-male.py": "4b345196174248fd9344978b05f046705be08363160b064132982c79ee22ff75",
+    "assets/masters/native-v11/visitor-a-head.json": "4883704555511c017f010cc7ea7fd9e13944124d98ded0518fa46482006a6209",
+    "assets/masters/native-v11/visitor-a-head.blend": "838cb2088c21037eb4c54b8ace7d51008eb1493ac79a2678691191202d1e7117",
+    "assets/masters/native-v11/visitor-a-skin.png": "820510b5a20d762a5167204dfc7416c6fc4c45cdb235c475ebcc0ffab00d9785"
+  },
+  "files": {
+    "evidence/native-v11/checkpoint-6/after-uncut.webm": {
+      "sha256": "f9fab5a7eca6a45d9179050df8e6507539c1e7d9845e31dc036869d39289ce4b",
+      "bytes": 1097567
+    },
+    "evidence/native-v11/checkpoint-6/after-results.json": {
+      "sha256": "cfee0fa7136a46f917a1cc190915a38eba47d19e97a2efbfbe0e25f23a9f5e84",
+      "bytes": 619
+    },
+    "evidence/native-v11/checkpoint-6/male-after-studio.png": {
+      "sha256": "0f2c6626c7c07cf1b13b03866abe7e562715b222ebde9dd05abb58f60b5d8390",
+      "bytes": 97967
+    },
+    "evidence/native-v11/checkpoint-6/before-recording.json": {
+      "sha256": "3e8cad794dc000aae28c7e91975b1e8e142a2e1ae5762df5e0b7af720c5f8c88",
+      "bytes": 16322
+    },
+    "evidence/native-v11/checkpoint-6/after-margin-dom.json": {
+      "sha256": "a328ac5919ad5ecf0f0618279e7385d46e6c77f27e80803711e79d0e24f4b8f3",
+      "bytes": 399
+    },
+    "evidence/native-v11/checkpoint-6/replay.log": {
+      "sha256": "67beb9a30e2f137d3025faa962d635b85a8275a326918698204bc5e1becbf447",
+      "bytes": 421
+    },
+    "evidence/native-v11/checkpoint-6/184-tests.log": {
+      "sha256": "da367b68b836931e76719fdc315a5d95f6813605e43f9a39db3bf25710f6bd0d",
+      "bytes": 23447
+    },
+    "evidence/native-v11/checkpoint-6/head-rebuild.json": {
+      "sha256": "23ba9401127e7acac7abab2427ba35ed891cdc064cf47449c7a71f56c4f155b9",
+      "bytes": 405
+    },
+    "evidence/native-v11/checkpoint-6/male-before-studio.png": {
+      "sha256": "1b2c6154b7c25c68bddc5e5615b5e39396c5b041b8ff27c4bb22527d51f2e326",
+      "bytes": 78297
+    },
+    "evidence/native-v11/checkpoint-6/before-margin.png": {
+      "sha256": "3d8cb9bf6f23ed944ccdbb6b152f5201f1c25a06d6d551ae3c4b7867d9d20daa",
+      "bytes": 963434
+    },
+    "evidence/native-v11/checkpoint-6/validate.log": {
+      "sha256": "d8cf77a1e38e0b04929bd0774b8f25dee39e9ff7717ea0b8ef7fe1e5a477369b",
+      "bytes": 599
+    },
+    "evidence/native-v11/checkpoint-6/before-staff-camera.png": {
+      "sha256": "9feb81cc05672efd5de1ad0c0da9561311ef1ff03825295ac0b89f84a9e3997d",
+      "bytes": 975256
+    },
+    "evidence/native-v11/checkpoint-6/locomotion.json": {
+      "sha256": "02316d0a033e40b6d9dc2355c88e3f29c7d7d2b20c35e64c85614ec96ac72a45",
+      "bytes": 1642
+    },
+    "evidence/native-v11/checkpoint-6/asset-check.log": {
+      "sha256": "745a24f82b573ca90ccf2811f4a27317ef1ed9cf3cc4d7fd9aa800eb4039cdeb",
+      "bytes": 2917
+    },
+    "evidence/native-v11/checkpoint-6/contact.json": {
+      "sha256": "1e64f9139796884817926d2a91890cbdaa178d1e53c25bdbd5a5da0c8c57359a",
+      "bytes": 71572
+    },
+    "evidence/native-v11/checkpoint-6/after-timeline.json": {
+      "sha256": "0fad83f876b7281a08a9eafedbd1af11c112efd2ffa965d868139a429a5dbd36",
+      "bytes": 3320816
+    },
+    "evidence/native-v11/checkpoint-6/after-recording.json": {
+      "sha256": "f784d09b35e6863a465789d6765f409d8e789e2b6706fc840a81948415c61250",
+      "bytes": 15662
+    },
+    "evidence/native-v11/checkpoint-6/clearance.log": {
+      "sha256": "9f47939176a8b322083ea685f86d7c4ddbab5975e8d6e6edae4714b8e931e50a",
+      "bytes": 1114
+    },
+    "evidence/native-v11/checkpoint-6/after-panorama.png": {
+      "sha256": "405e809787d558f47d787c970ca6c8fa6555d58a7f5993cb04aa8265dfb40fac",
+      "bytes": 819326
+    },
+    "evidence/native-v11/checkpoint-6/before-panorama.png": {
+      "sha256": "b763d7fd94d8ed351553963f34a8848c9915e4208f1dda456ad53d5c294a47b8",
+      "bytes": 818371
+    },
+    "evidence/native-v11/checkpoint-6/hero-preservation.json": {
+      "sha256": "5e33dbe4a1ad4c8cd198bd6794bbed36e05ba4202f85c98b07795881d42aab93",
+      "bytes": 247
+    },
+    "evidence/native-v11/checkpoint-6/139-glbs.json": {
+      "sha256": "5b610b5f05aca02a3491e4f990bcd6a3c6f2b62fe115075eefddefb9e9b55583",
+      "bytes": 17572
+    },
+    "evidence/native-v11/checkpoint-6/15-focused.log": {
+      "sha256": "8166695bfe01863012b3cf588e4f8558b4f541d48c2834dbb2c5202b1b94e55d",
+      "bytes": 2190
+    },
+    "evidence/native-v11/checkpoint-6/after-cashier.png": {
+      "sha256": "14102cf534cf5e2b4fe3a81acebc1ce191eb84153531eb5e2c33b245ee7d3bac",
+      "bytes": 967400
+    },
+    "evidence/native-v11/checkpoint-6/before-results.json": {
+      "sha256": "6486ce80c30d1f470ff1d2b3ed0a4719ef5013c49e14890652ff6156612e09c9",
+      "bytes": 619
+    },
+    "evidence/native-v11/checkpoint-6/after-margin.png": {
+      "sha256": "d377767b41cb8db9669b65feae4f465dd5cd4cc800c5f082b3da41808122cbcf",
+      "bytes": 963680
+    },
+    "evidence/native-v11/checkpoint-6/before-timeline.json": {
+      "sha256": "875319bcbfff033d49f054a57a3895f12cb0f0d1a0cd840be6ce36d2bbaaa125",
+      "bytes": 3445694
+    },
+    "evidence/native-v11/checkpoint-6/before-cashier.png": {
+      "sha256": "03a3bddbc492c80e1079cc020e0e1c21cabcf65c39fa3d9343a40bd32a2c9ef9",
+      "bytes": 964540
+    },
+    "evidence/native-v11/checkpoint-6/preservation.json": {
+      "sha256": "67ed211182296104b5904d6636eb08a1af0e1a41126e7bd1d3fbdc12c02eceab",
+      "bytes": 15652
+    },
+    "evidence/native-v11/checkpoint-6/before-margin-dom.json": {
+      "sha256": "6e9d3a34a6cfecab3ff95c4923a7544303dec8dddbed2a4b4e80cb9f68c1cc05",
+      "bytes": 400
+    },
+    "evidence/native-v11/checkpoint-6/before-uncut.webm": {
+      "sha256": "53fc6047065eb42ff75db99f6aa38c66fb98de8cd5230d1036a0d28b8aa9fb88",
+      "bytes": 1132001
+    },
+    "evidence/native-v11/checkpoint-6/after-staff-camera.png": {
+      "sha256": "cf90b89647c707efb7e1b40e81a45b0a43a9cb832ad1193c658b19c57a3db612",
+      "bytes": 970320
+    }
+  },
+  "runtimePayload": {
+    "index.html": "6cef0a49a5e81628242b66a29878173402d313fadfcba24075d25f9d9690713a",
+    "fonts/NotoSansHK.ttf": "49ed803874550e473cd9ca117101dc0c52efcb4048c0db114aae80e4fbc98f18",
+    "fonts/NotoSansJP.ttf": "61c98a4f9fac39f1f68f9f0a52a0b816fb69ba84d68c2780a2e364f96ad27390",
+    "fonts/PlusJakartaSans.ttf": "99c2de7a89fa5af7facb4b4e6370787d86e63fa69711f38a35f9ecf304c9efcc",
+    "fonts/NotoSansThai.ttf": "980bcfaee0273a4e5ba1d497646e26e0ac60abb578978955d9dd16ece7097182",
+    "fonts/NotoSansSC.ttf": "6cc44f4ea674d50ed753938b75532400ba973cda0601c28af9c390f5f4c8b550",
+    "assets/basisTextureLoader-CnpSWpPk.js": "7b8fe8ecb2e7192782adb47728595c75ab068f43ff0cfd6933df8c1636119a9b",
+    "assets/postprocess.vertex-BhMQ2Tri.js": "04895e3b1d8f6aa010c64e0d92f80ed6330239cb754a31e758132603e9ec796b",
+    "assets/rgbdDecode.fragment-B8ICrmEm.js": "48083dc04498b9cf28fb9b8a06f057f6b446e088e238e40364cd04cafdebd908",
+    "assets/counter.glb": "4abfa586bcd31bae50b75a264f32415e24d9a3f6592629cc71062bc66f5c68bb",
+    "assets/pbr.fragment-0E98PGaj.js": "f1681da57d38547fe51218a51efe63f5f41dd3d70408fa60900a0c2f0e9982d2",
+    "assets/shadowMapFragmentSoftTransparentShadow-BmytaidQ.js": "3b40872054e4dbcb0f653f73876b3964b4d8be0f5235522b8ae842c4b085d1d0",
+    "assets/passCube.fragment-1SovdcF4.js": "f16b3619a1499792fe30c280a1fb4472d5acac9e921eaef6bd13d5533d57481d",
+    "assets/kernelBlur.fragment-BKXes9ZO.js": "9e4c4cf76920c67cdeb08a0b8ce48a615f210b2da2c05ac4cff22db219fee276",
+    "assets/shadowMapFragmentSoftTransparentShadow-DxlVkKmP.js": "494cf6a7a3cad21c1e212c7a031a94e4bac34a143014607bac8167aba305a105",
+    "assets/pbr.fragment-EZbBTNct.js": "594e2663e4c1aeac9e706f1f95d7cca5118adab8edf86861f99cbb11156bc2e5",
+    "assets/pbr.vertex-Yd-Mv0Ws.js": "4b0d39931f54fd42be7108f95d993d24ec8b5b672612543b38ae3fa46cf768b3",
+    "assets/rgbdEncode.fragment-FoNGX0wy.js": "e4e8bc7676a4f31543829bc32b7e452a06fb3e03f3704f79f4d3f5a7f757c530",
+    "assets/iesTextureLoader-BXIENptt.js": "9fbaee01c43092136ec414e92156bafe65a752bbd75f9a73c078d60fc99bd61e",
+    "assets/shadowMap.vertex-D30g-8zE.js": "f1f20687c385f95201816e8914c36a1b5210ff63385ab4f0fbeb2d95fd435821",
+    "assets/helperFunctions-K6jVcLRq.js": "9c63070493f0b4559bea646e8f48b5c813e3bfe032b296033b288865b7542ea0",
+    "assets/ktxTextureLoader-CSEKncsg.js": "224f36f5ae7a75f9e009b5b64dd7bb90dd3906d2b284ee1953f5a19b39f4f519",
+    "assets/tgaTextureLoader-XdikprIq.js": "a22e68c2bfcb14ab4c35d09d1330a73cf23e897dcfdb7eaf17938f205fe1931b",
+    "assets/pass.fragment-CTJKeKUq.js": "298e620ef4478094bcdd36f7406b81e8591bbd522eb055102d0a288b622109ba",
+    "assets/index-CiMc3Tjj.css": "b72a538aa1adb953dec6bfd06831209f0ae61aea8aa3e385ac07154c91c96c72",
+    "assets/shadowMap.vertex-BTm2Jow8.js": "3eb746122bab87899f081d0cd439abf548c4c7794c3c1d81e4ef5e474f5bc236",
+    "assets/ddsTextureLoader-DFE2ips0.js": "9417180bb4a32507e1f1a43dbf7d756cbd95a7c7b11bc8d85e6a377b677068bc",
+    "assets/clipPlaneVertex-CGwrIOHL.js": "60b86e531be972368d59ec6bb3159087efdda937b40185d8119f250fafcaa607",
+    "assets/depthBoxBlur.fragment-D6Bofvf_.js": "3584dcf7aa034ff5c5134800468d49cf262d586595ae0abd1a3401048c5d8eb4",
+    "assets/packingFunctions-DtgZs4wb.js": "905acc14b3bac342bd2a58541dacaf9fc0bce1f5e38a0f73ad2adac542e1cf16",
+    "assets/kernelBlurVaryingDeclaration-EseNqmd3.js": "ae554e54fd0fdecde400f3417e34368ac1564705c52ba09459ad2a4e706b823a",
+    "assets/helperFunctions-BHxhAo5K.js": "7f70461560a761ae369b61d62c0cc99dadad333577feb7e9f9d9cfa85497ff7c",
+    "assets/rgbdEncode.fragment-DAHmxB3R.js": "3060961053829dd5066ada7c05f57723e42e66de07d6aa46605375c2312796bc",
+    "assets/pbr.vertex-DcpeO7Nk.js": "6b2df7d0ce20da00ac86a6bf852fc72301ac6faef669020729608473bafda5d9",
+    "assets/hdrTextureLoader-BJMFeRB3.js": "9b8d43d5cab22316f4608d6541e8fe9d5eecc8ea4a5dcd18a0ca80cfe6c1a701",
+    "assets/kernelBlur.vertex-B60JlyxG.js": "4a2a168e07c4c24d06b882ff2628a8a49f1c6fd95a9ff9ed4e41d6ef82514bde",
+    "assets/pass.fragment-B0xng06_.js": "5d35620afc1d3d37b602294380c3bd900271a39c180f5d413acd014713ad81f7",
+    "assets/logDepthDeclaration-DtY0G9WF.js": "67489fc76dfdf0be38a18f5dc9e23622b4a2c4eb74b2df17f82589eec7c57b4d",
+    "assets/depth.fragment-CMaE4Twa.js": "34af2881dc23405ed66c5d106d1e951a0c806a15438eea41cec9795e4dda4be9",
+    "assets/instancesDeclaration-UFaaJZ2z.js": "4d45110be3133aa62c33c7e2738c8f1c95cb92bb5bbf7b20bb045050111a3186",
+    "assets/kernelBlur.vertex-CFq7Wg0b.js": "e712a9537daf276ef17dff574c50548b17113aedd67e489d2bdcf217b731372f",
+    "assets/passCube.fragment-ZHNJ05a5.js": "a574f90266e1688747e5ed9aa5d62dabc4208299d42271cb370a42b72c648052",
+    "assets/dds-BaeDIOBu.js": "8f9cf3edb7b81987039a40e1076f229593f51ed132b2fe5bc5c7866aab2a8021",
+    "assets/world-Bqh2FK6V.js": "d2b54bd8412f0908817e0bd9cde9956d9064bda945e53f5f763b5aaf550e196c",
+    "assets/meshUboDeclaration-SdHEZd-r.js": "14e5edd2230ba7a654c24fcb7f070c095b8e1c87c9b47aa85bc9e01f86674623",
+    "assets/clipPlaneFragment-FqnqbXHu.js": "a85b73ed746dc0ad19dc7721f2368bf3bca456aee9fb5dcfd8cb0bceedf6600f",
+    "assets/meshUboDeclaration-BxD1yR8F.js": "5859c51007bd22bd0aa8998d1302b90b3a329219e382f3652a4c6041c73fca4c",
+    "assets/kernelBlur.fragment-BYBxBruR.js": "495a2142302afe22e4e1027f75553607ebaa8f9b7999c52cb1278ec2d4d3beb9",
+    "assets/skin-test.glb": "7472fe82516c54ad646d025ff9ad2115f9f3b2d6d06a8767a31f52b13376b01e",
+    "assets/envTextureLoader-DvO3HNJ3.js": "d8b59d8862aec47dbf1016652cf9c63aad7c18a01dd58a09a7a123afd9ea002d",
+    "assets/index-CzS9Az0l.js": "d026568b19feb457f75fae9328e38162b5b4e86bf477035e7c97faa39a61c80e",
+    "assets/logDepthDeclaration-DLQ-mc0D.js": "a9d43f8172269c98f8b386ef6b5f9cd12a38ae8ce4fa4d2b0513ee583f8300e9",
+    "assets/sale.wav": "bdf0db6fb6b690878eaf0c01392768b873188bf9999b0d1091d4dcb7bc9da2ba",
+    "assets/kernelBlurVaryingDeclaration-ChaKi4HH.js": "d194cefd284ecc643696611de53a231733ff7d3ffeb0887df466b5c134306fa8",
+    "assets/depthBoxBlur.fragment-D0orUYGZ.js": "4323857a9f9dcc56b809a5472ec6823700b0721831534f8bfca63d9af802e22b",
+    "assets/depth.vertex-CMN4tBkM.js": "412e5dbeb911d09a3b0923992a400a85a29b4fa6776a454edbdb6c88fa8bada4",
+    "assets/mesh.vertexData.functions-ayNlGC5K.js": "109b0c291f78ec6b98053b23c7a9ce01eb8bcee909a0964ce337a68a9b4bc61e",
+    "assets/shadowMap.fragment-B67XbBeS.js": "bca4caea215e723d7fb53181a894036b4524fe1f89bc79d96a7f0ff3ce6b02ae",
+    "assets/rgbdDecode.fragment-D9T9oUUA.js": "1983a1d38ba0354869f043279dd2feb54d331c3a7e467cba9d1bf8b67e0213cb",
+    "assets/exrTextureLoader-DiuJpIiU.js": "7f623377f5763c35f6e6f69aae23e66c4637f6a13f8f5efd467653761bfab6c5",
+    "assets/shadowMap.fragment-BlAdd9nv.js": "2dd7c173e6cfaa45add705476b1b97601a55e8db78b5bdca9a6cee8ea26ae448",
+    "assets/native-v3/visitor-b-native-v3.glb": "37e1cbdec84340a750a117ba8956b30de7a2f2ecc6234c5254de9d89996b29a0",
+    "assets/native-v3/visitor-a-native-v3.glb": "d62da02caf88feae8a21b406869ede48e599b93230e1a8768504f30395ff5a51",
+    "assets/native-v3/misaki-native-v3.glb": "504ccede74b312dc4dc2cd620d612660190744d02ea6605ffe790b56ea451ed5",
+    "assets/w1_1a/tea.glb": "601713d11fbb86696178740d7d9aed6f7b08b0f2053c18b9ca64bc1a5b186b00",
+    "assets/w1_1a/cookie.glb": "56d3f7e37e3786194a50fd595ee34a551935a86410200744b4fee8dbed9669ef",
+    "assets/w1_1a/tray.glb": "2a7b050d5c4c29b6fb8ca16c887ef78e2d1054d07c896306f7942d154cf30edc",
+    "assets/w1_1a/display-w1_1a.glb": "27c93d6233cc1877b80d52ff82d8a994f811afb42a22d1a43953ab3e0ab1df30",
+    "assets/w1_1a/plant-w1_1a.glb": "c21a3b5f469ec5ec3865ff1bacad6c84e204b3d5fa084138e522d9b005adc7c8",
+    "assets/w1_1a/pencil.glb": "abcdda62d02b5f319f0a27e059ce325cc74b41a436cc0c83e68299fdb5a04ab3",
+    "assets/w1_1a/mug.glb": "a89356583b9e07f76c8419f57d08393fc4d89b8272329b0a5a99e37e264a7d17",
+    "assets/w1_1a/card.glb": "44b7c523c7b806460616372f5ec5eb14ebd13d945740c9266fca72edaefee6f1",
+    "assets/w1_1a/tote.glb": "16195d570489bd0414fa70a311778343a59232856d68cdd9372cd12934dedd74",
+    "assets/w1_1a/generic-staff-w1_1a.glb": "3b8cabce823bf59f194af946cf26882d4deb1eb82606b91ea73ead6d56ad1bc6",
+    "assets/w1_1a/vase.glb": "ce8ff1db6ae3d9eba482896b2b03475a064c32d38e9f189f29c273420ee96b9f",
+    "assets/w1_1a/towel.glb": "4d8732870b6cf02cbd12c74c7451e5b6f98bee26ee3030addc66d9521ff85c85",
+    "assets/w1_1a/notebook.glb": "557a3e91d19bae5840e4040b64a26d39466385742340ea91c8c77379448a2942",
+    "assets/w1_1a/counter-w1_1a.glb": "58e5cef53fb60bff7c364e478a71018aab31804f1c7027b83335a31f22fa8a7d",
+    "assets/w1_1a/room-w1_1a.glb": "fb30caebe52c5e58bce3e23a6099b43d61c53fec43135c0b50ebb582cf7f929d",
+    "assets/native-v5/hair-strand-basecolor.png": "f735cf754d5333711f0809e11a1dbe09f2ae5e566d01e3625b3a94e98adc65e1",
+    "assets/native-v5/hair-strand-normal.png": "c5603902148920f86bf59a66920f357f7a6f845b7891e26bbb3845efeeb9091b",
+    "assets/native-v5/wood-grain-basecolor.png": "005a27aa95a703c95006e872275a7dd3a837b62bb16acacf3e83e2558f754cd6",
+    "assets/day1/misaki-smile-v1.glb": "b6c1ba01ac8c697f6230f745e86ceceefd47abd8af14eedc00e62aef72541283",
+    "assets/day1/misaki-calm-v1.glb": "f61a3dd54935f4c88c6d341e2b2c7c07311bff4e58c84ddb40697343cc811b05",
+    "assets/w1_1b/tea.glb": "305a59d15f07f158004f93b9bb1766de96e501a619efa170117c936b86d4edaf",
+    "assets/w1_1b/generic-staff-w1_1b.glb": "ed48d9b32e99b290746006cf65c9082ed59d6c6380dd1177c43c0a9301f2d7bd",
+    "assets/w1_1b/cookie.glb": "b3fe29d0193c385fa013f34f2cdb8e6cffe240341790d52a9ad69b3a45111a97",
+    "assets/w1_1b/tray.glb": "a7f4a392e9627701f6cd86fc8aa14ed8f1d547f53f9433fe32a5e4af8dcaf389",
+    "assets/w1_1b/pencil.glb": "222c5fac7895df7b0cda2421a960e7cc7e2ee62951ab047bbaccd650d1dc9d22",
+    "assets/w1_1b/mug.glb": "d21c6a345c2b3798365803b2025af010ee89561af6fb53d58ed46c562c9ddc50",
+    "assets/w1_1b/plant-w1_1b.glb": "e443fb165bc9a97937893db92e27d268ec8a7d741387746af760a255fd0b43fe",
+    "assets/w1_1b/card.glb": "1b0ec45e2cc6bfe7e71adc856491edbb2f306f8e449aa03ce6e6c685b72fc33f",
+    "assets/w1_1b/tote.glb": "7c258639cb378f4eb06f6df41004697665c6391ff128b3bc4c46458ad1ea9181",
+    "assets/w1_1b/display-w1_1b.glb": "39dd49e91bee6c9fc305498adaac2f07783dde79cc03fca05a920f63a5753ee7",
+    "assets/w1_1b/room-w1_1b.glb": "24ee1be4623e0745f06b950e5545fb8580d15393fa0c2b7fb2df3a89f79c8c4e",
+    "assets/w1_1b/vase.glb": "188cfc7827eff27cb28a232e37d883a61b8d5990882d74a76d22d9c1ef6b5bdf",
+    "assets/w1_1b/towel.glb": "0eadeb110572f5faffacb1e0d786fa5062cdc418390ac1ece4ecdc33c47444c5",
+    "assets/w1_1b/counter-w1_1b.glb": "0210373d5cc9c3662996a8970e608b7e4c2dab9d76690a4610b8e1e83b299802",
+    "assets/w1_1b/notebook.glb": "e9cf86b58ea868735e3bdc1763ac95f047a1043a6349bc387030466e6d807173",
+    "assets/w1_1/counter-w1_1.glb": "6f7c049686f17feeabcdba3bcc6594b320013508336bd3d27c4f14e52358cd43",
+    "assets/w1_1/tea.glb": "5700cf84d949c83e8cb1f5b2d44410294a9f7341e4ba42f972576d0364fd1862",
+    "assets/w1_1/cookie.glb": "640f770550fc75352db0fce6fc3e151f9c29f8ec4e8d7bda4b19e8d4f708427d",
+    "assets/w1_1/tray.glb": "8667182404da277a68c5066e0dbec5fd4bc35854694fb89315a0ad3ff56833b3",
+    "assets/w1_1/pencil.glb": "7770a19a8b4d49e6c112493772abec5415e0cfd6d35f42a2d52a24c6bda4168f",
+    "assets/w1_1/mug.glb": "1059b8569f028ec01dbe9f4d6524fd73fa22cf8f047f1e49d1900ac1eef472e9",
+    "assets/w1_1/display-w1_1.glb": "262b5d19636fb1d7b0e3a2b4f4b55701e907b0bb1987b7890ec6213298164791",
+    "assets/w1_1/card.glb": "aa8a32236fd5001e90c50bc1c25fe24159ac4627ed07e5c4713470a05f2659ac",
+    "assets/w1_1/tote.glb": "16bc44b791fbed0b972b61778f24e4a26acad917f7f43f17c308c351c0a92f28",
+    "assets/w1_1/generic-staff-w1_1.glb": "0424a2726d4236bd555731549062ff95ed01b64d1dee3e2ccca631f5697481c5",
+    "assets/w1_1/vase.glb": "10d319300b0f14b535d2443655d11bc0c6030aca0ec0512b5774799ec73894ca",
+    "assets/w1_1/towel.glb": "a1bb9dd4f7ca055fe15594f19c5caf1efe6929b063e43081291d848e68604045",
+    "assets/w1_1/notebook.glb": "8543abae07663deb8897984fcdd1e391680c5f20e097df73c654fba66650129f",
+    "assets/w1_1/room-w1_1.glb": "2a560e9c2e1d8e98299f4c10d70b0851f2d7fb960653db6303d9e96ede97d998",
+    "assets/w1_1/plant-w1_1.glb": "a6a737f6f7513e448482b86dfbb265e822894262a4b1744a318802f56420fb66",
+    "assets/w1_1a1/mug.glb": "cb3c59c5627d56ef6dbcc6d21b97a175393b038affd5174edf13ab3e85b27a41",
+    "assets/w1_1a1/counter-w1_1a1.glb": "4602da938fde3b8dbbc5a3ec5a5bb64007c51729e1ddb3c3d8c004e39ec54cef",
+    "assets/w1_1a1/room-w1_1a1.glb": "77ebd30600952ee370e20f598ee6f8a4c0202e54335d0dd654aa3d46ee0ca71a",
+    "assets/native-v9/plaster-normal.png": "bb1aa91c204925502323ba741ec5d5e9bf7d57b54a56bda90e1d3576f990ff72",
+    "assets/native-v9/linen-normal.png": "a814d8c51bbbb121dca3490105db31e0c4e075ec33137eab6fe3f01f77701f47",
+    "assets/native-v9/timber-normal.png": "683024005f936016676d258605a22309e049f9cc5e342468aa5d9d412ac3cc29",
+    "assets/native-v9/timber-colour.png": "743afc3951895b4a078d7dea1513f90ccafac20d411e255d92b7b2c76f47ce1e",
+    "assets/native-v9/floor-colour.png": "f0a94632354f5d2b80ee5d0e129b59702c557eede3a4514f34ad6d00ceb8b24d",
+    "assets/native-v6/cloth-weave-basecolor.png": "75a210ccac687212cdfd0e16184619f9f7e553934e9426e36fd1b135eb8a8686",
+    "assets/native-v6/floor-planks-basecolor.png": "6a2b414108dbeb42e6d761058d2073240e30760e85f3473d999c138446b9f419",
+    "assets/native-v4/wood-grain-basecolor.png": "a8b5b706fbc873b45a034816dc93829f6fb361a3326d33db97f3c04ee2aa88e1",
+    "assets/native-v11/misaki-skin.png": "c199646690241981c4bca688020aba8ea331a0a04c37c93c4fe6f1daf8f682a5",
+    "assets/native-v11/shop-floor-contact.png": "392b1e7c9f014199b60f75e4aede6345a5e1f2a72fd4b8f72effacf70f496bb2",
+    "assets/native-v11/visitor-a-skin.png": "820510b5a20d762a5167204dfc7416c6fc4c45cdb235c475ebcc0ffab00d9785",
+    "assets/native-v11/broadleaf-albedo.png": "a84a25481cfc8c3a3a12c4c9f3ce8cf648af8e97c9f90ed2bb34f48626c9f8e1",
+    "assets/native-v11/honey-oak-albedo.png": "ead247b61ee9e42f6ea3432696a5d68f6326dbd2d31362d4c303350514fb16b5",
+    "assets/native-v11/misaki-eyes.png": "b08f6b8258493b4a3beebcca07b58231aa34b1de4a78e1b9792f271cee43262c",
+    "assets/native-v10/plaster-normal.png": "bb1aa91c204925502323ba741ec5d5e9bf7d57b54a56bda90e1d3576f990ff72",
+    "assets/native-v10/linen-normal.png": "a814d8c51bbbb121dca3490105db31e0c4e075ec33137eab6fe3f01f77701f47",
+    "assets/native-v10/botanical-print-atlas.png": "0b0b41604dc76a1215b781c91246b12c2b82bbd8b79817655b898c435189976e",
+    "assets/native-v10/cloth-weave-basecolor.png": "e6a6af427f293bddccd02aec231f2d17a161e5f72a4c16b73b1e64da6a5c0443",
+    "assets/native-v10/hair-strand-basecolor.png": "2476f73f419fa1c57b05eeef611f3712959356c1e71df4896357df0838fb8e67",
+    "assets/native-v10/timber-normal.png": "969ef91ba8bf2c858531c49a50736f3c2e87f62e45fbfd172a46ac66197646ef",
+    "assets/native-v10/hair-strand-normal.png": "530c689078f71ffddbd8637da000d235933a5b103cb01cfb8e34b1163855d1b7",
+    "assets/native-v10/timber-colour.png": "2728a1d96d612394b6e8738528a87ca1e6421678a30fbfc8eb18f9398d1d9fb0",
+    "assets/native-v10/floor-colour.png": "17b4565e60bf82382a33522515361a9f4607529fc7a9dd5e3794b4149d3ddeea"
+  },
+  "next": "integrate second customer low-bun/soft jacket/scarf/hands; then material and flower/exterior scale readability; continue actual-game target comparisons",
+  "boundaries": "No merge, publication, Site identity/access/settings, owner save, user Chrome, local Unity, economy or story/shop/set changes. Experimental GI stays off."
+}

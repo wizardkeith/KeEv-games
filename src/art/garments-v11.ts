@@ -10,7 +10,7 @@ function skirt():NativeMesh{
  for(let i=0;i<g.positions.length;i+=3){const y=g.positions[i+1],a=Math.atan2(g.positions[i+2],g.positions[i]),hemWeight=Math.max(0,1-(y-.30)/.44),detail=1+.022*Math.cos(a*13+.4)*hemWeight;g.positions[i]*=detail;g.positions[i+2]*=detail;g.positions[i+1]+=.0045*Math.sin(a*5)*hemWeight;}
  return material(finishSculpt(g),'#795D70');
 }
-function frontZ(x:number,y:number,supports:NativeMesh[]){let front=Infinity;for(const s of supports){const g=s.geometry;for(let k=0;k<g.indices.length;k+=3){const [a,b,c]=g.indices.slice(k,k+3).map(i=>g.positions.slice(i*3,i*3+3)),d=(b[0]-a[0])*(c[1]-a[1])-(c[0]-a[0])*(b[1]-a[1]);if(Math.abs(d)<1e-12)continue;const u=((x-a[0])*(c[1]-a[1])-(c[0]-a[0])*(y-a[1]))/d,v=((b[0]-a[0])*(y-a[1])-(x-a[0])*(b[1]-a[1]))/d;if(u>=-1e-8&&v>=-1e-8&&u+v<=1+1e-8)front=Math.min(front,a[2]+u*(b[2]-a[2])+v*(c[2]-a[2]));}}return front;}
+export function frontZ(x:number,y:number,supports:NativeMesh[]){let front=Infinity;for(const s of supports){const g=s.geometry;for(let k=0;k<g.indices.length;k+=3){const [a,b,c]=g.indices.slice(k,k+3).map(i=>g.positions.slice(i*3,i*3+3)),d=(b[0]-a[0])*(c[1]-a[1])-(c[0]-a[0])*(b[1]-a[1]);if(Math.abs(d)<1e-12)continue;const u=((x-a[0])*(c[1]-a[1])-(c[0]-a[0])*(y-a[1]))/d,v=((b[0]-a[0])*(y-a[1])-(x-a[0])*(b[1]-a[1]))/d;if(u>=-1e-8&&v>=-1e-8&&u+v<=1+1e-8)front=Math.min(front,a[2]+u*(b[2]-a[2])+v*(c[2]-a[2]));}}return front;}
 function redrape(part:NativeMesh,supports:NativeMesh[],gap:number):NativeMesh{
  const g={...part.geometry,positions:[...part.geometry.positions],normals:[...part.geometry.normals],indices:[...part.geometry.indices]},rows=new Map<string,{ids:number[];x:number;y:number;front:number}>();
  for(let i=0;i<g.positions.length;i+=3){const [x,y,z]=g.positions.slice(i,i+3),key=x.toFixed(10)+':'+y.toFixed(10),r=rows.get(key)??{ids:[],x,y,front:z};r.ids.push(i);r.front=Math.min(r.front,z);rows.set(key,r);}
@@ -20,7 +20,7 @@ function redrape(part:NativeMesh,supports:NativeMesh[],gap:number):NativeMesh{
 interface PatternRow {y:number;inner:number;outer:number}
 /** A closed, cut-and-sewn front pattern fitted to the actual curved torso.
  * It has thickness and continuous sloping shoulders, rather than upright bars. */
-function fittedPattern(rows:PatternRow[],support:NativeMesh,side:number,gap:number,color:string):NativeMesh{
+export function fittedPattern(rows:PatternRow[],support:NativeMesh,side:number,gap:number,color:string):NativeMesh{
  const cols=6,stride=cols+1,count=rows.length*stride,g:Geometry={positions:[],normals:[],indices:[]};
  for(let layer=0;layer<2;layer++)for(const [r,row]of rows.entries())for(let j=0;j<=cols;j++){
   const u=j/cols,x=side*(row.inner+(row.outer-row.inner)*u),sample=frontZ(x,row.y,[support]);

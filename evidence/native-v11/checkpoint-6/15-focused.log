@@ -1,0 +1,29 @@
+BJS - [18:27:01]: Babylon.js v8.32.0 - Null engine
+✔ native v3 characters have distinct custom silhouettes, full local articulation and grounded 3.5–4 head proportions (595.90812ms)
+✔ native v3 GLB outputs match runtime vertices, material linear factors, local pivots and parent hierarchy (1772.464035ms)
+✔ new native Misaki greeting keeps actual articulated palm/thumb vertices outside new torso, apron and skirt (202.463381ms)
+BJS - [18:26:58]: Babylon.js v8.32.0 - Null engine
+BJS - [18:27:02]: Babylon.js v8.32.0 - Null engine
+BJS - [18:27:02]: Babylon.js v8.32.0 - Null engine
+BJS - [18:27:02]: Babylon.js v8.32.0 - Null engine
+BJS - [18:27:03]: Babylon.js v8.32.0 - Null engine
+✔ native scene adapter stock/sale/display and both idle tasks keep articulated hands out of clothes and counter (4038.135431ms)
+✔ native scene walk keeps stance foot at floor and alternates finite swing lift over a distance-driven cycle (101.30177ms)
+✔ native prop pool stays bounded and cancellation/hidden releases every owner (62.645143ms)
+✔ sale bag preserves its prior world pose across hand-to-counter ownership and never sinks through counter (92.044846ms)
+✔ v9 walking staff keeps real full thighs covered by skirt while feet retain floor contact (2405.736607ms)
+✔ rebuilt customer retains every articulation/contact pivot and existing lower-body envelope (137.532507ms)
+✔ customer satchel strap joins actual shirt and pouch surfaces, while fitted placket does not float (38.168938ms)
+✔ v10 rebuilt textured hair UV seams preserve triangle locality and supply unit orthogonal tangent frames without adding triangles (438.423315ms)
+✔ v5 GLB carries the exact original colour/linear-normal bytes, UVs and tangents used by the Web bob (193.079391ms)
+✔ v9 fixed styling keeps real entry corridor clear and uses bounded original geometry (79.949658ms)
+✔ v9 source master retains all actual fixed styling and canopy for native reuse (94.568873ms)
+✔ v9 original lossless material inputs have matching runtime/master bytes and declared hashes (1.180309ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7671.585595

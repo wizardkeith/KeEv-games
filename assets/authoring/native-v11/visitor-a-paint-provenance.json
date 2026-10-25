@@ -1,0 +1,5 @@
+{
+  "source": "tools/paint-v11-male.py",
+  "method": "Original analytic UV paint; no face/reference pixels",
+  "sha256": "820510b5a20d762a5167204dfc7416c6fc4c45cdb235c475ebcc0ffab00d9785"
+}

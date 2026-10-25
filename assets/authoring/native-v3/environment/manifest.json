@@ -4,7 +4,7 @@
   "master": {
     "path": "assets/masters/native-v3/environment-v3.json",
     "sizeBytes": 13301307,
-    "sha256": "33c82aebb2541d8909e8e13ba740b0f89129cb1ff8686bbe0dd04cfd3c5b770e"
+    "sha256": "dc298db3a6f386a196c09188efb45f4f18c45c54f7c0a4c6c57f785fa301b3f6"
   },
   "sources": {
     "src/art/shop-v10.ts": "0ac65000bb42de57c335410b3e1af6f12ab2557d78c89b9eac3d548ae12c0623",
@@ -26,7 +26,7 @@
     "tools/generate-v10-surfaces.py": "e550229e751c35e818e74188652b8153525595c74d6e3e5a6430d8c1ba66e11d",
     "src/art/native-room-probe.ts": "fde6f98d1aa353404852c2ad7006240505dc3f1e70c03bd315721270e16382eb",
     "src/art/native-styling.ts": "aab8cef5b6d260df51f5dd9eab5f7444bd8f154e4c92eda708b1b8846ca821d1",
-    "src/art/native-characters.ts": "22f51fc54fdd222a9fc0d2c553b5c1522aac059c2d043fad3b502c310a881462",
+    "src/art/native-characters.ts": "6b5c0a0c5b7e96d565a2500807de5674ef3eae1745d16c2aec6179b3c018e201",
     "src/art/native-environment.ts": "381f0f1c87782b5fb250e5bde29b22bb2732ad5eb7d5bdff4ec4243dd6c7f17a",
     "src/art/native-display.ts": "cd279fd081ccf6f449b23b819e679f7c7a8f86e30eeb7b235653ca0ac04ac4b7",
     "src/art/decor-vignette-v11.ts": "7bd84377e6e6f3348d7930ef72c02a192645f3a66b4f8439048c6db599cea5b8",

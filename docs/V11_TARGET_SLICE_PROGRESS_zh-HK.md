@@ -2,6 +2,18 @@
 
 使用 Keith 2026-10-25 再確認的唯一原圖：`docs/codex-v4/reference/Approved_Visual_Target_Misaki.png`，1536×1024，SHA256 `9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114`。Library 原樣副本 `libfile_df47ac9baf04819182f496bbb7ff40b6`。已實際讀取原圖與 V17 完整遊戲截圖；原圖是目標店景／人物合成圖，不是已達成的遊戲畫面。Bible §28：真正3D、35–45°、約3.5–4頭身、柔和anime toon人物／soft stylized PBR環境。
 
+
+## 第六個 checkpoint — 男顧客實際重建，目標仍未達標
+
+保留第五輪已經實拍的燈光、櫃檯／中央桌高低陳列與鏡頭，沒有再排列傢俬。男顧客另建可編輯Blender頭／耳／短髮，實體分層髮束與側後輪廓；衣身、斜肩、短頸、厚領片／門襟／袖口、手掌與四指／拇指、帆布鞋及個人斜揹袋重建。**11,172tri，原12,000限制不變**。第一次肩帶末端約5cm浮離衣身、抬高髮束超出3.5–4頭身檢查，已按實際三角面修正並重跑；沒有降低檢查標準。原購物交接袋、IK／所有肢體與接觸關節、交易／存檔完全保留。共用臉面定位函式抽出後，Misaki所有原始recipe幾何／材質／pivot與第五輪snapshot完全相等；第二顧客仍未整合新模型。
+
+- **實際遊戲相同收銀鏡頭：**[改前](../evidence/native-v11/checkpoint-6/before-cashier.png)／[改後](../evidence/native-v11/checkpoint-6/after-cashier.png)。皆真實Sandbox購買／陳列／結算到接觸，非注入姿勢／假銷售；自然動作相位不同，不宣稱逐格同姿勢。
+- [改後完整遊戲](../evidence/native-v11/checkpoint-6/after-panorama.png)、[真實毛利](../evidence/native-v11/checkpoint-6/after-margin.png)、[362.621秒連續未剪實拍](../evidence/native-v11/checkpoint-6/after-uncut.webm)／[改前398.428秒](../evidence/native-v11/checkpoint-6/before-uncut.webm)。兩輪High/Minimal=false皆觀察招呼、真正結算、接觸／交袋、毛利，reload／隔離Normal基線一致，0pageerror。包含整個UI準備；重疊雲端渲染造成耗時，不當實體GPU/FPS證據。
+- [同尺度模型改前](../evidence/native-v11/checkpoint-6/male-before-studio.png)／[改後](../evidence/native-v11/checkpoint-6/male-after-studio.png)：補充studio，明確**不是遊戲畫面**。
+- **184tests／15focused／build／validate／replay／asset-check通過，139GLB零error/warning，305protectedfiles/history通過**。Blender頭JSON全新重建byte-identical。原獨立P2量測probe重跑：socket3.600cm、交接0.20秒位移2.120cm、4,655,808手臂／手頂點清除檢查、root最小距離0.690m。[來源雜湊、全部原始紀錄與界線](../evidence/native-v11/checkpoint-6/provenance.json)。
+
+這不是原圖畫風／畫質驗收；人物仍有低密度形體與布料質感差距，白花／商品規律度及窗外層次仍待改善。下一步第二顧客的低髻、外衣／圍巾及手部，再做實際正常鏡頭比較。公開仍V17、PR8草稿，沒有合併／發佈或內容擴張。
+
 ## 實際主要差距
 
 - 完整店景：V17 空白地板／牆面比例大，陳列高度單一，四件同類商品不足以形成目標的混合生活選物密度；須保留實際庫存顯示，不能用美術擅自增加可賣商品。
