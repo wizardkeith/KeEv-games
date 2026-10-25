@@ -1,17 +1,18 @@
 {
   "version": "native.products.v3",
   "file": "assets/masters/native-v3/products-v3.json",
-  "bytes": 1853024,
-  "sha256": "3822fef2a7da48941489272f4eb0b6a3a7de27f2c2731e7c6f3adc59a3bdf105",
+  "bytes": 2264812,
+  "sha256": "27344646527fb1948120e534bc0fcaa14b525d89d8d714862820bf12443a78b4",
   "rebuild": "node --import tsx tools/export-native-products.ts",
   "sourceSha256": {
     "src/art/native-products.ts": "b96bc68161d184fd38855e3a482452a485ece3546f456b76107212449f1e933d",
-    "src/art/products-v10.ts": "cb0011769f27efe1169cef83ccf4c201bed26eab3843d3a435a22f40f18d753f",
+    "src/art/products-v10.ts": "ce5609e36e69b3c8c68985860461a6ecb5df33c7484b2e095a74689bea0dda04",
     "src/art/sculpt-v10.ts": "114a810e5245f58832dc5d12641e20e6ca1b7d159a2410d7d72cd3b3a141546c",
     "src/art/shop-v10.ts": "0ac65000bb42de57c335410b3e1af6f12ab2557d78c89b9eac3d548ae12c0623",
+    "src/art/tote-v10.ts": "2b357b54c9f233b5f4ba398b04ac384632ea0c582978840c886266f0fa25fe74",
     "src/art/recipes.ts": "b3c6890ff3e025f14373f28f10a68f3eeeb54f8a733a26192233f81f0090b905",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
-    "tools/export-native-products.ts": "d224207c198b0d8b0d1ca9a69ecee38cfe1dcb097b79b634d5e913482e9ab5a6"
+    "tools/export-native-products.ts": "fa9dcd25e40a4f1faba90c3acdd7aa7277c6fa9d0a750d7f3dd2956361501378"
   }
 }
