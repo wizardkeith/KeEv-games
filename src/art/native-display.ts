@@ -1,7 +1,15 @@
+import {relocateV11Decoration} from './decor-vignette-v11';
 /** Curated physical samples, one per visible stock unit (maximum eight).
  * Units/metres; no inventory is created by staging. Fixtures are not SKUs. */
 export function displaySamples(id:string,stock:number,table:number){
  const count=Math.min(8,Math.max(0,Math.floor(stock)));
+ if(table===1)return Array.from({length:count},(_,k)=>{
+  const flat=['off.notebook','off.card','off.tray','off.towel'].includes(id),scale=id==='off.tote'?.72:id==='off.notebook'?.90:id==='off.pencil'?1.12:.90;
+  if(id==='off.pencil')return {at:[.31,0,-.30+k*.065] as [number,number,number],yaw:k%2?.008:-.008,scale};
+  if(id==='off.tote')return {at:[k%2?.58:.10,0,[-.37,-.14,.09,.36][Math.floor(k/2)]] as [number,number,number],yaw:k%2?.025:-.025,scale};
+  if(flat)return {at:[k%2?.55:.10,0,-.20] as [number,number,number],yaw:k%2?.03:-.03,scale};
+  return {at:[-.03+(k%3)*.34,0,[-.34,0,.36][Math.floor(k/3)]] as [number,number,number],yaw:[-.03,.04,-.04][k%3],scale};
+ });
  return Array.from({length:count},(_,k)=>{
   if(count>4){const scale=id==='off.pencil'?1.12:id==='off.notebook'?1.02:id==='off.tote'?.72:.94;
    if(['off.notebook','off.card','off.tray','off.towel'].includes(id))return {at:[k%2?-.31:.31,Math.floor(k/4)*(id==='off.notebook'?.067:id==='off.tray'?.070:id==='off.towel'?.160:.025)*scale+.009,Math.floor(k%4/2)?-.22:.22] as [number,number,number],yaw:k%2?-.10:.08,scale};
@@ -26,5 +34,5 @@ export function backDisplaySamples(){
   [['off.mug',-2.86,2],['off.tea',-2.18,2],['off.card',-1.47,1],['off.notebook',-.77,3],['off.tote',.04,1],['off.vase',.72,1],['off.card',1.35,1]],
   [['off.vase',-2.92,1],['off.notebook',-2.38,3],['off.card',-1.69,1],['off.tea',-.99,2],['off.cookie',-.31,2],['off.towel',.40,2],['off.mug',1.19,2]],
  ] as const;
- return rows.flatMap((groups,row)=>groups.flatMap(([id,x,count])=>Array.from({length:count},(_,k)=>{const stack=['off.notebook','off.towel','off.cookie'].includes(id),upright=id==='off.card';return {id,at:[x+(stack?k*.012:(k-(count-1)/2)*.18),[1.0025,1.5225,2.2825][row]+.004+(stack?k*(id==='off.notebook'?.055:id==='off.cookie'?.11:.15):0)+(upright?.17:0),2.84+(k%2?-.035:.02)] as [number,number,number],turn:[upright?-1.18:0,(row-1)*.08+(k-.5)*.13,0] as [number,number,number],scale:id==='off.notebook'?.90:.85};})));
+ return rows.flatMap((groups,row)=>groups.flatMap(([id,x,count])=>Array.from({length:count},(_,k)=>{const stack=['off.notebook','off.towel','off.cookie'].includes(id),upright=id==='off.card';return {id,at:[x+(stack?k*.012:(k-(count-1)/2)*.18),[1.0025,1.5225,2.2825][row]+.004+(stack?k*(id==='off.notebook'?.055:id==='off.cookie'?.11:.15):0)+(upright?.17:0),2.84+(k%2?-.035:.02)] as [number,number,number],turn:[upright?-1.18:0,(row-1)*.08+(k-.5)*.13,0] as [number,number,number],scale:id==='off.notebook'?.90:.85};}))).map(relocateV11Decoration);
 }

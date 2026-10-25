@@ -55,6 +55,7 @@ function bouquet():NativeSurface[]{
  const g:Geometry={positions:[],normals:[],indices:[]},profile=[[.001,0],[.075,0],[.10,.05],[.094,.18],[.043,.25],[.043,.28],[.034,.28],[.034,.25],[.083,.18],[.089,.05],[.066,.014],[.001,.014]],n=12;
  for(const [r,y]of profile)for(let j=0;j<n;j++){const a=j/n*Math.PI*2;g.positions.push(r*Math.cos(a),y,r*Math.sin(a));}
  for(let r=0;r<profile.length-1;r++)for(let j=0;j<n;j++){const a=r*n+j,b=r*n+(j+1)%n;g.indices.push(a,a+n,b,b,a+n,b+n);}
+ for(const row of [0,profile.length-1]){const center=g.positions.length/3;g.positions.push(0,profile[row][1],0);for(let j=0;j<n;j++)g.indices.push(...(row===0?[center,j,(j+1)%n]:[center,row*n+(j+1)%n,row*n+j]));}
  const out:NativeSurface[]=[M(finishSculpt(g),'#91A08A','ceramic')];
  for(let i=0;i<9;i++){
   const a=i*2.39996,r=.08+(i%3)*.046,tip:V3=[Math.cos(a)*r,.42+(i%4)*.055,Math.sin(a)*r];
@@ -69,7 +70,7 @@ function bouquet():NativeSurface[]{
 }
 export function buildV11Styling():NativeSurface[]{
  const out=[...buildV10Styling().slice(0,14),...buildV11TrailingGreenery()];
- for(const [x,y,z,scale]of [[-4.18,.89,-.91,1.1],[-.70,1.0575,.25,.95],[1.35,1.111,-1.47,.90]])for(const part of bouquet()){
+ for(const [x,y,z,scale]of [[-4.18,.901,-.91,1.1],[-.53,1.0735,-.05,.95],[1.35,1.111,-1.47,.90]])for(const part of bouquet()){
   const p=scaled(part,scale);out.push({...p,at:[p.at[0]+x,p.at[1]+y,p.at[2]+z]});
  }
  return batch(out);

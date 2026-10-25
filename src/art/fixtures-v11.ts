@@ -20,11 +20,11 @@ export function buildV11Display(variant=0):NativeSurface[]{
  for(const z of [-.36,.36])out.push(board([1.49,.13,.065],[0,.765,z],'#AD8355'));
  // A real two-legged presentation riser adds height hierarchy without adding
  // sellable goods. Actual owned samples on its back row use the same .14m top.
- out.push({...board([1.40,.045,.48],[0,1.110,.20],'#CCA77A','wood',.012),roughness:.64});
- for(const x of [-.56,.56])out.push(board([.055,.095,.38],[x,1.040,.20],'#AD8355','wood',.008));
+ out.push({...board([variant===1?1.65:1.40,.045,variant===1?.30:.48],[0,1.110,variant===1?.36:.20],'#CCA77A','wood',.012),roughness:.64});
+ for(const x of [-.56,.56])out.push(board([.055,.095,variant===1?.24:.38],[x,1.040,variant===1?.36:.20],'#AD8355','wood',.008));
  // Retain the original runner and sign as actual fixture surfaces; exclude its
  // retired top/legs/shelf by their existing authoring positions.
- const retained=buildV10Display(variant).slice(9);out.push(...retained.map(p=>p.role==='fabric'?zScale(p,0,1.10/.95):p));
+ const retained=buildV10Display(variant).slice(9);out.push(...retained.map(p=>{if(variant===1&&(p.role==='metal'||p.role==='paper')){const g=nativeSurfaceGeometry(p);for(let i=0;i<g.positions.length;i+=3){g.positions[i]-=.66;g.positions[i+2]-=.15;}if(g.uvs===undefined)delete g.uvs;return {...p,shape:'mesh' as const,role:p.role,geometry:g,at:[0,0,0] as V3};}return p.role==='fabric'?zScale(p,0,1.10/.95):p;}));
  return out;
 }
 export function buildV11Counter():NativeSurface[]{

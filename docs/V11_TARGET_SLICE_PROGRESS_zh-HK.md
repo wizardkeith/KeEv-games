@@ -63,3 +63,14 @@
 **有改變方法，但沒有假稱成功：**用實際245個靜態mesh／原始材質貼圖在Cycles烘焙2048²間接光atlas，再以compact UV sidecar接入真正遊戲。A/B確實有222個mesh套用，9個簽名未匹配；效果太弱且牆面出現噪點，因此**未採納為預設，也未算通過**。預設build不啟用該flag、不需要試驗資料；工具／原始試驗資料仍保留於saved cloud QA，沒有用圖片替代可玩3D。完整來源／雜湊／限制見[provenance](../evidence/native-v11/checkpoint-4/provenance.json)。
 
 下一個重點依獨立覆核：實際暖焦點光／窗光與冷外景A/B；完成櫃檯＋中央桌的一組高中低、白花與既有非庫存展示樣品陳列；然後把男顧客的髮／胸肩／領口／手／袋提升至目前Misaki品質。兩位顧客仍未重建，不以studio或技術pass冒充原目標藝術驗收。沒有merge/deploy/Normal玩家資料/使用者Chrome/Unity/關機／故事玩法擴張。
+
+
+## 第五個 checkpoint — 真正焦點光／一組高中低陳列，客人仍待重建
+
+[同鏡頭焦點光前](../evidence/native-v11/checkpoint-5/game-before-focal-light.png)／[焦點光後](../evidence/native-v11/checkpoint-5/game-after-focal-light.png)：真正遊戲，用兩個有範圍的暖色bounce proxy建立櫃檯／中央桌焦點；spot candela與directional lux是不同單位，不宣稱實測物理照度。原吊燈位置保留，移位會遮商品的試驗已放棄。Low保留櫃檯固定焦點與基本人物動作，減少中央補光；不是新增玩法。
+
+[實際陳列／正常UI](../evidence/native-v11/checkpoint-5/game-vignette-normal.png)／[實際Zen](../evidence/native-v11/checkpoint-5/game-vignette-zen.png)：原35件非庫存showroom只搬5件，三本書形成中層、卡片與托盤在櫃檯、白花在中央桌形成高層；按實際模型底面／高度安放，不改玩家庫存。中央桌可售樣品維持min(stock,8)，保留裝飾區與層架空間，10SKU實際bounds／堆疊／互不穿插測試通過。量體、價格、會計、存檔與五語UI不變。
+
+[真正收銀](../evidence/native-v11/checkpoint-5/game-cashier-build46.png)／[實際毛利](../evidence/native-v11/checkpoint-5/game-margin-build46.png)／[175秒未剪High遊戲錄影](../evidence/native-v11/checkpoint-5/game-uncut-build46.webm)。招呼、實際結算、手部接觸／交袋、批次毛利、重載均觀察到，0pageerror、隔離Normal基線相同。這段是build46；build47只調中央／窗邊花材的落點／scale並封合小型裝飾瓶底，交易／人物／光照程式相同，**不假稱另跑build47動作**。182tests/build/validate/replay/assets、139GLB零error/warning、305protected檔／原歷史通過。[來源／雜湊／限制](../evidence/native-v11/checkpoint-5/provenance.json)。
+
+**仍不合格於原目標：**整體場景／材質與原圖仍有明顯差距，兩位顧客還是主要V10資產；下一項是男顧客髮／胸肩／領口／手／袋，先保留已改善的Misaki與店景比例。沒有以182tests冒充美術驗收，沒有merge/deploy/使用者Chrome/Normal玩家資料/Unity/關機。原目標品質與風格gate持續開放。

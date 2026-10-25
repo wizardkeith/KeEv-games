@@ -52,6 +52,8 @@ export const nativeLighting={
  faceFill:{color:'#FFF0DC',ground:'#B9B6B0',intensity:.43,direction:[.12,.35,-1] as const,parts:['head','eye-left','eye-right','eyelid-left','eyelid-right','brow-left','brow-right','mouth'] as readonly string[],roles:['skin','ink'] as readonly string[]},
  shadow:{size:2048,normalBias:.0035,bias:.0005,darkness:.16},
  exteriorFill:{color:'#C3DCE4',ground:'#839D99',intensity:.42},
+ // Bounded art-directed bounce proxies; point/spot candela are not directional lux.
+ practicals:[{id:'cashier',position:[2.2,2.615,-1.5],color:'#FFD5A7',intensity:12.0,angle:1.52},{id:'central',position:[.1,2.615,-.1],color:'#FFE0B5',intensity:9.0,angle:1.62}] as const,
  exposure:1,
  note:'V11 static warm low-angle window key and cool exterior, original room IBL, soft contact-hardening shadows and actual floor AO. ACES exposure1/contrast1.06. No bloom or dynamic reflection. Face fill remains restricted to skin/ink. Actual game render, not metadata or tests, determines visual fidelity.',
 } as const;
