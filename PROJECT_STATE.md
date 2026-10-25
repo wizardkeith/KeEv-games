@@ -1,6 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-25T21:06:30+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-25T22:28:21+08:00** (Asia/Hong_Kong).
+
+## V11 original-target rebuild — early checkpoint, in progress — 2026-10-25T22:28:21+08:00
+
+- Owner explicitly rejected V17 art and reconfirmed the identical original PNG SHA256 `9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114`; Library original-byte copy `libfile_df47ac9baf04819182f496bbb7ff40b6`. **Target quality/style remains unaccepted; continue rebuilding, no publication this turn.**
+- [Draft PR #8](https://github.com/wizardkeith/KeEv-games/pull/8), `codex/game-v11-target-slice`, pushed/read-back checkpoint `ea949de16e86f19ce819fd164b8fef27a4774c1c`. Stacked on published V17 source `be2486c` because PR7 remains unmerged; **main receives documentation only**, no runtime merge. Blender editable subdivision head/bob → bounded runtime retopology (full Misaki11,652tri,unchanged12,000cap), actual-skin UV facial features, new hollow pottery, branching/woven botanicals, trailing greenery/window garden. Original sources/rig/economy/saves/locales/UI lists/camera behavior retained.
+- **176tests pass**,14focused geometry/rig/contact/plant/environment checks pass; character GLBs validate0errors/warnings. Earlier geometry/UV/budget failures were fixed without raising actor/fixed-dressing caps. [Actual intermediate full-game/cashier screenshots, gap analysis and provenance](https://github.com/wizardkeith/KeEv-games/blob/ea949de16e86f19ce819fd164b8fef27a4774c1c/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md). These still show major density/material/silhouette gaps, not final target acceptance. Actual capture6 observed greeting/real settlement/contact/margin but final harness close timeout means **not a complete passed recording**. Recorder helper download403; public CDP screencast + installed FFmpeg is local-only recording, no remote bypass. Full continuous evidence/regressions and further scene/garment work remain in progress.
+- Public remains **V17** below. No merge/deploy/userChrome/Normal mutation/Unity/shutdown or content expansion. Read-only V17 ¥40 startup diagnosis: automatic Normal catch-up, rent20/h even closed, plus salary30/h+operating10/h only open during hours;40canfit2hclosed or40minopen absent sales, but actual cause needs save watermark/open/remainders/report deltas, not inferred from cash alone. No player save read/restore. Parent local smoke reportedly passed assets/UI/Sandbox persistence; independent physical acceptance not claimed here.
 
 ## V10 published as Site V17 — 2026-10-25T21:06:30+08:00
 
