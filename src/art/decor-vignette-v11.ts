@@ -8,6 +8,9 @@ export function relocateV11Decoration<T extends Sample>(sample:T):T{
  const placed=(x:number,z:number,surface:number,turn:Sample['turn'],scale:number,level=0)=>{const b=verticalBounds(sample.id,turn,scale);return {...sample,turn,scale,at:[x,surface+artDirection.restingGap-b.min+level*b.height,z] as Sample['at']};};
  if(sample.id==='off.notebook'&&sample.at[0]<-2.80&&sample.at[1]<1.3){const k=Math.round((sample.at[0]+2.85)/.012);return placed(-.50+k*.008,-.35+k*.008,artDirection.displaySurfaceY,[0,-.10+k*.04,0],.85,k);}
  if(sample.id==='off.card'&&Math.abs(sample.at[0]+2.23)<1e-6&&sample.at[1]<1.4)return placed(1.75,-1.68,1.110,[-1.18,.08,0],.85);
+ // Reuse the existing middle-shelf print on the central riser, behind the
+ // preserved flowers/books. Mixed high/mid/low forms, no new sample or stock.
+ if(sample.id==='off.card'&&Math.abs(sample.at[0]-1.35)<1e-6&&sample.at[1]>1.5&&sample.at[1]<2.0)return placed(-.53,.32,artDirection.displaySurfaceY+.14,[-1.18,-.22,0],.78);
  if(sample.id==='off.tray')return placed(1.72,-1.25,1.110,[0,.04,0],.85);
  return sample;
 }

@@ -1,0 +1,18 @@
+/** Soft room-return proxy for articulated clothes. It reveals the actual fold
+ * normals on the side turned away from the window; no painted shadow/AO tint.
+ * Restrict its fifth light slot to these meshes, retaining all existing keys.
+ */
+import {DirectionalLight} from '@babylonjs/core/Lights/directionalLight';
+import {PBRMaterial} from '@babylonjs/core/Materials/PBR/pbrMaterial';
+import {Vector3} from '@babylonjs/core/Maths/math.vector';
+import {Color3} from '@babylonjs/core/Maths/math.color';
+import type {Scene} from '@babylonjs/core/scene';
+import {nativeLighting} from './native-view';
+import {linearColor} from './materials';
+export function createClothBounce(scene:Scene){
+ const s=nativeLighting.clothBounce,light=new DirectionalLight('soft interior cloth return',Vector3.FromArray([...s.direction]),scene);
+ light.diffuse=Color3.FromArray(linearColor(s.color));light.intensity=s.intensity;
+ light.includedOnlyMeshes=scene.meshes.filter(m=>m.name.startsWith('actor.')&&m.metadata?.materialRole==='fabric');
+ for(const mesh of light.includedOnlyMeshes)if(mesh.material instanceof PBRMaterial)mesh.material.maxSimultaneousLights=5;
+ return {light,metrics:()=>({meshCount:light.includedOnlyMeshes.length,enabled:light.isEnabled(),bindings:light.includedOnlyMeshes.map(m=>({name:m.name,slots:(m.material as PBRMaterial).maxSimultaneousLights,bound:m.lightSources.slice(0,(m.material as PBRMaterial).maxSimultaneousLights).map(l=>l.name)}))})};
+}

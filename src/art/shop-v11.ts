@@ -7,6 +7,7 @@ import {geometry,type Geometry} from './geometry';
 import {sculptSweep,sculptLoft,finishSculpt} from './sculpt-v10';
 import type {V3} from './recipes';
 import {buildV10Styling} from './shop-v10';
+import {counterStationery} from './counter-stationery-v11';
 const M=(g:Geometry,color:string,role:NativeMesh['role']='leaf',at:V3=[0,0,0]):NativeMesh=>({shape:'mesh',at,geometry:g,color,role});
 const twig=(points:V3[],r:number,color='#738353')=>M(sculptSweep(points,points.map(()=>r),points.map(()=>r),points.length>12?24:6,4),color,'wood');
 export function leaf(at:V3,length:number,width:number,angle:number,tilt:number,color:string,segments=8):NativeMesh{
@@ -100,7 +101,12 @@ function bouquet():NativeSurface[]{
  return out;
 }
 export function buildV11Styling():NativeSurface[]{
- const out=[...buildV10Styling().slice(0,14),...buildV11TrailingGreenery()];
+ const base=buildV10Styling().slice(0,14);
+ // The six 16mm wall battens have subpixel 3mm bevels at normal play scale.
+ // Keep their exact bounds and spend those hidden bevel triangles on the
+ // reference's visible counter work tools instead of raising the scene budget.
+ for(const[i,x]of[-3.48,-2.48,-1.48,-.48,.52,1.52].entries())base[i+1]=M(geometry({shape:'box',size:[.016,.79,.022],at:[x,.56,3.205],color:'#C4AC8A'}),'#C4AC8A','wood');
+ const out=[...base,...buildV11TrailingGreenery(),...counterStationery()];
  for(const [x,y,z,scale]of [[-4.18,.901,-.91,1.1],[-.53,1.0735,-.05,.95],[1.35,1.111,-1.47,.90]])for(const part of bouquet()){
   const p=scaled(part,scale);out.push({...p,at:[p.at[0]+x,p.at[1]+y,p.at[2]+z]});
  }

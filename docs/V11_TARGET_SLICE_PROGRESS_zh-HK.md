@@ -6,6 +6,16 @@
 
 
 
+## 第十四個 checkpoint — 實際全店層次及櫃台工作用具，布料診斷仍在進行
+
+保留已接受的髮型／肩頸／鏡頭／傢俬／主要陳列。新增原圖櫃台的**真正中空文具杯與五支不同斜向鉛筆**，固定工作用具，沒有SKU／庫存／獎勵／經濟作用；現有一張back-shelf print移到中央riser，配合保留的花／書形成高、中、低組合，35個固定showroom sample種類／數量完全保留。六條16mm牆飾條省去正常距離不足一像素的3mm bevel，保留相同bounds，把576tri轉到可見工作用具；**固定dressing＋canopy15,704tri<16,000，17materialgroups<18**，沒有提高預算。
+
+[真正遊戲改前86](../evidence/native-v11/checkpoint-14/before-game86.png)／[改後94](../evidence/native-v11/checkpoint-14/after-game94.png)及[改後panorama](../evidence/native-v11/checkpoint-14/after-panorama94.png)：相同normal/Zen鏡頭、普通Sandbox實際買8本筆記本／8杯／8茶及放3架後拍攝；沒有pose／camera／sale注入。NPC自然相位與QA店名不同，不能把人物轉向當材質進步。PCSS原.085過度模糊，改.028呈現實際窗框／植物投影；初次.018暴露牆面shadow acne，已修正常bias，不拿有條紋版本作完成畫面。當前key/fill/practical燈／四燈位上限原樣保留。Hemi cloth return令衣物太白太平；Directional第五燈改善有限又多48mesh的shaderinput，**兩者均不採用default**，prototype圖及source留存，未證明第五燈是任何效能問題的根因。
+
+**Default94：197tests/build、139GLB零error/warning、305protected/history、256檔fresh export parity；80frame離線cloth JSON與freshUV JSON/provenance byte-identical。**Prototype92的198項包含後來移走的未採用light測試，沒有改弱既有測試。92High真結算/B接觸及DOM18/+8400可觀察，但poll沒有捕捉float、原loop180s內未驗證完整離店回位，**NOT COMPLETE**，原結果保留。Dual-view QA在短暫float期間操作設定；source本來就會在panel開啟時隱藏float，不能因此推斷交易壞掉。當前94正以不切換雙鏡頭的240s bounded loop重測，結果未出前不稱全流程通過。經濟／動畫時序沒有為QA改動。
+
+C13原exit-walk圖片確實仍在貨架，已改名shelf-at-exit-start；[真正136秒離店frame](../evidence/native-v11/checkpoint-13/exit-video136s.png)已實看，原始144.720s未剪片／舊history保留。依parent最新覆核，下一步固定同geometry/camera/自然面向，比較現有材質燈光 vs neutral＋單方向光；先分清主摺形體與shader流失，**不再盲跑複雜cloth simulation或加小皺紋**。布料與整店原圖style/quality仍未達；無release archive／merge／publish，publicV17不變。雲端SwiftShader不當實體GPU/FPS/audio/native通過；五語UI/controller未改，既有15case/75panel驗證仍是74來源，未冒稱94重跑。
+
 ## 第十三個 checkpoint — 離線衣料休止形態及真正摺峰邊線，視覺門檻仍開放
 
 以原C11衣殼在雲端Blender做受限80frame休止布料／waist seam tension，再作主要V形受力摺雕塑，保留5,472vertex高模、碰撞支撐、pin／shape keys及低模在可編輯master。第一個均勻水平低模沒有接住摺峰，實際game84仍弱；後續在**相同410vertex／720tri拓撲**把三條腰部邊線改沿主要V摺，沒有提高面數或加強weave。**女顧客11,994tri<12,000**，原肩頸Y≥.99逐座標保留、接點／手臂長度／既有rig不變。寬酒紅背巾保留並加寬緩弧度；裙身改5道不等距重力摺；袖口改真正中空雙捲邊，有內壁／腕部空隙，原實心帽面退役。

@@ -50,7 +50,7 @@ export const nativeLighting={
  key:{color:'#FFE0B7',intensity:3.30,direction:[.88,-.48,.25] as const,position:[-8,8,-2] as const},
  fill:{color:'#DFE9EF',ground:'#B6A38C',intensity:.36},
  faceFill:{color:'#FFF0DC',ground:'#B9B6B0',intensity:.43,direction:[.12,.35,-1] as const,parts:['head','eye-left','eye-right','eyelid-left','eyelid-right','brow-left','brow-right','mouth'] as readonly string[],roles:['skin','ink'] as readonly string[]},
- shadow:{size:2048,normalBias:.0035,bias:.0005,darkness:.16},
+ shadow:{size:2048,normalBias:.010,bias:.0007,darkness:.16,lightSizeUVRatio:.028},
  exteriorFill:{color:'#C3DCE4',ground:'#839D99',intensity:.42},
  // Bounded art-directed bounce proxies; point/spot candela are not directional lux.
  practicals:[{id:'cashier',position:[2.2,2.615,-1.5],color:'#FFD5A7',intensity:12.0,angle:1.52},{id:'central',position:[.1,2.615,-.1],color:'#FFE0B5',intensity:9.0,angle:1.62}] as const,

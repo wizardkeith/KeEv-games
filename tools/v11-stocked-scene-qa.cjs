@@ -1,0 +1,27 @@
+/** Matched whole-shop evidence through real UI purchases and placement only.
+ * No injected state, camera, pose or sale; independent fresh Sandbox contexts.
+ */
+const {chromium}=require('playwright'),fs=require('fs'),assert=require('node:assert/strict');
+const out=process.env.QA_OUTPUT,urls=process.env.QA_AFTER_ONLY==='1'?[['after',process.env.QA_AFTER]]:[['before',process.env.QA_BEFORE],['after',process.env.QA_AFTER]];
+fs.mkdirSync(out,{recursive:true});
+async function state(p,mode){return p.evaluate(mode=>new Promise(resolve=>{const r=indexedDB.open('next-stop-little-shop-w1');r.onsuccess=()=>{const db=r.result,q=db.transaction('saves','readonly').objectStore('saves').get('shop.w1.'+mode);q.onsuccess=()=>{resolve(q.result);db.close();};};}),mode);}
+(async()=>{const browser=await chromium.launch({executablePath:'/usr/bin/chromium',headless:true,args:['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']});const results=[];try{
+ for(const[name,url]of urls){const context=await browser.newContext({viewport:{width:1280,height:900}});try{
+  const p=await context.newPage(),errors=[];p.setDefaultTimeout(90000);p.on('pageerror',e=>errors.push(String(e)));await p.goto(url);
+  await p.locator('[data-mode="sandbox"]').click();await p.waitForFunction(()=>document.querySelector('[data-mode="sandbox"]').ariaPressed==='true'&&!document.querySelector('#identity button[type="submit"]').disabled);
+  await p.locator('#shop-name').fill('原目標重建 · 全店實拍');await p.locator('#identity button[type="submit"]').click();await p.waitForFunction(()=>window.littleShopDiagnostics?.().worldReady);
+  if(await p.locator('[data-action="story-dismiss"]').isVisible())await p.locator('[data-action="story-dismiss"]').click();
+  const normal=await state(p,'normal'),panel=async n=>p.locator(`[data-action="panel"][data-panel="${n}"]`).click(),close=async()=>{if(await p.locator('[data-action="hide"]').isVisible())await p.locator('[data-action="hide"]').click();},idle=()=>p.waitForFunction(()=>document.querySelector('.stock-workspace').ariaBusy==='false');
+  await panel('settings');await p.locator('#quality').selectOption('high');await panel('stock');
+  for(const[slot,id]of ['off.notebook','off.mug','off.tea'].entries()){
+   const row=p.locator(`[data-item="${id}"]`);await row.locator('input').fill('8');await row.locator('[data-action="buy"]').click();await idle();if(!await row.locator('.shelf-picker').count())await row.locator('[data-action="stock-picker"]').click();await row.locator(`[data-action="display"][data-slot="${slot}"]`).click();await idle();
+  }
+  await close();const before=await p.evaluate(()=>window.littleShopDiagnostics());await p.screenshot({path:`${out}/${name}-normal-game.png`});const after=await p.evaluate(()=>window.littleShopDiagnostics());assert.deepEqual(before.world.cameraPose,after.world.cameraPose);
+  await panel('settings');await p.locator('[data-action="zen"]').click();const zen=await p.evaluate(()=>window.littleShopDiagnostics());await p.screenshot({path:`${out}/${name}-panorama-game.png`});await p.locator('.zenbtn').click();await close();
+  await panel('settings');await p.locator('[data-action="camera-staff"]').click();await close();const staff=await p.evaluate(()=>window.littleShopDiagnostics());await p.screenshot({path:`${out}/${name}-counter-game.png`});
+  const saved=await state(p,'sandbox');assert.deepEqual(await state(p,'normal'),normal);assert.deepEqual(errors,[]);assert.deepEqual(saved.shelves,['off.notebook','off.mug','off.tea']);
+  results.push({name,url,before,after,zen,staff,economy:{cash:saved.cash,inventory:saved.inventory,shelves:saved.shelves},errors,normal:'isolated baseline unchanged',provenance:'Actual production WebGL game after ordinary real Sandbox purchases and placement; shop kept closed, no sale or customer flow claimed'});console.log(name+' actual stocked normal/panorama/counter captured');
+ }finally{await context.close();}}
+ if(results.length===2){assert.deepEqual(results[0].before.world.cameraPose,results[1].before.world.cameraPose);assert.deepEqual(results[0].zen.world.cameraPose,results[1].zen.world.cameraPose);assert.deepEqual(results[0].staff.world.cameraPose,results[1].staff.world.cameraPose);assert.deepEqual(results[0].economy,results[1].economy);}
+ fs.writeFileSync(out+'/results.json',JSON.stringify({results,matched:results.length===2?'normal/Zen/staff camera and actual stock/cash/shelves exact':'after only; external baseline comparison required',limits:'Cloud SwiftShader only; not physical GPU/FPS/audio/native or original-target acceptance'},null,2));
+}finally{await browser.close();}})().catch(e=>{console.error(e);process.exit(1);});

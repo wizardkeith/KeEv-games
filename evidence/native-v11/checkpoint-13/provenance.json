@@ -51,7 +51,7 @@
     "acceptedUpperPositionsPreservedAboveY": 0.99,
     "clothAuthoringFrames": 80,
     "runtimePhysics": false,
-    "sourceOrEconomicRuleChanges": false
+    "economicOrSaveRuleChanges": false
   },
   "verification": {
     "tests": 196,
@@ -85,7 +85,6 @@
     "assets/masters/native-v3/visitor-b-native-v3.glb": "75272ae3b1c4c20cfd92129c88ff5482bb6e2b6fa1db0cb879901c3751387abd"
   },
   "evidenceSha256": {
-    "exit-walk.png": "3fc54281bcc0d19f422f325dd39eee4c6120dfd6b28af4077e4f1d621b03f5f2",
     "intermediate-game84.png": "c5e4f6054f1d2a423ba05ad7127bbc662ec354696a7c7b9774cc27bd8da92824",
     "replay.log": "67beb9a30e2f137d3025faa962d635b85a8275a326918698204bc5e1becbf447",
     "before-detail-4x-nearest.png": "abb8129a1881c820cc2efd3d677b10765649587fa4432fa01a9d13295560ad38",
@@ -107,6 +106,9 @@
     "motion120s.png": "4e6e793c83e7a6073087c58f0b1952d09cb75cc56662ccd8eb3d6eb42f0754be",
     "game-results.json": "2f1e15f1b8998632752b6494a21299ecb314e6061c66ae3a210921f7b3e6ca03",
     "uncut.webm": "c09e22e07683e0cc63a08c619c17ca68ae4cbc257d9e5806812257cabfb9e5a4",
-    "preservation.json": "225ce8a0134296dcf0f160c6f66ba97b1bc9e5be6a4271d4053274c9294f9baa"
-  }
+    "preservation.json": "225ce8a0134296dcf0f160c6f66ba97b1bc9e5be6a4271d4053274c9294f9baa",
+    "shelf-at-exit-start.png": "3fc54281bcc0d19f422f325dd39eee4c6120dfd6b28af4077e4f1d621b03f5f2",
+    "exit-video136s.png": "c02ee5536c0afcc232999a7452487235af4815556190cd86a8dc385176778f0b"
+  },
+  "captionCorrection": "Parent independent review correctly found former exit-walk.png still shows shelf/start-of-exit, not actual walking; renamed shelf-at-exit-start.png. Actual uncut136s frame exit-video136s.png shows B walking by doorway. Original history retained."
 }
