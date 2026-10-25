@@ -1,6 +1,12 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T01:59:16+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T02:36:50+08:00** (Asia/Hong_Kong).
+
+
+## V11 sixth visual checkpoint — male customer rebuild — 2026-10-26T02:36:50+08:00
+
+- [DraftPR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed **`443bbda64e8969fbcf7e1112ea7756e73dd5b30f`**, unmerged `codex/game-v11-target-slice`. **Main documentation only; publicV17 unchanged; original target art still unaccepted and work continues.** Male Blender face/ears/layered short hair, fitted shirt/shoulder/collar/cuffs, fingers, canvas shoes and personal satchel rebuilt,11,172tri under unchanged12,000cap. Shopping transfer bag/controller/economy/saves retained; Misaki raw recipe exact equality, camera/light/furniture/vignette unchanged. Female head prototype is not integrated or claimed complete.
+- **184tests/15focused/build/validate/replay/assets,139GLB0errors/warnings,305protectedfiles/history pass.** Fresh actual-game same-cashier-camera before/after High runs398.428s/362.621s include real setup/settlement/greeting/contact/transfer/margin/reload,0pageerrors and isolatedNormalunchanged. Natural gesture phases differ,not identical frozen poses; cloud overlapping SwiftShader timing is not physicalGPU/FPS. Existing independent P2 probes rerun:socket3.600cm,first0.20sbag2.120cm,4,655,808arm/handvertices clear. [Images/uncut clips/provenance and next steps](https://github.com/wizardkeith/KeEv-games/blob/443bbda64e8969fbcf7e1112ea7756e73dd5b30f/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md). Continue second customer then material/flower/exterior readability; no merge/deploy/userChrome/playerNormal/Unity/shutdown/content expansion.
 
 ## V11 fifth visual checkpoint — focal light and measured vignette — 2026-10-26T01:59:16+08:00
 
