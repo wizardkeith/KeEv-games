@@ -1,0 +1,27 @@
+{
+  "source": "immutable77/currentapplicationfc0ae6df2dd248d669c926d8333efcc5774037b3",
+  "videoSeconds": 252.44,
+  "workflowSeconds": 253.335,
+  "deliveredCDPFrames": 177,
+  "viewed": [
+    "cashier-phase.png",
+    "raw-cdp-000128.jpg",
+    "raw-cdp-000130.jpg",
+    "exit-video204s.png"
+  ],
+  "rawSelectedFrameMetadata": {
+    "000128.jpg": {
+      "name": "000128.jpg",
+      "timestamp": 1792963251.991592,
+      "received": 1792963252.001
+    },
+    "000130.jpg": {
+      "name": "000130.jpg",
+      "timestamp": 1792963256.924282,
+      "received": 1792963256.937
+    }
+  },
+  "proof": "raw128 clearly18/+8400/beforewages-rent;raw130 actualbag now withB;204s departure. Diagnostic near-contact phase .5357 has staff-to-baghandle5.97e-8m,guest4.510cm center-offset (not palm-surface distance). Sparse cloud capture does NOT certify physicalFPS or continuous smoothness. Movie and diagnostic timelines have different origins; do not equate second numbers.",
+  "QAcorrection": "Second run sampled B x1.536,z2.05 at138.118s but clicked/committed by140.917s; at141.423 B x.526,outside service eligibility. New scenario pre-reads checkpoint/button bounds and uses one ordinary pointer click, removes pre-click greeting screenshot wait; no source-game/route/economy change or transaction injection.",
+  "limits": "Scarf silhouette more faithful; cloth/material and overall target remain unaccepted. No release package or publication."
+}

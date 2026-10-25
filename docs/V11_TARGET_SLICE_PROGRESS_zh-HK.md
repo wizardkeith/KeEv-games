@@ -14,7 +14,7 @@
 
 **194tests/build/validate/replay/assets；139GLB零error/warning；305protected/history通過。**21個衣物面重新做Blender UV，freshJSON/provenance byte-identical。初次新褶令門襟三角形中間穿入1.364mm，已調整實際drape間隙12→14mm，沒有放寬測試。背巾按真實背面測貼合，不沿用錯誤的正面假設。[原始紀錄／sourcehash／限制](../evidence/native-v11/checkpoint-11/provenance.json)。
 
-女顧客針對性收銀初次QA沒有可服務的自然視窗，沒有按結算，所以**未通過，不是交易成功卻沒有動畫**；原始false結果保留。已讀source確認服務座標範圍，沒有改遊戲規則，正在以普通暫停→旅客離場→重開讓原有下一位B自然入店，再做真結算／接觸的連續實拍；目前pending。C10fresh74完整流程／五語版面保留，未說成77重跑。按parent要求，沒有為這個視覺切片再做release archive。
+女顧客針對性收銀初次QA沒有可服務的自然視窗，沒有按結算，所以**未通過，不是交易成功卻沒有動畫**；原始false結果保留。已讀source確認服務座標範圍。第二次普通暫停／重開有真結算及fallback批次毛利，但讀取B位置後2.8秒才按下結算，她已走出範圍；仍NOTPASSED接觸。移開拍圖／IDB／locator等待，以預先讀好的可見按鈕座標做一次普通mouse click，沒有改遊戲規則／強制pose或注入交易，第三輪終於由B自然完成。[fresh77完整252.44秒未剪遊戲](../evidence/native-v11/checkpoint-11/female-real-flow/uncut.webm)／[原始結果](../evidence/native-v11/checkpoint-11/female-real-flow/results.json)：普通暫停／drain／重開，B自然入店，真正結算／收銀階段／交袋／毛利／B離店及店員回位／reload皆觀察，0pageerror，隔離Normal基線不變。[原始CDP128毛利](../evidence/native-v11/checkpoint-11/female-real-flow/raw-cdp-000128.jpg)／[130已交袋](../evidence/native-v11/checkpoint-11/female-real-flow/raw-cdp-000130.jpg)／[204秒離店](../evidence/native-v11/checkpoint-11/female-real-flow/exit-video204s.png)已實看。177個CDP畫面／252秒，不能宣稱全段流暢度或實體FPS；診斷與影片時鐘原點不同，不用秒數硬對齊。[詳細量測及QA修正](../evidence/native-v11/checkpoint-11/female-real-flow/visual-notes.json)。C10fresh74完整流程／五語版面保留，未說成77重跑。按parent要求，沒有為這個視覺切片再做release archive。
 
 整體仍有商品規律度／材質豐富度、暖窗光與柔和接觸層次、遠景簡化等差距；不是只剩布料。**原圖畫風／畫質仍未達，繼續。**公開V17、PR8draft／未合併／未發佈，經濟／存檔／五語／現有list沒有變動；雲端軟體渲染不當實體GPU/FPS/audio/native驗收。
 

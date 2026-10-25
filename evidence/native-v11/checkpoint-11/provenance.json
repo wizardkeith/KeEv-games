@@ -25,12 +25,13 @@
   "remaining": [
     "Textile/whole-scene target-quality/style remain OPEN; normal-scale waist folds still weak",
     "Merchandise remains too regular, material response less rich and warm/cool/window/contact-shadow layering less nuanced than target; distant trees/roofs simplified",
-    "Fresh77 B-cashier/closure motion pending; prior74 complete real flow and five-locale layout evidence apply to unchanged controllers/UI, not falsely rerun77",
+    "Fresh77 B-cashier/closure fullflow passed actualobserved endpoints; five-locale layout remains74 by unchangedUI, not falselyrerun77",
     "Cloud SwiftShader only, no physicalGPU/FPS/audio/native acceptance",
     "No new release archive this checkpoint; old74 package is not77",
     "PublicV17 unchanged, PR8draft/unmerged, no deploy/merge/ownerChrome/Normal/Unity/shutdown/content expansion"
   ],
   "fileSha256": {
+    "B-reopen-late-click-NOT-PASSED.json": "51161e456f24f189551d782cbb16fda59ba2197831fccfc11ee42a6227a78946",
     "replay.log": "67beb9a30e2f137d3025faa962d635b85a8275a326918698204bc5e1becbf447",
     "B-only-initial-explanation.txt": "86dbcff3343818e945eaa61565bf1f98be8844e7844c1576024df83d87376204",
     "validate.log": "d8cf77a1e38e0b04929bd0774b8f25dee39e9ff7717ea0b8ef7fe1e5a477369b",
@@ -43,6 +44,48 @@
     "after-same-facing-game.png": "daf832a1a5aa9c23416f6cc8ef5c07aee2f5dd87fda915c3f6e50a3f9b2315b7",
     "uv-fresh-blender.log": "cce077d4f4f6c9790d5cbf36cfc7450e29badc7ad87afbd06223fa341667c345",
     "before-same-facing-game.png": "6e252dee44bba6d4074adcdcc754b9c79eeb2e6159f6087c84cfaf15a4511b5b",
-    "preservation.json": "225ce8a0134296dcf0f160c6f66ba97b1bc9e5be6a4271d4053274c9294f9baa"
+    "preservation.json": "225ce8a0134296dcf0f160c6f66ba97b1bc9e5be6a4271d4053274c9294f9baa",
+    "female-real-flow/visual-notes.json": "f64568f5460d1c5c78c8eaa3f0e5e9279237dee97f50f6d9edab35e42d3b53b0",
+    "female-real-flow/margin-dom-trace.json": "72bfeebbfbdd1263ece8861ebabc6090312a502953b90c760d5ee48f224e3824",
+    "female-real-flow/results.json": "3708184f3f926cabf72bce67e3a696e57052a9cbdeb5be45ccad19d04428f205",
+    "female-real-flow/recording-provenance.json": "a066febfbcebf81f5667cfd980fe9df50e03d95362ea52c1a3d7f64b29f3773f",
+    "female-real-flow/timeline.json": "21ac2c7dc6ed7db15765312c112776eb9d228403a040e3dbdc089dfcc5a1802e",
+    "female-real-flow/cashier-phase.png": "bbb56eb7b03d69082ef67c194297c3a6aeb3a94d3618b8c80c78e204ae10467d",
+    "female-real-flow/raw-cdp-000130.jpg": "1f69138bb2c6a24c1a1407b27392fe590be8d23a114092981aaff0abe7d312af",
+    "female-real-flow/raw-cdp-000128.jpg": "da00187172458274dbfc8529f2f0f249473348dbe64a54474e06ad95d5029031",
+    "female-real-flow/exit-video204s.png": "960d69d013909c7d30bb7de6282baa9846f1f6ce97943b28dc5941242157e478",
+    "female-real-flow/uncut.webm": "13a932c680c658cab6ee15e4c69377d77cd8d35d3ce7ba2da53e2375927dd52f"
+  },
+  "fresh77BFlow": {
+    "status": "rendered",
+    "greeted": true,
+    "contact": true,
+    "realSettlement": true,
+    "actualMargin": true,
+    "normalCloseDrainReopen": true,
+    "requestedVisitor": "visitor-b",
+    "requestedVisitorObserved": true,
+    "servedCustomer": "visitor-b",
+    "servedExitAndStaffReturn": true,
+    "marginDOMVisible": true,
+    "elapsedSeconds": 253.335,
+    "errors": [],
+    "normal": "isolated QA baseline unchanged; no owner save access",
+    "provenance": "Actual local production WebGL game, original PNG only used for comparison; fresh Sandbox real purchases/placement/settlement; no injected pose or sale; uncut original video",
+    "limits": "SwiftShader cloud software rendering, not physical GPU/FPS/audio/native acceptance. Missing observed transitions remain unverified. Target art NOT accepted.",
+    "videoSeconds": 252.44,
+    "selectedRawFrames": {
+      "000128.jpg": {
+        "name": "000128.jpg",
+        "timestamp": 1792963251.991592,
+        "received": 1792963252.001
+      },
+      "000130.jpg": {
+        "name": "000130.jpg",
+        "timestamp": 1792963256.924282,
+        "received": 1792963256.937
+      }
+    },
+    "visualLimits": "Raw128/130 actual margin/bag and204s exit viewed.177CDPframes/252s is software evidence, not full smoothness/physicalGPUFPS. Diagnostic .5357 staff-to-bag~0m/guestcenter4.51cm is measured, not proof all surfaces touching."
   }
 }
