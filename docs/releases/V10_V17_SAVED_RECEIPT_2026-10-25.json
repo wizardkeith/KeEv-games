@@ -1,0 +1,87 @@
+{
+  "project_id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+  "url": "https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site",
+  "checked_at": "2026-10-25T09:58:16Z",
+  "status": "saved_not_deployed_auto_review_denied",
+  "source_commit": "be2486c45c8a5b0ea8c6660a96915c0e0b07e45e",
+  "application_commit": "b06247fcae6d02a69e8cff56e2ace124f4bfc883",
+  "src_tree": "219e499f7421cdb7896a6e01fea825d53f269b54",
+  "independent_review_commit": "b53502f429bf81bca943c1a28d87b0a31d7cd0f3",
+  "pull_request": "https://github.com/wizardkeith/KeEv-games/pull/7",
+  "pr_merged": false,
+  "saved_version": {
+    "id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d~appgver_81159819e2008191b1c05e5ed9a1bc38",
+    "project_id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+    "version_number": 17,
+    "source": {
+      "commit_sha": "be2486c45c8a5b0ea8c6660a96915c0e0b07e45e"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_0000000073208206992740221e9ada3f",
+      "content_hash": "sha256:183e358ce858921a58c767aec3efb2fadb43e06d5ebaef2373d3e4240222e8fa",
+      "size_bytes": 11008000,
+      "file_count": 135
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "site_readback": {
+    "id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d",
+    "status": "active",
+    "latest_version_number": 17,
+    "url": "https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site",
+    "access_mode": "public",
+    "policy_revision": 2,
+    "updated_at": "2026-10-25T09:57:44.759374+00:00"
+  },
+  "original_gzip": {
+    "sha256": "4b6d1d360489bd0034d12202f71de32c9b37af5f99110e241c3d67c47dc8297a",
+    "bytes": 6304337,
+    "runtime_files": 134,
+    "archive_files": 135,
+    "actual_entries_match_receipt_and_dist": true,
+    "uncompressed_tar_sha256": "183e358ce858921a58c767aec3efb2fadb43e06d5ebaef2373d3e4240222e8fa",
+    "uncompressed_bytes": 11008000,
+    "provider_archive_hash_matches": true
+  },
+  "source_sync": {
+    "automatic_publication": false,
+    "publication_window": null,
+    "original_remote": "8277b326ddbdac71c128dc91b07b930a315904f5",
+    "non_force_ancestor_batches": [
+      "0626469e7d376fe7cd1962370e2955017154bacf",
+      "d12064a03d3e6ddd528902c59e4482049cab0ee5",
+      "8f27d445c04f3ea16588fdfea690fc2bee175bdd",
+      "19280ede611256c17fc158205477742ed1f0a5c7",
+      "be2486c45c8a5b0ea8c6660a96915c0e0b07e45e"
+    ],
+    "all_remote_readbacks_match": true,
+    "credential_session_closed": true
+  },
+  "blocked_action": {
+    "tool": "sites_deploy_site_version",
+    "version_id": "appgprj_6ad82a08ed2881918ebcc2dd206a122d~appgver_81159819e2008191b1c05e5ed9a1bc38",
+    "outcome": "denied; not executed; no deployment ID returned",
+    "reason": "This deploys version 17 to the public production Site, an external commitment, but the trusted user evidence explicitly said not to deploy and no trusted later user authorization for publication is present.",
+    "retry_count": 0,
+    "bypass_attempted": false
+  },
+  "public_release": {
+    "edition": 16,
+    "source_commit": "8277b326ddbdac71c128dc91b07b930a315904f5",
+    "deployment_id": "appgdep_6adda0ffd71481919eea0f00198fd3d8",
+    "note": "V17 saved version has deployment_id:null. latest_version_number17 is not proof of publication."
+  },
+  "verification": {
+    "fresh_release": "135 safe actual archive entries, every hash matches reviewed receipt and dist; application/runtime inputs identical to reviewed b06247f; source remote exact be2486 readback; provider saved archive hash/count matches.",
+    "independent": "174tests/build/validate/replay/asset-check;245deterministic files;276protected paths+original11ancestry;139GLBs0errors/warnings;21,144GLB/Web values;39.48s High isolatedSandbox purchase2/place/reload.",
+    "live_assets": "NOT RUN: V17 deployment denied",
+    "post_deploy_smoke": "NOT RUN: V17 deployment denied",
+    "limits": [
+      "Original target art quality/style NOT accepted.",
+      "45-second High idle-work close-up, physical GPU/FPS/audio/Safari/true hidden-tab/native remain open.",
+      "No Normal save access, local Unity operation, shutdown, PR merge or access-policy change."
+    ]
+  }
+}

@@ -1,6 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-25T17:49:50+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-25T17:58:16+08:00** (Asia/Hong_Kong).
+
+## V10 publication checkpoint — V17 saved, deployment blocked — 2026-10-25T17:58:16+08:00
+
+- Reviewed [PR #7](https://github.com/wizardkeith/KeEv-games/pull/7) source `be2486c45c8a5b0ea8c6660a96915c0e0b07e45e` successfully synchronized to the **existing Site source repository** using five verified, non-force ancestor fast-forwards. No automatic publication window; no intermediate publish. **PR7 remains unmerged; main receives documentation only.**
+- Native saved **V17**, version `appgprj_6ad82a08ed2881918ebcc2dd206a122d~appgver_81159819e2008191b1c05e5ed9a1bc38`. All135actual tar entries match reviewed receipt/dist; gzip SHA256 `4b6d1d360489bd0034d12202f71de32c9b37af5f99110e241c3d67c47dc8297a`. Provider uncompressed tar hash `183e358ce858921a58c767aec3efb2fadb43e06d5ebaef2373d3e4240222e8fa`,135files/11,008,000bytes matches local archive exactly.
+- **Deployment denied by automatic approval review, not executed, no deployment ID.** Stated reason: it still treats earlier no-deploy instruction as controlling and does not recognize later publication authorization. No retry/bypass. Read-back V17 has `deployment_id:null`; `latest_version_number:17` means saved, not published. **Public remains V16** at the [same URL](https://next-stop-little-shop-w1.starry-ridge-5482.chatgpt.site), public policy revision2 unchanged. Parent must resolve authorization conflict before retrying the same saved version; do not merge PR7 to work around it.
+- [Exact saved-source/provider receipt and blocker](docs/releases/V10_V17_SAVED_RECEIPT_2026-10-25.json). Independent174tests/build/replay/assets and actual High Sandbox evidence below remain valid; fresh release parity passed. V17 live asset verification and post-deploy smoke **not run because deployment was denied**. Original target art still unaccepted;45s idle close/physical GPU/FPS/audio/native limits retained. Credential session closed; no player Normal access, local Unity work, shutdown or Site access change.
 
 ## V10 tote P2 independent re-review — 2026-10-25T17:49:50+08:00
 
