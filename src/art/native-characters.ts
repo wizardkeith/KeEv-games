@@ -113,7 +113,7 @@ export function nativeGrouped(recipe:NativeSurface[]){
 function eyes(kind:NativeCharacterKind):NativePart[]{
  const wider=kind==='visitor-b',skin=kind==='visitor-a'?P.skinB:P.skin,out:NativePart[]=[];
  for(const side of [-1,1]){const x=side*(wider?.083:.074),s=side<0?'left':'right',y=kind==='visitor-a'?.155:.16;
-  out.push({id:`eye-${s}`,parent:'head',pivot:[x,y,-.171],recipe:[p('sphere',[.086,.086,.006],[0,0,0],'#F2E8DB','ink'),p('sphere',[.060,.076,.008],[side*-.003,0,-.007],kind==='visitor-a'?'#554332':'#92633D','ink'),p('sphere',[.031,.049,.008],[side*-.003,.004,-.012],'#3F3330','ink'),p('sphere',[.016,.018,.004],[-.009,.015,-.020],'#FFF4DF','ink'),p('torus',[.083,.0045,.060],[0,0,-.013],P.ink,'hair',{turn:[Math.PI/2,0,0],arc:[Math.PI*1.05,Math.PI*1.95],segments:8})]});
+  out.push({id:`eye-${s}`,parent:'head',pivot:[x,y,-.171],recipe:[p('sphere',[.086,.086,.006],[0,0,0],'#F2E8DB','ink'),p('sphere',[.060,.076,.008],[side*-.003,0,-.007],kind==='visitor-a'?'#554332':'#92633D','ink'),p('sphere',[.031,.049,.008],[side*-.003,.004,-.012],'#3F3330','ink'),p('sphere',[.016,.018,.004],[-.009,.015,-.020],'#FFF4DF','ink'),p('torus',[.083,.0045,.060],[0,0,-.013],P.ink,'hair',{turn:[Math.PI/2,0,0],arc:[Math.PI*1.05,Math.PI*1.95],segments:8})].map(surface=>surface.shape==='sphere'?{...surface,turn:[0,-side*.28,0] as V3}:surface)});
   out.push({id:`eyelid-${s}`,parent:'head',pivot:[x,y+.005,-.201],recipe:[round([.083,.049,.010],[0,0,0],skin,'skin',.015),round([.077,.006,.012],[0,-.004,-.006],P.ink,'hair',.002)]});
   out.push({id:`brow-${s}`,parent:'head',pivot:[x,y+.047,-.165],recipe:[p('torus',[.063,.0035,.021],[0,0,0],kind==='visitor-a'?'#423D36':P.hair,'hair',{turn:[Math.PI/2,0,0],arc:[Math.PI*1.12,Math.PI*1.88],segments:6})]});
  }

@@ -133,7 +133,8 @@ export function sampleStaff(visibleSeconds:number, service?:StaffServiceFrame, g
   // At a side-facing handover, the elbow itself crosses the counter corner.
   // Raise the upper arms to shoulder height first; the ordinary forward-only
   // packing pose may safely keep its elbows behind that edge instead.
-  const amount=clamp(Math.abs(service.serviceYaw)/(Math.PI/2));
+  // Lift above the counter for every cashier approach angle, not only a full side turn.
+  const amount=1;
   for(const side of ['left','right']){const id='arm-'+side,r=rotations[id];rotations[id]=[r[0]*(1+amount*(1.57/1.10-1))+.42*amount*smooth((progress-.34)/.08)*smooth((.84-progress)/.08),r[1],r[2]];}
  }
  return {rotations,expression,eyelidClosure:blink(visibleSeconds),bodyLift,turn:turn===0?0:turn,clip,progress,prop};

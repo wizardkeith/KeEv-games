@@ -23,26 +23,26 @@
     "frames": 4200
   },
   "straightSkirt": {
-    "testedVertices": 35454,
+    "testedVertices": 38655,
     "maximumOutsideMetres": 0,
-    "minimumZClearanceMetres": 0.023609204422507413,
+    "minimumZClearanceMetres": 0.013412662104871326,
     "fullLegAndShinMeshesRetained": true
   },
   "turnSkirt": {
-    "testedVertices": 44086,
+    "testedVertices": 48349,
     "maximumOutsideMetres": 0,
-    "minimumZClearanceMetres": 0.021131600976944248,
+    "minimumZClearanceMetres": 0.010045025821437487,
     "worst": {
       "n": 954,
       "side": "right",
       "point": [
-        0.1450358943378962,
-        0.4620313803455992,
-        -0.16947474389315342
+        0.1363365662138225,
+        0.4689983447889712,
+        -0.17904239408116762
       ],
       "range": [
-        -0.19060634487009767,
-        0.1903948174597469
+        -0.1890874199026051,
+        0.18890868891307985
       ],
       "root": {
         "id": "visitor-b",

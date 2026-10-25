@@ -1,3 +1,6 @@
+import {STAFF_CLIPS} from './native-staff';
+import {NativeStaffRoutine} from './native-staff-routine';
+import {StaffAttention,attentionRotations,welcomeYaw} from './native-attention';
 import {TransformNode} from '@babylonjs/core/Meshes/transformNode';
 import {Vector3,Quaternion} from '@babylonjs/core/Maths/math.vector';
 import type {Scene} from '@babylonjs/core/scene';
@@ -27,7 +30,7 @@ export function createNativeActors(scene:Scene,model:NativeModel){
   };
   neutral();return {root,parts,rest,neutral,face};
  }
- const staff=actor('misaki');staff.root.position.set(2.6,.065,-.65);
+ const staff=actor('misaki');staff.root.position.set(2.6,.065,-.65);staff.root.rotation.y=welcomeYaw;
  const visitors=[actor('visitor-a'),actor('visitor-b')];visitors.forEach(a=>a.root.setEnabled(false));
  const paper=(size:Part['size'],at:Part['at'],color:string):Part=>({shape:'round',size,at,color,role:'paper',radius:.012});
  const propRecipes:Record<string,Part[]>={
@@ -38,23 +41,38 @@ export function createNativeActors(scene:Scene,model:NativeModel){
  };
  const props=new Map(Object.entries(propRecipes).map(([kind,p])=>[kind,model('native.prop.'+kind,p)]));props.forEach(p=>p.setEnabled(false));
  let carrySpare=model('native.prop.bag.reserve',propRecipes.bag),carried:{node:TransformNode;id:string;age:number;origin:Vector3}|undefined;carrySpare.setEnabled(false);
+ const routine=new NativeStaffRoutine(),staffFeet=new NativeFootPlant();let routineState=routine.tick(0,{actors:[],doorOpen:false,doorAngle:0,corridorOwner:null},false,false);
+ const attention=new StaffAttention();let attentionState={yaw:welcomeYaw,target:welcomeYaw,entry:0,work:false,mode:'welcome'};
  const staffPlayer=new StaffMotionPlayer(),feet=[new NativeFootPlant(),new NativeFootPlant()],wasEnabled=[false,false],receiveWeight=[0,0];
+ const welcomed=new Set<string>();let greetingElapsed:number|undefined;
  let visibleTime=0,clip='native.staff.idle.v3',ownerKey='',blendAge=0,blendOrigin=Vector3.Zero();
  const clearProps=()=>{staffPlayer.cancel();ownerKey='';if(carried){carrySpare=carried.node;carried=undefined;}carrySpare.setEnabled(false);carrySpare.parent=null;for(const p of props.values()){p.setEnabled(false);p.parent=null;p.position.setAll(0);p.rotationQuaternion=null;p.rotation.setAll(0);}};
- function frame(seconds:number,policy:MotionPolicy,routes:RouteFrame,service:DeliveryFrame|undefined,greet:number|undefined){
+ function frame(seconds:number,policy:MotionPolicy,routes:RouteFrame,service:DeliveryFrame|undefined,greet:number|undefined,workRequested=!!service){
   if(policy.nativeMotion)visibleTime+=Math.min(.05,seconds);
   const previous=[...props.values()].find(p=>p.isEnabled());previous?.computeWorldMatrix(true);const previousPosition=previous?.getAbsolutePosition().clone();
   staff.neutral();
   for(const p of props.values()){p.setEnabled(false);p.parent=null;p.rotationQuaternion=null;p.rotation.setAll(0);}
-  const pose=staffPlayer.tick(seconds,service,greet,policy.nativeMotion);
+  routineState=routine.tick(seconds,routes,workRequested||attentionState.work||/staff\.(tidy|check-note|receive-stock|pack-handover)/.test(clip),policy.nativeMotion,greetingElapsed!==undefined);staff.root.position.set(routineState.x,.065,routineState.z);
+  for(const id of welcomed)if(!routes.actors.some(a=>a.id===id&&a.enabled))welcomed.delete(id);
+  if(!policy.nativeMotion||workRequested)greetingElapsed=undefined;
+  const newcomer=routes.actors.find(a=>a.enabled&&a.state==='entering'&&!welcomed.has(a.id)&&Math.hypot(a.x-routineState.x,a.z-routineState.z)<1.9);
+  if(newcomer&&!routineState.moving&&routineState.intent==='welcome'&&greetingElapsed===undefined&&policy.nativeMotion&&!workRequested){greetingElapsed=0;welcomed.add(newcomer.id);}
+  const localGreet=greetingElapsed===undefined?undefined:greetingElapsed/STAFF_CLIPS.greet.duration;
+  if(greetingElapsed!==undefined){greetingElapsed+=Math.min(.05,seconds);if(greetingElapsed>=STAFF_CLIPS.greet.duration)greetingElapsed=undefined;}
+  const pose=staffPlayer.tick(seconds,service,localGreet??(routineState.moving?undefined:greet),policy.nativeMotion,routineState.atHome&&!routineState.moving);
   clip=policy.nativeMotion?pose.clip:'native.staff.still.v3';
-  if(policy.nativeMotion){for(const [id,r] of Object.entries(pose.rotations))staff.parts.get(id)?.rotation.set(...r);staff.parts.get('body')!.position.y+=pose.bodyLift;staff.root.rotation.y=pose.turn;staff.parts.get('head')!.rotation.y-=.20;staff.face(pose.eyelidClosure,pose.expression,pose.expressionWeights);
-   if(pose.prop.visible&&!(pose.prop.kind==='bag'&&service?.customerId&&routes.actors.some(a=>a.id===service.customerId&&a.hasBag))){const p=props.get(pose.prop.kind)!,key=pose.prop.kind+':'+pose.prop.owner,target=new Vector3(2.60,1.116,-1.20);p.setEnabled(true);
+  const work=/staff\.(tidy|check-note|receive-stock|pack-handover)/.test(pose.clip),handsBusy=pose.prop.visible||Math.max(...['left','right'].map(side=>Math.abs(pose.rotations['arm-'+side]?.[0]??0)))>.12;
+  attentionState=attention.tick(seconds,routes,(work||workRequested)&&routineState.atHome,pose.turn,handsBusy,policy.nativeMotion,routineState.moving?routineState.yaw:undefined);
+  const rotations=attentionState.work?attentionRotations(pose.rotations,attentionState.entry):pose.rotations;
+  if(policy.nativeMotion){for(const [id,r] of Object.entries(rotations))staff.parts.get(id)?.rotation.set(...r);staff.parts.get('body')!.position.y+=pose.bodyLift;staff.root.rotation.y=attentionState.yaw;staff.face(pose.eyelidClosure,pose.expression,pose.expressionWeights);
+   if(pose.prop.visible&&(!attentionState.work||attentionState.entry>=.99)&&!(pose.prop.kind==='bag'&&service?.customerId&&routes.actors.some(a=>a.id===service.customerId&&a.hasBag))){const p=props.get(pose.prop.kind)!,key=pose.prop.kind+':'+pose.prop.owner,target=new Vector3(2.60,1.116,-1.20);p.setEnabled(true);
     if(pose.prop.owner!=='counter'){const socket=staff.parts.get(pose.prop.owner)!;socket.computeWorldMatrix(true);p.parent=socket;target.set(0,-.06,0);if(service?.customerId&&pose.prop.kind==='bag'){target.copyFrom(Vector3.TransformCoordinates(socket.getAbsolutePosition().add(new Vector3(0,-.33,0)),socket.getWorldMatrix().clone().invert()));}p.rotationQuaternion=socket.absoluteRotationQuaternion.conjugate();}
     if(key!==ownerKey){blendAge=0;blendOrigin=previousPosition?previousPosition.clone():target.clone();if(p.parent&&previousPosition)blendOrigin=Vector3.TransformCoordinates(blendOrigin,(p.parent as TransformNode).getWorldMatrix().clone().invert());ownerKey=key;}
     blendAge+=seconds;p.position.copyFrom(Vector3.Lerp(blendOrigin,target,Math.min(1,blendAge/.16)));for(const m of p.getChildMeshes())m.visibility=pose.propOpacity;
    }else ownerKey='';
-  }else{ownerKey='';staff.root.rotation.setAll(0);staff.parts.get('head')!.rotation.y=-.20;staff.face(0);}
+  }else{ownerKey='';staff.root.rotation.set(0,attentionState.yaw,0);staff.face(0);}
+  const plantedStaff=staffFeet.tick(seconds,{...routineState,yaw:staff.root.rotation.y},policy.nativeMotion);staff.parts.get('body')!.position.y=plantedStaff.bodyDrop;
+  for(const side of ['left','right'] as const){const leg=plantedStaff[side];for(const [id,q]of [[`leg-${side}`,leg.hip],[`shin-${side}`,leg.knee],[`foot-${side}`,leg.foot]]as const)staff.parts.get(id)!.rotationQuaternion=Quaternion.FromArray([...q]);if(routineState.speed>.02)staff.parts.get('arm-'+side)!.rotation.x=(side==='left'?-1:1)*plantedStaff.armSwing;}
   routes.actors.forEach((route,i)=>{const a=visitors[i];a.neutral();a.root.setEnabled(route.enabled);a.root.position.set(route.x,.065,route.z);a.root.rotation.y=route.yaw;
    const idle=sampleIdle(visibleTime,i*.43+.1,policy);a.parts.get('head')!.rotation.y=idle.headYawRadians;
    a.face(idle.eyelidClosure);
@@ -78,5 +96,5 @@ export function createNativeActors(scene:Scene,model:NativeModel){
   }
 
  }
- return {frame,clearProps,staff,visitors,metrics:()=>({rigVersion:nativeCharacterIdentity.version,staffClip:clip,propCount:props.size+1,carriedBag:carried?.id??null,activeProps:[...props,...(carried?[['bag',carried.node] as [string,TransformNode]]:[])].filter(([,p])=>p.isEnabled()).map(([kind,p])=>({kind,parent:p.parent?.name??'counter'})),visibleTime}),dispose(){clearProps();for(const p of new Set([...props.values(),carrySpare]))p.dispose();staff.root.dispose();visitors.forEach(a=>a.root.dispose());}};
+ return {frame,clearProps,staff,visitors,workReady:()=>routineState.atHome&&attentionState.work&&attentionState.entry>=1,staffPosition:()=>({x:routineState.x,z:routineState.z,radius:.29}),metrics:()=>({rigVersion:nativeCharacterIdentity.version,staffClip:clip,staffRoutine:{...routineState},greetedVisitors:[...welcomed],localGreeting:greetingElapsed??null,attention:{...attentionState},propCount:props.size+1,carriedBag:carried?.id??null,activeProps:[...props,...(carried?[['bag',carried.node] as [string,TransformNode]]:[])].filter(([,p])=>p.isEnabled()).map(([kind,p])=>({kind,parent:p.parent?.name??'counter'})),visibleTime}),dispose(){clearProps();for(const p of new Set([...props.values(),carrySpare]))p.dispose();staff.root.dispose();visitors.forEach(a=>a.root.dispose());}};
 }

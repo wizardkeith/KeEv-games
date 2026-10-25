@@ -30,8 +30,9 @@ test('native scene adapter stock/sale/display and both idle tasks keep articulat
   const check=(label:string)=>{const body=f.actors.staff.parts.get('body')!;body.computeWorldMatrix(true);const inverse=Matrix.Invert(body.getWorldMatrix());for(const id of ['hand-left','hand-right'])for(const v of vertices(f.actors.staff.parts.get(id)!)){assert.ok(!counterContains(v),`${label}: ${id} in counter ${v.asArray()}`);const local=Vector3.TransformCoordinates(v,inverse);assert.ok(!clothes.some(contains=>contains(local)),`${label}: ${id} in actual garment`);}for(const id of ['forearm-left','forearm-right'])for(const v of vertices(f.actors.staff.parts.get(id)!))assert.ok(!counterContains(v),`${label}: ${id} in counter ${v.asArray()}`);};
   for(const kind of ['stock','sale','display']as const)for(let n=0;n<=100;n++){const frame:ServiceFrame={cue:kind==='sale'?{kind,soldUnits:5}:kind==='stock'?{kind,commandId:'stock',itemId:'off.mug',quantity:5}:{kind,commandId:'display',itemId:'off.mug',slot:1},receiptRevision:1,progress:n/100,stage:'act'};f.actors.frame(.02,HIGH,routes(),frame,undefined);check(`${kind} ${n/100}`);}
   // Drive the real adapter visible clock, rather than treating wall time as a
-  // clip timer. Both authored work tasks must actually appear on that channel.
-  const seen=new Set<string>();for(let n=0;n<720;n++){f.actors.frame(.05,HIGH,routes(),undefined,undefined);const clip=f.actors.metrics().staffClip;if(clip.includes('check-note')||clip.includes('tidy')){seen.add(clip);check(`${clip} frame${n}`);}}
+  // clip timer. The new 32s walking routine returns to the counter between
+  // tasks; observe 80 simulated seconds and retain both safety assertions.
+  const seen=new Set<string>();for(let n=0;n<1600;n++){f.actors.frame(.05,HIGH,routes(),undefined,undefined);const clip=f.actors.metrics().staffClip;if(clip.includes('check-note')||clip.includes('tidy')){seen.add(clip);check(`${clip} frame${n}`);}}
   assert.ok([...seen].some(s=>s.includes('check-note')));assert.ok([...seen].some(s=>s.includes('tidy')));
  }finally{f.dispose();}
 });

@@ -3,14 +3,14 @@
   "version": "3.1",
   "master": {
     "path": "assets/masters/native-v3/environment-v3.json",
-    "sizeBytes": 127341,
-    "sha256": "e11fd35ca23bb0b19ddf06aaa8e76372f129cac82f6d61f34c73e85fd6013229"
+    "sizeBytes": 144140,
+    "sha256": "1ca430eea4eefce63a8e3eac0d1cdffa5f730f0a5fa7aa4912011ba520a93652"
   },
   "sources": {
     "src/art/native-room-probe.ts": "fde6f98d1aa353404852c2ad7006240505dc3f1e70c03bd315721270e16382eb",
-    "src/art/native-styling.ts": "de7de0a7a2ec06cb4820ebb7e0a0c19fbb82c36a043b0a9ea0d5ce1b4ca4fa05",
-    "src/art/native-characters.ts": "f1702febb42f214943bcec0315d8b4b87157144255b458e011d7db77dac8000d",
-    "src/art/native-environment.ts": "37eab9a54676e00ce6e7b5bbdd7d6e378154179d96223fd79cb8951fa86fcbe4",
+    "src/art/native-styling.ts": "2bd48f0e3a154d23529b5240d91ccf865d25f2186e75372f1df352631fd3a60f",
+    "src/art/native-characters.ts": "bd3f2e61e9095224071211b6af8a1ddab0c18a93c847474853d4e9538d4b4a17",
+    "src/art/native-environment.ts": "077ab8034ce6598242089e2cf3057eb7057f45750cab576ca3fd72518e1e81a1",
     "src/art/native-display.ts": "2d785ebeae1f7558662dbb69ebd0007f93266d6360a3c178cb09076335b86086",
     "src/art/native-view.ts": "e6f05e65e87d3a56db794a57436e7af1685640660d62b09953eb7190de6c1f66",
     "src/art/recipes.ts": "b3c6890ff3e025f14373f28f10a68f3eeeb54f8a733a26192233f81f0090b905",

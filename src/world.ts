@@ -1,3 +1,4 @@
+import type {SaleMarginPayload} from './presentation/sale-accounting';
 import {roomProbeContract,roomProbeData} from './art/native-room-probe';
 import {RawCubeTexture} from '@babylonjs/core/Materials/Textures/rawCubeTexture';
 import {SphericalHarmonics,SphericalPolynomial} from '@babylonjs/core/Maths/sphericalPolynomial';
@@ -13,7 +14,7 @@ import {nativeProductRecipe as productRecipe} from './art/native-products';
 import {Engine} from '@babylonjs/core/Engines/engine';
 import {Scene} from '@babylonjs/core/scene';
 import {Color3,Color4} from '@babylonjs/core/Maths/math.color';
-import {Vector3} from '@babylonjs/core/Maths/math.vector';
+import {Vector3,Matrix} from '@babylonjs/core/Maths/math.vector';
 import {Viewport} from '@babylonjs/core/Maths/math.viewport';
 import {ArcRotateCamera} from '@babylonjs/core/Cameras/arcRotateCamera';
 import {HemisphericLight} from '@babylonjs/core/Lights/hemisphericLight';
@@ -75,7 +76,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  const exteriorFill=new HemisphericLight('cool exterior sky',new Vector3(-1,.8,0),scene);exteriorFill.diffuse=Color3.FromArray(linearColor(nativeLighting.exteriorFill.color));exteriorFill.groundColor=Color3.FromArray(linearColor(nativeLighting.exteriorFill.ground));exteriorFill.intensity=nativeLighting.exteriorFill.intensity;exteriorFill.includedOnlyMeshes=exterior.getChildMeshes();
  const door=model('native.door.leaf',doorLeafRecipe());door.position.set(2.34,.08,3.20);
  const sign=model('native.door.sign',doorSignRecipe(),door);sign.position.set(.80,1.56,-.073);
- for(let row=0;row<2;row++)for(let i=0;i<8;i++)for(let k=0;k<((i+row)%3===0?2:1);k++){const item=catalog.offerings[(i+row*3)%catalog.offerings.length];const stock=model(`back.display.${row}.${item.id}.${k}`,productRecipe(item.id,item.color));stock.position.set(-2.95+i*.55+(item.id==='off.notebook'||item.id==='off.towel'?k*.022:k*.16),1.47+.105/2+row*.76+artDirection.restingGap+(item.id==='off.notebook'?k*.065:item.id==='off.towel'?k*.14:0),2.84+(k?-.075:0));stock.scaling.setAll(item.id==='off.tea'?.93:item.id==='off.notebook'?.90:.85);stock.rotation.y=((i+row)%3-1)*.24+k*.12;}
+ for(let row=0;row<3;row++)for(let i=0;i<8;i++)for(let k=0;k<((i+row)%3===0?2:1);k++){const item=catalog.offerings[(i+row*3)%catalog.offerings.length];const stock=model(`back.display.${row}.${item.id}.${k}`,productRecipe(item.id,item.color));stock.position.set(-2.95+i*.55+(item.id==='off.notebook'||item.id==='off.towel'?k*.022:k*.16),[.96,1.47,2.23][row]+(row===0?.085:.105)/2+artDirection.restingGap+(item.id==='off.notebook'?k*.065:item.id==='off.towel'?k*.14:0),2.84+(k?-.075:0));stock.scaling.setAll(item.id==='off.tea'?.93:item.id==='off.notebook'?.90:.85);stock.rotation.y=((i+row)%3-1)*.24+k*.12;}
  const highlights:Mesh[]=[],productRoots:TransformNode[]=[];const shelfContents:string[]=[];
  for(let i=0;i<3;i++){
   const d=layoutData.displays[i];const display=model(d.id,nativeDisplayRecipe(i),undefined,i);display.position.set(d.position[0],artDirection.fixtureBaseY,d.position[2]);
@@ -100,6 +101,12 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  revealProxy.setEnabled(false);
  const dustRoot=new TransformNode('fx.window.dust.pool',scene),dust:TransformNode[]=[];
  for(let i=0;i<vfx.dust.capacity;i++){const mote=model(`fx.dust.${i}`,[{shape:'box',size:[vfx.dust.size,vfx.dust.size,.002],at:[0,0,0],color:'#F9EACD',alpha:vfx.dust.maxOpacity,role:'paper'}],dustRoot,undefined,false);for(const m of mote.getChildMeshes()){m.receiveShadows=false;(m as Mesh).billboardMode=Mesh.BILLBOARDMODE_ALL;}dust.push(mote);}
+ // One reusable DOM annotation outside app repaint; keyed only by confirmed
+ // receipt revision. It labels an aggregate, never an invented individual sale.
+ const marginNode=document.createElement('div');marginNode.className='sale-margin';marginNode.hidden=true;marginNode.setAttribute('role','status');marginNode.setAttribute('aria-live','polite');
+ const marginLabel=document.createElement('span'),marginValue=document.createElement('strong'),marginNote=document.createElement('small');marginNode.append(marginLabel,marginValue,marginNote);document.body.append(marginNode);
+ const pendingMargins=new Map<number,{payload:SaleMarginPayload;age:number}>();let activeMargin:{payload:SaleMarginPayload;age:number}|undefined;let marginWatermark=-1;
+ function showMargin(payload:SaleMarginPayload){activeMargin={payload,age:0};marginLabel.textContent=payload.label;marginValue.textContent=payload.signed;marginNote.textContent=payload.note;marginNode.title=payload.detail;marginNode.dataset.tone=payload.grossMargin<0?'loss':payload.grossMargin>0?'profit':'neutral';marginNode.dataset.revision=String(payload.revision);}
  const clock=new FeedbackClock(),gestureClock=new Day1GestureClock();let minimalFX=false,ambientTime=0,selectionTime:number=vfx.selection.duration;
  let state:Snapshot|undefined,quality='auto',effectiveQuality='high',zen=false,panelOpen=false,selectedSlot=-1,disposed=false;
  let frames:number[]=[],last:number|undefined,visibleSamples=0,qualityCheckedAt=0;let readyAt=0,composition='',viewMode:NativeView='shop',lastFitRadius=0;
@@ -120,7 +127,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  scene.onPointerPick=(_,pick)=>{const n=pick.pickedMesh?.metadata?.slot;if(typeof n==='number')onSlot(n);};
  const contextLost=()=>canvas.dispatchEvent(new CustomEvent('world-error'));
  canvas.addEventListener('webglcontextlost',contextLost);window.addEventListener('resize',resize);const observer=new ResizeObserver(resize);observer.observe(canvas);
- function finishFeedback(){const reveal=clock.active?.kind==='reveal';clock.cancel();gestureClock.cancel();nativePresentation.cancel();nativeActors.clearProps();delivery.cancel(routes);if(reveal)onFeedbackEnd();}
+ function finishFeedback(){pendingMargins.clear();activeMargin=undefined;marginNode.hidden=true;const reveal=clock.active?.kind==='reveal';clock.cancel();gestureClock.cancel();nativePresentation.cancel();nativeActors.clearProps();delivery.cancel(routes);if(reveal)onFeedbackEnd();}
  function advanceFeedback(dt:number){if(disposed||document.hidden){finishFeedback();return;}const reveal=clock.active?.kind==='reveal';if(reduced.matches){gestureClock.cancel();nativePresentation.cancel();nativeActors.clearProps();}if(!motionAllowed({low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches})){clock.cancel();if(reveal)onFeedbackEnd();return;}clock.step(dt);if(reveal&&!clock.active)onFeedbackEnd();}
  const visibility=()=>{last=undefined;if(document.hidden)finishFeedback();};document.addEventListener('visibilitychange',visibility);
  resize();await scene.whenReadyAsync();readyAt=performance.now();
@@ -134,10 +141,10 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
   gestureClock.step(dt,policy,document.hidden);
   const hour=state?new Date(state.watermark+9*3600000).getUTCHours():0;const trading=!!state?.open&&hour>=config.openHour&&hour<config.closeHour;
   // Milliseconds enter the engine-neutral motion clock exactly once as seconds.
-  const seconds=dt/1000;let routeFrame=routes.tick(seconds,{open:trading,visible:true,reduceMotion:reduced.matches,capacity:nativePolicy.customerCapacity});
+  const seconds=dt/1000;let routeFrame=routes.tick(seconds,{open:trading,visible:true,reduceMotion:reduced.matches,capacity:nativePolicy.customerCapacity,staff:nativeActors.staffPosition(),serviceStaffReady:nativeActors.workReady()});
   const arrival=routeFrame.actors.some(a=>a.enabled&&a.state==='entering');if(arrival&&!previousArrival&&!nativePresentation.current)gestureClock.start('greet',policy);previousArrival=arrival;
-  const service=delivery.tick(seconds,nativePresentation,routes,nativePolicy),greet=gestureClock.active;routeFrame=routes.tick(0,{open:trading,visible:true,reduceMotion:reduced.matches,capacity:nativePolicy.customerCapacity});
-  currentRoutes=routeFrame;nativeActors.frame(seconds,nativePolicy,routeFrame,service,greet?.kind==='greet'?greet.elapsed/greet.duration:undefined);
+  const service=delivery.tick(seconds,nativePresentation,routes,nativePolicy,nativeActors.workReady()),greet=gestureClock.active;routeFrame=routes.tick(0,{open:trading,visible:true,reduceMotion:reduced.matches,capacity:nativePolicy.customerCapacity,staff:nativeActors.staffPosition(),serviceStaffReady:nativeActors.workReady()});
+  currentRoutes=routeFrame;nativeActors.frame(seconds,nativePolicy,routeFrame,service,greet?.kind==='greet'?greet.elapsed/greet.duration:undefined,!!nativePresentation.current);
   door.rotation.y=routeFrame.doorAngle;sign.rotation.z=nativePolicy.decorativeMotion?Math.sin(ambientTime/1000*1.4)*.024*Math.abs(routeFrame.doorAngle):0;
   leafNodes.forEach((leaf,i)=>{leaf.rotation.z=nativePolicy.decorativeMotion?Math.sin(ambientTime/1000*.43+i*1.7)*.025:0;leaf.rotation.x=nativePolicy.decorativeMotion?Math.sin(ambientTime/1000*.31+i*.8)*.012:0;});
   exterior.setEnabled(true);
@@ -145,10 +152,16 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
   productRoots.forEach(r=>r.position.y=artDirection.displaySurfaceY+artDirection.restingGap);if(service?.cue.kind==='display'&&nativePolicy.decorativeMotion)productRoots[service.cue.slot].position.y+=.025*Math.sin(service.progress*Math.PI)**2;receipt.setEnabled(false);revealProxy.setEnabled(false);
   const fx=clock.active;if(fx){const p=fx.elapsed/fx.duration;if(fx.kind==='display'){productRoots[fx.slot].position.y=artDirection.displaySurfaceY+artDirection.restingGap+vfx.display.lift*(1-p)*(1-p);}else if(fx.kind==='reveal'){revealProxy.setEnabled(true);revealLid.rotation.x=-Math.sin(Math.min(1,p*2)*Math.PI/2)*1.12;localLight.scaling.setAll(.75+.25*Math.sin(p*Math.PI));}else{receipt.setEnabled(true);receipt.position.set(2.2,1.16+.08*p,-1.5);for(const m of receipt.getChildMeshes()){m.material=receiptMaterials[fx.kind];m.visibility=Math.sin(p*Math.PI)*.7;}}}
   ambientTime=(ambientTime+dt)%120000;dustRoot.setEnabled(nativePolicy.decorativeMotion);if(nativePolicy.decorativeMotion){dust.forEach((m,i)=>{const phase=((ambientTime/vfx.dust.lifetime)+i/vfx.dust.capacity)%1;m.position.set(-4.0+(i%3)*.34+phase*.14,.7+phase*1.6,-.75+(i%4)*.39);for(const mesh of m.getChildMeshes())mesh.visibility=Math.sin(phase*Math.PI)*.8;});}
+  for(const [revision,item]of pendingMargins){item.age+=dt;if(item.age>24000)pendingMargins.delete(revision);}
+  if(service?.cue.kind==='sale'&&service.progress>=.72){const item=pendingMargins.get(service.receiptRevision);if(item){showMargin(item.payload);pendingMargins.delete(service.receiptRevision);}}
+  if(activeMargin){activeMargin.age+=dt;const rect=canvas.getBoundingClientRect(),point=Vector3.Project(new Vector3(nativeActors.staff.root.position.x,1.90,nativeActors.staff.root.position.z),Matrix.Identity(),scene.getTransformMatrix(),camera.viewport.toGlobal(engine.getRenderWidth(),engine.getRenderHeight()));
+   const width=Math.min(240,rect.width-24),x=point.x*rect.width/engine.getRenderWidth(),y=point.y*rect.height/engine.getRenderHeight();marginNode.style.width=width+'px';marginNode.style.left=Math.max(width/2+8,Math.min(rect.width-width/2-8,x))+rect.left+'px';marginNode.style.top=Math.max(170,Math.min(rect.height-110,y-8-(reduced.matches?0:Math.min(14,activeMargin.age/300))))+rect.top+'px';marginNode.hidden=panelOpen||activeMargin.age>4400;if(activeMargin.age>4400)activeMargin=undefined;
+  }else marginNode.hidden=true;
   scene.render();
  });
  return {
-  baseline(){nativeActors.clearProps();delivery.cancel(routes);routes.reset();previousArrival=false;},
+  saleMargin(payload:SaleMarginPayload){if(disposed||document.hidden||payload.revision<=marginWatermark)return;marginWatermark=payload.revision;pendingMargins.set(payload.revision,{payload:{...payload},age:0});while(pendingMargins.size>2)pendingMargins.delete(pendingMargins.keys().next().value!);if(reduced.matches){showMargin(payload);pendingMargins.delete(payload.revision);}},
+  baseline(){marginWatermark=-1;pendingMargins.clear();activeMargin=undefined;marginNode.hidden=true;nativeActors.clearProps();delivery.cancel(routes);routes.reset();previousArrival=false;},
   update(s:Snapshot){state=s;parcel.setEnabled(!s.revealed);for(let i=0;i<3;i++){const id=s.shelves[i],item=s.inventory[id],o=catalog.offerings.find(o=>o.id===id),count=Math.min(4,item?.stock??0);const key=`${id}:${count}`;if(shelfContents[i]===key)continue;shelfContents[i]=key;for(const child of [...productRoots[i].getChildren()]){if(child instanceof TransformNode)for(const mesh of child.getChildMeshes())shadow.removeShadowCaster(mesh);child.dispose(false);}if(!o)continue;for(const [k,sample] of displaySamples(id,count,i).entries()){const object=model(`${layoutData.displays[i].id}.${id}.${k}`,productRecipe(id,o.color),productRoots[i],i);object.position.set(...sample.at);object.rotation.y=sample.yaw;object.scaling.setAll(sample.scale);}}resize();},
   view(value:NativeView){if(viewMode===value)return;viewMode=value;lastFitRadius=0;composition='';resize();},
   quality(q:string){if(quality===q)return;quality=q;frames=[];last=undefined;setQuality(q==='low'?'low':'high');},
@@ -159,7 +172,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
   gesture(kind:'greet'){if(disposed)return false;return gestureClock.start(kind,{low:effectiveQuality==='low',minimal:minimalFX,reduced:reduced.matches},document.hidden);},
   skip(){finishFeedback();},
   skipReveal(){if(clock.active?.kind==='reveal'){clock.cancel();onFeedbackEnd();}},
-  metrics(){return {presentationActor:nativeActors.staff.root.metadata,nativeMotion:nativeActors.metrics(),nativeService:nativePresentation.metrics(),serviceFrame:nativePresentation.current,customers:currentRoutes?.actors,gesture:gestureClock.active?.kind??null,artDirection:nativeLighting.id,cameraView:viewMode,readyAtMs:readyAt,quality,effectiveQuality,adaptivePolicy:'auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged',minimalFX,reducedMotion:reduced.matches,feedback:clock.active?.kind??null,materials:scene.materials.length,dustCapacity:vfx.dust.capacity,customerRoots:nativeActors.visitors.map(c=>({position:c.root.position.asArray(),enabled:c.root.isEnabled()})),selectedSlot,visibleSamples,frameSamplesMs:[...frames],fps:frames.length?1000/(frames.reduce((a,b)=>a+b,0)/frames.length):null,meshes:scene.meshes.length,activeMeshes:scene.getActiveMeshes().length,renderer:engine.getGlInfo(),viewport:[canvas.width,canvas.height],cameraViewport:camera.viewport,cameraInertia:[camera.inertialAlphaOffset,camera.inertialBetaOffset,camera.inertialRadiusOffset],cameraPose:{alpha:camera.alpha,beta:camera.beta,radius:camera.radius,target:camera.target.asArray()}};},
-  dispose(){finishFeedback();disposed=true;routes.dispose();nativeActors.dispose();clock.dispose();observer.disconnect();window.removeEventListener('resize',resize);document.removeEventListener('visibilitychange',visibility);canvas.removeEventListener('webglcontextlost',contextLost);engine.stopRenderLoop();scene.dispose();engine.dispose();}
+  metrics(){return {presentationActor:nativeActors.staff.root.metadata,nativeMotion:nativeActors.metrics(),nativeService:nativePresentation.metrics(),serviceFrame:nativePresentation.current,customers:currentRoutes?.actors,gesture:gestureClock.active?.kind??null,artDirection:nativeLighting.id,cameraView:viewMode,readyAtMs:readyAt,quality,effectiveQuality,adaptivePolicy:'auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged',minimalFX,reducedMotion:reduced.matches,feedback:clock.active?.kind??null,saleMargin:activeMargin?.payload??null,pendingSaleMargins:pendingMargins.size,materials:scene.materials.length,dustCapacity:vfx.dust.capacity,customerRoots:nativeActors.visitors.map(c=>({position:c.root.position.asArray(),enabled:c.root.isEnabled()})),selectedSlot,visibleSamples,frameSamplesMs:[...frames],fps:frames.length?1000/(frames.reduce((a,b)=>a+b,0)/frames.length):null,meshes:scene.meshes.length,activeMeshes:scene.getActiveMeshes().length,renderer:engine.getGlInfo(),viewport:[canvas.width,canvas.height],cameraViewport:camera.viewport,cameraInertia:[camera.inertialAlphaOffset,camera.inertialBetaOffset,camera.inertialRadiusOffset],cameraPose:{alpha:camera.alpha,beta:camera.beta,radius:camera.radius,target:camera.target.asArray()}};},
+  dispose(){finishFeedback();marginNode.remove();disposed=true;routes.dispose();nativeActors.dispose();clock.dispose();observer.disconnect();window.removeEventListener('resize',resize);document.removeEventListener('visibilitychange',visibility);canvas.removeEventListener('webglcontextlost',contextLost);engine.stopRenderLoop();scene.dispose();engine.dispose();}
  };
 }

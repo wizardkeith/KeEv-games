@@ -1,6 +1,7 @@
+import {saleAccounting,type SaleAccounting} from './sale-accounting';
 import type {Snapshot} from '../core/contracts';
 export type FeedbackKind='sale'|'stock'|'support'|'display'|'reveal';
-export interface Feedback {id:string;kind:FeedbackKind;units:number;slot:number;sold:number}
+export interface Feedback {id:string;kind:FeedbackKind;units:number;slot:number;sold:number;accounting?:SaleAccounting}
 const baselineCauses=new Set(['baseline','reload','retry','catchup','import','mode','choose-mode','offline-return']);
 /** Only a transition returned by a successful, live commit may create feedback.
  * Loading a newer saved snapshot is a baseline, never a presentation replay. */
@@ -16,7 +17,7 @@ export class FeedbackProjector {
   const displaySlot=after.shelves.findIndex((id,i)=>!!id&&id!==before.shelves[i]);
   const displayed=displaySlot>=0;
   const kind:FeedbackKind|undefined=!before.revealed&&after.revealed&&cause==='reveal'?'reveal':support>0&&cause==='recover'?'support':sold>0?'sale':bought>0&&cause==='buy'?'stock':displayed&&cause==='display'?'display':undefined;
-  return kind?{id,kind,sold,units:kind==='sale'?sold:kind==='stock'?Object.keys(after.inventory).reduce((n,id)=>n+Math.max(0,after.inventory[id].stock-before.inventory[id].stock),0):0,slot:kind==='display'?displaySlot:slot}:undefined;
+  return kind?{id,kind,sold,...(sold?{accounting:saleAccounting(before,after)}:{}),units:kind==='sale'?sold:kind==='stock'?Object.keys(after.inventory).reduce((n,id)=>n+Math.max(0,after.inventory[id].stock-before.inventory[id].stock),0):0,slot:kind==='display'?displaySlot:slot}:undefined;
  }
  reset(){this.seen.clear();}
  get retainedIds(){return this.seen.size;}

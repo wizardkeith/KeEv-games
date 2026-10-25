@@ -29,7 +29,7 @@ test('real committed sale acquires one existing visitor, transfers the actual ba
   const after=await saves.settle(before,start+3600000,start+3600000);presentation.commit(before,after,'advance',0,undefined,policy);assert.ok(after.eventSequence>before.eventSequence);
   let transfer=false,exited=false,held=false,previous:Vector3|undefined,serviceFrames=0;
   for(let n=0;n<4200;n++){
-   routes.tick(1/60,settings);const service=delivery.tick(1/60,presentation,routes,policy);frame=routes.tick(0,settings);actors.frame(1/60,policy,frame,service,undefined);if(service?.customerId)serviceFrames++;
+   const live={...settings,staff:actors.staffPosition(),serviceStaffReady:actors.workReady()};routes.tick(1/60,live);const service=delivery.tick(1/60,presentation,routes,policy,actors.workReady());frame=routes.tick(0,live);actors.frame(1/60,policy,frame,service,undefined,!!presentation.current);if(service?.customerId)serviceFrames++;
    const bag=scene.getTransformNodeByName('native.prop.bag')!;bag.computeWorldMatrix(true);const at=bag.getAbsolutePosition().clone();
    if(actors.metrics().carriedBag){if(!transfer&&previous)assert.ok(Vector3.Distance(previous,at)<.10,'ownership switch keeps world bag position continuous');transfer=true;assert.equal(actors.metrics().carriedBag,'visitor-a');assert.ok(bag.parent?.name.includes('visitor-a')&&bag.parent?.name.includes('socket-left'));}
    else if(bag.isEnabled())held=true;
@@ -55,12 +55,18 @@ test('v4 real committed sale selects reachable Visitor B and transfers the same 
  const actors=createNativeActors(scene,(name,recipe,parent)=>{const node=new TransformNode(name,scene);if(parent)node.parent=parent;for(const g of nativeGrouped(recipe)){const mesh=new Mesh(name+'.mesh',scene),v=new VertexData();v.positions=g.geometry.positions;v.normals=g.geometry.normals;v.indices=g.geometry.indices;v.applyToMesh(mesh);mesh.parent=node;}return node;});
  const routes=new NativeCustomerRoutes(),presentation=new NativeCommitPresentation(),delivery=new NativeDelivery();presentation.baseline(before,0);
  try{
-  let frame=routes.tick(0,settings);for(let n=0;n<4000&&!(frame.actors[1].enabled&&frame.actors[1].state==='entering'&&frame.actors[1].x>2.3&&frame.actors[1].z<=2.05);n++){frame=routes.tick(1/60,settings);actors.frame(1/60,policy,frame,undefined,undefined);}
+  // Exercise the second pooled visitor after a real close/drain/reopen. The
+  // new cashier is on the right corner; the earlier two-guest timing no longer
+  // guarantees B is the nearest eligible browser. Do not force actor state.
+  let frame=routes.tick(0,settings);for(let n=0;n<3000&&!frame.actors[0].enabled;n++){frame=routes.tick(1/60,{...settings,capacity:1});actors.frame(1/60,policy,frame,undefined,undefined);}
+  for(let n=0;n<3000&&frame.actors.some(a=>a.enabled);n++){frame=routes.tick(1/60,{...settings,open:false});actors.frame(1/60,policy,frame,undefined,undefined);}
+  assert.ok(frame.actors.every(a=>!a.enabled),'closure drains existing visitor');
+  for(let n=0;n<4000&&!(frame.actors[1].enabled&&frame.actors[1].state==='entering'&&frame.actors[1].x>2.3&&frame.actors[1].z<=2.05);n++){frame=routes.tick(1/60,settings);actors.frame(1/60,policy,frame,undefined,undefined);}
   assert.equal(frame.actors[1].state,'entering');
   const after=await saves.settle(before,start+3600000,start+3600000);presentation.commit(before,after,'advance',0,undefined,policy);assert.ok(after.eventSequence>before.eventSequence);
   let transfer=false,exited=false,held=false,previous:Vector3|undefined,serviceFrames=0;
   for(let n=0;n<4200;n++){
-   routes.tick(1/60,settings);const service=delivery.tick(1/60,presentation,routes,policy);frame=routes.tick(0,settings);actors.frame(1/60,policy,frame,service,undefined);if(service?.customerId)serviceFrames++;
+   const live={...settings,staff:actors.staffPosition(),serviceStaffReady:actors.workReady()};routes.tick(1/60,live);const service=delivery.tick(1/60,presentation,routes,policy,actors.workReady());frame=routes.tick(0,live);actors.frame(1/60,policy,frame,service,undefined,!!presentation.current);if(service?.customerId)serviceFrames++;
    const bag=scene.getTransformNodeByName('native.prop.bag')!;bag.computeWorldMatrix(true);const at=bag.getAbsolutePosition().clone();
    if(actors.metrics().carriedBag){if(!transfer&&previous)assert.ok(Vector3.Distance(previous,at)<.10,'ownership switch keeps world bag position continuous');transfer=true;assert.equal(actors.metrics().carriedBag,'visitor-b');assert.ok(bag.parent?.name.includes('visitor-b')&&bag.parent?.name.includes('socket-left'));}
    else if(bag.isEnabled())held=true;

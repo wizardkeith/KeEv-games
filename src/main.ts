@@ -1,3 +1,4 @@
+import {saleAccountingText} from './presentation/sale-accounting';
 import {capturePrice,clearCommittedPriceDraft} from './ui/price-state';
 import {capturePurchase,changeStockView,stockViewKey,newStockWorkspace,readStockWorkspace,saveStockWorkspace,parseQuantity,quantityDraft,setQuantity} from './ui/stock-state';
 import './style.css';
@@ -89,6 +90,7 @@ function committed(previous:Snapshot,current:Snapshot,cause:string,targetSlot:nu
  clearTimeout(revealTimer);u.revealFx=false;u.feedbackKind=event.kind;
  if(event.sold>0){let text=t('sold')+' '+event.sold;const empty=catalog.offerings.filter(o=>previous.inventory[o.id].stock>0&&current.inventory[o.id].stock===0);if(empty.length)text+=' · '+empty.map(o=>t(o.key)).join(', ')+' '+t('soldOut');const accepted=observation?.summary?.accepted;if(accepted?.kind==='stock')text+=' · '+t('bought')+' ×'+accepted.quantity;if(accepted?.kind==='display')text+=' · '+t('placed')+' '+(accepted.slot+1);text+=' · '+day1Text(locale,'misaki')+': '+day1Text(locale,'sale');notice(event.kind==='support'?text+' · '+t('supportReceived'):text);}
  if(document.hidden||epoch!==presentationEpoch)return;
+ if(event.accounting&&world?.saleMargin)world.saleMargin({...event.accounting,...saleAccountingText(locale,event.accounting.units),signed:(event.accounting.grossMargin<0?'−':'+')+money(Math.abs(event.accounting.grossMargin))});
  const started=world?.feedback(event)===true;
  if(event.kind==='reveal'&&started){u.revealFx=true;revealTimer=setTimeout(()=>{if(epoch!==presentationEpoch||!u.revealFx)return;world?.skipReveal();finishReveal();},vfx.reveal.duration);}
  if(event.sold>0&&u.sound){saleSound.currentTime=0;void saleSound.play().catch(()=>{});}

@@ -9,6 +9,9 @@ export function nativeStylingRecipe():Part[]{
  // Quiet wall panelling and cap rails give the large wall a material hierarchy.
  for(const x of [-3.48,-2.48,-1.48,-.48,.52,1.52])out.push(p('box',[.018,.79,.025],[x,.56,3.205],'#C7AF92'));
  out.push(p('round',[6.10,.055,.055],[-.73,.97,3.185],'#CDB395','wood',{radius:.008}));
+ // A third low display tier within the same back-wall furniture footprint.
+ out.push(p('round',[5.2,.085,.60],[-.8,.96,2.85],'#967255','wood',{radius:.02}));
+ for(const x of [-3.1,1.5])out.push(p('box',[.045,.20,.49],[x,.83,2.86],'#6A4E3C'));
  // The existing window gets wood-lined reveals, a soft blind and a linen pull.
  out.push(p('round',[.24,.11,3.40],[-4.32,2.88,0],'#AE825D','wood',{radius:.018}),p('round',[.018,.145,3.12],[-4.28,2.76,0],'#D9C9A7','fabric',{radius:.006}));
  // Fixed display storage is furniture dressing, deliberately not product models.

@@ -22,7 +22,7 @@ export function nativeRoomRecipe():NativeEnvironmentPart[]{
  // decorative solid door panel, old glass, and old handle respectively.
  // Removing only the glass would leave both an opaque wall and opaque panel.
  const removed=new Set([2,7,10,11,12]);
- const old=roomRecipe().filter((_,i)=>!removed.has(i)).map(p=>{
+ const old=roomRecipe().filter((p,i)=>!removed.has(i)&&!(p.size[0]===.045&&p.size[1]===.26&&p.at[0]===1.5)).map(p=>{
   // Cool, desaturated floor boards separate furniture from the floor without
   // changing material encoding or brightening every surface in the scene.
   if(p.role==='wood'&&p.size[2]===6.45&&p.size[1]===.018)return {...p,size:[.545,p.size[1],p.size[2]] as V3,color:p.color===palette.floorLight?'#C2A481':'#B99A76',roughness:.83};
@@ -35,7 +35,7 @@ export function nativeRoomRecipe():NativeEnvironmentPart[]{
  const {minX,maxX,topY}=nativeDoorContract.aperture;
  const wallMin=-4.55,wallMax=4.55,wallTop=3.5;
  // Original bounded floor geometry; the v6 material carries staggered joints.
- return [...old,...[-1.65,-.90,-.15].flatMap(x=>[round([.70,.28,.025],[x,.35,2.656],'#AC8562',.015),round([.075,.018,.030],[x,.37,2.627],'#8C785A',.006,'metal')]),
+ return [...old,...[-1.65,-.90,-.15].map(x=>round([.70,.28,.025],[x,.35,2.656],'#AC8562',.015)),
   part('box',[minX-wallMin,wallTop,.16],[(wallMin+minX)/2,wallTop/2,3.3],palette.cream,'paint'),
   part('box',[wallMax-maxX,wallTop,.16],[(maxX+wallMax)/2,wallTop/2,3.3],palette.cream,'paint'),
   part('box',[maxX-minX,wallTop-topY,.16],[(minX+maxX)/2,(wallTop+topY)/2,3.3],palette.cream,'paint'),
@@ -61,7 +61,7 @@ export function doorLeafRecipe():Part[]{
   round([width,.085,.105],[width/2,height-.0425,0],wood,.012),
   round([width,.085,.105],[width/2,.0425,0],wood,.012),
   round([width-.10,.32,.080],[width/2,.23,0],'#B9946E',.012),
-  part('box',[width-.13,height-.43,.025],[width/2,1.40,0],'#C8DDD8','glass',{alpha:.32}),
+  part('box',[width-.13,height-.43,.025],[width/2,1.40,0],'#C8DDD8','glass',{alpha:.18}),
   round([.025,.26,.035],[width-.17,1.22,-.073],'#867663',.008,'metal'),
   ...[.25,1.20,2.15].map(y=>part('cylinder',[.055,.12,.055],[0,y,0],'#95806A','metal',{top:1})),
  ];
@@ -92,6 +92,7 @@ export function plantParts(scale=1):NativePlantParts{
   return {pivot:pivot.map(v=>v*scale) as V3,recipe:[
    part('leaf',[.22,.35,.035],offset,i%2?'#789879':'#9DB48D','leaf',{turn:[.25*Math.cos(a),a,.40*Math.sin(a)]}),
    scale<.6?part('sphere',[.085,.070,.085],[offset[0]*.6,.105,offset[2]*.6],'#F2E4C8','leaf'):part('leaf',[.19,.28,.028],[-offset[0]*.85,-.05,-offset[2]*.85],i%2?'#9DB48D':'#789879','leaf',{turn:[-.25*Math.cos(a),a+.8,-.55*Math.sin(a)]}),
+   part('leaf',[.17,.24,.028],[Math.sin(a+.9)*.17,-.055,Math.cos(a+.9)*.17],i%2?'#B0BE98':'#6C8C68','leaf',{turn:[.35,a+.9,Math.sin(a+.9)*.55]}),
   ].map(scaled)};
  });
  return {base,leaves};
@@ -129,9 +130,9 @@ export function exteriorRecipe():Part[]{
  return result;
 }
 
-export function nativeCounterRecipe():NativeEnvironmentPart[]{return [...counterRecipe().filter((_,i)=>i<3||i>6).map((p,i)=>i===0?{...p,color:'#D1AF86',roughness:.57}:i===1?{...p,color:'#B28C67'}:p),
+export function nativeCounterRecipe():NativeEnvironmentPart[]{return [...counterRecipe().filter((_,i)=>i<2||i>6).map((p,i)=>i===0?{...p,color:'#D1AF86',roughness:.57}:i===1?{...p,color:'#B28C67'}:p),
  // Recesses, a bevel beneath the thick top, and restrained drawer construction.
- round([1.79,.024,.80],[0,.847,0],'#8B664B',.009),
+
  round([1.65,.065,.65],[0,.050,0],'#77583F',.014),
  ...[-.41,.41].flatMap(x=>[
   round([.76,.18,.026],[x,.70,-.393],'#E5D6C1',.012,'paint'),

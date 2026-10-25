@@ -74,7 +74,7 @@ export class StaffMotionPlayer {
  }
  reset():void {this.cancel();this.visibleTime=0;this.idleWait=6;this.nextIdle='tidy';this.repeat=0;}
 
- tick(deltaSeconds:number,service:StaffServiceFrame|undefined,greetProgress:number|undefined,enabled:boolean):StaffPlaybackPose {
+ tick(deltaSeconds:number,service:StaffServiceFrame|undefined,greetProgress:number|undefined,enabled:boolean,allowIdleWork=true):StaffPlaybackPose {
   if(!Number.isFinite(deltaSeconds)||deltaSeconds<0)throw new RangeError('staff delta seconds');
   if(!enabled){this.cancel();return this.currentPose;}
   const dt=Math.min(.05,deltaSeconds);this.visibleTime+=dt;
@@ -88,11 +88,13 @@ export class StaffMotionPlayer {
    if(greetProgress+.03<this.lastGreetProgress)this.repeat++;
    this.lastGreetProgress=greetProgress;externalKey='greet:'+this.repeat;
   }
+  if(!allowIdleWork){this.idleTask=undefined;this.idleElapsed=0;this.idleWait=6;}
   const hadExternal=this.inputKey.startsWith('service:')||this.inputKey.startsWith('greet:');
   if(externalKey!=='idle'){
    // Interrupt and discard work, never pause modulo into its middle later.
    this.idleTask=undefined;this.idleElapsed=0;this.idleWait=7;
-  }else if(hadExternal){this.idleTask=undefined;this.idleElapsed=0;this.idleWait=7;}
+  }else if(!allowIdleWork){/* Idle work waits for a real counter position. */}
+  else if(hadExternal){this.idleTask=undefined;this.idleElapsed=0;this.idleWait=7;}
   else if(this.idleTask){
    this.idleElapsed+=dt;const duration=STAFF_CLIPS[this.idleTask.kind].duration;
    if(this.idleElapsed>=duration){this.idleTask=undefined;this.idleElapsed=0;this.idleWait=9-duration;}
