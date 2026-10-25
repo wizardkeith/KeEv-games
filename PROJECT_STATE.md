@@ -1,6 +1,12 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T01:21:14+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T01:59:16+08:00** (Asia/Hong_Kong).
+
+## V11 fifth visual checkpoint — focal light and measured vignette — 2026-10-26T01:59:16+08:00
+
+- [DraftPR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed **`b82b1a393ab795227846da680bc961e661066b3b`**, unmerged `codex/game-v11-target-slice`. **Main documentation only; publicV17 unchanged; target art still unaccepted.** Actual-game same-camera warm focal-light A/B and counter+central high/mid/low vignette now recorded. Five existing fixed showroom samples relocated, total35unchanged; no player inventory/catalog/pricing/economy change. Actual book/card/tray support,10SKU central bounds/stack/tier/noninterpenetration pass. Original pendant positions retained; occluding move experiment rejected.
+- **182tests/build/validate/replay/assets,139GLB0errors/warnings,305protectedfiles/history pass.** ActualHigh/Minimal=false build46 **175.017s uncut**: greeting, real settlement, cashier contact/bag handoff, actual18item/+¥8,400batch gross margin, reload equality,0pageerrors,isolatedNormalunchanged. Build47 only adjusts central/window flower resting/scale and closes decorative vase bottoms; same actor/transaction/light code, not claimed as new47motion run. [Actual images/clip/provenance and gaps](https://github.com/wizardkeith/KeEv-games/blob/b82b1a393ab795227846da680bc961e661066b3b/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md).
+- **Remaining priority: male customer hair/shoulder/collar/hands/bag, then female.** Existing Misaki continuity/framing retained, neither customer yet claimed rebuilt. Overall reference-style/material/detail acceptance remains open; physicalGPU/FPS/audio/native notcertified. Rejected noisy GI remains off. No merge/deploy/userChrome/playerNormal/Unity/shutdown or story/gameplay/shop/set expansion.
 
 ## V11 fourth art-method checkpoint — still unaccepted — 2026-10-26T01:21:14+08:00
 
