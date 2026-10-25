@@ -1,6 +1,12 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T00:36:12+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T01:21:14+08:00** (Asia/Hong_Kong).
+
+## V11 fourth art-method checkpoint — still unaccepted — 2026-10-26T01:21:14+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed **`ca9ca2c40d9fe64c526eb3f36b94d5a2de60d154`**, unmerged `codex/game-v11-target-slice`; main documentation only, **publicV17 unchanged**. Preserved checkpoint3 shoulder/neck/body continuity; corrected face/eye glTF image UV orientation, skin eyelid mapping/thin brows, rounded leaves/white clusters, actual geometric window portal/procedural distant sky. Whole authoring budget including sky159<160;Misaki11,960<12,000tri. Web thin diffuse transmission is explicitly opaque PBR fallback/native extras in standardGLB, not a native appearance acceptance.
+- **179tests/build,139GLB0errors/warnings,305protectedfiles pass.** [Actual default game/normalUI and same-camera in-game GI experiment, provenance and gaps](https://github.com/wizardkeith/KeEv-games/blob/ca9ca2c40d9fe64c526eb3f36b94d5a2de60d154/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md). GI atlas was really applied222staticmeshes with9signature mismatches; weak effect/noisy walls → **not adopted/default remains off**, not claimed as fidelity success. Experimental source/tools/local saved-cloud bake masters retained. Latest completeHigh172s remains checkpoint3, not falsely rerun fornewshader; physicalGPU/FPS/audio/native open.
+- Independent checkpoint3 visual feedback (parent): shoulder/neck/cashier continuity and normal framing improved, preserve them. **Original target still unmet.** Next bounded priorities: actual warm focal/window/cooloutside lighting A/B; one counter+central high/mid/low vignette using existing non-stock decorative samples/white blossoms; male customer hair/shoulder/collar/hands/bag, then secondcustomer. No merge/deploy/playerNormal/userChrome/Unity/shutdown/newstory/gameplay/shop/set.
 
 ## V11 rebuild — third actual-render checkpoint, target still open — 2026-10-26T00:36:12+08:00
 
