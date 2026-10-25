@@ -6,6 +6,14 @@
 
 
 
+## 第十五個 checkpoint — 固定 renderer 診斷完成，未拿診斷當美術
+
+依parent覆核，固定同幾何／鏡頭／自然瀏覽面向，實際跑[現行材質control95](../evidence/native-v11/checkpoint-15/control-current-game95.png)與[中性＋單方向光96診斷（不是正常遊戲美術）](../evidence/native-v11/checkpoint-15/DIAGNOSTIC-neutral96-NOT-normal-art.png)。**48個cloth mesh的positions/normals/indices及原material identity雜湊全部一致**，camera與B的x/z/yaw/state一致；普通UI／wheel／自然browseProgress≥.30等待，沒有pose／時鐘／庫存／交易注入。頭手自然相位略不同，不聲稱全pose鎖定。Neutral只換cloth成無貼圖／IBL／specular的灰色材質，只綁一盞無陰影diffuse方向光，其他場景／人物皮膚／rig保留；剔面有效CCW已核對。
+
+已看全圖與4倍nearest原像素crop：**中性單光下主要背部垂墜仍圓滑，不能只怪原材質。**[隔離測試](../evidence/native-v11/checkpoint-15/isolation-test.log)檢查真實衣物所有vertex/normal/UV/index、parent/matrix不變，noncloth燈光保留；它只證明診斷有效，不是美術通過。[來源／量測／限制](../evidence/native-v11/checkpoint-15/provenance.json)。Default build不啟用診斷、不多第五燈，沒有用灰色畫面代替正常玩法證據。
+
+下一步只改少數主要V摺／現有裙褶幅度及必要低模形體，不再盲跑cloth simulation或小皺紋；之後回到整店材質區分／自然陳列／柔和窗光接觸。Target/style/textile gate仍OPEN，publicV17不變，PR8draft未合併／未發佈；雲端不是實體GPU/FPS/audio/native驗收。
+
 ## 第十四個 checkpoint — 實際全店層次及櫃台工作用具，布料診斷仍在進行
 
 保留已接受的髮型／肩頸／鏡頭／傢俬／主要陳列。新增原圖櫃台的**真正中空文具杯與五支不同斜向鉛筆**，固定工作用具，沒有SKU／庫存／獎勵／經濟作用；現有一張back-shelf print移到中央riser，配合保留的花／書形成高、中、低組合，35個固定showroom sample種類／數量完全保留。六條16mm牆飾條省去正常距離不足一像素的3mm bevel，保留相同bounds，把576tri轉到可見工作用具；**固定dressing＋canopy15,704tri<16,000，17materialgroups<18**，沒有提高預算。

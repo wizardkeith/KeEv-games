@@ -1,0 +1,10 @@
+BJS - [23:35:57]: Babylon.js v8.32.0 - Null engine
+✔ renderer isolation keeps actual garment vertices/normals/UVs/indices, parent transforms and noncloth lights unchanged (135.502407ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 536.213005

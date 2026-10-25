@@ -1,0 +1,64 @@
+{
+  "status": "Bounded actual renderer diagnostic, NOT final art or accepted normal-game style",
+  "controlBuild": 95,
+  "neutralBuild": 96,
+  "geometryFingerprints": "all48 actor-fabric meshes exact positions/normals/indices and original material identities before isolation",
+  "camera": {
+    "alpha": -0.7853981633974483,
+    "beta": 0.8726646259971648,
+    "radius": 7.185752624501723,
+    "target": [
+      0.7,
+      1.15,
+      0
+    ]
+  },
+  "guestBefore": {
+    "id": "visitor-b",
+    "enabled": true,
+    "x": -0.65,
+    "z": 1.1,
+    "yaw": 1.5707963267948966,
+    "speed": 0,
+    "distance": 7.50115387782208,
+    "state": "browsing",
+    "browseProgress": 0.33695652173913015,
+    "hasBag": false,
+    "handoverProgress": 0
+  },
+  "guestAfter": {
+    "id": "visitor-b",
+    "enabled": true,
+    "x": -0.65,
+    "z": 1.1,
+    "yaw": 1.5707963267948966,
+    "speed": 0,
+    "distance": 7.50115387782208,
+    "state": "browsing",
+    "browseProgress": 0.36956521739130394,
+    "hasBag": false,
+    "handoverProgress": 0
+  },
+  "naturalPhase": "ordinary browseProgress wait>=.30; head/arm phases can differ, exact pose not claimed",
+  "neutral": "StandardMaterial neutralgray, no texture/IBL/specular, one shadowless diffuse directional light[-.75,-.60,.15] bound only to actor cloth; original scene geometry/rig/camera/clock/economy unchanged",
+  "culling": "MeshCCW and effective materialCCW retained; checked installedBabylon effective orientation and NullEngine actual garment buffers/transforms",
+  "pixelVerdict": "Actually viewed both full game images and4xnearest-nativepixel crop. Primary back drape still rounded/smooth in neutral. This does not justify blaming final material alone. Next change only few primary fold amplitudes/shape, no new complex cloth simulation; then return whole-scene material/merchandising/window/contact layers.",
+  "notClaimed": [
+    "Neutral diagnostic is not normal game appearance or target match",
+    "No new sale/customer event or fullsuite/device pass from this diagnostic",
+    "Passing geometry isolation test is not visual acceptance"
+  ],
+  "sourceSha256": {
+    "src/art/cloth-diagnostic-v11.ts": "92c47df7d602c9fae4b12d45e62e8fb80f66dddc5312cd6e1f1cd3751ac6b720",
+    "src/world.ts": "fbff04f75cc0d4d43c52cd3a152d49d2277b74a5b7351c44d2f7dbeb51170196",
+    "tools/v11-customer-game-qa.cjs": "6d7251a9caed806acab48eb3ba309985b7ce02b2f830dad3689741d2b6dcabcf"
+  },
+  "evidenceSha256": {
+    "renderer-diagnostic.json": "a4eac16f1fd0e3b765ca6f14a01362cd39420f5d3a2adf65e00c7cad9d81d86a",
+    "control-current-game95.png": "ed0af6ca89575a3dab7a467028a862b0a7c8b4eb18ca1a42f9ea6f84829df89e",
+    "DIAGNOSTIC-neutral96-NOT-normal-art.png": "c1cd5e595857341a93acdd8e4e26bfadcc133e8ca0bece2e2b915966715a9490",
+    "isolation-test.log": "90a5d277f4602636839082916550924932cb02562a7579d33fbe1b09efd9c969",
+    "control-detail-4x-nearest.png": "9e879bf83494f04564d34ebe59b5aab2a5205c3537c9705209fd717994be54c3",
+    "DIAGNOSTIC-detail-4x-nearest.png": "cb92e32ffeb634c32dfdc1392c3490feb97192dbff274e2a0dccc346a10f502f"
+  }
+}
