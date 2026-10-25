@@ -1,0 +1,102 @@
+{
+  "source": "tools/paint-v11-fabrics.py",
+  "rights": "Original analytical KeEv wardrobe inputs; no external/reference pixels",
+  "files": {
+    "knit-albedo.png": {
+      "sha256": "12e1137bb442b70a7e55fffb1962e542902c07c9e6c95afa4aee704b2c3dbf6e",
+      "encoding": "sRGB",
+      "size": [
+        512,
+        512
+      ]
+    },
+    "knit-normal.png": {
+      "sha256": "5a248b4c45da36300f534c7f45f851cccf2b8a337bb67c6d0a2126e8630f7149",
+      "encoding": "linear",
+      "size": [
+        512,
+        512
+      ]
+    },
+    "knit-orm.png": {
+      "sha256": "4ec3830e661e15016f38621a917e005eddf39ebbe3a46e71d63b69cc57165fc8",
+      "encoding": "linear",
+      "size": [
+        512,
+        512
+      ]
+    },
+    "linen-albedo.png": {
+      "sha256": "b0ff758afbce3674f555eba1724dc7e2e7aa774a4bf0fbbef4b053c9d17106ff",
+      "encoding": "sRGB",
+      "size": [
+        512,
+        512
+      ]
+    },
+    "linen-normal.png": {
+      "sha256": "0f4dbbc9828438c1654063a4ccaadc868c0e0f7b5d5d14fef6a4bbd035ab33db",
+      "encoding": "linear",
+      "size": [
+        512,
+        512
+      ]
+    },
+    "linen-orm.png": {
+      "sha256": "fcd33dc872f003252af818513bd1d1718abb4155ae7528996106bacc527c6740",
+      "encoding": "linear",
+      "size": [
+        512,
+        512
+      ]
+    },
+    "canvas-albedo.png": {
+      "sha256": "95e2ad6119efe08394891c4218dcf068359894cc178e662e740e12047b3446bb",
+      "encoding": "sRGB",
+      "size": [
+        512,
+        512
+      ]
+    },
+    "canvas-normal.png": {
+      "sha256": "484e80933ba256d585ca4d688974297a1c0079f452263f455cc077b6e7faa2a2",
+      "encoding": "linear",
+      "size": [
+        512,
+        512
+      ]
+    },
+    "canvas-orm.png": {
+      "sha256": "ac8264ca6f52fb25ddb613ad1008758621e339f76e857ab83b226a919df6a6aa",
+      "encoding": "linear",
+      "size": [
+        512,
+        512
+      ]
+    },
+    "leather-albedo.png": {
+      "sha256": "10f28d0d6de46c55cef27be08d9411f8953177130da48592e05a24086211bbcf",
+      "encoding": "sRGB",
+      "size": [
+        512,
+        512
+      ]
+    },
+    "leather-normal.png": {
+      "sha256": "7043c2b98d32736cffebb8e63277e79e1eecc6b58d82aee8aaff12cfc75ed37b",
+      "encoding": "linear",
+      "size": [
+        512,
+        512
+      ]
+    },
+    "leather-orm.png": {
+      "sha256": "bc273714fbf81a77b3a3323e27db1367d8f48da58c1eea60b37b6f4847bb94b7",
+      "encoding": "linear",
+      "size": [
+        512,
+        512
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "sameCamera": true,
+  "sameActorFacing": {
+    "x": -0.65,
+    "z": 1.1,
+    "yaw": 1.5707963267948966
+  },
+  "naturalBrowsePhases": [
+    0.10869565217391308,
+    0.19021739130434795
+  ],
+  "bothArmReachWeights": 0,
+  "note": "Both phases before .24: same browsing arm rest in source; head/other people can differ. No pose injection."
+}

@@ -1,3 +1,4 @@
+import {surfaceFinishSpec} from '../src/art/surface-finish-v11';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -29,9 +30,10 @@ test('all portable actor fabric embeds exact Web weave/normal bytes, repeat and 
  for(const kind of ['misaki','visitor-a','visitor-b'] as const){
   const bytes=buildNativeCharacterGlb(kind),len=bytes.readUInt32LE(12),j=JSON.parse(bytes.subarray(20,20+len).toString()),start=28+len;assert.ok(j.extensionsUsed.includes('KHR_texture_transform'));
   for(const m of j.materials.filter((m:any)=>m.extras.semanticRole==='fabric')){
-   for(const [tex,path]of [[m.pbrMetallicRoughness.baseColorTexture,nativeClothMaterial.baseColor],[m.normalTexture,nativeClothMaterial.normal]] as const){
-    assert.deepEqual(tex.extensions.KHR_texture_transform.scale,[nativeClothMaterial.repeat,nativeClothMaterial.repeat]);const v=j.bufferViews[j.images[j.textures[tex.index].source].bufferView];assert.deepEqual(bytes.subarray(start+v.byteOffset,start+v.byteOffset+v.byteLength),fs.readFileSync(path.replace('/assets/','assets/masters/')));
-   }assert.equal(m.normalTexture.scale,nativeClothMaterial.normalScale);
+   const spec=m.extras.surfaceFinish?surfaceFinishSpec(m.extras.surfaceFinish):nativeClothMaterial;
+   for(const [tex,path]of [[m.pbrMetallicRoughness.baseColorTexture,spec.baseColor],[m.normalTexture,spec.normal]] as const){
+    assert.deepEqual(tex.extensions.KHR_texture_transform.scale,[spec.repeat,spec.repeat]);const v=j.bufferViews[j.images[j.textures[tex.index].source].bufferView];assert.deepEqual(bytes.subarray(start+v.byteOffset,start+v.byteOffset+v.byteLength),fs.readFileSync(path.replace('/assets/','assets/masters/')));
+   }assert.equal(m.normalTexture.scale,spec.normalScale);
   }
   for(const g of nativeCharacterParts(kind).flatMap(p=>nativeGrouped(p.recipe)).filter(g=>g.role==='fabric')){
    assert.equal(g.geometry.tangents!.length,g.geometry.positions.length/3*4);for(let i=0;i<g.geometry.positions.length/3;i++){const t=g.geometry.tangents!.slice(i*4,i*4+3),n=g.geometry.normals.slice(i*3,i*3+3);assert.ok(Math.abs(Math.hypot(...t)-1)<1e-10);assert.ok(Math.abs(t.reduce((s,v,k)=>s+v*n[k],0))<1e-10);}

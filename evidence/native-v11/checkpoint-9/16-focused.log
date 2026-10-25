@@ -1,0 +1,33 @@
+BJS - [20:04:15]: Babylon.js v8.32.0 - Null engine
+✔ native v3 characters have distinct custom silhouettes, full local articulation and grounded 3.5–4 head proportions (741.822353ms)
+✔ native v3 GLB outputs match runtime vertices, material linear factors, local pivots and parent hierarchy (1346.214014ms)
+✔ new native Misaki greeting keeps actual articulated palm/thumb vertices outside new torso, apron and skirt (188.587661ms)
+BJS - [20:04:13]: Babylon.js v8.32.0 - Null engine
+BJS - [20:04:17]: Babylon.js v8.32.0 - Null engine
+BJS - [20:04:17]: Babylon.js v8.32.0 - Null engine
+BJS - [20:04:17]: Babylon.js v8.32.0 - Null engine
+BJS - [20:04:17]: Babylon.js v8.32.0 - Null engine
+BJS - [20:04:20]: Babylon.js v8.32.0 - Null engine
+BJS - [20:04:20]: Babylon.js v8.32.0 - Null engine
+BJS - [20:04:21]: Babylon.js v8.32.0 - Null engine
+✔ native scene adapter stock/sale/display and both idle tasks keep articulated hands out of clothes and counter (4372.531241ms)
+✔ native scene walk keeps stance foot at floor and alternates finite swing lift over a distance-driven cycle (131.845062ms)
+✔ native prop pool stays bounded and cancellation/hidden releases every owner (99.476861ms)
+✔ sale bag preserves its prior world pose across hand-to-counter ownership and never sinks through counter (83.529798ms)
+✔ v9 walking staff keeps real full thighs covered by skirt while feet retain floor contact (2147.607084ms)
+✔ rebuilt visitors walk with feet grounded, covered full thighs and hands outside personal satchels (861.788188ms)
+✔ both rebuilt visitors retain cashier contact with actual hand-to-bag-handle surface reach (221.76896ms)
+✔ rebuilt customer retains every articulation/contact pivot and existing lower-body envelope (216.982944ms)
+✔ customer satchel strap joins actual shirt and pouch surfaces, while fitted placket does not float (58.374416ms)
+✔ both customers closed garment and satchel panels clear support at triangle interiors (763.073012ms)
+✔ Blender garment UV seams retain every source triangle coordinate, normal and contact pivot; stale shape is rejected (408.024984ms)
+✔ coat fronts and skirt have metre-area density and vertical warp within five degrees for the five-centimetre checker (3.367748ms)
+✔ portable finishes preserve exact Web ORM/normal/albedo, physical repeats and restrained sheen (29.893446ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9173.478741

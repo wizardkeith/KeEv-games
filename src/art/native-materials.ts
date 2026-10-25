@@ -1,11 +1,12 @@
+import type {SurfaceFinish} from './surface-finish-v11';
 /** Native-only surface overrides. Legacy semantic/shared materials are immutable.
  * Shoe leather gets a controlled broad highlight; soles and canvas remain matte.
  */
 import {materialRenderState,type MaterialRole} from './materials';
-export function nativeMaterialIntent(surface:{role?:MaterialRole;color:string;alpha?:number;roughness?:number;baseColorTexture?:string}){
+export function nativeMaterialIntent(surface:{role?:MaterialRole;color:string;alpha?:number;roughness?:number;baseColorTexture?:string;finish?:SurfaceFinish}){
  const base=materialRenderState(surface.role??'paint',surface.color,surface.alpha??1),nativeRoughness=surface.role==='skin'?.78:surface.role==='hair'?.63:surface.role==='fabric'?.90:base.roughness,roughness=surface.roughness??nativeRoughness;
  if(!Number.isFinite(roughness)||roughness<0||roughness>1)throw new RangeError('native material roughness');
- const texture=surface.baseColorTexture;if(texture&&!/^\/assets\/native-v11\/[a-z0-9.-]+\.png$/.test(texture))throw new RangeError('local authored texture path');const oak=surface.role==='wood'&&roughness!==.83,peak=Math.max(...base.baseColorLinear),baseColorLinear=oak?base.baseColorLinear.map(v=>v*.40+peak*.60):base.baseColorLinear;return {...base,baseColorLinear,roughness,materialId:(roughness===base.roughness?base.materialId:`${base.materialId}:native-r${roughness}`)+(texture?`:texture:${texture}`:'')+(oak?':v11-oak-neutral-tint':'')};
+ const texture=surface.baseColorTexture;if(texture&&!/^\/assets\/native-v11\/[a-z0-9.-]+\.png$/.test(texture))throw new RangeError('local authored texture path');const oak=surface.role==='wood'&&roughness!==.83,peak=Math.max(...base.baseColorLinear),baseColorLinear=oak?base.baseColorLinear.map(v=>v*.40+peak*.60):base.baseColorLinear;return {...base,baseColorLinear,roughness,materialId:(roughness===base.roughness?base.materialId:`${base.materialId}:native-r${roughness}`)+(texture?`:texture:${texture}`:'')+(oak?':v11-oak-neutral-tint':'')+(surface.finish?':finish:'+surface.finish:'')};
 }
 
 /** Original authored strand colour and OpenGL tangent normal inputs, shared by Web/GLB. */

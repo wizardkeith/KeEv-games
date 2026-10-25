@@ -1,0 +1,841 @@
+{
+  "files": 139,
+  "errors": 0,
+  "warnings": 0,
+  "results": [
+    {
+      "file": "assets/masters/counter.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/day1/misaki-calm-v1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/day1/misaki-smile-v1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v3/misaki-native-v3.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/counter.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/display-1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/display-2.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/display-3.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.card.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.cookie.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.mug.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.notebook.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.pencil.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.tea.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.tote.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.towel.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.tray.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.vase.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/room.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/styling-v9.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/native-v4/window-canopy-v9.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/skin-test.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1/card.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1/cookie.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1/counter-w1_1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1/display-w1_1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1/generic-staff-w1_1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1/mug.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1/notebook.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1/pencil.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1/plant-w1_1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1/room-w1_1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1/tea.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1/tote.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1/towel.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1/tray.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1/vase.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a/card.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a/cookie.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a/counter-w1_1a.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a/display-w1_1a.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a/generic-staff-w1_1a.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a/mug.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a/notebook.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a/pencil.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a/plant-w1_1a.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a/room-w1_1a.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a/tea.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a/tote.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a/towel.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a/tray.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a/vase.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a1/card.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a1/cookie.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a1/counter-w1_1a1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a1/display-w1_1a1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a1/generic-staff-w1_1a1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a1/mug.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a1/notebook.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a1/pencil.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a1/plant-w1_1a1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a1/room-w1_1a1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a1/tea.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a1/tote.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a1/towel.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a1/tray.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1a1/vase.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1b/card.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1b/cookie.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1b/counter-w1_1b.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1b/display-w1_1b.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1b/generic-staff-w1_1b.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1b/mug.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1b/notebook.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1b/pencil.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1b/plant-w1_1b.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1b/room-w1_1b.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1b/tea.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1b/tote.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1b/towel.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1b/tray.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "assets/masters/w1_1b/vase.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/counter.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/day1/misaki-calm-v1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/day1/misaki-smile-v1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/native-v3/misaki-native-v3.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/native-v3/visitor-a-native-v3.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/native-v3/visitor-b-native-v3.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/skin-test.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1/card.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1/cookie.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1/counter-w1_1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1/display-w1_1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1/generic-staff-w1_1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1/mug.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1/notebook.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1/pencil.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1/plant-w1_1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1/room-w1_1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1/tea.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1/tote.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1/towel.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1/tray.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1/vase.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a/card.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a/cookie.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a/counter-w1_1a.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a/display-w1_1a.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a/generic-staff-w1_1a.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a/mug.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a/notebook.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a/pencil.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a/plant-w1_1a.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a/room-w1_1a.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a/tea.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a/tote.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a/towel.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a/tray.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a/vase.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a1/counter-w1_1a1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a1/mug.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1a1/room-w1_1a1.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1b/card.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1b/cookie.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1b/counter-w1_1b.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1b/display-w1_1b.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1b/generic-staff-w1_1b.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1b/mug.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1b/notebook.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1b/pencil.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1b/plant-w1_1b.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1b/room-w1_1b.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1b/tea.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1b/tote.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1b/towel.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1b/tray.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "file": "public/assets/w1_1b/vase.glb",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    }
+  ]
+}

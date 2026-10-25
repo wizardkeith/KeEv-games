@@ -5,6 +5,19 @@
 
 
 
+
+## 第九個 checkpoint — 一套coat／skirt實際UV與材質切片，視覺門檻仍未通過
+
+以第二顧客為切片，保留三人髮型／鏡頭／focal light／傢俬／陳列。21個衣物曲面另存可編輯Blender UV master；SmartProject後按實際面積縮放至metre，逐島調整warp向Y，保留每個原頂點／法線／三角形與pivot，只分UV seam。coat／skirt前面加權warp角度在5°內，UV與3D總面積相等；不是保證每個局部都無投影變形。raw guard改為nanometre比較以避免Node/Chrome末位浮點誤判，仍拒絕10micron變形與stale atlas。
+
+原創knit／linen／canvas／leather albedo／normal／ORM與restrained sheen，只先套在女顧客服裝；標準GLB嵌入同byte／repeat／KHR_materials_sheen。首輪斜向織紋與斑駁linen已退回調整，沒有用誇張weave遮掩造形。新增少量領／腰皺與4mm裙襬變化，24向衣身連續性，完整女顧客**11,910tri <12,000**；新褶令原貼合測試少14micron，已調整外衣實際drape間隙，不放寬測試。Misaki／男顧客GLB與第八輪byte-identical；不是重做既有髮型或移動場景。
+
+- [正常遊戲同面改前](../evidence/native-v11/checkpoint-9/material-before-female-in-game.png)／[改後](../evidence/native-v11/checkpoint-9/material-after-female-in-game.png)：camera完全相等，顧客x=-.65/z=1.1/yaw=π/2相等，兩者都在browse reach之前（手臂休息）；頭／其他人自然時間相位可不同。[同面量測](../evidence/native-v11/checkpoint-9/same-facing.json)。沒有注入姿勢／假交易。
+- [真正DEV遊戲50mm checker](../evidence/native-v11/checkpoint-9/checker-after-female-in-game.png)：檢查UV方向／密度，**不是發佈美術**。第一張RawTexture被clamp成藍邊已排除，現明確repeat；正式JS不含checker開關。未settle的camera A/B曾嚴格失敗，後改等inertia=0，沒有降低比較標準。
+- **193tests/build/validate/replay/asset-check，139GLB零error/warning，305protected/history通過**。Blender UV原座標／法線／pivot、stale拒絕、物理bag柄接觸／步行覆蓋、四種貼圖／ORM／repeat／sheen parity均通過。[全部來源／payload／原始紀錄與限制](../evidence/native-v11/checkpoint-9/provenance.json)。
+
+**尚非完成／不宣稱接受：**正常鏡頭材質差異仍須視覺覆核，整體原圖品質／畫風仍未達。fresh66女顧客完整運動實拍正在完成，不把較早64完整回店影片說成66；目前也不等於新一輪fullrelease或實體GPU/FPS/audio/native驗收。後續優先整束花的分枝／花團與留白、商品規律度、較淡遠屋頂／樹層。公開仍V17，PR8維持草稿，沒有合併／發佈或內容擴張。
+
 ## 第八個 checkpoint — 有效布料UV、實體花瓣／樹冠，材質門檻仍開放
 
 確認根因：多個sculpt布料mesh沒有UV，原weave只取同一texel。新metre unwrap保留每個實際三角形座標／法線、既有臉／眼atlas，處理cylindrical seam與端蓋，提供正交tangent；Web與GLB嵌入同一原創布色／normal、16/m repeat及KHR_texture_transform。這是必要的正確性修正，**不是聲稱藍外衣已達原圖質感**。原圖式柔和布料／袋／皮革差異仍不足，下一輪集中於一件coat＋skirt的checker方向／尺度、可見材質及少量領／腰褶。
