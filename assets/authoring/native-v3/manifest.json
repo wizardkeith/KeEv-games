@@ -4,7 +4,7 @@
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
-    "src/art/native-characters.ts": "bcbe7f400bedaadba0ee0ac53e859f0ae2bec26ac2ab69264d0459a734ae7d14",
+    "src/art/native-characters.ts": "b742dc423fa7a22db48018df0db1861295183312052e1243d954f490fe7c45f4",
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "77d1f2cd62fc503fdd89d02c550878b39f8e73c0ceb213b95488874f8939454e",
@@ -49,8 +49,8 @@
       "id": "actor.misaki.native.v3",
       "file": "assets/masters/native-v3/misaki-native-v3.glb",
       "web": "public/assets/native-v3/misaki-native-v3.glb",
-      "bytes": 714808,
-      "sha256": "26fd8d0cddf5da488821500c21d01c868475adff4696964f22c860496b1218cc",
+      "bytes": 707748,
+      "sha256": "67dc6db7fc6e5776ed6b15e54453e228a0c5a33e8921aaa1ca6001851262beb9",
       "nodes": [
         {
           "id": "body",
@@ -91,10 +91,10 @@
           "pivot": [
             -0.07806999999999999,
             0.174075,
-            -0.212055
+            -0.178295
           ],
-          "geometryGroups": 2,
-          "triangles": 192
+          "geometryGroups": 1,
+          "triangles": 132
         },
         {
           "id": "brow-left",
@@ -124,10 +124,10 @@
           "pivot": [
             0.07806999999999999,
             0.174075,
-            -0.212055
+            -0.178295
           ],
-          "geometryGroups": 2,
-          "triangles": 192
+          "geometryGroups": 1,
+          "triangles": 132
         },
         {
           "id": "brow-right",
@@ -339,8 +339,8 @@
       "id": "actor.visitor-a.native.v3",
       "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
       "web": "public/assets/native-v3/visitor-a-native-v3.glb",
-      "bytes": 353612,
-      "sha256": "b6abfb16d6e2b15887baf9e452868ee8d65f3e1fd2b1a0deada919fee882c94a",
+      "bytes": 346552,
+      "sha256": "5b6ccbf77abbfdf965b9147ca7e35f4131f18819b14d0a0c3aaf6ddc872fdc0a",
       "nodes": [
         {
           "id": "body",
@@ -381,10 +381,10 @@
           "pivot": [
             -0.07806999999999999,
             0.1688,
-            -0.212055
+            -0.178295
           ],
-          "geometryGroups": 2,
-          "triangles": 192
+          "geometryGroups": 1,
+          "triangles": 132
         },
         {
           "id": "brow-left",
@@ -414,10 +414,10 @@
           "pivot": [
             0.07806999999999999,
             0.1688,
-            -0.212055
+            -0.178295
           ],
-          "geometryGroups": 2,
-          "triangles": 192
+          "geometryGroups": 1,
+          "triangles": 132
         },
         {
           "id": "brow-right",
@@ -629,8 +629,8 @@
       "id": "actor.visitor-b.native.v3",
       "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
       "web": "public/assets/native-v3/visitor-b-native-v3.glb",
-      "bytes": 700668,
-      "sha256": "a0de9897f7ab80bed76c7205c46eb16c8d85b58afcb6d7b72f62d42d9ca49936",
+      "bytes": 693608,
+      "sha256": "970a5d5f6e0366810dfd14e2d38b97a073a1e42416bc32ab3c54406702ddb80f",
       "nodes": [
         {
           "id": "body",
@@ -671,10 +671,10 @@
           "pivot": [
             -0.087565,
             0.174075,
-            -0.212055
+            -0.178295
           ],
-          "geometryGroups": 2,
-          "triangles": 192
+          "geometryGroups": 1,
+          "triangles": 132
         },
         {
           "id": "brow-left",
@@ -704,10 +704,10 @@
           "pivot": [
             0.087565,
             0.174075,
-            -0.212055
+            -0.178295
           ],
-          "geometryGroups": 2,
-          "triangles": 192
+          "geometryGroups": 1,
+          "triangles": 132
         },
         {
           "id": "brow-right",

@@ -17,7 +17,7 @@
     "tools/generate-v9-surfaces.py": "1a74026c73c0459878715e9fd623fc25241f21b09352ba7916a7fe748b9faf9e",
     "src/art/native-room-probe.ts": "fde6f98d1aa353404852c2ad7006240505dc3f1e70c03bd315721270e16382eb",
     "src/art/native-styling.ts": "2bd48f0e3a154d23529b5240d91ccf865d25f2186e75372f1df352631fd3a60f",
-    "src/art/native-characters.ts": "bcbe7f400bedaadba0ee0ac53e859f0ae2bec26ac2ab69264d0459a734ae7d14",
+    "src/art/native-characters.ts": "b742dc423fa7a22db48018df0db1861295183312052e1243d954f490fe7c45f4",
     "src/art/native-environment.ts": "077ab8034ce6598242089e2cf3057eb7057f45750cab576ca3fd72518e1e81a1",
     "src/art/native-display.ts": "2d785ebeae1f7558662dbb69ebd0007f93266d6360a3c178cb09076335b86086",
     "src/art/native-view.ts": "e6f05e65e87d3a56db794a57436e7af1685640660d62b09953eb7190de6c1f66",
