@@ -1,3 +1,4 @@
+import {backDisplayRecipe} from './art/back-display-v10';
 import {NativeShopLife,shopLifeText} from './presentation/native-shop-life';
 import {locale} from './ui/copy';
 import {botanicalPrintMaterial} from './art/shop-v10';
@@ -81,7 +82,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  const exteriorFill=new HemisphericLight('cool exterior sky',new Vector3(-1,.8,0),scene);exteriorFill.diffuse=Color3.FromArray(linearColor(nativeLighting.exteriorFill.color));exteriorFill.groundColor=Color3.FromArray(linearColor(nativeLighting.exteriorFill.ground));exteriorFill.intensity=nativeLighting.exteriorFill.intensity;exteriorFill.includedOnlyMeshes=exterior.getChildMeshes();
  const door=model('native.door.leaf',doorLeafRecipe());door.position.set(2.34,.08,3.20);
  const sign=model('native.door.sign',doorSignRecipe(),door);sign.position.set(.80,1.56,-.073);
- for(let row=0;row<3;row++)for(let i=0;i<8;i++)for(let k=0;k<((i+row)%3===0?2:1);k++){const item=catalog.offerings[(i+row*3)%catalog.offerings.length];const stock=model(`back.display.${row}.${item.id}.${k}`,productRecipe(item.id,item.color));stock.position.set(-2.95+i*.55+(item.id==='off.notebook'||item.id==='off.towel'?k*.022:k*.16),[.96,1.47,2.23][row]+(row===0?.085:.105)/2+artDirection.restingGap+(item.id==='off.notebook'?k*.065:item.id==='off.towel'?k*.14:0),2.84+(k?-.075:0));stock.scaling.setAll(item.id==='off.tea'?.93:item.id==='off.notebook'?.90:.85);stock.rotation.y=((i+row)%3-1)*.24+k*.12;}
+ model('back.display.curated.v10',backDisplayRecipe());
  const highlights:Mesh[]=[],productRoots:TransformNode[]=[];const shelfContents:string[]=[];
  for(let i=0;i<3;i++){
   const d=layoutData.displays[i];const display=model(d.id,nativeDisplayRecipe(i),undefined,i);display.position.set(d.position[0],artDirection.fixtureBaseY,d.position[2]);
@@ -156,7 +157,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
   const arrival=routeFrame.actors.some(a=>a.enabled&&a.state==='entering');if(arrival&&!previousArrival&&!nativePresentation.current)gestureClock.start('greet',policy);previousArrival=arrival;
    service=delivery.tick(seconds,nativePresentation,routes,nativePolicy,nativeActors.workReady(),nativeActors.handoffReady());const greet=gestureClock.active;routeFrame=routes.tick(0,{open:trading,visible:true,reduceMotion:reduced.matches,capacity:nativePolicy.customerCapacity,staff:nativeActors.staffPosition(),serviceStaffReady:nativeActors.workReady()});
    nativeActors.frame(seconds,nativePolicy,routeFrame,service,greet?.kind==='greet'?greet.elapsed/greet.duration:undefined,!!nativePresentation.current);
-   const lifeMotion=nativeActors.metrics();life.tick(seconds,routeFrame,{target:lifeMotion.greetingTargetId,kind:lifeMotion.greetingKind,elapsed:lifeMotion.localGreeting},nativePolicy.nativeMotion&&!panelOpen&&!clock.active&&!nativePresentation.current&&!activeMargin&&pendingMargins.size===0,!!shelfContents.some(Boolean));
+   const lifeMotion=nativeActors.metrics();life.tick(seconds,routeFrame,{target:lifeMotion.greetingTargetId,kind:lifeMotion.greetingKind,elapsed:lifeMotion.localGreeting},nativePolicy.nativeMotion&&!panelOpen&&!document.querySelector('#day1-story')&&!clock.active&&!nativePresentation.current&&!activeMargin&&pendingMargins.size===0,!!shelfContents.some(Boolean));
    if(service?.cue.kind==='sale'&&service.progress>=.72){const item=pendingMargins.get(service.receiptRevision);if(item){showMargin(item.payload);pendingMargins.delete(service.receiptRevision);}}
   }
   currentRoutes=routeFrame;

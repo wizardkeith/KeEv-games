@@ -24,11 +24,11 @@ export class NativeShopLife {
   if(greeting.elapsed===null)this.seen.clear();
   const key=greeting.target+':'+greeting.kind;
   if(greeting.target&&greeting.elapsed!==null&&!this.seen.has(key)){
-   this.seen.add(key);if(allowed){this.show('staff',greeting.kind==='arrival'?'welcome':'farewell');this.pending={actor:greeting.target,kind:greeting.kind==='arrival'?'reply':'goodbye',at:this.time+3.8,expires:this.time+6.5};}
+   this.seen.add(key);if(allowed){this.show('staff',greeting.kind==='arrival'?'welcome':'farewell');this.pending={actor:greeting.target,kind:greeting.kind==='arrival'?'reply':'goodbye',at:this.time+(greeting.kind==='departure'?2.8:3.8),expires:this.time+6.5};}
   }
   if(!allowed){this.cancel();return undefined;}
-  if(this.active){this.active.age+=seconds;if(this.active.age>=3.5||this.active.actor!=='staff'&&!routes.actors.some(a=>a.enabled&&a.id===this.active!.actor))this.active=undefined;}
-  if(this.pending&&this.time>=this.pending.at&&!this.active){const p=this.pending;this.pending=undefined;if(this.time<=p.expires&&routes.actors.some(a=>a.id===p.actor&&a.enabled&&a.z<3.25)){this.show(p.actor,p.kind);this.cooldown=this.time+6;}}
+  if(this.active){this.active.age+=seconds;if(this.active.age>=(this.active.kind==='farewell'?2.6:3.5)||this.active.actor!=='staff'&&!routes.actors.some(a=>a.enabled&&a.id===this.active!.actor))this.active=undefined;}
+  if(this.pending&&this.time>=this.pending.at&&!this.active){const p=this.pending;this.pending=undefined;if(this.time<=p.expires&&routes.actors.some(a=>a.id===p.actor&&a.enabled&&a.z<4.1)){this.show(p.actor,p.kind);this.cooldown=this.time+6;}}
   if(!this.active&&!this.pending&&this.time>=this.cooldown&&hasDisplay){const visitor=routes.actors.find(a=>a.enabled&&a.state==='browsing'&&a.browseProgress>.35&&!this.browsed.has(a.id));if(visitor){this.browsed.add(visitor.id);this.show(visitor.id,'browse');this.cooldown=this.time+12;}}
   return this.active?{...this.active}:undefined;
  }

@@ -1,6 +1,6 @@
 import {roomProbeContract} from '../src/art/native-room-probe';
 import {nativeStylingRecipe,nativeWindowCanopy} from '../src/art/native-styling';
-import {displaySamples} from '../src/art/native-display';
+import {displaySamples,backDisplaySamples} from '../src/art/native-display';
 import {catalog} from '../src/core/contracts';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -10,7 +10,7 @@ import {nativeViewContract,nativeLighting} from '../src/art/native-view';
 
 const root=process.cwd(),masterPath='assets/masters/native-v3/environment-v3.json',authoringPath='assets/authoring/native-v3/environment';
 const hash=(buffer:Buffer|string)=>crypto.createHash('sha256').update(buffer).digest('hex');
-const sourcePaths=['src/art/shop-v10.ts','src/art/sculpt-v10.ts','assets/masters/native-v10/provenance.json','assets/masters/native-v10/surfaces.json','tools/generate-v10-surfaces.py','src/art/native-room-probe.ts','src/art/native-styling.ts','src/art/native-characters.ts','src/art/native-environment.ts','src/art/native-display.ts','src/art/native-view.ts','src/art/recipes.ts','src/art/geometry.ts','src/art/materials.ts','src/art/native-materials.ts','tools/export-native-environment.ts'];
+const sourcePaths=['src/art/shop-v10.ts','src/art/sculpt-v10.ts','assets/masters/native-v10/provenance.json','assets/masters/native-v10/surfaces.json','tools/generate-v10-surfaces.py','src/art/native-room-probe.ts','src/art/native-styling.ts','src/art/native-characters.ts','src/art/native-environment.ts','src/art/native-display.ts','src/art/back-display-v10.ts','src/art/native-view.ts','src/art/recipes.ts','src/art/geometry.ts','src/art/materials.ts','src/art/native-materials.ts','tools/export-native-environment.ts'];
 const sources=Object.fromEntries(sourcePaths.map(file=>[file,hash(fs.readFileSync(path.join(root,file)))]));
 const master={
  id:'environment.native-v3.1',format:'engine-neutral-recipe-json',version:'3.1',authoringVersion:'native-shop-v10',
@@ -18,7 +18,7 @@ const master={
  notes:['A JSON mesh-authoring master, not a GLB or embedded animation clip.','Runtime meshes are rebuilt with art/geometry.ts and the Babylon world adapter.','Rigid part leaf and door movement is applied around the authored local pivots.','Original V9 surface maps retained separately; nativeSurfaceGeometry supplies metre UVs; standard fixture GLBs embed their actual colour/normal maps.','No device or WebGL visual validation is implied by this export.'],
  sources,
  presentation:{camera:nativeViewContract,lighting:nativeLighting},roomProbe:roomProbeContract,surfaceAssets:JSON.parse(fs.readFileSync('assets/masters/native-v10/surfaces.json','utf8')),
- displayVariants:[0,1,2].map(nativeDisplayRecipe),staging:catalog.offerings.map(o=>({id:o.id,samples:displaySamples(o.id,4,0)})),
+ backDisplaySamples:backDisplaySamples(),displayVariants:[0,1,2].map(nativeDisplayRecipe),staging:catalog.offerings.map(o=>({id:o.id,samples:displaySamples(o.id,4,0)})),
  styling:nativeStylingRecipe(),windowCanopy:nativeWindowCanopy(),
  room:nativeRoomRecipe(),
  door:{contract:nativeDoorContract,leaf:doorLeafRecipe(),sign:doorSignRecipe()},
