@@ -1,9 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T05:30:56+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T05:56:54+08:00** (Asia/Hong_Kong).
 
 
 
+
+## V11 twelfth checkpoint — actual self-shade experiment rejected, method changing — 2026-10-26T05:56:54+08:00
+
+- [DraftPR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed/readback **7c92dbcc25d4e0595025eb94f9808db5504d39ea**, unmerged. **Documentation/experimental assets/tools only; defaultruntime remainsC11fc0ae6d, publicV17 unchanged; original target still unmet.** Actual cloudCycles selfAO on5rigidassemblies/21surfaces really applied14WebGLmeshes/4,456vertices; same-facing gameA/B withcamera/root/yaw andpre/postbrowsingguards. Earlier turned/leaving captures rejected. Effect onlysmall localdarkening,does not solve reference cloth form/material: **NOTADOPTED**;no COLOR_0/nativeparity claim.
+- [Actual compared frames, raw data, original editable .blend/input/scalars, runtime experiment patch and verdict](https://github.com/wizardkeith/KeEv-games/blob/7c92dbcc25d4e0595025eb94f9808db5504d39ea/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md). Defaultbuild restored byte-identically to immutable77all152files;no newreleasearchive/fullrelease-tests claim. ExistingC11actualB253s/194tests remain their exactsource evidence.
+- **Next actualmethod in progress:** high-detail resting-cloth authoring/sculpt and constrained retopology/baked detail to bounded playablemesh.80offlineframes computed; retopo export had localBVH APIerror,beingcorrected,no model/game-rendergain claimedyet. Retainaccepted hair/shoulders/rig/camera/light/grouping;entire target style/material/productnaturalness/softcontact/exterior gaps remainopen. No merge/deploy/userChrome/Normal/Unity/shutdown/content expansion;no physicalGPU/FPS/audio/native certification.
 
 ## V11 eleventh checkpoint — authored cloth drape / reference back scarf — 2026-10-26T05:16:04+08:00
 
