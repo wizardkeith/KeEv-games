@@ -1,0 +1,18 @@
+{
+  "application": "0626469e7d376fe7cd1962370e2955017154bacf",
+  "sourceTree": "fcb228bf2463353dcc70d6eb01d899d59a6fab6e",
+  "artAndLife": "0626469e7d376fe7cd1962370e2955017154bacf",
+  "highAndLifecycleAndOldSave": "9758ca19cdd090eed0d0a366c2d4d94866db3755",
+  "pricingAndInventory": "770e09ce356977b51e3f8a864dd7239ef52d80fd",
+  "studio": "same production characters-v10.ts/sculpt-v10.ts as final app; separate neutral camera/light",
+  "reuse": "See checks/reuse-scope.json. Final actual-product-child condition is covered by final empty-stock/live dialogue run. No false all-rerun claim.",
+  "caseCount": 55,
+  "HighIdleWorkClose45Seconds": "NOT OBSERVED SUCCESSFULLY: last sample starts tidy at entry0; diagnostic retained, not a pass.",
+  "limitations": [
+    "Target art quality/style not accepted",
+    "Cloud SwiftShader, not physical GPU/FPS/Safari/audio/native",
+    "True hidden-tab not established by frozen\u2192active QA",
+    "Three placement PNGs remain unread; bonus HUD handoff-only",
+    "Original V16 local187s and two180s failures remain historical failures"
+  ]
+}
