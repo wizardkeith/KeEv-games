@@ -5,3 +5,11 @@ test('bounded staff walk greets, wanders and returns home with dynamic two-visit
  for(let n=0;n<9000;n++){const work=n%1800>900&&n%1800<1400;frame=routes.tick(1/60,{open:n<7000,visible:true,reduceMotion:false,capacity:n<5000?2:1,staff:{x:f.x,z:f.z,radius:.29}});const previous=f;f=routine.tick(1/60,frame,work,true);assert.ok(Math.hypot(f.x-previous.x,f.z-previous.z)<=staffRoutineContract.speed/60+1e-8);assert.ok(fixtureClearance(f)>.28);for(const guest of frame.actors)if(guest.enabled)assert.ok(Math.hypot(guest.x-f.x,guest.z-f.z)>.59,'two-way movement separates bodies');modes.add(f.intent);if(work&&f.atHome)ready++;}
  assert.ok(ready>100);assert.ok(modes.has('welcome')&&modes.has('inspect')&&modes.has('checkout'));const x=f.x,z=f.z;const frozen=routine.tick(99,frame,true,false);assert.equal(frozen.x,x);assert.equal(frozen.z,z);
 });
+test('welcome uses current staff origin and the actual greeting guest even with another nearer guest',()=>{
+ const staff={x:2.2,z:1.4},guest=(id:'visitor-a'|'visitor-b',x:number,z:number)=>({id,enabled:true,x,z,yaw:0,speed:0,distance:0,state:'entering' as const,browseProgress:0,hasBag:false,handoverProgress:0});
+ const a=new StaffAttention(),actors=[guest('visitor-a',1.37018,1.78744),guest('visitor-b',2.3,1.9)],frame={...empty,actors};let previous=welcomeYaw;
+ for(let n=0;n<120;n++){const f=a.tick(1/60,frame,false,0,false,true,undefined,{staff,greetingTargetId:'visitor-a'});assert.ok(Math.abs(delta(previous,f.yaw))<=3.6/60+1e-10);assert.ok(Math.abs(delta(f.target,Math.atan2(staff.x-actors[0].x,staff.z-actors[0].z)))<1e-10);previous=f.yaw;}
+ assert.ok(Math.abs(delta(previous,2.007608429336345))<.001,'reviewer welcome coordinates face the greeted customer, not the old cashier');
+ const nearest=new StaffAttention().tick(1/60,frame,false,0,false,true,undefined,{staff});assert.ok(Math.abs(delta(nearest.target,Math.atan2(-.1,-.5)))<1e-8,'nearest guest is measured from current staff');
+ const door=a.tick(0,empty,false,0,false,false,undefined,{staff});assert.ok(Math.abs(delta(door.yaw,Math.atan2(staff.x-3.05,staff.z-3.20)))<1e-8);
+});

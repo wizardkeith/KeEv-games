@@ -13,7 +13,7 @@ export class NativeDelivery {
  private handed=false;
  private customerId:string|undefined;
  cancel(routes:NativeCustomerRoutes){routes.cancelPresentation();this.revision=undefined;this.acquired=false;this.handed=false;}
- tick(seconds:number,presentation:NativeCommitPresentation,routes:NativeCustomerRoutes,policy:MotionPolicy,staffReady=true):DeliveryFrame|undefined {
+ tick(seconds:number,presentation:NativeCommitPresentation,routes:NativeCustomerRoutes,policy:MotionPolicy,staffReady=true,handoffReady=true):DeliveryFrame|undefined {
   if(!policy.nativeMotion){this.cancel(routes);presentation.tick(seconds,policy);return;}
   const prepare=(frame:ServiceFrame|undefined)=>{
    if(frame?.cue.kind!=='sale'){if(this.revision!==undefined)routes.finishService(this.revision);this.revision=undefined;this.acquired=false;this.handed=false;return false;}
@@ -26,8 +26,8 @@ export class NativeDelivery {
   const frame=presentation.tick(seconds,policy);
   if(prepare(frame))return;
   if(frame?.cue.kind==='sale'&&this.acquired&&routes.serviceStatus(frame.receiptRevision)==='ready'){
-   if(frame.progress>=.64&&!this.handed)this.handed=routes.handover(frame.receiptRevision);
-   return {...frame,serviceYaw:Math.atan2(2.6-CUSTOMER_ROUTE_CONTRACT.servicePoint.x,-.65-CUSTOMER_ROUTE_CONTRACT.servicePoint.z),customerId:this.customerId};
+   if(frame.progress>=.64&&!this.handed&&handoffReady)this.handed=routes.handover(frame.receiptRevision);
+   return {...frame,serviceYaw:Math.atan2(CUSTOMER_ROUTE_CONTRACT.staffServicePoint.x-CUSTOMER_ROUTE_CONTRACT.servicePoint.x,CUSTOMER_ROUTE_CONTRACT.staffServicePoint.z-CUSTOMER_ROUTE_CONTRACT.servicePoint.z),customerId:this.customerId};
   }
   return frame;
  }
