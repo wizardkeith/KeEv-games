@@ -1,0 +1,5 @@
+{
+  "worldDeltaOnly": "One authoring-diagnostic import +one metrics field",
+  "materialFactoryLightsCameraMotionAndAccountingByteUnchangedAfterRemovingDiagnostic": true,
+  "noNewRenderingTechniqueOrLight": true
+}

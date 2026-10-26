@@ -1,0 +1,20 @@
+{
+  "application": "0e20d41262e5234db57d800f9ab965eb019dce49",
+  "mapRebuildByteIdentical": true,
+  "files": {
+    "petal-form-values-c34.png": {
+      "sha256": "37334438f15ee8c4a35e7ac73cee5d5ca3ab25a6732b9699af8fb029a8699b32",
+      "size": [
+        128,
+        128
+      ]
+    },
+    "linen-form-values-c34.png": {
+      "sha256": "367a2a4ad8ce650da2fba9ddf1b638cb738771abc599e7ee2c162f1a92128862",
+      "size": [
+        512,
+        512
+      ]
+    }
+  }
+}

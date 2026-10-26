@@ -1,0 +1,146 @@
+[
+  {
+    id: 'quality-flower-jug-v11',
+    file: 'assets/masters/native-v4/quality-flower-jug-v11.glb',
+    bytes: 232728,
+    sha256: '7486d8d01542b0f37b4ee0a4a6088258c822942a65e1ba680e4315bcac5a06a5'
+  },
+  {
+    id: 'quality-flower-spray-v11',
+    file: 'assets/masters/native-v4/quality-flower-spray-v11.glb',
+    bytes: 2290196,
+    sha256: 'd593d2c0271fc321360d8a17ba8750d0e5fb81a3cd3ff297acfd58446d2d0c9b'
+  },
+  {
+    id: 'quality-crown-v11',
+    file: 'assets/masters/native-v4/quality-crown-v11.glb',
+    bytes: 2497696,
+    sha256: '0d3de325afb80f8b1657e811f533a76a18cbde159f31a58cd6fdb5ad2c2ff70b'
+  },
+  {
+    id: 'quality-lookbook-v11',
+    file: 'assets/masters/native-v4/quality-lookbook-v11.glb',
+    bytes: 2247172,
+    sha256: '2c7951e99f6619a9d50a66b3dad053c2c41028e34b252cffdd6b86b3bd901fea'
+  },
+  {
+    id: 'quality-mug-v11',
+    file: 'assets/masters/native-v4/quality-mug-v11.glb',
+    bytes: 2416052,
+    sha256: '61e08783667276d611743935f8953e4f96839810643e889f09db11e27cfda392'
+  },
+  {
+    id: 'entry-garden-v11',
+    file: 'assets/masters/native-v4/entry-garden-v11.glb',
+    bytes: 2511320,
+    sha256: '5e4142614fac2e2276277b92089345f1a9335e47d1e94fb0249e5c8e29d6a4bb'
+  },
+  {
+    id: 'planter-base-v11',
+    file: 'assets/masters/native-v4/planter-base-v11.glb',
+    bytes: 185224,
+    sha256: 'cc99d988901fcede6c8e1bd550f3b3b8e2d91cb465b78e00f005ce1c1b928596'
+  },
+  {
+    id: 'room',
+    file: 'assets/masters/native-v4/room.glb',
+    bytes: 6065636,
+    sha256: '707b03b6071fbb5f5062caad3394db58c715ac2a3a672150705e987f0a84c364'
+  },
+  {
+    id: 'styling-v9',
+    file: 'assets/masters/native-v4/styling-v9.glb',
+    bytes: 2944504,
+    sha256: '5f9e23367e69fb57c4dccf8b93bff1184fb1ca817f047a83e6c6e64827a99964'
+  },
+  {
+    id: 'window-canopy-v9',
+    file: 'assets/masters/native-v4/window-canopy-v9.glb',
+    bytes: 2465828,
+    sha256: '68ac3a04e868d9d6eec0e0444e7edf764a6a0e474a7ba63b441f5c195b879a39'
+  },
+  {
+    id: 'counter',
+    file: 'assets/masters/native-v4/counter.glb',
+    bytes: 2362296,
+    sha256: '46ae720b21264cd12e365cdec60a67b4d56875d24d90cec5a8e6931d36514fb5'
+  },
+  {
+    id: 'display-1',
+    file: 'assets/masters/native-v4/display-1.glb',
+    bytes: 4857028,
+    sha256: '355a792fec898cabf33f5779846cb3396cb75ec7c2a096b5f7e2d3ca3f61fda1'
+  },
+  {
+    id: 'display-2',
+    file: 'assets/masters/native-v4/display-2.glb',
+    bytes: 3277312,
+    sha256: '5018677fd286e52fcb063dcf5fcd4f68e8c580db949764ca74ee92ce58ec4533'
+  },
+  {
+    id: 'display-3',
+    file: 'assets/masters/native-v4/display-3.glb',
+    bytes: 4864408,
+    sha256: 'd84d53667afcdacdf516de64bc8f77d7a5b5f784c60dee9321379fd9218e4419'
+  },
+  {
+    id: 'product-off.notebook',
+    file: 'assets/masters/native-v4/product-off.notebook.glb',
+    bytes: 2517260,
+    sha256: '6001eaf6a2df3172b2d8e12d9c9eb4e4530db4ab3cd654e89141e43c2503cbcc'
+  },
+  {
+    id: 'product-off.pencil',
+    file: 'assets/masters/native-v4/product-off.pencil.glb',
+    bytes: 2167516,
+    sha256: '9c9f15d10c2bd2c5e9a8557ca2a0edf415674b25f1c31d4d153cc9c3e0b4e4f0'
+  },
+  {
+    id: 'product-off.mug',
+    file: 'assets/masters/native-v4/product-off.mug.glb',
+    bytes: 149556,
+    sha256: '59cc5b59b55b10a81c75ed9b81d74ce21d7796e2831121c34ef7e406ae3ddbb0'
+  },
+  {
+    id: 'product-off.tea',
+    file: 'assets/masters/native-v4/product-off.tea.glb',
+    bytes: 2478056,
+    sha256: '519332346e8ff6c09b1988c6a6627d9d700ff4c12f9a75df67634a7197f8baa9'
+  },
+  {
+    id: 'product-off.cookie',
+    file: 'assets/masters/native-v4/product-off.cookie.glb',
+    bytes: 60360,
+    sha256: 'e36da81b33559855e72bbf3b58f0418759203b74cfb2f907eed972368b47da14'
+  },
+  {
+    id: 'product-off.tote',
+    file: 'assets/masters/native-v4/product-off.tote.glb',
+    bytes: 2552172,
+    sha256: '78965953b670414b76dd4b929d2c01eed2bc14bdf948f61a8db7de615cf3724c'
+  },
+  {
+    id: 'product-off.card',
+    file: 'assets/masters/native-v4/product-off.card.glb',
+    bytes: 2448888,
+    sha256: 'b45d3d3fe29a2a7447f53eeffc2ddd6ddd9bf33e5205eaf3e9b6d4a45af183cd'
+  },
+  {
+    id: 'product-off.towel',
+    file: 'assets/masters/native-v4/product-off.towel.glb',
+    bytes: 2480468,
+    sha256: 'da48b91dd571fdeb73b581bcffed224998845f9f5f1255ec1e8175d575118a34'
+  },
+  {
+    id: 'product-off.tray',
+    file: 'assets/masters/native-v4/product-off.tray.glb',
+    bytes: 2178304,
+    sha256: '8f89635e2d2455d03044e1f687480051c680f76879a4cab4be0bc1f3284770bf'
+  },
+  {
+    id: 'product-off.vase',
+    file: 'assets/masters/native-v4/product-off.vase.glb',
+    bytes: 364140,
+    sha256: 'f0eff8ed2a9f61205c779f1a8cfbd7b32e0759b2e205391a862a88e4c4dd4ea4'
+  }
+]
