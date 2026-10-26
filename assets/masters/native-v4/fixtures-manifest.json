@@ -14,8 +14,8 @@
     {
       "id": "quality-flower-spray-v11",
       "file": "assets/masters/native-v4/quality-flower-spray-v11.glb",
-      "bytes": 2354476,
-      "sha256": "67cc2a40597ef70e21cec5848bfe8e941bcda28a804e83dd76269054ec5c2857"
+      "bytes": 2290196,
+      "sha256": "d593d2c0271fc321360d8a17ba8750d0e5fb81a3cd3ff297acfd58446d2d0c9b"
     },
     {
       "id": "quality-crown-v11",
@@ -56,8 +56,8 @@
     {
       "id": "styling-v9",
       "file": "assets/masters/native-v4/styling-v9.glb",
-      "bytes": 3008776,
-      "sha256": "230f5d12ddce446cb647829c98a80c2926ab1d6ebc0c46364f0ddbdc23757adf"
+      "bytes": 2944504,
+      "sha256": "5f9e23367e69fb57c4dccf8b93bff1184fb1ca817f047a83e6c6e64827a99964"
     },
     {
       "id": "window-canopy-v9",
@@ -80,8 +80,8 @@
     {
       "id": "display-2",
       "file": "assets/masters/native-v4/display-2.glb",
-      "bytes": 3225516,
-      "sha256": "fb233370d9fed492f5b9402063937b96c5a2579d12bea9b191d790254c9ee9a6"
+      "bytes": 3277312,
+      "sha256": "5018677fd286e52fcb063dcf5fcd4f68e8c580db949764ca74ee92ce58ec4533"
     },
     {
       "id": "display-3",
