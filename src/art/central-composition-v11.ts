@@ -1,10 +1,12 @@
 /** C27 same-table composition. Pure presentation; no economic/save input.
  * Fixed asset positions and two stable stock groups are shared by Web/native. */
+import layout from '../content/layout.json';
 import type {NativeSurface} from './native-characters';
 import type {V3} from './recipes';
+export const centralDisplayOffset=layout.displays[1].position;
 export const centralComposition={
- floralAt:[.05,1.1735,.35] as V3,floralScale:1.1,crownRoll:0,crownYaw:3.8,neckY:.3708,
- books:{x:.58,z:.35,scale:.78,riserHeight:.16},
+ floralAt:[.05+centralDisplayOffset[0],1.1735,.35+centralDisplayOffset[2]] as V3,floralScale:1.1,crownRoll:0,crownYaw:3.8,neckY:.3708,
+ books:{x:.58+centralDisplayOffset[0],z:.35+centralDisplayOffset[2],scale:.78,riserHeight:.16},
  stockGroups:{back:5,front:3},
  note:'Same existing vase/books/cloth/cups. Mid-back floral axis; unequal stable5/3 stock clusters and clear central front linen. Not target acceptance.'
 } as const;

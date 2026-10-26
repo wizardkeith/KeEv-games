@@ -11,7 +11,7 @@ export function relocateV11Decoration<T extends Sample>(sample:T):T{
  if(sample.id==='off.card'&&Math.abs(sample.at[0]+2.23)<1e-6&&sample.at[1]<1.4)return placed(1.75,-1.68,1.110,[-1.18,.08,0],.85);
  // Reuse the existing middle-shelf print on the central riser, behind the
  // preserved flowers/books. Mixed high/mid/low forms, no new sample or stock.
- if(sample.id==='off.card'&&Math.abs(sample.at[0]-1.35)<1e-6&&sample.at[1]>1.5&&sample.at[1]<2.0)return placed(.58,.31,artDirection.displaySurfaceY+.16+3*fixedSampleBounds('off.notebook',[0,Math.PI/2,0],.78).height,[0,Math.PI/2+.01,0],.60);
+ if(sample.id==='off.card'&&Math.abs(sample.at[0]-1.35)<1e-6&&sample.at[1]>1.5&&sample.at[1]<2.0)return placed(centralComposition.books.x,centralComposition.books.z-.04,artDirection.displaySurfaceY+.16+3*fixedSampleBounds('off.notebook',[0,Math.PI/2,0],.78).height,[0,Math.PI/2+.01,0],.60);
  if(sample.id==='off.tray')return placed(1.72,-1.25,1.110,[0,.04,0],.85);
  return sample;
 }
