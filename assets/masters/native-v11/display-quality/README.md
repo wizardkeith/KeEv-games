@@ -17,3 +17,18 @@ original field-generation program and SHA records are retained. Albedo describes
 reflectance once, roughness is in ORM green, and no window shadow is painted into
 the colour texture. Existing floor, other furniture and character/rig sources are
 preserved. This in-progress slice has not attained the original reference style.
+
+C24 follow-up: `window-crown.blend/json` is a connected 720-triangle far-tree
+volume at the existing C23 pivots, with separate original generated 2D leaf
+painting. It is opaque; the unchanged thin individual moving leaves retain their
+original transmission. `stoneware-botanical-source.png` is the original generated
+albedo used by the actual mug and retained flower-holder geometry. It is not a
+scene render or a new reference. Roughness/normal fields remain authored. Three
+existing fixed non-inventory lookbooks use `display-journal-cover.png`; all source
+art and generation provenance are retained, no SKU or item grant was added.
+
+The local-diffuse experiment is OFF in ordinary builds: actual equal-mean
+144/145 comparison did not justify it. It remains diagnostic source/data only.
+The Cycles scene is a read-only export of actual game geometry and camera and is
+not shader-equivalent or a substitute for WebGL evidence. No engine limitation
+or target-quality acceptance has been established by that comparison.

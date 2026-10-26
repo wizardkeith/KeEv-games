@@ -13,7 +13,8 @@ for r in range(rows):
   if r<=6:y=.995;z=.55-r/6*1.08;x=-.45+u*.50
   else:
    y=.995-.355*t+.010*math.sin(u*math.pi*3+.35)*t**3
-   z=-.559+.014*(.5+.5*math.cos(u*math.pi*6+.65*t))*math.sin(math.pi*t)**.70
+   slack=max(0,min(1,(.89-y)/.13))
+   z=-.559+.045*(.5+.5*math.cos(u*math.pi*6+.65*t))*math.sin(math.pi*t)**.70*slack
    x=-.45+u*.50+.004*math.sin(u*math.pi*4+t)*t
   verts.append((x,-z,y));uvs.append((u,r/(rows-1)))
 for r in range(rows-1):

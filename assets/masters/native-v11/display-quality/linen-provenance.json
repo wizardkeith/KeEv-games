@@ -3,6 +3,6 @@
   "units": "metres RH Y-up exported; Blender RH Z-up editable",
   "method": "Authored broad gravity drape with exact planar support region, real2mm thickness and editable subdiv authoring source; no runtime cloth/pose",
   "triangles": 880,
-  "sourceSha256": "92aba254e95ef14c46c2e59668dc2653106cde7e622ee3bc109eaa7b0683765d",
+  "sourceSha256": "fa95fc5bdec6416ac1aa65b4bab8ed34c0dafbdfc0107fb7cff98fac153d9d06",
   "constraints": "Preserved table footprint; stock remains supported by actual horizontal triangles, no save/economy input"
 }

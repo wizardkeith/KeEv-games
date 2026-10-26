@@ -1,0 +1,8 @@
+{
+  "source": "tools/build-v11-window-crown.py",
+  "sha256": "d4785a2729fb691b3caadc28087cc93011522c026e5d249230612526ec1845c4",
+  "method": "Continuous union field with unequal branch masses ->720tri game LOD, authored UV and actual smooth normals; no reference pixels replace geometry",
+  "triangles": 720,
+  "space": "RH Y-up metres relative to retained C23 tree pivot; Blender Z-up editable source",
+  "limits": "New original mesh+separate2D surface painting; no claim of individual geometric leaves or final target fidelity"
+}

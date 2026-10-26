@@ -13,6 +13,7 @@ function vaseStockSample(k:number,table:number){
 export function displaySamples(id:string,stock:number,table:number){
  const count=Math.min(8,Math.max(0,Math.floor(stock)));
  if(id==='off.vase')return Array.from({length:count},(_,k)=>vaseStockSample(k,table));
+ if(id==='off.mug'&&table===1){const points=[[-.04,-.34,-1.20],[.40,-.34,.45],[.72,-.28,1.30],[-.06,0,-.80],[.31,.035,.80],[.68,.055,-.55],[.05,.35,-.10],[.59,.35,1.00]];return Array.from({length:count},(_,k)=>({at:[points[k][0],0,points[k][1]] as [number,number,number],yaw:points[k][2],scale:.90,stackLayer:0}));}
  return Array.from({length:count},(_,k)=>{
   const flat=['off.notebook','off.card','off.tray','off.towel'].includes(id),scale=id==='off.tote'?.72:id==='off.notebook'?.90:id==='off.pencil'?1.12:.90;
   if(id==='off.pencil'){const upper=k>=4,j=k%4;return {at:[upper?.58:.10,0,upper?.26+j*.045:-.34+j*.06] as [number,number,number],yaw:(upper?.10:-.16)+(j-1.5)*.006,scale,stackLayer:0};}

@@ -1,4 +1,4 @@
-import {centralLinenRecipe} from './display-quality-v11';
+import {centralLinenRecipe,windowCrownRecipe} from './display-quality-v11';
 /** Target slice furniture/architecture reconstruction. Same action heights and
  * station pivots; wider display joinery, counter wing and real widened window
  * aperture. Route clearance envelopes are updated with the physical fixtures. */
@@ -126,13 +126,12 @@ export function buildV11Room(door:Parameters<typeof buildV10Room>[0]):NativeSurf
  * colours describe atmospheric distance, not a photographed backdrop. */
 function distantTree(x:number,z:number,color:string):NativeSurface[]{
  const out:NativeSurface[]=[],pivot:V3=[x,-1.90,z];
- for(const [k,[dx,y,dz,w,h,d]]of [[-.32,-.82,.10,1.50,1.18,1.18],[.38,-.24,-.12,1.28,1.30,1.34],[-.10,.28,.15,1.05,.92,1.12]].entries()){
-  const g=geometry({shape:'sphere',size:[w,h,d],at:[0,0,0],color,role:'leaf'});
-  for(let j=0;j<g.positions.length;j+=3){const [px,py,pz]=g.positions.slice(j,j+3),phi=Math.atan2(pz,px),r=1+.12*Math.sin(phi*5+py*6+k)+.06*Math.cos(phi*7-py*8);g.positions[j]*=r;g.positions[j+2]*=r;}
-  out.push({shape:'mesh',at:[x+dx,y-1.2,z+dz],color,role:'leaf',geometry:finishSculpt(g),roughness:.91});
-  out.push({shape:'mesh',at:[0,0,0],color:'#8F9C90',role:'wood',geometry:sculptSweep([[x,-3.65,z],[x,-2.32,z],[x+dx,y-1.2,z+dz]],[.041,.028,.009],undefined,4,5)});
- }
- return nativeGrouped(out).map(g=>({shape:'mesh',at:pivot,geometry:{...g.geometry,positions:g.geometry.positions.map((v,i)=>v-pivot[i%3])},color:g.color,role:g.role,roughness:g.roughness}));
+ out.push({...windowCrownRecipe(),at:pivot});
+ // Retain the C23 branch roots/ends and layer positions. New continuous foliage
+ // is a real connected mesh, replacing only the three crude crown spheres.
+ for(const[dx,y,dz]of[[-.32,-.82,.10],[.38,-.24,-.12],[-.10,.28,.15]])out.push({shape:'mesh',at:[0,0,0],color:'#8F9C90',role:'wood',geometry:sculptSweep([[x,-3.65,z],[x,-2.32,z],[x+dx,y-1.2,z+dz]],[.041,.028,.009],undefined,4,5)});
+
+ return nativeGrouped(out).map(g=>({shape:'mesh',at:pivot,geometry:{...g.geometry,positions:g.geometry.positions.map((v,i)=>v-pivot[i%3])},color:g.color,role:g.role,roughness:g.roughness,...(g.baseColorTexture?{baseColorTexture:g.baseColorTexture}:{})}));
 }
 export const windowNeighbourIntent={kind:'non-interactive original exterior',houseCount:2,roofPlanes:4,minX:-12.5,maxX:-5.9,units:'metres'} as const;
 export function buildV11Exterior():NativeSurface[]{

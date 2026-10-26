@@ -17,6 +17,10 @@ export const nativeHairMaterial={roughness:.60,baseColor:'/assets/native-v10/hai
  * same opaque PBR fallback. No refraction, screen-space scattering or prepass. */
 export const nativeTransmission=(role:MaterialRole)=>role==='skin'?{intensity:.10,color:'#FFE0CD',minimumThickness:.005,maximumThickness:.035}:role==='leaf'?{intensity:.24,color:'#D4E3A2',minimumThickness:.0008,maximumThickness:.002}:undefined;
 
+/** A crown is an opaque foliage volume, not one thin leaf. Existing individual
+ * blade/skin transmission is retained exactly; standard GLB remains opaque. */
+export const nativeSurfaceTransmission=(role:MaterialRole,baseColorTexture?:string)=>baseColorTexture==='/assets/native-v11/window-crown-albedo.png'?undefined:nativeTransmission(role);
+
 /** Existing original woven inputs, now unwrapped on sculpted cloth as well as
  * primitive fabric. Web / portable GLB share the physical repeat and strength. */
 export const nativeClothMaterial={baseColor:'/assets/native-v10/cloth-weave-basecolor.png',normal:'/assets/native-v10/linen-normal.png',repeat:16,normalScale:.13} as const;
