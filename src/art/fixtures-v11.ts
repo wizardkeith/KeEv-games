@@ -161,5 +161,5 @@ export function buildV11Exterior():NativeSurface[]{
  // Compile facade detail by material while keeping four actual roof records
  // available for ray/portal tests and native reuse.
  const grouped=(p:NativeSurface[])=>nativeGrouped(p).map(g=>({shape:'mesh' as const,at:[0,0,0] as V3,geometry:g.geometry,color:g.color,role:g.role,roughness:g.roughness}));
- return backwallFormSurfaces([...grouped(walls),...roofs,...details.filter(p=>p.role==='glass'),...grouped(details.filter(p=>p.role!=='glass')),...distantTree(backwallNewForms?-11.25:-10.15,backwallNewForms?-.65:.55,'#9FB9B0'),...distantTree(backwallNewForms?-11.75:-10.95,backwallNewForms?4.45:3.80,'#B6C8BE')]);
+ return backwallFormSurfaces([...grouped(walls),...roofs,...details.filter(p=>p.role==='glass'),...grouped(details.filter(p=>p.role!=='glass')),...distantTree(backwallNewForms?-11.25:-10.15,backwallNewForms?.85:.55,'#9FB9B0'),...distantTree(backwallNewForms?-11.75:-10.95,backwallNewForms?7.00:3.80,'#B6C8BE')]);
 }

@@ -14,9 +14,9 @@
   "materials": "Original prior palettes only, form diagnostic awaiting independent gate; no new material adoption",
   "sources": {
     "src/art/backwall-forms-v11.ts": "99da91e1890a51422537706f6039f9a5da2d46e40f65f47cd0760bd5ec7a65da",
-    "src/art/shop-v11.ts": "5c43d380a3dd6b4f211f09d49aa5f0e78b320d539872c64b4266a8275ce3fc00",
+    "src/art/shop-v11.ts": "0889ebcf5ac90a8c56344a3105c16e7bdafa8a407a07e7cebd86bf739b13269e",
     "src/art/mixed-display-v11.ts": "03d64fe4d89f6be760354b00a3d350c54085766e1c39de8993123b10164a7585",
-    "src/art/fixtures-v11.ts": "99aad96a25064f5e0108594711065ee9f519d7df290e5d6f0a9853c9bdc4a650",
+    "src/art/fixtures-v11.ts": "fb8f452a84e98ea04589342d19846c599749f0c452b968a6122ab6b647a7440b",
     "src/art/back-display-v10.ts": "bb511ffe95c8b0b4b160b906cd5a13a1ad88a8dfa2c5b3b06ae4e0e3fd2b1591",
     "tools/export-v11-backwall-forms.ts": "1da3dbb7eda33d01b155616c13bfba78a8e79af0735d2537981f78c79fd265a0",
     "tools/build-v11-backwall-canopy.py": "b7321f6afa4c5c7f1c1d02a0467d94c7589f75aa55c242778276b4e2eaf4bc68",
@@ -25,16 +25,16 @@
   },
   "files": {
     "assets/masters/native-v11/backwall-c37/trailing-greenery.json": {
-      "bytes": 319328,
-      "sha256": "9880e81fe57f77229efb2e3fd36a0c47c3d8db8cacfd8cab77b139ff668df9fd"
+      "bytes": 373597,
+      "sha256": "1be91bb7cba78645c17d0ac2203846e41de6a3618d95ae67ad769707f8f2dfbf"
     },
     "assets/masters/native-v11/backwall-c37/window-near-branches.json": {
       "bytes": 478885,
       "sha256": "469fa3e12b595b5099aaf27c48fa58c5657bae2c987d423d5014004ea0e4e549"
     },
     "assets/masters/native-v11/backwall-c37/window-mid-far.json": {
-      "bytes": 508576,
-      "sha256": "00489c27ee9bb0351a2013ea1939af04482dd26df11951fd2481bffe66872ba0"
+      "bytes": 508520,
+      "sha256": "a396805e8d00a20949b179589a917f58f41f3cfdbce23c6ff99f055a99845294"
     },
     "assets/masters/native-v11/backwall-c37/fixed-back-samples.json": {
       "bytes": 2634,

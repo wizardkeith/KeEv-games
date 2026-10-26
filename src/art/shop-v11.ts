@@ -125,7 +125,7 @@ export function buildV11TrailingGreenery():NativeSurface[]{
    out.push(twig(points,.004));
    for(let k=0;k<7;k++){const q=points[k],side=k%2?1:-1;out.push(leaf([q[0]+side*.025,q[1],q[2]],.26+(k%3)*.025,.18+(k%2)*.025,side*(.9+b*.18),2.25+side*.24,['#738C54','#91A665','#A6B97C'][(k+b)%3]));}
   }
-  for(let k=0;k<5;k++)out.push(leaf([x,y+.18,z],.36,.23,k*2.39996,.65+(k%3)*.4,['#738C54','#91A665','#A6B97C'][k%3]));
+  for(let k=0;k<5;k++){const a=k*2.39996,tip:V3=[x+.08*Math.cos(a),y+.22+(k%2)*.07,z+.04*Math.sin(a)];out.push(twig([[x,y+.18,z],tip],.004));out.push(leaf(tip,.32+(k%2)*.04,.23,a,.55+(k%3)*.28,['#738C54','#91A665','#A6B97C'][k%3]));}
  }
  const pivot:V3=[-4.18,.901,1.44];
  out.push(M(sculptLoft([{y:0,x:.11,z:.11},{y:.20,x:.15,z:.15},{y:.235,x:.15,z:.15}],12),'#B6A17F','ceramic',pivot));

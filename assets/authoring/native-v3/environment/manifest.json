@@ -4,7 +4,7 @@
   "master": {
     "path": "assets/masters/native-v3/environment-v3.json",
     "sizeBytes": 30133507,
-    "sha256": "a0ce824ae1bbd460a56d9509a48bc95c4c24f11885dcfa8a15198e5cb68748ea"
+    "sha256": "52ee0cad23e2b9e74a17a0f2ae1b8a84b6f7a0672b9a8694d3d2fdeb391caff6"
   },
   "sources": {
     "src/art/backwall-forms-v11.ts": "99da91e1890a51422537706f6039f9a5da2d46e40f65f47cd0760bd5ec7a65da",
@@ -102,10 +102,10 @@
     "src/art/native-products.ts": "da515d2fd618c6bb16f9b7fa0a168bbb899944e53b3293d901e0ea7f1769665c",
     "src/art/counter-stationery-v11.ts": "82512c6dd9639918c23488e4e91a45244b65f7beb9ab4da908f8066aa7caec00",
     "src/art/shop-v10.ts": "0ac65000bb42de57c335410b3e1af6f12ab2557d78c89b9eac3d548ae12c0623",
-    "src/art/shop-v11.ts": "5c43d380a3dd6b4f211f09d49aa5f0e78b320d539872c64b4266a8275ce3fc00",
+    "src/art/shop-v11.ts": "0889ebcf5ac90a8c56344a3105c16e7bdafa8a407a07e7cebd86bf739b13269e",
     "tools/paint-v11-leaf.py": "b7115d21a64f3319b1a63c2fd4fd2111b2530ddeaa9a5224b821249e48f97ead",
     "assets/masters/native-v11/broadleaf-albedo.png": "a84a25481cfc8c3a3a12c4c9f3ce8cf648af8e97c9f90ed2bb34f48626c9f8e1",
-    "src/art/fixtures-v11.ts": "99aad96a25064f5e0108594711065ee9f519d7df290e5d6f0a9853c9bdc4a650",
+    "src/art/fixtures-v11.ts": "fb8f452a84e98ea04589342d19846c599749f0c452b968a6122ab6b647a7440b",
     "src/art/window-portal-v11.ts": "16ff7c439bd1943d20f073fcc5695beadbc3cbf594777ae7f2718822c80d0490",
     "src/art/floor-bake-v11.ts": "76c4f54a0777205cc7372a36d4e9f838103de0036a965b27ac94977bf042aa2e",
     "assets/masters/native-v11/honey-oak-albedo.png": "ead247b61ee9e42f6ea3432696a5d68f6326dbd2d31362d4c303350514fb16b5",
