@@ -1,0 +1,172 @@
+{
+  "beforeCandidate": "3047406a052152d45617972fcb95865efb25aef5",
+  "application": "7569e136ebf74a3f08bfd3b83dd6b00748cf677c",
+  "sourcePath": "assets/masters/native-v11/backwall-c37/trailing-greenery.json",
+  "routeData": {
+    "paths": [
+      [
+        {
+          "x": 4.18,
+          "z": 4.05
+        },
+        {
+          "x": 3.05,
+          "z": 4.05
+        },
+        {
+          "x": 3.05,
+          "z": 3.2
+        },
+        {
+          "x": 3.05,
+          "z": 2.05
+        },
+        {
+          "x": 1.35,
+          "z": 2.05
+        },
+        {
+          "x": 1.35,
+          "z": -0.1
+        }
+      ],
+      [
+        {
+          "x": 4.18,
+          "z": 4.05
+        },
+        {
+          "x": 3.05,
+          "z": 4.05
+        },
+        {
+          "x": 3.05,
+          "z": 3.2
+        },
+        {
+          "x": 3.05,
+          "z": 2.05
+        },
+        {
+          "x": -0.65,
+          "z": 2.05
+        },
+        {
+          "x": -0.65,
+          "z": 1.1
+        }
+      ]
+    ],
+    "radius": 0.24
+  },
+  "sourceRouteSHA256": "fbbaee9df6cfed3fb0e992198e394860c7399ee75baf5d7997bf0485fe3763a3",
+  "bodyHeightMax": 2.1,
+  "before": {
+    "triangleBoxContacts": 1344,
+    "uniqueTriangles": 476,
+    "firstContacts": [
+      {
+        "part": 1,
+        "triangle": 528,
+        "route": 0,
+        "segment": 4,
+        "role": "wood",
+        "vertices": [
+          [
+            1.1393226603945659,
+            2.2234009529620127,
+            2.241122100240813
+          ],
+          [
+            1.1421044669247462,
+            2.22520068546424,
+            2.236537068577992
+          ],
+          [
+            1.1570582089004702,
+            1.9330720902989948,
+            2.2211274870426494
+          ]
+        ]
+      },
+      {
+        "part": 1,
+        "triangle": 528,
+        "route": 0,
+        "segment": 5,
+        "role": "wood",
+        "vertices": [
+          [
+            1.1393226603945659,
+            2.2234009529620127,
+            2.241122100240813
+          ],
+          [
+            1.1421044669247462,
+            2.22520068546424,
+            2.236537068577992
+          ],
+          [
+            1.1570582089004702,
+            1.9330720902989948,
+            2.2211274870426494
+          ]
+        ]
+      },
+      {
+        "part": 1,
+        "triangle": 528,
+        "route": 1,
+        "segment": 4,
+        "role": "wood",
+        "vertices": [
+          [
+            1.1393226603945659,
+            2.2234009529620127,
+            2.241122100240813
+          ],
+          [
+            1.1421044669247462,
+            2.22520068546424,
+            2.236537068577992
+          ],
+          [
+            1.1570582089004702,
+            1.9330720902989948,
+            2.2211274870426494
+          ]
+        ]
+      },
+      {
+        "part": 1,
+        "triangle": 529,
+        "route": 0,
+        "segment": 4,
+        "role": "wood",
+        "vertices": [
+          [
+            1.1421044669247462,
+            2.22520068546424,
+            2.236537068577992
+          ],
+          [
+            1.1596881712672389,
+            1.9337326353741906,
+            2.2161629147395185
+          ],
+          [
+            1.1570582089004702,
+            1.9330720902989948,
+            2.2211274870426494
+          ]
+        ]
+      }
+    ]
+  },
+  "after": {
+    "triangleBoxContacts": 0,
+    "uniqueTriangles": 0,
+    "firstContacts": []
+  },
+  "scope": "Conservative axis-aligned body boxes along existing authored straight customer route segments. Quantifies clearance risk; not exact animated actor-mesh collision, every rounded turn, staff or physical-device certification."
+}

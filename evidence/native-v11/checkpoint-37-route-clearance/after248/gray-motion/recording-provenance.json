@@ -1,0 +1,169 @@
+{
+  "method": "Public CDP Page.startScreencast, everyNthFrame1; installed /usr/bin/ffmpeg encoder",
+  "frames": [
+    {
+      "name": "000000.jpg",
+      "timestamp": 1793049690.812941,
+      "received": 1793049690.823
+    },
+    {
+      "name": "000001.jpg",
+      "timestamp": 1793049695.668773,
+      "received": 1793049695.679
+    },
+    {
+      "name": "000002.jpg",
+      "timestamp": 1793049700.21867,
+      "received": 1793049700.23
+    },
+    {
+      "name": "000003.jpg",
+      "timestamp": 1793049704.918989,
+      "received": 1793049704.95
+    },
+    {
+      "name": "000004.jpg",
+      "timestamp": 1793049709.69597,
+      "received": 1793049709.704
+    },
+    {
+      "name": "000005.jpg",
+      "timestamp": 1793049714.371535,
+      "received": 1793049714.385
+    },
+    {
+      "name": "000006.jpg",
+      "timestamp": 1793049719.113762,
+      "received": 1793049719.125
+    },
+    {
+      "name": "000007.jpg",
+      "timestamp": 1793049723.678584,
+      "received": 1793049723.687
+    },
+    {
+      "name": "000008.jpg",
+      "timestamp": 1793049728.390356,
+      "received": 1793049728.412
+    },
+    {
+      "name": "000009.jpg",
+      "timestamp": 1793049733.192478,
+      "received": 1793049733.202
+    },
+    {
+      "name": "000010.jpg",
+      "timestamp": 1793049738.080793,
+      "received": 1793049738.089
+    },
+    {
+      "name": "000011.jpg",
+      "timestamp": 1793049742.873055,
+      "received": 1793049742.883
+    },
+    {
+      "name": "000012.jpg",
+      "timestamp": 1793049746.992744,
+      "received": 1793049747.002
+    },
+    {
+      "name": "000013.jpg",
+      "timestamp": 1793049750.955298,
+      "received": 1793049750.969
+    },
+    {
+      "name": "000014.jpg",
+      "timestamp": 1793049755.361885,
+      "received": 1793049755.373
+    },
+    {
+      "name": "000015.jpg",
+      "timestamp": 1793049760.078105,
+      "received": 1793049760.086
+    },
+    {
+      "name": "000016.jpg",
+      "timestamp": 1793049764.87214,
+      "received": 1793049764.884
+    },
+    {
+      "name": "000017.jpg",
+      "timestamp": 1793049775.074016,
+      "received": 1793049775.082
+    },
+    {
+      "name": "000018.jpg",
+      "timestamp": 1793049775.112673,
+      "received": 1793049775.155
+    },
+    {
+      "name": "000019.jpg",
+      "timestamp": 1793049779.127396,
+      "received": 1793049779.168
+    },
+    {
+      "name": "000020.jpg",
+      "timestamp": 1793049783.806158,
+      "received": 1793049783.818
+    },
+    {
+      "name": "000021.jpg",
+      "timestamp": 1793049789.603855,
+      "received": 1793049789.615
+    },
+    {
+      "name": "000022.jpg",
+      "timestamp": 1793049793.718061,
+      "received": 1793049793.75
+    },
+    {
+      "name": "000023.jpg",
+      "timestamp": 1793049798.389817,
+      "received": 1793049798.402
+    },
+    {
+      "name": "000024.jpg",
+      "timestamp": 1793049803.012229,
+      "received": 1793049803.02
+    },
+    {
+      "name": "000025.jpg",
+      "timestamp": 1793049806.369677,
+      "received": 1793049806.379
+    },
+    {
+      "name": "000026.jpg",
+      "timestamp": 1793049811.073453,
+      "received": 1793049811.084
+    },
+    {
+      "name": "000027.jpg",
+      "timestamp": 1793049816.287973,
+      "received": 1793049816.297
+    },
+    {
+      "name": "000028.jpg",
+      "timestamp": 1793049821.424557,
+      "received": 1793049821.451
+    },
+    {
+      "name": "000029.jpg",
+      "timestamp": 1793049826.852531,
+      "received": 1793049826.861
+    },
+    {
+      "name": "000030.jpg",
+      "timestamp": 1793049831.888587,
+      "received": 1793049831.898
+    },
+    {
+      "name": "000031.jpg",
+      "timestamp": 1793049837.87493,
+      "received": 1793049837.889
+    }
+  ],
+  "uncut": true,
+  "timeAcceleration": false,
+  "encodedFrameCountIsNotPhysicalGPUFPS": true,
+  "bundledPlaywrightRecorder": "Unavailable: official FFmpeg helper CDN download returned403; no alternate download attempted"
+}

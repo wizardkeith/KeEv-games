@@ -1,0 +1,1 @@
+{"protectedFiles": 305, "changed": [], "routes": "Only four obstacle envelopes changed; every other route byte preserved", "camera": "Projection/fit algorithms byte-preserved; only critical fixture bounds/light metadata changed", "status": "pass"}
