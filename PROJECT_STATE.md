@@ -1,13 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T22:06:45+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T22:23:58+08:00** (Asia/Hong_Kong).
 
-## V11 C29固定201正常畫面候選／流程驗證中 — 2026-10-26T22:06:45+08:00
+## V11 C29固定201候選／必要技術檢查完成，原圖仍未通過 — 2026-10-26T22:23:58+08:00
 
-- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送`01598e4e61f50430a352a0b5745b45a6e2b2248e`，application`567c4fb51794be7d17b472fc7201795f91ba7fda`／build201；[原圖／同鏡頭BEFORE–AFTER及同店鋪高度比較／真實錄影與完整界線](https://github.com/wizardkeith/KeEv-games/blob/01598e4e61f50430a352a0b5745b45a6e2b2248e/docs/V11_C29_BRIGHT_MASSES_CHECKPOINT_2026-10-26_zh-HK.md)。既有非庫存花冠重建120朵真正3D小花、六疏密群；linen三主褶、2mm厚度／24流蘇／實際布弧UV，修回原傢俬envelope。C27構圖／192反射及原母檔保留，styling＋canopy15986tri／17群，未提高上限；無效透光撤回，193舊dist影像INVALID排除。
-- 固定201的247tests／build／validate五語174keys／replay／asset-check、146GLB零錯警告、305保護檔、39native及447 tracked資產/public重建一致、178runtime parity通過。新五語Low15案例75面板通過；148.840秒實際pointer雙角度／面板保留orbit／買1杯cash3840→3770/stock8→9／購買後reload真3D與存檔逐值相同、0pageerror／隔離Normal不變。**201完整A錄影與0/3/8/2/售罄循環仍在跑；此處不冒稱通過。**
-- 192原有缺口另有新345active meshes reload真3D、五語Low及268.920秒完整A交接／毛利／回位／離店／reload證據，來源清楚分開，非冒作201。原圖／同桌材質門檻仍未通過，201正常花群／布有可見變化但待獨立像素覆核；白花亮點與整體柔光／材質差距仍在，未向全店擴散。雲端SwiftShader／稀疏CDP不代表實體GPU/FPS／流暢度／audio/native或B／hidden-tab／closure驗收。
-- main僅文件指標，功能未合併；PR8仍Draft、公開V17不變，無merge／Site save/deploy／LTC或Library重試／玩家Chrome或Normal／Unity／關機，無需使用者動作阻塞。
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送`d837b4dd37964fd6bb5d3f65984f369036c461f4`，application`567c4fb51794be7d17b472fc7201795f91ba7fda`／build201；[原圖／同正常相機BEFORE–AFTER／同店鋪高度比較、原片及來源限制](https://github.com/wizardkeith/KeEv-games/blob/d837b4dd37964fd6bb5d3f65984f369036c461f4/docs/V11_C29_BRIGHT_MASSES_CHECKPOINT_2026-10-26_zh-HK.md)。同桌非庫存花冠重建120朵真正3D小花／六疏密群；linen三主褶、2mm厚度／24流蘇／實際布弧UV、原envelope內收褶深及新靜態接觸烘焙。C27構圖／192反射及原母檔保留，styling＋canopy15986tri／17群，未提高上限；透光無效試驗撤回，193 stale影像INVALID排除。
+- 固定201：247tests／build／validate五語174keys／replay／asset-check，146GLB零錯警告、305保護檔、39native及447 tracked資產/public重建一致、178runtime parity。Scratch linen JSON/provenance及AO PNG/provenance四檔重建byte一致；Blend保留可編輯源，未冒稱含路徑metadata的二進位一致。五語Low／觸控模擬／Reduce Motion15案例75面板及148.840秒實際雙角度／面板orbit／買1杯／reload真3D通過，0pageerror／隔離Normal不變。
+- **201新502.920秒未剪High A流程已完成**：真買入／上架／招呼／一次UI小時結算／收銀接觸／393.2秒18件+¥8400合計毛利（未扣人工租金）／店員home390.386s／A離店與prop清除442.138s／結算後reload真3D；另真UI0→3→鍵盤005至8→reload8→兩次確認小時2→0→售罄reload0通過，固定花書布保留、無效0 Enter不寫入、兩實際幀局部影圖穩定、0pageerror／隔離Normal不變。192原缺口另有268.920秒新A／reload真3D與Low證據，不冒作201。
+- **原圖／同桌材質門檻仍未通過，201待獨立像素覆核**；白花亮點、布與整體柔光／材質豐富度仍有差距，未擴散全店。雲端SwiftShader／稀疏CDP155幀不是實體GPU/FPS／完整流暢度／audio/native或新B／hidden-tab／closure驗收。main僅文件指標、功能未合併；PR8仍Draft、公開V17不變，無merge／Site save/deploy／LTC或Library重試／玩家Chrome或Normal／Unity／關機，無需使用者動作阻塞。
 
 
 ## V11 C28 固定192反射診斷／原圖仍未通過 — 2026-10-26T20:46:03+08:00
