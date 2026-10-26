@@ -1,6 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T07:23:31+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T07:55:20+08:00** (Asia/Hong_Kong).
+
+## V11 C41窗側→收銀明暗方法實拍中 — 2026-10-27T07:55:20+08:00
+
+- 父任務已轉達C40普通257開發採用獨立PASS；B只入店／瀏覽／離店，沒有B交接交易；首個B-only失敗錄製仍排除。沿用[Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)，新方法來源`cac185234c6813b07e6bb2f09a83842f22cc2110`：C41明確authoring旗標，以真窗洞投影spotlight＋動態陰影建立空間光照，保留C36/C38/C39形體材質／camera／rig／economy／saves，非C30漫射替換。初100強度＋RTT resize失同步試驗拒用；v2修正每幀同步／新材質6-light budget並校準280，已見窗側較亮／收銀暖焦點，但整體仍未達原圖，材質預設仍C40。
+- 273tests／build／validate/replay/assets／146GLB零錯警告／305保護檔已過；260候選與261 control實際normal＋雙斜角比較進行中，Low/RM與完整流程待驗證，不提前算pass。未交本輪最終獨立覆核；main僅文件指標／功能未合併／PR8仍Draft／公開V17未改，無merge／Site／Library或LTC重試／玩家Chrome或Normal／Unity／關機，無需使用者動作的權限阻塞。
 
 ## V11 C40開發預設採用／固定證據待覆核 — 2026-10-27T07:23:31+08:00
 
