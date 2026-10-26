@@ -1,9 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T09:29:58+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T10:00:27+08:00** (Asia/Hong_Kong).
 
 
 
+
+## V11 actual product support / stable handmade grouping — 2026-10-26T10:00:27+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed/readback **e2e27e3db7dde3771b21d178404a087ca0623be2**, runtime **b20420f1163c2a64575c20dca9b0585b973f0cb4**, immutable118. **Unmerged; main documentation only; publicV17 unchanged; target art NOT met.** Actual onecup/vase comparison exposed old guessed height sinking cup inriser/base incloth; new pure renderer queries actual horizontalwood/cloth triangles, originalstackheight/1mmgap preserved. Eight realvases have stable size/height groups; buy/sale count changes keep survivinggeometryprefix. SameSKU/cap8/economy/save/camera/UI.
+- **207tests/build/validate/replay/assets,139GLB0errors/warnings,305protected/history,2affectednativeoutputs fresh byte-identical.** 8focused checks real10SKU single-unit support×3tables,pencilallcounts,8vase physicalsupport/nooverlap/stableprefix. [Actual normal/counter before-after, reload and116.600s uncut real117buy/place/camera](https://github.com/wizardkeith/KeEv-games/blob/e2e27e3db7dde3771b21d178404a087ca0623be2/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md).117observed singleunits samegeometryas118, not claimedidenticalfullsource;1188unit actualsnapshot reload pass,0pageerrors/Normalisolatedunchanged. Initial support failure preserved; threshold unchanged.
+- C18 exact112 **170.778s workflow/169.760suncut** now fixed in0a307e514443fbd4fcb2d263d373f60fe983acf1: realbuy/place/greet/onehoursettle/Acontact/bag/readable18item+8400batchgrossmargin/Aexit/staffhome/reload,0errors/Normalisolatedunchanged. Not a118newcashier/fullwalk/74locale/device claim. Next meaningfulasset-remake: wovenplanter structure/material and continuous curved floorleaf blades, retaining7windpivots/canopy/actors/furniture/camera. Local ceramic gains do not close whole-scene style/material/density/entry gaps. Noarchive/merge/deploy/Libraryretry/userChrome/Normalplayer/Unity/shutdown/content expansion; physicalGPU/FPS/audio/native open.
 
 ## V11 ceramic/material response checkpoint — 2026-10-26T09:29:58+08:00
 
