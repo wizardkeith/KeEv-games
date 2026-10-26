@@ -1,0 +1,12 @@
+{
+  "source": "tools/build-v11-petal-normals.ts",
+  "sourceSHA256": "8d51ff81248399f354a84b97db40dd1c66133349084faa48d39c99ee5dbbf035",
+  "original": "assets/masters/native-v11/display-quality/flower-spray.json",
+  "originalSHA256": "b41b3afee5e7ed42b37058de62cdfcadee805965f96c5cedb6ea7b67e17334f0",
+  "outputSHA256": "02bfd5cd940e3f4f685c2e1028589011ea65caadf2702aca07f378e4613efb07",
+  "method": "Per original tetrahedral petal, preserve every position/index. Average the two upper face normals into a petal plane; signed top/bottom normals bend15% toward the perimeter. No extra petals, vertices, geometry, albedo or alpha. Original hard-normal JSON/Blend retained.",
+  "florets": 60,
+  "petals": 300,
+  "positionsAndIndicesUnchanged": true,
+  "limits": "Shading-normal candidate; actual normal-game comparison required, not a curvature/target acceptance claim"
+}

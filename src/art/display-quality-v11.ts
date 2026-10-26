@@ -1,3 +1,5 @@
+import softPetalNormals from '../../assets/masters/native-v11/display-quality/flower-petal-soft-normals.json';
+import {tableSoftMaterials,tableLookIntent} from './table-look-v11';
 import flowerSpray from '../../assets/masters/native-v11/display-quality/flower-spray.json';
 import flowerJug from '../../assets/masters/native-v11/display-quality/flower-jug.json';
 import crown from '../../assets/masters/native-v11/display-quality/window-crown.json';
@@ -17,6 +19,6 @@ export function centralLookbookRecipe(base:NativeSurface[]):NativeSurface[]{retu
 export function windowCrownRecipe():NativeSurface{const g=structuredClone(crown);for(let i=0;i<g.normals.length;i+=3){const length=Math.hypot(...g.normals.slice(i,i+3));for(let k=0;k<3;k++)g.normals[i+k]/=length;}return {shape:'mesh',at:[0,0,0],geometry:g,color:'#FFFFFF',role:'leaf',roughness:.91,baseColorTexture:'/assets/native-v11/window-crown-albedo.png'};}
 
 /** C25: existing central non-stock flower vessel, not the unused high jug. */
-export function centralFlowerJugRecipe():NativeSurface[]{return (structuredClone(flowerJug) as unknown as NativeSurface[]).map(p=>{if(p.shape==='mesh')for(let i=0;i<p.geometry.normals.length;i+=3){const length=Math.hypot(...p.geometry.normals.slice(i,i+3));for(let k=0;k<3;k++)p.geometry.normals[i+k]/=length;}return p;});}
+export function centralFlowerJugRecipe():NativeSurface[]{return (structuredClone(flowerJug) as unknown as NativeSurface[]).map(p=>{if(p.shape==='mesh')for(let i=0;i<p.geometry.normals.length;i+=3){const length=Math.hypot(...p.geometry.normals.slice(i,i+3));for(let k=0;k<3;k++)p.geometry.normals[i+k]/=length;}return tableSoftMaterials?{...p,roughness:tableLookIntent.material.vesselRoughness}:p;});}
 
-export function centralFlowerSprayRecipe():NativeSurface[]{return structuredClone(flowerSpray) as unknown as NativeSurface[];}
+export function centralFlowerSprayRecipe():NativeSurface[]{const parts=structuredClone(flowerSpray) as unknown as NativeSurface[];if(tableSoftMaterials)for(const patch of softPetalNormals){const p=parts[patch.part];if(p.shape!=='mesh'||p.geometry.normals.length!==patch.normals.length)throw Error('Original petal topology mismatch');p.geometry.normals=[...patch.normals];p.role='paper';p.color='#EDE4D1';p.roughness=.96;}return parts;}

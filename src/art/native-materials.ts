@@ -1,3 +1,4 @@
+import {tableLookIntent} from './table-look-v11';
 import type {SurfaceFinish} from './surface-finish-v11';
 /** Native-only surface overrides. Legacy semantic/shared materials are immutable.
  * Shoe leather gets a controlled broad highlight; soles and canvas remain matte.
@@ -27,7 +28,7 @@ export const nativeClothMaterial={baseColor:'/assets/native-v10/cloth-weave-base
 
 /** Restrained transparent glaze over the unchanged ceramic body colour. The
  * same scalar clear-coat layer is standard KHR_materials_clearcoat in GLB. */
-export const nativeGlaze=(role:MaterialRole)=>role==='ceramic'?{intensity:.30,roughness:.24,indexOfRefraction:1.5}:undefined;
+export const nativeGlaze=(role:MaterialRole,roughness?:number)=>role==='ceramic'?(roughness===tableLookIntent.material.vesselRoughness?{intensity:tableLookIntent.material.coatIntensity,roughness:tableLookIntent.material.coatRoughness,indexOfRefraction:1.5}:{intensity:.30,roughness:.24,indexOfRefraction:1.5}):undefined;
 
 /** Restrained broad timber grain; matched Web and portable fixture normal strength. */
 export const nativeTimberNormalScale=.10;

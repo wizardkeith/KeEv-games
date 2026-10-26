@@ -1,0 +1,18 @@
+{
+  "source": "tools/export-v11-table-contact.ts + tools/bake-v11-table-contact.py",
+  "bakeSourceSHA256": "e40c6d71dcdc64a6b45018a55e0c15f938e60695c50f3c083272b2d2c7430bb2",
+  "inputSHA256": "093adedc33879b7b74d7c58bb0a129945948f09566f2479b2c75fea7aeda936d",
+  "pngSHA256": "20a5cfe87a31b0620345cd990aafb781c9c137fa3ed8c6498fe2ccd827812f15",
+  "method": "CyclesCPU AO node distance0.12m/samples32,8bake samples, no direct lighting, four512x512top planes at actual fixed board heights +0.3mm; localXZ secondary UV, linear non-colour PNG",
+  "topHeightsMetres": [
+    0.9925,
+    1.1325,
+    1.0925,
+    1.1525
+  ],
+  "woodAndDressingMeshes": 243,
+  "dynamicObjectsIncluded": false,
+  "ownedStockIncluded": false,
+  "scope": "Actual fixed central wood/cloth/vessel/books only. No owned stock, actors, door, FX or player save baked. Not GI or target acceptance.",
+  "limits": "Static local ambient visibility approximation, not dynamic sale/stock shadows or GI; actual game comparison required"
+}

@@ -1,0 +1,40 @@
+"""Original static reflection-light asset from the existing window aperture.
+Analytic lighting approximation, NOT a target image, scene backdrop or GI bake.
+Babylon8.32 HDRFiltering alpha/LOD convention and GGX importance convolution.
+"""
+from pathlib import Path
+from PIL import Image
+import numpy as np, math, json, hashlib, io
+root=Path(__file__).resolve().parents[1];size=64;samples=128;probe=np.array([.15,1.45,.25]);near=-4.38
+params={'size':size,'samples':samples,'probeRHMetres':probe.tolist(),'window':{'x':near,'y':[.85,2.82],'z':[-2.1,2.1],'edgeMetres':.18},'windowRadiance':[6.72,7.,7.42],'lodGenerationScale':.8,'encoding':'Babylon RGBD PNG mip cube, linear radiance, version2 env','meaning':'Analytic existing-aperture reflection lighting only, not actual traced transport or source scene pixels'}
+def unit(v):return v/np.maximum(1e-12,np.linalg.norm(v,axis=-1,keepdims=True))
+def smooth(a,b,x):t=np.clip((x-a)/(b-a),0,1);return t*t*(3-2*t)
+def radiance(d):
+ t=(near-probe[0])/np.minimum(d[...,0],-1e-8);y=probe[1]+t*d[...,1];z=probe[2]+t*d[...,2]
+ aperture=(d[...,0]<0)*smooth(.67,1.03,y)*(1-smooth(2.64,3.,y))*smooth(-2.28,-1.92,z)*(1-smooth(1.92,2.28,z))
+ sky=np.maximum(d[...,1],0);floor=np.maximum(-d[...,1],0)
+ return np.array([.18,.15,.12])+sky[...,None]*np.array([.25,.25,.24])+floor[...,None]*np.array([.11,.07,.035])+aperture[...,None]*np.array(params['windowRadiance'])
+def radical(i):
+ x=0.;w=.5
+ while i:x+=(i&1)*w;i>>=1;w*=.5
+ return x
+xi=np.array([[i/samples,radical(i)]for i in range(samples)])
+images=[];mips=[];offset=0;linear0=[]
+for lod in range(int(math.log2(size))+1):
+ n=size>>lod;v,u=np.mgrid[0:n,0:n];u=2*(u+.5)/n-1;v=2*(v+.5)/n-1
+ faces=[np.stack([np.ones_like(u),-v,-u],-1),np.stack([-np.ones_like(u),-v,u],-1),np.stack([u,np.ones_like(u),v],-1),np.stack([u,-np.ones_like(u),-v],-1),np.stack([u,-v,np.ones_like(u)],-1),np.stack([-u,-v,-np.ones_like(u)],-1)]
+ alpha=0 if lod==0 else 2**(lod/.8)/size
+ for face,d in enumerate(faces):
+  normal=unit(d).reshape(-1,3)
+  if lod==0:rgb=radiance(normal)
+  else:
+   up=np.zeros_like(normal);up[:,1]=1;up[np.abs(normal[:,1])>.99]=[1,0,0];right=unit(np.cross(up,normal));up=np.cross(normal,right);total=np.zeros_like(normal);weights=np.zeros((len(normal),1))
+   for a,b in xi:
+    phi=2*np.pi*a;ct=np.sqrt((1-b)/(1+(alpha*alpha-1)*b));st=np.sqrt(max(0,1-ct*ct));h=right*(math.cos(phi)*st)+up*(math.sin(phi)*st)+normal*ct;l=2*np.sum(normal*h,axis=-1,keepdims=True)*h-normal;w=np.maximum(0,np.sum(normal*l,axis=-1,keepdims=True));total+=radiance(l)*w;weights+=w
+   rgb=total/np.maximum(1e-8,weights)
+  rgb=rgb.reshape(n,n,3)
+  if lod==0:linear0.append(rgb.astype('float32'))
+  divisor=np.minimum(1,np.floor(np.maximum(255/np.maximum(1e-7,rgb.max(axis=-1)),1))/255);rgba=np.concatenate([np.clip(rgb*divisor[...,None],0,1)**(1/2.2),divisor[...,None]],-1);buf=io.BytesIO();Image.fromarray(np.uint8(np.rint(rgba*255))).save(buf,format='PNG');png=buf.getvalue();images.append(png);mips.append({'position':offset,'length':len(png)});offset+=len(png)
+header={'version':2,'width':size,'imageType':'image/png','specular':{'mipmaps':mips,'lodGenerationScale':.8}};data=bytes([0x86,0x16,0x87,0x96,0xf6,0xd6,0x96,0x36])+json.dumps(header,separators=(',',':')).encode()+b'\0'+b''.join(images)
+base=root/'assets/masters/native-v11/c28-window-light';base.mkdir(exist_ok=True);np.savez_compressed(base/'linear-radiance-source.npz',faces=np.stack(linear0));(base/'soft-window-specular.env').write_bytes(data);public=root/'public/assets/native-v11/soft-window-specular.env';public.write_bytes(data)
+params.update({'source':'tools/build-v11-window-radiance.py','sourceSHA256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'envSHA256':hashlib.sha256(data).hexdigest(),'bytes':len(data),'mipFaces':len(images),'diffuse':'Original analytic scene spherical polynomial retained at binding; no new diffuse intensity','limits':'Single-point analytic window-light reflection proxy. No parallax, geometric occlusion or real-time reflection; not original-target acceptance.'});(base/'provenance.json').write_text(json.dumps(params,indent=2)+'\n');print({'envBytes':len(data),'faces':len(images),'HDRMaximum':float(np.stack(linear0).max())})

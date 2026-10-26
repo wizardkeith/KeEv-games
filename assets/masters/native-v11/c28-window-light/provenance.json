@@ -1,0 +1,36 @@
+{
+  "size": 64,
+  "samples": 128,
+  "probeRHMetres": [
+    0.15,
+    1.45,
+    0.25
+  ],
+  "window": {
+    "x": -4.38,
+    "y": [
+      0.85,
+      2.82
+    ],
+    "z": [
+      -2.1,
+      2.1
+    ],
+    "edgeMetres": 0.18
+  },
+  "windowRadiance": [
+    6.72,
+    7.0,
+    7.42
+  ],
+  "lodGenerationScale": 0.8,
+  "encoding": "Babylon RGBD PNG mip cube, linear radiance, version2 env",
+  "meaning": "Analytic existing-aperture reflection lighting only, not actual traced transport or source scene pixels",
+  "source": "tools/build-v11-window-radiance.py",
+  "sourceSHA256": "2bf61cf7b92a3a5a49868501da2e7fadd7c454e1a0ed92feed601528b8b915d4",
+  "envSHA256": "218ad39720da7e766da460a51dc1ff789342c66ef51516471c9168cd05d618e4",
+  "bytes": 22357,
+  "mipFaces": 42,
+  "diffuse": "Original analytic scene spherical polynomial retained at binding; no new diffuse intensity",
+  "limits": "Single-point analytic window-light reflection proxy. No parallax, geometric occlusion or real-time reflection; not original-target acceptance."
+}
