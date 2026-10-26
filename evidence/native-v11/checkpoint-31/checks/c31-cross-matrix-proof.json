@@ -1,0 +1,35 @@
+{
+  "records": [
+    {
+      "mode": "control",
+      "durationSeconds": 137.52,
+      "sourceFrames": 22,
+      "errors": [],
+      "cameraEconomyOrbitEqual": true
+    },
+    {
+      "mode": "shape",
+      "durationSeconds": 140.08,
+      "sourceFrames": 30,
+      "errors": [],
+      "cameraEconomyOrbitEqual": true
+    },
+    {
+      "mode": "values",
+      "durationSeconds": 128.8,
+      "sourceFrames": 22,
+      "errors": [],
+      "cameraEconomyOrbitEqual": true
+    },
+    {
+      "mode": "combined",
+      "durationSeconds": 140.08,
+      "sourceFrames": 30,
+      "errors": [],
+      "cameraEconomyOrbitEqual": true
+    }
+  ],
+  "cameraEconomyAndTwoObliquePosesEqual": true,
+  "C30OffAll": true,
+  "scope": "Actual ordinary Sandbox UI import + actual pointer orbit, no state/pose injection or new transaction/Low/device pass"
+}

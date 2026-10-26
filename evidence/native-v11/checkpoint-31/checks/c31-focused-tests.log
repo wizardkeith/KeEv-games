@@ -1,0 +1,11 @@
+✔ C31 primary flowers have genuinely broader overlapping forms, closed top/underside surfaces, real UV and fewer triangles than201 (62.476354ms)
+✔ C31 linen keeps every original commodity support ray and rounded edge while changing only the hanging principal form (85.286931ms)
+✔ C31 value maps are portable original object-UV albedo, while reference/reflection/composition stay exact (10.776731ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 857.493486

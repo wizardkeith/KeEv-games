@@ -1,0 +1,9 @@
+{
+  "compared": 458,
+  "changed": [
+    "assets/authoring/native-v3/environment/manifest.json",
+    "assets/authoring/native-v3/manifest.json",
+    "assets/masters/native-v3/environment-v3.json"
+  ],
+  "glbChanged": []
+}
