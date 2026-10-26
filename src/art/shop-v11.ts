@@ -94,19 +94,27 @@ export function buildV11Garden():NativeSurface[]{
  for(const [tree,t]of windowTreeSkeletons().entries()){
   out.push(t.stem);
   const x=tree?-6.20:-5.90,z=tree?-.40:2.10;
-  for(let b=0;b<6;b++){
-   const h=[-.68,-.12,.48,.99,1.53,2.02][b]-(tree?.32:0),a=b*2.39996+tree*1.4;
-   const joint:V3=[x-.04,h-.26,z+.04],tip:V3=[x+Math.cos(a)*(.42+(b%2)*.14),h,z+Math.sin(a)*(.44+(b%2)*.13)];
-   // Join to the actual sampled trunk axis at the corresponding height.
+  const clusters=tree?[
+   {tip:[-6.10,1.35,-.10]as V3,count:13,spread:.20},
+   {tip:[-6.25,.15,-.50]as V3,count:9,spread:.16},
+   {tip:[-6.05,1.55,-.90]as V3,count:16,spread:.24},
+  ]:[
+   {tip:[-5.65,1.48,2.50]as V3,count:15,spread:.22},
+   {tip:[-5.80,.55,2.70]as V3,count:11,spread:.18},
+   {tip:[-5.90,1.78,1.05]as V3,count:19,spread:.25},
+  ];
+  for(const[b,cluster]of clusters.entries()){
+   const {tip}=cluster,h=tip[1],joint:V3=[x-.04,h-.26,z+.04];
    const g=t.stem.geometry,rings=Array.from({length:7},(_,r)=>[0,1,2].map(k=>[0,1,2,3].reduce((sum,j)=>sum+g.positions[(r*4+j)*3+k],0)/4)as V3);
    let hi=rings.findIndex(p=>p[1]>=joint[1]);if(hi<1)hi=1;
    const lo=rings[hi-1],up=rings[hi],u=Math.max(0,Math.min(1,(joint[1]-lo[1])/(up[1]-lo[1])));for(let k=0;k<3;k++)joint[k]=lo[k]+(up[k]-lo[k])*u;
    out.push(twig([joint,[(joint[0]+tip[0])*.5,h-.13,(joint[2]+tip[2])*.5],tip],.014,'#8C7959'));
-   // Unequal overlapping groups rather than a row of identically sized crowns.
-   for(let k=0;k<7;k++){
-    const theta=k*2.39996+a,r=k===0?.02:.13+.045*(k%3),end:V3=[tip[0]+Math.cos(theta)*r,tip[1]+.10*Math.sin(theta)+.045*(k%2),tip[2]+Math.sin(theta)*r];
+   // Unequal, depth-overlapping SMALL-leaf masses bracket a central roof view.
+   // The normal camera sees groups first; no oversized leaf spans a whole pane.
+   for(let k=0;k<cluster.count;k++){
+    const theta=k*2.39996+b*.7+tree*.9,r=cluster.spread*Math.sqrt((k+.5)/cluster.count),end:V3=[tip[0]+Math.cos(theta)*r,tip[1]+.075*Math.sin(theta*1.4)+.025*(k%3),tip[2]+Math.sin(theta)*r];
     out.push(M(sculptSweep([tip,end],[.0038,.0016],undefined,1,3),'#8C7959','wood'));
-    out.push(leaf(end,.43+(k%3)*.065,.28+(k%2)*.055,theta+.4,.60+(k%4)*.29,['#789951','#A4B96B','#C3CE85','#8DA95B'][(b+k+tree)%4]));
+    out.push(leaf(end,.19+(k%3)*.025,.13+(k%2)*.017,theta+.4,.55+(k%4)*.25,['#789951','#A4B96B','#C3CE85','#8DA95B'][(b+k+tree)%4]));
    }
   }
  }
@@ -118,21 +126,31 @@ export function buildV11Garden():NativeSurface[]{
 export function buildV11TrailingGreenery():NativeSurface[]{
  if(!backwallNewForms)return backwallFormSurfaces(oldV11TrailingGreenery());
  const out:NativeSurface[]=[];
- for(const[x,y,z]of[[-3.12,2.2835,2.88],[1.43,2.2835,2.88]]){
+ for(const[plant,[x,y,z]]of([[-3.12,2.2835,2.88],[1.43,2.2835,2.88]]as V3[]).entries()){
+  const dense=plant===1,drops=dense?[.26,.47,.54,.35]:[.58,1.16,.84];
   out.push(M(sculptLoft([{y:0,x:.10,z:.10},{y:.18,x:.145,z:.145},{y:.22,x:.145,z:.145}],12),'#B6A17F','ceramic',[x,y,z]));
-  for(let b=0;b<4;b++){
-   const side=b%2?1:-1,drop=[.76,1.02,.61,.90][b],points:V3[]=Array.from({length:7},(_,j)=>{
+  for(const[b,drop]of drops.entries()){
+   const lean=dense?[.09,-.08,.04,.16][b]:[-.16,.035,.10][b],points:V3[]=Array.from({length:7},(_,j)=>{
     const u=j/6,dy=[.20,.22,.13,-.06,-drop*.46,-drop*.73,-drop][j],front=[-.02,-.20,-.39,-.46,-.46,-.45,-.45][j];
-    return[x+(b-1.5)*.065+side*.16*Math.sin(u*2.9)+.035*Math.sin(j*1.4),y+dy,z+front];
+    return[x+(b-(drops.length-1)/2)*.065+lean*Math.sin(u*2.9)+.025*Math.sin(j*1.4+b),y+dy,z+front];
    });
    const stem=twig(points,.004);out.push(stem);
-   // Actual swept rings3..6 are already in front of the wood envelope. Pair
-   // opposite leaves there; no unattached offset roots or leaves through rails.
-   for(let k=0;k<7;k++){const ring=3+Math.floor(k/2),q:V3=[0,1,2].map(d=>[0,1,2,3].reduce((sum,j)=>sum+stem.geometry.positions[(ring*4+j)*3+d],0)/4)as V3,side=k%2?1:-1;
-    out.push(leaf(q,.26+(k%3)*.025,.18+(k%2)*.025,side*(.25+b*.035),3.04+side*.055,['#738C54','#91A665','#A6B97C'][(k+b)%3]));}
-
+   const leafRings=dense?[0,1,2,3,3,4,4,5,6]:[1,2,3,4,5,6];
+   for(const[k,ring]of leafRings.entries()){
+    const q:V3=[0,1,2].map(d=>[0,1,2,3].reduce((sum,j)=>sum+stem.geometry.positions[(ring*4+j)*3+d],0)/4)as V3,side=(k+b)%2?1:-1;
+    // Leaves on the upper arch grow UP above the board; ring2 folds forward
+    // and down to meet ring3, so crown and trailer are a connected visual mass.
+    // Lower leaves retain the reviewed narrow depth outside the route body box.
+    let angle=side*(.25+b*.035),tilt=3.04+side*.055;
+    if(ring<=1){angle=Math.PI+side*.32;tilt=.68+(b%2)*.18;}
+    else if(ring===2){angle=Math.PI+side*.10;tilt=2.30;}
+    else if(dense&&ring===3&&k===3){angle=Math.PI+side*.12;tilt=.70;}
+    const length=ring===2?.28:dense?.18+.025*((k+b*2)%3):.23+.025*((k+b)%3),width=dense?.15+.018*((k+b)%3):.17+.015*(k%2);
+    out.push(leaf(q,length,width,angle,tilt,['#738C54','#91A665','#A6B97C'][(k+b)%3]));
+   }
   }
-  for(let k=0;k<5;k++){const a=k*2.39996,tip:V3=[x+.08*Math.cos(a),y+.22+(k%2)*.07,z+.04*Math.sin(a)];out.push(twig([[x,y+.18,z],tip],.004));out.push(leaf(tip,.32+(k%2)*.04,.23,a,.55+(k%3)*.28,['#738C54','#91A665','#A6B97C'][k%3]));}
+  const crownCount=dense?7:5;
+  for(let k=0;k<crownCount;k++){const a=k*2.39996+(dense?.55:-.25),tip:V3=[x+.08*Math.cos(a),y+.22+(k%3)*.035,z+.04*Math.sin(a)];out.push(twig([[x,y+.18,z],tip],.004));out.push(leaf(tip,dense?.25+(k%3)*.025:.28+(k%2)*.035,dense?.19:.21,a,.55+(k%3)*.28,['#738C54','#91A665','#A6B97C'][k%3]));}
  }
  const pivot:V3=[-4.18,.901,1.44];
  out.push(M(sculptLoft([{y:0,x:.11,z:.11},{y:.20,x:.15,z:.15},{y:.235,x:.15,z:.15}],12),'#B6A17F','ceramic',pivot));

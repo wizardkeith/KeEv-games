@@ -1,4 +1,4 @@
-/** C37 form-only authoring gate. No player setting or default adoption.
+/** C38 form-only authoring gate. No player setting or default adoption.
  * The accepted C36 table/cashier, lighting, routes and actual stock stay intact. */
 import type {NativeSurface} from './native-characters';
 import {fixedSampleBounds} from './decor-vignette-v11';
@@ -7,7 +7,7 @@ const requested=import.meta.env?.VITE_V11_BACKWALL_FORMS;
 export const backwallFormMode=requested==='shape'||requested==='gray'||requested==='old-gray'?requested:'control';
 export const backwallNewForms=backwallFormMode==='shape'||backwallFormMode==='gray';
 export const backwallGray=backwallFormMode==='gray'||backwallFormMode==='old-gray';
-export const backwallFormIntent={id:'v11.c37.backwall-window-form',mode:backwallFormMode,defaultAdopted:false,scope:'Only fixed back-wall showroom dressing and right-window exterior; C36 table/cashier/camera/lights/routes unchanged',grayColor:'#A5A5A5',limits:'Form gate only; no new material standard, target acceptance, economic authority or public adoption'}as const;
+export const backwallFormIntent={id:'v11.c38.unequal-trailers-window-opening.v2',mode:backwallFormMode,defaultAdopted:false,scope:'Only fixed back-wall showroom dressing and right-window exterior; C36 table/cashier/camera/lights/routes unchanged',grayColor:'#A5A5A5',limits:'Form gate only; no new material standard, target acceptance, economic authority or public adoption'}as const;
 /** One genuinely untextured PBR gray, scoped BEFORE batching. No shared global
  * wood/leaf override that would recolor the accepted central table or cashier. */
 export function backwallFormSurfaces(parts:NativeSurface[]):NativeSurface[]{

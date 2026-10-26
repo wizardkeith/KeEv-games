@@ -1,0 +1,48 @@
+{
+  "intent": {
+    "id": "v11.c38.unequal-trailers-window-opening.v2",
+    "mode": "shape",
+    "defaultAdopted": false,
+    "scope": "Only fixed back-wall showroom dressing and right-window exterior; C36 table/cashier/camera/lights/routes unchanged",
+    "grayColor": "#A5A5A5",
+    "limits": "Form gate only; no new material standard, target acceptance, economic authority or public adoption"
+  },
+  "format": "engine-neutral indexed 3D recipes / fixed decorative sample descriptors",
+  "units": "metres",
+  "axes": "RH +Y up",
+  "rights": "Original project procedural mesh authorship; no generated image, external model or reference pixels embedded",
+  "materials": "Original prior palettes only, form diagnostic awaiting independent gate; no new material adoption",
+  "sources": {
+    "src/art/backwall-forms-v11.ts": "85a418977e1031e9f48583462d032f2020c4a862c594a55e1e4d58bf3c4e0ae7",
+    "src/art/shop-v11.ts": "8bd721a347f55485b5c044d009b1716422815d0be0653cd30edde313f3c4b7aa",
+    "src/art/mixed-display-v11.ts": "03d64fe4d89f6be760354b00a3d350c54085766e1c39de8993123b10164a7585",
+    "src/art/fixtures-v11.ts": "6949c31be458889cc2327e6748c6588db95e8a41a7555984388b059b28ee9633",
+    "src/art/back-display-v10.ts": "bb511ffe95c8b0b4b160b906cd5a13a1ad88a8dfa2c5b3b06ae4e0e3fd2b1591",
+    "tools/export-v11-backwall-c38.ts": "eea934afbb61f86e5f35c654a7979b472e92488d1940af89c4d81a5314ca27bf",
+    "tools/build-v11-backwall-canopy.py": "b7321f6afa4c5c7f1c1d02a0467d94c7589f75aa55c242778276b4e2eaf4bc68",
+    "assets/masters/native-v11/backwall-c37/distant-canopy.json": "1d167c42c490ea17d1613bc3e3d930bc018a03dea5224c61c17c696bdecd6125",
+    "assets/masters/native-v11/backwall-c37/distant-canopy.blend": "8dd8eb64660bec3ec4085380273089691ca9889ed305ed2fff53485bd8096ead"
+  },
+  "files": {
+    "assets/masters/native-v11/backwall-c38/trailing-greenery.json": {
+      "bytes": 380975,
+      "sha256": "20d9d2a33aebbb12693f1865e61eee5cea6056ede67d451f42789850a52bc1a4"
+    },
+    "assets/masters/native-v11/backwall-c38/window-near-branches.json": {
+      "bytes": 439431,
+      "sha256": "1474e1183cdcd6f8d87e6f6d8a82cb84c598096c8da4a688d62b068c1b355da0"
+    },
+    "assets/masters/native-v11/backwall-c38/window-mid-far.json": {
+      "bytes": 504664,
+      "sha256": "ddf4ef688556b0c5e11c6a4cd30290610b511a931931b211ab7cc99727e17f7d"
+    },
+    "assets/masters/native-v11/backwall-c38/fixed-back-samples.json": {
+      "bytes": 2634,
+      "sha256": "48c2a3063d8fd26d8e3e4e664db0e568ae7b096823ba7703b1845259930569bc"
+    },
+    "assets/masters/native-v11/backwall-c38/paper-work-bays.json": {
+      "bytes": 2279,
+      "sha256": "3f421671077f1271c336b351b5b28cfeb9303d8b28ba1bb37ad8194a02c0eed2"
+    }
+  }
+}

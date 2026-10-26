@@ -139,7 +139,7 @@ function distantTree(x:number,z:number,color:string):NativeSurface[]{
 export const windowNeighbourIntent={kind:'non-interactive original exterior',houseCount:2,roofPlanes:4,minX:-12.5,maxX:-5.9,units:'metres'} as const;
 export function buildV11Exterior():NativeSurface[]{
  const walls:NativeSurface[]=[],roofs:NativeSurface[]=[],details:NativeSurface[]=[];
- const houses=backwallNewForms?[{x:-8.25,z:-.55,w:1.48,d:1.62,bottom:-4.60,eave:-1.92,rise:.68,color:'#E2D8C2',roof:'#7D8D95'},{x:-10.40,z:3.62,w:1.78,d:1.94,bottom:-4.45,eave:-2.44,rise:.72,color:'#CCD6CE',roof:'#969C9D'}]:[{x:-8.50,z:-.15,w:1.28,d:1.52,bottom:-4.60,eave:-2.20,rise:.60,color:'#E2D8C2',roof:'#7D8D95'},{x:-10.15,z:3.75,w:1.58,d:1.82,bottom:-4.45,eave:-2.10,rise:.65,color:'#CCD6CE',roof:'#969C9D'}];
+ const houses=backwallNewForms?[{x:-8.25,z:-.05,w:1.48,d:1.62,bottom:-4.60,eave:-.85,rise:.68,color:'#E2D8C2',roof:'#7D8D95'},{x:-10.40,z:3.62,w:1.78,d:1.94,bottom:-4.45,eave:-1.55,rise:.72,color:'#CCD6CE',roof:'#969C9D'}]:[{x:-8.50,z:-.15,w:1.28,d:1.52,bottom:-4.60,eave:-2.20,rise:.60,color:'#E2D8C2',roof:'#7D8D95'},{x:-10.15,z:3.75,w:1.58,d:1.82,bottom:-4.45,eave:-2.10,rise:.65,color:'#CCD6CE',roof:'#969C9D'}];
  for(const h of houses){
   walls.push(board([h.w,h.eave-h.bottom,h.d],[h.x,(h.eave+h.bottom)/2,h.z],h.color,'paint',.015));
   // Pitched roof slabs meet at a real ridge; slope length follows rise/run.
@@ -148,7 +148,12 @@ export function buildV11Exterior():NativeSurface[]{
   const g:Geometry={positions:[],normals:[],indices:[]};
   for(const side of [-1,1]){const n=g.positions.length/3,x=h.x+side*h.w*.5;g.positions.push(x,h.eave,h.z-h.d*.5,x,h.eave,h.z+h.d*.5,x,h.eave+h.rise,h.z);g.indices.push(...(side>0?[n,n+1,n+2]:[n,n+2,n+1]));}
   walls.push({shape:'mesh',at:[0,0,0],geometry:finishSculpt(g),color:h.color,role:'paint'});
-  details.push(board([h.w+.32,.065,.075],[h.x,h.eave+h.rise+.025,h.z],'#879392','paint',.012));
+  if(backwallNewForms){
+   // Existing material, real ridge/eave/rake silhouette. Simple fascia boxes
+   // replace the old ridge bevel budget; no texture or new paint identity.
+   details.push({shape:'box',size:[h.w+.32,.065,.075],at:[h.x,h.eave+h.rise+.025,h.z],color:'#879392',role:'paint'});
+   for(const side of[-1,1])details.push({shape:'box',size:[h.w+.28,.09,.065],at:[h.x,h.eave-.01,h.z+side*h.d*.5],color:'#879392',role:'paint'},{shape:'box',size:[.065,.07,slope],at:[h.x+h.w*.5+.06,h.eave+h.rise*.5,h.z+side*h.d*.25],turn:[side*angle,0,0],color:'#879392',role:'paint'});
+  }else details.push(board([h.w+.32,.065,.075],[h.x,h.eave+h.rise+.025,h.z],'#879392','paint',.012));
   // Upper-floor window recesses and lintels establish facade scale in actual3D.
   for(const z of [h.z-h.d*.27,h.z+h.d*.27]){
    const x=h.x+h.w*.5+.012,y=h.eave-.57;
@@ -161,5 +166,5 @@ export function buildV11Exterior():NativeSurface[]{
  // Compile facade detail by material while keeping four actual roof records
  // available for ray/portal tests and native reuse.
  const grouped=(p:NativeSurface[])=>nativeGrouped(p).map(g=>({shape:'mesh' as const,at:[0,0,0] as V3,geometry:g.geometry,color:g.color,role:g.role,roughness:g.roughness}));
- return backwallFormSurfaces([...grouped(walls),...roofs,...details.filter(p=>p.role==='glass'),...grouped(details.filter(p=>p.role!=='glass')),...distantTree(backwallNewForms?-11.25:-10.15,backwallNewForms?.85:.55,'#9FB9B0'),...distantTree(backwallNewForms?-11.75:-10.95,backwallNewForms?7.00:3.80,'#B6C8BE')]);
+ return backwallFormSurfaces([...grouped(walls),...roofs,...details.filter(p=>p.role==='glass'),...grouped(details.filter(p=>p.role!=='glass')),...distantTree(backwallNewForms?-11.25:-10.15,backwallNewForms?1.80:.55,'#9FB9B0'),...distantTree(backwallNewForms?-11.75:-10.95,backwallNewForms?6.30:3.80,'#B6C8BE')]);
 }
