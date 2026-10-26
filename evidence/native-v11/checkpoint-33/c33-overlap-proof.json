@@ -1,0 +1,13 @@
+{
+  "C32": {
+    "overlapSamplesAt2mm": 0,
+    "sideInFrontSamples": 0,
+    "approxOverlapAreaM2": 0.0
+  },
+  "C33": {
+    "overlapSamplesAt2mm": 483,
+    "sideInFrontSamples": 403,
+    "approxOverlapAreaM2": 0.001932
+  },
+  "projection": "Fixed normal camera elevation40deg; actual closed-mesh ray intersections; local authoring metres before fixed1.1scale. Sampling diagnostic, not independent visual acceptance."
+}
