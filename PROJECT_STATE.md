@@ -1,6 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T01:56:44+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T02:32:46+08:00** (Asia/Hong_Kong).
+
+## V11 C34已過灰模的材質整合候選／未採用 — 2026-10-27T02:32:46+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)推送`b054c51a02800f12556775a6c794e0091cd6611e`／application`0e20d41262e5234db57d800f9ab965eb019dce49`；[原圖、同正常480px與雙斜角材質對照／85.640及107.240秒實際原片](https://github.com/wizardkeith/KeEv-games/blob/b054c51a02800f12556775a6c794e0091cd6611e/docs/V11_C34_BOUNDED_MATERIAL_GATE_2026-10-27_zh-HK.md)。C33花／C32布已獨立通過灰門檻，現鎖定母檔／構圖／反射；只沿用UV圖集與原paper/fabric材質整合花主側值面、布自身法線的寬轉面色調，無庫存陰影烘入。第一版226增益不足拒用，最終229base／228values仍待材質覆核，**正常全景增益有限，不宣稱原圖接受，不擴散全店或設為預設**。
+- 255tests/build/validate五語174keys/replay/assets、146GLB零錯警告／305保護檔；15776tri／17styling群、4448底點／541布接觸與geometry hashes保持；最終兩組各182runtime由application重建byte一致。真Sandbox匯入與同camera/economy/雙orbit、0pageerror／隔離Normal不變；不是新全交易／Low／五語窄屏／實體GPU/FPS/audio/native驗收，採用前仍需affected實際流程。main僅文件指標，未合併，PR8仍Draft，普通201及公開V17未由本工作改動；無Site操作／新發佈包／Library或LTC重試／玩家Chrome或Normal／Unity／關機，無使用者動作阻塞。
 
 ## V11 C33單一花簇內肩／保留已過灰門檻的布 — 2026-10-27T01:56:44+08:00
 
