@@ -1,9 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T08:17:04+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T08:49:34+08:00** (Asia/Hong_Kong).
 
 
 
+
+## V11 actual pencil/work-tool proportion checkpoint — 2026-10-26T08:49:34+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed/readback **6989e52d25ad3b802fe6eeb1e6dfece021f0cdf3**, runtime **6946fad89c409f7c03b1885c2c695e52af4b8f79**, immutable103. **Unmerged; main documentation only; publicV17 unchanged; original target still NOT met, continuing.** Old actual buy/place pencil65.35cm replaced by hand-scale23.86cm continuous shaft/tip/ferrule/eraser; existing counter workholder13.33cm. Inferred reference hand proportions, not approved metric dimensions. SameSKU/stockcap8; front units rest on existing linen, back on existing riser.
+- **200tests/build/validate/replay/assets,139GLB0errors/warnings,305protected/history,36native output fresh rebuild byte-identical.** Actual before100/after103 ordinary Sandbox buy8vase/pencil/tray/place3: camera normal/Zen/staff and cash/inventory/shelves exact,0pageerrors,isolatedNormalunchanged. [Before/after actual game images, exact source hashes and limits](https://github.com/wizardkeith/KeEv-games/blob/6989e52d25ad3b802fe6eeb1e6dfece021f0cdf3/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md). Failed101/stale capture entirely excluded; no new cashier/motion/locale/device claim; fullB remains94, locale74.
+- Requested two nativeLibrary screenshot deliveries blocked at read-only helper discovery network; one same-route bounded retry exhausted, nativeLibraryread works, **no prepare/upload/finalize executed, noLibraryIDs**. [Sanitized exact blocker and screenshot hashes](https://github.com/wizardkeith/KeEv-games/blob/6989e52d25ad3b802fe6eeb1e6dfece021f0cdf3/evidence/native-v11/checkpoint-17/library-delivery-blocker.json). Continue art independent of attachment issue. Next bounded actual-room specular-probe experiment for ceramic/material distinction; not yet implemented/accepted. C16 rollback preserved. No releasearchive/merge/deploy/userChrome/Normalplayerdata/Unity/shutdown/content expansion; target/physicalGPU/FPS/audio/native open.
 
 ## V11 bounded cloth diagnosis completed; whole-shop asset audit continues — 2026-10-26T08:17:04+08:00
 
