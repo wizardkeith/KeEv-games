@@ -1,3 +1,11 @@
+## C22 選定134來源已固定：遮擋撤回，毛利浮窗像素核對中
+
+實作 `e13ef125f50ce8603a9c1104cc4344f17afc898d`，src tree `389aff0c1d6248f52a463cb844a4cf1096c15aaa`。保留 C21 結構；新混合工作群組、35既有樣品、空腔收納、3／5層穩定紙品展示、中度木色後架、收銀暖光、439網格新接觸陰影已在真正正常遊戲整合。132／133天花遮擋試作均未採納，普通遊戲不建立該網格。
+
+**已在提交後 e13ef125 重新執行223測試／validate／replay／asset-check；141 GLB零錯誤警告、305受保護檔案、34native重建及163實際遊玩payload parity、五語15案例／75面板切換均通過。** [正常 AFTER](../evidence/native-v11/checkpoint-22/selected134/after-normal-game.png)、[實際收銀](../evidence/native-v11/checkpoint-22/normal-flow134/03-cashier-contact-in-game.png)、[199.280秒未剪接流程](../evidence/native-v11/checkpoint-22/normal-flow134/gameplay-uncut.webm)、[來源／雜湊／限制](../evidence/native-v11/checkpoint-22/selected-provenance.json)。前後三鏡頭與相同真實購買現金／庫存／貨架逐項一致。
+
+交易／現金／庫存、A交接／離店／返回／重載已驗證，Normal隔離基線不變。**毛利資料與DOM有正確18件 +¥8,400，但原始04截圖及目前抽幀未見浮窗，不能當像素通過；正在一次有界的同來源位置／樣式核對。** 美術仍未達原圖，不是完成／發佈驗收，公開V17不變。
+
 ## C22 進行中：混合陳列與光路診斷（未達標，未定稿）
 
 來源 `92e3ac399be783780f3ef06e5f144e67e4d12946`。保留 C21 三款櫃體／平台／前景翼櫃／窄地板／庭景；重排既有35固定樣品、增加有空腔文件架及下層籃、中央紙品與花束高度、櫃檯工作紙品及服務鈴。真實紙品存貨改為穩定3／5層群組，沒有改SKU／數量上限／經濟；後牆組裝補回原本遺失的釉陶finish。
