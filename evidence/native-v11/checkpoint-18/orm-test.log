@@ -1,0 +1,10 @@
+BJS - [01:16:21]: Babylon.js v8.32.0 - Null engine
+✔ authored glTF ORM green actually wins over Babylon default alpha without changing the base material response (7.378566ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 378.344423

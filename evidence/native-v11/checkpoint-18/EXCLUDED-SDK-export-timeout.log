@@ -1,0 +1,8 @@
+Ready, capturing six actual room directions
+Room probe: rendering six faces
+Room probe: six faces done, prefiltering
+Room probe: GGX done, encoding env
+Error: Bounded180second room-probe capture expired
+    at Timeout._onTimeout (/workspace/game-v10-art-life/tools/v11-author-room-probe.cjs:4:871)
+    at listOnTimeout (node:internal/timers:635:17)
+    at process.processTimers (node:internal/timers:571:7)

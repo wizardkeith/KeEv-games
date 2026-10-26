@@ -1,0 +1,11 @@
+BJS - [01:11:13]: Babylon.js v8.32.0 - Null engine
+✔ actual room reflection preserves exact analytic diffuse, lights and all nonceramic material response (14.205358ms)
+✔ reusable actual room asset is a complete standard HDR cube, with no actor or owned-stock data (0.985758ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 509.450339

@@ -6,6 +6,20 @@
 
 
 
+## 第十八個 checkpoint — 真正房間反射／青瓷素材及實際ORM通道修正，未達目標
+
+**runtimea2b32a498939a3c36ab8ca3b3ea8aec19ce754d2，default112。** 從真正255個static mesh捕捉128²六面線性HDR，GGX64samples／48RGBD mip，排除人物／真庫存／門扇／FX／存檔；原始.env、來源／native契約保留。只替換ceramic specular，原analytic diffuse SH／direct lights／其他材質不變，沒有即時probe、新燈或把房間圖當背景。[單獨反射109實際遊戲](../evidence/native-v11/checkpoint-18/specular-after109/after-normal-game.png)：局部亮邊可見，但不是重大整店風格突破。首次SDK輸出180秒超時排除；成功CPU RGBD／2Dcanvas輸出另有原始log／來源，沒有隱瞞失敗。
+
+原始可重建青瓷釉色／微表面／roughness素材，實際杯瓶body採物理高度UV，vase仍原SKU／幾何／高度。[完整新材質112普通買入上架／正常鏡頭](../evidence/native-v11/checkpoint-18/celadon-after112/after-normal-game.png)／[實際櫃台](../evidence/native-v11/checkpoint-18/celadon-after112/after-counter-game.png)。before103→112三camera與cash/stock/shelves完全相同，0pageerror／隔離Normal未變。標準GLB嵌入相同albedo／normal／ORM及clearcoat，未把Web效果默認當native外觀相同。
+
+**找到真實設定缺陷：**Babylon8.32預設alpha粗糙度優先，原程式雖設green=true卻未設alpha=false，故ORM green被遮蓋。現依已宣告glTF資料用Groughness／Bmetallic，未改dye、base roughness或mesh。[同鏡頭同自然面向before111](../evidence/native-v11/checkpoint-18/orm-before111-after112/before-female-in-game.png)／[after112](../evidence/native-v11/checkpoint-18/orm-before111-after112/after-female-in-game.png)，B x/z/yaw/browsing及camera exact；頭手／其他人自然相位不同。**實看外套增益仍小，布料gate仍OPEN；不能說所有摺弱都因材質。**
+
+**204tests/build/validate/replay/assets、139GLB零error/warning、305protected/history，36native輸出＋3釉色map fresh rebuild byte-identical。**375×812真Sandbox刻意abort反射檔仍worldReady、原analytic備援、0pageerror。沒有假稱GPU probe再次捕捉byte-identical，或重跑74五語布局。[來源、逐段scope、測試與限制](../evidence/native-v11/checkpoint-18/provenance.json)。
+
+[177.636秒真正正常營業鏡頭流程110](../evidence/native-v11/checkpoint-18/normal-flow110/gameplay-uncut.webm)已完成普通買入／放架／招呼／一次真結算／收銀接觸／可讀18件＋8400批次毛利（未扣人工租金）／A離開／員工返位／reload，0pageerror／隔離Normal未變；[收銀實際PNG](../evidence/native-v11/checkpoint-18/normal-flow110/03-cashier-contact-in-game.png)。**這是110，尚未ORM修正，不冒稱112新完整流程通過。**112流程正跑，完成後另補來源固定的結果。
+
+原目標style/quality仍未達到，人物／整店陳列密度／材質層次／入口外景和相對比例仍有差距；反射與ORM技術pass不是目標驗收。依parent下一個bounded比較是**一杯／一瓶、同正常遊戲鏡頭**看材質，再改善真庫存的自然層次，避免八個同形瓶只變成更亮的排列。Library由parent處理，不再重試。保留C16rollback、C17鉛筆／holder、C13衣物及所有economy/save/UI/camera。PR8draft／未merge/deploy，publicV17不變；無實體GPU/FPS/audio/native驗收，無其他內容擴張。
+
 ## 第十七個 checkpoint — 真正買入上架的鉛筆比例／接觸修正，繼續整店
 
 原生鉛筆長0.5835m，display×1.12後65.35cm；[實際舊正常遊戲](../evidence/native-v11/checkpoint-17/before100/before-normal-game.png)確實像粗長木棒。重建原SKU的六角筆身／木尖／石墨／金屬箍／擦膠，display後23.86cm；固定櫃台筆筒改約13.33cm高。[同鏡頭實際新版](../evidence/native-v11/checkpoint-17/after103/after-normal-game.png)／[新版實際櫃台](../evidence/native-v11/checkpoint-17/after103/after-counter-game.png)。這些尺寸是由手部／器物比例推算，原圖沒有提供公分規格；不是新增商品或玩法。前四支放回既有淺色runner、後四支在既有riser；仍min(stock,8)，沒有庫存授予。
