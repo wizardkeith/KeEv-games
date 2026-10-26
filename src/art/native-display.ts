@@ -1,17 +1,26 @@
 import {relocateV11Decoration} from './decor-vignette-v11';
 /** Curated physical samples, one per visible stock unit (maximum eight).
  * Units/metres; no inventory is created by staging. Fixtures are not SKUs. */
+/** The existing handmade-vase stock uses two loose height groups. This is a
+ * deterministic visual size variation, as already used for four-sample staging,
+ * never a new product, tier, economic effect or additional owned unit. */
+function vaseStockSample(k:number,table:number){
+ const factor=[1.00,1.02,.94,1.06,.97,.88,1.04,.92][k],yaw=[-.24,.18,-.11,.25,-.30,.08,-.19,.22][k];
+ const x=table===1?[-.03,.31,.65][k%3]:[-.55,-.22,.12,.57,-.50,-.17,.17,.50][k],z=table===1?[-.34,-.03,.36][Math.floor(k/3)]:[-.30,-.35,-.25,-.19,.20,.28,.20,.28][k];
+ return {at:[x,0,z] as [number,number,number],yaw,scale:factor*(table===1?.90:.94)};
+}
 export function displaySamples(id:string,stock:number,table:number){
  const count=Math.min(8,Math.max(0,Math.floor(stock)));
+ if(id==='off.vase')return Array.from({length:count},(_,k)=>vaseStockSample(k,table));
  if(table===1)return Array.from({length:count},(_,k)=>{
   const flat=['off.notebook','off.card','off.tray','off.towel'].includes(id),scale=id==='off.tote'?.72:id==='off.notebook'?.90:id==='off.pencil'?1.12:.90;
-  if(id==='off.pencil'){const upper=k>=4,j=k%4;return {at:[upper?.58:-.10,upper?0:.0085,upper?.25+j*.06:-.34+j*.06] as [number,number,number],yaw:(upper?.10:-.16)+(j-1.5)*.006,scale};}
+  if(id==='off.pencil'){const upper=k>=4,j=k%4;return {at:[upper?.58:-.10,0,upper?.25+j*.06:-.34+j*.06] as [number,number,number],yaw:(upper?.10:-.16)+(j-1.5)*.006,scale};}
   if(id==='off.tote')return {at:[k%2?.58:.10,0,[-.37,-.14,.09,.36][Math.floor(k/2)]] as [number,number,number],yaw:k%2?.025:-.025,scale};
   if(flat)return {at:[k%2?.55:.10,0,-.20] as [number,number,number],yaw:k%2?.03:-.03,scale};
   return {at:[-.03+(k%3)*.34,0,[-.34,0,.36][Math.floor(k/3)]] as [number,number,number],yaw:[-.03,.04,-.04][k%3],scale};
  });
  return Array.from({length:count},(_,k)=>{
-  if(id==='off.pencil'){const upper=k>=4,j=k%4;return {at:[upper?.34:.12,upper?0:.0085,upper?.20+j*.06:-.34+j*.06] as [number,number,number],yaw:(upper?.10:-.16)+(j-1.5)*.006,scale:1.12};}
+  if(id==='off.pencil'){const upper=k>=4,j=k%4;return {at:[upper?.34:.12,0,upper?.20+j*.06:-.34+j*.06] as [number,number,number],yaw:(upper?.10:-.16)+(j-1.5)*.006,scale:1.12};}
   if(count>4){const scale=id==='off.notebook'?1.02:id==='off.tote'?.72:.94;
    if(['off.notebook','off.card','off.tray','off.towel'].includes(id))return {at:[k%2?-.31:.31,Math.floor(k/4)*(id==='off.notebook'?.067:id==='off.tray'?.070:id==='off.towel'?.160:.025)*scale+.009,Math.floor(k%4/2)?-.22:.22] as [number,number,number],yaw:k%2?-.10:.08,scale};
    return {at:[-.54+(k%4)*.35,.009,-.20+Math.floor(k/4)*.40] as [number,number,number],yaw:[-.18,.15,-.22,.08][k%4]+table*.035,scale};
