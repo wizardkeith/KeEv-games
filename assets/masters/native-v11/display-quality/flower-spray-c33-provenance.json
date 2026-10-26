@@ -1,0 +1,43 @@
+{
+  "source": "tools/build-v11-overlap-flowers.ts",
+  "sourceSHA256": "35fccff6bd04fab93eb288128f0218973c46f505714338b403bb1e563427749a",
+  "scope": "Only same non-inventory C27 flower crown. Fixed normal-view basis is authored into real3D, never billboarded",
+  "clusters": [
+    {
+      "id": "main-high",
+      "u": 0.005,
+      "y": 0.685,
+      "d": -0.015,
+      "r": 0.068
+    },
+    {
+      "id": "left-low-front",
+      "u": -0.151,
+      "y": 0.58,
+      "d": 0.054,
+      "r": 0.058
+    },
+    {
+      "id": "right-low-back",
+      "u": 0.148,
+      "y": 0.55,
+      "d": -0.062,
+      "r": 0.053
+    }
+  ],
+  "primarySurfaces": 15,
+  "triangles": 1524,
+  "correction": {
+    "previous": "C32",
+    "lobe": 6,
+    "cluster": "left-low-front",
+    "only": "inner shoulder",
+    "displacementU": 0.055,
+    "displacementY": 0.075,
+    "displacementD": -0.02,
+    "lowerRimFixed": true,
+    "branchRootsUnchanged": true
+  },
+  "method": "Three rooted branch systems and overlapping closed rounded-shoulder lobed corollas with depth comparable to radius; one high main /two lower depth-staggered side masses, unequal openings. No texture/material-value work.",
+  "limits": "Gray normal480px/two-oblique independent gate open; closedness does not certify appearance"
+}
