@@ -1,9 +1,17 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T11:11:37+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T11:32:36+08:00** (Asia/Hong_Kong).
 
 
 
+
+## V11 C21 全店重建檢查點（未合併／美術未達標）— 2026-10-26T11:32:36+08:00
+
+- 原圖及build118獨立全景檢視確認問題仍是模組化桌體、分區重複陳列、平面門外與均勻棕色調，不能以局部材質修補代替。正在 [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)／`codex/game-v11-target-slice` 持續實作，公開V17及其身份／網址／存檔不變。
+- 已推送來源 `3530bc4496798b075d1d13f2dfdb34e3e8c47e0d`；實拍與檢查收據 `216cb4b3cece6a9bcf4124a06ae8f7d6c4410511`。三款不同桌／櫃輪廓、分離高低展示台、非庫存紙品角、較寬前景櫃檯／夾板、真實36行窄木板錯縫及3D入口庭景；保留rig／收銀接觸點／相機操作、經濟／五語／存檔。對應實體避障邊界同步調整，305受保護檔案及其他路線算法不變。
+- 218測試、build／validate／replay／asset-check、141 GLB零錯誤／警告通過。真實Sandbox買8／放3架、正常／全景／櫃檯鏡頭及重載保持，隔離Normal基線不變；本段操作沒有新售出宣稱。
+- [實際正常遊戲畫面](https://github.com/wizardkeith/KeEv-games/blob/216cb4b3cece6a9bcf4124a06ae8f7d6c4410511/evidence/native-v11/checkpoint-21/macro-scene125/after-normal-game.png)、[未剪接操作](https://github.com/wizardkeith/KeEv-games/blob/216cb4b3cece6a9bcf4124a06ae8f7d6c4410511/evidence/native-v11/checkpoint-21/macro-scene125/gameplay-uncut.webm)、[來源／限制](https://github.com/wizardkeith/KeEv-games/blob/216cb4b3cece6a9bcf4124a06ae8f7d6c4410511/evidence/native-v11/checkpoint-21/provenance.json)。全部為雲端SwiftShader，非概念圖／工作室替代，亦非實體GPU／FPS／音訊／原生認證。
+- **原圖品質仍未達標，工作繼續**：下一步擴充有效陳列體量與室內外光影對照，保留已改善的角色／比例／接觸／釉色。不可將此進度寫成完整美術驗收、已合併或已發佈。
 
 ## V11 plant reconstruction checkpoint; owner rejects overall fidelity — 2026-10-26T11:11:37+08:00
 
