@@ -1,3 +1,4 @@
+import {backwallDistantCrown} from './shop-v11';
 import {backwallNewForms,backwallFormSurfaces} from './backwall-forms-v11';
 import {grayFormMode,grayBatchColor,grayBatchRoughness} from './gray-forms-v11';
 import {centralLinenRecipe,windowCrownRecipe} from './display-quality-v11';
@@ -128,7 +129,7 @@ export function buildV11Room(door:Parameters<typeof buildV10Room>[0]):NativeSurf
  * colours describe atmospheric distance, not a photographed backdrop. */
 function distantTree(x:number,z:number,color:string):NativeSurface[]{
  const out:NativeSurface[]=[],pivot:V3=[x,-1.90,z];
- out.push({...windowCrownRecipe(),at:pivot});
+ out.push(...(backwallNewForms?backwallDistantCrown(color):[windowCrownRecipe()]).map(p=>({...p,at:pivot})));
  // Retain the C23 branch roots/ends and layer positions. New continuous foliage
  // is a real connected mesh, replacing only the three crude crown spheres.
  for(const[dx,y,dz]of[[-.32,-.82,.10],[.38,-.24,-.12],[-.10,.28,.15]])out.push({shape:'mesh',at:[0,0,0],color:'#8F9C90',role:'wood',geometry:sculptSweep([[x,-3.65,z],[x,-2.32,z],[x+dx,y-1.2,z+dz]],[.041,.028,.009],undefined,4,5)});

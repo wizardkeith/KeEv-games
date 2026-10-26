@@ -1,3 +1,4 @@
+import backwallCanopy from '../../assets/masters/native-v11/backwall-c37/distant-canopy.json';
 import {backwallNewForms,backwallFormSurfaces} from './backwall-forms-v11';
 import {placeCentralFloral} from './central-composition-v11';
 import {centralFlowerJugRecipe,centralFlowerSprayRecipe} from './display-quality-v11';
@@ -105,7 +106,7 @@ export function buildV11Garden():NativeSurface[]{
    for(let k=0;k<7;k++){
     const theta=k*2.39996+a,r=k===0?.02:.13+.045*(k%3),end:V3=[tip[0]+Math.cos(theta)*r,tip[1]+.10*Math.sin(theta)+.045*(k%2),tip[2]+Math.sin(theta)*r];
     out.push(M(sculptSweep([tip,end],[.0038,.0016],undefined,1,3),'#8C7959','wood'));
-    out.push(leaf(end,.35+(k%3)*.055,.23+(k%2)*.045,theta+.4,.60+(k%4)*.29,['#789951','#A4B96B','#C3CE85','#8DA95B'][(b+k+tree)%4]));
+    out.push(leaf(end,.43+(k%3)*.065,.28+(k%2)*.055,theta+.4,.60+(k%4)*.29,['#789951','#A4B96B','#C3CE85','#8DA95B'][(b+k+tree)%4]));
    }
   }
  }
@@ -122,9 +123,9 @@ export function buildV11TrailingGreenery():NativeSurface[]{
   for(let b=0;b<4;b++){
    const side=b%2?1:-1,drop=[.76,1.02,.61,.90][b],points:V3[]=Array.from({length:7},(_,j)=>{const u=j/6;return [x+(b-1.5)*.065+side*.16*Math.sin(u*2.9)+.035*Math.sin(j*1.4),y+.20-u*drop,z-.05-.22*Math.sin(Math.min(1,u*2)*Math.PI*.5)];});
    out.push(twig(points,.004));
-   for(let k=0;k<7;k++){const q=points[k],side=k%2?1:-1;out.push(leaf([q[0]+side*.025,q[1],q[2]],.19+(k%3)*.025,.14+(k%2)*.025,side*(.9+b*.18),2.25+side*.24,['#738C54','#91A665','#A6B97C'][(k+b)%3]));}
+   for(let k=0;k<7;k++){const q=points[k],side=k%2?1:-1;out.push(leaf([q[0]+side*.025,q[1],q[2]],.26+(k%3)*.025,.18+(k%2)*.025,side*(.9+b*.18),2.25+side*.24,['#738C54','#91A665','#A6B97C'][(k+b)%3]));}
   }
-  for(let k=0;k<5;k++)out.push(leaf([x,y+.18,z],.28,.18,k*2.39996,.65+(k%3)*.4,['#738C54','#91A665','#A6B97C'][k%3]));
+  for(let k=0;k<5;k++)out.push(leaf([x,y+.18,z],.36,.23,k*2.39996,.65+(k%3)*.4,['#738C54','#91A665','#A6B97C'][k%3]));
  }
  const pivot:V3=[-4.18,.901,1.44];
  out.push(M(sculptLoft([{y:0,x:.11,z:.11},{y:.20,x:.15,z:.15},{y:.235,x:.15,z:.15}],12),'#B6A17F','ceramic',pivot));
@@ -193,6 +194,18 @@ export function buildV11Styling(centralBouquetScale=.95,qualitySlice=false):Nati
  for(const [x,y,z,scale]of [[-4.18,.901,-.91,1.1],[-.53,1.0735,-.05,centralBouquetScale],[1.35,1.111,-1.47,.90]]){
   if(qualitySlice&&x===-.53){out.push(...placeCentralFloral(centralFlowerJugRecipe(),'vessel'),...placeCentralFloral(centralFlowerSprayRecipe(),'crown'));continue;}
   for(const part of bouquet()){const p=scaled(part,scale);out.push({...p,at:[p.at[0]+x,p.at[1]+y,p.at[2]+z]});}
+ }
+ return batch(out);
+}
+
+/** C37 far foliage is an original connected sculpt, with a few curved leaves
+ * rooted inside its volume. It sits behind the actual near branches/roof planes.
+ * Saved Blender source and indexed mesh stay available for native reuse. */
+export function backwallDistantCrown(color:string):NativeSurface[]{
+ const out:NativeSurface[]=[{...M(backwallCanopy,color),roughness:.91}];
+ for(let k=0;k<8;k++){
+  const head=([[-.32,-.12,.10],[.38,.46,-.12],[-.10,.98,.15]]as V3[])[k%3],a=k*2.39996;
+  out.push(leaf([head[0]+Math.cos(a)*.12,head[1],head[2]+Math.sin(a)*.12],.43+(k%3)*.06,.28+(k%2)*.04,a,.60+(k%4)*.26,color));
  }
  return batch(out);
 }
