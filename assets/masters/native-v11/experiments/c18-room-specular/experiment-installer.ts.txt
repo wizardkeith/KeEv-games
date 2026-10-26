@@ -1,0 +1,15 @@
+/** Bounded actual-renderer material experiment, compile flag only. No new
+ * realtime lights: the native room's captured HDR affects ceramic specular;
+ * original analytic diffuse irradiance and all nonceramic materials remain. */
+import {CubeTexture} from '@babylonjs/core/Materials/Textures/cubeTexture';
+import {PBRMaterial} from '@babylonjs/core/Materials/PBR/pbrMaterial';
+import type {Scene} from '@babylonjs/core/scene';
+export async function installRoomSpecularExperiment(scene:Scene){
+ const diffuse=scene.environmentTexture?.sphericalPolynomial;
+ const env=await new Promise<CubeTexture>((resolve,reject)=>{let texture:CubeTexture;texture=new CubeTexture('/assets/native-v11/actual-static-room-specular.env',scene,undefined,false,null,()=>resolve(texture),message=>reject(Error(message??'Room reflection asset failed')),undefined,true,undefined,false);});
+ env.name='experimental.actual-room.specular';env.invertZ=true;if(diffuse)env.sphericalPolynomial=diffuse;
+ const selected=new Set<PBRMaterial>();
+ for(const m of scene.meshes)if(m.metadata?.materialRole==='ceramic'&&m.material instanceof PBRMaterial)selected.add(m.material);
+ for(const m of selected)m.reflectionTexture=env;
+ scene.metadata={...scene.metadata,roomSpecularExperiment:{materials:[...selected].map(m=>m.name),source:'Actual static game room HDR capture,128cubemap,64sample GGX; ceramic specular only, original analytic diffuse SH retained',acceptance:false}};
+}

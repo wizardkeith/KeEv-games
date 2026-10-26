@@ -1,0 +1,20 @@
+{
+  "source": "tools/paint-v11-celadon.py",
+  "generation": "Original deterministic mathematical pigment flow and kiln-roughness field; not generated concept art, scene screenshot or third-party material",
+  "size": [
+    512,
+    512
+  ],
+  "uv": "Theta U and physical height/0.40m V, one repeat; RGBD room reflection is independent",
+  "roughnessFactor": 0.42,
+  "roughnessRange": [
+    0.29463630777995853,
+    0.3819295359420091
+  ],
+  "normalScale": 0.06,
+  "files": {
+    "celadon-albedo.png": "ba536878d3e588271aa5ee9b93bcfb5ea756bc137ad564cfff823457e4ab7102",
+    "celadon-normal.png": "05576b5028d87c7e39085041549cdb9df9b7209cc1b5f519c41e04a182d0678f",
+    "celadon-orm.png": "9261890bdc9a58173bed1c210b17f957e50ed2d6ca9e4b045f62bd45a97c9521"
+  }
+}

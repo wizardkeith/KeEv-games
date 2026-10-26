@@ -14,8 +14,15 @@
     "No device or WebGL visual validation is implied by this export."
   ],
   "sources": {
+    "src/art/room-specular-v11.ts": "b365936ba86cb8fdcb9cdb236df7fc4b6a11884f4caadeee627287972de99e06",
+    "src/art/surface-finish-v11.ts": "badd75f6b1d17c4f5e89d77014dd02164bfc4fbc38685af639f87191460000b7",
+    "assets/masters/native-v11/experiments/c18-room-specular/actual-static-room-specular.env": "298a1fcc71ab474f5f0754edca9e1f7b7e4026ef28664f00856e37f112ee5d28",
+    "assets/authoring/native-v11/celadon-provenance.json": "e79dbb56c904925de0437f800e5909da4ae9f1f03c588ba8a1f3ebbe8ba786cb",
+    "assets/masters/native-v11/celadon-albedo.png": "ba536878d3e588271aa5ee9b93bcfb5ea756bc137ad564cfff823457e4ab7102",
+    "assets/masters/native-v11/celadon-normal.png": "05576b5028d87c7e39085041549cdb9df9b7209cc1b5f519c41e04a182d0678f",
+    "assets/masters/native-v11/celadon-orm.png": "9261890bdc9a58173bed1c210b17f957e50ed2d6ca9e4b045f62bd45a97c9521",
     "src/art/pencil-v11.ts": "aa99c3c04863d74b437c60b24028437cb6e0d557cc9750ba05ac94b085ae0dd1",
-    "src/art/products-v11.ts": "968952dd50b6a94a840edec004c8132591119aa6102397d6239ddbdd18966668",
+    "src/art/products-v11.ts": "280a14b70a19495780b44df4bdf4b4e1100acca63aa4f54fdc5ef4de8e0eb361",
     "src/art/native-products.ts": "da515d2fd618c6bb16f9b7fa0a168bbb899944e53b3293d901e0ea7f1769665c",
     "src/art/counter-stationery-v11.ts": "82512c6dd9639918c23488e4e91a45244b65f7beb9ab4da908f8066aa7caec00",
     "src/art/shop-v10.ts": "0ac65000bb42de57c335410b3e1af6f12ab2557d78c89b9eac3d548ae12c0623",
@@ -47,7 +54,7 @@
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "5c43ce7aa5c7d85db19ac0cda640fd31039ef91df38be393a4509e3c6e6ad226",
-    "tools/export-native-environment.ts": "4857fdf566c7253e5071effafa66c8cf36103489778d89e1607602ea990ee8a0"
+    "tools/export-native-environment.ts": "892ded3acab3c9e12db9e05261784005c954b644ca033c1a6ab51a72ed73fa1b"
   },
   "presentation": {
     "camera": {
@@ -293,6 +300,20 @@
     }
   },
   "rendererExtensions": {
+    "roomSpecular": {
+      "path": "/assets/native-v11/actual-static-room-specular.env",
+      "size": 128,
+      "samples": 64,
+      "position": [
+        0.1,
+        1.48,
+        -0.1
+      ],
+      "role": "ceramic",
+      "diffuse": "Original analytic SH retained; no extra diffuse or real-time light",
+      "source": "Actual255 static game meshes, six linear HDR directions, GGX prefilter, original RGBD PNG mip data",
+      "limits": "Static local approximation; not parallax-correct reflections, GI or final target acceptance"
+    },
     "windowPortal": {
       "apertureX": -4.47,
       "minY": 0.925,
