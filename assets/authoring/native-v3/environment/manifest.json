@@ -3,11 +3,13 @@
   "version": "3.1",
   "master": {
     "path": "assets/masters/native-v3/environment-v3.json",
-    "sizeBytes": 30134782,
-    "sha256": "3f3e13af908eb987e05a95792a59740f035637649684d2af5739f7a38bcd59fe"
+    "sizeBytes": 28670090,
+    "sha256": "514eebe5b65d4b2f6f6e01ba50da74be6d9b4c73d3d240555ef078c04e035ae9"
   },
   "sources": {
-    "src/art/backwall-material-v11.ts": "e70aba965e51cb0680fe6fb3801297b294735cbed00a28b8b8a97d4c39be992c",
+    "tools/export-v11-backwall-adoption.ts": "b499c6258c15c6b1f860ff5547ec3097c477137cec3e4e9573524c6de39e8ccb",
+    "assets/authoring/native-v11/backwall-c40-adoption.json": "4832fc29ae430b3248ed2c6f0a4ca6da46b90a9bbce4eb814779d5facdaf546a",
+    "src/art/backwall-material-v11.ts": "599be73e5a7478790b3403c4ba4c8f681ac168f743e9035825dca7ac5f20b9e9",
     "assets/authoring/native-v11/backwall-c39-materials.json": "134ad859f6a6d26d0b7e96c8381e1f969034f794567f06428d70c17b29e1d1c6",
     "tools/export-v11-backwall-materials.ts": "22f9fae67ac40ce1d8321f9fa92f84549b4bfa06e464a63e8b5590ab966e17a0",
     "tools/export-v11-backwall-c38.ts": "eea934afbb61f86e5f35c654a7979b472e92488d1940af89c4d81a5314ca27bf",
@@ -17,7 +19,7 @@
     "assets/masters/native-v11/backwall-c38/window-mid-far.json": "ddf4ef688556b0c5e11c6a4cd30290610b511a931931b211ab7cc99727e17f7d",
     "assets/masters/native-v11/backwall-c38/fixed-back-samples.json": "48c2a3063d8fd26d8e3e4e664db0e568ae7b096823ba7703b1845259930569bc",
     "assets/masters/native-v11/backwall-c38/paper-work-bays.json": "3f421671077f1271c336b351b5b28cfeb9303d8b28ba1bb37ad8194a02c0eed2",
-    "src/art/backwall-forms-v11.ts": "42f8b094612134ef9edb2de74a46d41af18ddfc315f95aeb32fd139b73559d80",
+    "src/art/backwall-forms-v11.ts": "93ad1fc43d12f23f36790050a9ffc5163b23414482bd298d6038d20e86bce5e4",
     "src/art/bright-masses-v11.ts": "0318936c52cdb1af775535eeb2014f664b56d8d29cbe08d2e93a9b58052798d3",
     "tools/bake-v11-bright-contact.py": "37e75baa06f9c27ca97ff023dc25600565761f09068c91f041c1b815b4552819",
     "assets/masters/native-v11/c29-contact/provenance.json": "7ccc00ab4fefa58c45171485f9d8664d91b714542d905fdd5ae0dd3003ccdb8e",
@@ -139,7 +141,7 @@
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "432f387c45f07b2ef9c0adb8207e0e1d44e143d64343bd8cd49b240dee72001d",
-    "tools/export-native-environment.ts": "3d8ba38d0eeb4d0645dfbc8494994f08458f9bc7604511fdb5260dfedab30619"
+    "tools/export-native-environment.ts": "f2d7790c67357c3b0692455a8dcded464470de1385451f3014327af26083216e"
   },
   "rebuild": "node --import tsx tools/export-native-environment.ts",
   "runtime": "src/world.ts imports native-environment.ts and native-view.ts; geometry.ts builds the same authored recipes. nativeGrouped/nativeMaterialIntent respect per-surface roughness while shared legacy materials remain unchanged.",

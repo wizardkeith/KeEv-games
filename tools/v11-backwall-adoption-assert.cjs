@@ -1,0 +1,3 @@
+/** Read-only verification of actual ordinary default PBR against reviewed256. */
+const assert=require('node:assert/strict'),fs=require('node:fs');
+module.exports=function(d){const m=d.world.backwallMaterial,ref=JSON.parse(fs.readFileSync('evidence/native-v11/checkpoint-39-material/actual-material-proof.json')).liveC39Identity;assert.equal(d.world.backwallForms.mode,'shape');assert.equal(d.world.backwallForms.defaultAdopted,true);assert.equal(m.mode,'values');assert.equal(m.active,true);assert.equal(m.defaultAdopted,true);assert.deepEqual(m.actual,ref.actual,'actual live PBR parameters/textures must match independently reviewed256');return true;};

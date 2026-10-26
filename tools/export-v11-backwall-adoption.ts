@@ -1,0 +1,6 @@
+/** Development adoption receipt; the reviewed C38/C39 masters stay immutable. */
+import fs from'node:fs';import{createHash}from'node:crypto';import{backwallFormIntent}from'../src/art/backwall-forms-v11';import{backwallMaterialIntent}from'../src/art/backwall-material-v11';
+if(backwallFormIntent.mode!=='shape'||!backwallMaterialIntent.active||!backwallMaterialIntent.defaultAdopted)throw Error('Expected ordinary adopted C38/C39 development default');
+const sources=['src/art/backwall-material-v11.ts','src/art/backwall-forms-v11.ts','vite.config.ts','tools/export-v11-backwall-adoption.ts'];
+const sha=(p:string)=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+fs.writeFileSync('assets/authoring/native-v11/backwall-c40-adoption.json',JSON.stringify({forms:backwallFormIntent,material:backwallMaterialIntent,reviewedCandidate:'730166bb1e7e54ae0a6f9e89a6658d899d63c64e',reviewedApplication:'061f9b0e86982020a21b6ce1b6eec161908f0204',sources:Object.fromEntries(sources.map(p=>[p,sha(p)])),originalReceipts:Object.fromEntries(['assets/masters/native-v11/backwall-c38/provenance.json','assets/authoring/native-v11/backwall-c39-materials.json'].map(p=>[p,sha(p)])),limits:'Development default only. Whole original target art and public release are not accepted.'},null,2)+'\n');

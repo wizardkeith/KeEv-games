@@ -50,20 +50,20 @@
     {
       "id": "room",
       "file": "assets/masters/native-v4/room.glb",
-      "bytes": 6065636,
-      "sha256": "707b03b6071fbb5f5062caad3394db58c715ac2a3a672150705e987f0a84c364"
+      "bytes": 6140324,
+      "sha256": "cf002c8928c567cf048bf0b773fa94610877470eea90d4abb41de7f83cde1eb0"
     },
     {
       "id": "styling-v9",
       "file": "assets/masters/native-v4/styling-v9.glb",
-      "bytes": 2912140,
-      "sha256": "fc24897052e0051274e6188a792c072a9a0d83f635d1f949117cda58d5a89cd3"
+      "bytes": 3017376,
+      "sha256": "655c94fc3f99c40b6de6b71def6fbe9ba0fa3ac30e06b921c6ec8ee41eefda17"
     },
     {
       "id": "window-canopy-v9",
       "file": "assets/masters/native-v4/window-canopy-v9.glb",
-      "bytes": 2465828,
-      "sha256": "68ac3a04e868d9d6eec0e0444e7edf764a6a0e474a7ba63b441f5c195b879a39"
+      "bytes": 2346876,
+      "sha256": "1956bb89db91fa28e9c9c4c3b962d98605df71e79a998e932488c37d130e55e1"
     },
     {
       "id": "counter",

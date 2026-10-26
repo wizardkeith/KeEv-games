@@ -1,15 +1,15 @@
-/** C39 single material/value candidate on the independently passed C38 forms.
- * Authoring only. No geometry, inventory, camera, light or shared finish edits. */
+/** C39 independently passed material values on the accepted C38 forms.
+ * V11 development default. No geometry, inventory, camera, light or shared finish edits. */
 import type{NativeSurface}from'./native-characters';
 const request=import.meta.env?.VITE_V11_BACKWALL_MATERIAL;
-export const backwallMaterialMode=request==='base'||request==='values'?request:'control';
-export const backwallMaterialActive=backwallMaterialMode==='values'&&import.meta.env?.VITE_V11_BACKWALL_FORMS==='shape';
+export const backwallMaterialMode=request==='base'||request==='control'?request:'values';
+export const backwallMaterialActive=backwallMaterialMode==='values'&&(import.meta.env?.VITE_V11_BACKWALL_FORMS===undefined||import.meta.env?.VITE_V11_BACKWALL_FORMS==='shape');
 export type BackwallMaterialScope='none'|'shelf'|'trailing'|'near'|'exterior'|'merch'|'work';
 export const backwallShelfAlbedo='/assets/native-v11/display-oak-albedo.png';
 export const backwallFarCrownRoughness=.925;
 export const backwallFarCrownPalette=['#C3D1BD','#D5DDD0']as const;
 export const backwallSkyPalette=['#E8ECDD','#DCE8E4','#CCE0E9','#BFDAE8']as const;
-export const backwallMaterialIntent={id:'v11.c39.backwall-window-material',mode:backwallMaterialMode,active:backwallMaterialActive,defaultAdopted:false,geometry:'Exact passed C38/253 positions, normals, UV, counts and camera',scope:'Back-wall shelf planes versus preserved original merchandise coatings, trailing plants, near window foliage, existing exterior and geometric sky only',shelf:{albedo:backwallShelfAlbedo,tint:'#E4CFAB',roughness:.66,tableAO:false},farCrown:{roughness:backwallFarCrownRoughness,thinTransmission:false},limits:'One values candidate, pending independent normal480px/two-oblique material gate; not whole-target acceptance or default adoption'}as const;
+export const backwallMaterialIntent={id:'v11.c39.backwall-window-material',mode:backwallMaterialMode,active:backwallMaterialActive,defaultAdopted:true,geometry:'Exact passed C38/253 positions, normals, UV, counts and camera',scope:'Back-wall shelf planes versus preserved original merchandise coatings, trailing plants, near window foliage, existing exterior and geometric sky only',shelf:{albedo:backwallShelfAlbedo,tint:'#E4CFAB',roughness:.66,tableAO:false},farCrown:{roughness:backwallFarCrownRoughness,thinTransmission:false},limits:'C39 narrow material PASS; V11 development adoption, not whole-target or public release acceptance'}as const;
 export function backwallMaterialSurfaces(parts:NativeSurface[],scope:BackwallMaterialScope):NativeSurface[]{
  if(!backwallMaterialActive)return parts;
  return parts.map(p=>{
