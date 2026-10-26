@@ -1,0 +1,10 @@
+{
+  "source": "104845d1af897902297fd759efd699bc8a7eeb38",
+  "files": {
+    "public/assets/native-v11/soft-window-specular.env": "ab2ddab4e6f5b7e64370f7ba2fb63497326a4f19b669a5ccb459cfef8e2f3258",
+    "assets/masters/native-v11/c28-window-light/provenance.json": "28ee233a4dfc4fe1acc8d2e5773592624b0a4a70d2212fa1c13884caceed5ca1",
+    "assets/masters/native-v11/c28-window-light/soft-window-specular.env": "ab2ddab4e6f5b7e64370f7ba2fb63497326a4f19b669a5ccb459cfef8e2f3258",
+    "assets/masters/native-v11/c28-window-light/linear-radiance-source.npz": "c9f9bf952be12d3e9c6594471c584d8e0cbfdcd7e5437896521697a24d3aa690"
+  },
+  "byteEqual": true
+}

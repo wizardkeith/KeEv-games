@@ -1,0 +1,10 @@
+{
+  "application": "104845d1af897902297fd759efd699bc8a7eeb38",
+  "build": 192,
+  "normalAndOrbitScreens": "Actual normal production game via same real exported QA Sandbox; no pose/state injection",
+  "fullMatrixAndHighFlow": "Prior build184 only; source-specific coverage distinguished in report",
+  "currentOrbitFlow": "Pending corrected harness result; failed prior expectations retained",
+  "artGate": "C27 composition locked; build181 material gate failed; this revised material not independently accepted",
+  "reflectionAssetSHA256": "ab2ddab4e6f5b7e64370f7ba2fb63497326a4f19b669a5ccb459cfef8e2f3258",
+  "envEqualsRendered191": true
+}
