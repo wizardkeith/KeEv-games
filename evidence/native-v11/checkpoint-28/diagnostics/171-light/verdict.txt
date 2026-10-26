@@ -1,0 +1,2 @@
+Initial local shadow trial: inherited90m depth; insufficient contact.
+Exploratory build, not final-source flow or target acceptance.

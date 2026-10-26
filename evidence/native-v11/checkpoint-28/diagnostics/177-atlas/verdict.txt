@@ -1,0 +1,2 @@
+Rejected atlas orientation: Blender V versus PNG/Web mismatch, not selected.
+Exploratory build, not final-source flow or target acceptance.
