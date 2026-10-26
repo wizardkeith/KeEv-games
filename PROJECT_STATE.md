@@ -1,6 +1,12 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T01:36:42+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T01:56:44+08:00** (Asia/Hong_Kong).
+
+## V11 C33單一花簇內肩／保留已過灰門檻的布 — 2026-10-27T01:56:44+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送`d477b2d5c3d6a275e12b3cb562131fe904a6c03d`／application`ea69496cfaccc4633161d6743ecd60fdcd255ff8`；[正常480px／雙斜角實際遊戲、100.080秒原片及來源](https://github.com/wizardkeith/KeEv-games/blob/d477b2d5c3d6a275e12b3cb562131fe904a6c03d/docs/V11_C33_FLOWER_OVERLAP_GATE_2026-10-27_zh-HK.md)。C32獨立布PASS／花FAIL；本次只改既有part15內肩以建立跨簇遮蓋，保留其他32部件／枝根、33parts／1524tri與三軸外框。C32原母檔、已過布的JSON／Blend／source、C27構圖與192反射雜湊鎖定，無新花面或材質。
+- 253tests/build/五語174keys validate/replay/asset-check、146GLB零錯警告／305保護檔；style+canopy15776tri／17styling群，4448商品底點／541原布接觸通過。build221的180runtime從application重建逐byte同；普通預設180檔與C32 control218同。真Sandbox匯入、同camera/economy/雙斜角pose/灰PBR、0pageerror／隔離Normal不變；37幀雲端原片非新全交易／Low／五語互動／實體GPU/FPS/audio/native認證。
+- **花冠與整組灰門檻待覆核，整體原圖仍未接受；不進貼圖。** main僅文件指標、未合併、PR8仍Draft，普通預設仍201、公開V17未變；無merge／Site操作／Library或LTC重試／玩家Chrome或Normal／Unity／關機。環境短暫unavailable後已恢復，無需使用者動作或權限阻塞。
 
 ## V11 C32灰模候選／等待獨立形體門檻 — 2026-10-27T01:36:42+08:00
 
