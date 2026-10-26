@@ -1,15 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T12:31:36+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T13:07:03+08:00** (Asia/Hong_Kong).
 
 
 
 
-## V11 C22 混合陳列／明暗重建進行中 — 2026-10-26T12:31:36+08:00
+## V11 C22 選定134實拍檢查點（待視覺覆核，未達標）— 2026-10-26T13:07:03+08:00
 
-- [Draft PR #8](https://github.com/wizardkeith/KeEv-games/pull/8) 最新進度 `5d251ac362d4ca269e39b8e6824e3bc08684b66d`，實作檢查點 `92e3ac399be783780f3ef06e5f144e67e4d12946`。保留 C21 已改善櫃體／平台／地板／庭景，重組 35 件既有固定樣品、文件架、下層空腔籃、中央紙品與花束、收銀工作區；修正後牆遺失原釉陶 finish。真實庫存展示採穩定群組，不改數量、經濟、路線或存檔。
-- 223 測試與 141 GLB 零錯誤警告通過；126／127／128 實拍對照支持淡化主要來自整組燈光變更，非木紋 normal。新的 cutaway 陰影開／關實拍顯示後牆過暗，**尚未採納**；正在作一次有界的定向反射／收銀暖光比較，不成立便撤回，不會冒稱目標品質。
-- [目前實拍與來源／限制](https://github.com/wizardkeith/KeEv-games/blob/5d251ac362d4ca269e39b8e6824e3bc08684b66d/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md)。尚未宣稱 C22 新完整交易／裝置驗證。**美術仍未達原圖，工作繼續；PR8 未合併／未發佈，公開 V17 不變。** main 本次只更新進度指標。
+- [Draft PR #8](https://github.com/wizardkeith/KeEv-games/pull/8) 已推送／讀回 `c212940714fc433814d08009cdff930533b4d0f2`；實際 application `e13ef125f50ce8603a9c1104cc4344f17afc898d`，src tree `389aff0c1d6248f52a463cb844a4cf1096c15aaa`。保留 C21 櫃體／平台／前景翼櫃／窄地板／庭景，整合混合工作群組、35 既有樣品、文件架及下層空腔收納、穩定紙品展示、後架釉陶 finish、中度木色／收銀暖光與439固定網格接觸AO。132／133偏暗天花試作已撤回；普通遊戲不建立該網格。
+- **在選定 e13e 提交後重新檢查**：223 tests／build／validate／replay／asset-check、141 GLB零錯誤警告、305受保護檔案零變更、34 native重建／163實際payload byte parity；五語15案例／75面板切換通過。實際199.280秒及231.320秒未剪正常遊戲：真買入／放架／一次結算／A交接／離店返回／重載，零頁面錯誤、隔離Normal基線不變。原片146–148秒清楚見18件／+¥8,400／未扣人工租金；先前04取樣過遲不作像素證據，有界同來源probe也確認浮窗，沒有因此改動會計或遊戲。
+- [唯一目標／正常 BEFORE–AFTER／原片／來源與完整限制](https://github.com/wizardkeith/KeEv-games/blob/c212940714fc433814d08009cdff930533b4d0f2/docs/V11_C22_FULL_SCENE_CHECKPOINT_2026-10-26_zh-HK.md)。**美術仍未達原圖**，尤其混合陳列自然度、光影／庭景深度與材質豐富度；下一步按正常全景覆核繼續高影響重建，不以技術pass當驗收。無新B完整交易／hidden-tab／物理GPU／FPS／audio／native認證。PR8仍Draft／未合併，公開V17未變，沒有save／deploy／新release archive或Library重試；main本次只有進度指標，未合併任何功能。
 
 ## V11 C21 全店重建／實拍127（待視覺覆核，未合併）— 2026-10-26T12:00:07+08:00
 
