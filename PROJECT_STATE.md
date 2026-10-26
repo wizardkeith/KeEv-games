@@ -1,9 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T12:00:07+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T12:31:36+08:00** (Asia/Hong_Kong).
 
 
 
+
+## V11 C22 混合陳列／明暗重建進行中 — 2026-10-26T12:31:36+08:00
+
+- [Draft PR #8](https://github.com/wizardkeith/KeEv-games/pull/8) 最新進度 `5d251ac362d4ca269e39b8e6824e3bc08684b66d`，實作檢查點 `92e3ac399be783780f3ef06e5f144e67e4d12946`。保留 C21 已改善櫃體／平台／地板／庭景，重組 35 件既有固定樣品、文件架、下層空腔籃、中央紙品與花束、收銀工作區；修正後牆遺失原釉陶 finish。真實庫存展示採穩定群組，不改數量、經濟、路線或存檔。
+- 223 測試與 141 GLB 零錯誤警告通過；126／127／128 實拍對照支持淡化主要來自整組燈光變更，非木紋 normal。新的 cutaway 陰影開／關實拍顯示後牆過暗，**尚未採納**；正在作一次有界的定向反射／收銀暖光比較，不成立便撤回，不會冒稱目標品質。
+- [目前實拍與來源／限制](https://github.com/wizardkeith/KeEv-games/blob/5d251ac362d4ca269e39b8e6824e3bc08684b66d/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md)。尚未宣稱 C22 新完整交易／裝置驗證。**美術仍未達原圖，工作繼續；PR8 未合併／未發佈，公開 V17 不變。** main 本次只更新進度指標。
 
 ## V11 C21 全店重建／實拍127（待視覺覆核，未合併）— 2026-10-26T12:00:07+08:00
 
