@@ -20,14 +20,14 @@
     {
       "id": "room",
       "file": "assets/masters/native-v4/room.glb",
-      "bytes": 6065288,
-      "sha256": "20f0e0c4b07cd0534ad824efe8c4f5270c053a67e9f2665d499b3d6a0644455d"
+      "bytes": 6065636,
+      "sha256": "707b03b6071fbb5f5062caad3394db58c715ac2a3a672150705e987f0a84c364"
     },
     {
       "id": "styling-v9",
       "file": "assets/masters/native-v4/styling-v9.glb",
       "bytes": 2716152,
-      "sha256": "474cfd8621db2d2e0eed3e0b7aae8aa8eaf5b16b0645c67c12ac61c07b152f5d"
+      "sha256": "df69c308d8bab33bcbe1d8d65c07662883de138b0c0e0a0cceafa7878e35ecdb"
     },
     {
       "id": "window-canopy-v9",

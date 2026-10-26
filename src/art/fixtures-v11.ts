@@ -108,6 +108,7 @@ function zScale(p:NativeSurface,center:number,scale:number,move=0):NativeMesh{co
 export function buildV11Room(door:Parameters<typeof buildV10Room>[0]):NativeSurface[]{
  const out:NativeSurface[]=[];
  for(const original of buildV10Room(door)){if(original.role==='wood'&&original.roughness===.83)continue;const p=original;const b=extent(p),near=(v:number,t:number)=>Math.abs(v-t)<.002;
+  if(p.role==='wood'&&near(b.center[0],-.8)&&near(b.center[2],2.85)&&near(b.size[0],5.2)&&near(b.size[1],.105)){out.push({...p,color:'#B18D63'});continue;}
   if(near(b.center[0],-4.5)&&near(b.size[1],1.9)&&near(b.size[2],1.8)){out.push(zScale(p,b.center[2],1.2/1.8,Math.sign(b.center[2])*.30));continue;}
   if(near(b.center[0],-4.4)&&near(b.size[1],1.94)&&near(b.size[2],.065))continue;
   if(near(b.center[0],-4.4)&&near(b.size[2],3.1)){out.push(zScale(p,0,4.2/3.1));continue;}

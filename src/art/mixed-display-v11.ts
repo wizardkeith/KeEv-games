@@ -36,6 +36,6 @@ export function mixedWorkProps():NativeSurface[]{
 /** Keep C20 flowers/ivy/model core intact. Remove only the retired six closed
  * storage boxes and use a coherent paper/white palette for the mixed assembly. */
 export function composeMixedStyling(core:NativeSurface[]):NativeSurface[]{
- const parts=[...core.filter(p=>!(p.role==='paper'&&['#C3AE89','#B69A73'].includes(p.color))),...mixedWorkProps()].map(p=>p.role==='paint'&&['#FFF8E8','#F8EEDD'].includes(p.color)?{...p,color:'#FFF5E5'}:p);
+ const parts=[...core.filter(p=>!(p.role==='paper'&&['#C3AE89','#B69A73'].includes(p.color))),...mixedWorkProps()].map(p=>p.role==='wood'&&p.color==='#99714E'?{...p,color:'#B18D63'}:p.role==='paint'&&['#FFF8E8','#F8EEDD'].includes(p.color)?{...p,color:'#FFF5E5'}:p);
  return nativeGrouped(parts).map(g=>({shape:'mesh',at:[0,0,0],geometry:Object.fromEntries(Object.entries(g.geometry).map(([k,v])=>[k,v.map((n:number)=>n===0?0:n)])) as unknown as ReturnType<typeof nativeSurfaceGeometry>,color:g.color,role:g.role,alpha:g.alpha,roughness:g.roughness,...(g.finish?{finish:g.finish}:{}),...(g.baseColorTexture?{baseColorTexture:g.baseColorTexture}:{})}));
 }

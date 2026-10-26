@@ -1,3 +1,6 @@
+/** ARCHIVED C22 EXPERIMENT: ordinary game does not call this installer.
+ * Actual131/132/133 images did not show useful window hierarchy; retained for
+ * reproducibility/native research only, not an adopted visual improvement. */
 /** A cutaway room still needs its ceiling to stop sunlight leaking over every
  * wall. This opaque plane casts ONLY into the sun's explicit shadow render list;
  * camera layer0 means it never covers the playable cutaway. Actual WebGL A/B,

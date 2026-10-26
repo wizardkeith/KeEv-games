@@ -48,12 +48,12 @@ export function nativeCameraFrame(aspect:number,fov=.8,view:NativeView='shop'){
 export const nativeLighting={
  id:'native.light.v11-slice',
  key:{color:'#FFE0B7',intensity:3.30,direction:[.88,-.48,.25] as const,position:[-8,8,-2] as const},
- fill:{color:'#DFE9EF',ground:'#B6A38C',intensity:.36},
+ fill:{color:'#DFE9EF',ground:'#B6A38C',intensity:.36,direction:[.15,.75,-.55] as const},
  faceFill:{color:'#FFF0DC',ground:'#B9B6B0',intensity:.43,direction:[.12,.35,-1] as const,parts:['head','eye-left','eye-right','eyelid-left','eyelid-right','brow-left','brow-right','mouth'] as readonly string[],roles:['skin','ink'] as readonly string[]},
  shadow:{size:2048,normalBias:.010,bias:.0007,darkness:.16,lightSizeUVRatio:.040},
  exteriorFill:{color:'#D0E1E5',ground:'#94A88F',intensity:.56},
  // Bounded art-directed bounce proxies; point/spot candela are not directional lux.
- practicals:[{id:'cashier',position:[3.05,2.75,-1.05],color:'#FFD5A7',intensity:12.0,angle:1.52},{id:'central',position:[.1,2.615,-.1],color:'#FFE0B5',intensity:9.0,angle:1.62}] as const,
+ practicals:[{id:'cashier',position:[3.05,2.75,-1.05],color:'#FFD5A7',intensity:20.0,angle:1.52},{id:'central',position:[.1,2.615,-.1],color:'#FFE0B5',intensity:9.0,angle:1.62}] as const,
  exposure:1,
  note:'C22 restrained global fill, service-dock warm focal bounce and cool layered exterior, original room IBL, soft contact-hardening shadows and actual floor AO. ACES exposure1/contrast1.06. No bloom or dynamic reflection. Face fill remains restricted to skin/ink. Actual game render, not metadata or tests, determines visual fidelity.',
 } as const;
