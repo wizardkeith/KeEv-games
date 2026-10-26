@@ -1,0 +1,32 @@
+{
+  "source": "3530bc4496798b075d1d13f2dfdb34e3e8c47e0d",
+  "build": "immutable125",
+  "before": "evidence/native-v11/checkpoint-20/plant-after123/after-normal-game.png",
+  "target": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+  "method": "Actual production runnable WebGL game, ordinary real Sandbox buy8/place3/settings/camera/reload; no injected pose, stock, sale or replacement scene image",
+  "checks": {
+    "tests": 218,
+    "GLBs": 141,
+    "GLBerrors": 0,
+    "GLBwarnings": 0,
+    "protectedFiles": 305
+  },
+  "limits": "No sale claimed by this capture. Cloud SwiftShader, not physical GPU/FPS/audio/native or target art acceptance. Game still substantially off target; continue macro material/light comparison. Current original room-specular asset is the documented C17 scene approximation, not recaptured from C21.",
+  "files": {
+    "replay.log": "67beb9a30e2f137d3025faa962d635b85a8275a326918698204bc5e1becbf447",
+    "locomotion-after.json": "07fc9e19f75a31899a7bd247ec03d0aece282fb40c5915b526dc62a41d0d8253",
+    "validate.log": "d8cf77a1e38e0b04929bd0774b8f25dee39e9ff7717ea0b8ef7fe1e5a477369b",
+    "glb.json": "b1fcdf1b3c1da236da3e4a880f1a7d692c73523edb4c0ec86696077d2236ce6e",
+    "build.log": "8603deff4bfc789196bc5a5e9db66bbd00dfb321993b622807ffa6ae6f95101f",
+    "tests.log": "3e45b1d25c490ef3595d7e471ff14663f21d499b6ee7516e1bf2c57cadcb7c3c",
+    "assets.log": "8a971d70e150e6f1ec7a252b279678f8bebc7997007e4556acf4094f584d448f",
+    "preservation.json": "f88a4773755d6bdf0a2dd3b488a7346b5163d8516bc1558f1d3b359408d19b96",
+    "macro-scene125/after-normal-game.png": "f0f88782c2b6f53487e610e900b17b592eb88ff642fbb6d56d9910797fb8eb93",
+    "macro-scene125/after-counter-game.png": "f18cd50c05c4c761b6cd9d732c75ffcffecf712098cfe0b26b94d034091e867b",
+    "macro-scene125/gameplay-uncut.webm": "9bbd29580234eee6cf15b7bfddcf9371aed90d9b53597312a007dd1909d092eb",
+    "macro-scene125/after-reload-game.png": "6daa8a62185e1d7d8efd73c8b623aa104b9dd9e2bb10cadda20f5c85b3d4a566",
+    "macro-scene125/results.json": "0e9e7a275e404616ef15490c17fbd3b88969bc8185b9ecabd10ed03133f739e5",
+    "macro-scene125/recording-provenance.json": "10d3ebbed8daab335386ac432b84cadfb8c79df6facfa900dd3113bd32d45597",
+    "macro-scene125/after-panorama-game.png": "506067c830f8938e434604fc85ca6bb4313e6f9370a98b346e83992d80116e4d"
+  }
+}

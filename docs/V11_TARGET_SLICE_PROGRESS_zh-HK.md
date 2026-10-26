@@ -1,3 +1,11 @@
+## C21：櫃檯—中央陳列—入口的大型模型重建（仍在進行）
+
+- 實作 `3530bc4496798b075d1d13f2dfdb34e3e8c47e0d`，實際遊戲 immutable125：三款不同桌／抽屜／矮櫃輪廓、分離高低展示台、固定非庫存紙品角、較寬前景櫃檯與工作夾板、36行窄木板真實錯縫／倒角、透過實際門口幾何裁切的三維庭景。原目標方向未變，木板尺寸屬作者推定，並非目標核准量度。
+- 庫存上限8與真實數量不變，所有SKU／0–9數量／三桌存留模型prefix、支撐及分離測試；櫃檯左翼寬度與避障邊界一併更新，收銀／手部接觸點、高度、路線算法、rig及相機操作不變。房間／家具依實際PBR材質編譯網格，保留UV／finish；另設三桌各<5000tri與<=16材質群限制，不靠放寬原160固定場景預算。
+- 218測試、build／validate／replay／asset-check、141 GLB零錯誤／警告、305受保護檔案檢查通過。首次全套檢查發現未重建的共用source hash及JSON的−0序列化差異，已完整重建及正規化後重跑通過；未把初次失敗列作通過。
+- [正常遊戲](../evidence/native-v11/checkpoint-21/macro-scene125/after-normal-game.png)、[全景](../evidence/native-v11/checkpoint-21/macro-scene125/after-panorama-game.png)、[櫃檯](../evidence/native-v11/checkpoint-21/macro-scene125/after-counter-game.png)、[未剪接操作](../evidence/native-v11/checkpoint-21/macro-scene125/gameplay-uncut.webm)、[來源與雜湊](../evidence/native-v11/checkpoint-21/provenance.json)：真實Sandbox買8／放3架、三種正常UI鏡頭、重載保持；沒有售出或新成交宣稱，隔離Normal基線未變。
+- **未達目標圖**：房間仍偏均勻／暗、角色及陳列在全景中的比例／質感、混合物件豐富度與自然光層次仍有差距。繼續真正遊戲中的大型光影／材質對照，不能以局部改進、218測試或素材檢視取代原圖驗收。雲端SwiftShader，非實體GPU／FPS／音訊／原生驗證。公開V17不變，PR8仍Draft／未合併，無發佈。
+
 # V11 原目標重建切片 — 進行中，未驗收
 
 使用 Keith 2026-10-25 再確認的唯一原圖：`docs/codex-v4/reference/Approved_Visual_Target_Misaki.png`，1536×1024，SHA256 `9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114`。Library 原樣副本 `libfile_df47ac9baf04819182f496bbb7ff40b6`。已實際讀取原圖與 V17 完整遊戲截圖；原圖是目標店景／人物合成圖，不是已達成的遊戲畫面。Bible §28：真正3D、35–45°、約3.5–4頭身、柔和anime toon人物／soft stylized PBR環境。
