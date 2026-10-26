@@ -3,8 +3,8 @@
   "version": "3.1",
   "master": {
     "path": "assets/masters/native-v3/environment-v3.json",
-    "sizeBytes": 30273417,
-    "sha256": "213b26083c6398c164626f9cc278f85422a5bd99c5321f78a22b0ca44e53f4cf"
+    "sizeBytes": 30133415,
+    "sha256": "0a2234f30e79b578f3ecb89f19e2f43c318718fc7dcb58a676758f54885c0f0f"
   },
   "sources": {
     "src/art/bright-masses-v11.ts": "0318936c52cdb1af775535eeb2014f664b56d8d29cbe08d2e93a9b58052798d3",

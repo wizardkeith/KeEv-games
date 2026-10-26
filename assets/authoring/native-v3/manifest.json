@@ -70,7 +70,7 @@
     "src/presentation/native-feet.ts": "440404e1bceabdb2bf8d8f9f699d030c40e4815f7b0e904ea15a3f6a180bdef3",
     "src/presentation/native-delivery.ts": "92ab544352360caa1463f62f0f93e5d22f5d8a09b791aec6aa93057c8ab06ab6",
     "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
-    "src/world.ts": "0fce80f3e2f4242973639fb1b508f5baf2ea0b6d1df5bdd75fc1f7912c2d95fa",
+    "src/world.ts": "8885b168344f262a8d3813afe96d021099ed39c6e423244f4e0f95592ab414b8",
     "src/presentation/native-routes.ts": "fbbaee9df6cfed3fb0e992198e394860c7399ee75baf5d7997bf0485fe3763a3",
     "src/presentation/native-scene.ts": "bed32138150cdbf9e5441a3af30b190d0b34f7ffe70e3d4f6ff6b43ddd04ae70",
     "tools/export-native-characters.ts": "326569d5262fd8d4ae8f91734674efe42616e4098736b15200b220ba37fab861",
