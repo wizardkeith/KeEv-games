@@ -1,6 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T02:48:24+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T04:10:38+08:00** (Asia/Hong_Kong).
+
+## V11 C36預設採用／瓶口修正與最終來源檢查完成 — 2026-10-27T04:10:38+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)推送`7646c403aae9ec14c98c630a75d1674e36d953c2`／application`5e826991e2125cf2722ecd71590918c73567e0e8`；[最終普通build232的實際全景／局部、349.920秒High、stock／Low及修正證據](https://github.com/wizardkeith/KeEv-games/blob/7646c403aae9ec14c98c630a75d1674e36d953c2/docs/V11_C36_NECK_RESOLUTION_ADOPTION_2026-10-27_zh-HK.md)。C35標準已採為V11開發預設；初次瓶口阻塞已按後續限定指示只改part11/22下段分叉，最大瓶口半徑.05020/.05078m通過原<.069斷言，其餘31部件逐byte同、原C33母檔保留，C32布／C35圖頁／C27構圖／192反射不變。**259/259通過，採用checkpoint待獨立覆核，整體原圖仍未接受；不是release接受。**
+- 最終232無authoring旗標，182runtime／486tracked資產重建byte同；146GLB零錯警告／305保護檔、15776tri／17群與承托保留。真UI0→3→8→reload8→2→售罄0→reload0逐項cash/bookCost核對，High真結算／接袋／staff返回／顧客exit／reload，Low/ReduceMotion實際下載C35atlas SHA及買入上架通過，0pageerror／fresh隔離Normal不變。非實體GPU/FPS／逐幀平滑／audio/native驗收。下一全景差距為後牆—窗側大形／混合陳列／室外深度，不再磨已過白花布面；尚未實作下一slice。main僅文件指標，未合併／PR8仍Draft／公開V17不變，無Site／Library或LTC重試／玩家Chrome或Normal／Unity／關機，無本輪未解軟件阻塞。
 
 ## V11 C35最小暖白值面修正／待材質覆核 — 2026-10-27T02:48:24+08:00
 
