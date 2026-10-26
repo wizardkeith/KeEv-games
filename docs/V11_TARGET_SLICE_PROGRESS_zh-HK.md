@@ -6,6 +6,18 @@
 
 
 
+## 第二十個 checkpoint — 完整植物部件重建，整店仍被否決
+
+**runtime7bba600761f6998d76785ccd6bf3be252dde1bf2，default123；主要重建dadd2f6。** 中空圓潤編織罩／12立篾／3編織帶／捲邊盆口、原始PBR纖維；盆底在原anchor上方1mm，枝根實際入原泥土。地面葉片改閉合80tri連續曲面／14輪廓點，28葉接在真正曲枝ring centre並向外展開。七windpivots、葉數／尺寸／枝高不變；緊湊枝幹把半徑維持0.3516≤舊0.3583，沒有放大入客人路徑。原窗外canopy／固定dressing完整hash相同，人物／hair／clothes／furniture／camera不改。
+
+[118舊正常遊戲](../evidence/native-v11/checkpoint-19/vase-hierarchy118/after-normal-game.png)／[123新正常遊戲](../evidence/native-v11/checkpoint-20/plant-after123/after-normal-game.png)／[新櫃台實拍](../evidence/native-v11/checkpoint-20/plant-after123/after-counter-game.png)，普通UI買8vase/pencil/tray/place3/reload；三camera與cash/stock/shelves exact，0pageerror／隔離Normal未變。119只是早期盆／葉曲面prototype，未冒稱final枝接合。**213tests/build/validate/replay/assets，140GLB零error/warning，305protected/history**；原139GLB byte不變，新增一個可重用固定盆底GLB，完整JSON仍保存七葉接點，不假稱GLB帶動畫。原158part<160／base4groups／2376tri<2400；初次側壁winding失敗保存，修正mesh並加directed-edge檢查，沒有放寬法線要求。[完整來源／byte重建／限制](../evidence/native-v11/checkpoint-20/provenance.json)。
+
+[269.800秒未剪真正營業122](../evidence/native-v11/checkpoint-20/normal-flow122/gameplay-uncut.webm)／[可讀18件＋8400批次毛利](../evidence/native-v11/checkpoint-20/normal-flow122/04-actual-margin-in-game.png)：271.296秒workflow，真買入／放架／招呼／一次settlement／A接觸交袋／毛利（未扣人工租金）／A離開／員工返位／reload，0pageerror／隔離Normal不變。**source122/dadd2f6；final123只加捲盆口與枝根入土，不冒稱重跑123整段。** 雲端SwiftShader，不能拿這個時間作實體GPU/FPS或流暢度驗收。
+
+**Keith於2026-10-26 02:48:51UTC再次明確否決整體距離；原圖仍是唯一target。這些局部改進並非達標。** 最大差距：三張相似桌＋長條riser／分區同款排列、空面多；長而寬的深木條與光滑色塊、入口大片白／窗外平、室內均勻棕色；人物／產品／傢俬仍缺原圖的柔和豐富度。
+
+下一個是**一個完整counter→centraldisplay→window/exterior重建slice**：按原圖重做窄木板方向／交錯接縫、不同傢俬與分層混合展示量體（真saleable stock＋明確noninventory fixtures），重建門外真正3D綠化／地面深度。保留function/navigation、rig、camera操作、角色identity及已改善scale/support/celadon/hair；先比較大形、密度與明暗，不再讓微葉／杯口／weave代替全景。無story/shop/set/economy擴張，無archive/merge/deploy/Libraryretry/userChrome/Normalplayer/Unity/shutdown；最終art／physicalGPU/FPS/audio/native gate仍OPEN。
+
 ## 第十九個 checkpoint — 真實商品支承面／穩定高低瓶組，仍未達目標
 
 **runtimeb20420f1163c2a64575c20dca9b0585b973f0cb4／default118。** 單杯／單瓶比較揭露舊猜前後排高度會把杯底放入木riser、瓶底穿runner。改為讀真正fixture水平wood/cloth三角面，在商品底面footprint下求支承高度，再保留既有stack高度；排除paper價卡／metal桿，不碰經濟資料。只在stock mesh重建時算、三fixture cache，不是per-frame。維持1mm間隙；[初次失敗原樣](../evidence/native-v11/checkpoint-19/EXCLUDED-initial-support-failure.log)，沒有放寬閾值。

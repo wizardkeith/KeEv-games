@@ -1,0 +1,36 @@
+✖ floor blade is a finite closed curved surface with correct two-sided outward normals and preserved outline scale (9.00557ms)
+✔ woven cover is hollow, planted at ground and bounded, while all seven wind pivots and accepted canopy/dressing are exact (104.321589ms)
+✔ V11 painted facial features attach to actual sculpt while preserving contact rig (232.143532ms)
+✔ V11 garden is batched and plant retains seven articulated leaf attachments (12.709089ms)
+✔ exterior portal preserves real window rays across allowed orbit angles and rejects cutaway spill (2.089223ms)
+✔ atmospheric geometry fits within the original whole fixed-scene authoring budget (201.970714ms)
+✔ distant roof planes intersect the actual default window rays and animated crowns keep local tree pivots (12.000103ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 6
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 489.00413
+
+✖ failing tests:
+
+test at tests/v11-planter-rebuild.test.ts:1:640
+✖ floor blade is a finite closed curved surface with correct two-sided outward normals and preserved outline scale (9.00557ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(g.normals[10*3+2]<-.8&&g.normals[31*3+2]>.8)
+  
+      at TestContext.<anonymous> (/workspace/game-v10-art-life/tests/v11-planter-rebuild.test.ts:2:724)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
