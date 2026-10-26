@@ -1,0 +1,9 @@
+{
+  "application": "85ff32d64b127b133e6542344e27be225fa4fb0b",
+  "build": 184,
+  "highFlow": "contact/settlement/margin observed; servedExitAndStaffReturn=false, closure not verified",
+  "artGate": "Independent build181 material gate FAILS; tests do not certify target fidelity",
+  "normalScreens": "Actual local production game through real UI, no pose/state injection",
+  "lowMatrix": "15cases/75switches",
+  "physicalGPUFPSAudioNative": false
+}
