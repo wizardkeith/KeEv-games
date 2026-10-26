@@ -13,7 +13,7 @@ export function installRoomSpecularAuthoring(scene:Scene){
   const size=Number(import.meta.env.VITE_V11_ROOM_PROBE_SIZE??128),samples=size===128?64:16;if(size!==64&&size!==128)throw Error('Bounded64/128 room-probe resolution');
   const reflection=new ReflectionProbe('authoring.actual-static-room',size,scene,true,true,true);reflection.position.set(.10,1.48,-.10);reflection.refreshRate=0;
   // Exclude dynamic actors, carried props, hinged door, FX and real stock roots.
-  reflection.renderList=scene.meshes.filter(m=>m.isEnabled()&&['room.modular.','room.styling.v9.','fixture.shop-counter.w1_1.','back.display.curated.v10.','display.1.material','display.2.material','display.3.material','plant.original.','native.window.'].some(p=>m.name.startsWith(p))&&!m.name.includes('actual-stock-batch'));
+  reflection.renderList=scene.meshes.filter(m=>m.isEnabled()&&['room.modular.','room.styling.v9.','fixture.shop-counter.w1_1.','back.display.curated.v10.','display.1.material','display.2.material','display.3.material','plant.original.','native.window.','native.entry.'].some(p=>m.name.startsWith(p))&&!m.name.includes('actual-stock-batch'));
   const meshes=reflection.renderList.map(m=>m.name),materials=[...new Set(reflection.renderList.map(m=>m.material).filter(Boolean))]as PBRMaterial[];
   const clip=materials.map(m=>[m.clipPlane,m.clipPlane2,m.clipPlane3,m.clipPlane4]as const);
   const targets=scene.customRenderTargets,index=targets.indexOf(reflection.cubeTexture);if(index>=0)targets.splice(index,1);

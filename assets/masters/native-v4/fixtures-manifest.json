@@ -6,6 +6,12 @@
   "uv": "nativeSurfaceGeometry metre UV; KHR_texture_transform for floor/cloth; embedded original V9 colour/normal maps; original actual-geometry Cycles floor contact AO in UV2; no dynamic objects baked",
   "assets": [
     {
+      "id": "entry-garden-v11",
+      "file": "assets/masters/native-v4/entry-garden-v11.glb",
+      "bytes": 2496936,
+      "sha256": "0399059afd67d4340b6ad5b79f72dc4b918db7909f07f9bb0176599bbd629de7"
+    },
+    {
       "id": "planter-base-v11",
       "file": "assets/masters/native-v4/planter-base-v11.glb",
       "bytes": 185224,
@@ -14,8 +20,8 @@
     {
       "id": "room",
       "file": "assets/masters/native-v4/room.glb",
-      "bytes": 5940208,
-      "sha256": "f990a07054209fac82239e058000bdeee3ad9ec09c742d53aecbd90e34be49f8"
+      "bytes": 6055692,
+      "sha256": "dbea6763aefbe3c706a2b71ec20fe6c6f9d2c7c858352f67359afc154457c41f"
     },
     {
       "id": "styling-v9",
@@ -32,26 +38,26 @@
     {
       "id": "counter",
       "file": "assets/masters/native-v4/counter.glb",
-      "bytes": 2305520,
-      "sha256": "d6707dc97f9bf844598eb24726bd9404aab14fda272f883b87e0a94f298f0420"
+      "bytes": 2349160,
+      "sha256": "844a6a56ae0f9115521c1e3ee94b7198cd8e1514cc34fc9fb47b766d20a6c6ca"
     },
     {
       "id": "display-1",
       "file": "assets/masters/native-v4/display-1.glb",
-      "bytes": 2284156,
-      "sha256": "6c7d624336986c05ae34e76a4fea93394884f4922d9e6d3876d3061d03a39b36"
+      "bytes": 4842064,
+      "sha256": "612cf3a34b6965c08553192231809d547f419a79d34c01348dae32e883ff125c"
     },
     {
       "id": "display-2",
       "file": "assets/masters/native-v4/display-2.glb",
-      "bytes": 2284176,
-      "sha256": "f04be98d58d7c4872eb6c9ba488d964a98bcc63913e3ef3b80fe9b7238f14d68"
+      "bytes": 2348968,
+      "sha256": "51c0edea957cc88c71df89dc3a49532123ec600af9005b0641fa500a6e41d046"
     },
     {
       "id": "display-3",
       "file": "assets/masters/native-v4/display-3.glb",
-      "bytes": 2284156,
-      "sha256": "ed226343a841825b17695a84e367188a70176ccac8ccbfa8376b8460aa9711a8"
+      "bytes": 4863036,
+      "sha256": "bc6dadf6e58a41bf0c37b613d20461163fd2910d6943c6d7980a1b5f132bad15"
     },
     {
       "id": "product-off.notebook",

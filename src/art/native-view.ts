@@ -15,7 +15,7 @@ export const nativeViewContract={
   {id:'display.1',min:[-3,.08,-2.10] as Point,max:[-1,1.70,-.90] as Point},
   {id:'display.2',min:[-.9,.08,-.70] as Point,max:[1.1,1.70,.50] as Point},
   {id:'display.3',min:[-3,.08,.50] as Point,max:[-1,1.70,1.70] as Point},
-  {id:'counter-and-staff',min:[.80,.08,-2.01] as Point,max:[3.58,1.78,-.35] as Point},
+  {id:'counter-and-staff',min:[.46,.08,-2.01] as Point,max:[3.58,1.78,-.35] as Point},
   {id:'doorway',min:[2.21,.08,3.08] as Point,max:[3.89,2.71,3.36] as Point},
   {id:'entry-visitor',min:[2.68,.08,2.55] as Point,max:[4.60,1.67,4.42] as Point},
   {id:'service-visitor',min:[3.00,.08,-1.04] as Point,max:[3.82,1.67,-.25] as Point},

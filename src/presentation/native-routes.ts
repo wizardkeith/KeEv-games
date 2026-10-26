@@ -55,7 +55,7 @@ export const CUSTOMER_OBSTACLES=Object.freeze([
  {id:'display.1',x:-2,z:-1.5,halfX:.95,halfZ:.55},
  {id:'display.2',x:.1,z:-.1,halfX:.95,halfZ:.55},
  {id:'display.3',x:-2,z:1.1,halfX:.95,halfZ:.55},
- {id:'counter',x:2.185,z:-1.5,halfX:1.365,halfZ:.46},
+ {id:'counter',x:2.015,z:-1.5,halfX:1.535,halfZ:.46},
  // Low cabinet / back shelves have the same plan silhouette.
  {id:'back.display',x:-.8,z:2.85,halfX:2.6,halfZ:.315},
 ]);

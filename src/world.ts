@@ -1,3 +1,4 @@
+import {entryGardenRecipe,entryPortalPlanes} from './art/entry-garden-v11';
 import {useAuthoredORM} from './art/orm-channels-v11';
 import {RawTexture} from '@babylonjs/core/Materials/Textures/rawTexture';
 import {surfaceFinishSpec,type SurfaceFinish} from './art/surface-finish-v11';
@@ -85,7 +86,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  function model(name:string,recipe:NativeSurface[],parent?:TransformNode,slot?:number,cast=true){const root=new TransformNode(name,scene);if(parent)root.parent=parent;for(const [i,g] of nativeGrouped(recipe).entries()){const mesh=new Mesh(`${name}.material${i}`,scene);const data=new VertexData();data.positions=g.geometry.positions;data.normals=g.geometry.normals;data.indices=g.geometry.indices;data.uvs=g.geometry.uvs??null;data.tangents=g.geometry.tangents??null;if(g.role==='wood'&&g.roughness===.83)data.uvs2=floorContactUV(g.geometry.positions);data.applyToMesh(mesh);mesh.sideOrientation=Material.CounterClockWiseSideOrientation;mesh.material=material(g.color,g.alpha,g.role,g.roughness,g.materialId,g.baseColorTexture,g.finish);mesh.parent=root;mesh.receiveShadows=true;mesh.isPickable=slot!==undefined;mesh.metadata={materialRole:g.role,authoredColor:g.color,...(slot!==undefined?{slot}:{})};if(cast&&g.alpha===1)shadow.addShadowCaster(mesh);}return root;}
  // All surfaces are actual geometry with reusable authoring recipes; no backdrop illusion.
  model('room.modular',nativeRoomRecipe(),undefined,undefined,false);
- const roomMeshes=scene.meshes.filter(m=>m.name.startsWith('room.'));for(const m of roomMeshes){m.receiveShadows=true;const material=m.material as PBRMaterial;if(material.alpha===1&&(m.metadata?.materialRole==='paint'||m.metadata?.materialRole==='wood'&&!['#C2A481','#B99A76','#C49666','#B88B5C'].includes(m.metadata?.authoredColor)))shadow.addShadowCaster(m);}
+ const roomMeshes=scene.meshes.filter(m=>m.name.startsWith('room.'));for(const m of roomMeshes){m.receiveShadows=true;const material=m.material as PBRMaterial;if(material.alpha===1&&(m.metadata?.materialRole==='paint'||m.metadata?.materialRole==='wood'&&material.roughness!==.83))shadow.addShadowCaster(m);}
  model('room.styling.v9',nativeStylingRecipe());
  const counter=model('fixture.shop-counter.w1_1',nativeCounterRecipe());counter.position.set(...layoutData.counter.position as [number,number,number]);
  const focus=model('day1.counter.welcome-card',counterFocusRecipe());focus.position.set(2.55,1.111,-1.76);
@@ -96,12 +97,17 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  for(const [i,[x,z,scale]] of [[-3.9,2.6,1.15],[-3.95,-2.7,1.4],[1.2,2.95,.52],[4.10,2.50,1.45]].entries())plant(`plant.original.${i}`,x,scale===.52?1.5235:artDirection.fixtureBaseY,z,scale);
  const exteriorData=[...exteriorRecipe(),...nativeWindowCanopy(),...farSkyRecipe()],exterior=model('native.window.exterior',exteriorData.filter(p=>p.role!=='leaf'),undefined,undefined,false);
  for(const [i,p] of exteriorData.filter(p=>p.role==='leaf').entries()){const node=model(`native.window.foliage.${i}`,[{...p,at:[0,0,0]}],exterior,undefined,true);node.position.set(...p.at);leafNodes.push(node);}
- const exteriorFill=new HemisphericLight('cool exterior sky',new Vector3(-1,.8,0),scene);exteriorFill.diffuse=Color3.FromArray(linearColor(nativeLighting.exteriorFill.color));exteriorFill.groundColor=Color3.FromArray(linearColor(nativeLighting.exteriorFill.ground));exteriorFill.intensity=nativeLighting.exteriorFill.intensity;exteriorFill.includedOnlyMeshes=exterior.getChildMeshes();
+ const entryGarden=model('native.entry.garden',entryGardenRecipe(),undefined,undefined,false);
+ const outsideMeshes=[...exterior.getChildMeshes(),...entryGarden.getChildMeshes()];
+ const exteriorFill=new HemisphericLight('cool exterior sky',new Vector3(-1,.8,0),scene);exteriorFill.diffuse=Color3.FromArray(linearColor(nativeLighting.exteriorFill.color));exteriorFill.groundColor=Color3.FromArray(linearColor(nativeLighting.exteriorFill.ground));exteriorFill.intensity=nativeLighting.exteriorFill.intensity;exteriorFill.includedOnlyMeshes=outsideMeshes;
  // A geometric portal gives the outside vignette a real distant sky layer
  // without showing an oversized sky card beyond the open cutaway silhouette.
  const portalPlanes=Array.from({length:4},()=>new Plane(0,0,0,0)),portalMaterials=new Map<PBRMaterial,PBRMaterial>();
  for(const mesh of exterior.getChildMeshes()){const original=mesh.material as PBRMaterial;let clipped=portalMaterials.get(original);if(!clipped){clipped=original.clone('window.portal.'+original.name)!;[clipped.clipPlane,clipped.clipPlane2,clipped.clipPlane3,clipped.clipPlane4]=portalPlanes;portalMaterials.set(original,clipped);}mesh.material=clipped;if((farSkyColors as readonly string[]).includes(mesh.metadata?.authoredColor))clipped.unlit=true;}
  scene.onBeforeCameraRenderObservable.add(()=>{const p=camera.position,planes=windowPortalPlanes([p.x,p.y,p.z]);for(let i=0;i<4;i++){portalPlanes[i].normal.copyFromFloats(planes[i][0],planes[i][1],planes[i][2]);portalPlanes[i].d=planes[i][3];}});
+ const entryPlanes=Array.from({length:4},()=>new Plane(0,0,0,0)),entryMaterials=new Map<PBRMaterial,PBRMaterial>();
+ for(const mesh of entryGarden.getChildMeshes()){const original=mesh.material as PBRMaterial;let clipped=entryMaterials.get(original);if(!clipped){clipped=original.clone('entry.portal.'+original.name)!;[clipped.clipPlane,clipped.clipPlane2,clipped.clipPlane3,clipped.clipPlane4]=entryPlanes;entryMaterials.set(original,clipped);}mesh.material=clipped;}
+ scene.onBeforeCameraRenderObservable.add(()=>{const p=camera.position,planes=entryPortalPlanes([p.x,p.y,p.z]);for(let i=0;i<4;i++){entryPlanes[i].normal.copyFromFloats(planes[i][0],planes[i][1],planes[i][2]);entryPlanes[i].d=planes[i][3];}});
  const door=model('native.door.leaf',doorLeafRecipe());door.position.set(2.34,.08,3.20);
  const sign=model('native.door.sign',doorSignRecipe(),door);sign.position.set(.80,1.56,-.073);
  model('back.display.curated.v10',backDisplayRecipe());
@@ -114,7 +120,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  const nativeActors=createNativeActors(scene,(name,parts,parent)=>model(name,parts,parent));
  const routes=new NativeCustomerRoutes(),delivery=new NativeDelivery();let previousArrival=false;let currentRoutes:ReturnType<NativeCustomerRoutes['tick']>|undefined;
  const faceFill=new HemisphericLight('soft local face fill',Vector3.FromArray([...nativeLighting.faceFill.direction]),scene);faceFill.intensity=nativeLighting.faceFill.intensity;faceFill.diffuse=Color3.FromArray(linearColor(nativeLighting.faceFill.color));faceFill.groundColor=Color3.FromArray(linearColor(nativeLighting.faceFill.ground));faceFill.includedOnlyMeshes=scene.meshes.filter(m=>nativeLighting.faceFill.parts.some(p=>m.name.includes('.'+p+'.material'))&&nativeLighting.faceFill.roles.includes(m.metadata?.materialRole));
- const practicalLights=nativeLighting.practicals.map(spec=>{const light=new SpotLight('native.practical.'+spec.id,Vector3.FromArray([...spec.position]),new Vector3(0,-1,0),spec.angle,2,scene);light.diffuse=Color3.FromArray(linearColor(spec.color));light.intensityMode=Light.INTENSITYMODE_LUMINOUSINTENSITY;light.intensity=spec.intensity;light.range=5;light.excludedMeshes=exterior.getChildMeshes();return light;});
+ const practicalLights=nativeLighting.practicals.map(spec=>{const light=new SpotLight('native.practical.'+spec.id,Vector3.FromArray([...spec.position]),new Vector3(0,-1,0),spec.angle,2,scene);light.diffuse=Color3.FromArray(linearColor(spec.color));light.intensityMode=Light.INTENSITYMODE_LUMINOUSINTENSITY;light.intensity=spec.intensity;light.range=5;light.excludedMeshes=outsideMeshes;return light;});
  const parcel=model('discovery.graybox-sample',[
   {shape:'round',size:[.52,.30,.38],at:[0,.15,0],color:'#C8B3D4',radius:.035},
   {shape:'box',size:[.045,.31,.385],at:[0,.15,0],color:'#F6E5C1'},

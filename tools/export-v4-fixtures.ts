@@ -1,3 +1,4 @@
+import {entryGardenRecipe} from '../src/art/entry-garden-v11';
 import {surfaceFinishSpec} from '../src/art/surface-finish-v11';
 import {floorContactBake,floorContactUV} from '../src/art/floor-bake-v11';
 import {botanicalPrintMaterial} from '../src/art/shop-v10';
@@ -32,5 +33,5 @@ export function fixtureGlb(name:string,parts:NativeSurface[]){
  const jb=Buffer.from(JSON.stringify(json)),jp=Buffer.concat([jb,Buffer.alloc((4-jb.length%4)%4,32)]),header=Buffer.alloc(12),jh=Buffer.alloc(8),bh=Buffer.alloc(8);header.writeUInt32LE(0x46546c67);header.writeUInt32LE(2,4);header.writeUInt32LE(28+jp.length+bp.length,8);jh.writeUInt32LE(jp.length);jh.writeUInt32LE(0x4e4f534a,4);bh.writeUInt32LE(bp.length);bh.writeUInt32LE(0x004e4942,4);return Buffer.concat([header,jh,jp,bh,bp]);
 }
 const root='assets/masters/native-v4';fs.mkdirSync(root,{recursive:true});
-const assets=[['planter-base-v11',plantParts().base],['room',nativeRoomRecipe()],['styling-v9',nativeStylingRecipe()],['window-canopy-v9',nativeWindowCanopy()],['counter',nativeCounterRecipe()],...[0,1,2].map(n=>['display-'+(n+1),nativeDisplayRecipe(n)]),...catalog.offerings.map(o=>['product-'+o.id,nativeProductRecipe(o.id,o.color)])] as [string,NativeSurface[]][];
+const assets=[['entry-garden-v11',entryGardenRecipe()],['planter-base-v11',plantParts().base],['room',nativeRoomRecipe()],['styling-v9',nativeStylingRecipe()],['window-canopy-v9',nativeWindowCanopy()],['counter',nativeCounterRecipe()],...[0,1,2].map(n=>['display-'+(n+1),nativeDisplayRecipe(n)]),...catalog.offerings.map(o=>['product-'+o.id,nativeProductRecipe(o.id,o.color)])] as [string,NativeSurface[]][];
 const records=assets.map(([id,parts])=>{const file=`${root}/${id}.glb`,bytes=fixtureGlb(id,parts);fs.writeFileSync(file,bytes);return{id,file,bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')};});fs.writeFileSync(root+'/fixtures-manifest.json',JSON.stringify({source:'tools/export-v4-fixtures.ts',rights:'Original authored procedural geometry and texture for this game',units:'metres',axes:'RH +Y up',uv:'nativeSurfaceGeometry metre UV; KHR_texture_transform for floor/cloth; embedded original V9 colour/normal maps; original actual-geometry Cycles floor contact AO in UV2; no dynamic objects baked',assets:records},null,2)+'\n');console.log(records);
