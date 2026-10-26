@@ -26,7 +26,7 @@ test('all existing product counts preserve their surviving geometry prefix and s
    const r=stagedProducts(o.id,o.color,count,table);assert.equal(r.length,Math.min(count,8)*size);
    if(previous!==undefined)assert.equal(JSON.stringify(r.slice(0,Math.min(count-1,8)*size)),previous,'buy/settle does not rearrange surviving units');previous=JSON.stringify(r);
    const boxes=Array.from({length:Math.min(count,8)},(_,i)=>bounds(r.slice(i*size,(i+1)*size).flatMap(p=>points(nativeSurfaceGeometry(p)))));
-   for(const b of boxes)assert.ok(b.lo[0]>-.31&&b.hi[0]<.95&&b.lo[2]>-.55&&b.hi[2]<.55,'stock excludes fixed paper dressing');
+   for(const b of boxes)assert.ok(b.lo[0]>(table===1?-.95:-.31)&&b.hi[0]<.95&&b.lo[2]>-.55&&b.hi[2]<.55,'stock fits each actual tabletop; central fixed-prop clearance is checked against actual relocated meshes in central-composition tests');
    for(let i=0;i<boxes.length;i++)for(let j=i+1;j<boxes.length;j++)assert.ok([0,1,2].some(k=>Math.min(boxes[i].hi[k],boxes[j].hi[k])-Math.max(boxes[i].lo[k],boxes[j].lo[k])<.001),`${o.id}/${table}/${count}/${i}/${j}`);
   }
  }

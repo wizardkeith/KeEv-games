@@ -53,7 +53,7 @@ export const nativeLighting={
  shadow:{size:2048,normalBias:.010,bias:.0007,darkness:.16,lightSizeUVRatio:.035},
  exteriorFill:{color:'#C8E1EF',ground:'#9CAF8F',intensity:.68},
  // Bounded art-directed bounce proxies; point/spot candela are not directional lux.
- practicals:[{id:'cashier',position:[3.05,2.75,-1.05],color:'#FFD5A7',intensity:20.0,angle:1.52},{id:'central',position:[.1,2.615,-.1],color:'#FFE0B5',intensity:9.0,angle:1.62}] as const,
+ practicals:[{id:'cashier',position:[3.05,2.75,-1.05],direction:[0,-1,0],color:'#FFD5A7',intensity:20.0,angle:1.52},{id:'central',position:[-2.5,3,-.3],direction:[.80,-.62,.18],color:'#FFF0D3',intensity:24.0,angle:1.62}] as const,
  exposure:1,
- note:'C23 coherent higher window daylight, restrained global fill, retained service-dock warm focal bounce and cool layered exterior, original room IBL, soft contact-hardening shadows and actual floor AO. ACES exposure1/contrast1.06. No bloom or dynamic reflection. Face fill remains restricted to skin/ink. Actual game render, not metadata or tests, determines visual fidelity.',
+ note:'C27 existing central bounce proxy now follows window direction; unchanged shadow/global exposure/fill. C23 coherent higher window daylight, restrained global fill, retained service-dock warm focal bounce and cool layered exterior, original room IBL, soft contact-hardening shadows and actual floor AO. ACES exposure1/contrast1.06. No bloom or dynamic reflection. Face fill remains restricted to skin/ink. Actual game render, not metadata or tests, determines visual fidelity.',
 } as const;

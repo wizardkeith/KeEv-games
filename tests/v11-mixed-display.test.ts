@@ -15,7 +15,7 @@ test('mixed work props are bounded fixed geometry with open baskets, stay out of
  for(const p of props){const g=nativeSurfaceGeometry(p);for(let i=0;i<g.positions.length;i+=3){const[x,y,z]=g.positions.slice(i,i+3);assert.ok(!(Math.abs(x-1.2)<.10&&y>1.5235&&y<1.70&&Math.abs(z-2.95)<.10),'no paperwork through the retained planter');}}
 });
 test('asymmetric paper stacks preserve two physical piles and stable prefixes while focal light remains inside the actual service bay',()=>{
- const p=displaySamples('off.notebook',8,1);assert.equal(p.filter(p=>p.at[0]===.10).length,3);assert.equal(p.filter(p=>p.at[0]===.55).length,5);
- for(const x of[.10,.55])assert.deepEqual(p.filter(p=>p.at[0]===x).map(p=>p.stackLayer),Array.from({length:p.filter(p=>p.at[0]===x).length},(_,i)=>i));
+ const p=displaySamples('off.notebook',8,1);assert.equal(p.filter(p=>p.at[0]===-.65).length,3);assert.equal(p.filter(p=>p.at[0]===.58).length,5);
+ for(const x of[-.65,.58])assert.deepEqual(p.filter(p=>p.at[0]===x).map(p=>p.stackLayer),Array.from({length:p.filter(p=>p.at[0]===x).length},(_,i)=>i));
  const cashier=nativeLighting.practicals[0],dx=3.31-cashier.position[0],dz=-.65-cashier.position[2],dy=cashier.position[1]-1.35;assert.ok(Math.atan2(Math.hypot(dx,dz),dy)<cashier.angle*.5,'actual staff/customer dock is inside warm focal cone, not outside its falloff');
 });

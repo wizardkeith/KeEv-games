@@ -1,3 +1,4 @@
+import {placeCentralFloral} from './central-composition-v11';
 import {centralFlowerJugRecipe,centralFlowerSprayRecipe} from './display-quality-v11';
 import {wovenPlanter} from './woven-planter-v11';import {floorLeaf} from './floor-leaf-v11';
 /** V11 target slice: original branching botanicals, woven planters, layered
@@ -137,8 +138,8 @@ export function buildV11Styling(centralBouquetScale=.95,qualitySlice=false):Nati
  for(const[i,x]of[-3.48,-2.48,-1.48,-.48,.52,1.52].entries())base[i+1]=M(geometry({shape:'box',size:[.016,.79,.022],at:[x,.56,3.205],color:'#C4AC8A'}),'#C4AC8A','wood');
  const out=[...base,...buildV11TrailingGreenery(),...counterStationery()];
  for(const [x,y,z,scale]of [[-4.18,.901,-.91,1.1],[-.53,1.0735,-.05,centralBouquetScale],[1.35,1.111,-1.47,.90]]){
-  const arrangement=qualitySlice&&x===-.53?[...centralFlowerJugRecipe(),...centralFlowerSprayRecipe()]:bouquet();
-  for(const part of arrangement){const p=scaled(part,scale);out.push({...p,at:[p.at[0]+x,p.at[1]+y,p.at[2]+z]});}
+  if(qualitySlice&&x===-.53){out.push(...placeCentralFloral(centralFlowerJugRecipe(),'vessel'),...placeCentralFloral(centralFlowerSprayRecipe(),'crown'));continue;}
+  for(const part of bouquet()){const p=scaled(part,scale);out.push({...p,at:[p.at[0]+x,p.at[1]+y,p.at[2]+z]});}
  }
  return batch(out);
 }

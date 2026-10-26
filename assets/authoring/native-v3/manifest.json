@@ -6,7 +6,7 @@
   "sourceSha256": {
     "src/art/orm-channels-v11.ts": "6ad3f152cb68659b9f4aec270ff992d763360c2dd3c9fe54988f240bb94a4e1a",
     "src/art/cloth-diagnostic-v11.ts": "92c47df7d602c9fae4b12d45e62e8fb80f66dddc5312cd6e1f1cd3751ac6b720",
-    "src/art/native-view.ts": "f3eab2b1434e27ff22d1381b246c8a390454d879157d08f390e04b4e8548afa3",
+    "src/art/native-view.ts": "237c7fa164702a498ed1a987e08a920c31a4d40d4c0e24a1b3ee3f36357ca5cf",
     "tools/build-v11-coat-cloth.py": "2e19c12f141b38fa9f45ba08eeb68451d4c8ab39b859c926ecc12df8ff76fa4d",
     "assets/masters/native-v11/coat-rest-input.json": "a0ee69e780e94d7097b0c024444a9e141077601a6ecae6f6b649d9814c6ea7b5",
     "assets/masters/native-v11/coat-rest/coat-rest-retopo.json": "184028af0817438ca03896b6927b2c2147ac4cec15a22363466df9346b7e6c15",
@@ -69,7 +69,7 @@
     "src/presentation/native-feet.ts": "440404e1bceabdb2bf8d8f9f699d030c40e4815f7b0e904ea15a3f6a180bdef3",
     "src/presentation/native-delivery.ts": "92ab544352360caa1463f62f0f93e5d22f5d8a09b791aec6aa93057c8ab06ab6",
     "src/presentation/native-commits.ts": "94a6c6a410c770153fa282c09f8f36a66ba7e61dd63b3017cbb0cf2c234cfcf2",
-    "src/world.ts": "d1a02e03cdf8906f48a04ec50d759ff88489edf25d92b56f3847234e5a657fc6",
+    "src/world.ts": "5cb141700e4d401aa7b585271d613469c0f9e3d825ee405f655442d1ab949711",
     "src/presentation/native-routes.ts": "fbbaee9df6cfed3fb0e992198e394860c7399ee75baf5d7997bf0485fe3763a3",
     "src/presentation/native-scene.ts": "bed32138150cdbf9e5441a3af30b190d0b34f7ffe70e3d4f6ff6b43ddd04ae70",
     "tools/export-native-characters.ts": "cc1c9d1f9bed42454cb31ed4dc738354c838114181513929d7f12b5128e6e1db",

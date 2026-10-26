@@ -27,7 +27,7 @@ export function mixedWorkProps():NativeSurface[]{
  }
  // A blank index card sits ON the existing three-book central work pile,
  // giving a readable white middle mass without becoming stock or a quest label.
- const bookTop=artDirection.displaySurfaceY+.001+3*fixedSampleBounds('off.notebook',[0,-.10,0],.85).height;out.push(box([.15,.012,.06],[-.49,bookTop+.007,-.35],'#B69A73'),box([.16,.20,.004],[-.49,bookTop+.114,-.35],'#EDE4D1'));
+ const bookTop=artDirection.displaySurfaceY+.16+.001+3*fixedSampleBounds('off.notebook',[0,Math.PI/2,0],.78).height;out.push(box([.15,.012,.06],[.58,bookTop+.007,.44],'#B69A73'),box([.16,.20,.004],[.58,bookTop+.114,.44],'#EDE4D1'));
  // Counter correspondence tray by the actual work area, outside handoff bay.
  out.push(...openBox([2.52,1.112,-1.25],.32,.11,.23));
  for(let j=0;j<3;j++){const h=.20+j*.025;out.push(box([.24,h,.008],[2.52,1.126+h/2,-1.31+j*.045],j===1?'#70897C':'#EDE4D1',j===1?'fabric':'paper'));}
