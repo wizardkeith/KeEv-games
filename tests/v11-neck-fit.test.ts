@@ -1,0 +1,8 @@
+import test from'node:test';import assert from'node:assert/strict';import fs from'node:fs';import{createHash}from'node:crypto';import type{NativeSurface}from'../src/art/native-characters';import{nativeSurfaceGeometry}from'../src/art/native-characters';
+const read=(name:string)=>JSON.parse(fs.readFileSync('assets/masters/native-v11/display-quality/'+name,'utf8'))as NativeSurface[];
+test('C36 neck repair changes only two lower trunks; all accepted crown parts, anchors, topology remain, with no outer-envelope expansion',()=>{
+ const old=read('flower-spray-c33.json'),now=read('flower-spray-c36.json');assert.equal(now.length,33);assert.deepEqual(now.flatMap((p,i)=>JSON.stringify(p)===JSON.stringify(old[i])?[]:[i]),[11,22]);
+ for(const i of[11,22]){const a=nativeSurfaceGeometry(old[i]),b=nativeSurfaceGeometry(now[i]);assert.deepEqual(b.indices,a.indices);assert.equal(b.positions.length,a.positions.length);for(const anchor of[12,16])assert.ok(Math.hypot(...a.positions.slice(anchor*3,anchor*3+3).map((x,k)=>x-b.positions[anchor*3+k]))<1e-8,'same root and upper hub anchor');}
+ for(const axis of[0,1,2]){const values=(parts:NativeSurface[])=>parts.flatMap(p=>nativeSurfaceGeometry(p).positions.filter((_,i)=>i%3===axis));const a=values(old),b=values(now);assert.ok(Math.min(...b)>=Math.min(...a));assert.ok(Math.max(...b)<=Math.max(...a));}
+ for(const[file,sha]of Object.entries({'public/assets/native-v11/petal-form-values-c34.png':'8b737bb64fded646291553a5ae02f8239edfc9d8fefd4efdec32e4fc7524cc74','public/assets/native-v11/linen-form-values-c34.png':'956b7673c6a61c4f133c493326e7fa4983c4d98c3e288fb3c5c4cd105b123563'}))assert.equal(createHash('sha256').update(fs.readFileSync(file)).digest('hex'),sha);
+});

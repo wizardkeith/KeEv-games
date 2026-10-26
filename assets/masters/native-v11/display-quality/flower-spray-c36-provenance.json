@@ -1,0 +1,54 @@
+{
+  "source": "tools/build-v11-neck-fit-flowers.ts",
+  "sourceSHA256": "bb481d06642b3fa91e81b59c54c6b9a68e5658afa9ab98642c800eb515546214",
+  "repair": {
+    "base": "Retained flower-spray-c33.json",
+    "onlyParts": [
+      11,
+      22
+    ],
+    "forkY": 0.395,
+    "forkRadius": 0.055,
+    "rootAndHubAnchorsRetained": true,
+    "visibleCrownPartsRetained": true
+  },
+  "scope": "Only same non-inventory C27 flower crown. Fixed normal-view basis is authored into real3D, never billboarded",
+  "clusters": [
+    {
+      "id": "main-high",
+      "u": 0.005,
+      "y": 0.685,
+      "d": -0.015,
+      "r": 0.068
+    },
+    {
+      "id": "left-low-front",
+      "u": -0.151,
+      "y": 0.58,
+      "d": 0.054,
+      "r": 0.058
+    },
+    {
+      "id": "right-low-back",
+      "u": 0.148,
+      "y": 0.55,
+      "d": -0.062,
+      "r": 0.053
+    }
+  ],
+  "primarySurfaces": 15,
+  "triangles": 1524,
+  "correction": {
+    "previous": "C32",
+    "lobe": 6,
+    "cluster": "left-low-front",
+    "only": "inner shoulder",
+    "displacementU": 0.055,
+    "displacementY": 0.075,
+    "displacementD": -0.02,
+    "lowerRimFixed": true,
+    "branchRootsUnchanged": true
+  },
+  "method": "Three rooted branch systems and overlapping closed rounded-shoulder lobed corollas with depth comparable to radius; one high main /two lower depth-staggered side masses, unequal openings. No texture/material-value work.",
+  "limits": "C35 material/crown standard preserved; neck clearance and final actual default adoption checks required"
+}

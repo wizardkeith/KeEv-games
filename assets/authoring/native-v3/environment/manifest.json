@@ -3,8 +3,8 @@
   "version": "3.1",
   "master": {
     "path": "assets/masters/native-v3/environment-v3.json",
-    "sizeBytes": 30133415,
-    "sha256": "0a2234f30e79b578f3ecb89f19e2f43c318718fc7dcb58a676758f54885c0f0f"
+    "sizeBytes": 30133402,
+    "sha256": "2e143e4ed20a0d3510ea27fbf31b73d5660dfc9f2f3e031087752244325bb2fc"
   },
   "sources": {
     "src/art/bright-masses-v11.ts": "0318936c52cdb1af775535eeb2014f664b56d8d29cbe08d2e93a9b58052798d3",
@@ -54,7 +54,7 @@
     "assets/authoring/native-v11/display-journal-provenance.json": "af2dbc7c991cdccd1457be4179bc6cda5f0be1eb778a2c7f58ae2db27e2627c8",
     "src/art/surface-finish-v11.ts": "3bd0c724a2841c14a7ef5e465129444eb933f608f03fc409420180ba64465063",
     "src/art/staged-products-v11.ts": "ab5483bab8f6269ad9e1e445d23a6a72bbe6c4692cb3864dc300133b199350d7",
-    "src/art/display-quality-v11.ts": "019edf6cab89049ac8f8e6b7528c6e0ae9087eb3f2910105ab796253a507a9d2",
+    "src/art/display-quality-v11.ts": "dcc7f5b3c5d1a85dbe52e0a033bad966d67a80cb682ff56f058633b772ece4db",
     "assets/masters/native-v11/display-quality/mug.json": "8877994756c0a841e7bbb1c27bf147252dd8e63581e0dc17148c68fea50ac0f3",
     "assets/masters/native-v11/display-quality/linen-rest.json": "1494d11f882da3d8caf607b2b07270a9caa3fda489c2522069db78d5786702ad",
     "tools/build-v11-display-cloth.py": "8dc4fd868eb2648e65d923d336b3d7b6b4f50afe18bb186e1c784063acbbc2ca",
