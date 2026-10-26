@@ -1,0 +1,10 @@
+{
+  "fixedSceneParts": 153,
+  "conservativeWithArchivedCeiling": 154,
+  "partLimitExclusive": 160,
+  "stylingTriangles": 10632,
+  "canopyTriangles": 5208,
+  "combinedDressingTriangles": 15840,
+  "dressingTriangleLimitExclusive": 16000,
+  "cutawayActive": false
+}

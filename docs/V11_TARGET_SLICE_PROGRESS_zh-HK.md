@@ -1,3 +1,11 @@
+## C23 最終140：窗外模型與日光已整合，原圖仍未達標
+
+Application `53555cc5e5960826d82d7f3891618ebc4e80bcc2`，src tree `6df1658d9571bca231a15c28bad045e716f55c85`。保留C21／22，重建近樹分枝／葉接點、低遠屋／四玻璃窗灣、遠樹與天空層次，形成一致窗側日光；不採用暗天花，無GI宣稱。正常140與134 camera／cash／inventory／shelves exact；[原目標／BEFORE–AFTER／完整限制](V11_C23_WINDOW_DAYLIGHT_CHECKPOINT_2026-10-26_zh-HK.md)。
+
+提交後226測試／build／validate／replay／asset-check、141GLB零錯誤警告、305保護檔案、34native新鮮重建及163實際payload parity、五語15案例／75面板切換通過。[191.680秒真正未剪營業](../evidence/native-v11/checkpoint-23/normal-flow140/gameplay-uncut.webm)：真買入／放架／一次結算／A交袋離店／店員返回／reload，0pageerror／隔離Normal不變；[140.5秒可讀18件／+¥8,400／未扣人工租金](../evidence/native-v11/checkpoint-23/motion-samples/margin140_5.png)。29.120秒連續摘錄另備，04排程PNG過遲不作浮窗證據。無新B完整交易／hidden-tab／物理GPU／FPS／音訊／native宣稱。
+
+**原圖品質與畫風仍未達標**：均勻棕米色、柔葉影／遠樹自然度、規整商品及整體材質細膩度仍有差距；這是下一輪視覺覆核點，不是完成／發佈驗收。PR8保持Draft／未合併，公開V17不變，無save／deploy／新Library上傳。以下為歷史檢查點。
+
 ## C22 選定134：混合陳列／克制光路已整合，仍未達目標
 
 實作 `e13ef125f50ce8603a9c1104cc4344f17afc898d`，src tree `389aff0c1d6248f52a463cb844a4cf1096c15aaa`。保留 C21 結構；35 既有樣品與混合工作群組、空腔收納、3／5 層穩定紙品展示、中度木色後架、收銀暖光、439 網格新接觸 AO 已在真正正常遊戲整合。132／133 天花遮擋試作均未採納，普通遊戲不建立該網格。
