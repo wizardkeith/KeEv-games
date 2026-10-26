@@ -20,7 +20,15 @@
     "normal": "isolated baseline unchanged",
     "uncut": "normal-flow110/gameplay-uncut.webm"
   },
-  "current112flow": "running at evidence assembly, not yet claimed passed",
+  "current112flow": {
+    "application": "a2b32a498939a3c36ab8ca3b3ea8aec19ce754d2",
+    "workflowSeconds": 170.778,
+    "uncutSeconds": 169.76,
+    "observed": "real UI buy/place, greeting, onehoursettlement, Acontact/bag/18item+8400batchgrossmargin/Aexit/staffhome/reload",
+    "errors": 0,
+    "normal": "isolated unchanged",
+    "movie": "normal-flow112/gameplay-uncut.webm"
+  },
   "regression": {
     "tests": 204,
     "build": true,
@@ -55,6 +63,13 @@
     "EXCLUDED-SDK-export-timeout.log": "03191ae654d2fb7801ace343d46fd29b22753231196fca7a5829f3355b33666b",
     "specular-after109/after-normal-game.png": "f0172e795b5b422dd4f23f538f3492e0b7bdcca9639c3cfd53b27a202914de4a",
     "specular-after109/results.json": "bf6b1349bbf0194e96258d790029044615df80b893e3f0b5342812ccf023acb7",
+    "one-cup-vase103-112/after-normal-game.png": "4108e83765b2e51e20380f22deaa30100be717d3dea09f57d34d70838a13db9e",
+    "one-cup-vase103-112/after-counter-game.png": "518ce6437d85b307253b68fbf4ae5eb899792e807c1484a1d64b5bb88284027f",
+    "one-cup-vase103-112/before-panorama-game.png": "2656bd71eb2a504252e7a9f5b320b01b087bd8c0f8ed9124fd61afbf4d885c05",
+    "one-cup-vase103-112/results.json": "cede4a0a037f2731644a1da175e3baaed50c246ae9f2ebc6418a69b4f9ebb053",
+    "one-cup-vase103-112/before-counter-game.png": "7e45fdfd8720469903dd24893cfafbe42e1aadf5ed3ded48ee59b95f028634dc",
+    "one-cup-vase103-112/after-panorama-game.png": "5994db6e895687aee1a9a3bd3142ec40161e24fb985c1570d8c8912c521e1a50",
+    "one-cup-vase103-112/before-normal-game.png": "0c5f358151a0a56407ee03761a18fb6871a0c49de545296181681b803acdade6",
     "normal-flow110/01b-normal-game.png": "5c408f98643cc8e7f0d248c63d5670c2b4e436eba92f8413f09f1e3644c0d879",
     "normal-flow110/04-actual-margin-in-game.png": "638bbde3223f569f992898801c7ca25f5b0b1e6c53d13288877a4e922f10d851",
     "normal-flow110/gameplay-uncut.webm": "49cf52d3adf5a430a8b93ba9ca56adfcaf5cfe6ebeccbba0a38df640225d8f7c",
@@ -75,6 +90,25 @@
     "celadon-after110/results.json": "c628235bba61667cf27ebc489493cf7262926b27067fd2cc9abb1a034f427e00",
     "orm-before111-after112/results.json": "ffba9193642698c305a81c4da8b6439d7ab6fad0420baa053dd3ffdf608ae840",
     "orm-before111-after112/before-female-in-game.png": "090ca92ba4fbfcf95a18035ced809242f20bc5f1cfc22112cc7729a6834f82e3",
-    "orm-before111-after112/after-female-in-game.png": "50baa720f5758821be96cdad0f8045672bfd64f9ca5484241c693449c15bc761"
+    "orm-before111-after112/after-female-in-game.png": "50baa720f5758821be96cdad0f8045672bfd64f9ca5484241c693449c15bc761",
+    "normal-flow112/01b-normal-game.png": "109de16d5c30417368d96a6cc6420548a094ec2e36f67a5b5df25c1cfbdc2622",
+    "normal-flow112/04-actual-margin-in-game.png": "e3e15c81a2621d0751fec6fc7229309cd627655a4793e426196c9e087ed7b7c9",
+    "normal-flow112/gameplay-uncut.webm": "5a70a48ed0fa14634db217e79106abf759fa7c16f8acaa6d4e2291ba8e2c8b6d",
+    "normal-flow112/margin-dom-trace.json": "ad429713496789f9e09f8c6bcadf2fdb82d6522663e91daae15bb4b72c743745",
+    "normal-flow112/results.json": "abe34792e2c408d050bdb0a8b5c81eaaf604d9ddf6dccd4e2116b23ebb2912e3",
+    "normal-flow112/recording-provenance.json": "6a99beb984a2598e9f177a8b65c90f49a3a17acd5d97e65f7031eba46987c6e8",
+    "normal-flow112/timeline.json": "6fc363660b3875dc1d7ed60647f83f3a693c02b6436212a10229ca14f5f579b1",
+    "normal-flow112/05-operating-shop.png": "7557d830eaa190ba05c0104893d87b58a97796414b4e9902b7cb0e5291e94ef7",
+    "normal-flow112/06-actual-staff-camera.png": "ed971fa7164710bc1ed1b9b97d7d34bf09ae3106df97a348c519cb27cf3f5cdd",
+    "normal-flow112/01-full-game-panorama.png": "6d4206200021961d815e0ed97d57b5dc7fb39c8685e82009847833d539fdd99e",
+    "normal-flow112/02-greeting-in-game.png": "e5014d92886149a87141c64604378dd60bcbaa69fd853d314ddc8a24b130f818",
+    "normal-flow112/03-cashier-contact-in-game.png": "c5e891ec40d3dc91011c4de56158dd7e6ee8eccecede5c3b6de12ce44ef63f90"
+  },
+  "oneCupVase": {
+    "before": "103",
+    "after": "112",
+    "input": "ordinary UI buy1 each pencil/vase/mug, place3,16ordinarywheelinputs to permitted closer normal shop camera; then Zen/staff presets",
+    "matches": "same camera/economy, natural staff/leaf phases differ",
+    "limits": "Material response change modest; screenshots also expose old guessed support placing mug inside wooden riser. Physical-support correction is now a separate in-progress C19, not included in112 or this completed flow."
   }
 }
