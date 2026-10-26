@@ -1,6 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T20:46:03+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T21:37:25+08:00** (Asia/Hong_Kong).
+
+## V11 C29進行中／192缺口已另補證 — 2026-10-26T21:37:25+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)遠端檢查點`a9d8432608d282fbbd3af64e0c14f3dd8609c0c4`：[192新補證／C29進行狀態](https://github.com/wizardkeith/KeEv-games/blob/a9d8432608d282fbbd3af64e0c14f3dd8609c0c4/docs/V11_C29_BRIGHT_MASSES_CHECKPOINT_2026-10-26_zh-HK.md)。runtime仍`104845d1af897902297fd759efd699bc8a7eeb38`／192；重載後實際3D345active meshes、五語Low15案例／75面板，以及新268.920秒High A交接／18件+8400／店員回位／客人離店／結算後reload真3D已補齊，0pageerror／隔離Normal不變。觀察分別記錄兩個不同時刻的真實返回／離店，未改遊戲或將舊false改true；非B／closure／hidden-tab／實體GPU/FPS驗收。
+- **192材質與原圖仍不接受**。C29同桌花／布本地草稿另存原創JSON＋Blend、保留原母檔；原型193因TS失敗複製舊dist已明確INVALID排除，成功版本強制驗證brightMasses身份。布主褶可見，但花簇仍在正常相機實拍迭代；尚未提交可獨立覆核的C29美術候選，不冒稱新完整測試／達標，不擴散全店。
+- main僅文件指標，PR8保持Draft、公開V17不變；無merge／Site save/deploy／LTC重試／Library重試／玩家Chrome或Normal／Unity／關機，無需使用者動作阻塞。
+
 
 ## V11 C28 固定192反射診斷／原圖仍未通過 — 2026-10-26T20:46:03+08:00
 
