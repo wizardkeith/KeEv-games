@@ -1,0 +1,37 @@
+{
+  "application": "567c4fb51794be7d17b472fc7201795f91ba7fda",
+  "build": 201,
+  "runtimeFiles": 178,
+  "mode": "combined",
+  "sameNormalCameraAndInitialEconomyAs192": true,
+  "beforeApplication": "104845d1af897902297fd759efd699bc8a7eeb38",
+  "C27CompositionSHA256": "f3bafaca37ee5b4c0050929b2b772baf01368cf1f53dd4a4a28dd8f91ce745e9",
+  "preserved192ReflectionSHA256": "ab2ddab4e6f5b7e64370f7ba2fb63497326a4f19b669a5ccb459cfef8e2f3258",
+  "geometry": {
+    "decorativeFlorets": 120,
+    "heads": 6,
+    "stylingAndCanopyTriangles": 15986,
+    "stylingMaterialGroups": 17,
+    "linenTriangles": 2076,
+    "originalLinenTriangles": 1744,
+    "fringeStrands": 24
+  },
+  "pixelProvenance": "Actual local production WebGL game; same real exported Sandbox imported through ordinary UI, no pose/state injection. Reference/crops clearly labelled; no concept/studio substitution.",
+  "viewPurchaseReload": {
+    "durationSeconds": 148.84,
+    "CDPDeliveredFrames": 46,
+    "snapshotReloadAndPostReload3D": true,
+    "buyOneMug": {
+      "cost": 70,
+      "cashBefore": 3840,
+      "cashAfter": 3770,
+      "stock": 9
+    },
+    "errors": []
+  },
+  "pendingAtCheckpoint": [
+    "source201 complete A recording",
+    "source201 zero/partial/full/soldout cycle"
+  ],
+  "limits": "Current normal-game gains require independent material/original-target pixel review. Sparse SwiftShader capture not physical GPU/FPS/audio/native or smoothness acceptance."
+}
