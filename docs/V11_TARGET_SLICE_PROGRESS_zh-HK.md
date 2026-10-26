@@ -6,6 +6,18 @@
 
 
 
+## 第十九個 checkpoint — 真實商品支承面／穩定高低瓶組，仍未達目標
+
+**runtimeb20420f1163c2a64575c20dca9b0585b973f0cb4／default118。** 單杯／單瓶比較揭露舊猜前後排高度會把杯底放入木riser、瓶底穿runner。改為讀真正fixture水平wood/cloth三角面，在商品底面footprint下求支承高度，再保留既有stack高度；排除paper價卡／metal桿，不碰經濟資料。只在stock mesh重建時算、三fixture cache，不是per-frame。維持1mm間隙；[初次失敗原樣](../evidence/native-v11/checkpoint-19/EXCLUDED-initial-support-failure.log)，沒有放寬閾值。
+
+[舊112單杯瓶](../evidence/native-v11/checkpoint-18/one-cup-vase103-112/after-normal-game.png)／[新117真正單件上架](../evidence/native-v11/checkpoint-19/one-cup-vase117-supported/after-normal-game.png)：杯身完整在riser之上，vase在cloth。普通UI各買1pencil/vase/mug，普通wheel近鏡，normal/Zen/staff camera及cash/inventory/shelves exact；自然員工／葉片相位不同，不是假pose。117與final118在這三個單件的可見geometry相同，**不把117全source冒稱118**。[未剪購買／放架／鏡頭操作](../evidence/native-v11/checkpoint-19/one-cup-vase117-supported/after-interaction/gameplay-uncut.webm)。
+
+[真正118八件買入／正常鏡頭](../evidence/native-v11/checkpoint-19/vase-hierarchy118/after-normal-game.png)／[重載後](../evidence/native-v11/checkpoint-19/vase-hierarchy118/after-reload-game.png)：相同SKU仍8件，有高低／鬆散分組；每次加減數量保留倖存vase的geometry prefix，沒有為買一件把整組重排。只是現有手工瓶的視覺size variation，不是新商品／tier／price。三鏡頭、cash/stock/shelves對112 exact，0pageerror／隔離Normal未變；reload實測snapshot一致。
+
+**207tests/build/validate/replay/assets，139GLB零error/warning，305protected/history，2個受影響native環境輸出fresh byte-identical，其他GLB/map不變。**8focused含三桌×十SKU單件真triangle支承、鉛筆0..9庫存、八瓶不重疊／真支承／可讀高低及0..8數量變更保持已存在geometry。[來源／精確clip長度／限制](../evidence/native-v11/checkpoint-19/provenance.json)。C18exact112的170.778s真營業完整流程另已固定0a307e5，不冒稱118新收銀或重跑74locales。
+
+**目標美術仍未達到。** 杯瓶response仍屬局部，整店密度／材質豐富度／植物與入口外景仍明顯簡化。下一個直接asset-remake slice：有真編織結構／素材的planter和連續曲面地面葉片；保留7個葉片wind接點、已改善canopy／人物／furniture／camera，不用更高解析度紋理代替輪廓。仍無releasearchive/merge/deploy/Libraryretry/使用者Chrome/Normal玩家資料/Unity/關機；沒有實體GPU/FPS/audio/native或最終art acceptance。
+
 ## 第十八個 checkpoint — 真正房間反射／青瓷素材及實際ORM通道修正，未達目標
 
 **runtimea2b32a498939a3c36ab8ca3b3ea8aec19ce754d2，default112。** 從真正255個static mesh捕捉128²六面線性HDR，GGX64samples／48RGBD mip，排除人物／真庫存／門扇／FX／存檔；原始.env、來源／native契約保留。只替換ceramic specular，原analytic diffuse SH／direct lights／其他材質不變，沒有即時probe、新燈或把房間圖當背景。[單獨反射109實際遊戲](../evidence/native-v11/checkpoint-18/specular-after109/after-normal-game.png)：局部亮邊可見，但不是重大整店風格突破。首次SDK輸出180秒超時排除；成功CPU RGBD／2Dcanvas輸出另有原始log／來源，沒有隱瞞失敗。

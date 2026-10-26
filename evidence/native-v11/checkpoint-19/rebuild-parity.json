@@ -1,0 +1,9 @@
+{
+  "files": 2,
+  "changed": [],
+  "scope": "Affected environment master and manifest fresh export byte-identical; other nativeGLB/material outputs unchanged fromC18",
+  "sha256": {
+    "assets/masters/native-v3/environment-v3.json": "5ef49c9ba86d5d49295c938df4324080ca9840cccd3c9266a518a7d59f05bc19",
+    "assets/authoring/native-v3/environment/manifest.json": "790891101263371cf176d8794387519e734462a930041c56ae31ef1e00777a64"
+  }
+}
