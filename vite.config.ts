@@ -10,4 +10,6 @@ process.env.VITE_V11_BOUNDED_MATERIAL??=process.env.VITE_V11_GRAY_FORMS!=='contr
 if(!['control','base','values'].includes(process.env.VITE_V11_BOUNDED_MATERIAL))throw Error('Unknown C34 bounded material variant');
 process.env.VITE_V11_BACKWALL_FORMS??='control';
 if(!['control','shape','old-gray','gray'].includes(process.env.VITE_V11_BACKWALL_FORMS))throw Error('Unknown C37 backwall form gate variant');
+process.env.VITE_V11_BACKWALL_MATERIAL??='control';
+if(!['control','base','values'].includes(process.env.VITE_V11_BACKWALL_MATERIAL))throw Error('Unknown C39 backwall material variant');
 export default defineConfig({});

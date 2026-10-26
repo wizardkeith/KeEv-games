@@ -1,3 +1,4 @@
+import{backwallMaterialSurfaces}from'./backwall-material-v11';
 import backwallCanopy from '../../assets/masters/native-v11/backwall-c37/distant-canopy.json';
 import {backwallNewForms,backwallFormSurfaces} from './backwall-forms-v11';
 import {placeCentralFloral} from './central-composition-v11';
@@ -89,7 +90,7 @@ function oldV11TrailingGreenery():NativeSurface[]{
  * heights, broader overlapping curved blades, with a deliberate roof opening.
  * Replaces the old196 individual blades; does not add to the original budget. */
 export function buildV11Garden():NativeSurface[]{
- if(!backwallNewForms)return backwallFormSurfaces(oldV11Garden());
+ if(!backwallNewForms)return backwallFormSurfaces(oldV11Garden(),'near');
  const out:NativeSurface[]=[],root:V3=[-5.8,1.6,0];
  for(const [tree,t]of windowTreeSkeletons().entries()){
   out.push(t.stem);
@@ -118,13 +119,13 @@ export function buildV11Garden():NativeSurface[]{
    }
   }
  }
- return batch(backwallFormSurfaces(out)).map(p=>p.shape==='mesh'?{...p,at:root,geometry:{...p.geometry,positions:p.geometry.positions.map((v,i)=>v-root[i%3])}}:p);
+ return batch(backwallFormSurfaces(out,'near')).map(p=>p.shape==='mesh'?{...p,at:root,geometry:{...p.geometry,positions:p.geometry.positions.map((v,i)=>v-root[i%3])}}:p);
 }
 /** Shelf pots are physically seated on the upper shelf, not suspended above it.
  * Four unequal trailing stems bridge tiers; the third original pot now sits on
  * the right window ledge. These are fixed plants, never saleable stock. */
 export function buildV11TrailingGreenery():NativeSurface[]{
- if(!backwallNewForms)return backwallFormSurfaces(oldV11TrailingGreenery());
+ if(!backwallNewForms)return backwallFormSurfaces(oldV11TrailingGreenery(),'trailing');
  const out:NativeSurface[]=[];
  for(const[plant,[x,y,z]]of([[-3.12,2.2835,2.88],[1.43,2.2835,2.88]]as V3[]).entries()){
   const dense=plant===1,drops=dense?[.26,.47,.54,.35]:[.58,1.16,.84];
@@ -159,7 +160,7 @@ export function buildV11TrailingGreenery():NativeSurface[]{
   out.push(twig([base,[base[0],(base[1]+tip[1])*.5,base[2]],tip],.007));
   for(let k=0;k<3;k++){const u=.40+k*.27,point=base.map((v,j)=>v+(tip[j]-v)*u)as V3;out.push(leaf(point,.26+(2-k)*.025,.18,a+(k%2?.7:-.6),.65+k*.20,['#738C54','#91A665','#A6B97C'][(k+b)%3]));}
  }
- return batch(backwallFormSurfaces(out));
+ return batch(backwallFormSurfaces(out,'trailing'));
 }
 
 /** Original non-stock floral arrangements. They replace the retired window
@@ -210,7 +211,7 @@ export function bouquet():NativeSurface[]{
  return out;
 }
 export function buildV11Styling(centralBouquetScale=.95,qualitySlice=false):NativeSurface[]{
- const base=buildV10Styling().slice(0,14);
+ const base=buildV10Styling().slice(0,14);base[0]=backwallMaterialSurfaces([base[0]],'shelf')[0];
  // The six 16mm wall battens have subpixel 3mm bevels at normal play scale.
  // Keep their exact bounds and spend those hidden bevel triangles on the
  // reference's visible counter work tools instead of raising the scene budget.

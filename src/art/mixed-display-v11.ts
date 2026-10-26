@@ -28,7 +28,7 @@ export function mixedWorkProps():NativeSurface[]{
   back.push(box([w,.018,.29],[x,y+.009,2.86],'#B69A73'),box([.018,.22,.29],[x-w/2+.009,y+.11,2.86],'#B69A73'),box([.018,.22,.29],[x+w/2-.009,y+.11,2.86],'#B69A73'),box([w,.22,.018],[x,y+.11,2.996],'#B69A73'));
   for(let j=0;j<3;j++){const height=backwallNewForms?backwallBays[i].heights[j]:.28+j%2*.035;back.push(box([w-.07,height,.012],[x+(j-1)*.014,y+.019+height/2,2.78+j*.055],j===1?'#EDE4D1':'#70897C',j===1?'paper':'fabric'));}
  }
- out.push(...backwallFormSurfaces(back));
+ out.push(...backwallFormSurfaces(back,'work'));
  // A blank index card sits ON the existing three-book central work pile,
  // giving a readable white middle mass without becoming stock or a quest label.
  const bookTop=artDirection.displaySurfaceY+.16+.001+3*fixedSampleBounds('off.notebook',[0,Math.PI/2,0],.78).height;out.push(box([.15,.012,.06],[centralComposition.books.x,bookTop+.007,centralComposition.books.z+.09],'#B69A73'),box([.16,.20,.004],[centralComposition.books.x,bookTop+.114,centralComposition.books.z+.09],'#EDE4D1'));

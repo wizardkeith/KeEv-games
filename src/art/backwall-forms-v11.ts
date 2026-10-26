@@ -1,3 +1,4 @@
+import{backwallMaterialSurfaces,type BackwallMaterialScope}from'./backwall-material-v11';
 /** C38 form-only authoring gate. No player setting or default adoption.
  * The accepted C36 table/cashier, lighting, routes and actual stock stay intact. */
 import type {NativeSurface} from './native-characters';
@@ -10,8 +11,8 @@ export const backwallGray=backwallFormMode==='gray'||backwallFormMode==='old-gra
 export const backwallFormIntent={id:'v11.c38.unequal-trailers-window-opening.v2',mode:backwallFormMode,defaultAdopted:false,scope:'Only fixed back-wall showroom dressing and right-window exterior; C36 table/cashier/camera/lights/routes unchanged',grayColor:'#A5A5A5',limits:'Form gate only; no new material standard, target acceptance, economic authority or public adoption'}as const;
 /** One genuinely untextured PBR gray, scoped BEFORE batching. No shared global
  * wood/leaf override that would recolor the accepted central table or cashier. */
-export function backwallFormSurfaces(parts:NativeSurface[]):NativeSurface[]{
- if(!backwallGray)return parts;
+export function backwallFormSurfaces(parts:NativeSurface[],scope:BackwallMaterialScope='none'):NativeSurface[]{
+ if(!backwallGray)return backwallMaterialSurfaces(parts,scope);
  return parts.map(({baseColorTexture:_,finish:__,...p})=>({...p,color:'#A5A5A5',role:'paint',roughness:.801,alpha:1}));
 }
 interface Sample{id:string;at:V3;turn:V3;scale:number}

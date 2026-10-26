@@ -1,3 +1,4 @@
+import{backwallMaterialActive,backwallFarCrownRoughness,backwallFarCrownPalette}from'./backwall-material-v11';
 import {tableLookIntent} from './table-look-v11';
 import type {SurfaceFinish} from './surface-finish-v11';
 /** Native-only surface overrides. Legacy semantic/shared materials are immutable.
@@ -20,7 +21,7 @@ export const nativeTransmission=(role:MaterialRole)=>role==='skin'?{intensity:.1
 
 /** A crown is an opaque foliage volume, not one thin leaf. Existing individual
  * blade/skin transmission is retained exactly; standard GLB remains opaque. */
-export const nativeSurfaceTransmission=(role:MaterialRole,baseColorTexture?:string)=>baseColorTexture==='/assets/native-v11/window-crown-albedo.png'?undefined:nativeTransmission(role);
+export const nativeSurfaceTransmission=(role:MaterialRole,baseColorTexture?:string,roughness?:number,authoredColor?:string)=>baseColorTexture==='/assets/native-v11/window-crown-albedo.png'||backwallMaterialActive&&role==='leaf'&&!baseColorTexture&&roughness===backwallFarCrownRoughness&&(backwallFarCrownPalette as readonly string[]).includes(authoredColor??'')?undefined:nativeTransmission(role);
 
 /** Existing original woven inputs, now unwrapped on sculpted cloth as well as
  * primitive fabric. Web / portable GLB share the physical repeat and strength. */
