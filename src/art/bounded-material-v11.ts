@@ -6,9 +6,9 @@ export const boundedMaterialMode=request==='base'||request==='values'?request:'c
 export const boundedMaterialActive=boundedMaterialMode!=='control',boundedMaterialValues=boundedMaterialMode==='values';
 export const flowerValueAtlas='/assets/native-v11/petal-form-values-c34.png';
 export const boundedMaterialIntent={id:'v11.c34.locked-gray-materials',mode:boundedMaterialMode,geometry:'Exact C33flower/C32cloth positions/normals/indices; accepted C27composition/192reflection',values:'Original shared flower/paper material and linen finish, existing object-UV atlas pipeline; no painted inventory/contact shadows or screen-space substitute',acceptance:'Bounded material gate pending; not target acceptance'}as const;
-export function flowerValueSurface(p:NativeSurface):NativeSurface{
+export function flowerValueSurface(p:NativeSurface,index=0):NativeSurface{
  if(!boundedMaterialValues||p.role!=='paper'||p.shape!=='mesh')return p;
- return{...p,baseColorTexture:flowerValueAtlas,geometry:{...p.geometry,uvs:p.geometry.uvs!.map((v,i)=>i%2?v:.02+v*.76)}};
+ return{...p,baseColorTexture:flowerValueAtlas,geometry:{...p.geometry,uvs:p.geometry.uvs!.map((v,i)=>i%2?v:.02+Math.min(2,Math.floor(index/11))*.28+v*.24)}};
 }
 /** Reuse the original EDE4D1/.96 batch, not an18th material. Any pre-existing
  * matching noncentral surface samples a white reserved texel, preserving tone. */

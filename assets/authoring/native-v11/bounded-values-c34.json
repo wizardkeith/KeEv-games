@@ -1,20 +1,20 @@
 {
   "source": "tools/paint-v11-bounded-values.py",
-  "sourceSHA256": "616fac90af8c47ae86518651bbb14feec0c5722d1e7a04d775f66a10c44ea46c",
+  "sourceSHA256": "a202a07ced5c4a567a6b9017fff7299e62d7e3d9dc13dc2695d867aec9c170f1",
   "pipeline": "Existing C31 object-UV atlas + display-linen albedo/normal/ORM finish; original inputs retained",
-  "flower": "Existing longitude/ring UV compressed into atlasU.02-.78; original matching surfaces neutral-white U.95, no new material group",
-  "linen": "Existing physical width/arclength UV, broad unequal20/72percent folds. No owned-stock or contact shadow baked",
+  "flower": "Existing longitude/ring UV in3strips main/side/side; original matching surfaces neutral-white U.95, no new material group",
+  "linen": "Existing physical width/arclength UV, broad tone field derived only from accepted cloth surface normals. No scene/inventory/contact shadows baked",
   "geometry": "C33flower/C32cloth unmodified",
   "files": {
     "petal-form-values-c34.png": {
-      "sha256": "95b51b7e66987f56ea2346feb6d426db2805ea145f070761d2ff946c507ce9a0",
+      "sha256": "37334438f15ee8c4a35e7ac73cee5d5ca3ab25a6732b9699af8fb029a8699b32",
       "size": [
         128,
         128
       ]
     },
     "linen-form-values-c34.png": {
-      "sha256": "a28378ef36a408520f26ba3d6d9dfc38d544e28454dcd4c2257b61366246a325",
+      "sha256": "367a2a4ad8ce650da2fba9ddf1b638cb738771abc599e7ee2c162f1a92128862",
       "size": [
         512,
         512
