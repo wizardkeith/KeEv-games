@@ -1,9 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T07:29:38+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T08:17:04+08:00** (Asia/Hong_Kong).
 
 
 
+
+## V11 bounded cloth diagnosis completed; whole-shop asset audit continues — 2026-10-26T08:17:04+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed/readback **a00e8de7dbf7fdc1cd7ef1777cadb9556188ad11**; diagnostic code **d4af87f2e9b477ac0dd437b5d2ddcb384e4d2d61**. **Unmerged; main documentation only; publicV17 unchanged; original target remains NOT met.** Actual control95 vsneutral96:48cloth geometry fingerprints/camera/natural B facing exact; neutral only one diffuse direction, no pose/time/economy injection. Primary back still rounded, so not blamed solely on final material. Culling/actual buffer/transform isolation test passes.
+- A bounded22mmprimaryV plus5existing skirt amplitudes trial98/99 made neutral waistbreak clearer, but ordinary-material gain modest: **NOTADOPTED default**. Preserved patch/input/UV/editable.blend, then restored only owned trial source/UV/GLB/manifest. No further complexclothsim; C13acceptedlocal shapes/C14scene retained. [Actual normal-game versus explicitly labelled diagnostic images,9fit+budget results and decision](https://github.com/wizardkeith/KeEv-games/blob/a00e8de7dbf7fdc1cd7ef1777cadb9556188ad11/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md). No new fullsuite/cashier/device claim from trial; latest complete normalgame flow remains exact94/c00source with346.320sclip/197tests, as below.
+- Returning to whole-shop material distinction/natural merchandising/proportion. Measured old nativepencil0.5835m ×display1.12≈65.35cm; genuine Sandbox buy/place comparison captured, target hand-scale calibration being assessed before changing assets. SameSKU/economy/save/fivelocales/camera protected. No releasearchive/merge/deploy/userChrome/Normal/Unity/shutdown/content expansion; no finalart/physicalGPU/FPS/audio/native acceptance.
 
 ## V11 fourteenth checkpoint — counter vignette / layered actual shadows, target still open — 2026-10-26T07:29:38+08:00
 
