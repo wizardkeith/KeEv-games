@@ -1,0 +1,20 @@
+{
+  "application": "8bfd0757febe549f9a3a8b006f7c2408bbd8b92b",
+  "byteIdentical": true,
+  "files": {
+    "petal-form-values-c34.png": {
+      "sha256": "8b737bb64fded646291553a5ae02f8239edfc9d8fefd4efdec32e4fc7524cc74",
+      "size": [
+        128,
+        128
+      ]
+    },
+    "linen-form-values-c34.png": {
+      "sha256": "956b7673c6a61c4f133c493326e7fa4983c4d98c3e288fb3c5c4cd105b123563",
+      "size": [
+        512,
+        512
+      ]
+    }
+  }
+}
