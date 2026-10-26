@@ -1,6 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T06:51:02+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T07:10:59+08:00** (Asia/Hong_Kong).
+
+## V11 C40開發預設採用檢查進行中 — 2026-10-27T07:10:59+08:00
+
+- C39窄材質已由父任務轉達獨立PASS，非整體原圖接受；[Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)來源`4b3fc354af6e0379342b19dd01727d37dcf986f7`將已過C38形體／256材質設為V11開發預設，映射／geometry／C36桌／cashier／routes／camera／economy不改。270tests、build257各182runtime及502資產重建byte同；真UI0→3→8→reload8→2→售罄0→reload0已過。完整顧客交接／雙route、Low/ReduceMotion仍在驗證，不能當完成或release認證；原始檢查紀錄仍在執行環境，完成後固定來源證據提交本PR。
+- main僅文件指標／功能未合併，PR8仍Draft；公開V17未改。整體原圖未接受，無merge／Site／Library或LTC重試／Normal玩家存檔／Chrome／Unity／關機操作，無需使用者動作的權限阻塞。
 
 ## V11 C39後牆—右窗單一材質候選 — 2026-10-27T06:51:02+08:00
 
