@@ -6,4 +6,6 @@ process.env.VITE_V11_FORM_VALUES??='control';
 if(!['control','shape','values','combined'].includes(process.env.VITE_V11_FORM_VALUES))throw Error('Unknown bounded C31 authoring variant');
 process.env.VITE_V11_GRAY_FORMS??='control';
 if(!['control','old-gray','gray'].includes(process.env.VITE_V11_GRAY_FORMS))throw Error('Unknown C32 gray gate variant');
+process.env.VITE_V11_BOUNDED_MATERIAL??='control';
+if(!['control','base','values'].includes(process.env.VITE_V11_BOUNDED_MATERIAL))throw Error('Unknown C34 bounded material variant');
 export default defineConfig({});

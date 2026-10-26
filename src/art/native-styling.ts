@@ -1,3 +1,4 @@
+import{bindExistingFlowerAtlas}from'./bounded-material-v11';
 import {composeMixedStyling} from './mixed-display-v11';
 import {buildV11Garden,buildV11Styling} from './shop-v11';
 /** Original fixed shop styling, not inventory grants or new catalogue entries.
@@ -45,4 +46,4 @@ export function legacyV9WindowCanopy():Part[]{
  return out;
 }
 
-export const nativeStylingRecipe=()=>composeMixedStyling(buildV11Styling(1.10,true)),nativeWindowCanopy=buildV11Garden;
+export const nativeStylingRecipe=()=>bindExistingFlowerAtlas(composeMixedStyling(buildV11Styling(1.10,true))),nativeWindowCanopy=buildV11Garden;
