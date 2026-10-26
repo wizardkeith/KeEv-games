@@ -5,7 +5,7 @@
   "sha256": "6f5b11f15d45bcb252cd1fca80f0534facd2dba68d2e4a25d92aa3bde9150ccd",
   "rebuild": "node --import tsx tools/export-native-products.ts",
   "sourceSha256": {
-    "src/art/surface-finish-v11.ts": "badd75f6b1d17c4f5e89d77014dd02164bfc4fbc38685af639f87191460000b7",
+    "src/art/surface-finish-v11.ts": "799d7d36c00ad3c84a3def989760a0014c88f90f5054eac996e1204bbbec3a46",
     "src/art/native-materials.ts": "5c43ce7aa5c7d85db19ac0cda640fd31039ef91df38be393a4509e3c6e6ad226",
     "tools/paint-v11-celadon.py": "42fbba868b30fbacd08d98c7de5344b22190cfdc7a9c5b7a7c6d13852e359888",
     "assets/authoring/native-v11/celadon-provenance.json": "e79dbb56c904925de0437f800e5909da4ae9f1f03c588ba8a1f3ebbe8ba786cb",

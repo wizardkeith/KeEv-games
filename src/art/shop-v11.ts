@@ -1,3 +1,4 @@
+import {wovenPlanter} from './woven-planter-v11';import {floorLeaf} from './floor-leaf-v11';
 /** V11 target slice: original branching botanicals, woven planters, layered
  * window garden and decorative (non-stock) fixture staging. All are real mesh
  * surfaces. Door/counter/table envelopes and economic objects remain in V10. */
@@ -19,17 +20,23 @@ export function leaf(at:V3,length:number,width:number,angle:number,tilt:number,c
  for(let side=0;side<2;side++){g.positions.push(...rotate(0,length*.48,length*.13+side*.0015));g.uvs.push(.5,.48);for(const [u,t]of rim){g.positions.push(...rotate(u*width*.5,t*length,.06*length*Math.sin(t*Math.PI)+.00075));g.uvs.push(u*.5+.5,t);}for(let j=0;j<segments;j++){const a=side*(segments+1),b=a+1+j,c=a+1+(j+1)%segments;g.indices.push(...(side?[a,b,c]:[a,c,b]));}}
  return {...M(finishSculpt(g),color),baseColorTexture:'/assets/native-v11/broadleaf-albedo.png'};
 }
-function batch(parts:NativeSurface[]):NativeSurface[]{const groups=new Map<string,NativeSurface[]>();for(const p of parts){const key=p.role+':'+p.color+':'+(p.baseColorTexture??'')+':'+(p.roughness??'');groups.set(key,[...(groups.get(key)??[]),p]);}return [...groups.values()].map(parts=>{const g:Geometry&{uvs:number[]}={positions:[],normals:[],indices:[],uvs:[]};for(const p of parts){const a=p.shape==='mesh'?p.geometry:geometry(p),at=p.shape==='mesh'?p.at:[0,0,0],n=g.positions.length/3;g.positions.push(...a.positions.map((v,i)=>v+at[i%3]));g.normals.push(...a.normals);g.indices.push(...a.indices.map(v=>v+n));g.uvs.push(...((a as Geometry&{uvs?:number[]}).uvs??Array(a.positions.length/3*2).fill(0)));}return {...M(g,parts[0].color,parts[0].role??'leaf'),...(parts[0].roughness!==undefined?{roughness:parts[0].roughness}:{}),...(parts[0].baseColorTexture?{baseColorTexture:parts[0].baseColorTexture}:{})};});}
+function batch(parts:NativeSurface[]):NativeSurface[]{const groups=new Map<string,NativeSurface[]>();for(const p of parts){const key=p.role+':'+p.color+':'+(p.baseColorTexture??'')+':'+(p.roughness??'')+':'+(p.finish??'');groups.set(key,[...(groups.get(key)??[]),p]);}return [...groups.values()].map(parts=>{const g:Geometry&{uvs:number[]}={positions:[],normals:[],indices:[],uvs:[]};for(const p of parts){const a=p.shape==='mesh'?p.geometry:geometry(p),at=p.shape==='mesh'?p.at:[0,0,0],n=g.positions.length/3;g.positions.push(...a.positions.map((v,i)=>v+at[i%3]));g.normals.push(...a.normals);g.indices.push(...a.indices.map(v=>v+n));g.uvs.push(...((a as Geometry&{uvs?:number[]}).uvs??Array(a.positions.length/3*2).fill(0)));}return {...M(g,parts[0].color,parts[0].role??'leaf'),...(parts[0].roughness!==undefined?{roughness:parts[0].roughness}:{}),...(parts[0].baseColorTexture?{baseColorTexture:parts[0].baseColorTexture}:{}),...(parts[0].finish?{finish:parts[0].finish}:{})};});}
 function scaled(s:NativeSurface,scale:number):NativeSurface{return s.shape==='mesh'?{...s,at:s.at.map(v=>v*scale) as V3,geometry:{...s.geometry,positions:s.geometry.positions.map(v=>v*scale)}}:{...s,at:s.at.map(v=>v*scale) as V3,size:s.size.map(v=>v*scale) as V3};}
+/** Blade bases are sampled from the actual swept branch rings, rather than
+ * placed along an unrelated straight line. Seven external wind pivots remain. */
+export function floorPlantBranch(i:number){
+ const a=i*2.39996,pivot:V3=[Math.cos(a)*.025,.34,Math.sin(a)*.025],height=.38+i%3*.13,tip:V3=[Math.cos(a)*(.12+i%2*.04),height,Math.sin(a)*(.12+i%2*.04)];
+ const stem=twig([[0,0,0],[tip[0]*.15,height*.28,tip[2]*.15],[tip[0]*.80,height*.72,tip[2]*.80],tip],.0045),leaves:NativeMesh[]=[];
+ for(let k=0;k<4;k++){const ring=k+2,pos:V3=[0,1,2].map(d=>[0,1,2,3].reduce((sum,j)=>sum+stem.geometry.positions[(ring*4+j)*3+d],0)/4)as V3;
+  leaves.push(floorLeaf(pos,.20+(3-k)*.025,.10+(3-k)*.017,Math.PI/2-a+(k%2?.68:-.68),.8+(i%3)*.28+(1.5-k)*.04,['#64804D','#8BA665','#A4B877','#758F55'][(i+k)%4]));
+ }
+ return{pivot,stem,leaves};
+}
 export function buildV11Plant(scale=1):NativePlantParts{
  if(!Number.isFinite(scale)||scale<=0)throw new RangeError('positive plant scale');
- const base:NativeSurface[]=[M(sculptLoft([{y:.012,x:.12,z:.12},{y:.045,x:.136,z:.136},{y:.29,x:.165,z:.165},{y:.33,x:.164,z:.164}],24),'#B39567','wood')];
- base.push({shape:'cylinder',size:[.258,.30,.258],at:[0,.174,0],top:1,color:'#8C7050',role:'ceramic'});
- for(let ring=0;ring<9;ring++){const y=.026+ring*.034,r=.126+y*.115;const points:V3[]=Array.from({length:25},(_,j)=>{const a=j/24*Math.PI*2;return [Math.cos(a)*r,y+.002*Math.sin(j*Math.PI),Math.sin(a)*r]});base.push(twig(points,.0036,ring%2?'#C9AC7E':'#B39567'));}
+ const base:NativeSurface[]=[...wovenPlanter(scale),{shape:'cylinder',size:[.258,.30,.258],at:[0,.174,0],top:1,color:'#8C7050',role:'ceramic'}];
  base.push({shape:'cylinder',size:[.299,.012,.299],at:[0,.329,0],top:1,color:'#5C4C34',role:'paint'});
- const leaves=Array.from({length:7},(_,i)=>{const a=i*2.39996,pivot:V3=[Math.cos(a)*.025,.34,Math.sin(a)*.025],recipe:NativeSurface[]=[];const height=.38+i%3*.13;const tip:V3=[Math.cos(a)*(.18+i%2*.08),height,Math.sin(a)*(.18+i%2*.08)];recipe.push(twig([[0,0,0],[tip[0]*.3,height*.6,tip[2]*.3],tip],.0045));
-  for(let k=0;k<4;k++){const t=.30+k*.19,pos:V3=[tip[0]*t,height*t,tip[2]*t];recipe.push(leaf(pos,.20+(3-k)*.025,.10+(3-k)*.017,a+(k%2?1.2:-1.2),.8+(i%3)*.28,['#64804D','#8BA665','#A4B877','#758F55'][(i+k)%4],12));}
-  return {pivot:pivot.map(v=>v*scale) as V3,recipe:batch(recipe.map(s=>({...s,role:'leaf' as const,color:s.role==='wood'?'#64804D':s.color,baseColorTexture:'/assets/native-v11/broadleaf-albedo.png'}))).map(s=>scaled(s,scale))};});
+ const leaves=Array.from({length:7},(_,i)=>{const branch=floorPlantBranch(i);return {pivot:branch.pivot.map(v=>v*scale)as V3,recipe:batch([branch.stem,...branch.leaves].map(s=>({...s,role:'leaf' as const,color:s.role==='wood'?'#64804D':s.color,baseColorTexture:'/assets/native-v11/broadleaf-albedo.png'}))).map(s=>scaled(s,scale))};});
  return {base:batch(base).map(s=>scaled(s,scale)),leaves};
 }
 export function buildV11Garden():NativeSurface[]{
@@ -39,7 +46,7 @@ export function buildV11Garden():NativeSurface[]{
    for(let k=0;k<9;k++)out.push(leaf([cx+Math.cos(k*2.4)*.28,cy+Math.sin(k*2.4)*.11,cz+Math.sin(k*2.4)*.28],.30+k%2*.07,.17+k%3*.03,a+k*.7,.8+k%3*.4,['#A4BA75','#7E9D58','#BAC98B','#90AB69'][k%4]));
   }
  }
- const groups=new Map<string,NativeSurface[]>();for(const part of out){const key=part.role+':'+part.color+':'+(part.baseColorTexture??'');groups.set(key,[...(groups.get(key)??[]),part]);}return [...groups.values()].map(parts=>{const g:Geometry&{uvs:number[]}={positions:[],normals:[],indices:[],uvs:[]};for(const p of parts){const a=p.shape==='mesh'?p.geometry:geometry(p),at=p.shape==='mesh'?p.at:[0,0,0],n=g.positions.length/3;g.positions.push(...a.positions.map((v,i)=>v+at[i%3]));g.normals.push(...a.normals);g.indices.push(...a.indices.map(v=>v+n));g.uvs.push(...((a as Geometry&{uvs?:number[]}).uvs??Array(a.positions.length/3*2).fill(0)));}for(let i=0;i<g.positions.length;i++)g.positions[i]-=[-5.8,2,0][i%3];return {...M(g,parts[0].color,parts[0].role??'leaf',[-5.8,2,0]),...(parts[0].baseColorTexture?{baseColorTexture:parts[0].baseColorTexture}:{})};});
+ const groups=new Map<string,NativeSurface[]>();for(const part of out){const key=part.role+':'+part.color+':'+(part.baseColorTexture??'');groups.set(key,[...(groups.get(key)??[]),part]);}return [...groups.values()].map(parts=>{const g:Geometry&{uvs:number[]}={positions:[],normals:[],indices:[],uvs:[]};for(const p of parts){const a=p.shape==='mesh'?p.geometry:geometry(p),at=p.shape==='mesh'?p.at:[0,0,0],n=g.positions.length/3;g.positions.push(...a.positions.map((v,i)=>v+at[i%3]));g.normals.push(...a.normals);g.indices.push(...a.indices.map(v=>v+n));g.uvs.push(...((a as Geometry&{uvs?:number[]}).uvs??Array(a.positions.length/3*2).fill(0)));}for(let i=0;i<g.positions.length;i++)g.positions[i]-=[-5.8,2,0][i%3];return {...M(g,parts[0].color,parts[0].role??'leaf',[-5.8,2,0]),...(parts[0].baseColorTexture?{baseColorTexture:parts[0].baseColorTexture}:{}),...(parts[0].finish?{finish:parts[0].finish}:{})};});
 }
 /** Hanging greenery is fixture decoration, not stock, a collectible or a grant. */
 export function buildV11TrailingGreenery():NativeSurface[]{

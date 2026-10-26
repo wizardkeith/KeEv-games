@@ -11,7 +11,7 @@
     "assets/masters/native-v11/coat-rest-input.json": "a0ee69e780e94d7097b0c024444a9e141077601a6ecae6f6b649d9814c6ea7b5",
     "assets/masters/native-v11/coat-rest/coat-rest-retopo.json": "184028af0817438ca03896b6927b2c2147ac4cec15a22363466df9346b7e6c15",
     "assets/masters/native-v11/coat-rest/coat-rest-authoring.blend": "3c7a3486c233949c6e187f0ba086f822ff65bc5ca0095b496015c9087786ad40",
-    "src/art/surface-finish-v11.ts": "badd75f6b1d17c4f5e89d77014dd02164bfc4fbc38685af639f87191460000b7",
+    "src/art/surface-finish-v11.ts": "799d7d36c00ad3c84a3def989760a0014c88f90f5054eac996e1204bbbec3a46",
     "src/art/garment-uv-v11.ts": "4f45eeec19f5d170e570e3b841623171f7cd1fb2ef87387791d881e43aa5077b",
     "tools/paint-v11-fabrics.py": "85f96d2c7b42bf12409dddf612473137d3c771984311b06e687a09d494526dbe",
     "tools/export-v11-garment-input.ts": "b20bedff29a87f4a366767a5a52d7cfb9587e18dcbc7f22ceb0b7fc08f9b798a",

@@ -6,6 +6,12 @@
   "uv": "nativeSurfaceGeometry metre UV; KHR_texture_transform for floor/cloth; embedded original V9 colour/normal maps; original actual-geometry Cycles floor contact AO in UV2; no dynamic objects baked",
   "assets": [
     {
+      "id": "planter-base-v11",
+      "file": "assets/masters/native-v4/planter-base-v11.glb",
+      "bytes": 171084,
+      "sha256": "4f57a8d84cd65eb4b16165a809aefee7744cea22a31ec70173891882cbcdf9f5"
+    },
+    {
       "id": "room",
       "file": "assets/masters/native-v4/room.glb",
       "bytes": 5940208,
