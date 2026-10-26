@@ -1,0 +1,24 @@
+{
+  "source": "tools/paint-v11-display-quality.py",
+  "method": "Original explicit reflectance/roughness/normal fields, physically scaled UVs, white surface tint avoids double brown multiplication. No scene rendering or reference pixels copied.",
+  "size": [
+    512,
+    512
+  ],
+  "finishes": [
+    "stoneware",
+    "display-linen",
+    "display-oak"
+  ],
+  "files": {
+    "stoneware-albedo.png": "421e1f3ba12505bcd17326c26e85f3b8f021addbb763952fe45faa9401f21ded",
+    "stoneware-normal.png": "2f9751817214fd4977bc8c276f44acdd06dda58c66639a7f637146401a9011dc",
+    "stoneware-orm.png": "ee83c178ae1ab030804268cdf315c0a6e8590462532d25a60b4f170c616bbafb",
+    "display-linen-albedo.png": "1cb751e243036845a1e4823ed59eaa7720699494ab90c46d2c82db7b63fa55cc",
+    "display-linen-normal.png": "1ddca02ca7781556c9edca20ccedfd9ce186b08fd2b31e838642c4c1ce5b7c82",
+    "display-linen-orm.png": "acccac2e8a781bea1f12a64f5bdd22a9d16b395cea313f7e464035275e2855d6",
+    "display-oak-albedo.png": "697422d30122b3af106ea77373820e9584bf0d12baf713439b13055acbf48852",
+    "display-oak-normal.png": "8eacaecd7703a7ee0413c9365bc0b873cb751613f6106a7753244f32362c9d6e",
+    "display-oak-orm.png": "36121714f136481966bbdfc042c918cb3868b3c8b7eb9dcdeae10135b77f068f"
+  }
+}

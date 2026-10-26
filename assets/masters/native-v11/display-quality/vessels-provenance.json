@@ -1,0 +1,11 @@
+{
+  "source": "tools/build-v11-display-vessels.py",
+  "sourceSha256": "979b255e689928f0168d5d9a04c6b43e7dffb1d8c682aef65153f9058308dff7",
+  "units": "metres RH Y-up exported / Blender Z-up master",
+  "method": "Editable closed spline-turned hollow vessel shells and swept handle meshes with actual height-aligned UV; original authored stoneware material inputs",
+  "scope": "Central table visual-quality slice only; mug remains existing SKU and jug remains fixed non-inventory flower holder",
+  "triangles": {
+    "mug": 5204,
+    "jug": 5204
+  }
+}

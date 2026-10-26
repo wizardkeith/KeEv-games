@@ -45,4 +45,4 @@ export function legacyV9WindowCanopy():Part[]{
  return out;
 }
 
-export const nativeStylingRecipe=()=>composeMixedStyling(buildV11Styling(1.10)),nativeWindowCanopy=buildV11Garden;
+export const nativeStylingRecipe=()=>composeMixedStyling(buildV11Styling(1.10,true)),nativeWindowCanopy=buildV11Garden;

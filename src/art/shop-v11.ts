@@ -128,7 +128,7 @@ function bouquet():NativeSurface[]{
  }
  return out;
 }
-export function buildV11Styling(centralBouquetScale=.95):NativeSurface[]{
+export function buildV11Styling(centralBouquetScale=.95,qualitySlice=false):NativeSurface[]{
  const base=buildV10Styling().slice(0,14);
  // The six 16mm wall battens have subpixel 3mm bevels at normal play scale.
  // Keep their exact bounds and spend those hidden bevel triangles on the
@@ -136,7 +136,12 @@ export function buildV11Styling(centralBouquetScale=.95):NativeSurface[]{
  for(const[i,x]of[-3.48,-2.48,-1.48,-.48,.52,1.52].entries())base[i+1]=M(geometry({shape:'box',size:[.016,.79,.022],at:[x,.56,3.205],color:'#C4AC8A'}),'#C4AC8A','wood');
  const out=[...base,...buildV11TrailingGreenery(),...counterStationery()];
  for(const [x,y,z,scale]of [[-4.18,.901,-.91,1.1],[-.53,1.0735,-.05,centralBouquetScale],[1.35,1.111,-1.47,.90]])for(const part of bouquet()){
-  const p=scaled(part,scale);out.push({...p,at:[p.at[0]+x,p.at[1]+y,p.at[2]+z]});
+  const p=scaled(part,scale);
+  if(qualitySlice&&x===-.53&&p.role==='ceramic'&&p.shape==='mesh'){
+   const uvs:number[]=[];for(let i=0;i<p.geometry.positions.length;i+=3){const[px,py,pz]=p.geometry.positions.slice(i,i+3);uvs.push((Math.atan2(pz,px)/(2*Math.PI)+1)%1,py/(.28*scale));}
+   const g:Geometry&{uvs:number[]}={positions:[],normals:[],indices:[],uvs:[]};for(let j=0;j<p.geometry.indices.length;j+=3){const ids=p.geometry.indices.slice(j,j+3),us=ids.map(k=>uvs[k*2]),seam=Math.max(...us)-Math.min(...us)>.5;for(const k of ids){g.indices.push(g.positions.length/3);g.positions.push(...p.geometry.positions.slice(k*3,k*3+3));g.normals.push(...p.geometry.normals.slice(k*3,k*3+3));g.uvs.push(uvs[k*2]+(seam&&uvs[k*2]<.5?1:0),uvs[k*2+1]);}}
+   out.push({...p,color:'#FFFFFF',roughness:.70,finish:'stoneware',geometry:g,at:[p.at[0]+x,p.at[1]+y,p.at[2]+z]});
+  }else out.push({...p,at:[p.at[0]+x,p.at[1]+y,p.at[2]+z]});
  }
  return batch(out);
 }

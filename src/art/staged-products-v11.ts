@@ -1,3 +1,4 @@
+import {centralMugRecipe} from './display-quality-v11';
 /** Physical inventory samples batched per shelf, using actual stock only. The
  * presentation cap is eight; simulation demand/service/stock rules do not read
  * this module. No decorative goods masquerade as player-owned inventory. */
@@ -5,7 +6,7 @@ import {nativeProductRecipe} from './native-products';
 import {nativeSurfaceGeometry,type NativeSurface} from './native-characters';
 import {displaySamples} from './native-display';import {actualDisplaySupport} from './display-support-v11';
 export function stagedProducts(id:string,color:string,count:number,table:number):NativeSurface[]{
- const recipe=nativeProductRecipe(id,color),points=recipe.flatMap(p=>{const g=nativeSurfaceGeometry(p);return Array.from({length:g.positions.length/3},(_,i)=>g.positions.slice(i*3,i*3+3));}),ys=points.map(p=>p[1]),minY=Math.min(...ys),height=Math.max(...ys)-minY,foot=points.filter(p=>Math.abs(p[1]-minY)<1e-8);
+ const recipe=id==='off.mug'&&table===1?centralMugRecipe():nativeProductRecipe(id,color),points=recipe.flatMap(p=>{const g=nativeSurfaceGeometry(p);return Array.from({length:g.positions.length/3},(_,i)=>g.positions.slice(i*3,i*3+3));}),ys=points.map(p=>p[1]),minY=Math.min(...ys),height=Math.max(...ys)-minY,foot=points.filter(p=>Math.abs(p[1]-minY)<1e-8);
  return displaySamples(id,count,table).flatMap((sample)=>{
   const c=Math.cos(sample.yaw),s=Math.sin(sample.yaw),support=actualDisplaySupport(table,foot.map(([x,,z])=>[(x*c+z*s)*sample.scale+sample.at[0],(-x*s+z*c)*sample.scale+sample.at[2]])),stack=sample.stackLayer*height*sample.scale;
   return recipe.map(part=>{const g=nativeSurfaceGeometry(part);

@@ -1,3 +1,4 @@
+import {centralLinenRecipe} from './display-quality-v11';
 /** Target slice furniture/architecture reconstruction. Same action heights and
  * station pivots; wider display joinery, counter wing and real widened window
  * aperture. Route clearance envelopes are updated with the physical fixtures. */
@@ -68,7 +69,8 @@ export function buildV11Display(variant=0):NativeSurface[]{
   out.push({...board([w,.032,d],[x,.9925+h-.016,z],'#CCA77A','wood',.008),roughness:.64});
   for(const side of [-1,1])out.push(board([.035,h-.032,d-.035],[x+side*(w/2-.035),.9925+(h-.032)/2,z],'#AD8355','wood',.005));
  }
- const retained=buildV10Display(variant).slice(9);
+ const retained=buildV10Display(variant).slice(9).filter(p=>variant!==1||p.role!=='fabric');
+ if(variant===1)out.push(...centralLinenRecipe());
  out.push(...retained.map(p=>{if(p.role==='metal'||p.role==='paper'){const g=nativeSurfaceGeometry(p);for(let i=0;i<g.positions.length;i+=3){g.positions[i]-=1.24;g.positions[i+2]-=.15;}if(g.uvs===undefined)delete g.uvs;return {...p,shape:'mesh' as const,role:p.role,geometry:g,at:[0,0,0] as V3};}return p.role==='fabric'?zScale(p,0,1.10/.95):p;}),...paperCorner(variant));
  // Fixed work tools on the newly rebuilt left extension fill a mixed display
  // mass without pretending these are player-owned sellable units.
@@ -84,7 +86,7 @@ export function buildV11Display(variant=0):NativeSurface[]{
    out.push({shape:'mesh',at:[0,0,0],geometry:finishSculpt(g),color:'#E7DDC8',role:'paper'});
   }
  }
- return compileFixture(out.map(p=>p.role==='wood'&&p.roughness!==.64?{...p,color:'#AD8355'}:p));
+ return compileFixture(out.map(p=>variant===1&&p.role==='wood'&&p.roughness===.64?{...p,color:'#FFFFFF',finish:'display-oak'}:p.role==='wood'&&p.roughness!==.64?{...p,color:'#AD8355'}:p));
 }
 export const counterV11Envelope={minX:.48,maxX:3.55,minZ:-1.96,maxZ:-1.04,surfaceY:1.111};
 export function buildV11Counter():NativeSurface[]{

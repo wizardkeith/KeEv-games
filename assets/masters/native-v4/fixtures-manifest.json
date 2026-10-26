@@ -6,6 +6,12 @@
   "uv": "nativeSurfaceGeometry metre UV; KHR_texture_transform for floor/cloth; embedded original V9 colour/normal maps; original actual-geometry Cycles floor contact AO in UV2; no dynamic objects baked",
   "assets": [
     {
+      "id": "quality-mug-v11",
+      "file": "assets/masters/native-v4/quality-mug-v11.glb",
+      "bytes": 886060,
+      "sha256": "c9b3f9e5ca18f71ec86392370e7a477708bc2627a4b6b184b4ea7955bdeccef7"
+    },
+    {
       "id": "entry-garden-v11",
       "file": "assets/masters/native-v4/entry-garden-v11.glb",
       "bytes": 2511320,
@@ -26,8 +32,8 @@
     {
       "id": "styling-v9",
       "file": "assets/masters/native-v4/styling-v9.glb",
-      "bytes": 2716152,
-      "sha256": "df69c308d8bab33bcbe1d8d65c07662883de138b0c0e0a0cceafa7878e35ecdb"
+      "bytes": 2837472,
+      "sha256": "c259dca6542137b3ea8450378c2b26d723e11c59514e1b1d0f4ca21c1913d098"
     },
     {
       "id": "window-canopy-v9",
@@ -50,8 +56,8 @@
     {
       "id": "display-2",
       "file": "assets/masters/native-v4/display-2.glb",
-      "bytes": 2335144,
-      "sha256": "d1674c82dec7a6a6c8dd22f5a7b7c0ce5cc95e54604a2417a64fa2a27381bce2"
+      "bytes": 2830852,
+      "sha256": "28b59864b9afae80b4b0db2ca76af64b7e1b6041bbd3af2831d9ea14b7053ec0"
     },
     {
       "id": "display-3",
