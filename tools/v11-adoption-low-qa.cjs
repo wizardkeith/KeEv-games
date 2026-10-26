@@ -2,7 +2,7 @@
  * No private player profile, pose, inventory or clock injection. */
 const{chromium}=require('playwright'),fs=require('fs'),assert=require('node:assert/strict'),{createHash}=require('node:crypto');
 const url=process.env.QA_URL,out=process.env.QA_OUTPUT,catalog=require('../src/content/catalog.json');fs.mkdirSync(out,{recursive:true});
-const atlasNames=['petal-form-values-c34.png','linen-form-values-c34.png'];
+const atlasNames=['petal-form-values-c34.png','linen-form-values-c34.png',...(process.env.QA_EXPECT_BACKWALL_ADOPTED==='1'?['display-oak-albedo.png','broadleaf-albedo.png','soft-window-specular.env']:[])];
 async function state(p,mode){return p.evaluate(mode=>new Promise(resolve=>{const r=indexedDB.open('next-stop-little-shop-w1');r.onsuccess=()=>{const d=r.result,q=d.transaction('saves','readonly').objectStore('saves').get('shop.w1.'+mode);q.onsuccess=()=>{resolve(q.result);d.close();};};}),mode);}
 (async()=>{const b=await chromium.launch({executablePath:'/usr/bin/chromium',headless:true,args:['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']});const cases=[];try{
  for(const reduced of[false,true]){const c=await b.newContext({viewport:{width:1280,height:900},hasTouch:true,reducedMotion:reduced?'reduce':'no-preference'});try{const p=await c.newPage(),errors=[],assets={},pending=[];p.setDefaultTimeout(120000);p.on('pageerror',e=>errors.push(String(e)));p.on('response',r=>{const name=r.url().split('/').at(-1);if(atlasNames.includes(name))pending.push((async()=>{assert.equal(r.status(),200);const data=await r.body();assets[name]=createHash('sha256').update(data).digest('hex');})());});
