@@ -14,9 +14,9 @@
     "No device or WebGL visual validation is implied by this export."
   ],
   "sources": {
-    "src/art/table-look-v11.ts": "c6a27cae5299e1808b567be352e935d53e3a0cd1bfaf6b977e2ae42d84f5d990",
+    "src/art/table-look-v11.ts": "d5281061589bc46d3b077dc4f2265c711c968893bfae8e32324c159e1b88ffa1",
     "src/art/table-reflection-v11.ts": "26531a5ec2d53d844315e2f614c5bb3c63faf9ae96358d308ac26b7d318854ae",
-    "src/art/table-contact-v11.ts": "8cc0816baeae2999eab3e28d05ba7683096befa1ada5683b82fbe70b46356175",
+    "src/art/table-contact-v11.ts": "8eedbcbedb34cc1b374c51f7d3851fd81458cf6fcca1c1a9a63165cb5cdfd751",
     "src/art/table-contact-atlas-v11.ts": "c10a740caaa32f84fd9522d211cc5276154cc2466a346da94257478b7b027201",
     "tools/export-v11-table-contact.ts": "24079a5ae9ec06934baa6673b889643d141cbbd095935f3576772da454ba5d2f",
     "tools/bake-v11-table-contact.py": "e40c6d71dcdc64a6b45018a55e0c15f938e60695c50f3c083272b2d2c7430bb2",
@@ -428,6 +428,7 @@
             "bias": 0.00005,
             "lightSizeUVRatio": 0.065,
             "darkness": 0.12,
+            "refresh": "Static casters: render once and invalidate on real stock add/remove or target resize; moving-actor sun shadow stays unchanged",
             "light": "existing central practical, position/direction/intensity unchanged; no LTC, added light or shadow image",
             "low": "existing central light disabled; contact target not rendered"
           },

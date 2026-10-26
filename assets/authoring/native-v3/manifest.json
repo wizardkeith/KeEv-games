@@ -4,7 +4,7 @@
   "rebuild": "node --import tsx tools/export-native-characters.ts",
   "runtime": "world.ts uses nativeCharacterParts and nativeGrouped; these GLBs are reusable masters, not the runtime loading path",
   "sourceSha256": {
-    "src/art/table-look-v11.ts": "c6a27cae5299e1808b567be352e935d53e3a0cd1bfaf6b977e2ae42d84f5d990",
+    "src/art/table-look-v11.ts": "d5281061589bc46d3b077dc4f2265c711c968893bfae8e32324c159e1b88ffa1",
     "src/art/orm-channels-v11.ts": "6ad3f152cb68659b9f4aec270ff992d763360c2dd3c9fe54988f240bb94a4e1a",
     "src/art/cloth-diagnostic-v11.ts": "92c47df7d602c9fae4b12d45e62e8fb80f66dddc5312cd6e1f1cd3751ac6b720",
     "src/art/native-view.ts": "237c7fa164702a498ed1a987e08a920c31a4d40d4c0e24a1b3ee3f36357ca5cf",
