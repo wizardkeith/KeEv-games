@@ -1,0 +1,38 @@
+{
+  "source": "Retained accepted C33flower/C25jug raw meshes, no modifications",
+  "mouthHeight": 0.3707999885082245,
+  "rimRadii": [
+    0.07156846144251945,
+    0.07243153414558337
+  ],
+  "C27Scale": 1.1,
+  "parts": [
+    {
+      "part": 0,
+      "minRadius": 0.0043391418921985775,
+      "maxRadius": 0.009022557435524084,
+      "outsideEvenOuterRim": false,
+      "minimumWorldRadialOverhangMetres": 0.0
+    },
+    {
+      "part": 11,
+      "minRadius": 0.08786875661439907,
+      "maxRadius": 0.09282392784319861,
+      "outsideEvenOuterRim": true,
+      "minimumWorldRadialOverhangMetres": 0.022431633067376763
+    },
+    {
+      "part": 22,
+      "minRadius": 0.09883230325754555,
+      "maxRadius": 0.10357787657483447,
+      "outsideEvenOuterRim": true,
+      "minimumWorldRadialOverhangMetres": 0.034260976672176216
+    }
+  ],
+  "lockedSourceSHA256": {
+    "flower-jug.json": "90bc93ede6dfc0eaf0fe8b56e58909c9e0bd0b9f8d5a56ccc7acde83fbe29dd4",
+    "flower-spray-c33.json": "fa8736d8dc37a7d78cc66ad893d9ffb7cde28d7dde712cfa9bfca99e763b5c06"
+  },
+  "status": "blocked",
+  "limits": "Cross-section proof, not a new physical device or artistic acceptance. C33geometry lock retained."
+}

@@ -1,0 +1,89 @@
+{
+  "application": "56fd873f2c5d6d28708c783c3f42fa5838d9446b",
+  "readiness": "BLOCKED",
+  "unitTests": {
+    "total": 258,
+    "pass": 257,
+    "fail": 1,
+    "failure": "C33 side trunks cross outside actual vase mouth; original neck-clearance guard retained"
+  },
+  "defaultRuntimeFiles": 182,
+  "ordinaryDefaultParity": true,
+  "highLifecycleObserved": {
+    "greeted": true,
+    "contact": true,
+    "realSettlement": true,
+    "actualMargin": true,
+    "servedExitAndStaffReturn": true,
+    "staffReturnObserved": true,
+    "servedExitObserved": true
+  },
+  "flowVideoSeconds": 464.68,
+  "flowCDPFrames": 176,
+  "stockPhases": [
+    {
+      "name": "00-empty",
+      "cash": 5000,
+      "purchases": 0,
+      "eventSequence": 0
+    },
+    {
+      "name": "01-three",
+      "cash": 4565,
+      "purchases": 435,
+      "eventSequence": 0
+    },
+    {
+      "name": "02-eight",
+      "cash": 3840,
+      "purchases": 1160,
+      "eventSequence": 0
+    },
+    {
+      "name": "03-eight-reload",
+      "cash": 3840,
+      "purchases": 1160,
+      "eventSequence": 0
+    },
+    {
+      "name": "04-hour1-stock2",
+      "cash": 5490,
+      "purchases": 1160,
+      "eventSequence": 18
+    },
+    {
+      "name": "04-hour2-stock0",
+      "cash": 6000,
+      "purchases": 1160,
+      "eventSequence": 24
+    },
+    {
+      "name": "05-soldout-reload",
+      "cash": 6000,
+      "purchases": 1160,
+      "eventSequence": 24
+    }
+  ],
+  "lowAndReducedCases": [
+    {
+      "name": "low-motion",
+      "atlasSHA256": {
+        "petal-form-values-c34.png": "8b737bb64fded646291553a5ae02f8239edfc9d8fefd4efdec32e4fc7524cc74",
+        "linen-form-values-c34.png": "956b7673c6a61c4f133c493326e7fa4983c4d98c3e288fb3c5c4cd105b123563"
+      },
+      "normal": "fresh isolated baseline unchanged"
+    },
+    {
+      "name": "low-reduced",
+      "atlasSHA256": {
+        "petal-form-values-c34.png": "8b737bb64fded646291553a5ae02f8239edfc9d8fefd4efdec32e4fc7524cc74",
+        "linen-form-values-c34.png": "956b7673c6a61c4f133c493326e7fa4983c4d98c3e288fb3c5c4cd105b123563"
+      },
+      "normal": "fresh isolated baseline unchanged"
+    }
+  ],
+  "modelLockRetained": true,
+  "overallTargetArtAccepted": false,
+  "publicSiteChanged": false,
+  "noDeniedOrUncertainExternalMutation": true
+}

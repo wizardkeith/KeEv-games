@@ -1,0 +1,30 @@
+✔ central flower jug is physically hollow and supported, with both actual swept handle ends inside the body surface thickness (19.276705ms)
+✔ new central non-stock vessel remains within original whole styling/canopy cap and material budget, no split-budget evasion (252.729945ms)
+✖ adopted central spray has15 closed physical primary surfaces and actual branch mouths pass through the jug opening (11.076977ms)
+✔ adopted lower hem keeps24 physically separate fringe strands (10.111898ms)
+✔ central floral body and three actual books fit separate supported rear platforms with physical clearance (195.674485ms)
+✔ linen follows the actual25mm tabletop bevel with real thickness clearance instead of bridging a centimetre air gap (6.011337ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1486.045451
+
+✖ failing tests:
+
+test at tests/v11-flower-jug.test.ts:1:2097
+✖ adopted central spray has15 closed physical primary surfaces and actual branch mouths pass through the jug opening (11.076977ms)
+  AssertionError [ERR_ASSERTION]: stems cross inside actual neck cavity, never through the vessel wall
+      at TestContext.<anonymous> (/workspace/game-v10-art-life/tests/v11-flower-jug.test.ts:6:356)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
