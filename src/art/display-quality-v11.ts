@@ -1,3 +1,5 @@
+import flowerSpray from '../../assets/masters/native-v11/display-quality/flower-spray.json';
+import flowerJug from '../../assets/masters/native-v11/display-quality/flower-jug.json';
 import crown from '../../assets/masters/native-v11/display-quality/window-crown.json';
 /** C24 standard-quality CENTRAL TABLE slice. Geometry/material assets only;
  * existing mug SKU authority, counts, cost, saves and other displays unchanged.
@@ -13,3 +15,8 @@ export function centralLinenRecipe():NativeSurface[]{return [structuredClone(lin
 export function centralLookbookRecipe(base:NativeSurface[]):NativeSurface[]{return base.map(p=>p.shape==='mesh'&&p.role==='paper'&&p.roughness===.951?{...p,color:'#FFFFFF',roughness:.96,baseColorTexture:'/assets/native-v11/display-journal-cover.png',geometry:{...p.geometry,uvs:[0,1,1,1,1,0,0,0]}}:p);}
 
 export function windowCrownRecipe():NativeSurface{const g=structuredClone(crown);for(let i=0;i<g.normals.length;i+=3){const length=Math.hypot(...g.normals.slice(i,i+3));for(let k=0;k<3;k++)g.normals[i+k]/=length;}return {shape:'mesh',at:[0,0,0],geometry:g,color:'#FFFFFF',role:'leaf',roughness:.91,baseColorTexture:'/assets/native-v11/window-crown-albedo.png'};}
+
+/** C25: existing central non-stock flower vessel, not the unused high jug. */
+export function centralFlowerJugRecipe():NativeSurface[]{return (structuredClone(flowerJug) as unknown as NativeSurface[]).map(p=>{if(p.shape==='mesh')for(let i=0;i<p.geometry.normals.length;i+=3){const length=Math.hypot(...p.geometry.normals.slice(i,i+3));for(let k=0;k<3;k++)p.geometry.normals[i+k]/=length;}return p;});}
+
+export function centralFlowerSprayRecipe():NativeSurface[]{return structuredClone(flowerSpray) as unknown as NativeSurface[];}

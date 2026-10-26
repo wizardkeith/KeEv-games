@@ -1,0 +1,25 @@
+{
+  "source": "tools/build-v11-display-jug.py",
+  "sourceSHA256": "eef045d6ca1f5787d90aa6e091b914417920d790b7629c40fe3f2d087a23e9ed",
+  "units": "metres RH Y-up export / editable Blender RH Z-up",
+  "scope": "ONLY replace existing central non-stock flowerholder, same support and arrangement; original high jug remains separate unused experiment",
+  "triangles": [
+    416,
+    84
+  ],
+  "handleTerminalCenters": [
+    [
+      0.08,
+      0.221,
+      0
+    ],
+    [
+      0.101,
+      0.088,
+      0
+    ]
+  ],
+  "handleRadius": 0.011,
+  "geometry": "13 authored radial profile rings,16 sectors, real closed cavity/foot; cubic swept attached handle, no painted fake vessel",
+  "limits": "Actual game comparison pending; no target acceptance"
+}

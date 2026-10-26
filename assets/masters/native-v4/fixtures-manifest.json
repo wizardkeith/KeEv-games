@@ -6,6 +6,18 @@
   "uv": "nativeSurfaceGeometry metre UV; KHR_texture_transform for floor/cloth; embedded original V9 colour/normal maps; original actual-geometry Cycles floor contact AO in UV2; no dynamic objects baked",
   "assets": [
     {
+      "id": "quality-flower-jug-v11",
+      "file": "assets/masters/native-v4/quality-flower-jug-v11.glb",
+      "bytes": 1682252,
+      "sha256": "9ee8bde9e6cc0f5c005cd29b16a2c06374dd802ee72bb12c5f0e80cf691c0617"
+    },
+    {
+      "id": "quality-flower-spray-v11",
+      "file": "assets/masters/native-v4/quality-flower-spray-v11.glb",
+      "bytes": 2264764,
+      "sha256": "792325d91b5624f277bc3a0769ff9519322490007323b3e851eccbcb8c35c55d"
+    },
+    {
       "id": "quality-crown-v11",
       "file": "assets/masters/native-v4/quality-crown-v11.glb",
       "bytes": 2497696,
@@ -44,8 +56,8 @@
     {
       "id": "styling-v9",
       "file": "assets/masters/native-v4/styling-v9.glb",
-      "bytes": 4367460,
-      "sha256": "6112fbb6c91206ecab042c801d08c0340f6f295ae5f2d5ecc76ce04f34035c63"
+      "bytes": 4367564,
+      "sha256": "645627d3a692ede261f730dcf5e9c956d1bb87a71d34f01313dcbc6728522d83"
     },
     {
       "id": "window-canopy-v9",
@@ -68,8 +80,8 @@
     {
       "id": "display-2",
       "file": "assets/masters/native-v4/display-2.glb",
-      "bytes": 2830848,
-      "sha256": "75212e801f389a0127dddb7b19a4ef6d19eb62c2a6138892dce61d001c9f9035"
+      "bytes": 2966556,
+      "sha256": "41a68a8bda81362da7749fd2957381b8279586401a4e971fb8dd375d0d3b91b7"
     },
     {
       "id": "display-3",

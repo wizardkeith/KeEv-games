@@ -1,3 +1,4 @@
+import {centralFlowerJugRecipe,centralFlowerSprayRecipe} from './display-quality-v11';
 import {wovenPlanter} from './woven-planter-v11';import {floorLeaf} from './floor-leaf-v11';
 /** V11 target slice: original branching botanicals, woven planters, layered
  * window garden and decorative (non-stock) fixture staging. All are real mesh
@@ -83,7 +84,7 @@ export function buildV11TrailingGreenery():NativeSurface[]{
 
 /** Original non-stock floral arrangements. They replace the retired window
  * flower primitive group and decorate furniture; they never imply inventory. */
-function bouquet():NativeSurface[]{
+export function bouquet():NativeSurface[]{
  const g:Geometry={positions:[],normals:[],indices:[]},profile=[[.001,0],[.075,0],[.10,.05],[.094,.18],[.043,.25],[.043,.28],[.034,.28],[.034,.25],[.083,.18],[.089,.05],[.066,.014],[.001,.014]],n=16;
  for(const [r,y]of profile)for(let j=0;j<n;j++){const a=j/n*Math.PI*2;g.positions.push(r*Math.cos(a),y,r*Math.sin(a));}
  for(let r=0;r<profile.length-1;r++)for(let j=0;j<n;j++){const a=r*n+j,b=r*n+(j+1)%n;g.indices.push(a,a+n,b,b,a+n,b+n);}
@@ -135,13 +136,9 @@ export function buildV11Styling(centralBouquetScale=.95,qualitySlice=false):Nati
  // reference's visible counter work tools instead of raising the scene budget.
  for(const[i,x]of[-3.48,-2.48,-1.48,-.48,.52,1.52].entries())base[i+1]=M(geometry({shape:'box',size:[.016,.79,.022],at:[x,.56,3.205],color:'#C4AC8A'}),'#C4AC8A','wood');
  const out=[...base,...buildV11TrailingGreenery(),...counterStationery()];
- for(const [x,y,z,scale]of [[-4.18,.901,-.91,1.1],[-.53,1.0735,-.05,centralBouquetScale],[1.35,1.111,-1.47,.90]])for(const part of bouquet()){
-  const p=scaled(part,scale);
-  if(qualitySlice&&x===-.53&&p.role==='ceramic'&&p.shape==='mesh'){
-   const uvs:number[]=[];for(let i=0;i<p.geometry.positions.length;i+=3){const[px,py,pz]=p.geometry.positions.slice(i,i+3);uvs.push((Math.atan2(pz,px)/(2*Math.PI)+1)%1,py/(.28*scale));}
-   const g:Geometry&{uvs:number[]}={positions:[],normals:[],indices:[],uvs:[]};for(let j=0;j<p.geometry.indices.length;j+=3){const ids=p.geometry.indices.slice(j,j+3),us=ids.map(k=>uvs[k*2]),seam=Math.max(...us)-Math.min(...us)>.5;for(const k of ids){g.indices.push(g.positions.length/3);g.positions.push(...p.geometry.positions.slice(k*3,k*3+3));g.normals.push(...p.geometry.normals.slice(k*3,k*3+3));g.uvs.push(uvs[k*2]+(seam&&uvs[k*2]<.5?1:0),uvs[k*2+1]);}}
-   out.push({...p,color:'#FFFFFF',roughness:.70,finish:'stoneware',geometry:g,at:[p.at[0]+x,p.at[1]+y,p.at[2]+z]});
-  }else out.push({...p,at:[p.at[0]+x,p.at[1]+y,p.at[2]+z]});
+ for(const [x,y,z,scale]of [[-4.18,.901,-.91,1.1],[-.53,1.0735,-.05,centralBouquetScale],[1.35,1.111,-1.47,.90]]){
+  const arrangement=qualitySlice&&x===-.53?[...centralFlowerJugRecipe(),...centralFlowerSprayRecipe()]:bouquet();
+  for(const part of arrangement){const p=scaled(part,scale);out.push({...p,at:[p.at[0]+x,p.at[1]+y,p.at[2]+z]});}
  }
  return batch(out);
 }

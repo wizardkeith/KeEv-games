@@ -32,3 +32,13 @@ The local-diffuse experiment is OFF in ordinary builds: actual equal-mean
 The Cycles scene is a read-only export of actual game geometry and camera and is
 not shader-equivalent or a substitute for WebGL evidence. No engine limitation
 or target-quality acceptance has been established by that comparison.
+
+C25 continues the same table: `flower-jug.blend/json` is a separate, actually
+integrated500-triangle hollow vessel with attached handle. This is NOT the old
+unused5204-triangle `jug.json`. `flower-spray.blend/json` contains the exact
+central3-axis/10-fork/60-floret arrangement,1618tri versus old1912 upper spray.
+Two other bouquets are retained. Sparse152 experiment is preserved under
+experiments/c25-sparse-spray152 and is not used. The wider0.64m central cloth now
+has24 actual sewn/overlapping fringe ribbons;1744tri. Normal-game153 supports a
+local improvement only; target quality/style remains unmet. No cap was raised:
+whole styling+canopy stays below16000 and fewer than18 styling material groups.
