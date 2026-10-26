@@ -1,0 +1,1 @@
+Pre-final-source actual WebGL comparisons:150vessel only;151wider fringe;152sparse flower crown rejected;153tightened crown before final fringe-envelope fix. Final source20a/build154 is separately selected. No exploratory capture is labelled final or target-accepted.

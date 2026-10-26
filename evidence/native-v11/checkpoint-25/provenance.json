@@ -1,0 +1,15 @@
+{
+  "application": "20a0433484fb71ce3e3aabf3d2ee7de961cf6c70",
+  "build": 154,
+  "tests": 233,
+  "glbs": 146,
+  "nativeRebuildFiles": 39,
+  "runtimeFiles": 174,
+  "protected": 305,
+  "stylingAndCanopyTriangles": 15662,
+  "stylingMaterialGroups": 17,
+  "uncutSeconds": 286.88,
+  "CDPFrames": 203,
+  "targetAccepted": false,
+  "limits": "Cloud SwiftShader sparse CDP, not physicalGPU/FPS/audio/native or continuous smoothness. No new fullB/hidden-tab/closure drain acceptance. C26 dominant-floral iteration is subsequent separate uncommitted work, not this evidence."
+}
