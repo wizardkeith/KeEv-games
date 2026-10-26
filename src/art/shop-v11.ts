@@ -42,21 +42,28 @@ export function buildV11Plant(scale=1):NativePlantParts{
 /** C23 near-window deciduous trees. Unequal forked crowns leave a view
  * between their masses; each broad blade grows from a real branch endpoint.
  * This replaces four aligned saplings, not the preserved indoor plants. */
+export function windowTreeSkeletons(){
+ const trees=[{x:-5.90,z:2.10,base:-1.52,top:2.32,phase:.35},{x:-6.20,z:-.40,base:-1.75,top:1.65,phase:1.8}];
+ return trees.map(t=>{
+  const stem=twig([[t.x,t.base,t.z],[t.x-.08,-.25,t.z+.07],[t.x+.10,.92,t.z-.03],[t.x-.12,t.top,t.z+.13]],.045,'#8C7959');
+  // Read centres of the actual six swept trunk segments. Forks begin inside
+  // these real segments, rather than an unrelated straight vertical axis.
+  const rings=Array.from({length:7},(_,r)=>[0,1,2].map(k=>[0,1,2,3].reduce((sum,j)=>sum+stem.geometry.positions[(r*4+j)*3+k],0)/4)as V3);
+  const axisAt=(height:number):V3=>{let r=rings.findIndex(p=>p[1]>=height);if(r<=0)return rings[0];const lo=rings[r-1],hi=rings[r],u=(height-lo[1])/(hi[1]-lo[1]);return lo.map((v,k)=>v+(hi[k]-v)*u)as V3;};
+  const branches=Array.from({length:7},(_,b)=>{const a=b*2.39996+t.phase,h=t.top-.90+(b%3)*.38,reach=.36+(b%2)*.22,joint=axisAt(h-.45),tip:V3=[t.x+Math.cos(a)*reach,h,t.z+Math.sin(a)*reach];return {joint,tip,stem:twig([joint,[joint[0]+(tip[0]-joint[0])*.55,h-.12,joint[2]+(tip[2]-joint[2])*.55],tip],.012,'#8C7959')};});
+  return {stem,branches};
+ });
+}
 export function buildV11Garden():NativeSurface[]{
  const out:NativeSurface[]=[],root:V3=[-5.8,1.6,0];
- const trees=[{x:-5.90,z:2.10,base:-1.52,top:2.32,phase:.35},{x:-6.20,z:-.40,base:-1.75,top:1.65,phase:1.8}];
- for(const [tree,t]of trees.entries()){
-  const trunk:V3[]=[[t.x,t.base,t.z],[t.x-.08,-.25,t.z+.07],[t.x+.10,.92,t.z-.03],[t.x-.12,t.top,t.z+.13]];
-  out.push(twig(trunk,.045,'#8C7959'));
-  for(let b=0;b<7;b++){
-   const a=b*2.39996+t.phase,h=t.top-.90+(b%3)*.38,reach=.36+(b%2)*.22;
-   const joint:V3=[t.x+.03,h-.45,t.z],tip:V3=[t.x+Math.cos(a)*reach,h,t.z+Math.sin(a)*reach];
-   out.push(twig([joint,[joint[0]+(tip[0]-joint[0])*.55,h-.12,joint[2]+(tip[2]-joint[2])*.55],tip],.012,'#8C7959'));
-   for(let k=0;k<14;k++){
-    const pair=Math.floor(k/2),theta=pair*2.39996+b*.37,r=.08+.22*Math.sqrt((pair+.5)/7),end:V3=[tip[0]+Math.cos(theta)*r,tip[1]+.13*Math.sin(theta*1.7)+.06*(k%2),tip[2]+Math.sin(theta)*r];
-    // Low-poly real twigs connect the blade bases; no floating leaf cards.
-    if(k%2===0)out.push(M(sculptSweep([tip,end],[.0038,.0018],undefined,1,3),'#8C7959','wood'));
-    out.push(leaf(end,.29+(k%3)*.065,.17+(k%2)*.035,theta+(k%2?.95:-.65),.80+(k%4)*.32,['#789951','#A4B96B','#C3CE85','#8DA95B'][(k+b+tree)%4]));
+ for(const [tree,t]of windowTreeSkeletons().entries()){
+  out.push(t.stem);
+  for(const [b,branch]of t.branches.entries()){
+   const {tip}=branch;out.push(branch.stem);
+   for(let pair=0;pair<7;pair++){
+    const theta=pair*2.39996+b*.37,r=.08+.22*Math.sqrt((pair+.5)/7),end:V3=[tip[0]+Math.cos(theta)*r,tip[1]+.13*Math.sin(theta*1.7)+.06*(pair%2),tip[2]+Math.sin(theta)*r];
+    out.push(M(sculptSweep([tip,end],[.0038,.0018],undefined,1,3),'#8C7959','wood'));
+    for(let side=0;side<2;side++){const k=pair*2+side;out.push(leaf(end,.29+(k%3)*.065,.17+(k%2)*.035,theta+(side?.95:-.65),.80+(k%4)*.32,['#789951','#A4B96B','#C3CE85','#8DA95B'][(k+b+tree)%4]));}
    }
   }
  }

@@ -1,3 +1,4 @@
+import {Ray} from '@babylonjs/core/Culling/ray.core';import {Vector3} from '@babylonjs/core/Maths/math.vector';import {windowTreeSkeletons} from '../src/art/shop-v11';
 import test from 'node:test';import assert from 'node:assert/strict';
 import {nativeWindowCanopy} from '../src/art/native-styling';
 import {nativeSurfaceGeometry} from '../src/art/native-characters';
@@ -14,4 +15,8 @@ test('one actual window sunlight direction reaches the shop floor through the ap
  for(const p of nativeWindowCanopy().filter(p=>p.role==='leaf')){const g=nativeSurfaceGeometry(p);for(let i=0;i<g.positions.length;i+=3){const [x,y,z]=g.positions.slice(i,i+3),t=(windowPortalIntent.apertureX-x)/d[0],wy=y+t*d[1],wz=z+t*d[2],floorT=(.079-y)/d[1],fx=x+floorT*d[0],fz=z+floorT*d[2];if(t>0&&wy>.925&&wy<2.755&&wz>-2.055&&wz<2.055&&fx>-4.4&&fx<4.4&&fz>-3.2&&fz<3.2)admitted++;}}
  assert.ok(admitted>100,'real leaf positions must have a sun ray through the actual aperture onto the interior floor; visual softness still requires rendered review');
  const outside=buildV11Exterior();assert.ok(outside.every(p=>{const g=nativeSurfaceGeometry(p);return g.positions.filter((_,i)=>i%3===0).every(x=>x<-5.9);}),'all rebuilt neighbour assets remain outside shop/navigation');
+});
+
+test('every rebuilt primary bough starts inside the actual swept trunk, not a detached guessed axis',()=>{
+ for(const tree of windowTreeSkeletons()){const trunk=nativeSurfaceGeometry(tree.stem);for(const branch of tree.branches){const g=nativeSurfaceGeometry(branch.stem),center=[0,1,2].map(k=>[0,1,2,3].reduce((n,j)=>n+g.positions[j*3+k],0)/4);assert.ok(Math.hypot(...center.map((v,k)=>v-branch.joint[k]))<1e-8);for(const sign of[-1,1]){const ray=new Ray(Vector3.FromArray(center),new Vector3(sign,0,0),.10),hits=[];for(let i=0;i<trunk.indices.length;i+=3){const v=trunk.indices.slice(i,i+3).map(n=>Vector3.FromArray(trunk.positions.slice(n*3,n*3+3))),h=ray.intersectsTriangle(v[0],v[1],v[2]);if(h&&h.distance>1e-8)hits.push(h.distance);}assert.ok(hits.length&&Math.min(...hits)<.07,'both horizontal directions exit nearby real trunk skin, proving an embedded fork root');}}}
 });
