@@ -3,12 +3,12 @@
   "version": "3.1",
   "master": {
     "path": "assets/masters/native-v3/environment-v3.json",
-    "sizeBytes": 30294585,
-    "sha256": "7b91a531afd14eac461bbfdbd90e5104de7b938d2b9e2a8aeae676b3384f1636"
+    "sizeBytes": 30294656,
+    "sha256": "a1ffc47c5ceeeb35152d4c2b34f1d9b801fa754fa68691c95b44317997160f84"
   },
   "sources": {
     "src/art/table-look-v11.ts": "d5281061589bc46d3b077dc4f2265c711c968893bfae8e32324c159e1b88ffa1",
-    "src/art/table-reflection-v11.ts": "26531a5ec2d53d844315e2f614c5bb3c63faf9ae96358d308ac26b7d318854ae",
+    "src/art/table-reflection-v11.ts": "9448abd914eec4993f915ac39295ee14a763076755b338b0d30a845456d759f5",
     "src/art/table-contact-v11.ts": "8eedbcbedb34cc1b374c51f7d3851fd81458cf6fcca1c1a9a63165cb5cdfd751",
     "src/art/table-contact-atlas-v11.ts": "c10a740caaa32f84fd9522d211cc5276154cc2466a346da94257478b7b027201",
     "tools/export-v11-table-contact.ts": "24079a5ae9ec06934baa6673b889643d141cbbd095935f3576772da454ba5d2f",
@@ -16,10 +16,10 @@
     "assets/masters/native-v11/c28-contact/actual-central-static.json": "093adedc33879b7b74d7c58bb0a129945948f09566f2479b2c75fea7aeda936d",
     "assets/masters/native-v11/c28-contact/central-contact-atlas.png": "20a5cfe87a31b0620345cd990aafb781c9c137fa3ed8c6498fe2ccd827812f15",
     "assets/masters/native-v11/c28-contact/provenance.json": "599f872b7dd116f2de0caabf73b548f4439ab8091361b455f8d148cf9e567a3e",
-    "tools/build-v11-window-radiance.py": "2bf61cf7b92a3a5a49868501da2e7fadd7c454e1a0ed92feed601528b8b915d4",
-    "assets/masters/native-v11/c28-window-light/soft-window-specular.env": "218ad39720da7e766da460a51dc1ff789342c66ef51516471c9168cd05d618e4",
-    "assets/masters/native-v11/c28-window-light/linear-radiance-source.npz": "370800e44366d0c5eb27885f68727d1bdfd0f8b61a9ad377c6685bb2d0fdeb7d",
-    "assets/masters/native-v11/c28-window-light/provenance.json": "31cc894afe316e663cda2419fca3f1e4cdc8c7e906b2f99f5a481b330062367c",
+    "tools/build-v11-window-radiance.py": "97a8632add1c9e5e43653b3c1f86ee353f2c570d664016ec969cbc4cf3ea8a13",
+    "assets/masters/native-v11/c28-window-light/soft-window-specular.env": "ab2ddab4e6f5b7e64370f7ba2fb63497326a4f19b669a5ccb459cfef8e2f3258",
+    "assets/masters/native-v11/c28-window-light/linear-radiance-source.npz": "c9f9bf952be12d3e9c6594471c584d8e0cbfdcd7e5437896521697a24d3aa690",
+    "assets/masters/native-v11/c28-window-light/provenance.json": "28ee233a4dfc4fe1acc8d2e5773592624b0a4a70d2212fa1c13884caceed5ca1",
     "tools/build-v11-petal-normals.ts": "8d51ff81248399f354a84b97db40dd1c66133349084faa48d39c99ee5dbbf035",
     "assets/masters/native-v11/display-quality/flower-petal-soft-normals.json": "02bfd5cd940e3f4f685c2e1028589011ea65caadf2702aca07f378e4613efb07",
     "assets/masters/native-v11/display-quality/flower-petal-soft-normals-provenance.json": "1142112794fc692ceec7bf9eeca9b0934582296999a61de7556206c8ca3f72b3",

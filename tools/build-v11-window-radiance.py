@@ -6,14 +6,27 @@ from pathlib import Path
 from PIL import Image
 import numpy as np, math, json, hashlib, io
 root=Path(__file__).resolve().parents[1];size=64;samples=128;probe=np.array([.15,1.45,.25]);near=-4.38
-params={'size':size,'samples':samples,'probeRHMetres':probe.tolist(),'window':{'x':near,'y':[.85,2.82],'z':[-2.1,2.1],'edgeMetres':.18},'windowRadiance':[6.72,7.,7.42],'lodGenerationScale':.8,'encoding':'Babylon RGBD PNG mip cube, linear radiance, version2 env','meaning':'Analytic existing-aperture reflection lighting only, not actual traced transport or source scene pixels'}
+room_path=root/'assets/masters/native-v11/experiments/c18-room-specular/actual-static-room-specular.env'
+room_bytes=room_path.read_bytes();room_end=room_bytes.index(0,8);room_header=json.loads(room_bytes[8:room_end]);room_faces=[]
+for m in room_header['specular']['mipmaps'][:6]:
+ a=np.asarray(Image.open(io.BytesIO(room_bytes[room_end+1+m['position']:room_end+1+m['position']+m['length']]))).astype(float)/255
+ room_faces.append(a[:,:,:3]**2.2/np.maximum(1/255,a[:,:,3:]))
+room_faces=np.stack(room_faces)
+def room_radiance(d):
+ shape=d.shape;v=d.reshape(-1,3);major=np.argmax(np.abs(v),axis=1);sign=v[np.arange(len(v)),major]>=0;face=major*2+(~sign);den=np.max(np.abs(v),axis=1);x,y,z=v.T
+ u=np.where(major==0,np.where(sign,-z,z),np.where(major==1,x,np.where(sign,x,-x)))/den
+ w=np.where(major==0,-y,np.where(major==1,np.where(sign,z,-z),-y))/den
+ n=room_faces.shape[1];px=np.clip((u+1)*n/2-.5,0,n-1);py=np.clip((w+1)*n/2-.5,0,n-1);ix=px.astype(int);iy=py.astype(int);ax=(px-ix)[:,None];ay=(py-iy)[:,None];jx=np.minimum(ix+1,n-1);jy=np.minimum(iy+1,n-1)
+ value=room_faces[face,iy,ix]*(1-ax)*(1-ay)+room_faces[face,iy,jx]*ax*(1-ay)+room_faces[face,jy,ix]*(1-ax)*ay+room_faces[face,jy,jx]*ax*ay
+ return value.reshape(shape)
+params={'roomBaseline':{'path':str(room_path.relative_to(root)),'sha256':hashlib.sha256(room_bytes).hexdigest(),'meaning':'Existing actual-room specular radiance retained outside analytic aperture; same diffuse SH at binding'},'size':size,'samples':samples,'probeRHMetres':probe.tolist(),'window':{'x':near,'y':[.85,2.82],'z':[-2.1,2.1],'edgeMetres':.18},'softBounceRadiance':[6.,6.4,7.],'softBouncePower':2,'softBounceMeaning':'Art-directed broad window/room-bounce radiance lobe centred on existing aperture; not traced GI or measured photometry','lodGenerationScale':.8,'encoding':'Babylon RGBD PNG mip cube, linear radiance, version2 env','meaning':'Existing actual-room reflection plus original art-directed broad window-bounce radiance; not traced transport, measured photometry or target pixels'}
 def unit(v):return v/np.maximum(1e-12,np.linalg.norm(v,axis=-1,keepdims=True))
-def smooth(a,b,x):t=np.clip((x-a)/(b-a),0,1);return t*t*(3-2*t)
 def radiance(d):
- t=(near-probe[0])/np.minimum(d[...,0],-1e-8);y=probe[1]+t*d[...,1];z=probe[2]+t*d[...,2]
- aperture=(d[...,0]<0)*smooth(.67,1.03,y)*(1-smooth(2.64,3.,y))*smooth(-2.28,-1.92,z)*(1-smooth(1.92,2.28,z))
- sky=np.maximum(d[...,1],0);floor=np.maximum(-d[...,1],0)
- return np.array([.18,.15,.12])+sky[...,None]*np.array([.25,.25,.24])+floor[...,None]*np.array([.11,.07,.035])+aperture[...,None]*np.array(params['windowRadiance'])
+ # Keep the actual room's reflected radiance, then add one low-frequency
+ # art-directed window/room-bounce lobe. Diffuse SH stays unchanged in Web.
+ window=params['window'];axis=unit(np.array([near-probe[0],sum(window['y'])/2-probe[1],sum(window['z'])/2-probe[2]]))
+ bounce=np.maximum(0,np.sum(d*axis,axis=-1))**params['softBouncePower']
+ return room_radiance(d)+bounce[...,None]*np.array(params['softBounceRadiance'])
 def radical(i):
  x=0.;w=.5
  while i:x+=(i&1)*w;i>>=1;w*=.5
@@ -37,4 +50,4 @@ for lod in range(int(math.log2(size))+1):
   divisor=np.minimum(1,np.floor(np.maximum(255/np.maximum(1e-7,rgb.max(axis=-1)),1))/255);rgba=np.concatenate([np.clip(rgb*divisor[...,None],0,1)**(1/2.2),divisor[...,None]],-1);buf=io.BytesIO();Image.fromarray(np.uint8(np.rint(rgba*255))).save(buf,format='PNG');png=buf.getvalue();images.append(png);mips.append({'position':offset,'length':len(png)});offset+=len(png)
 header={'version':2,'width':size,'imageType':'image/png','specular':{'mipmaps':mips,'lodGenerationScale':.8}};data=bytes([0x86,0x16,0x87,0x96,0xf6,0xd6,0x96,0x36])+json.dumps(header,separators=(',',':')).encode()+b'\0'+b''.join(images)
 base=root/'assets/masters/native-v11/c28-window-light';base.mkdir(exist_ok=True);np.savez_compressed(base/'linear-radiance-source.npz',faces=np.stack(linear0));(base/'soft-window-specular.env').write_bytes(data);public=root/'public/assets/native-v11/soft-window-specular.env';public.write_bytes(data)
-params.update({'source':'tools/build-v11-window-radiance.py','sourceSHA256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'envSHA256':hashlib.sha256(data).hexdigest(),'bytes':len(data),'mipFaces':len(images),'diffuse':'Original analytic scene spherical polynomial retained at binding; no new diffuse intensity','limits':'Single-point analytic window-light reflection proxy. No parallax, geometric occlusion or real-time reflection; not original-target acceptance.'});(base/'provenance.json').write_text(json.dumps(params,indent=2)+'\n');print({'envBytes':len(data),'faces':len(images),'HDRMaximum':float(np.stack(linear0).max())})
+params.update({'source':'tools/build-v11-window-radiance.py','sourceSHA256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'envSHA256':hashlib.sha256(data).hexdigest(),'bytes':len(data),'mipFaces':len(images),'diffuse':'Original analytic scene spherical polynomial retained at binding; no new diffuse intensity','backgroundCheck':{'directions':'+X face, opposite aperture','minimumLinearRGB':np.min(linear0[0],axis=(0,1)).tolist(),'meaning':'Opposite-window radiance is resampled actual-room baseline, never replaced by a darker analytic fallback'},'limits':'Single-point hybrid existing-room / soft window-bounce approximation. No new traced GI, parallax, geometric occlusion or realtime reflection; not original-target acceptance.'});(base/'provenance.json').write_text(json.dumps(params,indent=2)+'\n');print({'envBytes':len(data),'faces':len(images),'HDRMaximum':float(np.stack(linear0).max())})
