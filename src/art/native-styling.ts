@@ -1,3 +1,4 @@
+import {composeMixedStyling} from './mixed-display-v11';
 import {buildV11Garden,buildV11Styling} from './shop-v11';
 /** Original fixed shop styling, not inventory grants or new catalogue entries.
  * Real indexed recipe geometry; metres/RH/Y-up. No sale/quest authority.
@@ -44,4 +45,4 @@ export function legacyV9WindowCanopy():Part[]{
  return out;
 }
 
-export const nativeStylingRecipe=buildV11Styling,nativeWindowCanopy=buildV11Garden;
+export const nativeStylingRecipe=()=>composeMixedStyling(buildV11Styling(1.10)),nativeWindowCanopy=buildV11Garden;

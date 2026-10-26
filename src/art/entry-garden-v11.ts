@@ -1,12 +1,12 @@
 /** Stationary entrance courtyard, visible only through the actual door portal.
  * Real geometric branches, leaves and paving; not terrain/gameplay or an image.
  * All geometry lies outside the retained door sweep and customer threshold. */
-import {geometry} from './geometry';import {nativeGrouped,type NativeSurface} from './native-characters';import {sculptSweep} from './sculpt-v10';import {floorLeaf} from './floor-leaf-v11';import type {V3} from './recipes';
+import {leaf as distantLeaf} from './shop-v11';import {nativeGrouped,type NativeSurface} from './native-characters';import {sculptSweep} from './sculpt-v10';import {floorLeaf} from './floor-leaf-v11';import type {V3} from './recipes';
 export const entryGardenIntent={minZ:4.86,units:'metres',kind:'non-interactive clipped exterior geometry',portal:{minX:2.34,maxX:3.76,minY:.08,maxY:2.58,z:3.30},source:'Original authored courtyard; no target pixels used as a backdrop'} as const;
 export function entryGardenRecipe():NativeSurface[]{
  const parts:NativeSurface[]=[{shape:'box',size:[6,.06,4.0],at:[1.50,.045,6.9],color:'#D3D2B5',role:'paint'}];
  // Garden path tiles are discrete slabs with joints, not a white door-sized card.
- for(let row=0;row<4;row++)for(let col=0;col<4;col++)parts.push({shape:'round',size:[.65,.018,.51],radius:.008,at:[.90+col*.69+(row%2)*.08,.083,5.25+row*.56],color:(row+col)%2?'#D8D8C1':'#E1DDC3',role:'paint'});
+ for(let row=0;row<4;row++)for(let col=0;col<4;col++)parts.push({shape:'round',size:[.65,.018,.51],radius:.008,at:[.90+col*.69+(row%2)*.08,.083,5.25+row*.56],color:'#D8D8C1',role:'paint'});
  for(const [index,[x,z,h,r]]of [[2.35,5.55,1.18,.50],[3.65,5.45,.91,.43],[1.32,6.65,.56,.46]].entries()){
   parts.push({shape:'mesh',at:[0,0,0],color:'#A0A27D',role:'wood',geometry:sculptSweep([[x,.079,z],[x-.04,h*.48,z],[x+.05,h*.86,z-.04]],[.026,.020,.008],undefined,5,5)});
   for(let cluster=0;cluster<4;cluster++){
@@ -18,6 +18,11 @@ export function entryGardenRecipe():NativeSurface[]{
    }
   }
  }
+ // A low planted margin and a pale distant roof produce an actual near /
+ // path / far silhouette, instead of more equally pale leaves in gray paving.
+ for(let j=0;j<6;j++){const a=j*2.399;parts.push(distantLeaf([3.55+Math.cos(a)*.20,.078,6.8+Math.sin(a)*.20],.26,.19,a,.75,'#8BA371'));}
+ parts.push({shape:'box',size:[1.30,.30,1.0],at:[1.20,.23,8.0],color:'#D3D2B5',role:'paint'});
+ for(const side of[-1,1])parts.push({shape:'round',size:[1.48,.035,.68],radius:.006,at:[1.20,.43,8.0+side*.25],turn:[side*.36,0,0],color:'#ADBFC4',role:'paint'});
  return nativeGrouped(parts).map(g=>({shape:'mesh',at:[0,0,0],geometry:g.geometry,color:g.color,role:g.role,roughness:g.roughness,...(g.baseColorTexture?{baseColorTexture:g.baseColorTexture}:{}),...(g.finish?{finish:g.finish}:{})}));
 }
 /** Negative half-spaces are inside. Camera-facing geometric clipping matches

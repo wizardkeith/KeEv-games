@@ -1,3 +1,4 @@
+import {curateBackSample} from './mixed-display-v11';
 import {relocateV11Decoration} from './decor-vignette-v11';
 /** Curated physical samples, one per visible stock unit (maximum eight).
  * Units/metres; no inventory is created by staging. Fixtures are not SKUs. */
@@ -16,8 +17,8 @@ export function displaySamples(id:string,stock:number,table:number){
   const flat=['off.notebook','off.card','off.tray','off.towel'].includes(id),scale=id==='off.tote'?.72:id==='off.notebook'?.90:id==='off.pencil'?1.12:.90;
   if(id==='off.pencil'){const upper=k>=4,j=k%4;return {at:[upper?.58:.10,0,upper?.26+j*.045:-.34+j*.06] as [number,number,number],yaw:(upper?.10:-.16)+(j-1.5)*.006,scale,stackLayer:0};}
   if(id==='off.tote')return {at:[k%2?.58:.10,0,[-.37,-.14,.09,.36][Math.floor(k/2)]] as [number,number,number],yaw:k%2?.025:-.025,scale,stackLayer:0};
-  if(flat)return {at:[k%2?.55:.10,0,-.20] as [number,number,number],yaw:k%2?.03:-.03,scale,stackLayer:Math.floor(k/2)};
-  return {at:[k<6?[-.03,.31,.65][k%3]:[.05,.58][k-6],0,k<6?[-.34,0][Math.floor(k/3)]:.36] as [number,number,number],yaw:[-.03,.04,-.04][k%3],scale,stackLayer:0};
+  if(flat){const asymmetric=id==='off.notebook'||id==='off.card',column=asymmetric?[0,1,1,0,1,0,1,1][k]:k%2,layer=asymmetric?[0,0,1,1,2,2,3,4][k]:Math.floor(k/2);return {at:[column?.55:.10,0,column?-.18:-.23] as [number,number,number],yaw:(column?.06:-.07)+[0,.025,-.02,.015][layer%4],scale,stackLayer:layer};}
+  return {at:[k<3?[-.02,.31,.66][k]:k<6?[0,.33,.64][k-3]:[.05,.58][k-6],0,k<3?[-.35,-.32,-.34][k]:k<6?[-.015,.015,.035][k-3]:.36] as [number,number,number],yaw:[-.23,.28,-.18,.12,-.30,.20,-.05,.31][k],scale,stackLayer:0};
  });
 }
 
@@ -30,5 +31,5 @@ export function backDisplaySamples(){
   [['off.mug',-2.86,2],['off.tea',-2.18,2],['off.card',-1.47,1],['off.notebook',-.77,3],['off.tote',.04,1],['off.vase',.72,1],['off.card',1.35,1]],
   [['off.vase',-2.92,1],['off.notebook',-2.38,3],['off.card',-1.69,1],['off.tea',-.99,2],['off.cookie',-.31,2],['off.towel',.40,2],['off.mug',1.19,2]],
  ] as const;
- return rows.flatMap((groups,row)=>groups.flatMap(([id,x,count])=>Array.from({length:count},(_,k)=>{const stack=['off.notebook','off.towel','off.cookie'].includes(id),upright=id==='off.card';return {id,at:[x+(stack?k*.012:(k-(count-1)/2)*.18),[1.0025,1.5225,2.2825][row]+.004+(stack?k*(id==='off.notebook'?.055:id==='off.cookie'?.11:.15):0)+(upright?.17:0),2.84+(k%2?-.035:.02)] as [number,number,number],turn:[upright?-1.18:0,(row-1)*.08+(k-.5)*.13,0] as [number,number,number],scale:id==='off.notebook'?.90:.85};}))).map(relocateV11Decoration);
+ return rows.flatMap((groups,row)=>groups.flatMap(([id,x,count],group)=>Array.from({length:count},(_,k)=>{const stack=['off.notebook','off.towel','off.cookie'].includes(id),upright=id==='off.card';return curateBackSample(relocateV11Decoration({id,at:[x+(stack?k*.012:(k-(count-1)/2)*.18),[1.0025,1.5225,2.2825][row]+.004+(stack?k*(id==='off.notebook'?.055:id==='off.cookie'?.11:.15):0)+(upright?.17:0),2.84+(k%2?-.035:.02)] as [number,number,number],turn:[upright?-1.18:0,(row-1)*.08+(k-.5)*.13,0] as [number,number,number],scale:id==='off.notebook'?.90:.85}),row,group,k);}))); 
 }

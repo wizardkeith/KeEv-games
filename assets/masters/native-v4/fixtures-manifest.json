@@ -8,8 +8,8 @@
     {
       "id": "entry-garden-v11",
       "file": "assets/masters/native-v4/entry-garden-v11.glb",
-      "bytes": 2496936,
-      "sha256": "afd6c89bfef8db3abc3987f271e6d3c6509326174605b6823ea17defb844a0e9"
+      "bytes": 2511320,
+      "sha256": "5e4142614fac2e2276277b92089345f1a9335e47d1e94fb0249e5c8e29d6a4bb"
     },
     {
       "id": "planter-base-v11",
@@ -26,8 +26,8 @@
     {
       "id": "styling-v9",
       "file": "assets/masters/native-v4/styling-v9.glb",
-      "bytes": 2687144,
-      "sha256": "548728a530d4effe9081b50b1d66549cb0ef640544bccaeed86c77d1bd7066e2"
+      "bytes": 2716152,
+      "sha256": "474cfd8621db2d2e0eed3e0b7aae8aa8eaf5b16b0645c67c12ac61c07b152f5d"
     },
     {
       "id": "window-canopy-v9",
@@ -38,8 +38,8 @@
     {
       "id": "counter",
       "file": "assets/masters/native-v4/counter.glb",
-      "bytes": 2349160,
-      "sha256": "8a5b563f8ea540edb51baaeac32e48eac25497b8878c04851b6d22510ca05d67"
+      "bytes": 2362296,
+      "sha256": "46ae720b21264cd12e365cdec60a67b4d56875d24d90cec5a8e6931d36514fb5"
     },
     {
       "id": "display-1",

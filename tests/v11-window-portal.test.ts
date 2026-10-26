@@ -1,3 +1,4 @@
+import {cutawayLightContract} from '../src/art/cutaway-light-v11';
 import {entryGardenRecipe} from '../src/art/entry-garden-v11';
 import test from 'node:test';import assert from 'node:assert/strict';import {windowPortalPlanes} from '../src/art/window-portal-v11';
 test('exterior portal preserves real window rays across allowed orbit angles and rejects cutaway spill',()=>{
@@ -8,7 +9,7 @@ test('exterior portal preserves real window rays across allowed orbit angles and
 });
 
 test('atmospheric geometry fits within the original whole fixed-scene authoring budget',async()=>{
- const a=await import('../src/art/native-environment');const {farSkyRecipe}=await import('../src/art/window-portal-v11');const plant=a.plantParts();const all=[...a.nativeRoomRecipe(),...a.doorLeafRecipe(),...a.doorSignRecipe(),...a.exteriorRecipe(),...a.nativeCounterRecipe(),...[0,1,2].flatMap(a.nativeDisplayRecipe),...plant.base,...plant.leaves.flatMap(l=>l.recipe),...farSkyRecipe(),...entryGardenRecipe()];assert.ok(all.length<160,'include all three actual furniture variants, sky and entrance; do not move parts outside the budget');
+ const a=await import('../src/art/native-environment');const {farSkyRecipe}=await import('../src/art/window-portal-v11');const plant=a.plantParts();const all=[...a.nativeRoomRecipe(),...a.doorLeafRecipe(),...a.doorSignRecipe(),...a.exteriorRecipe(),...a.nativeCounterRecipe(),...[0,1,2].flatMap(a.nativeDisplayRecipe),...plant.base,...plant.leaves.flatMap(l=>l.recipe),...farSkyRecipe(),...entryGardenRecipe()];assert.ok(all.length+cutawayLightContract.primitiveCount<160,'include shadow-only ceiling, all three actual furniture variants, sky and entrance; do not move parts outside the budget');
 });
 
 test('distant roof planes intersect the actual default window rays and animated crowns keep local tree pivots',async()=>{

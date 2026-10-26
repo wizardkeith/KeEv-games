@@ -8,7 +8,7 @@ import type {NativeSurface,NativeMesh} from './native-characters';
 import {nativeGrouped,nativeSurfaceGeometry} from './native-characters';
 import type {V3,Part} from './recipes';
 import {geometry,type Geometry} from './geometry';
-import {sculptSweep,finishSculpt} from './sculpt-v10';
+import {sculptSweep,sculptLoft,finishSculpt} from './sculpt-v10';
 import {leaf as foliageBlade} from './shop-v11';
 const board=(size:V3,at:V3,color:string,role:Part['role']='wood',radius=.015):NativeMesh=>{
  const g=geometry({shape:'round',size,at,color,role,radius}),uvs:number[]=[],long=size.indexOf(Math.max(...size));
@@ -97,6 +97,10 @@ export function buildV11Counter():NativeSurface[]{
  // marks are strokes, never a fake readable instruction or interactive quest.
  parts.push(board([.26,.011,.32],[-.40,1.037,.02],'#AD8355','wood',.008),board([.228,.003,.283],[-.40,1.045,.02],'#F0E6D3','paper',.003),board([.12,.014,.035],[-.40,1.054,.15],'#B49A66','metal',.005));
  for(let i=0;i<5;i++)parts.push(board([.14-i%2*.035,.001,.002],[-.408,1.047,-.06+i*.029],'#B7AA90','paper',.0002));
+ // Small real service bell on the foreground register corner. Decorative,
+ // not an audio/action/transaction trigger; clear of the existing handoff dock.
+ parts.push({shape:'mesh',at:[.68,1.031,-.28],color:'#B49A66',role:'metal',geometry:sculptLoft([{y:0,x:.073,z:.073},{y:.008,x:.078,z:.078},{y:.055,x:.049,z:.049},{y:.078,x:.018,z:.018}],16)});
+ parts.push({shape:'sphere',size:[.033,.019,.033],at:[.68,1.118,-.28],color:'#B49A66',role:'metal'});
  return compileFixture(parts);
 }
 function extent(p:NativeSurface){const g=nativeSurfaceGeometry(p),min=[0,1,2].map(k=>Math.min(...g.positions.filter((_,i)=>i%3===k))),max=[0,1,2].map(k=>Math.max(...g.positions.filter((_,i)=>i%3===k)));return {min,max,size:max.map((v,i)=>v-min[i]),center:max.map((v,i)=>(v+min[i])/2)};}
