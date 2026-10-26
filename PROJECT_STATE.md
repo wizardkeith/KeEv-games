@@ -1,14 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T13:32:08+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T13:43:13+08:00** (Asia/Hong_Kong).
 
 
 
 
-## V11 C23 窗外模型／日光切片進行中 — 2026-10-26T13:32:08+08:00
+## V11 C23 窗外模型／日光140實拍（待視覺覆核，未達標）— 2026-10-26T13:43:13+08:00
 
-- [Draft PR #8](https://github.com/wizardkeith/KeEv-games/pull/8) 來源已推送 `53555cc5e5960826d82d7f3891618ebc4e80bcc2`，未合併。保留 C21／22 改善；重建兩組不等高近樹、低遠屋斜頂／山牆／四個玻璃窗灣、遠樹／天空深度及一致窗邊日光。枝條接點改取真實樹幹網格，葉對共享真實枝端；不改導航／相機算法／經濟／存檔。
-- 226 測試、141 GLB零錯誤警告、305保護檔案檢查通過；正在固定來源140重拍正常遊戲、未剪真交易與byte parity。早期135–139試作不是最終140證據。**原圖美術仍未達標，PR8仍Draft，公開V17不變，沒有merge／save／deploy。** main本次只記分支進度；完整實拍覆核仍待完成。
+- [Draft PR #8](https://github.com/wizardkeith/KeEv-games/pull/8) 已推送／讀回 `2a7d979fd615f7182a031505242bb7f5f91ffbd1`；實際 application `53555cc5e5960826d82d7f3891618ebc4e80bcc2`，src tree `6df1658d9571bca231a15c28bad045e716f55c85`。保留 C21／22；重建分叉近樹／真實枝葉接點、低遠屋斜頂／山牆／四個玻璃窗灣、遠樹與天空深度，形成一致窗側日光。暗天花維持撤回；無新GI或玩法／經濟／存檔／相機算法變更。
+- 提交後 **226tests／build／validate／replay／asset-check、141GLB零錯誤警告、305保護檔案零變更、34native新鮮重建／163實際payload byte parity、五語15案例／75面板切換** 通過。正常140與134相機／cash／inventory／shelves exact；191.680秒真正未剪營業完成買入上架、一次結算、A交袋離店／店員返回／reload，0pageerror／隔離Normal不變。140.5秒原片清楚可讀18件／+¥8,400／未扣人工租金；29.120秒連續摘錄另備，04過遲PNG不作浮窗證據。
+- [原目標／正常BEFORE–AFTER／原片／所有限制](https://github.com/wizardkeith/KeEv-games/blob/2a7d979fd615f7182a031505242bb7f5f91ffbd1/docs/V11_C23_WINDOW_DAYLIGHT_CHECKPOINT_2026-10-26_zh-HK.md)。**原圖品質／畫風仍未達標**，棕米色均勻度、柔葉影、簡化遠樹、規整商品與材質細膩度仍有差距；下一輪繼續按正常全景覆核高影響重建。沒有新B完整交易／hidden-tab／實體GPU／FPS／audio／native認證。PR8仍Draft／未合併，公開V17不變，無save／deploy／新release archive／Library重試；main本次只有進度文件，沒有合併分支功能。
 
 ## V11 C22 選定134實拍檢查點（待視覺覆核，未達標）— 2026-10-26T13:07:03+08:00
 
