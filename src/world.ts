@@ -114,7 +114,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  const highlights:Mesh[]=[],productRoots:TransformNode[]=[];const shelfContents:string[]=[];
  for(let i=0;i<3;i++){
   const d=layoutData.displays[i];const display=model(d.id,nativeDisplayRecipe(i),undefined,i);display.position.set(d.position[0],artDirection.fixtureBaseY,d.position[2]);
-  const rim=model(`${d.id}.selected`,[{shape:'round',size:[1.98,.035,1.20],at:[0,.10,0],color:'#B59AC8',radius:.016,alpha:.62}],undefined,i,false);rim.position.set(d.position[0],0,d.position[2]);for(const mesh of rim.getChildMeshes()){highlights.push(mesh as Mesh);mesh.setEnabled(false);}
+  const rim=model(`${d.id}.selected`,[{shape:'round',size:[i===1?1.98:2.33,.035,1.20],at:[i===1?0:-.175,.10,0],color:'#B59AC8',radius:.016,alpha:.62}],undefined,i,false);rim.position.set(d.position[0],0,d.position[2]);for(const mesh of rim.getChildMeshes()){highlights.push(mesh as Mesh);mesh.setEnabled(false);}
   const products=new TransformNode(`${d.id}.products`,scene);products.position.set(d.position[0],artDirection.displaySurfaceY+artDirection.restingGap,d.position[2]);productRoots.push(products);
  }
  const nativeActors=createNativeActors(scene,(name,parts,parent)=>model(name,parts,parent));

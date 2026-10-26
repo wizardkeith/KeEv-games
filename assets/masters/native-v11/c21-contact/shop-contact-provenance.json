@@ -1,0 +1,12 @@
+{
+  "source": "tools/v11-bake-contact.py + tools/v11-export-bake-scene.ts",
+  "method": "Blender Cycles CPU Ambient Occlusion node, distance0.65m; actual static geometry, floorUV2 worldXZ; texture not a scene screenshot",
+  "inputSha256": "4c3b30092747cd620c835d0a067dbb17aa4bfd1e40100eb8cc11300f5bbbfddc",
+  "pngSha256": "456847149547c4a2f6853f4ba9599d3c593a0d44ec042df6681ba32440dba1cc",
+  "staticMeshes": 439,
+  "dynamicObjectsIncluded": false,
+  "resolution": [
+    1024,
+    1024
+  ]
+}

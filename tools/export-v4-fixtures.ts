@@ -11,7 +11,7 @@ import fs from 'node:fs';import {createHash} from 'node:crypto';
 import {nativeGrouped,type NativeSurface} from '../src/art/native-characters';
 import {nativeRoomRecipe,nativeCounterRecipe,nativeDisplayRecipe,plantParts} from '../src/art/native-environment';
 import {nativeMaterialIntent,nativeTransmission,nativeGlaze} from '../src/art/native-materials';
-const textureFiles={contact:'assets/masters/native-v11/shop-floor-contact.png',print:'assets/masters/native-v10/botanical-print-atlas.png',timber:'assets/masters/native-v11/honey-oak-albedo.png',floor:'assets/masters/native-v10/floor-colour.png',cloth:'assets/masters/native-v10/cloth-weave-basecolor.png',woodNormal:'assets/masters/native-v10/timber-normal.png',plaster:'assets/masters/native-v10/plaster-normal.png',linen:'assets/masters/native-v10/linen-normal.png'};
+const textureFiles={contact:floorContactBake.master,print:'assets/masters/native-v10/botanical-print-atlas.png',timber:'assets/masters/native-v11/honey-oak-albedo.png',floor:'assets/masters/native-v10/floor-colour.png',cloth:'assets/masters/native-v10/cloth-weave-basecolor.png',woodNormal:'assets/masters/native-v10/timber-normal.png',plaster:'assets/masters/native-v10/plaster-normal.png',linen:'assets/masters/native-v10/linen-normal.png'};
 function fixtureTangents(g:{positions:number[];normals:number[];uvs:number[];indices:number[]}){
  const count=g.positions.length/3,tan=Array(g.positions.length).fill(0),bit=Array(g.positions.length).fill(0),out:number[]=[];
  for(let i=0;i<g.indices.length;i+=3){const [a,b,c]=g.indices.slice(i,i+3),u=g.uvs[b*2]-g.uvs[a*2],v=g.uvs[b*2+1]-g.uvs[a*2+1],s=g.uvs[c*2]-g.uvs[a*2],t=g.uvs[c*2+1]-g.uvs[a*2+1],det=u*t-s*v;if(Math.abs(det)<1e-12)continue;

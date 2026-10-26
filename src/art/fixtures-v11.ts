@@ -1,6 +1,7 @@
 /** Target slice furniture/architecture reconstruction. Same action heights and
  * station pivots; wider display joinery, counter wing and real widened window
  * aperture. Route clearance envelopes are updated with the physical fixtures. */
+import {counterStationery} from './counter-stationery-v11';
 import {oakFloor} from './floor-v11';
 import {buildV10Counter,buildV10Display,buildV10Room,buildV10Exterior,printPanel} from './shop-v10';
 import type {NativeSurface,NativeMesh} from './native-characters';
@@ -36,9 +37,9 @@ function paperCorner(variant:number):NativeSurface[]{
 export function buildV11Display(variant=0):NativeSurface[]{
  // All retain the actual 1.90 x1.10 tabletop, .9925m surface and navigation
  // envelope. Different lower silhouettes replace three identical trestles.
- const out:NativeSurface[]=[{...board([1.90,.105,1.10],[0,.94,0],'#CCA77A','wood',.025),roughness:.64},board([1.73,.105,.94],[0,.835,0],'#A98155'),board([1.71,.065,.88],[0,.225,0],'#B08C60')];
+ const out:NativeSurface[]=[{...board([1.90,.105,1.10],[0,.94,0],'#CCA77A','wood',.025),roughness:.64},board([1.73,.105,.94],[0,.835,0],'#A98155','wood',0),board([1.71,.065,.88],[0,.225,0],'#B08C60')];
  for(const x of [-.75,.75])for(const z of [-.36,.36])out.push(board([.095,.89,.095],[x,.445,z],'#997247','wood',.012));
- for(const x of [-.75,.75])out.push(board([.075,.15,.82],[x,.765,0],'#AD8355'));
+ for(const x of [-.75,.75])out.push(board([.075,.15,.82],[x,.765,0],'#AD8355','wood',0));
  for(const z of [-.36,.36])out.push(board([1.49,.13,.065],[0,.765,z],'#AD8355'));
  if(variant===0){
   // Open paper-store trestle with two lower archival boxes and a diagonal brace.
@@ -53,6 +54,14 @@ export function buildV11Display(variant=0):NativeSurface[]{
   for(const x of [-.54,.54])out.push(board([.38,.43,.025],[x,.50,-.385],'#D9C8A8','paint',.009),board([.29,.33,.010],[x,.50,-.402],'#EFE4D1','paint',.006),board([.045,.014,.025],[x,.61,-.416],'#B39A64','metal',.004));
   out.push(board([.49,.032,.73],[0,.48,.01],'#B08C60'));
  }
+ // Broader window-side furniture grows ONLY toward the wall. Customer-side
+ // edges, action height and central-table access stay fixed; matching blockers
+ // below are asymmetric around the original selection/stock root.
+ if(variant!==1)for(let i=0;i<out.length;i++){
+  const p=out[i],g=nativeSurfaceGeometry(p),factor=2.25/1.90;
+  for(let j=0;j<g.positions.length;j+=3){g.positions[j]=.95+(g.positions[j]-.95)*factor;g.normals[j]/=factor;const length=Math.hypot(...g.normals.slice(j,j+3));for(let k=0;k<3;k++)g.normals[j+k]/=length;}
+  out[i]={...p,shape:'mesh',at:[0,0,0],role:p.role??'wood',geometry:g};
+ }
  // Three DISCONNECTED platforms create a high/mid/low group, instead of a
  // continuous bar separating all goods into a uniform row. The left corner is
  // fixed non-inventory dressing, actual stock stays to its right.
@@ -62,6 +71,20 @@ export function buildV11Display(variant=0):NativeSurface[]{
  }
  const retained=buildV10Display(variant).slice(9);
  out.push(...retained.map(p=>{if(p.role==='metal'||p.role==='paper'){const g=nativeSurfaceGeometry(p);for(let i=0;i<g.positions.length;i+=3){g.positions[i]-=1.24;g.positions[i+2]-=.15;}if(g.uvs===undefined)delete g.uvs;return {...p,shape:'mesh' as const,role:p.role,geometry:g,at:[0,0,0] as V3};}return p.role==='fabric'?zScale(p,0,1.10/.95):p;}),...paperCorner(variant));
+ // Fixed work tools on the newly rebuilt left extension fill a mixed display
+ // mass without pretending these are player-owned sellable units.
+ if(variant===0)for(const p of counterStationery()){
+  const g=nativeSurfaceGeometry(p);for(let j=0;j<g.positions.length;j+=3){g.positions[j]+=-1.07-1.00;g.positions[j+1]+=.9925-1.111;g.positions[j+2]+=-.12+1.73;}out.push({...p,shape:'mesh',at:[0,0,0],role:p.role??'wood',geometry:g});
+ }
+ if(variant===2){
+  out.push(board([.30,.025,.32],[-1.07,1.005,-.14],'#AD8355','wood',.008));
+  for(let k=0;k<3;k++){
+   const x=-1.15+k*.08,y=1.018,z=-.14,h=.20+k%2*.06,n=12,g:Geometry={positions:[],normals:[],indices:[]},rings=[[.028,0],[.028,h],[.021,h],[.021,.008],[.028,0]];
+   for(const[r,dy]of rings)for(let j=0;j<n;j++){const a=j/n*Math.PI*2;g.positions.push(x+r*Math.cos(a),y+dy,z+r*Math.sin(a));}
+   for(let row=0;row<rings.length-1;row++)for(let j=0;j<n;j++){const a=row*n+j,b=row*n+(j+1)%n;g.indices.push(a,b,a+n,b,b+n,a+n);}
+   out.push({shape:'mesh',at:[0,0,0],geometry:finishSculpt(g),color:'#E7DDC8',role:'paper'});
+  }
+ }
  return compileFixture(out.map(p=>p.role==='wood'&&p.roughness!==.64?{...p,color:'#AD8355'}:p));
 }
 export const counterV11Envelope={minX:.48,maxX:3.55,minZ:-1.96,maxZ:-1.04,surfaceY:1.111};

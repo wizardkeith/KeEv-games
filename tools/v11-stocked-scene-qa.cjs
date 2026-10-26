@@ -6,7 +6,7 @@ const quantity=Number(process.env.QA_QUANTITY||8),items=(process.env.QA_ITEMS||'
 fs.mkdirSync(out,{recursive:true});
 async function state(p,mode){return p.evaluate(mode=>new Promise(resolve=>{const r=indexedDB.open('next-stop-little-shop-w1');r.onsuccess=()=>{const db=r.result,q=db.transaction('saves','readonly').objectStore('saves').get('shop.w1.'+mode);q.onsuccess=()=>{resolve(q.result);db.close();};};}),mode);}
 (async()=>{const browser=await chromium.launch({executablePath:'/usr/bin/chromium',headless:true,args:['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']});const results=[];try{
- for(const[name,url]of urls){const context=await browser.newContext({viewport:{width:1280,height:900}});try{
+ for(const[name,url]of urls){const context=await browser.newContext({viewport:{width:Number(process.env.QA_WIDTH||1280),height:Number(process.env.QA_HEIGHT||900)}});try{
   if(process.env.QA_BLOCK_ROOM_SPECULAR==='1')await context.route('**/assets/native-v11/actual-static-room-specular.env',r=>r.abort());const p=await context.newPage(),errors=[];p.setDefaultTimeout(90000);p.on('pageerror',e=>errors.push(String(e)));await p.goto(url);
   await p.locator('[data-mode="sandbox"]').click();await p.waitForFunction(()=>document.querySelector('[data-mode="sandbox"]').ariaPressed==='true'&&!document.querySelector('#identity button[type="submit"]').disabled);
   await p.locator('#shop-name').fill('原目標重建 · 全店實拍');await p.locator('#identity button[type="submit"]').click();await p.waitForFunction(()=>window.littleShopDiagnostics?.().worldReady);

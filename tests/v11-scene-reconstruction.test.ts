@@ -15,7 +15,7 @@ test('real narrow X-grain floor has staggered physical boards, same walking elev
 });
 test('three furniture variants have distinct actual cabinet meshes, disconnected platforms and bounded compiled draw groups',()=>{
  const recipes=[0,1,2].map(nativeDisplayRecipe);assert.equal(new Set(recipes.map(p=>JSON.stringify(p))).size,3);
- for(const r of recipes){const b=bounds(r.flatMap(p=>points(nativeSurfaceGeometry(p))));assert.ok(b.lo[0]>=-.951&&b.hi[0]<=.951&&b.lo[2]>=-.562&&b.hi[2]<=.551);assert.ok(nativeGrouped(r).length<=16);assert.ok(r.reduce((n,p)=>n+nativeSurfaceGeometry(p).indices.length/3,0)<5000);}
+ for(const r of recipes){const b=bounds(r.flatMap(p=>points(nativeSurfaceGeometry(p))));assert.ok(b.lo[0]>=-1.301&&b.hi[0]<=.951&&b.lo[2]>=-.562&&b.hi[2]<=.551);assert.ok(nativeGrouped(r).length<=16);assert.ok(r.reduce((n,p)=>n+nativeSurfaceGeometry(p).indices.length/3,0)<5000);}
  // At riser height the old uninterrupted >1.4m cross-table plank is absent.
  for(const r of recipes)for(const p of r){const g=nativeSurfaceGeometry(p);for(let i=0;i<g.indices.length;i+=3){const t=g.indices.slice(i,i+3).map(n=>g.positions.slice(n*3,n*3+3));if(t.every(q=>q[1]>1.05&&Math.abs(q[1]-t[0][1])<1e-8)&&p.role==='wood')assert.ok(Math.max(...t.map(p=>p[0]))-Math.min(...t.map(p=>p[0]))<.60);}}
 });

@@ -12,9 +12,9 @@ export const nativeViewContract={
  shopTarget:[.70,1.15,0] as Point,staffTarget:[2.55,1.02,-.73] as Point,
  margin:.965,guard:1.002,
  criticalBoxes:[
-  {id:'display.1',min:[-3,.08,-2.10] as Point,max:[-1,1.70,-.90] as Point},
+  {id:'display.1',min:[-3.31,.08,-2.10] as Point,max:[-1,1.70,-.90] as Point},
   {id:'display.2',min:[-.9,.08,-.70] as Point,max:[1.1,1.70,.50] as Point},
-  {id:'display.3',min:[-3,.08,.50] as Point,max:[-1,1.70,1.70] as Point},
+  {id:'display.3',min:[-3.31,.08,.50] as Point,max:[-1,1.70,1.70] as Point},
   {id:'counter-and-staff',min:[.46,.08,-2.01] as Point,max:[3.58,1.78,-.35] as Point},
   {id:'doorway',min:[2.21,.08,3.08] as Point,max:[3.89,2.71,3.36] as Point},
   {id:'entry-visitor',min:[2.68,.08,2.55] as Point,max:[4.60,1.67,4.42] as Point},
