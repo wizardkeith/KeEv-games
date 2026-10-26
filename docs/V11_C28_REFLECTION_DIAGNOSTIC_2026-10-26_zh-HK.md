@@ -17,7 +17,9 @@ Application **104845d1af897902297fd759efd699bc8a7eeb38**／build192，PR8保持D
 
 固定192：244tests、build／validate五語174keys／replay／asset-check通過；146GLB零錯誤警告、305保護檔／相機演算法不變，39native及436 tracked資產／public素材重建前後一致（不聲稱436個均重新生成）。177個runtime與測試immutable192逐byte相同；新反射env／線性源／provenance四檔重新生成一致。[記錄](../evidence/native-v11/checkpoint-28/selected192/)。新測試實際解碼RGBD，防止反窗方向把原有房間反射重新壓暗，並非把測試當作美術驗收。
 
-192實際兩方向截圖已取得，局部操作錄影仍在補結果。前兩次harness失敗分別是錯把同一Shop視角按鈕當reset，以及未等拖曳慣性停止便比較；**未改遊戲相機、未把失敗報通過**。檢查腳本只讀兩實際幀的穩定角度，沒有覆寫相機。完成結果另附，尚不能宣稱新來源完整交易／離店／關店／B流程。
+[192實際同高視角A](../evidence/native-v11/checkpoint-28/selected192/actual-orbit-a.png)／[B](../evidence/native-v11/checkpoint-28/selected192/actual-orbit-b.png)、[124.040秒未剪原片](../evidence/native-v11/checkpoint-28/selected192/gameplay-uncut.webm)／[85–115秒連續節錄](../evidence/native-v11/checkpoint-28/selected192/continuous-85-115s.webm)已完成。正常相機及8件經濟狀態與C27逐值相同；兩個實際pointer角度穩定後開面板／重選同一Shop視角保留角度，實買1杯cost70：cash3840→3770、stock8→9，重載存檔逐值相同、隔離Normal不變、0pageerror。[實際結果](../evidence/native-v11/checkpoint-28/selected192/results.json)。前兩次harness失敗分別為把同一Shop按鈕誤當reset、未等慣性停止；僅修正測試的穩定條件，未改遊戲／覆寫相機，失敗log保留。
+
+原片50個CDP來源畫面，抽看0/14.34/30.58/44.46/58.61/80.62/90.44/105.28/122.84秒：視角變化和買入UI有實拍，未見明顯螢幕固定反射貼圖；不是所有角度／精確接觸認證。**片尾122.84秒在reload渲染暖機畫面，只確認資料重載，不宣稱post-reload3D畫面已完成**。原片與限制完整保留，沒有把這次局部流程序稱為新High完整結算／交接／離店／關店／B流程。
 
 先前**85ff／184**的243tests、五語15尺寸／75面板、實買3+005至8／重載／兩次UI結算2→0／售罄reload及526.040秒未剪High另存[固定184證據與限制](V11_C28_MATERIAL_CONTACT_CHECKPOINT_2026-10-26_zh-HK.md)。原片266秒讀到18件+¥8400合計毛利／未扣人工租金；該來源servedExitAndStaffReturn=false及closure未驗證，沒有混作192通過。
 

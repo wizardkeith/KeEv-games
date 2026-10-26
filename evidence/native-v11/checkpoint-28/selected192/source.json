@@ -1,10 +1,28 @@
 {
   "application": "104845d1af897902297fd759efd699bc8a7eeb38",
   "build": 192,
-  "normalAndOrbitScreens": "Actual normal production game via same real exported QA Sandbox; no pose/state injection",
-  "fullMatrixAndHighFlow": "Prior build184 only; source-specific coverage distinguished in report",
-  "currentOrbitFlow": "Pending corrected harness result; failed prior expectations retained",
-  "artGate": "C27 composition locked; build181 material gate failed; this revised material not independently accepted",
+  "normalAndOrbitScreens": "Actual production game, initial comparison state/camera exactly C27; same real exported QA Sandbox UI import, no pose or state injection",
+  "currentOrbitFlow": "PASS actual horizontal pointer orbits, stable-frame drawer/same-view preservation, buy one mug cost70/stock8to9, reload snapshot exact, no page errors; source-specific results.json",
+  "recording": {
+    "durationSeconds": 124.04,
+    "deliveredCDPFrames": 50,
+    "uncut": true,
+    "timeAcceleration": false,
+    "visualReviewSeconds": [
+      0,
+      14.34,
+      30.58,
+      44.46,
+      58.61,
+      80.62,
+      90.44,
+      105.28,
+      122.84
+    ],
+    "limit": "Last122.84s frame is reload shader warm-up, not certified post-reload3D render. State readback passed. Sparse cloud software delivery is not physical FPS or smoothness."
+  },
+  "fullMatrixAndHighFlow": "Prior source85ff/build184 only, not passed off as192 full flow",
+  "artGate": "C27 narrow composition accepted; build181 material gate failed; revised192 low-frequency response awaits independent review. Flowers/cloth/original whole target remain unmet.",
   "reflectionAssetSHA256": "ab2ddab4e6f5b7e64370f7ba2fb63497326a4f19b669a5ccb459cfef8e2f3258",
   "envEqualsRendered191": true
 }
