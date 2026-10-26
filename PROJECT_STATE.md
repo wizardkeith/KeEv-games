@@ -1,6 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T02:32:46+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T02:48:24+08:00** (Asia/Hong_Kong).
+
+## V11 C35最小暖白值面修正／待材質覆核 — 2026-10-27T02:48:24+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)推送`50040f72315daa2040dcbe8b276906874a7469d3`／application`8bfd0757febe549f9a3a8b006f7c2408bbd8b92b`；[唯一修正版230與已拒C34/228正常480px／雙斜角對照、圖頁量度及95.920秒實際原片](https://github.com/wizardkeith/KeEv-games/blob/50040f72315daa2040dcbe8b276906874a7469d3/docs/V11_C35_BRIGHT_TONE_CORRECTION_2026-10-27_zh-HK.md)。C34獨立材質FAIL／形體PASS；本次只收窄布圖頁乘色（前垂sRGB中位0.74/0.77/0.80→0.98/0.98/0.97，深值限褶谷），側花改接近主簇的暖灰白；全runtime src/config、已過模型、構圖、曝光、192反射逐byte不變。實拍暖白／褶谷與遮蓋保留，**材質待覆核、整體原圖仍未接受，不擴散或採用為預設**。
+- 256tests/tsc/build/validate五語174keys/replay/assets、146GLB零錯警告／305保護檔；15776tri／17styling群與原承托斷言保留，最終182runtime重建byte一致。真Sandbox匯入與同228camera/economy/雙orbit、0pageerror／fresh隔離Normal不變；35幀雲端片不是新全交易／Low／五語窄屏／實體GPU/FPS/audio/native驗收。main僅文件指標、未合併、PR8仍Draft，普通201／公開V17未改；無merge／Site操作／新發佈包／Library或LTC重試／玩家Chrome或Normal／Unity／關機，無使用者動作阻塞。
 
 ## V11 C34已過灰模的材質整合候選／未採用 — 2026-10-27T02:32:46+08:00
 
