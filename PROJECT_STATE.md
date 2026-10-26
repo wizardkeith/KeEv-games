@@ -1,9 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T08:49:34+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T09:29:58+08:00** (Asia/Hong_Kong).
 
 
 
+
+## V11 ceramic/material response checkpoint — 2026-10-26T09:29:58+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed/readback **2e3e479267e3d1287c867ae70672a5629aa1e839**, runtime **a2b32a498939a3c36ab8ca3b3ea8aec19ce754d2**, default112. **Unmerged; main documentation only; publicV17 unchanged; target still NOT met.** Actual255static-mesh128HDR room cube/48mips applies ceramic specular only, retained analyticdiffuse and directlight; reusable originalasset/nativecontract, noactors/stock/door/FX/save. Originalceladon pigment/normal/ORM and vaseheightUV. Actualsamecamera103→109specular-only→110celadon→112correctORM comparison; local gains, not whole-scene acceptance.
+- Found pinnedBabylon8.32defaultalpha masks green roughness even when green=true; corrected alpha=false for existing ORM finishes, matching declaredglTF. [Same-facing actual111/112, normal-shop/counter images,204tests and provenance](https://github.com/wizardkeith/KeEv-games/blob/2e3e479267e3d1287c867ae70672a5629aa1e839/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md). **Cloth visible gain still small; not all drape weakness blamed on material.** 204tests/build/validate/replay/assets,139GLB0errors/warnings,305protected/history,36native+3maps fresh byte-identical;375px intentionally missingprobe stillready/fallback/0pageerrors.
+- Normalcamera actual110 **177.636s** complete realbuy/place/greet/onehsettle/contact/readable18item+8400batchgrossmargin/Aexit/staffhome/reload/0errors/Normalisolatedunchanged; **beforeORMfix, not claimed112fullflow**.112freshflowrunning at checkpoint, statuspending. Old74locales not rerun. Next bounded onecup/onevase material response and natural true-stock layering, not another package. Librarynowparenthandled; nofurtherretries. Originaltarget/style/physicalGPU/FPS/audio/native open; noarchive/merge/deploy/userChrome/Normalplayer/Unity/shutdown/content expansion.
 
 ## V11 actual pencil/work-tool proportion checkpoint — 2026-10-26T08:49:34+08:00
 
