@@ -1,0 +1,62 @@
+{
+  "oldWorldBounds": [
+    [
+      -0.16258772004720984,
+      0.3939972028141536
+    ],
+    [
+      1.3823175587529246,
+      2.0534719352876354
+    ],
+    [
+      0.03914985966193485,
+      0.5618469167000081
+    ]
+  ],
+  "newWorldBounds": [
+    [
+      -0.008336514889176694,
+      0.3095563001400588
+    ],
+    [
+      1.3918065177431012,
+      2.01373412
+    ],
+    [
+      0.0053781397599173275,
+      0.4752077079220389
+    ]
+  ],
+  "withinOriginalXZ": false,
+  "scope": "Actual unchanged C27 transform on exact raw meshes; no route/collision envelope changes. Not full navigation/hand-clearance proof.",
+  "originalCentralFixtureWorldBounds": [
+    [
+      -0.85,
+      1.05
+    ],
+    [
+      0.08,
+      1.31
+    ],
+    [
+      -0.6537457466125488,
+      0.450000011920929
+    ]
+  ],
+  "originalFixturePlusFlowerBounds": [
+    [
+      -0.85,
+      1.05
+    ],
+    [
+      0.08,
+      2.0534719352876354
+    ],
+    [
+      -0.6537457466125488,
+      0.5618469167000081
+    ]
+  ],
+  "withinOriginalAggregateXZ": true,
+  "explanation": "New flower-only minZ reaches3.38cm further inward over the existing table, so flower-only bbox containment is false. It remains inside the original central fixture+flower footprint; old maximum-Z overhang is reduced. Route/collider sources unchanged, not full navigation certification."
+}
