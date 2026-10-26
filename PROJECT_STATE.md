@@ -1,6 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T06:10:26+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T06:51:02+08:00** (Asia/Hong_Kong).
+
+## V11 C39後牆—右窗單一材質候選 — 2026-10-27T06:51:02+08:00
+
+- `codex/game-v11-target-slice`／[Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送`730166bb1e7e54ae0a6f9e89a6658d899d63c64e`／application`061f9b0e86982020a21b6ce1b6eec161908f0204`；[原圖／base255與values256正常480px、雙斜角、122.240／100.640秒原片及檢查](https://github.com/wizardkeith/KeEv-games/blob/730166bb1e7e54ae0a6f9e89a6658d899d63c64e/docs/V11_C39_BACKWALL_WINDOW_MATERIAL_2026-10-27_zh-HK.md)。父任務轉達C38窄FORM獨立PASS；形體／C36桌與收銀／stock／camera／light鎖定，本輪僅架板既有albedo、近葉及屋頂—遠樹—天空材質值。**C39材質待獨立覆核、全景增益有限，整體原圖未接受；不採為預設、不擴散。**
+- 268tests/build/validate/replay/assets、146既有GLB零錯警告／305保護檔；501assets/public保留重建、兩組各182runtime逐byte同，原17群／14036tri／155固定項及3000植物tri淨空保留。真Sandbox匯入／同camera/economy／雙pointer斜角／live PBR、0pageerror／fresh隔離Normal未變；非新交易結算／Low/ReduceMotion／窄屏五語或實體GPU/FPS/audio/native認證。main僅文件指標，功能未合併／PR8仍Draft，普通feature仍C36／公開V17未改；無merge／Site／Library或LTC重試／玩家Chrome／Unity／關機，無需使用者動作的權限阻塞。
 
 ## V11 C38不等長垂葉／窗景灰模候選 — 2026-10-27T06:10:26+08:00
 
