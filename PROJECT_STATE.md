@@ -1,11 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T07:10:59+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T07:23:31+08:00** (Asia/Hong_Kong).
 
-## V11 C40開發預設採用檢查進行中 — 2026-10-27T07:10:59+08:00
+## V11 C40開發預設採用／固定證據待覆核 — 2026-10-27T07:23:31+08:00
 
-- C39窄材質已由父任務轉達獨立PASS，非整體原圖接受；[Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)來源`4b3fc354af6e0379342b19dd01727d37dcf986f7`將已過C38形體／256材質設為V11開發預設，映射／geometry／C36桌／cashier／routes／camera／economy不改。270tests、build257各182runtime及502資產重建byte同；真UI0→3→8→reload8→2→售罄0→reload0已過。完整顧客交接／雙route、Low/ReduceMotion仍在驗證，不能當完成或release認證；原始檢查紀錄仍在執行環境，完成後固定來源證據提交本PR。
-- main僅文件指標／功能未合併，PR8仍Draft；公開V17未改。整體原圖未接受，無merge／Site／Library或LTC重試／Normal玩家存檔／Chrome／Unity／關機操作，無需使用者動作的權限阻塞。
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)推送`453133277ce3c16a687bcbe5987b2528362cdfcb`／application`4b3fc354af6e0379342b19dd01727d37dcf986f7`；[原圖／已審256／普通257正常480px、stock-cycle、210.800秒High原片、Low/RM與來源](https://github.com/wizardkeith/KeEv-games/blob/453133277ce3c16a687bcbe5987b2528362cdfcb/docs/V11_C40_BACKWALL_DEVELOPMENT_ADOPTION_2026-10-27_zh-HK.md)。父任務轉達C38 FORM／C39 MATERIAL窄門檻獨立PASS，已採為V11開發普通預設；256geometry／material逐值同，C36桌與收銀、stock/economy／rig／camera／routes及原母檔不變。**C40採用待獨立覆核，整體原圖未接受，非release接受。**
+- 270tests/build/validate/replay/assets、146GLB零錯警告／305保護檔；502資產及182普通runtime重建byte同，原17styling群／14036tri／155固定項及3000植物tri淨空不放寬。真UI0→3→8→reload8→2→售罄0→reload0七筆ledger守恆；High兩位顧客完整路線、一次已提交結算／接袋／18件+¥8400批次毛利／exit／staff返回／重載真3D；Low/RM實際PBR及5素材SHA同已審值。首個指定B selector未觸發結算的錄製明確未過並保留，不轉算pass。非新hidden-tab／closure壓力／五語窄屏或實體GPU/FPS/audio/native認證。下一全景優先屋頂比重及窗光→全店暖bounce／接觸明暗；不重磨已過桌／後牆標準。main僅文件指標、功能未合併／PR8仍Draft／公開V17未改；無merge／Site／Library或LTC重試／玩家Normal或Chrome／Unity／關機，無使用者動作權限阻塞。
 
 ## V11 C39後牆—右窗單一材質候選 — 2026-10-27T06:51:02+08:00
 
