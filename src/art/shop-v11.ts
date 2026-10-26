@@ -1,3 +1,4 @@
+import {backwallNewForms,backwallFormSurfaces} from './backwall-forms-v11';
 import {placeCentralFloral} from './central-composition-v11';
 import {centralFlowerJugRecipe,centralFlowerSprayRecipe} from './display-quality-v11';
 import {wovenPlanter} from './woven-planter-v11';import {floorLeaf} from './floor-leaf-v11';
@@ -56,7 +57,7 @@ export function windowTreeSkeletons(){
   return {stem,branches};
  });
 }
-export function buildV11Garden():NativeSurface[]{
+function oldV11Garden():NativeSurface[]{
  const out:NativeSurface[]=[],root:V3=[-5.8,1.6,0];
  for(const [tree,t]of windowTreeSkeletons().entries()){
   out.push(t.stem);
@@ -72,7 +73,7 @@ export function buildV11Garden():NativeSurface[]{
  return batch(out).map(p=>p.shape==='mesh'?{...p,at:root,geometry:{...p.geometry,positions:p.geometry.positions.map((v,i)=>v-root[i%3])}}:p);
 }
 /** Hanging greenery is fixture decoration, not stock, a collectible or a grant. */
-export function buildV11TrailingGreenery():NativeSurface[]{
+function oldV11TrailingGreenery():NativeSurface[]{
  const out:NativeSurface[]=[];
  for(const [x,y,z]of [[-3.20,2.78,2.89],[1.40,2.80,2.86],[-4.19,2.82,-1.02]]){
   out.push(M(sculptLoft([{y:0,x:.10,z:.10},{y:.19,x:.13,z:.13},{y:.23,x:.13,z:.13}],12),'#B6A17F','ceramic',[x,y,z]));
@@ -81,6 +82,58 @@ export function buildV11TrailingGreenery():NativeSurface[]{
   }
  }
  return batch(out);
+}
+
+/** C37 one coherent window tree: actual forked branches at several depths and
+ * heights, broader overlapping curved blades, with a deliberate roof opening.
+ * Replaces the old196 individual blades; does not add to the original budget. */
+export function buildV11Garden():NativeSurface[]{
+ if(!backwallNewForms)return backwallFormSurfaces(oldV11Garden());
+ const out:NativeSurface[]=[],root:V3=[-5.8,1.6,0];
+ for(const [tree,t]of windowTreeSkeletons().entries()){
+  out.push(t.stem);
+  const x=tree?-6.20:-5.90,z=tree?-.40:2.10;
+  for(let b=0;b<6;b++){
+   const h=[-.68,-.12,.48,.99,1.53,2.02][b]-(tree?.32:0),a=b*2.39996+tree*1.4;
+   const joint:V3=[x-.04,h-.26,z+.04],tip:V3=[x+Math.cos(a)*(.42+(b%2)*.14),h,z+Math.sin(a)*(.44+(b%2)*.13)];
+   // Join to the actual sampled trunk axis at the corresponding height.
+   const g=t.stem.geometry,rings=Array.from({length:7},(_,r)=>[0,1,2].map(k=>[0,1,2,3].reduce((sum,j)=>sum+g.positions[(r*4+j)*3+k],0)/4)as V3);
+   let hi=rings.findIndex(p=>p[1]>=joint[1]);if(hi<1)hi=1;
+   const lo=rings[hi-1],up=rings[hi],u=Math.max(0,Math.min(1,(joint[1]-lo[1])/(up[1]-lo[1])));for(let k=0;k<3;k++)joint[k]=lo[k]+(up[k]-lo[k])*u;
+   out.push(twig([joint,[(joint[0]+tip[0])*.5,h-.13,(joint[2]+tip[2])*.5],tip],.014,'#8C7959'));
+   // Unequal overlapping groups rather than a row of identically sized crowns.
+   for(let k=0;k<7;k++){
+    const theta=k*2.39996+a,r=k===0?.02:.13+.045*(k%3),end:V3=[tip[0]+Math.cos(theta)*r,tip[1]+.10*Math.sin(theta)+.045*(k%2),tip[2]+Math.sin(theta)*r];
+    out.push(M(sculptSweep([tip,end],[.0038,.0016],undefined,1,3),'#8C7959','wood'));
+    out.push(leaf(end,.35+(k%3)*.055,.23+(k%2)*.045,theta+.4,.60+(k%4)*.29,['#789951','#A4B96B','#C3CE85','#8DA95B'][(b+k+tree)%4]));
+   }
+  }
+ }
+ return batch(backwallFormSurfaces(out)).map(p=>p.shape==='mesh'?{...p,at:root,geometry:{...p.geometry,positions:p.geometry.positions.map((v,i)=>v-root[i%3])}}:p);
+}
+/** Shelf pots are physically seated on the upper shelf, not suspended above it.
+ * Four unequal trailing stems bridge tiers; the third original pot now sits on
+ * the right window ledge. These are fixed plants, never saleable stock. */
+export function buildV11TrailingGreenery():NativeSurface[]{
+ if(!backwallNewForms)return backwallFormSurfaces(oldV11TrailingGreenery());
+ const out:NativeSurface[]=[];
+ for(const[x,y,z]of[[-3.12,2.2835,2.88],[1.43,2.2835,2.88]]){
+  out.push(M(sculptLoft([{y:0,x:.10,z:.10},{y:.18,x:.145,z:.145},{y:.22,x:.145,z:.145}],12),'#B6A17F','ceramic',[x,y,z]));
+  for(let b=0;b<4;b++){
+   const side=b%2?1:-1,drop=[.76,1.02,.61,.90][b],points:V3[]=Array.from({length:7},(_,j)=>{const u=j/6;return [x+(b-1.5)*.065+side*.16*Math.sin(u*2.9)+.035*Math.sin(j*1.4),y+.20-u*drop,z-.05-.22*Math.sin(Math.min(1,u*2)*Math.PI*.5)];});
+   out.push(twig(points,.004));
+   for(let k=0;k<7;k++){const q=points[k],side=k%2?1:-1;out.push(leaf([q[0]+side*.025,q[1],q[2]],.19+(k%3)*.025,.14+(k%2)*.025,side*(.9+b*.18),2.25+side*.24,['#738C54','#91A665','#A6B97C'][(k+b)%3]));}
+  }
+  for(let k=0;k<5;k++)out.push(leaf([x,y+.18,z],.28,.18,k*2.39996,.65+(k%3)*.4,['#738C54','#91A665','#A6B97C'][k%3]));
+ }
+ const pivot:V3=[-4.18,.901,1.44];
+ out.push(M(sculptLoft([{y:0,x:.11,z:.11},{y:.20,x:.15,z:.15},{y:.235,x:.15,z:.15}],12),'#B6A17F','ceramic',pivot));
+ for(let b=0;b<5;b++){
+  const a=b*2.39996,tip:V3=[pivot[0]+Math.cos(a)*.17,pivot[1]+.48+(b%3)*.14,pivot[2]+Math.sin(a)*.19],base:V3=[pivot[0],pivot[1]+.19,pivot[2]];
+  out.push(twig([base,[base[0],(base[1]+tip[1])*.5,base[2]],tip],.007));
+  for(let k=0;k<3;k++){const u=.40+k*.27,point=base.map((v,j)=>v+(tip[j]-v)*u)as V3;out.push(leaf(point,.26+(2-k)*.025,.18,a+(k%2?.7:-.6),.65+k*.20,['#738C54','#91A665','#A6B97C'][(k+b)%3]));}
+ }
+ return batch(backwallFormSurfaces(out));
 }
 
 /** Original non-stock floral arrangements. They replace the retired window

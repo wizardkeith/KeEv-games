@@ -1,0 +1,45 @@
+{
+  "intent": {
+    "id": "v11.c37.backwall-window-form",
+    "mode": "shape",
+    "defaultAdopted": false,
+    "scope": "Only fixed back-wall showroom dressing and right-window exterior; C36 table/cashier/camera/lights/routes unchanged",
+    "grayColor": "#A5A5A5",
+    "limits": "Form gate only; no new material standard, target acceptance, economic authority or public adoption"
+  },
+  "format": "engine-neutral indexed 3D recipes / fixed decorative sample descriptors",
+  "units": "metres",
+  "axes": "RH +Y up",
+  "rights": "Original project procedural mesh authorship; no generated image, external model or reference pixels embedded",
+  "materials": "Original prior palettes only, form diagnostic awaiting independent gate; no new material adoption",
+  "sources": {
+    "src/art/backwall-forms-v11.ts": "99da91e1890a51422537706f6039f9a5da2d46e40f65f47cd0760bd5ec7a65da",
+    "src/art/shop-v11.ts": "c928498595dea8629f3c04a5a22b21151480798077d8145d736418e78dcd6bb3",
+    "src/art/mixed-display-v11.ts": "03d64fe4d89f6be760354b00a3d350c54085766e1c39de8993123b10164a7585",
+    "src/art/fixtures-v11.ts": "8affc8472d2ad45e7c516fafbc9e8867aa21cb61a1b465cdb0cde716f282aff0",
+    "src/art/back-display-v10.ts": "bb511ffe95c8b0b4b160b906cd5a13a1ad88a8dfa2c5b3b06ae4e0e3fd2b1591",
+    "tools/export-v11-backwall-forms.ts": "e8c908df109fa2727f23582080182ff6435be470d96aeff413649f098b51e81a"
+  },
+  "files": {
+    "assets/masters/native-v11/backwall-c37/trailing-greenery.json": {
+      "bytes": 319196,
+      "sha256": "09235f55c807b9f694ab6576aced20ff5771519476fdfe3ef74870ef3e8c8d1c"
+    },
+    "assets/masters/native-v11/backwall-c37/window-near-branches.json": {
+      "bytes": 478929,
+      "sha256": "c803629ebb648846110a4b33abf7d93a92155e861727d2f3268a8f1adfa3df55"
+    },
+    "assets/masters/native-v11/backwall-c37/window-mid-far.json": {
+      "bytes": 1087046,
+      "sha256": "edcc5f5842673eecdd2a1b06ff38b0711e3e217696290ea2e6b9c44e8ffda8ae"
+    },
+    "assets/masters/native-v11/backwall-c37/fixed-back-samples.json": {
+      "bytes": 2634,
+      "sha256": "489d96a25f5579d78fce5c552709ded5294291867db2f05b64b30d501d97ca7f"
+    },
+    "assets/masters/native-v11/backwall-c37/paper-work-bays.json": {
+      "bytes": 2279,
+      "sha256": "3f421671077f1271c336b351b5b28cfeb9303d8b28ba1bb37ad8194a02c0eed2"
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import {backwallSample,backwallNewForms,backwallBays,backwallFormSurfaces} from './backwall-forms-v11';
 import {centralComposition} from './central-composition-v11';
 /** C22 non-authoritative fixed dressing. Authoring only: no state, clock, stock
  * grant, sale or catalogue mutation. Existing 35 showroom samples keep identity. */
@@ -8,7 +9,7 @@ export function curateBackSample<T extends Sample>(sample:T,row:number,group:num
  if(sample.at[2]<2)return sample; // accepted central/counter C5 samples untouched
  const xs=[[-2.85,-2.23,-3.01,-.98,-1.67,-.25,.18],[-3.04,-2.13,-1.58,-.96,.02,.64,1.35],[-2.95,-2.45,-1.92,-1.35,-.66,.17,.70]],stack=['off.notebook','off.towel','off.cookie'].includes(sample.id),upright=sample.id==='off.card',paired=['off.mug','off.tea'].includes(sample.id),scale=sample.id==='off.notebook'?.88:sample.id==='off.towel'?.72:sample.id==='off.tote'?.70:sample.id==='off.vase'?.92:.82;
  const turn:V3=[upright?-1.18:0,stack?-.12+k*.035:upright?-.18:[-.34,.26][k%2]+row*.08,0],bounds=fixedSampleBounds(sample.id,turn,scale),x=xs[row][group]+(stack?k*.009:paired?k*.27:0),z=2.82+(paired&&k%2?.055:0)+(upright?-.07:0);
- return {...sample,scale,turn,at:[x,[1.0025,1.5225,2.2825][row]+.001-bounds.min+(stack?k*bounds.height:0),z]};
+ return backwallSample({...sample,scale,turn,at:[x,[1.0025,1.5225,2.2825][row]+.001-bounds.min+(stack?k*bounds.height:0),z]},row,group,k);
 }
 const box=(size:V3,at:V3,color:string,role:NativeSurface['role']='paper'):NativeSurface=>({shape:'box',size,at,color,role});
 /** Open boxes have wall thickness and a visible cavity, not a dark painted lid. */
@@ -22,10 +23,12 @@ export function mixedWorkProps():NativeSurface[]{
  // actual central lower shelf and window cabinet centre bay. Floor/paths clear.
  out.push(...openBox([.10,.3385,-.06],1.10,.20,.64),...openBox([-2.175,.577,1.10],.46,.16,.51));
  // Three paper work bays break the long shelf into unequal high/low clusters.
- for(const[x,y,w]of[[-2.35,1.0035,.43],[-.43,1.5235,.42],[-.20,2.2835,.35]]){
-  out.push(box([w,.018,.29],[x,y+.009,2.86],'#B69A73'),box([.018,.22,.29],[x-w/2+.009,y+.11,2.86],'#B69A73'),box([.018,.22,.29],[x+w/2-.009,y+.11,2.86],'#B69A73'),box([w,.22,.018],[x,y+.11,2.996],'#B69A73'));
-  for(let j=0;j<3;j++){const height=.28+j%2*.035;out.push(box([w-.07,height,.012],[x+(j-1)*.014,y+.019+height/2,2.78+j*.055],j===1?'#EDE4D1':'#70897C',j===1?'paper':'fabric'));}
+ const back:NativeSurface[]=[];
+ for(const [i,[x,y,w]]of (backwallNewForms?backwallBays.map(b=>[b.x,b.y,b.w]):[[-2.35,1.0035,.43],[-.43,1.5235,.42],[-.20,2.2835,.35]]).entries()){
+  back.push(box([w,.018,.29],[x,y+.009,2.86],'#B69A73'),box([.018,.22,.29],[x-w/2+.009,y+.11,2.86],'#B69A73'),box([.018,.22,.29],[x+w/2-.009,y+.11,2.86],'#B69A73'),box([w,.22,.018],[x,y+.11,2.996],'#B69A73'));
+  for(let j=0;j<3;j++){const height=backwallNewForms?backwallBays[i].heights[j]:.28+j%2*.035;back.push(box([w-.07,height,.012],[x+(j-1)*.014,y+.019+height/2,2.78+j*.055],j===1?'#EDE4D1':'#70897C',j===1?'paper':'fabric'));}
  }
+ out.push(...backwallFormSurfaces(back));
  // A blank index card sits ON the existing three-book central work pile,
  // giving a readable white middle mass without becoming stock or a quest label.
  const bookTop=artDirection.displaySurfaceY+.16+.001+3*fixedSampleBounds('off.notebook',[0,Math.PI/2,0],.78).height;out.push(box([.15,.012,.06],[centralComposition.books.x,bookTop+.007,centralComposition.books.z+.09],'#B69A73'),box([.16,.20,.004],[centralComposition.books.x,bookTop+.114,centralComposition.books.z+.09],'#EDE4D1'));
