@@ -1,8 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T15:31:40+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T16:19:42+08:00** (Asia/Hong_Kong).
 
 
+
+
+## V11 C25安全基線／C26同桌主花器繼續重建 — 2026-10-26T16:19:42+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送C25證據 `dc22636dfa8a666599c2d7284dbf4cc0f0558f5e`／application `20a0433484fb71ce3e3aabf3d2ee7de961cf6c70`／build154，未合併。[正常全景／局部／286.880秒真遊戲原片及限制](https://github.com/wizardkeith/KeEv-games/blob/dc22636dfa8a666599c2d7284dbf4cc0f0558f5e/docs/V11_C25_FLORAL_LINEN_CHECKPOINT_2026-10-26_zh-HK.md)：233tests、146GLB零錯警告、305保護檔案、39native／174runtime parity、五語15案例75面板通過；實買上架／A交接／18件合計毛利+8400／離店返回／reload、隔離Normal不變。稀疏雲端錄影非GPU/FPS／流暢度或新B／hidden-tab／closure認證。
+- C24獨立像素覆核確認杯形／乳白釉／蜜木／垂布有實際增益，但**中央桌品質標準仍未通過、原圖仍未達標**。C26本地尚未提交：同桌圓腹主花器／不對稱花冠加強主從比例、書冊與實際杯群留空隙、校準布緣；正常156有可見主體，正修正書冊實際範圍及花朵尺度，未冒稱C25數字覆蓋C26。沒有向全店擴散，LTC403仍停止，無使用者動作阻塞。
+- main本次僅進度指標；PR8仍Draft、公開V17不變，無merge／Site save/deploy／新發佈包／Library重試／玩家Chrome／Unity／關機；經濟／存檔／五語／已接受清單與相機保持。
 
 
 ## V11 C24 固定149實拍／方法轉換檢查點（仍未達標）— 2026-10-26T15:31:40+08:00
