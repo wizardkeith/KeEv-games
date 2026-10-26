@@ -1,3 +1,4 @@
+import {grayFormMode,grayBatchColor,grayBatchRoughness} from './gray-forms-v11';
 import {centralLinenRecipe,windowCrownRecipe} from './display-quality-v11';
 /** Target slice furniture/architecture reconstruction. Same action heights and
  * station pivots; wider display joinery, counter wing and real widened window
@@ -86,7 +87,7 @@ export function buildV11Display(variant=0):NativeSurface[]{
    out.push({shape:'mesh',at:[0,0,0],geometry:finishSculpt(g),color:'#E7DDC8',role:'paper'});
   }
  }
- return compileFixture(out.map(p=>variant===1&&p.role==='wood'&&p.roughness===.64?{...p,color:'#FFFFFF',finish:'display-oak'}:p.role==='wood'&&p.roughness!==.64?{...p,color:'#AD8355'}:p));
+ return compileFixture(out.map(p=>grayFormMode!=='control'&&p.role==='wood'&&p.color===grayBatchColor&&p.roughness===grayBatchRoughness?p:variant===1&&p.role==='wood'&&p.roughness===.64?{...p,color:'#FFFFFF',finish:'display-oak'}:p.role==='wood'&&p.roughness!==.64?{...p,color:'#AD8355'}:p));
 }
 export const counterV11Envelope={minX:.48,maxX:3.55,minZ:-1.96,maxZ:-1.04,surfaceY:1.111};
 export function buildV11Counter():NativeSurface[]{
