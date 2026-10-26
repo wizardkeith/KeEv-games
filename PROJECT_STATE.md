@@ -1,11 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T05:09:55+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T05:29:23+08:00** (Asia/Hong_Kong).
 
-## V11 C37後牆—右窗形體候選／未採用 — 2026-10-27T05:09:55+08:00
+## V11 C37後牆—右窗通道淨空後候選／形體待覆核 — 2026-10-27T05:29:23+08:00
 
-- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)推送`3047406a052152d45617972fcb95865efb25aef5`／application`cc98c7b6efc67b58a408f9d6d1e62f2cdee8bf5c`；[原圖／同正常480px灰模與原材質預覽、雙斜角及未剪片](https://github.com/wizardkeith/KeEv-games/blob/3047406a052152d45617972fcb95865efb25aef5/docs/V11_C37_BACKWALL_WINDOW_FORM_2026-10-27_zh-HK.md)。C36 development-adoption已獨立通過並鎖定，本輪只重建後牆固定高低陳列、跨層垂枝與窗外近枝／屋頂／兩側遠樹；保留35固定樣本與中央／收銀／相機／路徑，新增原創Blender+JSON可重用源及架板三角形零相交檢查。**C37形體待獨立覆核、整體原圖仍未接受，不進新材質／不採為預設**；feature無旗標仍C36，main僅文件指標、功能未合併，公開V17未由本輪改動。
-- 最終245灰模／246預覽／247 control各182runtime、494tracked資產重建byte一致；263tests/build/五語174keys validate/replay/assets、146GLB零錯警告／305保護檔，14344tri／17群／155固定項保留原上限。245真pointer雙斜角154.600秒；246真UI買1杯stock8→9/cash3840→3770、bookCost/purchases/shelves與reload真3D通過，137.840秒原片，0pageerror／fresh隔離Normal不變。非新結算交接／完整stock循環／Low/ReduceMotion／五語窄屏或實體GPU/FPS/audio/native驗收。下一步按正常全景及雙斜角作形體覆核；無merge／Ready／Site／Library或LTC重試／玩家Chrome或Normal／Unity／關機操作，無需使用者動作的權限阻塞。
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)推送`ea4a736cf2aa71a4b1f2c6ed0a8f0183251f035f`／application`7569e136ebf74a3f08bfd3b83dd6b00748cf677c`；[原圖／正常480px灰模、雙斜角、真遊戲預覽及未剪片](https://github.com/wizardkeith/KeEv-games/blob/ea4a736cf2aa71a4b1f2c6ed0a8f0183251f035f/docs/V11_C37_ROUTE_CLEARANCE_FINAL_2026-10-27_zh-HK.md)。只重建後牆固定高低群／垂葉與右窗近枝—屋頂—遠樹，C36已過桌／收銀／camera／路徑／35固定樣本與真stock/economy保留。早期304候選撤回作本輪最終覆核：保守既有route body-box有476個三角形進入，修正後0；三架板零相交亦保留，未改路線／放寬斷言。這不是完整角色逐幀碰撞認證。原source/Blender/JSON與304證據保留。
+- 最終248灰模／249預覽／250 control各182runtime、494資產重建byte一致；264tests/build/五語174keys validate/replay/assets、146GLB零錯警告／305保護檔，14344tri／17群／155固定項不加上限。248真pointer雙角度147.120秒；249真買1杯stock8→9/cash3840→3770、bookCost/purchases/shelves與reload真3D相同，107.160秒原片，0pageerror／fresh隔離Normal不變。**形體待獨立覆核、整體原圖仍未接受，不進新材質或採為預設**；feature無旗標仍C36，main僅文件指標／功能未合併／PR8仍Draft，公開V17未由本輪改動。沒有新全結算交接／完整stock-cycle／Low/ReduceMotion／五語窄屏或實體GPU/FPS/audio/native認證；無merge／Ready／Site／Library或LTC重試／玩家Chrome或Normal／Unity／關機操作，無使用者動作權限阻塞。
 
 ## V11 C36預設採用／瓶口修正與最終來源檢查完成 — 2026-10-27T04:10:38+08:00
 
