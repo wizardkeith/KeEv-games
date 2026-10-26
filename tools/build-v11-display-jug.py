@@ -14,8 +14,8 @@ def mesh(name,v,faces,uv):
   f.use_smooth=True
   for li in f.loop_indices:layer.data[li].uv=uv[m.loops[li].vertex_index]
  return o
-profile=[(.001,0),(.085,0),(.105,.024),(.112,.105),(.098,.19),(.057,.258),(.057,.304),(.048,.309),(.046,.265),(.085,.184),(.098,.08),(.083,.020),(.001,.020)]
-n=16;v=[];uv=[];f=[]
+profile=[(.001,0),(.085,0),(.105,.024),(.112,.105),(.111,.145),(.098,.19),(.075,.228),(.057,.258),(.057,.304),(.048,.309),(.046,.265),(.085,.184),(.098,.08),(.083,.020),(.001,.020)]
+n=20;v=[];uv=[];f=[]
 for r,y in profile:
  for j in range(n+1):
   a=j/n*math.pi*2;rr=r*(1+.006*math.sin(a*3+y*9));v.append((rr*math.cos(a),y,rr*math.sin(a)));uv.append((j/n,y/.309))
@@ -28,7 +28,7 @@ body=mesh('Central hollow flower jug — broad belly, narrow open neck, continuo
 # Smooth cubic handle, embedded upper/lower terminals in the ACTUAL body.
 points=[Vector(p) for p in [(.080,.221,0),(.156,.259,0),(.176,.090,0),(.101,.088,0)]]
 def at(t):return points[0]*(1-t)**3+points[1]*3*t*(1-t)**2+points[2]*3*t*t*(1-t)+points[3]*t**3
-v=[];uv=[];f=[];steps=6;sides=6;radius=.011
+v=[];uv=[];f=[];steps=8;sides=6;radius=.011
 for i in range(steps+1):
  t=i/steps;p=at(t);axis=(at(min(1,t+.0001))-at(max(0,t-.0001))).normalized();right=Vector((0,0,1));up=axis.cross(right).normalized()
  for j in range(sides):
@@ -39,10 +39,16 @@ for i,rev in [(0,True),(steps,False)]:
  c=len(v);p=at(i/steps);v.append(tuple(p));uv.append((.55,p.y/.309))
  for j in range(sides):a=i*sides+j;b=i*sides+(j+1)%sides;f.append((c,b,a) if rev else(c,a,b))
 handle=mesh('Single original handle — embedded terminals, not floating accessory',v,f,uv)
+# Author the dominant rounded-belly proportions and turn its handle into the
+# reserved left corner. Bake positive-determinant scale/yaw into the editable
+# low mesh; no hidden renderer enlargement or collision/sale input.
+for o in [body,handle]:
+ for vertex in o.data.vertices:vertex.co.x*=-1.5;vertex.co.y*=-1.5;vertex.co.z*=1.20
+ o.data.update()
 def export(o):
  m=o.data;m.calc_loop_triangles();g={'positions':[],'normals':[],'uvs':[],'indices':[]}
  for tri in m.loop_triangles:
   for li in tri.loops:
    p=m.vertices[m.loops[li].vertex_index].co;n=m.corner_normals[li].vector;g['indices'].append(len(g['positions'])//3);g['positions'] += [float(p.x),float(p.z),float(-p.y)];g['normals'] += [float(n.x),float(n.z),float(-n.y)];g['uvs'] += list(m.uv_layers.active.data[li].uv)
- return {'shape':'mesh','at':[0,0,0],'role':'ceramic','color':'#C5CCB3','roughness':.70,'finish':'stoneware','geometry':g}
-parts=[export(body),export(handle)];(out/'flower-jug.json').write_text(json.dumps(parts,separators=(',',':'))+'\n');bpy.context.preferences.filepaths.save_version=0;bpy.ops.wm.save_as_mainfile(filepath=str(out/'flower-jug.blend'));(out/'flower-jug-provenance.json').write_text(json.dumps({'source':'tools/build-v11-display-jug.py','sourceSHA256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'units':'metres RH Y-up export / editable Blender RH Z-up','scope':'ONLY replace existing central non-stock flowerholder, same support and arrangement; original high jug remains separate unused experiment','triangles':[len(p['geometry']['indices'])//3 for p in parts],'handleTerminalCenters':[[.080,.221,0],[.101,.088,0]],'handleRadius':radius,'geometry':'13 authored radial profile rings,16 sectors, real closed cavity/foot; cubic swept attached handle, no painted fake vessel','limits':'Actual game comparison pending; no target acceptance'},indent=2)+'\n');print('Flower jug triangles:',sum(len(p['geometry']['indices'])//3 for p in parts))
+ return {'shape':'mesh','at':[0,0,0],'role':'ceramic','color':'#A2B29C','roughness':.42,'finish':'celadon','geometry':g}
+parts=[export(body),export(handle)];(out/'flower-jug.json').write_text(json.dumps(parts,separators=(',',':'))+'\n');bpy.context.preferences.filepaths.save_version=0;bpy.ops.wm.save_as_mainfile(filepath=str(out/'flower-jug.blend'));(out/'flower-jug-provenance.json').write_text(json.dumps({'source':'tools/build-v11-display-jug.py','sourceSHA256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'units':'metres RH Y-up export / editable Blender RH Z-up','scope':'ONLY replace existing central non-stock flowerholder, same support and arrangement; original high jug remains separate unused experiment','triangles':[len(p['geometry']['indices'])//3 for p in parts],'handleTerminalCenters':[[-.120,.2652,0],[-.1515,.1056,0]],'handleRadiusAxes':[radius*1.5,radius*1.2,radius*1.5],'geometry':'15 authored radial profile rings,20 sectors, dominant1.5x belly/1.20x height and left-facing handle, real closed cavity/foot; cubic swept attached handle, no painted fake vessel','limits':'Actual game comparison pending; no target acceptance'},indent=2)+'\n');print('Flower jug triangles:',sum(len(p['geometry']['indices'])//3 for p in parts))

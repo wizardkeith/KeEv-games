@@ -1,0 +1,1 @@
+Actual162 fixed5-petal variant: corollas mostly lean upward/away from the default open-shop view, weak visible white mass. Retained for controlled static orientation comparison; no camera-facing billboard used.

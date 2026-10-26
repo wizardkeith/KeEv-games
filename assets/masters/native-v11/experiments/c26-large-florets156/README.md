@@ -1,0 +1,1 @@
+Actual156 whole crown / large-floret variant. Retained for bounded same-camera comparison; not a target-accepted standard. Parent requested a dominant loose white crown; next trial keeps crown extent but reduces individual blossom scale.

@@ -42,3 +42,14 @@ experiments/c25-sparse-spray152 and is not used. The wider0.64m central cloth no
 has24 actual sewn/overlapping fringe ribbons;1744tri. Normal-game153 supports a
 local improvement only; target quality/style remains unmet. No cap was raised:
 whole styling+canopy stays below16000 and fewer than18 styling material groups.
+
+Current C26 local reconstruction: `flower-jug` is708tri, with authored larger
+rounded belly/shoulder, baked left-facing handle and the retained celadon finish.
+`flower-spray` is1738tri:60 small blossoms with five closed thin tetrahedral
+petals each, hard face normals, three spreading branch axes; no alpha card or
+scene-image substitute. Whole styling+canopy15990tri/17groups retains its cap.
+The enlarged neck/handle and rotated0.78-scale three-book stack have physical
+opening/support/clearance tests. Only existing decorative samples are arranged.
+The1744tri cloth now follows the actual25mm table bevel with a2.5mm outer offset
+(2mm thickness plus0.5mm clearance), then primary gravity folds and24 sewn fringe
+ribbons. Normal-game comparison and independent quality review remain open.

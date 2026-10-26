@@ -10,11 +10,15 @@ cols=12;rows=17;verts=[];uvs=[];faces=[]
 for r in range(rows):
  for j in range(cols+1):
   u=j/cols;t=(r-6)/10
-  if r<=6:y=.995;z=.55-r/6*1.08;x=-.08+u*.64
+  if r<=6:y=.995;z=.55-r/6*1.075;x=-.08+u*.64
+  elif r==7:y=.9675+.0275*math.cos(math.pi/6);z=-.525-.0275*math.sin(math.pi/6);x=-.08+u*.64
+  elif r==8:y=.9675+.0275*math.cos(math.pi/3);z=-.525-.0275*math.sin(math.pi/3);x=-.08+u*.64
+  elif r==9:y=.9675;z=-.5525;x=-.08+u*.64
   else:
-   y=.995-.355*t+.010*math.sin(u*math.pi*3+.35)*t**3
+   t=(r-9)/7
+   y=.9675-.3275*t+.010*math.sin(u*math.pi*3+.35)*t**3
    slack=max(0,min(1,(.89-y)/.13))
-   z=-.559+.045*(.5+.5*math.cos(u*math.pi*6+.65*t))*math.sin(math.pi*t)**.70*slack
+   z=-.554+.045*(.5+.5*math.cos(u*math.pi*6+.65*t))*math.sin(math.pi*t)**.70*slack
    x=-.08+u*.64+.004*math.sin(u*math.pi*4+t)*t
   verts.append((x,-z,y));uvs.append((u,r/(rows-1)))
 for r in range(rows-1):
