@@ -1,13 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T20:11:10+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T20:46:03+08:00** (Asia/Hong_Kong).
 
-## V11 C28 固定184驗證／反射診斷繼續 — 2026-10-26T20:11:10+08:00
+## V11 C28 固定192反射診斷／原圖仍未通過 — 2026-10-26T20:46:03+08:00
 
-- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送`ad7a6e7`，固定application`85ff32d64b127b133e6542344e27be225fa4fb0b`／build184；[正常畫面、同桌局部、原片／來源與限制](https://github.com/wizardkeith/KeEv-games/blob/ad7a6e7/docs/V11_C28_MATERIAL_CONTACT_CHECKPOINT_2026-10-26_zh-HK.md)。C27窄幅構圖已獨立通過並鎖定；父執行緒轉述build181材質／接觸門檻**FAIL**，未稱原圖風格達標，未向全店擴散。
-- 243tests／build／validate／replay／asset-check、146GLB零錯警告、305保護檔、39native及319tracked assets重建不變、177runtime parity通過。五語15尺寸案例／75面板切換及Low／觸控模擬／Reduce Motion通過；真買3再鍵盤005至8、重載、兩次UI結算售至2→0、售罄reload通過。局部靜態陰影只在真實庫存變化時重算，未當作GPU效能通過。
-- 526.040秒未剪High原片266秒實際顯示18件/+¥8400/未扣人工租金；招呼／結算／收銀接觸觀察到，但servedExitAndStaffReturn=false及關店流程未驗證，未冒稱全流程／流暢度／實體GPU/FPS/audio/native。本地下一步同模型／相機／漫反射的reflection OFF/ON診斷，找出腹部變暗來源，先改善正常尺度肩腹形體，不加微紋／AO強度。
-- main只有文件指標，功能未合併；PR8仍Draft、公開V17不變，無merge／Site save/deploy／新發佈tar／Library重試／玩家Chrome或Normal／Unity／關機。LTC403保持停止，無使用者動作阻塞。
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送`cd2e9fce62018535d90f2dd9d8239d19b0238270`，application`104845d1af897902297fd759efd699bc8a7eeb38`／build192；[固定正常原圖／BEFORE–AFTER、控制對照及未剪錄影](https://github.com/wizardkeith/KeEv-games/blob/cd2e9fce62018535d90f2dd9d8239d19b0238270/docs/V11_C28_REFLECTION_DIAGNOSTIC_2026-10-26_zh-HK.md)。C27窄幅構圖已通過並鎖定；build181材質門檻獨立FAIL，192只作新候選，不宣稱原圖／同桌材質接受。OFF/ON確認舊反射壓暗房間背景；保留原房間反射加寬柔窗／室內光瓣，×4亮點及厚釉無效試驗撤回，未增幾何／微紋／AO強度。
+- 固定192的244tests／build／validate五語174keys／replay／asset-check、146GLB零錯警告、305保護檔、39native及436 tracked資產/public重建不變、177runtime parity通過。124.040秒實際pointer雙角度、面板及同視角保留orbit、真買1杯cost70/cash3840→3770/stock8→9、reload資料相同、隔離Normal不變、0pageerror。50CDP畫面為稀疏雲端軟件錄影；片尾reload暖機，未宣稱post-reload3D畫面完成／流暢度／實體GPU/FPS/audio/native。
+- 原容量中斷前的85ff/build184程序已收集完成，未重啟重複原工作：243tests、五語15案例／75面板Low/觸控模擬/Reduce Motion、買3再鍵盤005至8／reload／兩次UI結算2→0／售罄reload通過；526.040秒High原片266秒可讀18件/+8400/未扣人工租金，servedExitAndStaffReturn=false及closure未驗證。**這些是184證據，沒有冒作192全流程**；白花／linen／整體目標差距仍在，下一步獨立像素覆核，未向全店擴散。
+- main僅文件指標，功能未合併；PR8保持Draft、公開V17不變，無merge／Site save/deploy／新發佈tar／Library重試／玩家Chrome或Normal／Unity／關機。LTC403仍停止，無使用者動作阻塞。
 
 
 ## V11 C27 同資產構圖／實際世界支承169（原圖仍未達標）— 2026-10-26T18:29:48+08:00
