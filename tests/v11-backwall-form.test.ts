@@ -1,3 +1,4 @@
+import{CUSTOMER_ROUTES,CUSTOMER_ROUTE_CONTRACT}from'../src/presentation/native-routes';
 import test from'node:test';import assert from'node:assert/strict';import fs from'node:fs';import{createHash}from'node:crypto';
 import{backwallFormMode}from'../src/art/backwall-forms-v11';import{backDisplaySamples}from'../src/art/native-display';import{fixedSampleBounds}from'../src/art/decor-vignette-v11';import{nativeSurfaceGeometry,type NativeSurface}from'../src/art/native-characters';import{nativeStylingRecipe,nativeWindowCanopy}from'../src/art/native-styling';import{buildV11TrailingGreenery}from'../src/art/shop-v11';
 const dir='assets/masters/native-v11/backwall-c37/',read=(file:string)=>JSON.parse(fs.readFileSync(dir+file,'utf8')),tri=(p:NativeSurface[])=>p.reduce((n,x)=>n+nativeSurfaceGeometry(x).indices.length/3,0);
@@ -22,4 +23,12 @@ function hitsBox(v:number[][],min:number[],max:number[]){const c=min.map((x,i)=>
 test('C37 actual botanical triangles wrap in front of all three shelf boards, not through them',()=>{
  const plants=read('trailing-greenery.json')as NativeSurface[],rails=[[.9175,1.0025],[1.4175,1.5225],[2.1775,2.2825]];
  for(const p of plants){const g=nativeSurfaceGeometry(p);for(let i=0;i<g.indices.length;i+=3){const t=g.indices.slice(i,i+3).map(n=>g.positions.slice(n*3,n*3+3));for(const[lo,hi]of rails)assert.equal(hitsBox(t,[-3.4,lo,2.535],[1.8,hi,3.165]),false,'plant triangle cuts back shelf: '+i);}}
+});
+
+test('C37 trailing foliage clears the existing customer-route body sweep without changing routes',()=>{
+ const r=CUSTOMER_ROUTE_CONTRACT.radius,plants=read('trailing-greenery.json')as NativeSurface[];
+ for(const path of CUSTOMER_ROUTES)for(let k=1;k<path.length;k++){
+  const a=path[k-1],b=path[k],min=[Math.min(a.x,b.x)-r,.08,Math.min(a.z,b.z)-r],max=[Math.max(a.x,b.x)+r,2.10,Math.max(a.z,b.z)+r];
+  for(const p of plants){const g=nativeSurfaceGeometry(p);for(let i=0;i<g.indices.length;i+=3){const t=g.indices.slice(i,i+3).map(n=>g.positions.slice(n*3,n*3+3));assert.equal(hitsBox(t,min,max),false,'plant triangle enters existing route-body sweep, segment'+k);}}
+ }
 });

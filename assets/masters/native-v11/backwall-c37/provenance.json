@@ -14,7 +14,7 @@
   "materials": "Original prior palettes only, form diagnostic awaiting independent gate; no new material adoption",
   "sources": {
     "src/art/backwall-forms-v11.ts": "642a02e15ee0e61c9ae45f65b2c84d58fe53cc1dba432138a235db169210f264",
-    "src/art/shop-v11.ts": "557be176b291eda10e97c3cbae437c5b6593a0419e7250bd3763ba032be1d214",
+    "src/art/shop-v11.ts": "769e13a9827f0dc81297084f980b5c7a53bfb54a7ca646490304a0aa313e6ff2",
     "src/art/mixed-display-v11.ts": "03d64fe4d89f6be760354b00a3d350c54085766e1c39de8993123b10164a7585",
     "src/art/fixtures-v11.ts": "fb8f452a84e98ea04589342d19846c599749f0c452b968a6122ab6b647a7440b",
     "src/art/back-display-v10.ts": "bb511ffe95c8b0b4b160b906cd5a13a1ad88a8dfa2c5b3b06ae4e0e3fd2b1591",
@@ -25,8 +25,8 @@
   },
   "files": {
     "assets/masters/native-v11/backwall-c37/trailing-greenery.json": {
-      "bytes": 373883,
-      "sha256": "8702e06ece92729bebec5c39b2edd484352ad680cf4136f528698e09dfcede5e"
+      "bytes": 374239,
+      "sha256": "f4b568aec93b0a5400943ca31d030781fe1436f24bdc819c080b24da0a9173f8"
     },
     "assets/masters/native-v11/backwall-c37/window-near-branches.json": {
       "bytes": 478885,
