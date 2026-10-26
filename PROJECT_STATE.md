@@ -1,8 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T14:51:36+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T15:31:40+08:00** (Asia/Hong_Kong).
 
 
+
+
+## V11 C24 固定149實拍／方法轉換檢查點（仍未達標）— 2026-10-26T15:31:40+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送 `06cf2e66b21b3a143f330eb42687b28f6dd42b52`，application `da12df8fd9707a73c52f559e97f8d9bbb3b58201`／production149；未合併。可編輯Blender中空杯／真厚度垂布、三組獨立材質、原創2D封面／釉紋與連通遠樹已在正常遊戲整合；jug仍未整合。局部SH改善不足停用，LTC單次403後停止下載，沒有繞路；無需使用者動作。
+- 230tests／build／validate／replay／assets，144GLB零錯誤警告、305保護檔案、37native重建／174payload逐byte相同；五語15案例／75面板穩定。193.880秒真正未剪High正常視角：實買上架／招呼／一次結算／A交接／18件+¥8,400合計毛利／離店返回／reload，隔離Normal不變、0pageerror。稀疏CDP錄影非流暢度／實體GPU/FPS/audio/native或新B／hidden-tab／closure驗收。
+- [唯一原圖／同camera正常BEFORE–AFTER／局部／原片／診斷及限制](https://github.com/wizardkeith/KeEv-games/blob/06cf2e66b21b3a143f330eb42687b28f6dd42b52/docs/V11_C24_QUALITY_SLICE_CHECKPOINT_2026-10-26_zh-HK.md)。**切片仍不足以成為品質標準、原圖畫風／品質未達標，繼續重建，不作美術完成或發佈建議。** main本次只有文件指標，公開V17不變，無merge／Site save/deploy／新發佈包／Library重試／玩家Chrome／Unity／關機。
 
 
 ## V11 C24 品質切片／製作方法轉換進行中 — 2026-10-26T14:51:36+08:00
