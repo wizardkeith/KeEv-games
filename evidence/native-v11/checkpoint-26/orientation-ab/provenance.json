@@ -1,0 +1,7 @@
+{
+  "before": "Exploratory162, same actual fixed geometry apart from original corolla orientation; no final-source claim",
+  "after": "Applicationba3fa07d849e12af80838b472e1f65f7bc10aac4/build163 in ../selected163",
+  "cameraAndEconomyExact": true,
+  "change": "Authored static varying corolla tilt/roll toward open shop; no camera-following billboard or scene image",
+  "limits": "Actor idle/wind can differ; diagnostic projected-area ratio is not pixel coverage or target acceptance"
+}
