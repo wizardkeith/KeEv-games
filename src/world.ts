@@ -19,7 +19,7 @@ import {RawCubeTexture} from '@babylonjs/core/Materials/Textures/rawCubeTexture'
 import {SphericalHarmonics,SphericalPolynomial} from '@babylonjs/core/Maths/sphericalPolynomial';
 import '@babylonjs/core/Materials/Textures/baseTexture.polynomial';
 import {nativeStylingRecipe,nativeWindowCanopy} from './art/native-styling';
-import {nativeHairMaterial,nativeClothMaterial,nativeGlaze,nativeMaterialIntent,nativeTransmission} from './art/native-materials';
+import {nativeHairMaterial,nativeClothMaterial,nativeGlaze,nativeTimberNormalScale,nativeMaterialIntent,nativeTransmission} from './art/native-materials';
 import {Texture} from '@babylonjs/core/Materials/Textures/texture';
 import {displaySamples} from './art/native-display';
 import {Material} from '@babylonjs/core/Materials/material';
@@ -74,7 +74,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  const floorMap=new Texture('/assets/native-v10/floor-colour.png',scene);floorMap.name='native.v6.floor';floorMap.gammaSpace=true;floorMap.uScale=1/1.10;floorMap.vScale=1/2.20;floorMap.uOffset=4.525/1.10;
  const clothMap=new Texture(nativeClothMaterial.baseColor,scene,false,false);clothMap.name='native.v6.cloth';clothMap.gammaSpace=true;clothMap.uScale=nativeClothMaterial.repeat;clothMap.vScale=nativeClothMaterial.repeat;
  const hairColour=new Texture(nativeHairMaterial.baseColor,scene,false,false);hairColour.gammaSpace=true;hairColour.name='native.v5.hair.colour';const hairNormal=new Texture(nativeHairMaterial.normal,scene,false,false);hairNormal.gammaSpace=false;hairNormal.level=nativeHairMaterial.normalScale;hairNormal.name='native.v5.hair.normal';
- const timberNormal=new Texture('/assets/native-v10/timber-normal.png',scene);timberNormal.name='native.v9.timber.normal';timberNormal.gammaSpace=false;timberNormal.level=.20;
+ const timberNormal=new Texture('/assets/native-v10/timber-normal.png',scene);timberNormal.name='native.v9.timber.normal';timberNormal.gammaSpace=false;timberNormal.level=nativeTimberNormalScale;
  const plasterNormal=new Texture('/assets/native-v10/plaster-normal.png',scene);plasterNormal.name='native.v9.plaster.normal';plasterNormal.gammaSpace=false;plasterNormal.level=.15;
  const linenNormal=new Texture(nativeClothMaterial.normal,scene,false,false);linenNormal.name='native.v9.linen.normal';linenNormal.gammaSpace=false;linenNormal.level=nativeClothMaterial.normalScale;linenNormal.uScale=nativeClothMaterial.repeat;linenNormal.vScale=nativeClothMaterial.repeat;
  // Development-only UV inspection. Never enabled in production bundles.

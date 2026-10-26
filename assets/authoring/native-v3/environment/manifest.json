@@ -3,8 +3,8 @@
   "version": "3.1",
   "master": {
     "path": "assets/masters/native-v3/environment-v3.json",
-    "sizeBytes": 21525937,
-    "sha256": "c016942e7c784f1301bbfd6cb6711863d49d7c22ed02971064f251472bd27ec6"
+    "sizeBytes": 21525996,
+    "sha256": "98442426d71f385a3124e6aa7af1afda969be3a5954ca18038f7416126431d88"
   },
   "sources": {
     "src/art/floor-v11.ts": "b57d430310ef9f5529e04e8606d1d229e7c3214795b7d5ef404c7ec4e34bc54b",
@@ -60,11 +60,11 @@
     "src/art/native-display.ts": "1756324dc1ebc199c4f236043df58fa3e2107afcaba1d03707c3b7e28f2a42ad",
     "src/art/decor-vignette-v11.ts": "96a3322ead2bcda91524ac0687fa67680ce8ad17feae019dad1bdd69ca998785",
     "src/art/back-display-v10.ts": "432505c907ff308a866cfdd30c372107c1ac85854f29998a9b2239504d789b09",
-    "src/art/native-view.ts": "9f827b987b0294800f3213dfa5ccedf83a275d8aecbaedc4c3f5eedd8fa47be8",
+    "src/art/native-view.ts": "ef7a97cc4384677ceff8f36ec6d3284942b07aaf553d704663014358a18ca124",
     "src/art/recipes.ts": "b3c6890ff3e025f14373f28f10a68f3eeeb54f8a733a26192233f81f0090b905",
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
-    "src/art/native-materials.ts": "5c43ce7aa5c7d85db19ac0cda640fd31039ef91df38be393a4509e3c6e6ad226",
+    "src/art/native-materials.ts": "c4bc5daa7777400a670c1759f186d706d1fdb84631d538b210927e056627ad23",
     "tools/export-native-environment.ts": "9ece05537d073f9eb931636dc7b32e530ecad55ebf7a06a8be80b514218fa9c1"
   },
   "rebuild": "node --import tsx tools/export-native-environment.ts",

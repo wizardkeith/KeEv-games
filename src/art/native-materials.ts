@@ -24,3 +24,6 @@ export const nativeClothMaterial={baseColor:'/assets/native-v10/cloth-weave-base
 /** Restrained transparent glaze over the unchanged ceramic body colour. The
  * same scalar clear-coat layer is standard KHR_materials_clearcoat in GLB. */
 export const nativeGlaze=(role:MaterialRole)=>role==='ceramic'?{intensity:.30,roughness:.24,indexOfRefraction:1.5}:undefined;
+
+/** Restrained broad timber grain; matched Web and portable fixture normal strength. */
+export const nativeTimberNormalScale=.10;

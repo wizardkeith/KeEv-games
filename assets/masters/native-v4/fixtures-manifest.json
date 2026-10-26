@@ -9,7 +9,7 @@
       "id": "entry-garden-v11",
       "file": "assets/masters/native-v4/entry-garden-v11.glb",
       "bytes": 2496936,
-      "sha256": "0399059afd67d4340b6ad5b79f72dc4b918db7909f07f9bb0176599bbd629de7"
+      "sha256": "afd6c89bfef8db3abc3987f271e6d3c6509326174605b6823ea17defb844a0e9"
     },
     {
       "id": "planter-base-v11",
@@ -21,43 +21,43 @@
       "id": "room",
       "file": "assets/masters/native-v4/room.glb",
       "bytes": 6065288,
-      "sha256": "4869b8272fce821629aefaa0a69b680959f21d1ada2c94ef4b59d9848d8c33f9"
+      "sha256": "20f0e0c4b07cd0534ad824efe8c4f5270c053a67e9f2665d499b3d6a0644455d"
     },
     {
       "id": "styling-v9",
       "file": "assets/masters/native-v4/styling-v9.glb",
       "bytes": 2687144,
-      "sha256": "47a4bf18398f78506ea6b0628fc1e3e7a3f531398d099dee9ed90e21311a470b"
+      "sha256": "548728a530d4effe9081b50b1d66549cb0ef640544bccaeed86c77d1bd7066e2"
     },
     {
       "id": "window-canopy-v9",
       "file": "assets/masters/native-v4/window-canopy-v9.glb",
       "bytes": 2431204,
-      "sha256": "21b3ade3ccf42e978c7df0e3fec5030007a3f3f53a535e1a8519d76cfe84acf7"
+      "sha256": "e8f55a054c026ba8a59d1461b8eee7a9c9e38d77ddf98d7c11827e6dc8195433"
     },
     {
       "id": "counter",
       "file": "assets/masters/native-v4/counter.glb",
       "bytes": 2349160,
-      "sha256": "844a6a56ae0f9115521c1e3ee94b7198cd8e1514cc34fc9fb47b766d20a6c6ca"
+      "sha256": "8a5b563f8ea540edb51baaeac32e48eac25497b8878c04851b6d22510ca05d67"
     },
     {
       "id": "display-1",
       "file": "assets/masters/native-v4/display-1.glb",
       "bytes": 4857028,
-      "sha256": "c4aca2466ee8f431db43b28d3ff319fafe2494d6d190dda6f58821393fce0adf"
+      "sha256": "355a792fec898cabf33f5779846cb3396cb75ec7c2a096b5f7e2d3ca3f61fda1"
     },
     {
       "id": "display-2",
       "file": "assets/masters/native-v4/display-2.glb",
       "bytes": 2335144,
-      "sha256": "2bbd38b90d4532c20296c09200f207745a242a3aa8a86512912be4cd43af3dd7"
+      "sha256": "d1674c82dec7a6a6c8dd22f5a7b7c0ce5cc95e54604a2417a64fa2a27381bce2"
     },
     {
       "id": "display-3",
       "file": "assets/masters/native-v4/display-3.glb",
       "bytes": 4864408,
-      "sha256": "9443eb74e8b123a4a6abab06cb6c029e864b707679a8de862e62a682f878e7a5"
+      "sha256": "d84d53667afcdacdf516de64bc8f77d7a5b5f784c60dee9321379fd9218e4419"
     },
     {
       "id": "product-off.notebook",
@@ -69,7 +69,7 @@
       "id": "product-off.pencil",
       "file": "assets/masters/native-v4/product-off.pencil.glb",
       "bytes": 2167516,
-      "sha256": "de8b8a6bc10354b598b97effb533c13bbafb6d73c401566969fd069cadb0f622"
+      "sha256": "9c9f15d10c2bd2c5e9a8557ca2a0edf415674b25f1c31d4d153cc9c3e0b4e4f0"
     },
     {
       "id": "product-off.mug",
@@ -111,7 +111,7 @@
       "id": "product-off.tray",
       "file": "assets/masters/native-v4/product-off.tray.glb",
       "bytes": 2178304,
-      "sha256": "4a74a6951d4e277c536b4858163d097c026ceec5234006212b2c257f0adcfdab"
+      "sha256": "8f89635e2d2455d03044e1f687480051c680f76879a4cab4be0bc1f3284770bf"
     },
     {
       "id": "product-off.vase",
