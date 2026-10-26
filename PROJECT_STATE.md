@@ -1,6 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T18:29:48+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T20:00:40+08:00** (Asia/Hong_Kong).
+
+## V11 C28 同桌材質／接觸照明進行中 — 2026-10-26T20:00:40+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送正常畫面／診斷證據`bf9d2fab547c49704636fc2c33646e7894a5d499`、application`c44345d3dcc7abb60b428448021a405c3170c115`；最新程式檢查點`85ff32d64b127b133e6542344e27be225fa4fb0b`／build184正在完成實際流程。[原圖／固定正常BEFORE–AFTER／真實UI匯入與對照限制](https://github.com/wizardkeith/KeEv-games/blob/bf9d2fab547c49704636fc2c33646e7894a5d499/docs/V11_C28_MATERIAL_CONTACT_CHECKPOINT_2026-10-26_zh-HK.md)。
+- 父執行緒轉述獨立C27只通過窄幅構圖門檻，**全圖美術仍未通過**；位置／庫存群鎖定。C28增加原創窗孔HDR反射與實際靜態接觸AO，撤回錯誤UV試驗；未增加花瓣／三角形／材質群。243tests通過，初期材質倍率收益不足；新反射肩腹與接觸有實拍變化，白花柔和度仍開放。build184將固定接觸陰影改為只在實際商品增刪時刷新；High已觀察真結算／收銀／毛利，送客、重載、0/3/8/售罄及五語Low檢查未完成前不冒稱通過。
+- main只有文件指標，功能未合併；PR8仍Draft，本輪無公開V17／Site變更、merge、發佈包、Library重試、玩家Chrome／Normal存檔、Unity／關機或帳戶操作。可選LTC403保持停止，沒有需使用者處理的阻塞；繼續同桌品質門檻，未向全店擴散。
+
 
 ## V11 C27 同資產構圖／實際世界支承169（原圖仍未達標）— 2026-10-26T18:29:48+08:00
 
