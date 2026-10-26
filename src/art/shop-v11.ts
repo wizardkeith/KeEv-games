@@ -26,7 +26,7 @@ function scaled(s:NativeSurface,scale:number):NativeSurface{return s.shape==='me
  * placed along an unrelated straight line. Seven external wind pivots remain. */
 export function floorPlantBranch(i:number){
  const a=i*2.39996,pivot:V3=[Math.cos(a)*.025,.34,Math.sin(a)*.025],height=.38+i%3*.13,tip:V3=[Math.cos(a)*(.12+i%2*.04),height,Math.sin(a)*(.12+i%2*.04)];
- const stem=twig([[0,0,0],[tip[0]*.15,height*.28,tip[2]*.15],[tip[0]*.80,height*.72,tip[2]*.80],tip],.0045),leaves:NativeMesh[]=[];
+ const stem=twig([[0,-.008,0],[tip[0]*.15,height*.28,tip[2]*.15],[tip[0]*.80,height*.72,tip[2]*.80],tip],.0045),leaves:NativeMesh[]=[];
  for(let k=0;k<4;k++){const ring=k+2,pos:V3=[0,1,2].map(d=>[0,1,2,3].reduce((sum,j)=>sum+stem.geometry.positions[(ring*4+j)*3+d],0)/4)as V3;
   leaves.push(floorLeaf(pos,.20+(3-k)*.025,.10+(3-k)*.017,Math.PI/2-a+(k%2?.68:-.68),.8+(i%3)*.28+(1.5-k)*.04,['#64804D','#8BA665','#A4B877','#758F55'][(i+k)%4]));
  }
