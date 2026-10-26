@@ -1,8 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T16:19:42+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T17:18:18+08:00** (Asia/Hong_Kong).
 
 
+
+
+## V11 C26 同桌主花器163固定實拍（視覺標準仍未通過）— 2026-10-26T17:18:18+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送 `3039b1a2b1e8814a4e7932345b5c1a4cb7fdad7d`，application `ba3fa07d849e12af80838b472e1f65f7bc10aac4`／production163，未合併。[唯一目標／相同camera的正常BEFORE–AFTER／完整花冠裁切／原片與限制](https://github.com/wizardkeith/KeEv-games/blob/3039b1a2b1e8814a4e7932345b5c1a4cb7fdad7d/docs/V11_C26_CENTRAL_FLORAL_CHECKPOINT_2026-10-26_zh-HK.md)。同一非庫存組重建708tri圓腹青釉主花器、1738tri展開五瓣花冠，3既有書冊有真實桌面／花器空隙，布緣貼合實際25mm桌角並保留24流蘇；styling＋canopy15990tri／17群，預算未提高，其他已改善模型保留，未傳播新樹冠。
+- 235tests／build／validate／replay／assets、146GLB零錯誤警告、305保護檔案、39native重建／174runtime byte parity，提交後新build相同；五語15案例／75面板通過。200.800秒真正未剪High：實買上架／招呼／一次結算／A交接／18件合計毛利+¥8,400／離店返回／reload，隔離Normal不變、0pageerror；148／150秒原片像素清楚可讀。150個CDP畫面為疏取樣雲端軟件WebGL，非流暢度／實體GPU/FPS/audio/native或新完整B／hidden-tab／closure驗收。
+- **原圖品質、同桌品質標準仍未通過／待獨立像素覆核，繼續對齊，不作發佈建議**；花冠自然度／杯群權重／柔光與整體棕米色／規整陳列差距仍在。main本次只有文件指標，沒有合併功能；PR8仍Draft，沒有merge／Site save/deploy／新發佈包／Library重試／玩家Chrome／Unity／關機。LTC既有單次read-only403仍停止，無使用者動作阻塞；原有未追蹤備份／node_modules保留。
 
 
 ## V11 C25安全基線／C26同桌主花器繼續重建 — 2026-10-26T16:19:42+08:00
