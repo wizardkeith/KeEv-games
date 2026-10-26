@@ -1,0 +1,24 @@
+{
+  "source": "tools/paint-v11-form-values.py",
+  "sourceSHA256": "7f054e8f770b3b69449b7b1bf13e2d26d15132e4405e63336f7e52ae7d258c36",
+  "type": "Original object-UV form/value albedo design, no baked inventory/contact shadow, normal/specular/lighting retained",
+  "flowerUV": "Upper corolla V.08-.32 /cool supporting underside V.78-.97, not view-dependent",
+  "linenUV": "Existing physical width/arclength; two broad shaded turn planes, top commodity support unchanged",
+  "files": {
+    "petal-form-values-c31.png": {
+      "sha256": "6db22928659c827d2139457d8250d7f43971b65602685031efd272a039f62270",
+      "dimensions": [
+        128,
+        128
+      ]
+    },
+    "linen-form-values-c31.png": {
+      "sha256": "9d89393cbab9b6a5f80c94a3722e12769e752978ae07057f8b6b735fe75be75d",
+      "dimensions": [
+        512,
+        512
+      ]
+    }
+  },
+  "limits": "C31 controlled2x2 normal-scale/orbit visual gate pending, no target acceptance"
+}
