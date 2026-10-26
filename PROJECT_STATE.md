@@ -1,6 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T17:18:18+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T18:29:48+08:00** (Asia/Hong_Kong).
+
+## V11 C27 同資產構圖／實際世界支承169（原圖仍未達標）— 2026-10-26T18:29:48+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送`1bbb006b0fcd80207f34e2df0fb52804f61327bf`，application`510cc245777b4162dbcd238bed7506cda8614d55`／build169，未合併。[固定正常鏡頭原圖／BEFORE–AFTER／原片／限制](https://github.com/wizardkeith/KeEv-games/blob/1bbb006b0fcd80207f34e2df0fb52804f61327bf/docs/V11_C27_COMPOSITION_CHECKPOINT_2026-10-26_zh-HK.md)。同一花器／書／布與八杯重排5／3群、留白；中央補光沿窗方向，陰影／PBR倍率無效試驗撤回。修正桌子layout世界位移與鉛筆跨布支承，新增實際檯座射線、全SKU0–9穩定prefix／碰撞檢查。
+- 238tests／build／validate／replay／asset-check、146GLB零錯警告、305保護檔、39native重建／174runtime parity通過。真實0→買入上架3→一次結算售罄0→reload，另8件reload；386.280秒未剪High含A交接、276秒18件合計毛利+8400、離店返回，0pageerror／隔離Normal不變。143CDP畫面是稀疏雲端軟件錄影，非流暢度／實體GPU/FPS/audio/native；五語UI矩陣只引用C26先前結果，沒有冒稱新跑。
+- **原圖與同桌構圖品質門檻仍開放／待獨立像素覆核，不向全店擴散或作發佈建議。** main僅文件指標；PR8保持Draft、公開V17不變，無merge／Site save/deploy／新發佈包／Library重試／玩家Chrome／Unity／關機。既有可選LTC403仍停止，無使用者動作阻塞。
+
 
 
 
