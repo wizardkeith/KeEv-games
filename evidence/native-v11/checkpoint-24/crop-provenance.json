@@ -1,0 +1,50 @@
+{
+  "method": "Browser screenshot clips of original PNGs at1CSSpixel/1devicepixel; source pixels verified exactly, no enhancement/generation",
+  "crops": [
+    {
+      "source": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+      "output": "target-shop-crop.png",
+      "rect": [
+        0,
+        0,
+        1184,
+        1024
+      ],
+      "exactSourcePixels": true
+    },
+    {
+      "source": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+      "output": "target-central-crop.png",
+      "rect": [
+        518,
+        240,
+        878,
+        540
+      ],
+      "exactSourcePixels": true
+    },
+    {
+      "source": "evidence/native-v11/checkpoint-23/selected140/after-normal-game.png",
+      "output": "before140-table-crop.png",
+      "rect": [
+        580,
+        480,
+        1020,
+        860
+      ],
+      "exactSourcePixels": true
+    },
+    {
+      "source": "evidence/native-v11/checkpoint-23/selected140/after-normal-game.png",
+      "output": "before140-window-crop.png",
+      "rect": [
+        890,
+        180,
+        1370,
+        570
+      ],
+      "exactSourcePixels": true
+    }
+  ],
+  "limits": "Original unknown camera is not pixel-registered; target is a supplied concept visual reference, game crops are actual WebGL"
+}

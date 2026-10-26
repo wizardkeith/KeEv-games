@@ -1,0 +1,28 @@
+{
+  "application": "da12df8fd9707a73c52f559e97f8d9bbb3b58201",
+  "srcTree": "a0ea0b7310cf58c8c17bc4f84ae7ee0bfc5960fd",
+  "build": 149,
+  "target": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+  "targetSHA256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+  "gameEvidence": [
+    "selected149/*.png",
+    "normal-flow149/*.png",
+    "normal-flow149/gameplay-uncut.webm"
+  ],
+  "diagnosticsOnly": "exploratory/ (not source149 gameplay or target replacement)",
+  "generated2DOnly": [
+    "display-journal-cover.png",
+    "stoneware-botanical-source.png",
+    "window-crown-albedo.png"
+  ],
+  "productionProbeEnabled": false,
+  "jugIntegrated": false,
+  "tests": 230,
+  "glbCount": 144,
+  "protected": 305,
+  "nativeRebuildFiles": 37,
+  "runtimePayloadFiles": 174,
+  "uncutSeconds": 193.88,
+  "sourceRecordingFrames": 154,
+  "limits": "Cloud software WebGL / sparse CDP capture, not physical GPU/FPS/audio/native or continuous smoothness certification. Original target NOT reached. No fresh fullB/hidden-tab/closure-drain validation."
+}

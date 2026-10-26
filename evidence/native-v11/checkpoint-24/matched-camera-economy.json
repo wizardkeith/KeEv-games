@@ -1,0 +1,91 @@
+{
+  "before": "2a7d979fd615f7182a031505242bb7f5f91ffbd1 / application53555cc5 / build140",
+  "after": "da12df8fd9707a73c52f559e97f8d9bbb3b58201 / build149",
+  "camera": {
+    "alpha": -0.7853981633974483,
+    "beta": 0.8726646259971648,
+    "radius": 11.212076960563294,
+    "target": [
+      0.7,
+      1.15,
+      0
+    ]
+  },
+  "economyExact": true,
+  "economy": {
+    "cash": 3840,
+    "inventory": {
+      "off.notebook": {
+        "stock": 8,
+        "price": 80,
+        "bookCost": 320,
+        "demandRemainder": 0
+      },
+      "off.pencil": {
+        "stock": 0,
+        "price": 25,
+        "bookCost": 0,
+        "demandRemainder": 0
+      },
+      "off.mug": {
+        "stock": 8,
+        "price": 130,
+        "bookCost": 560,
+        "demandRemainder": 0
+      },
+      "off.tea": {
+        "stock": 8,
+        "price": 75,
+        "bookCost": 280,
+        "demandRemainder": 0
+      },
+      "off.cookie": {
+        "stock": 0,
+        "price": 45,
+        "bookCost": 0,
+        "demandRemainder": 0
+      },
+      "off.tote": {
+        "stock": 0,
+        "price": 150,
+        "bookCost": 0,
+        "demandRemainder": 0
+      },
+      "off.card": {
+        "stock": 0,
+        "price": 35,
+        "bookCost": 0,
+        "demandRemainder": 0
+      },
+      "off.towel": {
+        "stock": 0,
+        "price": 90,
+        "bookCost": 0,
+        "demandRemainder": 0
+      },
+      "off.tray": {
+        "stock": 0,
+        "price": 110,
+        "bookCost": 0,
+        "demandRemainder": 0
+      },
+      "off.vase": {
+        "stock": 0,
+        "price": 170,
+        "bookCost": 0,
+        "demandRemainder": 0
+      }
+    },
+    "shelves": [
+      "off.notebook",
+      "off.mug",
+      "off.tea"
+    ]
+  },
+  "pixelViewports": [
+    1440,
+    1200
+  ],
+  "normal": "isolated baseline unchanged",
+  "limits": "Fresh isolated Sandbox, same real24units/3shelves; no owner save or injected scene. Actor idle/wind pose may vary."
+}

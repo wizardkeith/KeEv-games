@@ -1,0 +1,58 @@
+{
+  "sourceSHA256": "2ecd6c491af7014d8983d1811e6d301e998fe6b171d9dfef64f13831b4b2ede1",
+  "meshes": 346,
+  "camera": {
+    "position": [
+      6.7733042589757835,
+      8.356984149101999,
+      -6.073304258975783
+    ],
+    "view": {
+      "0": -0.7071067690849304,
+      "1": -0.45451948046684265,
+      "2": 0.5416752099990845,
+      "3": 0,
+      "4": 0,
+      "5": 0.7660444378852844,
+      "6": 0.6427876353263855,
+      "7": 0,
+      "8": -0.7071067690849304,
+      "9": 0.45451948046684265,
+      "10": -0.5416752099990845,
+      "11": 0,
+      "12": 0.4949747323989868,
+      "13": -0.5627874732017517,
+      "14": -12.330455780029297,
+      "15": 1
+    },
+    "projection": {
+      "0": 1.6556557416915894,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 2.365222454071045,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": -1.0022246837615967,
+      "11": -1,
+      "12": 0,
+      "13": 0,
+      "14": -0.2002224624156952,
+      "15": 0
+    },
+    "fov": 0.8,
+    "viewport": {
+      "x": 0,
+      "y": 0.08666666666666667,
+      "width": 1,
+      "height": 0.84
+    },
+    "width": 1440,
+    "height": 1200
+  },
+  "type": "Offline Cycles same actual mesh/camera diagnostic, NOT GAMEPLAY",
+  "limits": "Independent window-area/world radiance, AgX, normal maps and clip reconstruction; not photometrically identical to Web IBL/ACES/transmission and not evidence of an engine limitation. No particles/UI; output is actual camera viewport only."
+}
