@@ -1,0 +1,12 @@
+{
+  "before162": {
+    "unoccludedViewProjectedAreaSquareMetres": 0.04591958379589143,
+    "upwardFacingContributionSquareMetres": 0.043880717455045
+  },
+  "after163": {
+    "unoccludedViewProjectedAreaSquareMetres": 0.08954736047032452,
+    "upwardFacingContributionSquareMetres": 0.0798012253832333
+  },
+  "unoccludedAreaRatio": 1.9500908559701844,
+  "limits": "Actual mesh/camera numerical diagnostic only: overlapping petals/objects, lighting/shadows and antialiasing not modelled; not pixel coverage, target acceptance or an engine claim."
+}
