@@ -1,6 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T05:29:23+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T06:10:26+08:00** (Asia/Hong_Kong).
+
+## V11 C38不等長垂葉／窗景灰模候選 — 2026-10-27T06:10:26+08:00
+
+- `codex/game-v11-target-slice`／[Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)推送`1aae28cff5289bf266f523781131c65e86849001`／application`fbf6dd6859c70844cd45f0b51c283b178e9ee3a9`；[原圖／C37→C38正常480px、雙斜角、76.560秒實際原片及來源](https://github.com/wizardkeith/KeEv-games/blob/1aae28cff5289bf266f523781131c65e86849001/docs/V11_C38_PLANT_WINDOW_FORM_2026-10-27_zh-HK.md)。C37整組FORM獨立FAIL；已過混合陳列／route clearance保留，本輪只改一短密43葉／一長疏23葉（總量不增）、頂部接至垂段、6組較小近葉與可讀屋脊／簷口／較完整遠樹。C37母檔及混合陳列byte不變，C36桌／收銀／camera／light／stock/economy鎖定。**C38形體待獨立覆核，整體原圖仍未接受，不進新材質／不採為預設**。
+- 266tests/build/五語174keys validate/replay/assets、146既有GLB零錯警告／305保護檔；500tracked資產、253gray／254control各182runtime重建byte同，14036tri／17群／155固定項未加上限。原完整SAT/radius.24/Y.08–2.10檢查C38全部3000植物tri：route／三架板均0相交；正常投影開口111→0不是視覺通過。真UI8-stock匯入／同camera/economy／pointer雙角度、0pageerror／fresh隔離Normal不變，未冒稱新買入結算／Low/ReduceMotion／五語窄屏／實體GPU/FPS/audio/native。main僅文件指標／功能未合併／PR8仍Draft／feature無旗標仍C36／公開V17未由本輪改動；無merge／Ready／Site／新發佈包／Library或LTC重試／玩家Chrome或Normal／Unity／關機，無使用者動作權限阻塞。
 
 ## V11 C37後牆—右窗通道淨空後候選／形體待覆核 — 2026-10-27T05:29:23+08:00
 
