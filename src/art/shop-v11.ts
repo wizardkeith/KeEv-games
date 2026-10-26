@@ -39,14 +39,28 @@ export function buildV11Plant(scale=1):NativePlantParts{
  const leaves=Array.from({length:7},(_,i)=>{const branch=floorPlantBranch(i);return {pivot:branch.pivot.map(v=>v*scale)as V3,recipe:batch([branch.stem,...branch.leaves].map(s=>({...s,role:'leaf' as const,color:s.role==='wood'?'#64804D':s.color,baseColorTexture:'/assets/native-v11/broadleaf-albedo.png'}))).map(s=>scaled(s,scale))};});
  return {base:batch(base).map(s=>scaled(s,scale)),leaves};
 }
+/** C23 near-window deciduous trees. Unequal forked crowns leave a view
+ * between their masses; each broad blade grows from a real branch endpoint.
+ * This replaces four aligned saplings, not the preserved indoor plants. */
 export function buildV11Garden():NativeSurface[]{
- const out:NativeSurface[]=[];
- for(let i=0;i<4;i++){const x=-5.45-i*.33,z=-2.5+i*1.60,y=1.10+i%2*.14;out.push(twig([[x,.1,z],[x+.13,1.4,z+.12],[x-.06,2.80,z-.05]],.032,'#8B8061'));
-  for(let b=0;b<6;b++){const a=b*2.399+i,cy=y+b*.15,cx=x+Math.cos(a)*.28,cz=z+Math.sin(a)*.35;out.push(twig([[x,cy-.4,z],[cx,cy,cz],[cx+Math.cos(a)*.23,cy+.14,cz+Math.sin(a)*.23]],.008,'#8B8061'));
-   for(let k=0;k<9;k++)out.push(leaf([cx+Math.cos(k*2.4)*.28,cy+Math.sin(k*2.4)*.11,cz+Math.sin(k*2.4)*.28],.30+k%2*.07,.17+k%3*.03,a+k*.7,.8+k%3*.4,['#A4BA75','#7E9D58','#BAC98B','#90AB69'][k%4]));
+ const out:NativeSurface[]=[],root:V3=[-5.8,1.6,0];
+ const trees=[{x:-5.90,z:2.10,base:-1.52,top:2.32,phase:.35},{x:-6.20,z:-.40,base:-1.75,top:1.65,phase:1.8}];
+ for(const [tree,t]of trees.entries()){
+  const trunk:V3[]=[[t.x,t.base,t.z],[t.x-.08,-.25,t.z+.07],[t.x+.10,.92,t.z-.03],[t.x-.12,t.top,t.z+.13]];
+  out.push(twig(trunk,.045,'#8C7959'));
+  for(let b=0;b<7;b++){
+   const a=b*2.39996+t.phase,h=t.top-.90+(b%3)*.38,reach=.36+(b%2)*.22;
+   const joint:V3=[t.x+.03,h-.45,t.z],tip:V3=[t.x+Math.cos(a)*reach,h,t.z+Math.sin(a)*reach];
+   out.push(twig([joint,[joint[0]+(tip[0]-joint[0])*.55,h-.12,joint[2]+(tip[2]-joint[2])*.55],tip],.012,'#8C7959'));
+   for(let k=0;k<14;k++){
+    const pair=Math.floor(k/2),theta=pair*2.39996+b*.37,r=.08+.22*Math.sqrt((pair+.5)/7),end:V3=[tip[0]+Math.cos(theta)*r,tip[1]+.13*Math.sin(theta*1.7)+.06*(k%2),tip[2]+Math.sin(theta)*r];
+    // Low-poly real twigs connect the blade bases; no floating leaf cards.
+    if(k%2===0)out.push(M(sculptSweep([tip,end],[.0038,.0018],undefined,1,3),'#8C7959','wood'));
+    out.push(leaf(end,.29+(k%3)*.065,.17+(k%2)*.035,theta+(k%2?.95:-.65),.80+(k%4)*.32,['#789951','#A4B96B','#C3CE85','#8DA95B'][(k+b+tree)%4]));
+   }
   }
  }
- const groups=new Map<string,NativeSurface[]>();for(const part of out){const key=part.role+':'+part.color+':'+(part.baseColorTexture??'');groups.set(key,[...(groups.get(key)??[]),part]);}return [...groups.values()].map(parts=>{const g:Geometry&{uvs:number[]}={positions:[],normals:[],indices:[],uvs:[]};for(const p of parts){const a=p.shape==='mesh'?p.geometry:geometry(p),at=p.shape==='mesh'?p.at:[0,0,0],n=g.positions.length/3;g.positions.push(...a.positions.map((v,i)=>v+at[i%3]));g.normals.push(...a.normals);g.indices.push(...a.indices.map(v=>v+n));g.uvs.push(...((a as Geometry&{uvs?:number[]}).uvs??Array(a.positions.length/3*2).fill(0)));}for(let i=0;i<g.positions.length;i++)g.positions[i]-=[-5.8,2,0][i%3];return {...M(g,parts[0].color,parts[0].role??'leaf',[-5.8,2,0]),...(parts[0].baseColorTexture?{baseColorTexture:parts[0].baseColorTexture}:{}),...(parts[0].finish?{finish:parts[0].finish}:{})};});
+ return batch(out).map(p=>p.shape==='mesh'?{...p,at:root,geometry:{...p.geometry,positions:p.geometry.positions.map((v,i)=>v-root[i%3])}}:p);
 }
 /** Hanging greenery is fixture decoration, not stock, a collectible or a grant. */
 export function buildV11TrailingGreenery():NativeSurface[]{

@@ -6,7 +6,7 @@
   "sourceSha256": {
     "src/art/orm-channels-v11.ts": "6ad3f152cb68659b9f4aec270ff992d763360c2dd3c9fe54988f240bb94a4e1a",
     "src/art/cloth-diagnostic-v11.ts": "92c47df7d602c9fae4b12d45e62e8fb80f66dddc5312cd6e1f1cd3751ac6b720",
-    "src/art/native-view.ts": "d0271b76585ff632048dd17a949c797700e3239d06017528ab0eea375f06f441",
+    "src/art/native-view.ts": "f3eab2b1434e27ff22d1381b246c8a390454d879157d08f390e04b4e8548afa3",
     "tools/build-v11-coat-cloth.py": "2e19c12f141b38fa9f45ba08eeb68451d4c8ab39b859c926ecc12df8ff76fa4d",
     "assets/masters/native-v11/coat-rest-input.json": "a0ee69e780e94d7097b0c024444a9e141077601a6ecae6f6b649d9814c6ea7b5",
     "assets/masters/native-v11/coat-rest/coat-rest-retopo.json": "184028af0817438ca03896b6927b2c2147ac4cec15a22363466df9346b7e6c15",
