@@ -1,3 +1,6 @@
+import {grayFormMode,grayFormSurfaces} from './gray-forms-v11';
+import flowerC32 from '../../assets/masters/native-v11/display-quality/flower-spray-c32.json';
+import linenC32 from '../../assets/masters/native-v11/display-quality/linen-c32.json';
 import {designedShape,designedValues} from './form-values-v11';
 import flowerC31 from '../../assets/masters/native-v11/display-quality/flower-spray-c31.json';
 import linenC31 from '../../assets/masters/native-v11/display-quality/linen-c31.json';
@@ -16,7 +19,7 @@ import mug from '../../assets/masters/native-v11/display-quality/mug.json';
 import linen from '../../assets/masters/native-v11/display-quality/linen-rest.json';
 import type {NativeSurface} from './native-characters';
 export function centralMugRecipe():NativeSurface[]{return structuredClone(mug) as unknown as NativeSurface[];}
-export function centralLinenRecipe():NativeSurface[]{const p=structuredClone(designedShape?linenC31:brightLinen?linenC29:linen)as unknown as NativeSurface;return [designedValues?{...p,baseColorTexture:'/assets/native-v11/linen-form-values-c31.png'}:p];}
+export function centralLinenRecipe():NativeSurface[]{if(grayFormMode!=='control')return grayFormSurfaces([structuredClone(grayFormMode==='gray'?linenC32:linenC29)as unknown as NativeSurface]);const p=structuredClone(designedShape?linenC31:brightLinen?linenC29:linen)as unknown as NativeSurface;return [designedValues?{...p,baseColorTexture:'/assets/native-v11/linen-form-values-c31.png'}:p];}
 
 /** Refinish the three EXISTING central decorative lookbooks. Same physical
  * bound mesh and sample count, no new SKU, stock, page or fictional instruction. */
@@ -29,4 +32,4 @@ export function centralFlowerJugRecipe():NativeSurface[]{return (structuredClone
 
 export function centralLegacyFlowerSprayRecipe():NativeSurface[]{const parts=structuredClone(flowerSpray) as unknown as NativeSurface[];if(tableSoftMaterials)for(const patch of softPetalNormals){const p=parts[patch.part];if(p.shape!=='mesh'||p.geometry.normals.length!==patch.normals.length)throw Error('Original petal topology mismatch');p.geometry.normals=[...patch.normals];p.role='paper';p.color='#EDE4D1';p.roughness=.96;}return parts;}
 
-export function centralFlowerSprayRecipe():NativeSurface[]{const parts=designedShape?structuredClone(flowerC31)as unknown as NativeSurface[]:brightFlowers?structuredClone(flowerC29)as unknown as NativeSurface[]:centralLegacyFlowerSprayRecipe();return !designedValues?parts:parts.map(p=>{if(p.role!=='paper'||p.shape!=='mesh')return p;const g=p.geometry;if(!g.uvs){const xs=g.positions.filter((_,i)=>i%3===0),lo=Math.min(...xs),width=Math.max(...xs)-lo;g.uvs=Array.from({length:g.positions.length/3},(_,i)=>[(g.positions[i*3]-lo)/(width||1),g.normals[i*3+1]>.0?.08+.24*(1-g.normals[i*3+1]):.88]).flat();}return {...p,color:'#FFFFFF',baseColorTexture:'/assets/native-v11/petal-form-values-c31.png'};});}
+export function centralFlowerSprayRecipe():NativeSurface[]{if(grayFormMode!=='control')return grayFormSurfaces(structuredClone(grayFormMode==='gray'?flowerC32:flowerC29)as unknown as NativeSurface[]);const parts=designedShape?structuredClone(flowerC31)as unknown as NativeSurface[]:brightFlowers?structuredClone(flowerC29)as unknown as NativeSurface[]:centralLegacyFlowerSprayRecipe();return !designedValues?parts:parts.map(p=>{if(p.role!=='paper'||p.shape!=='mesh')return p;const g=p.geometry;if(!g.uvs){const xs=g.positions.filter((_,i)=>i%3===0),lo=Math.min(...xs),width=Math.max(...xs)-lo;g.uvs=Array.from({length:g.positions.length/3},(_,i)=>[(g.positions[i*3]-lo)/(width||1),g.normals[i*3+1]>.0?.08+.24*(1-g.normals[i*3+1]):.88]).flat();}return {...p,color:'#FFFFFF',baseColorTexture:'/assets/native-v11/petal-form-values-c31.png'};});}
