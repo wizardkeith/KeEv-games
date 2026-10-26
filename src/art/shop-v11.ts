@@ -121,9 +121,16 @@ export function buildV11TrailingGreenery():NativeSurface[]{
  for(const[x,y,z]of[[-3.12,2.2835,2.88],[1.43,2.2835,2.88]]){
   out.push(M(sculptLoft([{y:0,x:.10,z:.10},{y:.18,x:.145,z:.145},{y:.22,x:.145,z:.145}],12),'#B6A17F','ceramic',[x,y,z]));
   for(let b=0;b<4;b++){
-   const side=b%2?1:-1,drop=[.76,1.02,.61,.90][b],points:V3[]=Array.from({length:7},(_,j)=>{const u=j/6;return [x+(b-1.5)*.065+side*.16*Math.sin(u*2.9)+.035*Math.sin(j*1.4),y+.20-u*drop,z-.05-.22*Math.sin(Math.min(1,u*2)*Math.PI*.5)];});
-   out.push(twig(points,.004));
-   for(let k=0;k<7;k++){const q=points[k],side=k%2?1:-1;out.push(leaf([q[0]+side*.025,q[1],q[2]],.26+(k%3)*.025,.18+(k%2)*.025,side*(.9+b*.18),2.25+side*.24,['#738C54','#91A665','#A6B97C'][(k+b)%3]));}
+   const side=b%2?1:-1,drop=[.76,1.02,.61,.90][b],points:V3[]=Array.from({length:7},(_,j)=>{
+    const u=j/6,dy=[.20,.22,.13,-.06,-drop*.46,-drop*.73,-drop][j],front=[-.02,-.20,-.44,-.64,-.66,-.65,-.65][j];
+    return[x+(b-1.5)*.065+side*.16*Math.sin(u*2.9)+.035*Math.sin(j*1.4),y+dy,z+front];
+   });
+   const stem=twig(points,.004);out.push(stem);
+   // Actual swept rings3..6 are already in front of the wood envelope. Pair
+   // opposite leaves there; no unattached offset roots or leaves through rails.
+   for(let k=0;k<7;k++){const ring=3+Math.floor(k/2),q:V3=[0,1,2].map(d=>[0,1,2,3].reduce((sum,j)=>sum+stem.geometry.positions[(ring*4+j)*3+d],0)/4)as V3,side=k%2?1:-1;
+    out.push(leaf(q,.26+(k%3)*.025,.18+(k%2)*.025,side*(.9+b*.18),2.25+side*.24,['#738C54','#91A665','#A6B97C'][(k+b)%3]));}
+
   }
   for(let k=0;k<5;k++){const a=k*2.39996,tip:V3=[x+.08*Math.cos(a),y+.22+(k%2)*.07,z+.04*Math.sin(a)];out.push(twig([[x,y+.18,z],tip],.004));out.push(leaf(tip,.32+(k%2)*.04,.23,a,.55+(k%3)*.28,['#738C54','#91A665','#A6B97C'][k%3]));}
  }

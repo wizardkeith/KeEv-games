@@ -17,7 +17,7 @@ export function backwallFormSurfaces(parts:NativeSurface[]):NativeSurface[]{
 interface Sample{id:string;at:V3;turn:V3;scale:number}
 export function backwallSample<T extends Sample>(old:T,row:number,group:number,k:number):T{
  if(!backwallNewForms||old.at[2]<2)return old;
- const xs=[[-2.85,-2.23,-2.94,-.98,-1.27,-2.00,.40],[-2.93,-1.88,-2.27,-1.08,.60,-.24,1.35],[-2.64,-2.08,-.88,-1.18,.85,.36,-.25]];
+ const xs=[[-2.85,-2.23,-2.94,-.98,-1.27,-2.00,.40],[-2.93,-1.88,-2.27,-1.08,.60,-.24,1.35],[-2.52,-2.08,-.88,-1.18,.85,.36,-.25]];
  const stack=['off.notebook','off.towel','off.cookie'].includes(old.id),paired=['off.mug','off.tea'].includes(old.id),card=old.id==='off.card';
  const scale=old.id==='off.vase'?1.02:old.id==='off.tote'?.78:old.scale;
  const turn:V3=[card?-1.22:0,card?[.14,-.16,.22][row]:stack?-.12+k*.035:[-.38,.23][k%2]+row*.10,0];

@@ -13,8 +13,8 @@
   "rights": "Original project procedural mesh authorship; no generated image, external model or reference pixels embedded",
   "materials": "Original prior palettes only, form diagnostic awaiting independent gate; no new material adoption",
   "sources": {
-    "src/art/backwall-forms-v11.ts": "99da91e1890a51422537706f6039f9a5da2d46e40f65f47cd0760bd5ec7a65da",
-    "src/art/shop-v11.ts": "0889ebcf5ac90a8c56344a3105c16e7bdafa8a407a07e7cebd86bf739b13269e",
+    "src/art/backwall-forms-v11.ts": "642a02e15ee0e61c9ae45f65b2c84d58fe53cc1dba432138a235db169210f264",
+    "src/art/shop-v11.ts": "557be176b291eda10e97c3cbae437c5b6593a0419e7250bd3763ba032be1d214",
     "src/art/mixed-display-v11.ts": "03d64fe4d89f6be760354b00a3d350c54085766e1c39de8993123b10164a7585",
     "src/art/fixtures-v11.ts": "fb8f452a84e98ea04589342d19846c599749f0c452b968a6122ab6b647a7440b",
     "src/art/back-display-v10.ts": "bb511ffe95c8b0b4b160b906cd5a13a1ad88a8dfa2c5b3b06ae4e0e3fd2b1591",
@@ -25,8 +25,8 @@
   },
   "files": {
     "assets/masters/native-v11/backwall-c37/trailing-greenery.json": {
-      "bytes": 373597,
-      "sha256": "1be91bb7cba78645c17d0ac2203846e41de6a3618d95ae67ad769707f8f2dfbf"
+      "bytes": 373883,
+      "sha256": "8702e06ece92729bebec5c39b2edd484352ad680cf4136f528698e09dfcede5e"
     },
     "assets/masters/native-v11/backwall-c37/window-near-branches.json": {
       "bytes": 478885,
@@ -38,7 +38,7 @@
     },
     "assets/masters/native-v11/backwall-c37/fixed-back-samples.json": {
       "bytes": 2634,
-      "sha256": "489d96a25f5579d78fce5c552709ded5294291867db2f05b64b30d501d97ca7f"
+      "sha256": "48c2a3063d8fd26d8e3e4e664db0e568ae7b096823ba7703b1845259930569bc"
     },
     "assets/masters/native-v11/backwall-c37/paper-work-bays.json": {
       "bytes": 2279,
