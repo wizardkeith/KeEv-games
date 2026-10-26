@@ -29,9 +29,37 @@
     },
     "errors": []
   },
-  "pendingAtCheckpoint": [
-    "source201 complete A recording",
-    "source201 zero/partial/full/soldout cycle"
-  ],
-  "limits": "Current normal-game gains require independent material/original-target pixel review. Sparse SwiftShader capture not physical GPU/FPS/audio/native or smoothness acceptance."
+  "pendingAtCheckpoint": [],
+  "limits": "Current normal-game gains require independent material/original-target pixel review. Sparse SwiftShader capture not physical GPU/FPS/audio/native or smoothness acceptance.",
+  "completeAHigh": {
+    "durationSeconds": 502.92,
+    "deliveredCDPFrames": 155,
+    "greeting": true,
+    "oneActualUISettlement": true,
+    "cashierContact": true,
+    "manualMarginPixelsSeconds": 393.2,
+    "staffHomeObservedSeconds": 390.386,
+    "servedExitAndPropClearObservedSeconds": 442.138,
+    "postReloadActual3D": true,
+    "errors": [],
+    "limits": "Sparse cloud software render; no physical GPU/FPS, fullB, closure, hidden-tab, audio/native or continuous smoothness claim"
+  },
+  "stockCycle": {
+    "actualMugStock": [
+      0,
+      3,
+      8,
+      8,
+      2,
+      0,
+      0
+    ],
+    "invalid0EnterNoWrite": true,
+    "keyboardBuy005": true,
+    "rawDraftRetained": true,
+    "reloadSnapshotsExact": true,
+    "staticContactStableAcrossTwoActualFrames": true,
+    "normalUnchanged": true,
+    "errors": []
+  }
 }
