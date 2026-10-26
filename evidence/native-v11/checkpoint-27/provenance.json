@@ -1,0 +1,78 @@
+{
+  "application": "510cc245777b4162dbcd238bed7506cda8614d55",
+  "srcTree": "0e6897afd4e627042e87e5e00b6d26fbf3053983",
+  "build": 169,
+  "tests": 238,
+  "GLBs": 146,
+  "protectedFiles": 305,
+  "nativeRebuildFiles": 39,
+  "trackedAssetFilesUnchangedAcrossRebuild": 425,
+  "runtimePayloadFiles": 174,
+  "stylingAndCanopyTriangles": 15990,
+  "stylingMaterialGroups": 17,
+  "target": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+  "targetSHA256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+  "crop": {
+    "rect": [
+      620,
+      420,
+      340,
+      300
+    ],
+    "exactSourcePixelsVerified": true,
+    "originalTargetCameraUnknown": true
+  },
+  "sameExistingAssets": true,
+  "floralAndBooksUseActualLayoutWorldOffset": [
+    0.1,
+    0,
+    -0.1
+  ],
+  "stockGroups": [
+    5,
+    3
+  ],
+  "countsTested": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "realStockCases": [
+    "fresh0",
+    "buy/place3/reload",
+    "one actual hour->placed stock0/reload",
+    "buy/place8/reload"
+  ],
+  "uncutSeconds": 386.28,
+  "CDPFrames": 143,
+  "runElapsedSeconds": 389.277,
+  "excerpt": {
+    "sourceStartSeconds": 259,
+    "requestedSourceWindowSeconds": 29,
+    "actualEncodedSeconds": 26.6,
+    "file": "normal-flow169/continuous-from259.webm",
+    "limits": "Sparse VFR frame endpoints shorten encoded excerpt. No internal cut or speed change."
+  },
+  "pixelReview": {
+    "second276": "18items/+JPY8400/aggregate gross margin before wages-rent readable",
+    "second319": "served A departure at door with actual bag",
+    "second330": "served A outside, staff at counter again",
+    "lateQueuedMarginScreenshot": "kept as original; not proof of visible text"
+  },
+  "flow": "High; actual buy8x3/place/open/greet/one UI hour/A cashier contact/bag/gross margin/exit/staff return/reload; isolated Normal baseline unchanged;0pageerrors",
+  "currentFiveLocaleLayoutMatrixRerun": false,
+  "localeEvidence": "C26 prior15cases/75panels only; actual UI/locale/camera algorithms remain byte-protected; content validate5locales174keys passed169",
+  "artAccepted": false,
+  "compositionStandardPassed": false,
+  "compositionStandardStatus": "Awaiting independent original-pixel normal-thumbnail judgment; not propagated",
+  "publicSiteChanged": false,
+  "releaseArchiveCreated": false,
+  "limits": "Cloud SwiftShader, sparse143frame CDP recording, not physicalGPU/FPS/audio/native/continuous smoothness or fresh fullB/hidden-tab/closure certification. No merge, Site save/deploy, Library retry, owner Chrome/Unity/shutdown."
+}

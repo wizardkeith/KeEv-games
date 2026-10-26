@@ -1,0 +1,95 @@
+{
+  "beforeApplication": "ba3fa07d849e12af80838b472e1f65f7bc10aac4",
+  "afterApplication": "6e949d49845fe06bb4b59a51bd9c10d39dc01bcc",
+  "beforeBuild": 163,
+  "afterBuild": 168,
+  "cameraExact": {
+    "alpha": -0.7853981633974483,
+    "beta": 0.8726646259971648,
+    "radius": 11.212076960563294,
+    "target": [
+      0.7,
+      1.15,
+      0
+    ]
+  },
+  "economyExact": {
+    "cash": 3840,
+    "inventory": {
+      "off.notebook": {
+        "stock": 8,
+        "price": 80,
+        "bookCost": 320,
+        "demandRemainder": 0
+      },
+      "off.pencil": {
+        "stock": 0,
+        "price": 25,
+        "bookCost": 0,
+        "demandRemainder": 0
+      },
+      "off.mug": {
+        "stock": 8,
+        "price": 130,
+        "bookCost": 560,
+        "demandRemainder": 0
+      },
+      "off.tea": {
+        "stock": 8,
+        "price": 75,
+        "bookCost": 280,
+        "demandRemainder": 0
+      },
+      "off.cookie": {
+        "stock": 0,
+        "price": 45,
+        "bookCost": 0,
+        "demandRemainder": 0
+      },
+      "off.tote": {
+        "stock": 0,
+        "price": 150,
+        "bookCost": 0,
+        "demandRemainder": 0
+      },
+      "off.card": {
+        "stock": 0,
+        "price": 35,
+        "bookCost": 0,
+        "demandRemainder": 0
+      },
+      "off.towel": {
+        "stock": 0,
+        "price": 90,
+        "bookCost": 0,
+        "demandRemainder": 0
+      },
+      "off.tray": {
+        "stock": 0,
+        "price": 110,
+        "bookCost": 0,
+        "demandRemainder": 0
+      },
+      "off.vase": {
+        "stock": 0,
+        "price": 170,
+        "bookCost": 0,
+        "demandRemainder": 0
+      }
+    },
+    "shelves": [
+      "off.notebook",
+      "off.mug",
+      "off.tea"
+    ]
+  },
+  "cropRect": [
+    620,
+    420,
+    340,
+    300
+  ],
+  "cropSourcePixelsExact": true,
+  "originalTargetCameraUnknown": true,
+  "poseLimit": "Naturally animated staff/leaves vary; no injected rest pose or altered camera."
+}
