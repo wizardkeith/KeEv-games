@@ -1,10 +1,10 @@
-## C22 選定134來源已固定：遮擋撤回，毛利浮窗像素核對中
+## C22 選定134：混合陳列／克制光路已整合，仍未達目標
 
-實作 `e13ef125f50ce8603a9c1104cc4344f17afc898d`，src tree `389aff0c1d6248f52a463cb844a4cf1096c15aaa`。保留 C21 結構；新混合工作群組、35既有樣品、空腔收納、3／5層穩定紙品展示、中度木色後架、收銀暖光、439網格新接觸陰影已在真正正常遊戲整合。132／133天花遮擋試作均未採納，普通遊戲不建立該網格。
+實作 `e13ef125f50ce8603a9c1104cc4344f17afc898d`，src tree `389aff0c1d6248f52a463cb844a4cf1096c15aaa`。保留 C21 結構；35 既有樣品與混合工作群組、空腔收納、3／5 層穩定紙品展示、中度木色後架、收銀暖光、439 網格新接觸 AO 已在真正正常遊戲整合。132／133 天花遮擋試作均未採納，普通遊戲不建立該網格。
 
-**已在提交後 e13ef125 重新執行223測試／validate／replay／asset-check；141 GLB零錯誤警告、305受保護檔案、34native重建及163實際遊玩payload parity、五語15案例／75面板切換均通過。** [正常 AFTER](../evidence/native-v11/checkpoint-22/selected134/after-normal-game.png)、[實際收銀](../evidence/native-v11/checkpoint-22/normal-flow134/03-cashier-contact-in-game.png)、[199.280秒未剪接流程](../evidence/native-v11/checkpoint-22/normal-flow134/gameplay-uncut.webm)、[來源／雜湊／限制](../evidence/native-v11/checkpoint-22/selected-provenance.json)。前後三鏡頭與相同真實購買現金／庫存／貨架逐項一致。
+**提交後在 e13ef125 重新執行 223 測試／validate／replay／asset-check；141 GLB 零錯誤警告、305 受保護檔案、34 native 重建及 163 實際遊玩 payload parity、五語 15 案例／75 面板切換均通過。** [完整對照／限制](V11_C22_FULL_SCENE_CHECKPOINT_2026-10-26_zh-HK.md)、[正常 AFTER](../evidence/native-v11/checkpoint-22/selected134/after-normal-game.png)、[199.280 秒未剪接流程](../evidence/native-v11/checkpoint-22/normal-flow134/gameplay-uncut.webm)、[來源／逐檔雜湊](../evidence/native-v11/checkpoint-22/selected-provenance.json)。前後三鏡頭與相同真實購買現金／庫存／貨架逐項一致。
 
-交易／現金／庫存、A交接／離店／返回／重載已驗證，Normal隔離基線不變。**毛利資料與DOM有正確18件 +¥8,400，但原始04截圖及目前抽幀未見浮窗，不能當像素通過；正在一次有界的同來源位置／樣式核對。** 美術仍未達原圖，不是完成／發佈驗收，公開V17不變。
+實際 A 招呼／交接／離店／返回／重載、結算及隔離 Normal 基線通過。**原片約 146–148 秒實際可讀 18 件／+¥8,400／未扣人工租金；[146.5 秒原片擷取](../evidence/native-v11/checkpoint-22/motion-samples/actual-margin146_5.png)。** 一次同來源有界診斷也在 153.5–157.9 秒確認浮窗。先前 04 PNG 取樣過遲，原樣保留但不作像素證據；不是已證實的交易缺陷，沒有因此改動遊戲。美術仍未達原圖，PR8 保持 Draft／未合併，公開 V17 不變。以下早期進度屬歷史，最終選定與限制以本節及 C22 報告為準。
 
 ## C22 進行中：混合陳列與光路診斷（未達標，未定稿）
 

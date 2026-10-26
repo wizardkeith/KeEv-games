@@ -1,0 +1,79 @@
+[
+  {
+    "at": 84231.10000000894,
+    "visible": false,
+    "text": "",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "style": {
+      "display": "none",
+      "visibility": "visible",
+      "opacity": "1",
+      "left": "auto",
+      "top": "auto",
+      "zIndex": "7",
+      "transform": "none"
+    },
+    "viewport": [
+      1280,
+      900
+    ],
+    "connected": true
+  },
+  {
+    "at": 148283.40000000596,
+    "visible": true,
+    "text": "本次結算毛利 · 18件+¥8,400未扣人工、租金等費用",
+    "revision": "9",
+    "bounds": {
+      "x": 369.921875,
+      "y": 458.203125,
+      "width": 240,
+      "height": 86.6875
+    },
+    "style": {
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "left": "489.924px",
+      "top": "544.903px",
+      "zIndex": "7",
+      "transform": "matrix(1, 0, 0, 1, -120, -86.6875)"
+    },
+    "viewport": [
+      1280,
+      900
+    ],
+    "connected": true
+  },
+  {
+    "at": 153847,
+    "visible": false,
+    "text": "本次結算毛利 · 18件+¥8,400未扣人工、租金等費用",
+    "revision": "9",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "style": {
+      "display": "none",
+      "visibility": "visible",
+      "opacity": "1",
+      "left": "548.823px",
+      "top": "496.293px",
+      "zIndex": "7",
+      "transform": "none"
+    },
+    "viewport": [
+      1280,
+      900
+    ],
+    "connected": true
+  }
+]
