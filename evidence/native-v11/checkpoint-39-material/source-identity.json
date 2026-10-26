@@ -1,0 +1,31 @@
+{
+  "application": "061f9b0e86982020a21b6ce1b6eec161908f0204",
+  "originalTarget": {
+    "path": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+    "sha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+    "pixels": "Original1536x1024; left1184px shop used only for labelled reference comparison"
+  },
+  "variants": {
+    "base": {
+      "build": 255,
+      "flags": {
+        "VITE_V11_BACKWALL_FORMS": "shape",
+        "VITE_V11_BACKWALL_MATERIAL": "base"
+      }
+    },
+    "values": {
+      "build": 256,
+      "flags": {
+        "VITE_V11_BACKWALL_FORMS": "shape",
+        "VITE_V11_BACKWALL_MATERIAL": "values"
+      }
+    }
+  },
+  "shared": "C36 values default, original camera/light/exposure, C38 forms,192 reflection, exact inventory; staff idle phase naturally differs",
+  "media": "Actual full runnable-game High SwiftShader browser screenshots, publicCDP uncut pointer footage. Matrices only crop/resize/labels; no generated replacement/gameplay compositing.",
+  "videoDurationsSeconds": {
+    "base": 122.24,
+    "values": 100.64
+  },
+  "gate": "C38 FORM independently passed; C39 material PENDING independent review; whole original-target art still UNACCEPTED. Not default adoption or release."
+}

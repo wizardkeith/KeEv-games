@@ -1,0 +1,472 @@
+{
+  "application": "061f9b0e86982020a21b6ce1b6eec161908f0204",
+  "liveC39Identity": {
+    "id": "v11.c39.backwall-window-material",
+    "mode": "values",
+    "active": true,
+    "defaultAdopted": false,
+    "geometry": "Exact passed C38/253 positions, normals, UV, counts and camera",
+    "scope": "Back-wall shelf planes versus preserved original merchandise coatings, trailing plants, near window foliage, existing exterior and geometric sky only",
+    "shelf": {
+      "albedo": "/assets/native-v11/display-oak-albedo.png",
+      "tint": "#E4CFAB",
+      "roughness": 0.66,
+      "tableAO": false
+    },
+    "farCrown": {
+      "roughness": 0.925,
+      "thinTransmission": false
+    },
+    "limits": "One values candidate, pending independent normal480px/two-oblique material gate; not whole-target acceptance or default adoption",
+    "actual": [
+      {
+        "name": "room.modular.material12",
+        "color": "#E4CFAB",
+        "role": "wood",
+        "parentX": 0,
+        "roughness": 0.66,
+        "albedo": [
+          0.7758222183174236,
+          0.7150774876604846,
+          0.6283894157511488
+        ],
+        "texture": "/assets/native-v11/display-oak-albedo.png",
+        "wrapU": 1,
+        "wrapV": 1,
+        "ambient": null,
+        "unlit": false,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "room.styling.v9.material0",
+        "color": "#E4CFAB",
+        "role": "wood",
+        "parentX": 0,
+        "roughness": 0.66,
+        "albedo": [
+          0.7758222183174236,
+          0.7150774876604846,
+          0.6283894157511488
+        ],
+        "texture": "/assets/native-v11/display-oak-albedo.png",
+        "wrapU": 1,
+        "wrapV": 1,
+        "ambient": null,
+        "unlit": false,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.exterior.material0",
+        "color": "#E4DCC8",
+        "role": "paint",
+        "parentX": 0,
+        "roughness": 0.9,
+        "albedo": [
+          0.7758222183174236,
+          0.7156935005064807,
+          0.5775804404296506
+        ],
+        "texture": null,
+        "wrapU": null,
+        "wrapV": null,
+        "ambient": null,
+        "unlit": false,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.exterior.material1",
+        "color": "#D6DDD0",
+        "role": "paint",
+        "parentX": 0,
+        "roughness": 0.9,
+        "albedo": [
+          0.6724431569576875,
+          0.7230551289219693,
+          0.6307571363461468
+        ],
+        "texture": null,
+        "wrapU": null,
+        "wrapV": null,
+        "ambient": null,
+        "unlit": false,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.exterior.material2",
+        "color": "#94A4A4",
+        "role": "paint",
+        "parentX": 0,
+        "roughness": 0.9,
+        "albedo": [
+          0.2961382707983211,
+          0.3712376804741491,
+          0.3712376804741491
+        ],
+        "texture": null,
+        "wrapU": null,
+        "wrapV": null,
+        "ambient": null,
+        "unlit": false,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.exterior.material3",
+        "color": "#A8B5B0",
+        "role": "paint",
+        "parentX": 0,
+        "roughness": 0.9,
+        "albedo": [
+          0.39157247774972326,
+          0.4620769996544071,
+          0.43415363617474895
+        ],
+        "texture": null,
+        "wrapU": null,
+        "wrapV": null,
+        "ambient": null,
+        "unlit": false,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.exterior.material4",
+        "color": "#B3C4C0",
+        "role": "glass",
+        "parentX": 0,
+        "roughness": 0.44,
+        "albedo": [
+          0.45078578283822346,
+          0.5520114015120001,
+          0.5271151257058131
+        ],
+        "texture": null,
+        "wrapU": null,
+        "wrapV": null,
+        "ambient": null,
+        "unlit": false,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.exterior.material5",
+        "color": "#CBD0BC",
+        "role": "paint",
+        "parentX": 0,
+        "roughness": 0.9,
+        "albedo": [
+          0.5972017883637634,
+          0.6307571363461468,
+          0.5028864580325687
+        ],
+        "texture": null,
+        "wrapU": null,
+        "wrapV": null,
+        "ambient": null,
+        "unlit": false,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.exterior.material6",
+        "color": "#E6E5D4",
+        "role": "paint",
+        "parentX": 0,
+        "roughness": 0.9,
+        "albedo": [
+          0.7912979403326302,
+          0.7835377915261935,
+          0.6583748172794485
+        ],
+        "texture": null,
+        "wrapU": null,
+        "wrapV": null,
+        "ambient": null,
+        "unlit": false,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.exterior.material7",
+        "color": "#AAB5A4",
+        "role": "wood",
+        "parentX": 0,
+        "roughness": 0.92,
+        "albedo": [
+          0.43803731172552257,
+          0.4620769996544071,
+          0.42574127198230394
+        ],
+        "texture": "native.v5.wood-grain",
+        "wrapU": 1,
+        "wrapV": 1,
+        "ambient": null,
+        "unlit": false,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.exterior.material8",
+        "color": "#8C7959",
+        "role": "wood",
+        "parentX": 0,
+        "roughness": 0.73,
+        "albedo": [
+          0.26225065752969623,
+          0.2338310676141343,
+          0.1973098858166633
+        ],
+        "texture": "native.v5.wood-grain",
+        "wrapU": 1,
+        "wrapV": 1,
+        "ambient": null,
+        "unlit": false,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.exterior.material9",
+        "color": "#E8ECDD",
+        "role": "paint",
+        "parentX": 0,
+        "roughness": 0.84,
+        "albedo": [
+          0.8069522576692516,
+          0.83879901174074,
+          0.7230551289219693
+        ],
+        "texture": null,
+        "wrapU": null,
+        "wrapV": null,
+        "ambient": null,
+        "unlit": true,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.exterior.material10",
+        "color": "#DCE8E4",
+        "role": "paint",
+        "parentX": 0,
+        "roughness": 0.84,
+        "albedo": [
+          0.7156935005064807,
+          0.8069522576692516,
+          0.7758222183174236
+        ],
+        "texture": null,
+        "wrapU": null,
+        "wrapV": null,
+        "ambient": null,
+        "unlit": true,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.exterior.material11",
+        "color": "#CCE0E9",
+        "role": "paint",
+        "parentX": 0,
+        "roughness": 0.84,
+        "albedo": [
+          0.6038273388553378,
+          0.7454042095403874,
+          0.8148465722161012
+        ],
+        "texture": null,
+        "wrapU": null,
+        "wrapV": null,
+        "ambient": null,
+        "unlit": true,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.exterior.material12",
+        "color": "#BFDAE8",
+        "role": "paint",
+        "parentX": 0,
+        "roughness": 0.84,
+        "albedo": [
+          0.5209955732043543,
+          0.7011018919329731,
+          0.8069522576692516
+        ],
+        "texture": null,
+        "wrapU": null,
+        "wrapV": null,
+        "ambient": null,
+        "unlit": true,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.foliage.0.material0",
+        "color": "#C3D1BD",
+        "role": "leaf",
+        "parentX": -11.25,
+        "roughness": 0.925,
+        "albedo": [
+          0.5457244613701866,
+          0.6375968739940326,
+          0.5088813208549338
+        ],
+        "texture": null,
+        "wrapU": null,
+        "wrapV": null,
+        "ambient": null,
+        "unlit": false,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.foliage.1.material0",
+        "color": "#C3D1BD",
+        "role": "leaf",
+        "parentX": -11.25,
+        "roughness": 0.87,
+        "albedo": [
+          0.5457244613701866,
+          0.6375968739940326,
+          0.5088813208549338
+        ],
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "wrapU": 0,
+        "wrapV": 0,
+        "ambient": null,
+        "unlit": false,
+        "translucent": true,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.foliage.2.material0",
+        "color": "#D5DDD0",
+        "role": "leaf",
+        "parentX": -11.75,
+        "roughness": 0.925,
+        "albedo": [
+          0.665387298282272,
+          0.7230551289219693,
+          0.6307571363461468
+        ],
+        "texture": null,
+        "wrapU": null,
+        "wrapV": null,
+        "ambient": null,
+        "unlit": false,
+        "translucent": false,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.foliage.3.material0",
+        "color": "#D5DDD0",
+        "role": "leaf",
+        "parentX": -11.75,
+        "roughness": 0.87,
+        "albedo": [
+          0.665387298282272,
+          0.7230551289219693,
+          0.6307571363461468
+        ],
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "wrapU": 0,
+        "wrapV": 0,
+        "ambient": null,
+        "unlit": false,
+        "translucent": true,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.foliage.4.material0",
+        "color": "#668A52",
+        "role": "leaf",
+        "parentX": -5.8,
+        "roughness": 0.78,
+        "albedo": [
+          0.13286832155381798,
+          0.25415209433082675,
+          0.08437621154414882
+        ],
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "wrapU": 0,
+        "wrapV": 0,
+        "ambient": null,
+        "unlit": false,
+        "translucent": true,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.foliage.5.material0",
+        "color": "#90AE65",
+        "role": "leaf",
+        "parentX": -5.8,
+        "roughness": 0.78,
+        "albedo": [
+          0.2788942634768104,
+          0.4232676699860717,
+          0.1301364766903643
+        ],
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "wrapU": 0,
+        "wrapV": 0,
+        "ambient": null,
+        "unlit": false,
+        "translucent": true,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.foliage.6.material0",
+        "color": "#BCD28A",
+        "role": "leaf",
+        "parentX": -5.8,
+        "roughness": 0.78,
+        "albedo": [
+          0.5028864580325687,
+          0.6444796819705821,
+          0.25415209433082675
+        ],
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "wrapU": 0,
+        "wrapV": 0,
+        "ambient": null,
+        "unlit": false,
+        "translucent": true,
+        "alpha": 1
+      },
+      {
+        "name": "native.window.foliage.7.material0",
+        "color": "#7F9F5D",
+        "role": "leaf",
+        "parentX": -5.8,
+        "roughness": 0.78,
+        "albedo": [
+          0.21223075741405523,
+          0.3467040563550296,
+          0.10946171077829933
+        ],
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "wrapU": 0,
+        "wrapV": 0,
+        "ambient": null,
+        "unlit": false,
+        "translucent": true,
+        "alpha": 1
+      }
+    ]
+  },
+  "cameraAndEconomyEqual": true,
+  "pointerObliquesEqual": true,
+  "normalUnchanged": "Fresh isolated baseline unchanged in both cases; owner saves never accessed",
+  "pageErrors": [],
+  "assertions": [
+    "Shelf actual repeated existing albedo; no central-table AO",
+    "Two far crown volumes opaque PBR, near four thin leaf groups retain transmission",
+    "Four geometric sky bands remain unlit",
+    "C39 active only in shape+values; neither adopted nor published"
+  ],
+  "limits": "Actual software-rendered public browser evidence. No new purchase/settlement/Low/reduced-motion/five-locale/device acceptance."
+}
