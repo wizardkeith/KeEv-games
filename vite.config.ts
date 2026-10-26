@@ -12,4 +12,6 @@ process.env.VITE_V11_BACKWALL_FORMS??='shape';
 if(!['control','shape','old-gray','gray'].includes(process.env.VITE_V11_BACKWALL_FORMS))throw Error('Unknown C37 backwall form gate variant');
 process.env.VITE_V11_BACKWALL_MATERIAL??=process.env.VITE_V11_BACKWALL_FORMS==='shape'?'values':'control';
 if(!['control','base','values'].includes(process.env.VITE_V11_BACKWALL_MATERIAL))throw Error('Unknown C39 backwall material variant');
+process.env.VITE_V11_SCENE_WINDOW??='control';
+if(!['control','aperture'].includes(process.env.VITE_V11_SCENE_WINDOW))throw Error('Unknown C41 window-light mode');
 export default defineConfig({});

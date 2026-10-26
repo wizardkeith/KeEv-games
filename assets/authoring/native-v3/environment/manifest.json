@@ -3,10 +3,13 @@
   "version": "3.1",
   "master": {
     "path": "assets/masters/native-v3/environment-v3.json",
-    "sizeBytes": 28670090,
-    "sha256": "514eebe5b65d4b2f6f6e01ba50da74be6d9b4c73d3d240555ef078c04e035ae9"
+    "sizeBytes": 28671257,
+    "sha256": "20d3433a30d907a99a40d6c3afa9bbd03a017e1ff0206054b06dd87469ca7db4"
   },
   "sources": {
+    "src/art/scene-window-light-v11.ts": "4f17d4387bc237870d997ce0b9da10fbaad08fb2d0f9e3878455cd930c942c3d",
+    "tools/export-v11-scene-window.ts": "da4fb6922ff22188f7c354409d2e29f5a363eec716f04421983e91292a221434",
+    "assets/authoring/native-v11/scene-window-c41.json": "5d1be5f3c13b935b6636a05870a9845243c30b63abeac8f24223fd25d2cef6b6",
     "tools/export-v11-backwall-adoption.ts": "b499c6258c15c6b1f860ff5547ec3097c477137cec3e4e9573524c6de39e8ccb",
     "assets/authoring/native-v11/backwall-c40-adoption.json": "4832fc29ae430b3248ed2c6f0a4ca6da46b90a9bbce4eb814779d5facdaf546a",
     "src/art/backwall-material-v11.ts": "599be73e5a7478790b3403c4ba4c8f681ac168f743e9035825dca7ac5f20b9e9",
@@ -141,7 +144,7 @@
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "432f387c45f07b2ef9c0adb8207e0e1d44e143d64343bd8cd49b240dee72001d",
-    "tools/export-native-environment.ts": "f2d7790c67357c3b0692455a8dcded464470de1385451f3014327af26083216e"
+    "tools/export-native-environment.ts": "d933ca74af5784a5f4773ee542acf09603ca45a9b7e00450ea85d1ffbc8ad887"
   },
   "rebuild": "node --import tsx tools/export-native-environment.ts",
   "runtime": "src/world.ts imports native-environment.ts and native-view.ts; geometry.ts builds the same authored recipes. nativeGrouped/nativeMaterialIntent respect per-surface roughness while shared legacy materials remain unchanged.",
