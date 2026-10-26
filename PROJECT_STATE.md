@@ -1,6 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T22:23:58+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T23:20:49+08:00** (Asia/Hong_Kong).
+
+## V11 C30受控漫反射診斷／原圖仍FAIL — 2026-10-26T23:20:49+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送`b7e56cb371c19c2bb6b6613d209943f3e262b8d9`，application`0f082eae3ce8753ea216fee743cd4c15832c0dfa`；[原圖／四組實際正常遊戲比較、重載真3D及拒用原因](https://github.com/wizardkeith/KeEv-games/blob/b7e56cb371c19c2bb6b6613d209943f3e262b8d9/docs/V11_C30_DIFFUSE_TRANSPORT_DIAGNOSTIC_2026-10-26_zh-HK.md)。鎖定C27構圖／201幾何／192反射，試驗CPU逐頂點漫射傳輸，未再加花／布幾何。Cycles碎暗點拒用；BVH減少碎點但寬窗強光及中性對照仍未達柔亮門檻，**全部OFF，不是美術完成或發佈候選**，普通178檔輸出不含診斷資料。
+- 同source247tests/build/五語174keys validate/replay/asset-check、146GLB零錯警告、305保護檔通過。固定202的180runtime與重新205逐byte一致；202/203實際匯入及reload真3D、光場SHA、逐值save／隔離Normal不變／0pageerror。保留預設204另有116.760秒未剪orbit／面板／真買杯／reload，**不是202光場交易驗收**。動態陰影、其他SKU/數量及Low診斷未完成；201全流程／Low證據仍僅屬201，不重標新通過。
+- **同桌與整體原圖門檻仍FAIL，下一步獨立診斷決定有效方法，不再把加光當目標達成。** 無引擎／預算上限結論或使用者動作阻塞。main僅文件指標、功能未合併，PR8仍Draft、公開V17不變；無merge／Site save/deploy／Library或LTC重試／玩家Chrome或Normal／Unity／關機，實體GPU/FPS/audio/native仍未驗收。
+
 
 ## V11 C29固定201候選／必要技術檢查完成，原圖仍未通過 — 2026-10-26T22:23:58+08:00
 
