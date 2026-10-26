@@ -1,6 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T00:03:33+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T01:36:42+08:00** (Asia/Hong_Kong).
+
+## V11 C32灰模候選／等待獨立形體門檻 — 2026-10-27T01:36:42+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送`d114f211d9447c2e734c2d84b9cf665d23cbedb4`，application`cd3538f46c53529398dca9f9866cbb0726d4958f`；[固定正常480px店高／雙斜角真遊戲、原片及來源](https://github.com/wizardkeith/KeEv-games/blob/d114f211d9447c2e734c2d84b9cf665d23cbedb4/docs/V11_C32_GRAY_MODEL_GATE_2026-10-27_zh-HK.md)。一高主簇／兩低側簇有深度與遮蓋，布在無承托空位隆起並連續跨角接兩深淺主褶；只重做花／布灰模，C27位置／杯書花器傢俬／201光照相機／192反射及原母檔保留。**灰門檻未宣稱通過，未進貼圖／色調；普通預設仍feature201，公開V17未由本工作改動，未合併。**
+- 最終old-gray216／gray217均17個styling批次，style+canopy15986→15776tri（原<16000），布2076不增；共用既有枝幹batch作同灰，實際PBR一個／無貼圖或發光，臨時18群問題已移除。10款×8件／4448底部點、541原布接觸點及原fixture footprint檢查通過；252tests/build/五語174keys validate/replay/asset-check、146GLB零錯警告、305保護檔通過。216/217各180檔從最終source重建逐byte同，218預設reload真3D／save逐值同／隔離Normal不變／0pageerror。
+- **待獨立灰模覆核，原圖整體仍未接受；不過便改形，通過後才准既有atlas／原材質整合且≤17群。** 未將C31結果當authored shading無效。兩段145.840／154.720秒為稀疏雲端實際pointer／閉店活動，不是實體GPU/FPS／全結算／Low／五語互動／audio/native驗收。main僅文件指標，PR8仍Draft；無merge／Site save/deploy／Library或LTC重試／玩家Chrome或Normal／Unity／關機，無使用者動作或權限阻塞。
+
 
 ## V11 C31形／值2×2拒用，原圖仍FAIL — 2026-10-27T00:03:33+08:00
 
