@@ -6,6 +6,14 @@
 
 
 
+## 第十六個 checkpoint — 少數主摺試驗保留，default未採用；回到整店
+
+依中性診斷結果，只在既有低模邊線增加一條22mm背部主要V摺，及加深五道既有裙褶；沒有更多頻率／小皺紋，也沒有重跑cloth simulation。[正常材質98](../evidence/native-v11/checkpoint-16/control98-primary.png)／[中性99診斷（不是正常美術）](../evidence/native-v11/checkpoint-16/DIAGNOSTIC-neutral99-NOT-normal-art.png)，同geometry/camera/自然面向的隔離仍成立。已實看：中性下腰部折線較明確，但正常藍外套的畫面增益仍有限，不能稱原圖style/quality通過。**未採用為default；原C13局部形體保留。**
+
+[9項fit/UV測試](../evidence/native-v11/checkpoint-16/fit-tests.log)及[topology/normal/budget](../evidence/native-v11/checkpoint-16/budget.log)通過；沒有冒稱trial做了完整suite／新收銀／全步態或實體device驗證。修改patch、真正runtime input／UV／可編輯UV.blend保存於experiments/c16-primary；先封存才只恢復本輪自己的source/UV/GLB/manifest，沒有丟失別人的工作。安裝中的Babylon PBR確實直接使用normal texture level，沒有根據StandardMaterial的反比約定誤修PBR；材質／fill根因未完全隔離。[來源／判斷](../evidence/native-v11/checkpoint-16/provenance.json)。
+
+現在回到整店商品與材質。已量度目前原生鉛筆長0.5835m，display乘1.12後約65.35cm，與原圖手部比例疑有明顯落差；先取得真正購買／放架的遊戲畫面，再做一組手部比例一致的文具切片，尺寸是由參考圖比例推算，並非原圖提供了公分規格。維持相同SKU／經濟／存檔／五語／鏡頭，不增加玩法。原圖及布料gate仍OPEN，publicV17不變，PR8draft／未合併／未發佈。
+
 ## 第十五個 checkpoint — 固定 renderer 診斷完成，未拿診斷當美術
 
 依parent覆核，固定同幾何／鏡頭／自然瀏覽面向，實際跑[現行材質control95](../evidence/native-v11/checkpoint-15/control-current-game95.png)與[中性＋單方向光96診斷（不是正常遊戲美術）](../evidence/native-v11/checkpoint-15/DIAGNOSTIC-neutral96-NOT-normal-art.png)。**48個cloth mesh的positions/normals/indices及原material identity雜湊全部一致**，camera與B的x/z/yaw/state一致；普通UI／wheel／自然browseProgress≥.30等待，沒有pose／時鐘／庫存／交易注入。頭手自然相位略不同，不聲稱全pose鎖定。Neutral只換cloth成無貼圖／IBL／specular的灰色材質，只綁一盞無陰影diffuse方向光，其他場景／人物皮膚／rig保留；剔面有效CCW已核對。

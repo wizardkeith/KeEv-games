@@ -1,0 +1,18 @@
+BJS - [23:48:12]: Babylon.js v8.32.0 - Null engine
+✔ actual rebuilt apron triangles stay in front of skirt/torso across the visible panel, without depth tricks or a torn silhouette (138.92608ms)
+✔ authored rest preserves every accepted shoulder/neck coordinate and the closed source topology (114.631025ms)
+✔ rolled cuffs are hollow through their axes, with real inner walls and clearance for the wrist (141.125778ms)
+✔ rebuilt customer retains every articulation/contact pivot and existing lower-body envelope (101.473893ms)
+✔ customer satchel strap joins actual shirt and pouch surfaces, while fitted placket does not float (35.509137ms)
+✔ both customers closed garment and satchel panels clear support at triangle interiors (472.74785ms)
+✔ Blender garment UV seams retain every source triangle coordinate, normal and contact pivot; stale shape is rejected (247.915337ms)
+✔ coat fronts and skirt have metre-area density and vertical warp within five degrees for the five-centimetre checker (3.201501ms)
+✔ portable finishes preserve exact Web ORM/normal/albedo, physical repeats and restrained sheen (23.890982ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1077.061083

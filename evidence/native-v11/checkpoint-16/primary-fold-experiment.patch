@@ -1,0 +1,22 @@
+diff --git a/src/art/customer-female-v11.ts b/src/art/customer-female-v11.ts
+index 209762b..0b2e5c8 100644
+--- a/src/art/customer-female-v11.ts
++++ b/src/art/customer-female-v11.ts
+@@ -57,10 +57,16 @@ function clothes(parts:NativePart[]){
+  // Upper accepted controls stay exact; front layers fit this resulting surface.
+  if(coatRest.sourceSignature!==garmentSignature(torso.geometry)||coatRest.positions.length!==torso.geometry.positions.length||JSON.stringify(coatRest.indices)!==JSON.stringify(torso.geometry.indices))throw Error('stale authored coat rest');
+  torso.geometry=finishSculpt({positions:[...coatRest.positions],normals:[],indices:[...coatRest.indices]});
++ // Neutral/single-light renderer diagnostic still read as a smooth volume.
++ // One primary waist V, on the existing fold-following loops: 22mm additional
++ // crest/trough depth, not more wrinkle frequency or another cloth simulation.
++ // Back only, fading below the retained scarf and accepted shoulder controls.
++ for(let i=0;i<torso.geometry.positions.length;i+=3){const x=torso.geometry.positions[i],y=torso.geometry.positions[i+1],z=torso.geometry.positions[i+2],r=Math.hypot(x,z)||1,mask=ease((.935-y)/.045)*ease((y-.745)/.04)*ease((z/r-.15)/.35);torso.geometry.positions[i+2]+=.022*ridge(y-(.80+.60*Math.abs(x)),.028)*mask;}
++ finishSculpt(torso.geometry);
+  const skirt=fabric(sculptLoft([{y:.224,x:.248,z:.236},{y:.254,x:.258,z:.244},{y:.40,x:.245,z:.235},{y:.55,x:.213,z:.201},{y:.68,x:.158,z:.126},{y:.76,x:.135,z:.098}],32,0),'#E7DBBF');
+  for(let i=0;i<skirt.geometry.positions.length;i+=3){
+   const x=skirt.geometry.positions[i],y=skirt.geometry.positions[i+1],z=skirt.geometry.positions[i+2],a=Math.atan2(z,x),fall=ease((.72-y)/.42),r=Math.hypot(x,z)||1;
+-  const centres=[-.25,1.05,2.40,3.68,4.90],depths=[.025,.032,.024,.029,.027];let gather=0;for(let k=0;k<centres.length;k++){const centre=centres[k]+.12*(1-fall)*Math.sin(centres[k]),d=Math.atan2(Math.sin(a-centre),Math.cos(a-centre));gather+=depths[k]*Math.exp(-.5*(d/(.30+(k%2)*.025))**2)*fall;}
++  const centres=[-.25,1.05,2.40,3.68,4.90],depths=[.034,.042,.032,.038,.036];let gather=0;for(let k=0;k<centres.length;k++){const centre=centres[k]+.12*(1-fall)*Math.sin(centres[k]),d=Math.atan2(Math.sin(a-centre),Math.cos(a-centre));gather+=depths[k]*Math.exp(-.5*(d/(.30+(k%2)*.025))**2)*fall;}
+   skirt.geometry.positions[i]+=x/r*gather;skirt.geometry.positions[i+2]+=z/r*gather;
+   skirt.geometry.positions[i+1]+=.004*Math.sin(a*5+.4)*Math.max(0,Math.min(1,(.45-y)/.22));
+  }
