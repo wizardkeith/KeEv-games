@@ -1,19 +1,20 @@
 {
   "version": "native.products.v3",
   "file": "assets/masters/native-v3/products-v3.json",
-  "bytes": 3890075,
-  "sha256": "33a9634e83b2b019a57f11abd9f212cf8d73bed68761bdd4ef845b15373c9e05",
+  "bytes": 3887923,
+  "sha256": "6e212112b3b3bf294e4a960c4a3b5deb5b038fd38c220ffb43755e46a65a0bb3",
   "rebuild": "node --import tsx tools/export-native-products.ts",
   "sourceSha256": {
+    "src/art/pencil-v11.ts": "aa99c3c04863d74b437c60b24028437cb6e0d557cc9750ba05ac94b085ae0dd1",
     "src/art/native-products.ts": "da515d2fd618c6bb16f9b7fa0a168bbb899944e53b3293d901e0ea7f1769665c",
     "src/art/products-v10.ts": "ce5609e36e69b3c8c68985860461a6ecb5df33c7484b2e095a74689bea0dda04",
-    "src/art/products-v11.ts": "3a3653e1a1085de208e5c8813a7e7d3ca80e43b24e193e2b7b140edd8fc95056",
+    "src/art/products-v11.ts": "968952dd50b6a94a840edec004c8132591119aa6102397d6239ddbdd18966668",
     "src/art/sculpt-v10.ts": "114a810e5245f58832dc5d12641e20e6ca1b7d159a2410d7d72cd3b3a141546c",
     "src/art/shop-v10.ts": "0ac65000bb42de57c335410b3e1af6f12ab2557d78c89b9eac3d548ae12c0623",
     "src/art/tote-v10.ts": "2b357b54c9f233b5f4ba398b04ac384632ea0c582978840c886266f0fa25fe74",
     "src/art/recipes.ts": "b3c6890ff3e025f14373f28f10a68f3eeeb54f8a733a26192233f81f0090b905",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
-    "tools/export-native-products.ts": "287c899c446528a46b9221e9f74ee089a739afcb24ab2e6cfc09b00051eb45db"
+    "tools/export-native-products.ts": "08d208ab9065d93c8a65cddb832a8fb50d8d36e930289797e97520225d6a4739"
   }
 }

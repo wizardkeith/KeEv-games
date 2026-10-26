@@ -1,6 +1,7 @@
 /** V11 ceramic forms: continuous spline-turned hollow bodies and sculpted
  * handles. Existing SKU envelopes, axes, stock count and ownership unchanged. */
 import {buildV10Product} from './products-v10';
+import {buildV11Pencil} from './pencil-v11';
 import {sculptSweep,finishSculpt} from './sculpt-v10';
 import type {NativeSurface,NativeMesh} from './native-characters';
 import type {Geometry} from './geometry';
@@ -15,6 +16,7 @@ function pottery(profile:P[],color:string):NativeMesh{
  return {shape:'mesh',at:[0,0,0],geometry:finishSculpt(g),color,role:'ceramic',roughness:.31};
 }
 export function buildV11Product(id:string,color:string):NativeSurface[]{
+ if(id==='off.pencil')return buildV11Pencil(color);
  if(id==='off.mug')return [pottery([[.001,.007],[.074,.007],[.100,.018],[.114,.055],[.120,.160],[.116,.221],[.111,.235],[.105,.235],[.104,.220],[.108,.160],[.102,.065],[.084,.030],[.001,.030]],'#D8DDC7'),{shape:'mesh',at:[0,0,0],role:'ceramic',color:'#D8DDC7',roughness:.31,geometry:sculptSweep([[.108,.193,0],[.177,.202,0],[.202,.149,0],[.177,.086,0],[.107,.073,0]],[.015,.014,.014,.014,.015],[.015,.014,.014,.014,.015],24,10)}];
  if(id==='off.vase')return [pottery([[.001,.006],[.080,.006],[.118,.031],[.135,.110],[.128,.205],[.082,.271],[.045,.308],[.049,.366],[.055,.384],[.049,.393],[.041,.386],[.039,.305],[.072,.271],[.116,.202],[.122,.110],[.102,.041],[.068,.027],[.001,.027]],'#819788')];
  return buildV10Product(id,id==='off.notebook'?'#91A18C':color);

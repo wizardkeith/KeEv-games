@@ -14,8 +14,8 @@
     {
       "id": "styling-v9",
       "file": "assets/masters/native-v4/styling-v9.glb",
-      "bytes": 2687140,
-      "sha256": "1eadbdae457c656e27fa39d52eb521dc9dbb7c0d780eef79b118670b83b0baae"
+      "bytes": 2687144,
+      "sha256": "47a4bf18398f78506ea6b0628fc1e3e7a3f531398d099dee9ed90e21311a470b"
     },
     {
       "id": "window-canopy-v9",
@@ -56,8 +56,8 @@
     {
       "id": "product-off.pencil",
       "file": "assets/masters/native-v4/product-off.pencil.glb",
-      "bytes": 2178088,
-      "sha256": "777a5e1db47458dc6f05bd57127b1a42f93df286cd42d7032cedb4ea3bef2654"
+      "bytes": 2167516,
+      "sha256": "de8b8a6bc10354b598b97effb533c13bbafb6d73c401566969fd069cadb0f622"
     },
     {
       "id": "product-off.mug",

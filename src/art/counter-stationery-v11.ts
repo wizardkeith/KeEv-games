@@ -18,5 +18,7 @@ export function counterStationery():NativeSurface[]{
   const a:V3=[Math.cos(i*2.4)*.024,.035,Math.sin(i*2.4)*.024],b:V3=[a[0]+(i-2)*.018,.315+(i%3)*.036,a[2]+((i*2)%5-2)*.017],d=b.map((v,k)=>v-a[k]),len=Math.hypot(...d),tip=(distance:number)=>b.map((v,k)=>v+d[k]/len*distance)as V3;
   segment(a,b,.009,.009,'#CDB395','wood');segment(b,tip(.032),.009,.003,'#C4AC8A','wood');segment(tip(.032),tip(.041),.003,.0003,'#57413D','ink');
  }
- return out;
+ // Inferred from the reference's hand/holder proportions, not measured source
+ // dimensions: about13cm holder and26cm work pencils, retaining the base anchor.
+ return out.map(p=>p.shape==='mesh'?{...p,geometry:{...p.geometry,positions:p.geometry.positions.map(v=>v*.65)}}:p);
 }
