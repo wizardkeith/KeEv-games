@@ -6,6 +6,16 @@
 
 
 
+## 第十七個 checkpoint — 真正買入上架的鉛筆比例／接觸修正，繼續整店
+
+原生鉛筆長0.5835m，display×1.12後65.35cm；[實際舊正常遊戲](../evidence/native-v11/checkpoint-17/before100/before-normal-game.png)確實像粗長木棒。重建原SKU的六角筆身／木尖／石墨／金屬箍／擦膠，display後23.86cm；固定櫃台筆筒改約13.33cm高。[同鏡頭實際新版](../evidence/native-v11/checkpoint-17/after103/after-normal-game.png)／[新版實際櫃台](../evidence/native-v11/checkpoint-17/after103/after-counter-game.png)。這些尺寸是由手部／器物比例推算，原圖沒有提供公分規格；不是新增商品或玩法。前四支放回既有淺色runner、後四支在既有riser；仍min(stock,8)，沒有庫存授予。
+
+**runtime6946fad89c409f7c03b1885c2c695e52af4b8f79，200tests/build/validate/replay/asset-check，139GLB零error/warning，305protected/history及36個native輸出fresh rebuild byte-identical。** 六項focused測試含三桌×0..9庫存的真實triangle支承ray、1mm gap、個體不重疊及接合連續性。before100/after103均普通Sandbox買8vase/pencil/tray並放架；cash/inventory/shelves及normal/Zen/staff鏡頭pose完全相同，0pageerror、隔離Normal基線未變。[原始資料／雜湊／失敗排除／限制](../evidence/native-v11/checkpoint-17/provenance.json)。Build101測試TypeScript annotation失敗，誤複製舊dist的那次capture全部排除；修正後102/103由成功build才複製，沒有把舊圖冒充新模型。
+
+Library兩張歷史build94實際正常遊戲／批次毛利圖已按current prepared multi-file helper嘗試，**read-only hosted apps tools/list network失敗**；native Library list成功後一次bounded同路retry仍失敗，prepare/transfer/finalize均未開始、沒有檔案或ID。不是授權拒絕或uncertain write，沒有換直接create／猜URL繞路。[精確blocker及圖片hash](../evidence/native-v11/checkpoint-17/library-delivery-blocker.json)。原build94 GitHub截圖仍可讀。
+
+**原目標仍未達到，繼續。** 比例已修正，但薄小鉛筆正常scale辨識有限，整店仍比原圖平／稀疏，瓷釉／布／紙材質層次及外景仍不足。下一個bounded方法是從真正房間幾何產生方向性specular probe，檢查瓷器是否有可讀窗形／木反射，不再用更高貼圖解析度冒充質感。尚未實作／驗證該probe，不宣稱有效。C16拒絕試驗保留、C13正常衣物保留，沒有重跑新收銀／全語言或實體device；完整Bflow仍exact94，locale仍exact74。PR8draft未merge/deploy，publicV17不變，無Normal玩家資料／使用者Chrome／Unity／關機／內容擴張。
+
 ## 第十六個 checkpoint — 少數主摺試驗保留，default未採用；回到整店
 
 依中性診斷結果，只在既有低模邊線增加一條22mm背部主要V摺，及加深五道既有裙褶；沒有更多頻率／小皺紋，也沒有重跑cloth simulation。[正常材質98](../evidence/native-v11/checkpoint-16/control98-primary.png)／[中性99診斷（不是正常美術）](../evidence/native-v11/checkpoint-16/DIAGNOSTIC-neutral99-NOT-normal-art.png)，同geometry/camera/自然面向的隔離仍成立。已實看：中性下腰部折線較明確，但正常藍外套的畫面增益仍有限，不能稱原圖style/quality通過。**未採用為default；原C13局部形體保留。**

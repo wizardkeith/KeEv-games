@@ -1,0 +1,5 @@
+
+> next-stop-little-shop-w1@0.1.1 replay
+> node --import tsx tools/replay.ts
+
+{"cash":5020,"purchases":400,"stock":4,"bookCost":160,"sales":480,"cogs":240,"salary":30,"rent":20,"operating":10,"net":180,"units":6}

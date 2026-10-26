@@ -1,0 +1,52 @@
+{
+  "application": "6946fad89c409f7c03b1885c2c695e52af4b8f79",
+  "baseline": "a00e8de7dbf7fdc1cd7ef1777cadb9556188ad11, immutable100 normal default, C16 trial excluded",
+  "after": "immutable103 from matching runtime sources; original generated native exports refreshed afterward, no deployment package claim",
+  "type": "Actual production WebGL ordinary Sandbox UI buys8 each vase/pencil/tray, places shelves0/1/2, closed shop; no injected inventory/camera/pose/time or claimed sale",
+  "matches": {
+    "normalZenStaffCamera": true,
+    "cashInventoryShelves": true,
+    "normalIsolatedUnchanged": true,
+    "pageerrors": []
+  },
+  "model": {
+    "oldDisplayedLengthMetres": 0.6535200000000001,
+    "newDisplayedLengthMetres": 0.23856000000000002,
+    "dimensions": "Inferred human-hand/holder calibration, not source image metric measurements",
+    "counterHolderHeightMetres": 0.13325,
+    "stockCap": 8,
+    "physicalSupport": "All counts0..9 and tables0..2 real triangle rays1mm support gap on existing cloth/riser, distinct physical units"
+  },
+  "tests": {
+    "full": 200,
+    "glbs": 139,
+    "errors": 0,
+    "warnings": 0,
+    "protected": 305,
+    "nativeRebuildFiles": 36
+  },
+  "excluded": "Build101 TypeScript test annotation error; mistakenly copied previous dist, resulting capture entirely excluded and labelled locally. Corrected typed bounds; fresh gated successful102/103 directories. No stale images adopted.",
+  "remaining": "Original target/style/material gate open. Pencil now hand-scale but normal play thin-detail readability limited. Scene still flatter/sparser than target, glaze/cloth/paper distinction and exterior richness insufficient. No new cashier/motion/locale/device evidence from this source; fullB346.320s remains94, five-locale layouts remain74.",
+  "limits": "Cloud Chromium ANGLE SwiftShader only, not physical GPU/FPS/audio/native or art acceptance",
+  "sha256": {
+    "replay.log": "1289341a6da5804b03189ab50b84a750ab01ca9eab8c1e3ff4f902e37f6fe1df",
+    "runtime-sources.json": "016d7aedec2d7d9b01cb36283e76baf8f0d67960db35f755d03270eb90714bdc",
+    "EXCLUDED-failed-build101.log": "2dc79b135e6c25c40d68b7b2168e57e8d775d2ff2afa8ad18a5341ea4bcfe5a1",
+    "preserve.log": "225ce8a0134296dcf0f160c6f66ba97b1bc9e5be6a4271d4053274c9294f9baa",
+    "glbs.log": "6d0ef9cb5262cffa4230371878d63a7ffac4c8efb896a7637855803dc0c38adc",
+    "validate.log": "d8cf77a1e38e0b04929bd0774b8f25dee39e9ff7717ea0b8ef7fe1e5a477369b",
+    "asset-check.log": "82aa703c6885739207cf31ed202c0e733687c7fe9bb85bbdede71b284f86d8ce",
+    "build103.log": "c07313ede381af803adb26930d6629e5115c84277cae741e22dc9bb387106aaa",
+    "rebuild-parity.json": "e0b8866b639738e20c038f4b92afde719d26aac9ef10c771eb8ef20ab9fbe79b",
+    "library-delivery-blocker.json": "9d060fcf0ef6b296d2fc759feccc5b92453870186f99b596548e78cc5de0ec00",
+    "tests.log": "2e5ce303656a098baa21960f6cfba9d2b8bc51c92e819eb8547920023615604c",
+    "before100/before-panorama-game.png": "42ec5230e3ce9799e08f3b0da782662f236684d96b534923aa9c34da7b98ca8d",
+    "before100/results.json": "3d5e5ed1da5adb938abad3b127929c1db02468450f9ae01ba5fed0a439865394",
+    "before100/before-counter-game.png": "1dcb0d7b49dcbd15583cf3325b3957411b256002fc3152efb6dc71d307d61d13",
+    "before100/before-normal-game.png": "a9087492b385cd48c1d38c6b57a2654ce4c717ffe5e234811a10623c098fe35d",
+    "after103/after-normal-game.png": "b41771ddef32a59c80dd9fdaf69d8c4ee083c6ca64095a056293c9761937a8e0",
+    "after103/after-counter-game.png": "fc3fa25a4c200a08c0d2ffbd05808ae4c638e1316bc3b7813477447b0cd925bc",
+    "after103/results.json": "fd69017b81717b5ffc83a2be85cbbadb3b5a4c6115842e45d5d7c5501891247f",
+    "after103/after-panorama-game.png": "c50284e41d660b4d9d4c04df174acd0297dd89400b31962776acf4f16981dc47"
+  }
+}
