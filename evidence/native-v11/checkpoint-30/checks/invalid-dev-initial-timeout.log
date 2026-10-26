@@ -1,0 +1,5 @@
+page.waitForFunction: Timeout 120000ms exceeded.
+    at /workspace/game-v10-art-life/tools/v11-table-look-qa.cjs:8:559 {
+  log: [],
+  name: 'TimeoutError'
+}

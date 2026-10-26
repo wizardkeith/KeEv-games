@@ -1,0 +1,317 @@
+
+> next-stop-little-shop-w1@0.1.1 test
+> node --import tsx --test tests/*.test.ts
+
+✔ ellipsoid normals are perpendicular to both true nonuniform surface tangents (3.217699ms)
+✔ tapered elliptical cylinder normals include slope and cross-section scale (0.652544ms)
+✔ elliptically stretched torus uses inverse-transpose normals (1.151297ms)
+✔ rotation preserves tangent-normal orthogonality and unit normals (1.728548ms)
+✔ product curves and hollow mug have finite unit normals and correctly oriented nondegenerate triangles (17.442729ms)
+✔ same-color different semantic materials remain distinct in grouping (0.456601ms)
+✔ generic semantic pivots flatten to exactly the static recipe without lost parts (1.101353ms)
+✔ previous W1.1 GLB master and Web bytes remain unchanged (2.095065ms)
+BJS - [15:11:34]: Babylon.js v8.32.0 - Null engine
+✔ mug rim shares both wall boundaries and seals the full polygonal annulus while leaving cavity open (85.989324ms)
+✔ mug handle has measured upper/lower surface contacts and an unobstructed opening without entering cavity (5.397784ms)
+✔ capped handle arc keeps finite unit normals, correct cap planes and nondegenerate winding (0.871709ms)
+✔ actual runtime material adapter and independent GLB import agree on sidedness and common PBR state (172.682496ms)
+✔ published W1.1A masters/manifests remain intact and exact authoring source is frozen (1.657601ms)
+BJS - [15:11:34]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:34]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:34]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:34]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:34]: Babylon.js v8.32.0 - Null engine
+✔ authored sRGB decodes once to linear light, preserving black, white, low segment and alpha (3.041453ms)
+✔ all actual candidate GLBs contain correctly decoded factors and original semantic alpha/sidedness (5.818051ms)
+✔ curated frame envelope projects inside the real Babylon RH camera for Zen, normal and panel viewports (59.507918ms)
+✔ resting display products use the authored table surface with millimetre clearance, not a floating offset (28.930216ms)
+✔ accepted W1.1A1 master/Web bytes and frozen authoring sources remain intact (3.934805ms)
+BJS - [15:11:34]: Babylon.js v8.32.0 - Null engine
+✔ Misaki is an independently proportioned grounded character with real expression geometry and unit surface normals (42.242936ms)
+✔ actual Misaki GLBs preserve every runtime vertex, normal, index, pivot and opaque material policy (43.629213ms)
+✔ independent Babylon Misaki import retains articulated nodes, finite bounds and PBR colors without skeleton claims (94.498255ms)
+✔ Misaki local pose sampling has zero root motion, bounded brief gestures and exact neutral endpoints (0.559273ms)
+✔ new character source hashes are reproducible and every accepted W1.1B master remains byte-identical (1.424754ms)
+✔ Day 1 five locales have complete, matching, nonempty copy and exact placeholder contracts (2.948154ms)
+✔ Day 1 interpolation returns text without recursive template interpretation and has a stable locale fallback (0.155241ms)
+✔ Day 1 financial, return, and current-choice text keeps evidence and time boundaries explicit (0.36911ms)
+✔ opening story CTA executes actual run/act/Saves once; duplicate, deferred, stale and normal-clock intents never close an open shop (160.942139ms)
+✔ all five current-report pending messages preserve real first-profit history after same-day losses without rebuilding an old amount (11.301413ms)
+BJS - [15:11:35]: Babylon.js v8.32.0 - Null engine
+✔ Misaki greeting keeps actual transformed hand geometry outside torso/skirt for the complete clip (25.152084ms)
+✔ Day1 real story UI boundary writes only sidecar; skip and greeting do not transact, old import callbacks cannot restore marks (65.976037ms)
+✔ Day1 actual world boundary keeps pre-sale browsing, committed sale summary and one bounded gesture; native gestures survive Low and Minimal while decorative feedback is separate (20.257551ms)
+✔ Day1 rendered UI uses live positive/negative as-of report, current selection and safe text; no remembered profit reconstruction (4.48179ms)
+✔ Day1 story-only actions leave every core field and raw schema2 snapshot unchanged (9.32673ms)
+✔ Day1 two database connections merge monotonic read and skip IDs without core revision writes (1.765231ms)
+✔ Day1 fixed tea fixtures match unchanged economy, positive report and one aggregated sold5 feedback (6.431576ms)
+✔ Day1 qualifications cover free choice, no sale before ten minutes, outside hours and old revealed progress (3.85847ms)
+✔ Day1 a read profit date cannot claim current positive profit after later same-day costs (17.517387ms)
+✔ Day1 import is atomic, local-revision monotonic and rejects delayed pre-import story callbacks (6.618779ms)
+✔ Day1 missing or damaged v1 sidecar recovers; unsupported future version is untouched even on import (4.684172ms)
+✔ explicit golden purchase → display → sale → P&L (4.755407ms)
+✔ stock cash and inventory book value conserve; purchase is not expense (0.970847ms)
+✔ duplicate purchase command exactly once (0.385435ms)
+✔ one 60-minute settlement equals two 30-minute settlements (21.783105ms)
+✔ fractional demand, salary and rent remainder carry across arbitrary splits (4.881755ms)
+✔ repeated offline settlement / reload has no second payout (0.815666ms)
+✔ deterministic replay repeated 10 times (2.170254ms)
+✔ render/FPS/background schedules have identical economic authority (10.783492ms)
+✔ modifier group aggregates before cap and half-even is exact (0.1681ms)
+✔ invalid actions reject atomically and cannot produce negative stock (3.859542ms)
+✔ future and old schema fail without mutating current save (2.067882ms)
+✔ numeric bounds, invalid references and unsafe imports rejected (0.589268ms)
+✔ rollback and long gaps fail explicitly (0.464662ms)
+✔ Tokyo schedule: closed hours have rent but no sales/wages (0.280388ms)
+✔ test set, discovery and six tiers remain separate from Unique (0.418143ms)
+✔ inventory unit cost rounding preserves total cost on final sale (0.773463ms)
+✔ conversion cannot exceed capacity even at minimum prices (4.783689ms)
+BJS - [15:11:39]: Babylon.js v8.32.0 - Null engine
+✔ native v3 characters have distinct custom silhouettes, full local articulation and grounded 3.5–4 head proportions (893.946335ms)
+✔ native v3 GLB outputs match runtime vertices, material linear factors, local pivots and parent hierarchy (1683.178906ms)
+✔ new native Misaki greeting keeps actual articulated palm/thumb vertices outside new torso, apron and skirt (153.433833ms)
+✔ real buy commit settles sold units and accepts captured quantity independently of net inventory; bounded cues retain both results (22.531519ms)
+✔ actual duplicate/no-op/aborted commands do not fake success and display binds captured target despite simultaneous sale (19.225779ms)
+✔ hidden/stale epochs consume before playback; baseline and replaced save incarnation never replay old callbacks (4.879903ms)
+✔ queue is one active and latest pending batch; Low/Minimal keep native motion, Reduce Motion and hidden cannot catch up (1.607436ms)
+✔ native entry is a genuine gap through the back wall, including its skirting (375.195715ms)
+✔ door hinge opens the real leaf outside and clears the reserved central traveler radius (9.331707ms)
+✔ plant movement is authored on seven local leaf attachments, never on pot or roots (35.377875ms)
+✔ new environment recipes retain finite unit normals, bounded geometry and material intent (152.361771ms)
+✔ all five Minimal FX explanations retain people and separate accessibility motion (0.762486ms)
+✔ portable environment master and source manifest match the actual runtime authoring (536.73578ms)
+✔ rebuilt native products preserve every SKU, finite sculpt geometry and exact master and source hashes match runtime (101.682863ms)
+✔ remade hollow ceramics have an open mouth, physical bottom and usable cavity (76.974302ms)
+✔ authored routes have continuous radius clearance and use the door opening (2.070156ms)
+✔ two pooled visitors enter, inspect and leave without crossing furniture or door leaf (107.919226ms)
+✔ close, rapid reopen and Low drain preserve trajectories and bounded reservations (61.94579ms)
+✔ hidden, Reduce Motion, long gaps, repaint cancellation and disposal do not replay travel (2.119539ms)
+BJS - [15:11:37]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:42]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:42]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:43]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:43]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:45]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:46]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:46]: Babylon.js v8.32.0 - Null engine
+✔ native scene adapter stock/sale/display and both idle tasks keep articulated hands out of clothes and counter (4676.20043ms)
+✔ native scene walk keeps stance foot at floor and alternates finite swing lift over a distance-driven cycle (404.931243ms)
+✔ native prop pool stays bounded and cancellation/hidden releases every owner (249.137223ms)
+✔ sale bag preserves its prior world pose across hand-to-counter ownership and never sinks through counter (145.834738ms)
+✔ v9 walking staff keeps real full thighs covered by skirt while feet retain floor contact (2368.848263ms)
+✔ rebuilt visitors walk with feet grounded, covered full thighs and hands outside personal satchels (916.989369ms)
+✔ both rebuilt visitors retain cashier contact with actual hand-to-bag-handle surface reach (234.535734ms)
+✔ native staff motions have bounded rest-relative samples and exact action endpoints (15.827072ms)
+✔ native staff idle work is visible-time deterministic, staggered, and yields to actual service (14.154364ms)
+✔ native staff export contract matches motion durations and does not call storage or timers (0.574315ms)
+✔ staff work tucks elbows before lifting over the counter and reverses that arc on recovery (0.153689ms)
+✔ feedback follows actual commits; load/import/mode/duplicate never replay rewards (4.149394ms)
+✔ support is distinct from sales and remains one feedback after repeated commands (0.455909ms)
+✔ presentation clock has one bounded effect, skip/hidden/dispose prevent backlog and replay (1.009825ms)
+✔ native customer roots traverse actual retained layout clearance; Low drains a visitor instead of freezing everyone (57.840228ms)
+✔ art review DB is isolated from both player slots; default database and CAS preserved (9.457245ms)
+✔ F1 deferred actual Saves result after hidden cancellation commits once without FX/audio or resume replay (33.608342ms)
+✔ F1 world feedback rejects hidden/disposed callers independently of the UI guard (3.41486ms)
+✔ F2 slow frames retain Skip until shared UI deadline synchronously cancels scene; normal completion also clears UI (7.704913ms)
+✔ F2 skip, replacement, hidden/mode cancellation and failed scene preserve committed reveal without orphaned Skip (26.344716ms)
+✔ F2 decorative discovery completes statically in Low, Minimal and Reduce Motion independently of native service (9.761729ms)
+✔ F3 actual display click captures shelf 2 across deferred Saves while selection changes to shelf 3 (15.970112ms)
+✔ diagnostics separate historical world readiness from current availability after context loss (9.596283ms)
+✔ native service survives repeated Minimal setter, quality change and decorative reveal deadline; explicit skip still cleans it (16.601703ms)
+✔ actual main act captures accepted buy quantity when the same successful IDB command first settles sales (4.064948ms)
+✔ actual renderer consumes each sale annotation once and cancellation clears pending/active values without replay (1.045538ms)
+✔ boot wires cancellation before UI: deferred-world hide/resume consumes one commit without replay; visible completion still feeds back (89.710909ms)
+✔ hidden during deferred first world then world failure keeps usable committed state and never starts stale FX/audio (8.891072ms)
+✔ IDB atomic CAS, interruption, import validation, reload and mode isolation (19.715344ms)
+BJS - [15:11:41]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:41]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:41]: Babylon.js v8.32.0 - Null engine
+✔ slow visible render frames consume elapsed time in safe substeps, hidden/stalls remain bounded (1.197294ms)
+✔ actual route/service result finishes in similar wall time at60,5 and1.5renderFPS without extra economic writes (40.629906ms)
+✔ actual compatible rig returns, contacts and releases at slow render schedules without skipped ownership markers (753.812825ms)
+BJS - [15:11:41]: Babylon.js v8.32.0 - Null engine
+✔ actual rebuilt apron triangles stay in front of skirt/torso across the visible panel, without depth tricks or a torn silhouette (365.83183ms)
+BJS - [15:11:43]: Babylon.js v8.32.0 - Null engine
+✔ conversation is one bounded ephemeral bubble, translated in five locales; no repeated greeting or hidden replay (1.152007ms)
+✔ actual staff rig greets arrivals and departures, faces current targets and cancels cleanly across closure/reduced motion (723.648156ms)
+✔ V10 lossless surface inputs match runtime/master bytes, declared hashes and colour encoding; fixed showroom is batched (376.9664ms)
+✔ actual tote print layer touches cloth, both seams contact it and all four handle roots join their actual surfaces (96.306118ms)
+✔ C29 keeps original C25/C28 editable masters and accepted192 reflection bytes (3.132168ms)
+✔ compound petal surfaces keep upper/lower shading separate instead of cancelling the thin rim normals (10.049638ms)
+✔ new linen preserves actual support heights while broad primary folds and arclength UV remain real geometry (90.266341ms)
+✔ celadon uses continuous height-aligned actual vessel UV and embeds exact Web colour/normal/ORM in the portable master (28.378256ms)
+✔ central actual stock0/partial/full counts retain stable sample positions and geometry, within tabletop and clear of fixed floral/book/card props (2199.061322ms)
+✔ eight actual mugs form unequal5/3 groups with clear central linen and alternate which surviving group is visible at partial counts (0.185667ms)
+✔ fixed main vase and bottom book meet the actual WORLD-space risers, including the game layout translation (215.756327ms)
+BJS - [15:11:45]: Babylon.js v8.32.0 - Null engine
+✔ renderer isolation keeps actual garment vertices/normals/UVs/indices, parent transforms and noncloth lights unchanged (234.26032ms)
+✔ authored rest preserves every accepted shoulder/neck coordinate and the closed source topology (213.778867ms)
+✔ rolled cuffs are hollow through their axes, with real inner walls and clearance for the wrist (205.64052ms)
+✔ sculpted clothes receive varied metre UVs without changing any rendered triangle or authored atlas (509.398683ms)
+✔ actual portable pottery carries the same restrained standard glaze layer as Web (0.551943ms)
+✔ all portable actor fabric embeds exact Web weave/normal bytes, repeat and tangent frame (184.00808ms)
+✔ V11 real-geometry floor AO retains linear PNG bytes and shared upper-left UV2 in standard GLB (20.448435ms)
+✔ reference counter work tools rest on the existing wing, with a hollow holder and clear handoff space (18.767551ms)
+✔ new crown is one connected actual 3D volume after UV seam welding, not three repainted separate primitive balls (11.27839ms)
+✔ opaque crown material is distinguished from the unchanged thin moving blades and actor skin (0.537451ms)
+✔ rebuilt customer retains every articulation/contact pivot and existing lower-body envelope (291.956108ms)
+✔ customer satchel strap joins actual shirt and pouch surfaces, while fitted placket does not float (94.07088ms)
+✔ both customers closed garment and satchel panels clear support at triangle interiors (909.71302ms)
+BJS - [15:11:48]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:48]: Babylon.js v8.32.0 - Null engine
+✔ archived cutaway experiment uses a camera-excluded two-triangle opaque caster on the actual public sun render list, without creating lights or changing camera (38.913355ms)
+✔ disabled archived diagnostic creates no hidden geometry and records the actual off state (10.86939ms)
+✔ central stoneware is truly hollow with finite surface normals and the glaze uses height-aligned physical UV, not a painted cup image (23.45706ms)
+✔ actual central linen has a planar commodity support region plus closed thickness and primary gravity drape, with exact portable original multi-channel material bytes (38.592437ms)
+✔ central flower jug is physically hollow and supported, with both actual swept handle ends inside the body surface thickness (22.027549ms)
+✔ new central non-stock vessel remains within original whole styling/canopy cap and material budget, no split-budget evasion (297.223984ms)
+✔ central spray has120 closed physical florets and actual branch mouths pass through the jug opening, while fringe has24 separated hanging strands (13.424377ms)
+✔ central floral body and three actual books fit separate supported rear platforms with physical clearance (152.872397ms)
+✔ linen follows the actual25mm tabletop bevel with real thickness clearance instead of bridging a centimetre air gap (3.18646ms)
+✔ Blender garment UV seams retain every source triangle coordinate, normal and contact pivot; stale shape is rejected (873.010599ms)
+✔ coat fronts and skirt have metre-area density and vertical warp within five degrees for the five-centimetre checker (3.921475ms)
+✔ portable finishes preserve exact Web ORM/normal/albedo, physical repeats and restrained sheen (73.770305ms)
+✔ fixed 35-sample back composition retains exact identities, physical shelf/stack contact and authored celadon response (353.242573ms)
+✔ mixed work props are bounded fixed geometry with open baskets, stay out of the threshold and retain original scene budgets (149.34588ms)
+✔ asymmetric paper stacks preserve two physical piles and stable prefixes while focal light remains inside the actual service bay (0.5566ms)
+BJS - [15:11:51]: Babylon.js v8.32.0 - Null engine
+✔ authored glTF ORM green actually wins over Babylon default alpha without changing the base material response (9.800186ms)
+✔ hand-scale pencil is continuous at shaft, ferrule, wood and graphite; all parts retain the existing axis (7.123657ms)
+✔ every owned pencil is separate and rests on actual table or riser geometry for all three tables and counts (668.90063ms)
+✔ floor blade is a finite closed curved surface with correct two-sided outward normals and preserved outline scale (1.860382ms)
+✔ woven cover is hollow, planted at ground and bounded, while all seven wind pivots and original C20 indoor styling core is exact before the separate C22 composition; outdoor canopy is intentionally replaced in C23 (141.077568ms)
+✔ portable planter base preserves actual woven UV/normal/ORM images and remains a fixture, never a catalog grant (11.348182ms)
+✔ all28 curved leaf bases meet the actual curved stem surface instead of floating on a straight guide (5.839013ms)
+✔ denser connected plant stays inside the original canopy radius rather than widening into customer paths (5.818181ms)
+✔ curved stems enter the retained soil without moving their wind anchors (10.069417ms)
+BJS - [15:11:52]: Babylon.js v8.32.0 - Null engine
+✔ actual room reflection preserves exact analytic diffuse, lights and all nonceramic material response (18.878507ms)
+✔ reusable actual room asset is a complete standard HDR cube, with no actor or owned-stock data (0.727524ms)
+✔ real narrow X-grain floor has staggered physical boards, same walking elevation, outward faces and matching native PBR inputs (33.274712ms)
+✔ three furniture variants have distinct actual cabinet meshes, disconnected platforms and bounded compiled draw groups (177.277119ms)
+✔ all existing product counts preserve their surviving geometry prefix and separated actual stock on all reconstructed fixtures (6953.772129ms)
+✔ entrance courtyard uses real bounded meshes outside door sweep, clipped through actual aperture for each allowed orbit (36.926022ms)
+✔ wider foreground counter and conservative route blocker agree while original register surface height stays fixed (49.953116ms)
+✔ V11 painted facial features attach to actual sculpt while preserving contact rig (447.98287ms)
+✔ V11 garden is batched and plant retains seven articulated leaf attachments (31.642069ms)
+BJS - [15:11:53]: Babylon.js v8.32.0 - Null engine
+✔ C27 accepted composition is byte-locked; soft petal surfaces retain every original position/index and unit outward shading normals (21.616857ms)
+✔ local contact shadow uses actual central static/owned meshes, removes depleted products and never grows on repeated shelf replacement (65.535121ms)
+✔ actual fixed-contact atlas has separate UV2 board bands, preserved geometry and standard portable occlusion/sheens (347.106607ms)
+✔ local soft window reflection is a finite original RGBD mip cube with all42 expected PNG faces (0.481718ms)
+✔ actual PNG/Web UV2 origin aligns fixed-object AO and leaves the unoccupied platform white (57.400407ms)
+✔ soft window reflection retains real opposite-window room radiance instead of darkening it (7.268242ms)
+✔ curated eight-vase stock remains eight real separate units on actual support, with deterministic reload geometry (796.982197ms)
+✔ one real unit of each existing product rests above actual wood/cloth instead of inside a guessed riser height (1694.13295ms)
+✔ vase buy/sale count changes preserve the surviving actual mesh prefix without rearranging existing units (540.099332ms)
+✔ counter and central vignette relocate existing decoration without inventory grants or new samples; actual bases touch support (257.958949ms)
+✔ central vignette leaves every real SKU sample within tabletop without inventing units (856.0919ms)
+✔ actual central stock meshes retain separate physical footprints and measured stack/tier support (292.929832ms)
+✔ rebuilt near tree surfaces stay outside glass through the retained wind range and leave actual visible crowns (39.71151ms)
+✔ one actual window sunlight direction reaches the shop floor through the aperture from connected near foliage (57.074877ms)
+✔ every rebuilt primary bough starts inside the actual swept trunk, not a detached guessed axis (1.877787ms)
+✔ exterior portal preserves real window rays across allowed orbit angles and rejects cutaway spill (4.378635ms)
+✔ atmospheric geometry fits within the original whole fixed-scene authoring budget (360.547156ms)
+✔ distant roof planes intersect the actual default window rays and animated crowns keep local tree pivots (13.499168ms)
+BJS - [15:11:58]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:58]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:58]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:58]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:58]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:58]: Babylon.js v8.32.0 - Null engine
+BJS - [15:11:58]: Babylon.js v8.32.0 - Null engine
+✔ v3.1 candidate fits actual Babylon RH critical points within UI-safe viewports and moves closer without clipping entry, feet or shelves (120.813459ms)
+✔ v3.1 staff view has separate intent; lighting preserves exposure and limits supplemental fill to facial surfaces (1.51681ms)
+✔ v3.1 exterior replaces exposed high blocks with low gable/eave/window geometry and preserves warm indoor / cool outdoor material separation (309.811364ms)
+✔ v3.1 environment master preserves actual runtime camera/light intent and native surface roughness (293.592663ms)
+BJS - [15:12:00]: Babylon.js v8.32.0 - Null engine
+✔ real committed sale acquires one existing visitor, transfers the actual bag to left socket and exits without economic callbacks (3957.375002ms)
+✔ unavailable or expired service falls back within bounds and hidden cancellation consumes no extra result (0.952219ms)
+BJS - [15:12:04]: Babylon.js v8.32.0 - Null engine
+BJS - [15:12:08]: Babylon.js v8.32.0 - Null engine
+BJS - [15:12:08]: Babylon.js v8.32.0 - Null engine
+BJS - [15:12:08]: Babylon.js v8.32.0 - Null engine
+BJS - [15:12:08]: Babylon.js v8.32.0 - Null engine
+BJS - [15:12:08]: Babylon.js v8.32.0 - Null engine
+BJS - [15:12:08]: Babylon.js v8.32.0 - Null engine
+BJS - [15:12:09]: Babylon.js v8.32.0 - Null engine
+BJS - [15:12:09]: Babylon.js v8.32.0 - Null engine
+✔ v4 real committed sale selects reachable Visitor B and transfers the same single bag through the actual scene adapter (3837.18894ms)
+✔ no physical-contact acknowledgement never transfers a bag or replays a completed economic result (61.090649ms)
+✔ actual contact and post-transfer interruption clear ownership without root jumps, stale bag replay or another settlement (1183.703671ms)
+BJS - [15:12:00]: Babylon.js v8.32.0 - Null engine
+BJS - [15:12:01]: Babylon.js v8.32.0 - Null engine
+BJS - [15:12:01]: Babylon.js v8.32.0 - Null engine
+BJS - [15:12:02]: Babylon.js v8.32.0 - Null engine
+BJS - [15:12:03]: Babylon.js v8.32.0 - Null engine
+✔ v3.1 actual indexed shoe support centroid stays planted for the entire stance, not only floor Y (317.777186ms)
+✔ v3.1 actual rig remains planted through route starts, stops and turning in High and Low; hidden freezes contacts (986.358513ms)
+✔ v3.1 full walking cycle keeps Visitor B skin inside the actual indexed skirt while visible socks/shoes remain (1686.808491ms)
+✔ v3.1 skirt encloses actual thigh triangles during full route turns and stop/recenter steps (3590.251715ms)
+✔ reproduce v10 return-started settle bug; v3.1 return consumes same stream without service, scene reset or replay (191.817006ms)
+✔ continuously visible timer settlement retains live cue; foreign mode/import remain true baselines (37.415201ms)
+✔ five-language hours guide uses committed Tokyo time and four real readiness conditions; sandbox advance preserves both slots (58.762874ms)
+✔ returning from a different mode reconciles old Normal time as a baseline, not a new live purchase scene (34.792251ms)
+✔ one recent receipt reserves an existing reachable guest, transfers one generic bag, nods and exits through the door (55.439721ms)
+✔ no guest/duplicate/active reservation never creates a guest, queue or later historical pickup (8.183456ms)
+✔ hidden/Reduce/close/cancel preserve root positions, remove ownership and leave via authored paths without resetting other visitors (38.533778ms)
+✔ ready reservation has a strict visual deadline; Low keeps a legitimate handoff and stale callbacks cannot attach a bag (3.398915ms)
+BJS - [15:12:02]: Babylon.js v8.32.0 - Null engine
+BJS - [15:12:07]: Babylon.js v8.32.0 - Null engine
+✔ v3.1 reproduces old tidy/service jump and consumes actual cross-clip blends instead of metadata only (3.673432ms)
+✔ v3.1 interrupted tidy/note, service-to-idle and rapid command transitions keep actual hands/clothes/counter clear (4690.985347ms)
+✔ v3.1 outgoing prop fades before arm retraction; hidden/skip/reduced cancel owners and no midway task returns (1.911759ms)
+✔ v3.1 conditional service yaw blends with rest-relative body and returns to a fresh idle (806.713289ms)
+BJS - [15:12:09]: Babylon.js v8.32.0 - Null engine
+✔ v4 actual RH neutral adapter uses effective CCW for culled custom hair, garment and skin surfaces (674.508948ms)
+✔ v4 physical sample staging never invents units and sold-out displays contain no sellable samples (0.448899ms)
+✔ v4 a real entering Visitor B can reserve the reachable bay, receive once and leave without teleporting (19.999715ms)
+✔ v4 foot reach and immutable support contacts remain valid at 20/30/60Hz render boundaries (78.863995ms)
+✔ v4 quantity accepts bounded whole integers and preserves invalid raw drafts until an explicit correction (0.60408ms)
+✔ v4 item intent is immutable before await; real core costs and inventory match captured ID/quantity (1.313718ms)
+✔ v4 migrates legacy global UI draft once per item; subsequent item drafts and save modes stay isolated (0.437382ms)
+✔ v4 all five stock locales resolve complete purchase and shelf action text (0.330673ms)
+✔ v10 rebuilt textured hair UV seams preserve triangle locality and supply unit orthogonal tangent frames without adding triangles (689.534343ms)
+✔ v5 GLB carries the exact original colour/linear-normal bytes, UVs and tangents used by the Web bob (280.455544ms)
+✔ visible staff work arrives within ten seconds initially and after genuine service, with fresh transitions (8.388771ms)
+✔ vertical inventory retains independent filtered positions and explicit selection through persistence (1.082323ms)
+✔ legacy rail preference migrates without interpreting horizontal pixels as vertical position; malformed positions are bounded (0.513946ms)
+✔ five locales describe a product list and provide complete row and action headings (0.279286ms)
+✔ pricing intent captures existing JPY conversion before a deferred write; later edits survive that commit (5.122013ms)
+✔ pricing rejects fractional core units and out-of-range displayed values without touching drafts; successful matching draft clears (0.466645ms)
+✔ profit float uses actual realized report cost basis, excludes overhead and does not infer a buyer (2.861645ms)
+✔ loss is signed from actual sale cost, simultaneous restock payment never becomes a sale loss (3.398505ms)
+✔ five locale sale labels explicitly describe aggregate gross margin before overhead (2.626685ms)
+✔ v9 fixed styling keeps real entry corridor clear and uses bounded original geometry (109.185419ms)
+✔ v9 source master retains all actual fixed styling and canopy for native reuse (148.07604ms)
+✔ v9 original lossless material inputs have matching runtime/master bytes and declared hashes (1.51066ms)
+✔ set UI separates current shelf activation from actual stored settlement without granting or claiming anything (4.607725ms)
+✔ disclosure has keyboard-native buttons, a linked in-flow region and explicit text independent of colour (0.326476ms)
+✔ staff faces actual doorway and turns by bounded shortest arcs, then reaches only after work orientation (2.784699ms)
+✔ bounded staff walk greets, wanders and returns home with dynamic two-visitor separation and hidden freeze (89.618607ms)
+✔ welcome uses current staff origin and the actual greeting guest even with another nearer guest (0.559083ms)
+✔ A1 cheap demand cannot transfer into an expensive sale (4.538733ms)
+✔ A1 reverse change, no-op and reload/split intervals obey the price policy (1.318505ms)
+✔ A2 free recovery reconciles cash, preserves P&L and permits a new sale (16.421445ms)
+✔ A2 eligibility requires insufficient purchasing cash AND no sellable stock (0.114831ms)
+✔ A2 repeated episodes may recover after later actual losses, without deleting debt (3.368348ms)
+✔ A3 every numeric field rejects coercible/malformed numbers (5.057906ms)
+✔ A3 recovery grant numeric records and references reject malformed values (2.124485ms)
+✔ A4 full ledger still settles and duplicate ordinary IDs remain no-op (117.714405ms)
+✔ A7 free-choice tutorial uses actual stocked display and retained milestones (19.959406ms)
+✔ v1 normal and sandbox migrate without losing identity, cash, inventory or history (0.846061ms)
+✔ IDB malformed import preserves original good save and v1 import migrates atomically (13.740091ms)
+✔ IDB concurrent different recovery IDs cannot receive duplicate grants; reload preserved (10.92813ms)
+ℹ tests 247
+ℹ suites 0
+ℹ pass 247
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 37656.734881
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

@@ -1,0 +1,12 @@
+transport page loaded
+transport identity submitted
+transport WebGL ready
+transport import input submitted
+transport real Sandbox import ready; normal camera capture
+page.evaluate: TypeError: window.littleShopDiagnostics is not a function
+    at eval (eval at evaluate (:311:30), <anonymous>:1:12)
+    at UtilityScript.evaluate (<anonymous>:313:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at /workspace/game-v10-art-life/tools/v11-table-look-qa.cjs:8:2656 {
+  log: []
+}

@@ -29,5 +29,11 @@
       "decodedBytes": 3056771,
       "gzipBytes": 5021
     }
+  },
+  "input": {
+    "gzip": "actual-scene-input.json.gz",
+    "decodedSHA256": "5cd106c5432eb7a55c126ec2b0cac3369d1a01a07cc241340eb493d37318a192",
+    "gzipSHA256": "40cbdaf7be727ef5a4d37a67c5ed5cb6f244658f7ccc2e34bd086f7e7e8877dd",
+    "content": "Read-only actual isolated QA scene geometry/materials/camera. No save records, identity form, credentials or canvas image."
   }
 }
