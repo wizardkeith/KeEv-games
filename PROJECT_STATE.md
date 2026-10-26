@@ -1,12 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T21:37:25+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T22:06:45+08:00** (Asia/Hong_Kong).
 
-## V11 C29進行中／192缺口已另補證 — 2026-10-26T21:37:25+08:00
+## V11 C29固定201正常畫面候選／流程驗證中 — 2026-10-26T22:06:45+08:00
 
-- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)遠端檢查點`a9d8432608d282fbbd3af64e0c14f3dd8609c0c4`：[192新補證／C29進行狀態](https://github.com/wizardkeith/KeEv-games/blob/a9d8432608d282fbbd3af64e0c14f3dd8609c0c4/docs/V11_C29_BRIGHT_MASSES_CHECKPOINT_2026-10-26_zh-HK.md)。runtime仍`104845d1af897902297fd759efd699bc8a7eeb38`／192；重載後實際3D345active meshes、五語Low15案例／75面板，以及新268.920秒High A交接／18件+8400／店員回位／客人離店／結算後reload真3D已補齊，0pageerror／隔離Normal不變。觀察分別記錄兩個不同時刻的真實返回／離店，未改遊戲或將舊false改true；非B／closure／hidden-tab／實體GPU/FPS驗收。
-- **192材質與原圖仍不接受**。C29同桌花／布本地草稿另存原創JSON＋Blend、保留原母檔；原型193因TS失敗複製舊dist已明確INVALID排除，成功版本強制驗證brightMasses身份。布主褶可見，但花簇仍在正常相機實拍迭代；尚未提交可獨立覆核的C29美術候選，不冒稱新完整測試／達標，不擴散全店。
-- main僅文件指標，PR8保持Draft、公開V17不變；無merge／Site save/deploy／LTC重試／Library重試／玩家Chrome或Normal／Unity／關機，無需使用者動作阻塞。
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送`01598e4e61f50430a352a0b5745b45a6e2b2248e`，application`567c4fb51794be7d17b472fc7201795f91ba7fda`／build201；[原圖／同鏡頭BEFORE–AFTER及同店鋪高度比較／真實錄影與完整界線](https://github.com/wizardkeith/KeEv-games/blob/01598e4e61f50430a352a0b5745b45a6e2b2248e/docs/V11_C29_BRIGHT_MASSES_CHECKPOINT_2026-10-26_zh-HK.md)。既有非庫存花冠重建120朵真正3D小花、六疏密群；linen三主褶、2mm厚度／24流蘇／實際布弧UV，修回原傢俬envelope。C27構圖／192反射及原母檔保留，styling＋canopy15986tri／17群，未提高上限；無效透光撤回，193舊dist影像INVALID排除。
+- 固定201的247tests／build／validate五語174keys／replay／asset-check、146GLB零錯警告、305保護檔、39native及447 tracked資產/public重建一致、178runtime parity通過。新五語Low15案例75面板通過；148.840秒實際pointer雙角度／面板保留orbit／買1杯cash3840→3770/stock8→9／購買後reload真3D與存檔逐值相同、0pageerror／隔離Normal不變。**201完整A錄影與0/3/8/2/售罄循環仍在跑；此處不冒稱通過。**
+- 192原有缺口另有新345active meshes reload真3D、五語Low及268.920秒完整A交接／毛利／回位／離店／reload證據，來源清楚分開，非冒作201。原圖／同桌材質門檻仍未通過，201正常花群／布有可見變化但待獨立像素覆核；白花亮點與整體柔光／材質差距仍在，未向全店擴散。雲端SwiftShader／稀疏CDP不代表實體GPU/FPS／流暢度／audio/native或B／hidden-tab／closure驗收。
+- main僅文件指標，功能未合併；PR8仍Draft、公開V17不變，無merge／Site save/deploy／LTC或Library重試／玩家Chrome或Normal／Unity／關機，無需使用者動作阻塞。
 
 
 ## V11 C28 固定192反射診斷／原圖仍未通過 — 2026-10-26T20:46:03+08:00
