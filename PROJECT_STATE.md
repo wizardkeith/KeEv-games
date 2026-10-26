@@ -1,6 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T23:20:49+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T00:03:33+08:00** (Asia/Hong_Kong).
+
+## V11 C31形／值2×2拒用，原圖仍FAIL — 2026-10-27T00:03:33+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送`eb5f2ff8a3375d86a22a0cb90799dd6e7578b67e`，application`2cdc18cbab0eb8092f68e467b9fc7d04e65a1774`；[同201燈光／曝光／正常相機／192反射的唯一一輪2×2、雙斜角及四段原片](https://github.com/wizardkeith/KeEv-games/blob/eb5f2ff8a3375d86a22a0cb90799dd6e7578b67e/docs/V11_C31_FORM_VALUE_MATRIX_2026-10-26_zh-HK.md)。新54朵主要／邊緣花、兩寬主褶及物件UV暖亮冷暗值設計皆為真3D／原創素材，但正常全景仍扁散、布轉面未建立；**全部拒用、預設control保留201，不是美術完成或發佈候選**。C30 OFF、C27物件布局與原母檔保留。
+- 預設control250tests/build/五語174keys validate/replay/asset-check、146GLB零錯警告、305保護檔；四native exporters後既有GLB不變、458舊tracked資產僅三個sources metadata檔更新。四180檔variant均從最終source重建逐byte一致，普通無旗標build亦與control逐byte相同，修正未選模型下載量增加。四browser案例相機／經濟／雙斜角pose相同、0pageerror／隔離Normal不變；四原片128.8–140.08秒是稀疏雲端相機證據，非新交易／Low／五語互動／實體GPU/FPS認證。
+- **預算也不容採用values兩組：18群超過原來<18群上限；沒有放寬。** control15986tri／17群、shape15428tri／17群。下一步直接雕主要簇面／負空隙與布可見轉面，不再加單朵或微紋；若未來視覺／預算過關才做採用前affected實際流程。原圖仍FAIL，無使用者動作／權限阻塞。main僅文件指標、功能未合併，PR8仍Draft、公開V17不變；無merge／Site save/deploy／Library或LTC重試／玩家Chrome或Normal／Unity／關機。
+
 
 ## V11 C30受控漫反射診斷／原圖仍FAIL — 2026-10-26T23:20:49+08:00
 
