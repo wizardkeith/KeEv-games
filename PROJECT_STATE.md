@@ -1,9 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-26T10:00:27+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-26T11:11:37+08:00** (Asia/Hong_Kong).
 
 
 
+
+## V11 plant reconstruction checkpoint; owner rejects overall fidelity — 2026-10-26T11:11:37+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8), pushed/readback **5448734cfdad3595b2a8eee3f0c016e78a347c83**, runtime **7bba600761f6998d76785ccd6bf3be252dde1bf2** / default123 (mainmodeldadd2f6). **Unmerged; main docs only; publicV17 unchanged; originaltarget still NOT ACCEPTED.** New hollow/rolled woven cover, originalPBRmaps, curved closed floorblades/28leaf bases attached to realcurvedstems/outward clusters, roots insoil; sevenwindpivots/count/size/height stable, canopyradius0.3516≤old0.3583. Exact oldcanopy/dressing/people/furniture/camera/stock/support preserved.
+- **213tests/build/validate/replay/assets,140GLB0errors/warnings,305protected/history; original139GLBs unchanged plus1fixedplanterbase**, nativeexportbyteparity. [Actual118→123normal/counter/reload, source hashes and limits](https://github.com/wizardkeith/KeEv-games/blob/5448734cfdad3595b2a8eee3f0c016e78a347c83/docs/V11_TARGET_SLICE_PROGRESS_zh-HK.md). Exactcamera/economy/0pageerrors/Normalisolatedunchanged. Actual122/dadd High normalflow271.296s/269.800suncut completes realbuy/place/greet/settle/contact/bag/readable18items+8400batchgrossmargin/Aexit/staffhome/reload; **not claimed full123rerun**, last123onlyrolledmouth/root-fit delta. No physicalGPU/FPS/audio/native/74locale certification.
+- Owner again rejected overall art at2026-10-26 02:48:51UTC. Independentfullframe critique likewise: modular similar tables/continuousrisers/segregatedgoods/empty surfaces, long darkstrips/uniform blocks, whiteentrance/flatoutside/uniform brownlight. **Next coherent counter→centraldisplay→window/exterior reconstruction**, not moreleafmicro: remake floor scale/orientation/stagger, furniture/display silhouettes and mixed realstock+clearnoninventoryprops, actual3Dentrydepth; retain function/navigation/rig/cameraoperation/identity/scale/support/celadon/hair. Compare actualnormalplay at comparable shopheights against originalleftscene. No package/merge/deploy/Libraryretry/userChrome/Normalplayer/Unity/shutdown or story/shop/set/economy expansion.
 
 ## V11 actual product support / stable handmade grouping — 2026-10-26T10:00:27+08:00
 
