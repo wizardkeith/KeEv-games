@@ -1,0 +1,24 @@
+BJS - [01:39:30]: Babylon.js v8.32.0 - Null engine
+✔ C42 stays off, lowers window peak and uses broad indirect light without exposure/material edits; visual baseline requires actual renders (0.526915ms)
+✔ same-render caster comparison detects new geometry even when an owned-stock mesh reuses its name (6.605724ms)
+✔ C42 rejected raw native cookie and frozen source receipt are exact and leave the rejected C41 cookie intact (50.632965ms)
+BJS - [01:39:30]: Babylon.js v8.32.0 - Null engine
+✔ C43 unsupported renderer falls back without geometry buffer, camera edits or repeated quality allocations (4.85157ms)
+✔ C43 controls retain every C42 optical parameter, remain off by default and pin exact shader/source provenance (0.596039ms)
+BJS - [01:39:31]: Babylon.js v8.32.0 - Null engine
+BJS - [01:39:32]: Babylon.js v8.32.0 - Null engine
+✔ C27 accepted composition is byte-locked; soft petal surfaces retain every original position/index and unit outward shading normals (16.277488ms)
+✔ local contact shadow uses actual central static/owned meshes, removes depleted products and never grows on repeated shelf replacement (61.563744ms)
+✔ actual fixed-contact atlas has separate UV2 board bands, preserved geometry and standard portable occlusion/sheens (398.915947ms)
+✔ local soft window reflection is a finite original RGBD mip cube with all42 expected PNG faces (0.621125ms)
+✔ actual PNG/Web UV2 origin aligns fixed-object AO and leaves the unoccupied platform white (37.368938ms)
+✔ soft window reflection retains real opposite-window room radiance instead of darkening it (28.901099ms)
+✔ static central contact target retains refresh0 and live observer after real ShadowGenerator RTT recreation (10.2668ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2204.097114
