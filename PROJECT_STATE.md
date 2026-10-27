@@ -1,6 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-28T00:29:50+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-28T00:32:12+08:00** (Asia/Hong_Kong).
+
+## 診斷JSON跨平台換行整理 — 2026-10-28T00:32:12+08:00
+
+- 本機已讀回同步／清理checkpoint `6d630c564be0413bd017b2961105ee20745d2df6`，working tree clean，原R6 .blend/.glb SHA不變。最後default Git whitespace檢查指出四份新Windows診斷JSON的CRLF；本次只轉LF及補末行newline，JSON parse前後值完全相同，沒有重跑／冒認Web build、改美術或改安全政策。前述Web build/test／GUI hold／license／writer限制全部保留，main／PR／Site／玩家存檔不變。
+
 
 ## 本機診斷checkpoint已讀回／task-only快取清理完成 — 2026-10-28T00:29:50+08:00
 
