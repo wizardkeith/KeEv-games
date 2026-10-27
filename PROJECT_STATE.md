@@ -1,6 +1,10 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T08:13:38+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T09:04:31+08:00** (Asia/Hong_Kong).
+
+## V11 C42廣域暖光／同render陰影核對進行中 — 2026-10-27T09:04:31+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送application`78b0889312496ddc9e9c1fdb288621cd6b7ad2b9`。C41獨立視覺FAIL、保持OFF，C40普通開發預設保留；C42降低窗光峰值並恢復廣域暖間接光，曝光／已過模型材質／camera／rig／economy／saves不變，整體原圖仍未接受，未採用。277tests通過；實拍初稿2.30沖淡拒用，最終.85／120的正常與雙斜角及庫存8→2→0／畫質同render-ID draw證據正在固定。264售罄檢查暴露中央接觸RTT resize後refresh0重設1，已以真ShadowGenerator回歸重現並修正，266重跑中；不把264未完成流程當PASS。main僅文件指標、功能未合併／PR8仍Draft／公開V17不變，沒有merge或Site／Normal／玩家Chrome操作，無使用者動作阻塞。
 
 ## V11 C41窗側→收銀光照候選／待視覺覆核 — 2026-10-27T08:13:38+08:00
 
