@@ -1,0 +1,79 @@
+{
+  "source": "45d596e9d27f67c48c163033374f8981bbbeb65a",
+  "scope": "HEAD/NECK only, body/limbs frozen",
+  "priorGrayformVerdict": "independent FAIL",
+  "R2Verdict": "fixed candidate pending independent head/neck review; overall target style unaccepted",
+  "reference": "canonical original pixels only; side/back inferred",
+  "PlanB": "initial official helper and one fresh supported retry failed, exit1 download failed; stopped, no bytes/new views",
+  "canonicalSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+  "sha256": "fa7b54fb799efb2e379b7b6bed0553b025d5c1a3e9229ab5fa6ffbc43b82f1d2",
+  "bytes": 976156,
+  "triangles": 53480,
+  "triangleDelta": 5904,
+  "meshes": 5,
+  "primitives": 10,
+  "materials": 7,
+  "images": 0,
+  "skins": 0,
+  "animations": 0,
+  "bodyFrozenSource": "038740fbd7f6428cc82d5f442646c2d86a4143e3",
+  "frozenBodyStreams": 12,
+  "frozenBodyNodeTRS": true,
+  "all7GrayMaterialDefinitionsFrozen": true,
+  "studioCameraLightTSSourceFrozen": true,
+  "R4PaperFrozenFiles": 29,
+  "protectedOriginalApplicationFiles": 720,
+  "soleY": 0,
+  "leftClip": "own LEFT +X only; same clip geometry shifted with head",
+  "headOffset": 0.045,
+  "eyeApertureEvaluatedBoundaryLoops": [
+    40,
+    40
+  ],
+  "chinToFrozenClothingTop": 0.03517806529998779,
+  "neckHeadVerticalBoundsOverlap": 0.05838418006896973,
+  "prototypeTotalTriangles": 125176,
+  "sourceStudioGameAndBuildBytesMatch": true,
+  "R1R2LightingAndCameraMatch": true,
+  "lifecycle": {
+    "buy3": true,
+    "cashBefore": 5000,
+    "cashAfter": 4790,
+    "stock": 3,
+    "shelf": 2,
+    "reloadEqual": true,
+    "lowHighRetained": true,
+    "normalUnchanged": true
+  },
+  "pageErrors": [],
+  "newChecks": [
+    "Blender4.3.2",
+    "strict new GLB zero errors/warnings",
+    "body stream/TRS and all gray material identity",
+    "29 accepted asset files and720 original application files unchanged",
+    "read-only two genuine eye holes and neck/source bounds",
+    "strict authoring TypeScript",
+    "final build and dist GLB bytes equal source",
+    "seven real engine captures and fresh Sandbox UI lifecycle"
+  ],
+  "priorTestsNotRepeated": [
+    "302 app tests",
+    "content validation",
+    "replay",
+    "legacy asset checks"
+  ],
+  "Library": {
+    "library_file_id": "libfile_0224bad58e5881918df7c73f50e81481",
+    "file_id": "file_000000003a988211845fefdf97f25415",
+    "filename": "grayform-game-normal.png",
+    "version": 1,
+    "bytes": 641625
+  },
+  "limits": [
+    "Grayform not facial identity/style acceptance",
+    "Back mass can remain helmet-like, side tips regular/hard; head/neck review first",
+    "No final face expression retopology, watertight skin, collision or rig certification",
+    "Unchanged clothes/hands remain rejected earlier shapes, intentionally future stage",
+    "Cloud SwiftShader static evidence, not physical GPU/FPS/audio/native or full old action certification"
+  ]
+}

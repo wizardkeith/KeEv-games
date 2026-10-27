@@ -1,0 +1,19 @@
+Info: Saved "misaki-grayform.blend"
+ERROR Draco mesh compression is not available because library could not be found at /usr/bin/4.3/python/lib/python3.13/site-packages/libextern_draco.so
+13:43:04 | INFO: Starting glTF 2.0 export
+13:43:04 | INFO: Extracting primitive: 01 / cheek to narrowing jaw and real eye apertures editable
+13:43:04 | INFO: Primitives created: 1
+13:43:04 | INFO: Extracting primitive: 03 / convex eye behind almond aperture -1 editable quads.001
+13:43:04 | INFO: Primitives created: 3
+13:43:04 | INFO: Extracting primitive: 10 / loose bob connected lobes with ear notches editable qu
+13:43:04 | INFO: Primitives created: 1
+13:43:04 | INFO: Extracting primitive: 17 / own LEFT clip leaf 0 editable quads.001
+13:43:04 | INFO: Primitives created: 1
+13:43:04 | INFO: Extracting primitive: 20 / inner shirt torso editable quads.001
+13:43:04 | INFO: Primitives created: 4
+13:43:04 | INFO: Finished glTF 2.0 export in 0.0594630241394043 s
+
+{"objects": 45, "triangles": 53480, "headNeckOffset": 0.045}
+Blender 4.3.2
+
+Blender quit

@@ -1,0 +1,5 @@
+{'evaluatedFaceEyeBoundaryLoops': [40, 40], 'neckHeadVerticalOverlap': 0.05838418006896973, 'chinToFrozenClothesTop': 0.03517806529998779, 'limits': 'Vertical/bounds relationships do not prove watertight skin, collisions or art acceptance; side/back inferred.'}
+Blender 4.3.2
+Read blend: "/workspace/KeEv-games/assets/authoring/misaki-grayform-v1/misaki-grayform.blend"
+
+Blender quit

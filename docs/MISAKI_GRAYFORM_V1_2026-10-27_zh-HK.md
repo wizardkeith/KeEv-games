@@ -1,5 +1,7 @@
 # Misaki頭髮／頭身灰模 v1 — 僅唯一原圖的首候選
 
+後續獨立覆核：**首灰模FAIL**。下一輪僅頭／頸，衣身／手腳凍結，見[頭頸R2固定候選](MISAKI_HEAD_NECK_R2_2026-10-27_zh-HK.md)。PlanB唯一fresh consumer-local重試亦失敗，沒有再試，以下首候選原證據保留。
+
 Source `038740fbd7f6428cc82d5f442646c2d86a4143e3`，獨立分支`codex/asset-foundation-v1`。已完成可編輯實際3D中性A姿勢、頭／臉／髮量及著衣全身；**灰模尚未獨立接受，整體原圖畫風仍未接受。** PaperR2成組輪廓／分層及R4主形已獨立PASS，兩組全部29個資產／作者檔凍結。本輪沒有全店組裝、最終材質、完整動畫或舊rig替換。
 
 ![原圖自然站姿／實際GLB中性A姿勢及三分四面；等比高度480px](reviews/evidence/misaki-grayform-v1/original-grayform-proportion480.png)

@@ -1,6 +1,16 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T21:17:53+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T21:49:51+08:00** (Asia/Hong_Kong).
+
+## Misaki R2只修頭頸固定候選／衣身凍結 — 2026-10-27T21:49:51+08:00
+
+- 未合併`codex/asset-foundation-v1` source `45d596e9d27f67c48c163033374f8981bbbeb65a`；[原圖／R1-R2同尺度全身／正面三分四側面／實際正常480px雙斜角／限制](docs/MISAKI_HEAD_NECK_R2_2026-10-27_zh-HK.md)。首灰模獨立FAIL後只重做頭／臉／髮量／耳頸，R2未判PASS／整體原圖仍未接受，不先修衣服／材質／rig／動畫。
+- 真眼孔取代窄圓眼／同心環，上下不等寬lid面與曲眼體；臉頰到下顎連續面、下巴底曲率放鬆、同面鼻額轉折。髮減3背平片，以不等起伏bob主面＋7寬曲量體、偏側分線／短頰彎／耳缺口／寬厚同時收細的內轉尖端留出耳頸空間；自身左+X夾保留。頭實際抬45mm、衣領不動，非湊3.24頭高；同raw相機／全身尺度顯示真改動，chin至凍結衣物頂35.18mm／頸頭縱bounds重疊58.38mm，非watertight／全碰撞cert。
+- 整組clothed-body的12組position-normal-index streams及nodeTRS逐byte同首灰模source038740fbd7f6428cc82d5f442646c2d86a4143e3，衣身／袖口／圍裙／手腳未改。7灰材質及studio camera-light TS原檔同，29R4/PaperR2資產作者檔及720原application保護檔bytes同。新53,480tri／5meshes／10primitives／976,156bytes／零images-skins-animations；作者總125,176tri不bulk。
+- 本輪Blender4.3.2／新GLB0error-warning／bodybytes-graymaterial-floor0-ownleftclip及凍結檢查／來源read-only兩圈各40邊真眼孔／strict作者TS／finalbuild通過；source、dist與studio/game實載SHA同。fresh Sandbox真UI買3杯5000→4790／stock3／原display3槽2上架／reload逐值同／Low→High／Normal隔離不變／0pageerror；前302tests等未重跑，非完整舊動作／實體GPU-FPS-native或美術認證。
+- 新正常image同Library `libfile_0224bad58e5881918df7c73f50e81481` version1，首版0保留。R2眼神／上瞼仍可能泛人偶、後腦大面仍偏髮殼／側尖規整硬；下一步只獨立判頭頸與髮外輪廓，若FAIL繼續同組，不先做衣服或細節。
+- PlanB初次及唯一fresh consumer-local retry均prepare signedtransfer／workspace_path null，官方helper exit1原錯誤`library file transfer failed: download failed`，兩地無ZIP、無新圖／本機SHA。原因未明、非審批拒絕；已停止無更多retry／genericdownload／猜URL或替代credentials，側背明確推定，完整無secret錯誤紀錄保存。
+- 本entry隨來源／證據只推隔離分支；main／PR8未寫、PR建立維持先前拒絕停止無retry／換route；無merge／Site公開／payments／玩家Normal改動。PlanB比對仍未完成，其餘無操作阻塞。
 
 ## Misaki僅原圖頭身灰模首候選／PlanB下載待解 — 2026-10-27T21:17:53+08:00
 
