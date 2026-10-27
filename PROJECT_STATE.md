@@ -1,6 +1,10 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T12:49:57+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T13:39:37+08:00** (Asia/Hong_Kong).
+
+## V11 C48來源能量分離診斷進行中 — 2026-10-27T13:39:37+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)應用來源已推送`8091d04ba67256d9f19e69363efeacfa219b8452`。固定C47方向／資產／.20AO，做key-only、base+IBL、composite實拍；已知葉片第一caster接收點及實際shadow texel支持葉影存在，早期marker漏算16px非對稱viewport偏移的標記／像素推論作廢並修正。只測一組key2倍、室內半球.70／IBL.80能量重配，實用燈／面部／室外光保留，未採用／原圖仍未接受。295tests／146GLB／305保護檔通過，同來源最終圖片及控制收尾中；普通仍C45，本輪無merge／公開V17／玩家Normal／Chrome或Unity改動，main只存進度指標，無使用者動作阻塞。
 
 ## V11 C47方向假設固定證據／自檢視覺未過 — 2026-10-27T12:49:57+08:00
 
