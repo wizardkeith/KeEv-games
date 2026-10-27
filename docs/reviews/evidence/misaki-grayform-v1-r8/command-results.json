@@ -1,0 +1,96 @@
+{
+  "recordedUtc": "2026-10-27T23:22:57.546Z",
+  "baselineCommit": "6e1fd6dcbad834765331b893d5f709953e29244d",
+  "sourceCommit": "231722cf1ed06178877c88f4da368c94a54722ae",
+  "sourceRemoteReadback": "231722cf1ed06178877c88f4da368c94a54722ae",
+  "commands": [
+    {
+      "command": "Blender background misaki-hair-r8.py --baseline pinned R7 blend --manifest pinned R7 manifest",
+      "exitCode": 0,
+      "log": "logs/blender-edit.log"
+    },
+    {
+      "command": "Blender background inspect-misaki-r8.py --baseline pinned R7 blend",
+      "exitCode": 0,
+      "log": "logs/reopen.log"
+    },
+    {
+      "command": "QA_OUTPUT=R8 node tools/asset-foundation/validate-misaki-gray.mjs",
+      "exitCode": 0,
+      "log": "logs/asset-validation.log"
+    },
+    {
+      "command": "node node_modules/typescript/bin/tsc --noEmit",
+      "exitCode": 0,
+      "log": "logs/typecheck.log"
+    },
+    {
+      "command": "node node_modules/vite/bin/vite.js build",
+      "exitCode": 0,
+      "log": "logs/build.log"
+    },
+    {
+      "command": "node --import tsx --test tests/*.test.ts",
+      "exitCode": 0,
+      "log": "logs/test.log"
+    },
+    {
+      "command": "node --import tsx tools/validate.ts",
+      "exitCode": 0,
+      "log": "logs/validate.log"
+    },
+    {
+      "command": "node --import tsx tools/replay.ts",
+      "exitCode": 0,
+      "log": "logs/replay.log"
+    },
+    {
+      "command": "node tools/validate-assets.mjs",
+      "exitCode": 0,
+      "log": "logs/asset-check.log"
+    },
+    {
+      "command": "node tsc --noEmit --strict --target ES2022 --module ESNext --moduleResolution Bundler --resolveJsonModule --esModuleInterop --lib ES2022,DOM --types node --skipLibCheck src/env.d.ts tools/asset-foundation/studio-misaki-gray.ts tools/asset-foundation/gameplay-misaki-gray.ts",
+      "exitCode": 0,
+      "log": "logs/authoring-types.log"
+    },
+    {
+      "command": "CODEX_NODE_MODULES=<existing bundled modules> R7_GLB=<pinned R7> node tools/asset-foundation/capture-misaki-r8.cjs",
+      "exitCode": 0,
+      "log": "logs/runtime-full.log"
+    },
+    {
+      "command": "node tools/asset-foundation/check-misaki-r8-scope.cjs",
+      "exitCode": 0,
+      "log": "logs/scope.log"
+    }
+  ],
+  "tests": {
+    "count": 304,
+    "pass": 304,
+    "fail": 0,
+    "skip": 0
+  },
+  "render": {
+    "captures": 14,
+    "originalTargetInspected": true,
+    "R7AndR8SameLocalRenderer": true,
+    "cameraLightMaterialSourcesFrozen": true
+  },
+  "visualAcceptance": false,
+  "selfReview": "Still fails target identity/style; geometric root joins and panel-like layers remain; clip support worse than R7",
+  "oneRenderFeedbackCorrection": true,
+  "headEnvelopeFitAdjustedVertices": 0,
+  "noGuiInput": true,
+  "noNewSoftwareOrPlugin": true,
+  "noPlayerProfileAccess": true,
+  "cleanup": {
+    "performed": false,
+    "reason": "Await verified evidence synchronization before recoverable scratch cleanup"
+  },
+  "limits": [
+    "Side/back inferred",
+    "No physical-device/FPS/audio/rig certification",
+    "Technical passes do not equal art acceptance"
+  ]
+}

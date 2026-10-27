@@ -1,0 +1,11 @@
+{
+  triangles: 50632,
+  meshes: 5,
+  primitives: 10,
+  height: 1.4856765232980251,
+  sole: 0,
+  errors: 0,
+  warnings: 0,
+  frozen: 29,
+  frozenBodyStreams: 12
+}

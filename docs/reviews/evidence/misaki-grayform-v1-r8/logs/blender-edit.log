@@ -1,0 +1,21 @@
+00:01.437  blend            | Read blend: "<TASK_ROOT>\hair-r8\baseline\misaki-grayform.blend"
+Info: Saved as "misaki-grayform.blend"
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+07:17:54 | INFO: Starting glTF 2.0 export
+07:17:54 | INFO: Extracting primitive: 20 / inner shirt torso editable quads.001
+07:17:54 | INFO: Primitives created: 4
+07:17:54 | INFO: Extracting primitive: 01 / cheek to narrowing jaw and real eye apertures editable qua.001
+07:17:54 | INFO: Primitives created: 1
+07:17:54 | INFO: Extracting primitive: 03 / convex eye behind almond aperture -1 editable quads.001
+07:17:54 | INFO: Primitives created: 3
+07:17:54 | INFO: Extracting primitive: 16 / local curved crown root join R8 medium-clump control nets.001
+07:17:54 | INFO: Primitives created: 1
+07:17:54 | INFO: Extracting primitive: 17 / own LEFT clip leaf 0 editable quads.001
+07:17:54 | INFO: Primitives created: 1
+07:17:54 | INFO: Finished glTF 2.0 export in 0.07848167419433594 s
+
+{"baselineCommit": "6e1fd6dcbad834765331b893d5f709953e29244d", "baselineBlendSha256": "71a6de35f99476a3d155a6912eb5a3eac05a5ddcecf00521928729765e7e8702", "changedHairGroups": ["16 / local curved crown root join", "13 / rear central flow", "14 / fuller rear own-right flow", "15 / shorter rear own-left flow", "10 / primary swept fringe", "11 / underlapping temple turn", "12 / shorter swept own-left ear side"], "mediumClumps": 14, "triangles": 50632, "blendSha256": "5cd7463fd7a83f13a13612569ab671e17fc8723b973133eb6ec9a84c47b080e4", "glbSha256": "0da0ef622a775aaa8d75b951cd8d8705bfc1bf73fd0ea94965216e722b7fc2f8", "actualHeadEnvelopeFit": {"outerControlVerticesAdjusted": 0, "maxDisplacement": 0, "requestedCageClearance": 0.009, "limits": "Ray-fitted control envelope, not a full collision guarantee"}, "limits": ["Side/back inferred", "Source/evaluated preservation is not art acceptance", "No GUI operation or final rig/topology claim"]}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

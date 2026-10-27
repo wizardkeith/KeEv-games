@@ -1,0 +1,14 @@
+00:01.391  blend            | Read blend: "<TASK_ROOT>\hair-r8\baseline\misaki-grayform.blend"
+00:01.844  blend            | Read blend: "<REPO>\assets\authoring\misaki-grayform-v1\misaki-grayform.blend"
+Extensions: writing cache failed ([WinError 5] 摮?鋡急??? 'C:\\Users\\wizar\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\extensions').
+07:18:45 | INFO: Data are loaded, start creating Blender stuff
+07:18:45 | INFO: Blender create Mesh node 20 / inner shirt torso editable quads.001
+07:18:45 | INFO: Blender create Mesh node 01 / cheek to narrowing jaw and real eye apertures editable qua.001
+07:18:45 | INFO: Blender create Mesh node 03 / convex eye behind almond aperture -1 editable quads.001
+07:18:45 | INFO: Blender create Mesh node 16 / local curved crown root join R8 medium-clump control nets.001
+07:18:45 | INFO: Blender create Mesh node 17 / own LEFT clip leaf 0 editable quads.001
+07:18:45 | INFO: glTF import finished in 0.05s
+{"nativeMeshes": 44, "triangles": 50632, "mediumClumps": 14, "R8LashOcclusion": {"front": {"06 / upper lash placement -1": {"sampledEvaluatedVertices": 78, "hairBlocked": 0}, "06 / upper lash placement 1": {"sampledEvaluatedVertices": 78, "hairBlocked": 0}}, "threequarter": {"06 / upper lash placement -1": {"sampledEvaluatedVertices": 78, "hairBlocked": 0}, "06 / upper lash placement 1": {"sampledEvaluatedVertices": 78, "hairBlocked": 0}}}, "R7LashOcclusion": {"front": {"06 / upper lash placement -1": {"sampledEvaluatedVertices": 78, "hairBlocked": 30}, "06 / upper lash placement 1": {"sampledEvaluatedVertices": 78, "hairBlocked": 0}}, "threequarter": {"06 / upper lash placement -1": {"sampledEvaluatedVertices": 78, "hairBlocked": 0}, "06 / upper lash placement 1": {"sampledEvaluatedVertices": 78, "hairBlocked": 0}}}, "clipDistance": {"samples": 156, "min": 4.73757681902498e-05, "mean": 0.00672816857537001, "max": 0.014893321320414543, "limit": "Unsigned sampled distance, not attachment/collision certification"}}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
