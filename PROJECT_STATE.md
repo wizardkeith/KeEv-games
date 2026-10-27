@@ -1,10 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T12:34:55+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T12:49:57+08:00** (Asia/Hong_Kong).
 
-## V11 C47固定距離窗光方向控制進行中 — 2026-10-27T12:34:55+08:00
+## V11 C47方向假設固定證據／自檢視覺未過 — 2026-10-27T12:49:57+08:00
 
-- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)來源已推送`56a213c65f2725be0e10dbd1bbee16c0c083224d`。C46獨立方向門檻FAIL；C47只沿同91.901m球面調整方向／高度，其他光量、底光、軟度、曝光、AO、模型材質不變，C45仍普通開發預設。中央桌／通道／收銀地板幾何射線現在穿窗，正常圖提升仍有限，沒有宣稱視覺PASS；288tests、146GLB、305保護檔、511檔重建／317原素材與既有環境資料保留通過。新來源庫存／Low-RM與C46控制畫面收尾中；無merge／本輪無公開V17改動／玩家Normal或Chrome、Unity操作，無使用者動作阻塞，main僅文件進度指標。
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送`3713d97dafc6ff33f5fa7fca2fa562fcf107c877`／application`56a213c65f2725be0e10dbd1bbee16c0c083224d`；[原圖／同來源C46／C47正常480px、雙斜角、普通頁面、幾何及原片](https://github.com/wizardkeith/KeEv-games/blob/3713d97dafc6ff33f5fa7fca2fa562fcf107c877/docs/V11_C47_WINDOW_DIRECTION_2026-10-27_zh-HK.md)。C46獨立方向門檻FAIL；C47只旋轉同91.901m球面的source位置，target／光量／底光／軟度／曝光／AO／模型材質保留。三處中央桌／通道／收銀地板射線均穿窗，475點中窗內可達166→437、近葉片靜態命中0→32，但正常縮圖葉影與全店層次仍不足，**自檢未過，未採用／整體原圖仍未接受**。C45仍普通開發預設，本輪未改公開V17；交固定證據供獨立覆核，不盲調方向或加入假光斑。
+- 288tests／tsc-build-validate-replay-assetcheck、146GLB零錯警告、305保護檔、511檔重建前後byte同／317原素材及既有環境資料保留通過。C47實拍293與推送source296全部195runtime同；C46control294／ordinary295因chunkhash改動已重拍並核對值，沒有冒稱舊payload同。七stock／會計、四Low-High、三Low/ReduceMotion／售罄reload／素材SHA通過，fresh隔離Normal不變／0pageerror。303.560秒片僅183來源幀，中位1.87秒／最大7.48秒，非連續動作／GPU完成／實體GPU-FPS-audio-native／新完整B-handoff-hidden-tab驗收。main僅文件指標，功能未合併／PR8仍Draft，無Site／玩家Normal／Chrome／Unity／Library或LTC重試／關機。source/evidence已推送，無未推送tracked改動；既有兩master備份及node_modules連結保留未track。無使用者動作阻塞；下一步覆核此方向假設，再診斷正常畫面可見對比，原圖重建目標持續。
 
 ## V11 C46方向窗光固定控制／待獨立看圖 — 2026-10-27T12:16:31+08:00
 
