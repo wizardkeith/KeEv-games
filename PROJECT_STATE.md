@@ -1,10 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T10:57:24+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T11:13:29+08:00** (Asia/Hong_Kong).
 
-## V11 C45開發預設採用C44／驗證中 — 2026-10-27T10:57:24+08:00
+## V11 C45開發預設採用固定候選／待覆核 — 2026-10-27T11:13:29+08:00
 
-- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)推送application`1aaf9ce67c465f0fd1a3a10d8c5465f161608f84`。父任務轉達C44局部接觸獨立PASS，鎖定.20、不再調窄門檻；C45只把無flag開發build指向同一C44光照／AO，更新採用metadata，原配方／模型材質／camera／192反射／RTT修正保留。282tests與no-flag／explicit-contact195檔byte相同已通過，實際普通正常圖已讀回C44數值；Low/High、Reduce Motion及stock/reload驗證中。首輪QA漏設C44預期ID仍等C43，120秒逾時未計PASS，已用正確ID重跑，沒有改光或放寬值。**僅V11開發採用，整體原圖未接受，非公開release。** main僅文件指標、未合併／PR8仍Draft，本輪未改公開V17；無玩家Normal／Chrome／Unity／Site／Library或LTC重試／關機，無使用者動作阻塞。
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)推送`81c1b9c80354e2a1e192ba2883af92b88df260ed`／application`1aaf9ce67c465f0fd1a3a10d8c5465f161608f84`；[原圖／已審C44／普通C45正常480px、雙斜角、Low/RM、來源及原片](https://github.com/wizardkeith/KeEv-games/blob/81c1b9c80354e2a1e192ba2883af92b88df260ed/docs/V11_C45_CONTACT_DEVELOPMENT_ADOPTION_2026-10-27_zh-HK.md)。**C44局部接觸獨立PASS，.20鎖定；C45只採為V11開發candidate普通預設，整體原圖仍未接受，非公開release。** no-flag277與explicit-contact278全部195runtime檔byte同；實際普通頁面光學值／camera與經濟欄位對上C44，317模型／貼圖／反射檔及RTT修正source bytes保留，沒有調參／重做已過資產。
+- 282tests/tsc/build/validate/replay/assets、146GLB零錯警告／305保護檔、509資產與兩組runtime重建同。七stock階段／四Low-High／會計／售罄reload通過；Low、Low+ReduceMotion、High+ReduceMotion真UI買入上架、五素材SHA／livePBR、HighRM AO保留／staff固定／props0通過，fresh隔離Normal不變／0pageerror。首輪QA漏設C44 ID逾時未計PASS，正確ID重跑無runtime改動／斷言放寬。317.400秒片僅188來源幀、中位1.81秒／最大9.45秒，普通pointer61.400秒31幀，非連續動作／GPU完成畫格／supported-WebGL資源釋放／實體GPU-FPS-audio-native認證，無新完整B／closure-hidden-tab／五語窄屏驗收。下一全景優先建議為窗側→中央→暖收銀的受光主次及過重灰屋面／室外值層次，**尚未實作**，不再調已過AO。main僅文件指標，功能未合併／PR8仍Draft，本輪未改公開V17；無merge／Site／玩家Normal或Chrome／Unity／Library或LTC重試／關機，無使用者動作阻塞。採用checkpoint交獨立覆核，原圖重建目標繼續。
 
 ## V11 C44局部接觸半徑固定候選／待視覺覆核 — 2026-10-27T10:37:56+08:00
 
