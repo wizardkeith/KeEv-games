@@ -1,0 +1,89 @@
+{
+  "lighting": {
+    "id": "v11.c46.distant-window-daylight.v6",
+    "mode": "daylight",
+    "defaultAdopted": false,
+    "position": [
+      -80,
+      52,
+      -15
+    ],
+    "target": [
+      -4.47,
+      1.84,
+      0
+    ],
+    "aperture": {
+      "x": -4.47,
+      "minY": 0.925,
+      "maxY": 2.755,
+      "minZ": -2.055,
+      "maxZ": 2.055,
+      "softEdge": 0.35
+    },
+    "angle": 0.07,
+    "intensity": 110000,
+    "color": "#FFF0D3",
+    "residualKind": "hemisphere",
+    "residualDirection": [
+      0,
+      1,
+      0
+    ],
+    "residualColor": "#FFF0D9",
+    "residualGround": "#75624C",
+    "residualIntensity": 0.85,
+    "exteriorSunIntensity": 2.8,
+    "exteriorFillIntensity": 1.25,
+    "shadowSize": 1024,
+    "shadowSoftness": 0.16,
+    "shadowDarkness": 0.12,
+    "textureSize": 128,
+    "maxLights": 6,
+    "limits": "C46 distant narrow-cone window key approximates parallel rays while retaining world-aperture gating in an open-roof cutaway. Same C45 broad fill, .20 AO, exposure, accepted assets and192reflection. Real geometry shadows; not enclosed GI, art acceptance or default adoption.",
+    "lightKind": "distant-window",
+    "range": 150,
+    "projectionFar": 160,
+    "shadowNear": 70,
+    "shadowFar": 150
+  },
+  "occlusion": {
+    "id": "v11.c44.localized-contact.v1",
+    "defaultAdopted": true,
+    "engine": "Babylon8.32.0 SSAO2",
+    "radius": 0.2,
+    "strength": 1,
+    "base": 0.12,
+    "samples": 16,
+    "epsilon": 0.025,
+    "geometryRatio": 0.5,
+    "blurRatio": 0.5,
+    "bilateralSamples": 8,
+    "bilateralSoften": 0.35,
+    "bilateralTolerance": 0.1,
+    "maxZ": 50,
+    "minZAspect": 0.1,
+    "low": "No added geometry buffer or SSAO passes; existing Low lighting retained",
+    "limits": "Screen-space depth/normal approximation, not complete indirect-light occlusion or GI. Final color multiplication also affects direct/specular response; hidden geometry and screen-edge limitations require actual normal/oblique review. No baked stock shadows or screen-fixed image."
+  },
+  "selection": "Explicit VITE_V11_SCENE_WINDOW=daylight only; ordinary no-flag remains C45 contact. VITE_V11_DAYLIGHT_SHADOW=off is excluded diagnostic, never selected candidate.",
+  "method": "Distant narrow-cone physical window key reduces near-point inverse-square variation and gates the open-roof cutaway through the actual world-space window aperture. Original procedural scalar aperture, not a photograph or screen image. Same broad indirect proxy/local AO and actual existing geometry shadows, no added occluder. Not enclosed GI.",
+  "sources": {
+    "src/art/scene-daylight-intent-v11.ts": "b2cf37514e70224469cf9a9e679737c75511855d9145da5ba6bf0dac6ffb014a",
+    "src/art/scene-window-light-v11.ts": "490a6e5961c5dc0925fb498f5fa0cf643aefed55d5b497c0bd4fb9034d6ee66e",
+    "src/art/scene-contact-adoption-v11.ts": "fed33f324a294a075558cc4eb8b6935287d36c1b35231c5e742889f255e9ce0b",
+    "src/art/scene-occlusion-v11.ts": "942ecdb6fd23e3f45d12bad1e6de6242b44c84fa90aac87ae061ecb5466c1ae5",
+    "src/art/shadow-pass-audit-v11.ts": "09d4ba2a4c4830169fca54a7c5a24925774997e37b994f99bdd14c873b39f377",
+    "src/world.ts": "54b12bc6828104c445f629db9972b4d6155b85b978900c90055e421903d7f457",
+    "vite.config.ts": "c7a8caf7d36e50ba4504c60335b83c0141741cdf1b50e1ef5dee734e125b531c",
+    "tools/export-v11-scene-daylight.ts": "36930c82909029fbfae4f069614bf358668939c5dc82baed86e87c61581bae36",
+    "node_modules/@babylonjs/core/Lights/directionalLight.js": "1e5215156c02c332d43dfcee0e849ba64f8f573b2244dbbcf59e129bdfe0a274",
+    "node_modules/@babylonjs/core/Lights/Shadows/shadowGenerator.js": "831e36564e84eb1c5c4b6bd1afc8b26a866b9c228b26c2210b88da4aca18c4a0"
+  },
+  "locks": {
+    "assets/authoring/native-v11/scene-contact-c45-adoption.json": "c947fd48f74793bc288ec73e0eed451073e84f117b73398597220effc7ebc5bf",
+    "public/assets/native-v11/soft-window-specular.env": "ab2ddab4e6f5b7e64370f7ba2fb63497326a4f19b669a5ccb459cfef8e2f3258",
+    "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114"
+  },
+  "limits": "Authoring candidate only. Actual normal/oblique whole-frame comparison required; no whole-target, public-release, continuous motion, physical GPU or GI acceptance."
+}
