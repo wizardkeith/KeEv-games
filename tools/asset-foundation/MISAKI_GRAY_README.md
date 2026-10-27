@@ -1,4 +1,48 @@
-# Misaki R8 — coherent whole-hair review candidate, unaccepted
+# Misaki R9 — continuous control-volume checkpoint, unaccepted
+
+Current canonical sample is R9. R8 failed independent review for radial seams,
+petal side boards and a hidden own-left clip. R9 replaces that construction:
+one directly editable continuous outer mesh (337 vertices/320 quads) joins a
+9x9 crown grid to eight32-column side rings. Deliberately asymmetric row
+sections turn outward then inward near the jaw; main/medium surface folds
+share vertices. Only two short ear/lower-edge overlaps remain separate.
+No sphere primitive, radial crown fan, voxel fusion, decimation or global
+fusion/smoothing. Local Subsurf1 plus editable2.8mm Solidify closes the volume.
+
+Object10 retains its legacy name but is now the whole main bob. Six named
+vertex groups select crown, main sweep, support, ear opening, outward and
+inward controls. Edit actual native vertices/modifiers; there are no guide
+curves falsely presented as live drivers. Thirty-seven non-hair source and
+evaluated objects,27 non-hair GLB streams/TRS, materials and camera/light TS
+remain byte-frozen. Background Python authoring is not a GUI-editing claim.
+
+Actual first-render feedback showed the clip still hidden. A support plane
+fitted to its immutable evaluated vertices seated25 nearby control vertices
+behind it. The final front/three-quarter renders show the clip, with zero
+sampled eye/clip vertices blocked by hair in those directions. Distance/ray
+tests do not certify attachment, collision, final pixels or likeness.
+
+**Still unaccepted:** the continuous mass remains too smooth and helmet-like;
+root/main/medium turns do not yet reproduce the original loose fluffy bob.
+This checkpoint establishes the volume/visible-eye/clip foundation before
+further tip refinement; do not treat technical passes as art acceptance.
+See `docs/MISAKI_HAIR_R9_2026-10-28_zh-HK.md` and the R9 evidence folder.
+
+```powershell
+New-Item -ItemType Directory -Force ../hair-r9/baseline | Out-Null
+node -e "const f=require('fs'),c=require('child_process'),b='ea6613cd001f3fe26cd9f4eadd8c972f5e872fea';for(const [p,n]of [['assets/authoring/misaki-grayform-v1/misaki-grayform.blend','misaki-grayform.blend'],['assets/authoring/misaki-grayform-v1/manifest.json','manifest.json'],['public/assets/misaki-grayform-v1/misaki-grayform.glb','misaki-grayform.glb']])f.writeFileSync('../hair-r9/baseline/'+n,c.execFileSync('git',['show',b+':'+p],{maxBuffer:8*1024*1024}));"
+& 'C:/Program Files/Blender Foundation/Blender 5.2/blender.exe' --background --factory-startup --python-exit-code 1 --python tools/asset-foundation/misaki-hair-r9.py -- --baseline ../hair-r9/baseline/misaki-grayform.blend --manifest ../hair-r9/baseline/manifest.json
+& 'C:/Program Files/Blender Foundation/Blender 5.2/blender.exe' --background --factory-startup --python-exit-code 1 --python tools/asset-foundation/inspect-misaki-r9.py -- --baseline ../hair-r9/baseline/misaki-grayform.blend
+$env:QA_OUTPUT='docs/reviews/evidence/misaki-grayform-v1-r9'
+node tools/asset-foundation/validate-misaki-gray.mjs
+node tools/asset-foundation/check-misaki-r9-scope.cjs
+$env:R8_GLB=(Resolve-Path ../hair-r9/baseline/misaki-grayform.glb).Path
+# Set CODEX_NODE_MODULES to the existing bundled Playwright directory.
+node tools/asset-foundation/capture-misaki-r9.cjs
+python tools/asset-foundation/compare-misaki-r9.py
+```
+
+## Historical R8 instructions (superseded)
 
 Current canonical sample is R8. R7 failed independent hair/identity review.
 All seven unaccepted hair groups10-16 are now reshaped together into14 medium
