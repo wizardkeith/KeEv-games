@@ -1,6 +1,10 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T10:03:31+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T10:26:55+08:00** (Asia/Hong_Kong).
+
+## V11 C44局部接觸半徑修正／驗證中 — 2026-10-27T10:26:55+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送application`35301d7b59b42c1875558665d8daf21298c1d4ca`。C43獨立窄視覺FAIL：接地有改善，但層架後灰帶／植物煙霧感過廣；C44只將AO半徑.70→.20，其餘AO、光量、曝光／相機／已過模型材質／192反射不動。280tests通過，273實際正常及雙斜角已取得，274同來源C43控制及新庫存／Low-High驗證中。**C40仍普通預設、C43與C44均未採用；原圖美術未接受。** 已過RTT修正保留；不把NullEngine切換或CPU紀錄稱為supported WebGL GPU資源釋放／完成畫格／連續動作認證。main僅文件指標，未合併／PR8仍Draft，本輪未改公開V17；無玩家Normal／Chrome／Unity／Site／Library或LTC重試／關機，無使用者動作阻塞。
 
 ## V11 C43有遮蔽廣域光固定候選／待視覺覆核 — 2026-10-27T10:03:31+08:00
 
