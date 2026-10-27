@@ -7,7 +7,7 @@ Last updated: **2026-10-27T17:49:06+08:00** (Asia/Hong_Kong).
 - 本段只記錄 `codex/asset-foundation-v1` 的獨立作者階段；main遠端仍是canonical進度，沒有寫main／PR8／`codex/game-v11-target-slice`、merge、deploy或公開Site。由application `78fbae7f519e4c443d5971bb18208e1c4f9de64e` 分支，部件source `049dbf31d53436070bcdecadd0ca695ad91ff230`；[原圖／正常480px／灰模／雙斜角／固定光及限制](docs/ASSET_FOUNDATION_V1_2026-10-27_zh-HK.md)。本分支只作Draft部件審閱，未採入遊戲普通頁。
 - 新增可重用暖木桌、奶油白杯、青瓷瓶、連枝白花及2mm布面：Blender可編輯原檔、重建來源、五個獨立GLB與整組；63,592tri／五component meshes／12material primitives。專用DEV入口用原遊戲app及正常相機插入中央示範，普通 `/` 不載入；沒有新SKU／存貨grant或全店／角色重建。
 - 302既有tests、build／content validate／replay／既有assetcheck及新作者strict typecheck通過；六新GLB零errors／warnings，720原有來源／素材／設定bytes完全保留。材質與灰模正常camera相同、實際載入GLB均等於提交bytes。真隔離Sandbox買3杯cash5000→4790／stock3／上架側桌／reload逐值同、Low→High保留，隔離Normal未變／0pageerror；正常實拍已存Library原生image。
-- **原圖畫風仍未接受**：花群480px仍碎／疏，布折面太規整、木面太均勻。下一步只修此組的白花高低群與寬布折面，不進整店／角色／光照調參。無LOD，花群tri偏高；Blender可能重排buffer，未宣稱byte同重建。靜態SwiftShader不作physicalGPU／FPS／motion／audio／native／新完整交易交接或五語窄UI認證。無玩家Normal／payments／新Site／release操作，無需使用者動作阻塞。
+- **原圖畫風仍未接受**：花群480px仍碎／疏，布折面太規整、木面太均勻。下一步只修此組的白花高低群與寬布折面，不進整店／角色／光照調參。無LOD，花群tri偏高；Blender可能重排buffer，未宣稱byte同重建。靜態SwiftShader不作physicalGPU／FPS／motion／audio／native／新完整交易交接或五語窄UI認證。無玩家Normal／payments／新Site／release操作。部件及證據已推送，Draft PR尚未建立：建立此獨立分支至v11分支的Draft PR動作被自動審批拒絕，需補充明確授權證據後才可重試；未改用其他途徑。
 
 ## V11 C50入口保留係數修正驗證中 — 2026-10-27T14:35:03+08:00
 
