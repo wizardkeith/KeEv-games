@@ -1,0 +1,92 @@
+
+> next-stop-little-shop-w1@0.1.1 build
+> tsc --noEmit && vite build --outDir /workspace/qa/v11-slice/immutable277-c45-ordinary
+
+vite v7.1.12 building for production...
+transforming...
+✓ 702 modules transformed.
+
+(!) outDir /workspace/qa/v11-slice/immutable277-c45-ordinary is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
+rendering chunks...
+computing gzip size...
+../qa/v11-slice/immutable277-c45-ordinary/index.html                                                     0.69 kB │ gzip:     0.49 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/index-CiMc3Tjj.css                                     37.15 kB │ gzip:     8.15 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/kernelBlurVaryingDeclaration-BJLAw6yH.js                0.17 kB │ gzip:     0.15 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/kernelBlurVaryingDeclaration-C12-vi2o.js                0.18 kB │ gzip:     0.16 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/meshUboDeclaration-DVkXsY40.js                          0.24 kB │ gzip:     0.21 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/sceneUboDeclaration-yInRjrn2.js                         0.30 kB │ gzip:     0.23 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/meshUboDeclaration-BTJe_aRf.js                          0.30 kB │ gzip:     0.23 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/pass.fragment-CFFxfSAB.js                               0.35 kB │ gzip:     0.27 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/sceneUboDeclaration-OzbW23Oe.js                         0.36 kB │ gzip:     0.25 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/shadowMapFragmentSoftTransparentShadow-7tu1JZTP.js      0.40 kB │ gzip:     0.29 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/shadowMapFragmentSoftTransparentShadow--5zMRcFf.js      0.43 kB │ gzip:     0.30 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/rgbdEncode.fragment-CP8hjuHE.js                         0.43 kB │ gzip:     0.32 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/rgbdDecode.fragment-CvReAjhn.js                         0.44 kB │ gzip:     0.32 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/pass.fragment-BOZGMTKe.js                               0.48 kB │ gzip:     0.32 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/bumpVertex-BHb5VGB7.js                                  0.48 kB │ gzip:     0.30 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/packingFunctions-Bqve6jzD.js                            0.52 kB │ gzip:     0.29 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/depthBoxBlur.fragment-BYm8BM2V.js                       0.56 kB │ gzip:     0.37 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/rgbdEncode.fragment-D7wCLNBa.js                         0.57 kB │ gzip:     0.36 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/rgbdDecode.fragment-Bn70Egs-.js                         0.58 kB │ gzip:     0.37 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/envTextureLoader-vhXiukBT.js                            0.58 kB │ gzip:     0.39 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/ssaoCombine.fragment-vdvCpwHL.js                        0.60 kB │ gzip:     0.36 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/postprocess.vertex-Clf8yoqx.js                          0.61 kB │ gzip:     0.38 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/bumpVertex-DfYcSjmv.js                                  0.66 kB │ gzip:     0.36 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/depthBoxBlur.fragment-CQvm6HPt.js                       0.74 kB │ gzip:     0.44 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/kernelBlur.vertex-CFyqCXyD.js                           0.79 kB │ gzip:     0.44 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/ssaoCombine.fragment-DS5nyngP.js                        0.83 kB │ gzip:     0.42 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/passCube.fragment-CPWaj8Lk.js                           0.85 kB │ gzip:     0.37 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/kernelBlur.vertex-BglljnL7.js                           0.93 kB │ gzip:     0.48 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/mesh.vertexData.functions-ayNlGC5K.js                   0.96 kB │ gzip:     0.49 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/instancesDeclaration-DAWCn0bV.js                        1.00 kB │ gzip:     0.34 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/passCube.fragment-DQ98hv1M.js                           1.16 kB │ gzip:     0.42 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/clipPlaneFragment-BNNSBmVS.js                           1.21 kB │ gzip:     0.34 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/depth.fragment-qbM2zYq5.js                              1.29 kB │ gzip:     0.57 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/ddsTextureLoader--NTql4Lv.js                            1.29 kB │ gzip:     0.63 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/table-reflection-v11-BL_-sAeY.js                        1.35 kB │ gzip:     0.80 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/room-specular-v11-B_-p6l4I.js                           1.47 kB │ gzip:     0.87 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/depth.vertex-BUPUoosn.js                                2.06 kB │ gzip:     0.77 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/kernelBlur.fragment-DN-DFnsW.js                         2.13 kB │ gzip:     0.72 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/hdrTextureLoader-DBrnW5D1.js                            2.46 kB │ gzip:     1.18 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/kernelBlur.fragment-C6qMxHqE.js                         2.70 kB │ gzip:     0.80 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/iesTextureLoader-DXrCJuD2.js                            2.73 kB │ gzip:     1.18 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/shadowMap.fragment-B3wMD92t.js                          3.06 kB │ gzip:     1.08 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/tgaTextureLoader-DHIYqG0t.js                            3.56 kB │ gzip:     1.39 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/shadowMap.fragment-DEu0lQjl.js                          3.69 kB │ gzip:     1.20 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/shadowMap.vertex-vXM-n0F4.js                            4.40 kB │ gzip:     1.40 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/shadowMap.vertex-q0LqCSO2.js                            4.49 kB │ gzip:     1.45 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/ssao2.fragment-Dp-PUB2h.js                              5.24 kB │ gzip:     1.66 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/helperFunctions-wFJtvviG.js                             5.30 kB │ gzip:     1.78 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/helperFunctions-Cl0VxH8u.js                             5.71 kB │ gzip:     1.89 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/geometry.fragment-c1d5Xjl5.js                           5.90 kB │ gzip:     1.65 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/geometry.vertex-691jKWaE.js                             6.70 kB │ gzip:     1.52 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/ssao2.fragment-Zyc0XTah.js                              6.72 kB │ gzip:     1.82 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/dds-CJaU-4E2.js                                         7.03 kB │ gzip:     2.48 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/bumpFragment-CrjG6r9o.js                                7.25 kB │ gzip:     2.41 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/basisTextureLoader-D-C9AI1q.js                          8.21 kB │ gzip:     3.25 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/bumpFragment-CLqeYy78.js                                8.47 kB │ gzip:     2.50 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/clipPlaneVertex-B3znj1RD.js                            14.12 kB │ gzip:     2.40 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/logDepthDeclaration-v5crPRJG.js                        14.16 kB │ gzip:     4.80 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/exrTextureLoader-BorfN-Xn.js                           15.56 kB │ gzip:     5.82 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/logDepthDeclaration-CTkk5DaM.js                        15.74 kB │ gzip:     4.94 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/ktxTextureLoader-Djn-IgHL.js                           15.83 kB │ gzip:     4.63 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/pbr.vertex-B6Tfj7DX.js                                 21.80 kB │ gzip:     4.18 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/pbr.vertex-4Se9kuL3.js                                 23.56 kB │ gzip:     4.65 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/scene-occlusion-v11-CrNTeLya.js                        69.95 kB │ gzip:    17.25 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/index-B17-OM26.js                                     171.34 kB │ gzip:    62.80 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/pbr.fragment-CPOQrOiG.js                              197.81 kB │ gzip:    36.10 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/pbr.fragment-DPIoAU9m.js                              205.43 kB │ gzip:    36.60 kB
+../qa/v11-slice/immutable277-c45-ordinary/assets/world-bYf1BhuE.js                                   6,921.35 kB │ gzip: 1,526.99 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.73s
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

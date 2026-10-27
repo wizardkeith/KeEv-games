@@ -1,0 +1,308 @@
+{
+  "application": "1aaf9ce67c465f0fd1a3a10d8c5465f161608f84",
+  "reviewedCandidate": "6c7f0a98c70f5c278e8a0f329065a7badb785779",
+  "ordinaryBuild": 277,
+  "ordinaryFlags": {},
+  "explicitContactBuild": 278,
+  "runtimeByteIdentical": true,
+  "cameraAndEconomicFieldsMatchC44": true,
+  "obliquePosesMatchC44": true,
+  "opticalAOFieldsCompared": [
+    "radius",
+    "engine",
+    "strength",
+    "base",
+    "samples",
+    "epsilon",
+    "geometryRatio",
+    "blurRatio",
+    "bilateralSamples",
+    "bilateralSoften",
+    "bilateralTolerance",
+    "maxZ",
+    "minZAspect",
+    "low",
+    "limits"
+  ],
+  "lightFieldsCompared": [
+    "position",
+    "target",
+    "aperture",
+    "angle",
+    "intensity",
+    "color",
+    "residualKind",
+    "residualDirection",
+    "residualColor",
+    "residualGround",
+    "residualIntensity",
+    "exteriorSunIntensity",
+    "exteriorFillIntensity",
+    "shadowSoftness",
+    "shadowDarkness",
+    "textureSize",
+    "maxLights"
+  ],
+  "actualAdoption": {
+    "id": "v11.c45.local-contact-development-default",
+    "developmentDefault": true,
+    "active": true,
+    "reviewedCandidate": "6c7f0a98c70f5c278e8a0f329065a7badb785779",
+    "reviewedApplication": "35301d7b59b42c1875558665d8daf21298c1d4ca",
+    "reviewedBuild": 273,
+    "scope": "Exact C44 optics and accepted assets; metadata/default mapping only. Public V17 unchanged by this source task."
+  },
+  "actualDefaultAO": {
+    "id": "v11.c44.localized-contact.v1",
+    "defaultAdopted": true,
+    "engine": "Babylon8.32.0 SSAO2",
+    "radius": 0.2,
+    "strength": 1,
+    "base": 0.12,
+    "samples": 16,
+    "epsilon": 0.025,
+    "geometryRatio": 0.5,
+    "blurRatio": 0.5,
+    "bilateralSamples": 8,
+    "bilateralSoften": 0.35,
+    "bilateralTolerance": 0.1,
+    "maxZ": 50,
+    "minZAspect": 0.1,
+    "low": "No added geometry buffer or SSAO passes; existing Low lighting retained",
+    "limits": "Screen-space depth/normal approximation, not complete indirect-light occlusion or GI. Final color multiplication also affects direct/specular response; hidden geometry and screen-edge limitations require actual normal/oblique review. No baked stock shadows or screen-fixed image.",
+    "supported": true,
+    "enabled": true,
+    "quality": "high",
+    "epoch": 1,
+    "geometry": {
+      "size": {
+        "width": 720,
+        "height": 600
+      },
+      "normalsWorldSpace": false,
+      "transparentOccluders": false,
+      "ignoreCameraViewport": true,
+      "textures": [
+        {
+          "name": "gBuffer_Depth",
+          "size": {
+            "width": 720,
+            "height": 600
+          },
+          "ready": true
+        },
+        {
+          "name": "gBuffer_Normal",
+          "size": {
+            "width": 720,
+            "height": 600
+          },
+          "ready": true
+        },
+        {
+          "name": "gBuffer_DepthBuffer",
+          "size": {
+            "width": 720,
+            "height": 600
+          },
+          "ready": true
+        }
+      ]
+    },
+    "pipeline": {
+      "className": "SSAO2RenderingPipeline",
+      "useViewportInCombineStage": false,
+      "supported": true,
+      "radius": 0.2,
+      "strength": 1,
+      "base": 0.12,
+      "samples": 16,
+      "blurSamples": 8
+    }
+  },
+  "lowRM": [
+    {
+      "name": "low-motion",
+      "reducedMotion": false,
+      "actualAO": {
+        "id": "v11.c44.localized-contact.v1",
+        "defaultAdopted": true,
+        "engine": "Babylon8.32.0 SSAO2",
+        "radius": 0.2,
+        "strength": 1,
+        "base": 0.12,
+        "samples": 16,
+        "epsilon": 0.025,
+        "geometryRatio": 0.5,
+        "blurRatio": 0.5,
+        "bilateralSamples": 8,
+        "bilateralSoften": 0.35,
+        "bilateralTolerance": 0.1,
+        "maxZ": 50,
+        "minZAspect": 0.1,
+        "low": "No added geometry buffer or SSAO passes; existing Low lighting retained",
+        "limits": "Screen-space depth/normal approximation, not complete indirect-light occlusion or GI. Final color multiplication also affects direct/specular response; hidden geometry and screen-edge limitations require actual normal/oblique review. No baked stock shadows or screen-fixed image.",
+        "supported": true,
+        "enabled": false,
+        "quality": "low",
+        "epoch": 1,
+        "geometry": null,
+        "pipeline": null
+      },
+      "props": [],
+      "assets": {
+        "display-oak-albedo.png": "697422d30122b3af106ea77373820e9584bf0d12baf713439b13055acbf48852",
+        "broadleaf-albedo.png": "a84a25481cfc8c3a3a12c4c9f3ce8cf648af8e97c9f90ed2bb34f48626c9f8e1",
+        "petal-form-values-c34.png": "8b737bb64fded646291553a5ae02f8239edfc9d8fefd4efdec32e4fc7524cc74",
+        "linen-form-values-c34.png": "956b7673c6a61c4f133c493326e7fa4983c4d98c3e288fb3c5c4cd105b123563",
+        "soft-window-specular.env": "ab2ddab4e6f5b7e64370f7ba2fb63497326a4f19b669a5ccb459cfef8e2f3258"
+      },
+      "errors": []
+    },
+    {
+      "name": "low-reduced",
+      "reducedMotion": true,
+      "actualAO": {
+        "id": "v11.c44.localized-contact.v1",
+        "defaultAdopted": true,
+        "engine": "Babylon8.32.0 SSAO2",
+        "radius": 0.2,
+        "strength": 1,
+        "base": 0.12,
+        "samples": 16,
+        "epsilon": 0.025,
+        "geometryRatio": 0.5,
+        "blurRatio": 0.5,
+        "bilateralSamples": 8,
+        "bilateralSoften": 0.35,
+        "bilateralTolerance": 0.1,
+        "maxZ": 50,
+        "minZAspect": 0.1,
+        "low": "No added geometry buffer or SSAO passes; existing Low lighting retained",
+        "limits": "Screen-space depth/normal approximation, not complete indirect-light occlusion or GI. Final color multiplication also affects direct/specular response; hidden geometry and screen-edge limitations require actual normal/oblique review. No baked stock shadows or screen-fixed image.",
+        "supported": true,
+        "enabled": false,
+        "quality": "low",
+        "epoch": 1,
+        "geometry": null,
+        "pipeline": null
+      },
+      "props": [],
+      "assets": {
+        "display-oak-albedo.png": "697422d30122b3af106ea77373820e9584bf0d12baf713439b13055acbf48852",
+        "broadleaf-albedo.png": "a84a25481cfc8c3a3a12c4c9f3ce8cf648af8e97c9f90ed2bb34f48626c9f8e1",
+        "petal-form-values-c34.png": "8b737bb64fded646291553a5ae02f8239edfc9d8fefd4efdec32e4fc7524cc74",
+        "linen-form-values-c34.png": "956b7673c6a61c4f133c493326e7fa4983c4d98c3e288fb3c5c4cd105b123563",
+        "soft-window-specular.env": "ab2ddab4e6f5b7e64370f7ba2fb63497326a4f19b669a5ccb459cfef8e2f3258"
+      },
+      "errors": []
+    },
+    {
+      "name": "high-reduced",
+      "reducedMotion": true,
+      "actualAO": {
+        "id": "v11.c44.localized-contact.v1",
+        "defaultAdopted": true,
+        "engine": "Babylon8.32.0 SSAO2",
+        "radius": 0.2,
+        "strength": 1,
+        "base": 0.12,
+        "samples": 16,
+        "epsilon": 0.025,
+        "geometryRatio": 0.5,
+        "blurRatio": 0.5,
+        "bilateralSamples": 8,
+        "bilateralSoften": 0.35,
+        "bilateralTolerance": 0.1,
+        "maxZ": 50,
+        "minZAspect": 0.1,
+        "low": "No added geometry buffer or SSAO passes; existing Low lighting retained",
+        "limits": "Screen-space depth/normal approximation, not complete indirect-light occlusion or GI. Final color multiplication also affects direct/specular response; hidden geometry and screen-edge limitations require actual normal/oblique review. No baked stock shadows or screen-fixed image.",
+        "supported": true,
+        "enabled": true,
+        "quality": "high",
+        "epoch": 1,
+        "geometry": {
+          "size": {
+            "width": 640,
+            "height": 450
+          },
+          "normalsWorldSpace": false,
+          "transparentOccluders": false,
+          "ignoreCameraViewport": true,
+          "textures": [
+            {
+              "name": "gBuffer_Depth",
+              "size": {
+                "width": 640,
+                "height": 450
+              },
+              "ready": true
+            },
+            {
+              "name": "gBuffer_Normal",
+              "size": {
+                "width": 640,
+                "height": 450
+              },
+              "ready": true
+            },
+            {
+              "name": "gBuffer_DepthBuffer",
+              "size": {
+                "width": 640,
+                "height": 450
+              },
+              "ready": true
+            }
+          ]
+        },
+        "pipeline": {
+          "className": "SSAO2RenderingPipeline",
+          "useViewportInCombineStage": false,
+          "supported": true,
+          "radius": 0.2,
+          "strength": 1,
+          "base": 0.12,
+          "samples": 16,
+          "blurSamples": 8
+        }
+      },
+      "props": [],
+      "assets": {
+        "display-oak-albedo.png": "697422d30122b3af106ea77373820e9584bf0d12baf713439b13055acbf48852",
+        "broadleaf-albedo.png": "a84a25481cfc8c3a3a12c4c9f3ce8cf648af8e97c9f90ed2bb34f48626c9f8e1",
+        "petal-form-values-c34.png": "8b737bb64fded646291553a5ae02f8239edfc9d8fefd4efdec32e4fc7524cc74",
+        "linen-form-values-c34.png": "956b7673c6a61c4f133c493326e7fa4983c4d98c3e288fb3c5c4cd105b123563",
+        "soft-window-specular.env": "ab2ddab4e6f5b7e64370f7ba2fb63497326a4f19b669a5ccb459cfef8e2f3258"
+      },
+      "errors": []
+    }
+  ],
+  "sourceFrames": {
+    "seconds": 61.4,
+    "sourceFrames": 31,
+    "medianIntervalSeconds": 1.92251455783844,
+    "maxIntervalSeconds": 4.091832876205444,
+    "motionCertification": false
+  },
+  "reference": {
+    "path": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+    "sha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114"
+  },
+  "media": "Actual no-flag1440x1200 WebGL/1280x900 Low-RM. Crop/resize/labels only; natural actor phases differ, some headless HUD omissions are recorded by DOM, not Zen or fake HUD.",
+  "limits": "Development adoption only. Sparse software frames, no continuous-motion/completed-GPU/resource-release/physical-FPS/audio/native/full-B/hidden-tab certification. Whole original target still unmet.",
+  "nextWholeScenePriority": "Window-side bright region to central transition to warm cashier focal light, with less dominant gray roof/exterior values. Preserve passed contact .20 and accepted models/materials; no next-slice implementation in C45.",
+  "stockUncutSeconds": 317.4,
+  "stockSourceFrames": {
+    "count": 188,
+    "medianIntervalSeconds": 1.814668893814087,
+    "maxIntervalSeconds": 9.451171159744263,
+    "motionCertification": false
+  },
+  "acceptedRTTFixSource": {
+    "path": "src/art/table-contact-v11.ts",
+    "sha256": "fb6d76573f5a4fb3168775c35d142c66277bf954b8149d34a9e2e22d6c677f22",
+    "sameAsC44": true
+  }
+}
