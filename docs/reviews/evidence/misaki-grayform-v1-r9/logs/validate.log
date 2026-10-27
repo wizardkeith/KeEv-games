@@ -1,0 +1,16 @@
+{
+  "errors": [],
+  "offerings": 10,
+  "locales": 5,
+  "keysPerLocale": 174,
+  "qualityTiers": [
+    "Standard",
+    "Select",
+    "Premium",
+    "Signature",
+    "Prestige",
+    "Masterpiece"
+  ],
+  "uniqueSeparate": true,
+  "review": "Provisional W1 fixtures; no cultural facts or final balance approved"
+}

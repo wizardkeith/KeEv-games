@@ -1,0 +1,103 @@
+{
+  "recordedUtc": "2026-10-27T23:45:25.347Z",
+  "baselineCommit": "ea6613cd001f3fe26cd9f4eadd8c972f5e872fea",
+  "sourceCommit": "d40d459cbe8630363d41ddaf1d6a3814b39046eb",
+  "sourceRemoteReadback": "d40d459cbe8630363d41ddaf1d6a3814b39046eb",
+  "commands": [
+    {
+      "command": "Blender background misaki-hair-r9.py --baseline pinned R8 --manifest pinned R8",
+      "exitCode": 0,
+      "log": "logs/blender-edit.log"
+    },
+    {
+      "command": "Blender background inspect-misaki-r9.py --baseline pinned R8",
+      "exitCode": 0,
+      "log": "logs/reopen.log"
+    },
+    {
+      "command": "QA_OUTPUT=R9 node tools/asset-foundation/validate-misaki-gray.mjs",
+      "exitCode": 0,
+      "log": "logs/asset-validation.log"
+    },
+    {
+      "command": "node node_modules/typescript/bin/tsc --noEmit",
+      "exitCode": 0,
+      "log": "logs/typecheck.log"
+    },
+    {
+      "command": "node node_modules/vite/bin/vite.js build",
+      "exitCode": 0,
+      "log": "logs/build.log"
+    },
+    {
+      "command": "node --import tsx --test tests/*.test.ts",
+      "exitCode": 0,
+      "log": "logs/test.log"
+    },
+    {
+      "command": "node --import tsx tools/validate.ts",
+      "exitCode": 0,
+      "log": "logs/validate.log"
+    },
+    {
+      "command": "node --import tsx tools/replay.ts",
+      "exitCode": 0,
+      "log": "logs/replay.log"
+    },
+    {
+      "command": "node tools/validate-assets.mjs",
+      "exitCode": 0,
+      "log": "logs/asset-check.log"
+    },
+    {
+      "command": "tsc --noEmit --strict --target ES2022 --module ESNext --moduleResolution Bundler --resolveJsonModule --esModuleInterop --lib ES2022,DOM --types node --skipLibCheck src/env.d.ts tools/asset-foundation/studio-misaki-gray.ts tools/asset-foundation/gameplay-misaki-gray.ts",
+      "exitCode": 0,
+      "log": "logs/authoring-types.log"
+    },
+    {
+      "command": "CODEX_NODE_MODULES=<existing modules> R8_GLB=<pinned R8> node tools/asset-foundation/capture-misaki-r9.cjs",
+      "exitCode": 0,
+      "log": "logs/runtime-full.log"
+    },
+    {
+      "command": "node tools/asset-foundation/check-misaki-r9-scope.cjs",
+      "exitCode": 0,
+      "log": "logs/scope.log"
+    }
+  ],
+  "tests": {
+    "count": 304,
+    "pass": 304,
+    "fail": 0,
+    "skip": 0
+  },
+  "render": {
+    "captures": 14,
+    "sameLocalRenderer": true,
+    "cameraLightMaterialSourcesFrozen": true
+  },
+  "visualAcceptance": false,
+  "selfReview": "Continuous volume and visible own-left clip established; still too smooth/helmet-like versus the original; stop before further tip refinement",
+  "mainControlMesh": {
+    "vertices": 337,
+    "quads": 320,
+    "nativeComponents": 1,
+    "lowerBoundaryEdges": 32,
+    "evaluatedComponents": 1
+  },
+  "separateLowerOverlaps": 2,
+  "nonHairNativeAndEvaluatedObjectsFrozen": 37,
+  "finalEyeAndClipRayBlockedVertices": 0,
+  "noGuiInput": true,
+  "noNewSoftwareOrPlugin": true,
+  "noPlayerProfileAccess": true,
+  "cleanup": {
+    "performed": false,
+    "reason": "Await verified full evidence sync before recoverable cleanup"
+  },
+  "limits": [
+    "Side/back inferred",
+    "Ray/distance/topology checks are not physical attachment, collisions or art acceptance",
+    "No physical-device/FPS/audio/rig certification"
+  ]
+}

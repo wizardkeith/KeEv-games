@@ -1,0 +1,21 @@
+00:01.610  blend            | Read blend: "<TASK_ROOT>\hair-r9\baseline\misaki-grayform.blend"
+Info: Saved as "misaki-grayform.blend"
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+07:39:37 | INFO: Starting glTF 2.0 export
+07:39:37 | INFO: Extracting primitive: 20 / inner shirt torso editable quads.001
+07:39:37 | INFO: Primitives created: 4
+07:39:37 | INFO: Extracting primitive: 01 / cheek to narrowing jaw and real eye apertures editable qua.001
+07:39:37 | INFO: Primitives created: 1
+07:39:37 | INFO: Extracting primitive: 03 / convex eye behind almond aperture -1 editable quads.001
+07:39:37 | INFO: Primitives created: 3
+07:39:37 | INFO: Extracting primitive: R9 broad ear or lower-edge overlap only.002
+07:39:37 | INFO: Primitives created: 1
+07:39:37 | INFO: Extracting primitive: 17 / own LEFT clip leaf 0 editable quads.001
+07:39:37 | INFO: Primitives created: 1
+07:39:37 | INFO: Finished glTF 2.0 export in 0.07890701293945312 s
+
+{"baselineCommit": "ea6613cd001f3fe26cd9f4eadd8c972f5e872fea", "baselineBlendSha256": "5cd7463fd7a83f13a13612569ab671e17fc8723b973133eb6ec9a84c47b080e4", "nativeMeshObjects": 40, "hairObjects": 3, "continuousVolumeControlVertices": 337, "continuousVolumeControlQuads": 320, "crownGrid": [9, 9], "sideRings": [8, 32], "separateLowerOverlaps": 2, "clipSupportPlane": {"yFromX_Z_1": [1.1874677915742335, 0.5543182543513901, -1.0092630557457134], "cageVerticesAdjusted": 25, "maxYAdjustment": 0.08591963602277009, "supportOffset": 0.007}, "triangles": 47752, "blendSha256": "27b69fae409e7b8c589ae1af0c48b23e9b728a3c4d2cd933e0f955c5ced13b53", "glbSha256": "40e771a67f8014899443e8ee8f376318e6efdbea3d5be114492810c474a9cc3d", "limits": ["Side/back inferred", "Not art acceptance or collision/rig certification", "No GUI, sphere primitive, voxel fusion or global smoothing"]}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

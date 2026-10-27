@@ -1,6 +1,13 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-28T07:25:09+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-28T07:45:25+08:00** (Asia/Hong_Kong).
+
+## 本機R9：連續主髮網／露眼與可見clip checkpoint，未接受 — 2026-10-28T07:45:25+08:00
+
+- [原圖／同機R8／R9正面、三分之四及正常尺度](docs/MISAKI_HAIR_R9_2026-10-28_zh-HK.md)：捨棄14放射髮條，一張337頂點／320quad主控制面（9x9冠網接8圈32列側網），單一連通體，只有兩片耳／下緣重疊。非球primitive、無voxel或全局融合；局部Subsurf1＋可編輯2.8mm厚度，六個vertex groups可直接編輯。37非hair native/evaluated、27GLB非hair streams/TRS、材料／眼臉頸身體／光相機／確定性sRGB8保留，5,312其他tracked files不變。
+- 初稿clip仍遮擋，依固定156個clip頂點擬合承托面調25控制點；最終實拍front／3/4兩葉clip可見，eye與clip取樣hair遮擋均0，非最終像素／碰撞或依附認證。40原生mesh、5GLB mesh、10primitives、47,752tri、0validator錯警告；真正blend／GLB均獨立背景重開。
+- 本輪304/304tests、build／validate／replay／asset-check／authoring strict TS、14張同機實拍及隔離Sandbox買入上架reload／Low-High通過。**仍整塊／頭盔感、主副束和蓬鬆層次不足，身分畫風未接受、未採用。** 為先覆核連續體積與clip，不再追加髮尾細修。
+- Source d40d459cbe8630363d41ddaf1d6a3814b39046eb已normal push及獨立讀回；本完整證據checkpoint的最終hash外部交付。同步前保留所有資料，之後僅recoverable清理task冗餘暫存，保留原圖／來源／必要證據／Git中R8rollback／依賴。main仍beda04d6852c05bbcbb528f4edce32c027ade2ed，GUI hold、無Unity／PR重試／merge／Site／玩家Normal維持。
 
 ## 本機R8全髮重排候選：來源已同步／身分畫風仍未通過 — 2026-10-28T07:22:57+08:00
 

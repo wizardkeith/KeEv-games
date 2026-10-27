@@ -1,0 +1,14 @@
+00:01.407  blend            | Read blend: "<TASK_ROOT>\hair-r9\baseline\misaki-grayform.blend"
+00:01.875  blend            | Read blend: "<REPO>\assets\authoring\misaki-grayform-v1\misaki-grayform.blend"
+Extensions: writing cache failed ([WinError 5] 摮?鋡急??? 'C:\\Users\\wizar\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\extensions').
+07:39:40 | INFO: Data are loaded, start creating Blender stuff
+07:39:40 | INFO: Blender create Mesh node 20 / inner shirt torso editable quads.001
+07:39:40 | INFO: Blender create Mesh node 01 / cheek to narrowing jaw and real eye apertures editable qua.001
+07:39:40 | INFO: Blender create Mesh node 03 / convex eye behind almond aperture -1 editable quads.001
+07:39:40 | INFO: Blender create Mesh node R9 broad ear or lower-edge overlap only.002
+07:39:40 | INFO: Blender create Mesh node 17 / own LEFT clip leaf 0 editable quads.001
+07:39:40 | INFO: glTF import finished in 0.05s
+{"nativeMeshes": 40, "triangles": 47752, "raysR8": {"front": {"06 / upper lash placement -1": {"sampledEvaluatedVertices": 78, "hairBlocked": 0}, "06 / upper lash placement 1": {"sampledEvaluatedVertices": 78, "hairBlocked": 0}, "own-left clip": {"sampledEvaluatedVertices": 156, "hairBlocked": 59}}, "threequarter": {"06 / upper lash placement -1": {"sampledEvaluatedVertices": 78, "hairBlocked": 0}, "06 / upper lash placement 1": {"sampledEvaluatedVertices": 78, "hairBlocked": 0}, "own-left clip": {"sampledEvaluatedVertices": 156, "hairBlocked": 106}}}, "raysR9": {"front": {"06 / upper lash placement -1": {"sampledEvaluatedVertices": 78, "hairBlocked": 0}, "06 / upper lash placement 1": {"sampledEvaluatedVertices": 78, "hairBlocked": 0}, "own-left clip": {"sampledEvaluatedVertices": 156, "hairBlocked": 0}}, "threequarter": {"06 / upper lash placement -1": {"sampledEvaluatedVertices": 78, "hairBlocked": 0}, "06 / upper lash placement 1": {"sampledEvaluatedVertices": 78, "hairBlocked": 0}, "own-left clip": {"sampledEvaluatedVertices": 156, "hairBlocked": 0}}}, "clipDistanceR9": {"samples": 156, "min": 0.0013048439286649227, "mean": 0.006339055848701929, "max": 0.01221455354243517, "limit": "Unsigned vertex-to-surface distance; not attachment/collision proof"}}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
