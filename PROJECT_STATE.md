@@ -1,6 +1,6 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-28T07:22:57+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-28T07:25:09+08:00** (Asia/Hong_Kong).
 
 ## 本機R8全髮重排候選：來源已同步／身分畫風仍未通過 — 2026-10-28T07:22:57+08:00
 
@@ -8,6 +8,8 @@ Last updated: **2026-10-28T07:22:57+08:00** (Asia/Hong_Kong).
 - 本輪304/304tests、build／validate／replay／asset-check／authoring strict TS、14張實拍及fresh Sandbox買入上架reload／Low-High通過。R7自身右側正面upper-lash取樣30/78被擋，R8正面／三分之四兩眼均0/78；只是取樣，非視覺接受。初稿實拍後一次結構修正重疊與耳側／副束流向；頭部包絡射線實際外移0點，不宣稱修好穿頭。
 - **自檢身分／畫風仍未達原圖**：髮根接縫與大層面板感、副束長條、自然bob仍不足，clip平均距離6.728mm較R7差；沒有移clip或放寬檢查。停在有意義的全髮候選交獨立覆核，不再追加造型。
 - Source231722cf1ed06178877c88f4da368c94a54722ae已normal push並讀回同SHA；完整報告／PNG／log收於本證據checkpoint，最終hash外部讀回。完整同步前保留全部暫存，之後只回收task-owned冗餘資料；保留原圖、最新來源、Git中R7rollback、必要證據及依賴。main仍beda04d6852c05bbcbb528f4edce32c027ade2ed，本分支未合併；GUI hold、無Unity／PR重試／merge／Site／玩家Normal維持。
+
+- 完整R8證據8775cd2e3809ddffae3c988b580ab2c0b4cda2a8已normal push並獨立讀回同SHA；之後只整理同步／清理收尾。25個R8暫存檔逐byte驗證收入回退ZIP才移除原目錄，邏輯容量2,595,374→1,180,836 bytes，減少1,414,538 bytes，free-space／RAM節省未量度。來源／圖片不變，正式資產、Git回退、必要證據、舊R7回退ZIP及依賴保留；最終收尾SHA外部讀回。
 
 ## 本機 R7 髮幕候選：來源與完整證據已同步／待獨立視覺覆核 — 2026-10-28T06:56:14+08:00
 

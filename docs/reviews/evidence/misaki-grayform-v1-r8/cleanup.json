@@ -1,0 +1,153 @@
+{
+  "completedUtc": "2026-10-27T23:24:34.5417279+00:00",
+  "verifiedRemoteCheckpoint": "8775cd2e3809ddffae3c988b580ab2c0b4cda2a8",
+  "scope": "Only task-owned hair-r8 scratch: duplicate pinned R7 baseline, raw logs, superseded first-volume previews and temporary preparation helpers",
+  "recovery": "Every original file retained in verified ZIP before removing scratch; no irrecoverable data deletion",
+  "archiveRelativeToWorkspace": "hair-r8-scratch-rollback-8775cd2.zip",
+  "archiveSha256": "83115ef04e5e8719a5d6614d93390674941b6cddf5f700a6d89dfae9ba8524a6",
+  "fileCount": 25,
+  "logicalBytesBefore": 2595374,
+  "recoveryArchiveBytes": 1180836,
+  "logicalDataReductionBytes": 1414538,
+  "physicalFreeDiskSavingsBytes": null,
+  "physicalFreeDiskSavingsLimit": "Only logical file-size reduction measured; physical free space and RAM not measured",
+  "originalScratchDirectoryRemoved": true,
+  "retained": [
+    "canonical R8 blend/glb and editable source",
+    "original target",
+    "R7 rollback in synced Git history",
+    "all necessary final PNG/JSON/log evidence",
+    "node_modules, pnpm store and usable dist",
+    "earlier R7 recovery archive",
+    "unrelated user files/apps"
+  ],
+  "processesTerminated": [],
+  "memorySavingsMeasured": false,
+  "files": [
+    {
+      "path": "asset-check.log",
+      "bytes": 2720,
+      "sha256": "6ba0d08b575ad07905063da08004dfffb4bdab8c7e3fd5d47dbbf705431b8fc1"
+    },
+    {
+      "path": "asset-validation.log",
+      "bytes": 173,
+      "sha256": "59a2dd2800146e4bbe5939b1888f3396c6cd1dc66e78104c4943be88feb2377e"
+    },
+    {
+      "path": "authoring-types.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "blender-edit.log",
+      "bytes": 2312,
+      "sha256": "645fa2db9bbbb218e2afb8325b0a068c79679d4627610f564a14dcbf3a614193"
+    },
+    {
+      "path": "build.log",
+      "bytes": 7082,
+      "sha256": "d641aa822cca358c80aa258bab7131caeeec672f640dec03e168d01e23390393"
+    },
+    {
+      "path": "locomotion-after-this-run.json",
+      "bytes": 1643,
+      "sha256": "07fc9e19f75a31899a7bd247ec03d0aece282fb40c5915b526dc62a41d0d8253"
+    },
+    {
+      "path": "prepare-evidence.cjs",
+      "bytes": 5597,
+      "sha256": "844e9b4a05b109974a7af36c3b8626cff11cb00172d7f09484e0e59a67ca6693"
+    },
+    {
+      "path": "prepare-tools.cjs",
+      "bytes": 949,
+      "sha256": "398907e64da27acc909ef6ec39abf8eb768116dba98be722e0848b07e95f03a3"
+    },
+    {
+      "path": "reopen.log",
+      "bytes": 2171,
+      "sha256": "14a9a52cc58cca06e98922104059b5c09da6505b1d3a5424948aef870284c0e4"
+    },
+    {
+      "path": "replay.log",
+      "bytes": 136,
+      "sha256": "f52e86ae86ca7d696fde8688ab151d2e965c2af844096ff2d090365a49431c3f"
+    },
+    {
+      "path": "runtime-full.log",
+      "bytes": 233,
+      "sha256": "a5a9491eb5c3d08f940868e5d74a7b238954337fb0161c23a538234fd2f8c9f5"
+    },
+    {
+      "path": "scope-final.log",
+      "bytes": 4067,
+      "sha256": "afa3cecc2c68c17bb195a4124955f821c90e63cc2cf8c46382c7c40ab77343c0"
+    },
+    {
+      "path": "scope.log",
+      "bytes": 2985,
+      "sha256": "7a82d807659d23418dd5f803a74e6ff6d21414ddd8ba53f597174665e3edf446"
+    },
+    {
+      "path": "studio-preview.log",
+      "bytes": 124,
+      "sha256": "a656076a795910bc060e8e26c99680c05256697ec7b9e559aaf9d34e23dd13e2"
+    },
+    {
+      "path": "test.log",
+      "bytes": 38660,
+      "sha256": "8ed0b202c19a30e7a8b7da8fcb15d7d2935e72ec5ea910c84868391f3d0d7821"
+    },
+    {
+      "path": "typecheck.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "validate.log",
+      "bytes": 325,
+      "sha256": "37ecb0293efb667658af0076a6a3b5fa10af7ef3c36de1c76ee2edf7170b801c"
+    },
+    {
+      "path": "baseline/manifest.json",
+      "bytes": 7836,
+      "sha256": "fd0fec68d9690180c6f70ce85a1cbc15bdc47c0ce532548b843980c487ab3d4b"
+    },
+    {
+      "path": "baseline/misaki-grayform.blend",
+      "bytes": 1366225,
+      "sha256": "71a6de35f99476a3d155a6912eb5a3eac05a5ddcecf00521928729765e7e8702"
+    },
+    {
+      "path": "baseline/misaki-grayform.glb",
+      "bytes": 908476,
+      "sha256": "764d578b0b1fd5958b9773c6abfa0efa87ab13bf0f99b653dbbfc0bb853da4cf"
+    },
+    {
+      "path": "initial-volume/blender-edit.log",
+      "bytes": 2122,
+      "sha256": "58102ba86f70a631b1d0a93b27a6ff4f5e074c8ae59e7d37f375c7de26465319"
+    },
+    {
+      "path": "initial-volume/r8-back.png",
+      "bytes": 56947,
+      "sha256": "e3f4e21e25c5535365e9ebd60d657686dbca3d5f7489a4599ab48bae3cac30b6"
+    },
+    {
+      "path": "initial-volume/r8-front.png",
+      "bytes": 70677,
+      "sha256": "d8b0c899c6e5c9f3aa82a44dbf5012da9c5ec83317788df5cff3c26b218ae80d"
+    },
+    {
+      "path": "initial-volume/r8-side.png",
+      "bytes": 46716,
+      "sha256": "cc8551b55617034c1e493f6ecdcca2d822c25c5a864ee17821df2c20b3f50811"
+    },
+    {
+      "path": "initial-volume/r8-threequarter.png",
+      "bytes": 67198,
+      "sha256": "3d1d2ee2b76a92b7ae7c112a0162d0d91f9ebd1b11440cd438bb90f05ecd26e0"
+    }
+  ]
+}

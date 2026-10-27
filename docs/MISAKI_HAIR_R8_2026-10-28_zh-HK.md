@@ -50,4 +50,8 @@ Blender5.2.3LTS保存後以獨立背景程序重新打開`.blend`，再在空場
 
 所有命令／log收於[驗證清單](reviews/evidence/misaki-grayform-v1-r8/command-results.json)，沒有把先前R7測試冒充本輪重跑。正常畫面中的後方灰色A-pose是DEV authoring sample `[.85,.079,1.35]`、yawπ；前方彩色gameplay staff仍是原版，普通`/`未換人。沒有完整遊戲角色、動畫、持續FPS、實體裝置或音訊認證。
 
-重現指令見[authoring README](../tools/asset-foundation/MISAKI_GRAY_README.md)。完整證據同步並獨立讀回前不刪暫存；其後才可回收本任務冗餘資料，保留原圖、最新來源、必要證據、已同步R7 rollback及可重用依賴。本輪不再追加造型改動；無PR重試、merge、公開Site或Unity遷移。
+重現指令見[authoring README](../tools/asset-foundation/MISAKI_GRAY_README.md)。完整證據提交 `8775cd2e3809ddffae3c988b580ab2c0b4cda2a8` 已normal push及獨立讀回同SHA；此後只補收尾記錄，未再改來源、美術或圖片。
+
+同步後才清理本任務 `hair-r8` 冗餘暫存：25個檔案先收入ZIP，逐一核對檔長及SHA256後才移除原目錄。邏輯資料容量由2,595,374變為1,180,836 bytes，減少1,414,538 bytes；未量度或聲稱實體磁碟free-space／RAM節省。回退ZIP仍在task根目錄 `hair-r8-scratch-rollback-8775cd2.zip`，SHA256 `83115ef04e5e8719a5d6614d93390674941b6cddf5f700a6d89dfae9ba8524a6`；詳見[清理回執](reviews/evidence/misaki-grayform-v1-r8/cleanup.json)。保留原圖、最新來源、所有必要實拍及驗證、Git中R7 rollback、先前R7回退ZIP及可重用依賴，沒有終止用戶程序。
+
+本輪停在未接受的全髮候選，最終收尾commit與遠端SHA由交付訊息外部讀回，不在本文自引用。沒有再追加造型、PR重試、merge、公開Site、Unity遷移或玩家存檔變更。
