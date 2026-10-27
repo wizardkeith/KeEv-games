@@ -1,0 +1,21 @@
+{
+  "baseline": "0638d652ebdca1280320fb93058bc5167bb2e2ca",
+  "archivedGeneratedEvidence": [
+    {
+      "original": "evidence/native-v4/locomotion-after.json",
+      "currentResult": "current-evidence__native-v4__locomotion-after.json",
+      "originalRestored": true
+    }
+  ],
+  "statEntriesRefreshed": 5155,
+  "allRefreshedBytesEqualOriginalGitBlob": true,
+  "noProductContentStaged": true,
+  "changes": [
+    "M .gitattributes",
+    " M .gitignore",
+    " M tools/asset-foundation/validate-misaki-gray.mjs",
+    "?? pnpm-lock.yaml",
+    "?? pnpm-workspace.yaml",
+    "?? tools/local-dev/"
+  ]
+}

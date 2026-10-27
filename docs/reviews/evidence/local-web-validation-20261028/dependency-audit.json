@@ -1,0 +1,165 @@
+{
+  "originalNpmLockPackages": 76,
+  "installedCount": 25,
+  "allInstalledVersionsInOriginalNpmLock": true,
+  "installed": [
+    {
+      "name": "@babylonjs/core",
+      "version": "8.32.0",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "@babylonjs/loaders",
+      "version": "8.32.0",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "@esbuild/win32-x64",
+      "version": "0.25.12",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "@rollup/rollup-win32-x64-gnu",
+      "version": "4.64.12",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "@rollup/rollup-win32-x64-msvc",
+      "version": "4.64.12",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "@types/estree",
+      "version": "1.0.9",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "@types/node",
+      "version": "24.9.1",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "babylonjs-gltf2interface",
+      "version": "8.56.2",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "esbuild",
+      "version": "0.25.12",
+      "lifecycle": {
+        "postinstall": "node install.js"
+      },
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "fake-indexeddb",
+      "version": "6.2.4",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": "husky"
+    },
+    {
+      "name": "fdir",
+      "version": "6.5.0",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "get-tsconfig",
+      "version": "4.14.3",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "gltf-validator",
+      "version": "2.0.0-dev.3.10",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "nanoid",
+      "version": "3.3.20",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "picocolors",
+      "version": "1.1.1",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "picomatch",
+      "version": "4.0.7",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "postcss",
+      "version": "8.5.31",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "resolve-pkg-maps",
+      "version": "1.0.0",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "rollup",
+      "version": "4.64.12",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": "husky && npm run prepare:patch && node scripts/check-release.js || npm run build:prepare"
+    },
+    {
+      "name": "source-map-js",
+      "version": "1.2.2",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "tinyglobby",
+      "version": "0.2.17",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "tsx",
+      "version": "4.20.6",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "typescript",
+      "version": "5.9.3",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "undici-types",
+      "version": "7.16.0",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    },
+    {
+      "name": "vite",
+      "version": "7.1.12",
+      "lifecycle": {},
+      "publishedSourcePrepareNotRun": null
+    }
+  ],
+  "onlyInstalledLifecycle": "esbuild@0.25.12 postinstall: node install.js",
+  "esbuildInstallScriptSha256": "10f6fa3644d8d23d066ff67b0ae449074e75884503546a9fedb667f1dcb9ade2",
+  "registryHosts": [
+    "registry.npmjs.org"
+  ],
+  "passed": true
+}

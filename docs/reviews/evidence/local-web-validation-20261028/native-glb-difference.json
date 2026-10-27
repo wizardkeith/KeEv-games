@@ -1,0 +1,60 @@
+{
+  "node": "v24.19.0",
+  "platform": "win32",
+  "arch": "x64",
+  "readOnlyRebuildComparison": true,
+  "originalAssetsUnmodified": true,
+  "results": [
+    {
+      "kind": "misaki",
+      "originalBytes": 719636,
+      "rebuiltBytes": 719636,
+      "originalSha256": "22ca967d70f39705b3c5f91eacfddaeefec9cc302311ddc58a85ff5997319c33",
+      "rebuiltSha256": "22ca967d70f39705b3c5f91eacfddaeefec9cc302311ddc58a85ff5997319c33",
+      "binaryChunkEqual": true,
+      "jsonDifferenceCount": 0,
+      "jsonDifferencesOnlyNumeric": true,
+      "maximumJsonNumericDifference": 0,
+      "jsonExamples": [],
+      "differentAccessors": [],
+      "filesSaved": false
+    },
+    {
+      "kind": "visitor-a",
+      "originalBytes": 732016,
+      "rebuiltBytes": 732016,
+      "originalSha256": "aa17730b19f6f914447fa56f26ccdac2b0f8de2be21e67801aba6f4dff2ccbf7",
+      "rebuiltSha256": "44bfc9ac5430924da2e99fa6f1ecef82e3697b6a4712aedf70471c6c8d93c105",
+      "binaryChunkEqual": true,
+      "jsonDifferenceCount": 1,
+      "jsonDifferencesOnlyNumeric": true,
+      "maximumJsonNumericDifference": 3.469446951953614e-18,
+      "jsonExamples": [
+        {
+          "path": "/materials/15/pbrMetallicRoughness/baseColorFactor/2",
+          "original": 0.02217388479338738,
+          "rebuilt": 0.022173884793387385,
+          "numeric": true,
+          "absoluteDifference": 3.469446951953614e-18
+        }
+      ],
+      "differentAccessors": [],
+      "filesSaved": false
+    },
+    {
+      "kind": "visitor-b",
+      "originalBytes": 1888140,
+      "rebuiltBytes": 1888140,
+      "originalSha256": "75272ae3b1c4c20cfd92129c88ff5482bb6e2b6fa1db0cb879901c3751387abd",
+      "rebuiltSha256": "75272ae3b1c4c20cfd92129c88ff5482bb6e2b6fa1db0cb879901c3751387abd",
+      "binaryChunkEqual": true,
+      "jsonDifferenceCount": 0,
+      "jsonDifferencesOnlyNumeric": true,
+      "maximumJsonNumericDifference": 0,
+      "jsonExamples": [],
+      "differentAccessors": [],
+      "filesSaved": false
+    }
+  ],
+  "conclusion": "Diagnostic comparison only; original strict byte-rebuild test remains unchanged and failed. No asset replacement or art acceptance."
+}

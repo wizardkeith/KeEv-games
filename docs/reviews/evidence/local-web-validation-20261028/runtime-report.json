@@ -1,0 +1,233 @@
+{
+  "startedUtc": "2026-10-27T16:51:27.442Z",
+  "headless": true,
+  "independentBrowserProcess": true,
+  "contexts": "Fresh nonpersistent contexts; no existing browser/profile attached",
+  "errors": [],
+  "requestFailures": [],
+  "limitations": [
+    "Development authoring fixture is not adopted production art",
+    "No physical-device, sustained FPS, audio or visual acceptance claim"
+  ],
+  "browserVersion": "156.0.8078.48",
+  "studio": {
+    "ready": true,
+    "gpu": {
+      "webgl2": true,
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "vendor": "WebKit",
+      "renderer": "WebKit WebGL",
+      "unmaskedRenderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A78B) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "details": {
+      "source": "Actual GLB, neutral gray values, no textures; side/back inferred; no final rig",
+      "lighting": {
+        "key": 2.1,
+        "fill": 0.65,
+        "exposure": 1,
+        "environment": 1
+      }
+    },
+    "screenshot": {
+      "file": "studio-threequarter.png",
+      "width": 720,
+      "height": 900,
+      "bytes": 61226,
+      "sampledColors": 130,
+      "sha256": "4002fad90d53a7031b0b00eff4e1ba639fc70643551da40b03d8eac84842934d"
+    }
+  },
+  "game": {
+    "worldReady": true,
+    "fixture": {
+      "ready": true,
+      "placement": [
+        0.85,
+        0.079,
+        1.35
+      ],
+      "yaw": 3.141592653589793,
+      "triangles": 49368,
+      "meshes": [
+        {
+          "name": "misaki-grayform/face",
+          "triangles": 13840
+        },
+        {
+          "name": "misaki-grayform/feature-placement_primitive0",
+          "triangles": 448
+        },
+        {
+          "name": "misaki-grayform/feature-placement_primitive1",
+          "triangles": 1568
+        },
+        {
+          "name": "misaki-grayform/feature-placement_primitive2",
+          "triangles": 776
+        },
+        {
+          "name": "misaki-grayform/hair",
+          "triangles": 7952
+        },
+        {
+          "name": "misaki-grayform/own-left-clip",
+          "triangles": 304
+        },
+        {
+          "name": "misaki-grayform/clothed-body_primitive0",
+          "triangles": 9264
+        },
+        {
+          "name": "misaki-grayform/clothed-body_primitive1",
+          "triangles": 7488
+        },
+        {
+          "name": "misaki-grayform/clothed-body_primitive2",
+          "triangles": 1840
+        },
+        {
+          "name": "misaki-grayform/clothed-body_primitive3",
+          "triangles": 5888
+        }
+      ],
+      "lighting": {
+        "maxLights": 8,
+        "environmentIntensity": 0.8,
+        "sceneEnvironmentIntensity": 1,
+        "exposure": 1,
+        "lights": [
+          {
+            "name": "soft cream sky",
+            "type": "HemisphericLight",
+            "intensity": 0.27,
+            "enabled": true
+          },
+          {
+            "name": "static window sunlight",
+            "type": "DirectionalLight",
+            "intensity": 2.8,
+            "enabled": true
+          },
+          {
+            "name": "cool exterior sky",
+            "type": "HemisphericLight",
+            "intensity": 1.25,
+            "enabled": true
+          },
+          {
+            "name": "soft local face fill",
+            "type": "HemisphericLight",
+            "intensity": 0.43,
+            "enabled": true
+          },
+          {
+            "name": "native.practical.cashier",
+            "type": "SpotLight",
+            "intensity": 20,
+            "enabled": true
+          },
+          {
+            "name": "native.practical.central",
+            "type": "SpotLight",
+            "intensity": 24,
+            "enabled": true
+          },
+          {
+            "name": "v11.c44.same-broad-light.v1.indoor-sky",
+            "type": "HemisphericLight",
+            "intensity": 0.85,
+            "enabled": true
+          },
+          {
+            "name": "v11.c44.same-broad-light.v1",
+            "type": "SpotLight",
+            "intensity": 120,
+            "enabled": true
+          }
+        ]
+      },
+      "source": "Independent static grayform, existing staff rig/actions remain the real app; no animation binding or save commands"
+    },
+    "gpu": {
+      "webgl2": true,
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "vendor": "WebKit",
+      "renderer": "WebKit WebGL",
+      "unmaskedRenderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A78B) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "renderer": {
+      "vendor": "Google Inc. (Intel)",
+      "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A78B) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+    },
+    "screenshot": {
+      "file": "game-authoring.png",
+      "width": 1280,
+      "height": 900,
+      "bytes": 637335,
+      "sampledColors": 20704,
+      "sha256": "8c580cf9884aede6e2265ea3eefce58715643eafdd1a148093266b249f3a3146"
+    }
+  },
+  "lifecycle": {
+    "isolatedSandbox": true,
+    "cashBefore": 5000,
+    "cashAfter": 4790,
+    "stock": 3,
+    "shelf": 2,
+    "reloadEqual": true,
+    "lowHighReady": true,
+    "isolatedNormalUnchanged": true,
+    "originalPlayerProfilesAccessed": false
+  },
+  "production": {
+    "worldReady": true,
+    "core": "PORT_REQUIRED_FOR_UNITY",
+    "renderer": {
+      "vendor": "Google Inc. (Intel)",
+      "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A78B) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+    },
+    "gpu": {
+      "webgl2": true,
+      "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "vendor": "WebKit",
+      "renderer": "WebKit WebGL",
+      "unmaskedRenderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A78B) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    "screenshot": {
+      "file": "production.png",
+      "width": 1024,
+      "height": 768,
+      "bytes": 459814,
+      "sampledColors": 16141,
+      "sha256": "4080f9e482ac096968a3037882372c2f2147e88516b51ed892c085f4cbcbea77"
+    },
+    "authoringFixtureAbsent": true
+  },
+  "assetResponses": [
+    {
+      "page": "studio",
+      "status": 200,
+      "bytes": 902132,
+      "sha256": "29f4ff9e8711f80cef1f5d899d9c5f0fab0facbf1841274678313581998bb823"
+    },
+    {
+      "page": "game-authoring",
+      "status": 200,
+      "bytes": 902132,
+      "sha256": "29f4ff9e8711f80cef1f5d899d9c5f0fab0facbf1841274678313581998bb823"
+    },
+    {
+      "page": "game-authoring",
+      "status": 200,
+      "bytes": 902132,
+      "sha256": "29f4ff9e8711f80cef1f5d899d9c5f0fab0facbf1841274678313581998bb823"
+    }
+  ],
+  "distAssetSha256": "29f4ff9e8711f80cef1f5d899d9c5f0fab0facbf1841274678313581998bb823",
+  "passed": true,
+  "finishedUtc": "2026-10-27T16:52:00.568Z",
+  "browserClosed": true,
+  "localServersClosed": true
+}

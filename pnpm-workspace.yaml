@@ -1,0 +1,9 @@
+# Local development only: keep lifecycle approval limited to the locked esbuild.
+allowBuilds:
+  esbuild@0.25.12: true
+  fsevents: false
+strictDepBuilds: true
+verifyDepsBeforeRun: error
+storeDir: .pnpm-store
+nodeLinker: hoisted
+updateNotifier: false

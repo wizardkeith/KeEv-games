@@ -1,0 +1,66 @@
+{
+  "recordedUtc": "2026-10-27T17:02:21.599Z",
+  "baseline": "0638d652ebdca1280320fb93058bc5167bb2e2ca",
+  "node": "v24.19.0",
+  "pnpm": "11.25.0",
+  "dependencyInstallUserApproved": true,
+  "onlyAllowedLifecycle": "esbuild@0.25.12 postinstall",
+  "unchangedSuite": {
+    "tests": 302,
+    "passed": 301,
+    "failed": 1,
+    "skipped": 0
+  },
+  "commands": [
+    {
+      "Script": "test",
+      "ExitCode": 1,
+      "StartedUtc": "2026-10-27T16:50:14.0630601Z",
+      "FinishedUtc": "2026-10-27T16:50:35.1930274Z",
+      "Execution": "Exact original Git-blob bytes; complete graph; approved esbuild; hoisted dependencies"
+    },
+    {
+      "Script": "validate",
+      "ExitCode": 0,
+      "StartedUtc": "2026-10-27T16:50:35.2293115Z",
+      "FinishedUtc": "2026-10-27T16:50:35.7778868Z",
+      "Execution": "Exact original Git-blob bytes; complete graph; approved esbuild; hoisted dependencies"
+    },
+    {
+      "Script": "replay",
+      "ExitCode": 0,
+      "StartedUtc": "2026-10-27T16:50:35.7897508Z",
+      "FinishedUtc": "2026-10-27T16:50:36.3342951Z",
+      "Execution": "Exact original Git-blob bytes; complete graph; approved esbuild; hoisted dependencies"
+    },
+    {
+      "Script": "asset-check",
+      "ExitCode": 0,
+      "StartedUtc": "2026-10-27T16:50:36.3470545Z",
+      "FinishedUtc": "2026-10-27T16:50:37.2123836Z",
+      "Execution": "Exact original Git-blob bytes; complete graph; approved esbuild; hoisted dependencies"
+    },
+    {
+      "Script": "build",
+      "ExitCode": 0,
+      "StartedUtc": "2026-10-27T16:50:37.2283520Z",
+      "FinishedUtc": "2026-10-27T16:50:47.3886837Z",
+      "Execution": "Exact original Git-blob bytes; complete graph; approved esbuild; hoisted dependencies"
+    }
+  ],
+  "authoringStrictTypecheckExitCode": 0,
+  "headlessRuntimePassed": true,
+  "headlessBrowserClosed": true,
+  "localServersClosed": true,
+  "originalPlayerProfilesAccessed": false,
+  "guiInputHoldMaintained": true,
+  "protectedSha256": {
+    "package.json": "1b99157e34d9e0ce5c47cac21e7bc493862167bbd007105630f56e687b239e21",
+    "package-lock.json": "7bd5969eb654de64436e28a8f1da44aba42e3452fea31334224195107d5b4096",
+    "assets/authoring/misaki-grayform-v1/misaki-grayform.blend": "e8d5b774c5aba9fecbba3800732592c6b1eb66b34e74e6622c0099d6b60ed7a9",
+    "public/assets/misaki-grayform-v1/misaki-grayform.glb": "29f4ff9e8711f80cef1f5d899d9c5f0fab0facbf1841274678313581998bb823"
+  },
+  "noNewArt": true,
+  "noPublicDeployment": true,
+  "reusableDependenciesRetained": true
+}

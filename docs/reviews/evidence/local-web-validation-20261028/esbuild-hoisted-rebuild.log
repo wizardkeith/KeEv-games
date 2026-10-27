@@ -1,0 +1,2 @@
+node_modules/esbuild postinstall$ node install.js
+node_modules/esbuild postinstall: Done

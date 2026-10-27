@@ -1,1 +1,15 @@
+# Frozen source/asset receipts hash canonical bytes across Windows and cloud.
+* text=auto eol=lf
+*.blend -text
+*.glb -text
+*.png -text
+*.jpg -text
+*.jpeg -text
+*.webp -text
+*.webm -text
+*.ttf -text
+*.woff -text
+*.woff2 -text
+*.zip -text
+*.env -text
 *.pdf binary

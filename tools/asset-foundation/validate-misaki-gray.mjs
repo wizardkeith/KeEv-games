@@ -1,5 +1,5 @@
 import fs from'node:fs';import crypto from'node:crypto';import assert from'node:assert/strict';import{execFileSync}from'node:child_process';import validator from'gltf-validator';import{Matrix,Quaternion,Vector3}from'@babylonjs/core/Maths/math.vector.js';
-const out='docs/reviews/evidence/misaki-grayform-v1-r6';fs.mkdirSync(out,{recursive:true});
+const out=process.env.QA_OUTPUT||'docs/reviews/evidence/misaki-grayform-v1-r6';fs.mkdirSync(out,{recursive:true});
 const path='public/assets/misaki-grayform-v1/misaki-grayform.glb',bytes=fs.readFileSync(path),v=await validator.validateBytes(new Uint8Array(bytes),{uri:'misaki-grayform.glb'});assert.equal(v.issues.numErrors,0);assert.equal(v.issues.numWarnings,0);
 const n=bytes.readUInt32LE(12),g=JSON.parse(bytes.subarray(20,20+n)),bin=bytes.subarray(28+n),bounds={};
 function visit(i,parent){const node=g.nodes[i],local=node.matrix?Matrix.FromArray(node.matrix):Matrix.Compose(Vector3.FromArray(node.scale??[1,1,1]),Quaternion.FromArray(node.rotation??[0,0,0,1]),Vector3.FromArray(node.translation??[0,0,0])),world=local.multiply(parent);

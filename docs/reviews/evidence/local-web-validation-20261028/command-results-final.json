@@ -1,0 +1,37 @@
+[
+  {
+    "Script": "test",
+    "ExitCode": 1,
+    "StartedUtc": "2026-10-27T16:50:14.0630601Z",
+    "FinishedUtc": "2026-10-27T16:50:35.1930274Z",
+    "Execution": "Exact original Git-blob bytes; complete graph; approved esbuild; hoisted dependencies"
+  },
+  {
+    "Script": "validate",
+    "ExitCode": 0,
+    "StartedUtc": "2026-10-27T16:50:35.2293115Z",
+    "FinishedUtc": "2026-10-27T16:50:35.7778868Z",
+    "Execution": "Exact original Git-blob bytes; complete graph; approved esbuild; hoisted dependencies"
+  },
+  {
+    "Script": "replay",
+    "ExitCode": 0,
+    "StartedUtc": "2026-10-27T16:50:35.7897508Z",
+    "FinishedUtc": "2026-10-27T16:50:36.3342951Z",
+    "Execution": "Exact original Git-blob bytes; complete graph; approved esbuild; hoisted dependencies"
+  },
+  {
+    "Script": "asset-check",
+    "ExitCode": 0,
+    "StartedUtc": "2026-10-27T16:50:36.3470545Z",
+    "FinishedUtc": "2026-10-27T16:50:37.2123836Z",
+    "Execution": "Exact original Git-blob bytes; complete graph; approved esbuild; hoisted dependencies"
+  },
+  {
+    "Script": "build",
+    "ExitCode": 0,
+    "StartedUtc": "2026-10-27T16:50:37.2283520Z",
+    "FinishedUtc": "2026-10-27T16:50:47.3886837Z",
+    "Execution": "Exact original Git-blob bytes; complete graph; approved esbuild; hoisted dependencies"
+  }
+]

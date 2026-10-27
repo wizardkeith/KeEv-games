@@ -1,6 +1,14 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-28T00:32:12+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-28T01:01:44+08:00** (Asia/Hong_Kong).
+
+## 本機Web build／背景資產實載通過，原測試301/302／R6美術仍未接受 — 2026-10-28T01:01:44+08:00
+
+- 使用者明確批准獨立工程的鎖定依賴及esbuild必需script。從原npm lock匯入pnpm lock，25個實裝name/version逐一符合原lock；只跑esbuild0.25.12 postinstall。專案局部strict白名單／run不自動安裝／hoisted佈局與Windows native command link已核對，無global install／PATH／安全／Unity外掛變更。[完整本機驗證、唯一失敗及截圖](docs/LOCAL_WEB_VALIDATION_2026-10-28_zh-HK.md)。
+- build含原TypeScript、內容validate、replay、root asset-check、作者entry strict TS及R6 validator均exit0；R6 GLB0錯警、29accepted資產與source/streams保護通過。原測試302項301pass/1fail/0skip：VisitorA GLB唯一JSON材質blue值差3.469446951953614e-18，binary／accessors相同；Misaki/B逐byte同，原master及原斷言不改，不稱全套PASS。
+- 獨立headless Chrome156實際studio/game authoring載入R6 GLB與source/dist同SHA；原production preview也worldReady，0pageerror/requestfailure。freshSandbox真UI買3杯5000→4790／stock3／shelf2／reload／Low→High／獨立Normal隔離通過，從未附加玩家profile或取桌面焦點。WebGL實報Intel UHD／D3D11，非雲端SwiftShader，但不是FPS/audio/native-device或視覺接受。
+- 只按原Git blob逐檔核對後恢復Windows canonical LF，保留原PDF binary規則；補同分支歷史圖供保護測試，舊證據被原工具改寫後已另存本輪結果並復原。原package.json/npm lock／遊戲source/assets/reference/hosting身份不變；R6 validator只加QA_OUTPUT可選位置，assert不變。依賴/store與最新dist留本機重用但不提交，最小sanitized證據及設定同步後再清理冗餘scratch。
+- 本輪沒有新美術、R6身份／畫風接受或唯一writer接管；GUI hold、Unity license／整合界限保持。main/PR8/原Site/玩家Normal/Library身份不動，無PR retry、merge、公開或Unity遷移。同步後完整SHA與clean狀態由外部readback回報。
 
 ## 診斷JSON跨平台換行整理 — 2026-10-28T00:32:12+08:00
 
