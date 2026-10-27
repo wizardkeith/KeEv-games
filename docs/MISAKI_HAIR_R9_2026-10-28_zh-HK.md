@@ -56,4 +56,8 @@ Blender5.2.3LTS保存後，獨立背景程序重新開`.blend`，再於空場景
 
 正常鏡頭中後方灰色A-pose是DEV sample `[.85,.079,1.35]`、yawπ；前方彩色gameplay staff仍原版，普通`/`未採用此grayform。沒有持續FPS、實體裝置、音訊或動畫認證。測試產生的舊locomotion證據先另存本輪，再還原tracked歷史bytes。
 
-重現指令見[authoring README](../tools/asset-foundation/MISAKI_GRAY_README.md)。完整證據同步並獨立讀回前不清理；之後僅回收task-owned冗餘暫存，保留原圖、最新來源、必要證據、Git中的R8 rollback及可重用依賴。這輪停在可覆核體積，無GUI、Unity、PR重試、merge、公開Site或Normal變更。
+重現指令見[authoring README](../tools/asset-foundation/MISAKI_GRAY_README.md)。完整證據提交 `c80db40a37b26ae96e0399d6e7a9d0b81c11b5c8` 已normal push及獨立讀回同SHA；其後只補收尾記錄，來源與圖片不變。
+
+同步後才清理本任務 `hair-r9` 暫存：25個檔案先收入ZIP，逐一驗證長度與SHA256後才移除原目錄。邏輯容量2,555,803→1,174,722 bytes，減少1,381,081 bytes；實體free-space／RAM節省未量度或宣稱。回退ZIP仍在task根目錄 `hair-r9-scratch-rollback-c80db40.zip`，SHA256 `1de70e1eec393b2bafe4113f00868c42313237e5d153759e0508caf1e77a198f`；詳見[清理回執](reviews/evidence/misaki-grayform-v1-r9/cleanup.json)。原圖、正式模型、全部必要實拍／驗證、Git中的R8 rollback、舊回退ZIP及可重用依賴保留；沒有終止用戶程序。
+
+最終收尾commit與遠端SHA由交付訊息外部讀回，不在本文自引用。這輪停在可覆核體積，未獲視覺接受；無GUI、Unity、PR重試、merge、公開Site或Normal變更。

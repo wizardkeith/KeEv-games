@@ -92,12 +92,21 @@
   "noNewSoftwareOrPlugin": true,
   "noPlayerProfileAccess": true,
   "cleanup": {
-    "performed": false,
-    "reason": "Await verified full evidence sync before recoverable cleanup"
+    "performed": true,
+    "receipt": "cleanup.json",
+    "verifiedFiles": 25,
+    "recoveryArchiveSha256": "1de70e1eec393b2bafe4113f00868c42313237e5d153759e0508caf1e77a198f",
+    "logicalBytesBefore": 2555803,
+    "recoveryArchiveBytes": 1174722,
+    "logicalDataReductionBytes": 1381081,
+    "physicalFreeDiskSavingsBytes": null,
+    "memorySavingsMeasured": false
   },
   "limits": [
     "Side/back inferred",
     "Ray/distance/topology checks are not physical attachment, collisions or art acceptance",
     "No physical-device/FPS/audio/rig certification"
-  ]
+  ],
+  "evidenceCommit": "c80db40a37b26ae96e0399d6e7a9d0b81c11b5c8",
+  "evidenceRemoteReadback": "c80db40a37b26ae96e0399d6e7a9d0b81c11b5c8"
 }

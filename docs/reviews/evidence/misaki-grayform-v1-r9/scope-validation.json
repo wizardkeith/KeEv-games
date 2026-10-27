@@ -8,6 +8,7 @@
     "tools/asset-foundation/MISAKI_GRAY_README.md"
   ],
   "newFiles": [
+    "docs/reviews/evidence/misaki-grayform-v1-r9/cleanup.json",
     "docs/MISAKI_HAIR_R9_2026-10-28_zh-HK.md",
     "docs/reviews/evidence/misaki-grayform-v1-r9/asset-validation.json",
     "docs/reviews/evidence/misaki-grayform-v1-r9/blender-edit-preservation.json",
@@ -23,6 +24,7 @@
     "docs/reviews/evidence/misaki-grayform-v1-r9/logs/reopen.log",
     "docs/reviews/evidence/misaki-grayform-v1-r9/logs/replay.log",
     "docs/reviews/evidence/misaki-grayform-v1-r9/logs/runtime-full.log",
+    "docs/reviews/evidence/misaki-grayform-v1-r9/logs/scope-final.log",
     "docs/reviews/evidence/misaki-grayform-v1-r9/logs/scope.log",
     "docs/reviews/evidence/misaki-grayform-v1-r9/logs/test.log",
     "docs/reviews/evidence/misaki-grayform-v1-r9/logs/typecheck.log",
