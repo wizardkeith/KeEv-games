@@ -3,7 +3,8 @@ Raw PNGs and the exact original remain unmodified. No colour/lighting edits.
 """
 from PIL import Image,ImageDraw,ImageFont
 from pathlib import Path
-root=Path(__file__).resolve().parents[2];out=root/'docs/reviews/evidence/asset-foundation-v1'
+import os
+root=Path(__file__).resolve().parents[2];out=root/os.environ.get('QA_OUTPUT','docs/reviews/evidence/asset-foundation-v1-r2')
 font=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',17)
 items=[('EXACT ORIGINAL • left shop crop',root/'docs/codex-v4/reference/Approved_Visual_Target_Misaki.png',(0,0,1184,1024)),('ACTUAL GAME • material prototype',out/'material-normal-game.png',(105,75,1190,800)),('ACTUAL GAME • prototype grayform',out/'gray-normal-game.png',(105,75,1190,800))]
 images=[]

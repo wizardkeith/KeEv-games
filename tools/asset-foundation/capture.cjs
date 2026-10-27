@@ -1,6 +1,6 @@
 const {chromium}=require('/opt/codex/cua_node/lib/node_modules/playwright');
 const fs=require('fs'),assert=require('node:assert/strict');
-const out='docs/reviews/evidence/asset-foundation-v1';
+const out=process.env.QA_OUTPUT||'docs/reviews/evidence/asset-foundation-v1-r2';fs.mkdirSync(out,{recursive:true});
 async function save(p,mode){return p.evaluate(mode=>new Promise(resolve=>{const r=indexedDB.open('next-stop-little-shop-w1');r.onsuccess=()=>{const d=r.result,q=d.transaction('saves','readonly').objectStore('saves').get('shop.w1.'+mode);q.onsuccess=()=>{resolve(q.result);d.close()}}}),mode)}
 (async()=>{const b=await chromium.launch({executablePath:'/usr/bin/chromium',headless:true,args:['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']});const report={screenshots:[],errors:[],limitations:['Chromium SwiftShader cloud render, no physical GPU/FPS/native acceptance','Prototype decoration does not represent player inventory']};try{
  for(const mode of ['material','gray']){
@@ -18,5 +18,5 @@ async function save(p,mode){return p.evaluate(mode=>new Promise(resolve=>{const 
  }
  await c.close();console.log(mode+' game done');}
  for(const gray of [false,true]){const c=await b.newContext({viewport:{width:1000,height:900}}),p=await c.newPage();p.on('pageerror',e=>{report.errors.push(String(e));console.log('PAGEERROR',String(e))});await p.goto('http://127.0.0.1:4199/tools/asset-foundation/studio.html'+(gray?'?gray':''));await p.waitForFunction(()=>window.foundationStudio?.ready,undefined,{timeout:120000});await p.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));const file='fixed-light-'+(gray?'gray':'material')+'.png';await p.screenshot({path:out+'/'+file});report.screenshots.push(file);report['studio'+gray]=await p.evaluate(()=>window.foundationStudio);await c.close();}
- assert.deepEqual(report.errors,[]);fs.writeFileSync(out+'/capture.json',JSON.stringify(report,null,2));console.log('PASS foundation real app screenshots and Sandbox lifecycle');
+ assert.deepEqual(report.material.before.world.cameraPose,report.gray.before.world.cameraPose);assert.deepEqual(report.material.before.foundation.lighting,report.gray.before.foundation.lighting);assert.ok(report.material.before.foundation.lighting.actualMaterials.every(m=>m.maxSimultaneousLights===8&&m.environmentIntensity===.8));assert.deepEqual(report.errors,[]);fs.writeFileSync(out+'/capture.json',JSON.stringify(report,null,2));console.log('PASS foundation real app screenshots and Sandbox lifecycle');
 }finally{await b.close()}})().catch(e=>{console.error(e);process.exit(1)});
