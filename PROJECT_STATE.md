@@ -1,6 +1,10 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T09:18:03+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T09:47:05+08:00** (Asia/Hong_Kong).
+
+## V11 C43有遮蔽廣域光試樣／驗證中 — 2026-10-27T09:47:05+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)推送application`4df471263d6bb5c2aaf6d0591f66f5240a875d94`。C42獨立視覺FAIL、RTT生命週期修正PASS並保留；普通光照仍C40。C43在完全相同C42光量／模型／材質／相機／192反射下，以實際深度法線SSAO2測試層架背面、桌底及前櫃落地的柔遮蔽，非GI或原圖達標。首輪viewport錯位及玻璃黑塊試樣拒用；270修正純buffer／合成座標並只用不透明occluder，實際正常與雙斜角已取得，279tests通過；控制組及庫存／Low-High流程進行中。**未採用／未合併／未發佈，原圖美術仍未接受。** C42原片665.160秒只有184來源幀（中位約3.94秒、最大17.61秒間隔），不是連續動作認證；本輪亦不以稀疏雲端片推論平滑度或GPU完成畫格。main僅文件指標，本輪未改公開V17，無玩家Normal或Chrome／Unity／Site／Library或LTC重試／關機，無使用者動作阻塞。
 
 ## V11 C42固定廣域光／同render證據，待獨立視覺覆核 — 2026-10-27T09:18:03+08:00
 
