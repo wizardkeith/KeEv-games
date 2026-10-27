@@ -1,0 +1,18 @@
+BJS - [23:48:45]: Babylon.js v8.32.0 - Null engine
+✔ mug rim shares both wall boundaries and seals the full polygonal annulus while leaving cavity open (47.082163ms)
+✔ mug handle has measured upper/lower surface contacts and an unobstructed opening without entering cavity (4.314141ms)
+✔ capped handle arc keeps finite unit normals, correct cap planes and nondegenerate winding (0.79167ms)
+✔ actual runtime material adapter and independent GLB import agree on sidedness and common PBR state (96.96289ms)
+✔ published W1.1A masters/manifests remain intact and exact authoring source is frozen (1.480587ms)
+BJS - [23:48:45]: Babylon.js v8.32.0 - Null engine
+✔ C41 is default-off; aperture texture is a bounded scalar window in world space, not a photograph (19.250496ms)
+✔ C41 shadows follow the existing live caster lifecycle and future stock materials retain the light budget (39.654596ms)
+✔ C41 native cookie and receipt match actual procedural mask and current source bytes (5.564335ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 954.48633

@@ -1,0 +1,30 @@
+{
+  "application": "cac185234c6813b07e6bb2f09a83842f22cc2110",
+  "variants": {
+    "aperture": {
+      "build": 260,
+      "flags": {
+        "VITE_V11_SCENE_WINDOW": "aperture"
+      }
+    },
+    "base": {
+      "build": 261,
+      "flags": {
+        "VITE_V11_SCENE_WINDOW": "control"
+      }
+    }
+  },
+  "default": "control, accepted C40 baseline remains ordinary development default",
+  "reference": {
+    "path": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+    "sha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114"
+  },
+  "media": "Actual runnable WebGL. Normal1440x1200, Low1280x900, High flow960x720; original-reference matrices only crop/resize/label, natural actor phases differ. No generated mockup, painted shop backdrop, pose/camera/state injection.",
+  "uncutSeconds": {
+    "base": 95.6,
+    "aperture": 95.68,
+    "flow": 228.68
+  },
+  "browser": "Installed Chromium154.0.8037.57, ANGLE SwiftShader; software rendering only",
+  "wholeArt": "Still not original target quality/style; C41 optical gate pending independent review, not adopted or published."
+}
