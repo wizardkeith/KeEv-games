@@ -1,10 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T14:35:03+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-28T02:00:08+08:00** (Asia/Hong_Kong).
 
-## V11 C50入口保留係數修正驗證中 — 2026-10-27T14:35:03+08:00
+## V11 C50最小修正已推／完整證據交付受阻 — 2026-10-28T02:00:08+08:00
 
-- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送application`78fbae7f519e4c443d5971bb18208e1c4f9de64e`。依C49獨立門檻FAIL只改兩處鏡像入口係數 .55→1.0；新增測試逐byte鎖定其餘補光公式，中央／收銀／牆面、key／shadow／specular／曝光／.20AO／素材相機不變。302tests／146GLB／305保護檔／509資產重建同通過。正用保留C49build318與新版本做正常／雙斜角／完整DOM捕圖，入口恢復與無亮圈尚未宣稱通過；普通仍C45，原圖整體未接受，main僅文件指標，無merge／公開版／玩家Normal／Chrome或Unity改動。無需使用者動作阻塞。
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)遠端已讀回application `78fbae7f519e4c443d5971bb18208e1c4f9de64e`，仍Draft／未合併。只改兩處鏡像入口係數 .55→1.0；上次執行完成302tests／146GLB／305保護檔／509資產重建同、匹配正常與雙斜角／Low-High／買入reload。實際門內點恢復（display luma138.95→157.41，歷史composite157.19），但舊screen ROI中心對應世界z≈.78，位於保留區z≥1.3之外，仍約−17%；未移動舊ROI或改邊界，**不自判整區門檻PASS／未採用／整體原圖仍未接受**。普通仍C45，本輪無公開版／Normal玩家存檔變更。
+- 完整報告、來源PNG／原片／接收位置已在原執行環境提交本地 `05449d3d7aca9556acf6c665237ca0921df68aa5`，但最後Git HTTPS push報「could not read Username」；遠端PR仍停在78fbae7，**完整證據尚未推送，不能稱遠端交付或發佈就緒**。GitHub連線文字blob寫入曾成功，但最後圖片blob呼叫被中止，結果不確定；未重試不確定寫入／未更新ref。2026-10-27 18:00UTC再核對PR後，選定保存環境仍在啟動，暫無法讀回本地檔案及圖片blob SHA。待環境可用先核對已保存資料與遠端，再完成正常授權交付；不建立新憑證／不改安全設定。main此提交僅記錄確定進度與阻塞，功能未合併；無merge／Site／使用者Chrome-Unity／Library或LTC重試／關機。剩餘為環境恢復／Git認證交付阻塞，及上述視覺覆核，並非美術接受。
 
 ## V11 C49世界空間漫射固定候選／未採用 — 2026-10-27T14:24:32+08:00
 
