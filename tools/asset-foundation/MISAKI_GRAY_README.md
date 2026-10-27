@@ -1,4 +1,46 @@
-# Misaki R7 — native forehead curtain review candidate
+# Misaki R8 — coherent whole-hair review candidate, unaccepted
+
+Current canonical sample is R8. R7 failed independent hair/identity review.
+All seven unaccepted hair groups10-16 are now reshaped together into14 medium
+clumps, with separate dominant endpoints, a clipward supporting sweep, curved
+ear frames and unequal jaw-level ends. All37 non-hair native/evaluated objects,
+27 non-hair GLB streams/TRS, seven gray materials and frozen studio/game TS
+camera/light sources remain unchanged. No individual strands, rig or clothing
+work. Side/back remain inferred from the original illustration.
+
+Actual render feedback exposed overly open coverage in the first draft. One
+structural correction established overlapping sections, ear-side turns and
+fixed-clip support. The optional frozen-head ray envelope adjusted zero cage
+vertices; do not claim it fixed penetration. Final ray sampling found zero
+hair-blocked upper-lash vertices in front/three-quarter, versus30 on R7's
+own-right front lash. This is not final-pixel eye visibility or art acceptance.
+
+**R8 still has conspicuous geometric root joins, large panel-like layers and
+an insufficiently natural bob. Clip support remains imperfect.** The final
+head/normal-game comparisons are the review checkpoint, not a visual PASS.
+See `docs/MISAKI_HAIR_R8_2026-10-28_zh-HK.md` and evidence folder `r8`.
+Seven native objects contain14 separate closed control nets; edit their actual
+quad vertices and retained Subsurf1. Hidden poly guides are references only.
+This was background Python authoring plus headless render feedback, not GUI
+dragging, monitor isolation or a Blender/Unity MCP integration demonstration.
+
+```powershell
+# In this checkout; use only a task-owned temporary directory.
+New-Item -ItemType Directory -Force ../hair-r8/baseline | Out-Null
+node -e "const f=require('fs'),c=require('child_process'),b='6e1fd6dcbad834765331b893d5f709953e29244d';for(const [p,n]of [['assets/authoring/misaki-grayform-v1/misaki-grayform.blend','misaki-grayform.blend'],['assets/authoring/misaki-grayform-v1/manifest.json','manifest.json'],['public/assets/misaki-grayform-v1/misaki-grayform.glb','misaki-grayform.glb']])f.writeFileSync('../hair-r8/baseline/'+n,c.execFileSync('git',['show',b+':'+p],{maxBuffer:8*1024*1024}));"
+& 'C:/Program Files/Blender Foundation/Blender 5.2/blender.exe' --background --factory-startup --python-exit-code 1 --python tools/asset-foundation/misaki-hair-r8.py -- --baseline ../hair-r8/baseline/misaki-grayform.blend --manifest ../hair-r8/baseline/manifest.json
+& 'C:/Program Files/Blender Foundation/Blender 5.2/blender.exe' --background --factory-startup --python-exit-code 1 --python tools/asset-foundation/inspect-misaki-r8.py -- --baseline ../hair-r8/baseline/misaki-grayform.blend
+$env:QA_OUTPUT='docs/reviews/evidence/misaki-grayform-v1-r8'
+node tools/asset-foundation/validate-misaki-gray.mjs
+node tools/asset-foundation/check-misaki-r8-scope.cjs
+$env:R7_GLB=(Resolve-Path ../hair-r8/baseline/misaki-grayform.glb).Path
+# Set CODEX_NODE_MODULES to the existing bundled Playwright directory.
+node tools/asset-foundation/capture-misaki-r8.cjs
+# Existing Python with Pillow:
+python tools/asset-foundation/compare-misaki-r8.py
+```
+
+## Historical R7 instructions (superseded; not the current rebuild)
 
 Current source is R7. Read `docs/MISAKI_HAIR_R7_2026-10-28_zh-HK.md`
 and `docs/reviews/evidence/misaki-grayform-v1-r7` for actual same-machine

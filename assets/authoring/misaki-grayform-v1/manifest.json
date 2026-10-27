@@ -133,39 +133,39 @@
       "triangles": 152
     },
     "16 / local curved crown root join": {
-      "controlVertices": 144,
-      "controlQuads": 142,
-      "triangles": 1136
+      "controlVertices": 100,
+      "controlQuads": 96,
+      "triangles": 768
     },
     "13 / rear central flow": {
-      "controlVertices": 144,
-      "controlQuads": 142,
-      "triangles": 1136
+      "controlVertices": 180,
+      "controlQuads": 176,
+      "triangles": 1408
     },
     "14 / fuller rear own-right flow": {
-      "controlVertices": 144,
-      "controlQuads": 142,
-      "triangles": 1136
+      "controlVertices": 270,
+      "controlQuads": 264,
+      "triangles": 2112
     },
     "15 / shorter rear own-left flow": {
-      "controlVertices": 144,
-      "controlQuads": 142,
-      "triangles": 1136
+      "controlVertices": 180,
+      "controlQuads": 176,
+      "triangles": 1408
     },
     "10 / primary swept fringe": {
-      "controlVertices": 220,
-      "controlQuads": 218,
-      "triangles": 1744
+      "controlVertices": 180,
+      "controlQuads": 176,
+      "triangles": 1408
     },
     "11 / underlapping temple turn": {
-      "controlVertices": 112,
-      "controlQuads": 110,
-      "triangles": 880
+      "controlVertices": 90,
+      "controlQuads": 88,
+      "triangles": 704
     },
     "12 / shorter swept own-left ear side": {
-      "controlVertices": 144,
-      "controlQuads": 142,
-      "triangles": 1136
+      "controlVertices": 180,
+      "controlQuads": 176,
+      "triangles": 1408
     },
     "17 / own LEFT clip leaf 0": {
       "controlVertices": 14,
@@ -268,14 +268,14 @@
       "triangles": 832
     }
   },
-  "triangles": 49720,
+  "triangles": 50632,
   "limitations": [
     "Grayform only, not final facial topology, skin weights, animation or art acceptance",
     "Side/back volumes inferred from canonical original; PlanB comparison pending readable access",
     "Existing gameplay rig/actions/data/saves untouched",
     "No final materials, textures, fine strands, weave or finger topology",
     "Back bow omitted rather than claiming an unseen reference",
-    "R7 is a single hair-form review candidate; technical validation is not visual acceptance"
+    "R8 is a whole-hair review candidate, not visual acceptance; side/back remain inferred"
   ],
   "soleNormalization": 0.0006406807224266231,
   "semanticExportGroups": [
@@ -285,9 +285,9 @@
     "own-left-clip",
     "clothed-body"
   ],
-  "hairMethod": "R7 objects 10/11: native explicit closed two-layer quad control nets, staggered diagonal rim and forehead depth; local Subsurf1; 12-16 frozen R6; guides reference only",
-  "revision": "R7 explicit forehead curtain and separate inner overlap / other 42 source cages frozen",
+  "hairMethod": "14 medium clumps in seven editable semantic groups; explicit row centres and transverse vectors; separate unequal endpoints; thin closed shells; local Subsurf1; reference guides are not live drivers",
+  "revision": "R8 coherent whole-hair rearrangement / non-hair frozen / unaccepted review candidate",
   "headNeckOffset": 0.045,
   "bodyFrozenSource": "038740fbd7f6428cc82d5f442646c2d86a4143e3",
-  "sourceBaselineSha256": "e8d5b774c5aba9fecbba3800732592c6b1eb66b34e74e6622c0099d6b60ed7a9"
+  "sourceBaselineSha256": "71a6de35f99476a3d155a6912eb5a3eac05a5ddcecf00521928729765e7e8702"
 }
