@@ -14,8 +14,11 @@
     "No device or WebGL visual validation is implied by this export."
   ],
   "sources": {
+    "src/art/scene-contact-intent-v11.ts": "fa47f1de82237669f97d6ee3848e10a63b8660a081a63c55121d4084e21b0741",
+    "tools/export-v11-scene-contact.ts": "10719dbbdfd4a9b3654b8ac7f40ec131ad6ae65e604baf0a3e0f9f38bc307632",
+    "assets/authoring/native-v11/scene-contact-c44.json": "41bc40c83c557292a63ac31bf6bd2ee1e23bfc7670645a6d06d962ad9f140147",
     "src/art/scene-occlusion-intent-v11.ts": "5a8e78465949f332425d2018764fc7ce6f8c876c96ec44be132b7a0bfefcfd19",
-    "src/art/scene-occlusion-v11.ts": "679ad1b72e5e97b651813825d9ad9df1433f0f1a65693b72f0505cfecbfa1234",
+    "src/art/scene-occlusion-v11.ts": "dd559842d4e0959f2f85fa67816684a3fb8f8f03d554e90ccb43415c91448b22",
     "tools/export-v11-scene-occlusion.ts": "89ce9bcb70e9d2b6c015fd00fe87e94dfa92547701a5a37feed1a88fbd992d4f",
     "assets/authoring/native-v11/scene-occlusion-c43.json": "fffc12320a96244be7daf1650222635cd7a686ec823dc82b339b8289a158e22a",
     "src/art/table-contact-v11.ts": "fb6d76573f5a4fb3168775c35d142c66277bf954b8149d34a9e2e22d6c677f22",
@@ -23,7 +26,7 @@
     "src/art/shadow-pass-audit-v11.ts": "09d4ba2a4c4830169fca54a7c5a24925774997e37b994f99bdd14c873b39f377",
     "tools/export-v11-scene-balance.ts": "99e4b0fd40a07f363f4879072e255d1a75c01de62ccc71f728530e4ede6a2287",
     "assets/authoring/native-v11/scene-balance-c42.json": "ba3423b0a6bb0d85bde22f1bf09c9c70c25e650939ff1e34130d13c422242ab4",
-    "src/art/scene-window-light-v11.ts": "f89743f512d5f18314fefac9b3ff9165e977c29fe28e50fa10ab6ea5be615998",
+    "src/art/scene-window-light-v11.ts": "02e23b50644afe79f432257122398ce086fca9839247186b990c0f91ff6c8ba7",
     "tools/export-v11-scene-window.ts": "da4fb6922ff22188f7c354409d2e29f5a363eec716f04421983e91292a221434",
     "assets/authoring/native-v11/scene-window-c41.json": "5d1be5f3c13b935b6636a05870a9845243c30b63abeac8f24223fd25d2cef6b6",
     "tools/export-v11-backwall-adoption.ts": "b499c6258c15c6b1f860ff5547ec3097c477137cec3e4e9573524c6de39e8ccb",
@@ -159,7 +162,7 @@
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "432f387c45f07b2ef9c0adb8207e0e1d44e143d64343bd8cd49b240dee72001d",
-    "tools/export-native-environment.ts": "58429bf945cb182827357f01344d53a4ad3d6697141be605bb1dc320c2a91216"
+    "tools/export-native-environment.ts": "8bf444ec847e7f74741ede333b5cf346a45e6cdbc1b9e615de8e175937580d5d"
   },
   "presentation": {
     "camera": {
@@ -420,6 +423,70 @@
     }
   },
   "rendererExtensions": {
+    "sceneContactAuthoring": {
+      "lighting": {
+        "id": "v11.c44.same-broad-light.v1",
+        "mode": "control",
+        "defaultAdopted": false,
+        "position": [
+          -6.8,
+          3.1,
+          0
+        ],
+        "target": [
+          -4.47,
+          1.84,
+          0
+        ],
+        "aperture": {
+          "x": -4.47,
+          "minY": 0.925,
+          "maxY": 2.755,
+          "minZ": -2.055,
+          "maxZ": 2.055,
+          "softEdge": 0.35
+        },
+        "angle": 1.9,
+        "intensity": 120,
+        "color": "#FFF2DC",
+        "residualKind": "hemisphere",
+        "residualDirection": [
+          0,
+          1,
+          0
+        ],
+        "residualColor": "#FFF0D9",
+        "residualGround": "#75624C",
+        "residualIntensity": 0.85,
+        "exteriorSunIntensity": 2.8,
+        "exteriorFillIntensity": 1.25,
+        "shadowSize": 1024,
+        "shadowSoftness": 0.16,
+        "shadowDarkness": 0.32,
+        "textureSize": 128,
+        "maxLights": 6,
+        "limits": "C42 illumination with depth/normal-driven occlusion. Same geometry/material/exposure; not GI, accepted target or adoption."
+      },
+      "occlusion": {
+        "id": "v11.c44.localized-contact.v1",
+        "defaultAdopted": false,
+        "engine": "Babylon8.32.0 SSAO2",
+        "radius": 0.2,
+        "strength": 1,
+        "base": 0.12,
+        "samples": 16,
+        "epsilon": 0.025,
+        "geometryRatio": 0.5,
+        "blurRatio": 0.5,
+        "bilateralSamples": 8,
+        "bilateralSoften": 0.35,
+        "bilateralTolerance": 0.1,
+        "maxZ": 50,
+        "minZAspect": 0.1,
+        "low": "No added geometry buffer or SSAO passes; existing Low lighting retained",
+        "limits": "Screen-space depth/normal approximation, not complete indirect-light occlusion or GI. Final color multiplication also affects direct/specular response; hidden geometry and screen-edge limitations require actual normal/oblique review. No baked stock shadows or screen-fixed image."
+      }
+    },
     "sceneOcclusionAuthoring": {
       "lighting": {
         "id": "v11.c43.occluded-broad-fill.v3",

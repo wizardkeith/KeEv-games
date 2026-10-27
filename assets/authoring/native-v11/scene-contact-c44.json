@@ -1,0 +1,80 @@
+{
+  "lighting": {
+    "id": "v11.c44.same-broad-light.v1",
+    "mode": "contact",
+    "defaultAdopted": false,
+    "position": [
+      -6.8,
+      3.1,
+      0
+    ],
+    "target": [
+      -4.47,
+      1.84,
+      0
+    ],
+    "aperture": {
+      "x": -4.47,
+      "minY": 0.925,
+      "maxY": 2.755,
+      "minZ": -2.055,
+      "maxZ": 2.055,
+      "softEdge": 0.35
+    },
+    "angle": 1.9,
+    "intensity": 120,
+    "color": "#FFF2DC",
+    "residualKind": "hemisphere",
+    "residualDirection": [
+      0,
+      1,
+      0
+    ],
+    "residualColor": "#FFF0D9",
+    "residualGround": "#75624C",
+    "residualIntensity": 0.85,
+    "exteriorSunIntensity": 2.8,
+    "exteriorFillIntensity": 1.25,
+    "shadowSize": 1024,
+    "shadowSoftness": 0.16,
+    "shadowDarkness": 0.32,
+    "textureSize": 128,
+    "maxLights": 6,
+    "limits": "C42 illumination with depth/normal-driven occlusion. Same geometry/material/exposure; not GI, accepted target or adoption."
+  },
+  "occlusion": {
+    "id": "v11.c44.localized-contact.v1",
+    "defaultAdopted": false,
+    "engine": "Babylon8.32.0 SSAO2",
+    "radius": 0.2,
+    "strength": 1,
+    "base": 0.12,
+    "samples": 16,
+    "epsilon": 0.025,
+    "geometryRatio": 0.5,
+    "blurRatio": 0.5,
+    "bilateralSamples": 8,
+    "bilateralSoften": 0.35,
+    "bilateralTolerance": 0.1,
+    "maxZ": 50,
+    "minZAspect": 0.1,
+    "low": "No added geometry buffer or SSAO passes; existing Low lighting retained",
+    "limits": "Screen-space depth/normal approximation, not complete indirect-light occlusion or GI. Final color multiplication also affects direct/specular response; hidden geometry and screen-edge limitations require actual normal/oblique review. No baked stock shadows or screen-fixed image."
+  },
+  "sources": {
+    "src/art/scene-contact-intent-v11.ts": "fa47f1de82237669f97d6ee3848e10a63b8660a081a63c55121d4084e21b0741",
+    "src/art/scene-occlusion-intent-v11.ts": "5a8e78465949f332425d2018764fc7ce6f8c876c96ec44be132b7a0bfefcfd19",
+    "src/art/scene-occlusion-v11.ts": "dd559842d4e0959f2f85fa67816684a3fb8f8f03d554e90ccb43415c91448b22",
+    "src/art/scene-window-light-v11.ts": "02e23b50644afe79f432257122398ce086fca9839247186b990c0f91ff6c8ba7",
+    "src/art/table-contact-v11.ts": "fb6d76573f5a4fb3168775c35d142c66277bf954b8149d34a9e2e22d6c677f22",
+    "src/world.ts": "005635a03ce35dad5ee05301524527f6fd4e8715d63a3fa39e834479554d0c9a",
+    "vite.config.ts": "9e1d5e35f7f51dca35c165201e44e4cd363f3cfbdf88f75094f066b83b1c44d6",
+    "tools/export-v11-scene-contact.ts": "10719dbbdfd4a9b3654b8ac7f40ec131ad6ae65e604baf0a3e0f9f38bc307632",
+    "assets/authoring/native-v11/scene-occlusion-c43.json": "fffc12320a96244be7daf1650222635cd7a686ec823dc82b339b8289a158e22a",
+    "node_modules/@babylonjs/core/PostProcesses/RenderPipeline/Pipelines/ssao2RenderingPipeline.js": "7678848d0849fac373153763aefd71d6164403cbe100592172750ec1bb2c78e6",
+    "node_modules/@babylonjs/core/Shaders/ssao2.fragment.js": "b960944b48eb5588f905035384f16eeb1ceaa8778075749a583b1cba1bb2a248",
+    "node_modules/@babylonjs/core/Shaders/ssaoCombine.fragment.js": "3017cfad9f6f1e4918597e3ba7b1aa695c53e588c4bac71d19ae1fb597bbe884"
+  },
+  "baseline": "C43 narrow visual FAIL for broad shelf halo. Retain grounding, C40 ordinary default and independently passed RTT lifecycle fix.",
+  "scope": "ONLY radius.70 to.20, other AO/light values and geometry/material/exposure/camera/192reflection/economy/save unchanged. Authoring candidate, not visual acceptance, GI, completed GPU frame or adoption."
+}

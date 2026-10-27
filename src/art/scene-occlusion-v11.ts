@@ -1,9 +1,9 @@
 import '@babylonjs/core/Rendering/geometryBufferRendererSceneComponent';
 import {SSAO2RenderingPipeline} from '@babylonjs/core/PostProcesses/RenderPipeline/Pipelines/ssao2RenderingPipeline';
 import type {Scene} from '@babylonjs/core/scene';import type {Camera} from '@babylonjs/core/Cameras/camera';
-import {sceneOcclusionIntent as intent} from './scene-occlusion-intent-v11';
+import {sceneOcclusionIntent} from './scene-occlusion-intent-v11';
 /** Authoring-only real geometry buffer. No inventory/camera/material mutation. */
-export function installSceneOcclusion(scene:Scene,camera:Camera){
+export function installSceneOcclusion(scene:Scene,camera:Camera,intent:Omit<typeof sceneOcclusionIntent,'id'|'radius'>&{id:string;radius:number}=sceneOcclusionIntent){
  let pipeline:SSAO2RenderingPipeline|undefined,epoch=0,quality='high';const supported=SSAO2RenderingPipeline.IsSupported;
  const remove=()=>{if(pipeline){pipeline.dispose();pipeline=undefined;scene.disableGeometryBufferRenderer();}};
  const install=()=>{if(!supported||pipeline||quality==='low')return;const buffer=scene.enableGeometryBufferRenderer(intent.geometryRatio);if(!buffer)throw Error('C43 geometry buffer unavailable');buffer.generateNormalsInWorldSpace=false;buffer.renderTransparentMeshes=false;buffer.getGBuffer().ignoreCameraViewport=true;pipeline=new SSAO2RenderingPipeline(intent.id,scene,{ssaoRatio:intent.blurRatio,blurRatio:intent.blurRatio},[camera],buffer);pipeline.useViewportInCombineStage=false;pipeline.radius=intent.radius;pipeline.totalStrength=intent.strength;pipeline.base=intent.base;pipeline.samples=intent.samples;pipeline.epsilon=intent.epsilon;pipeline.maxZ=intent.maxZ;pipeline.minZAspect=intent.minZAspect;pipeline.expensiveBlur=true;pipeline.bilateralSamples=intent.bilateralSamples;pipeline.bilateralSoften=intent.bilateralSoften;pipeline.bilateralTolerance=intent.bilateralTolerance;epoch++;};
