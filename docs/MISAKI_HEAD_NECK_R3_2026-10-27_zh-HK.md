@@ -1,5 +1,7 @@
 # Misaki R3 — 主瀏海髮量／較飽滿眼口，未獲identity PASS
 
+獨立覆核已判 **R3 identity FAIL**：融合／全局平滑把髮束流向與重疊抹成厚髮殼；[R4改用獨立控制曲面](MISAKI_HAIR_R4_2026-10-27_zh-HK.md)，保留R3眼形／R2臉頸及身體。以下為原固定候選紀錄，不再視為待判。
+
 Source `7b0d20fd91f537a43244a51c64afe64a1b7ec425`，仍只在`codex/asset-foundation-v1`。R2獨立頭頸identity gate仍FAIL，本輪只修髮量與眼口，**R3尚未獲風格／身份接受**。連續頰顎／鼻額、耳頸空隙與衣身保留；不做衣服、材質、rig／動畫或手指，不把3.24頭高當規格。
 
 ![原圖／R2／R3正面近似頭尺度；原圖姿勢及投影不同](reviews/evidence/misaki-grayform-v1-r3/original-r2-r3-front-head480.png)

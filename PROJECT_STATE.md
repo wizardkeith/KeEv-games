@@ -1,6 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T22:35:41+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T23:22:14+08:00** (Asia/Hong_Kong).
+
+## Misaki R4只改獨立髮束控制曲面／identity仍未接受 — 2026-10-27T23:22:14+08:00
+
+- 未合併`codex/asset-foundation-v1` source `42d99f7d01515577e46605fa43f635e0708ee3e0`已normalpush／readback同SHA；[原圖-R3-R4近似頭尺度、全身、實際正常480px雙斜角及限制](docs/MISAKI_HAIR_R4_2026-10-27_zh-HK.md)。R3獨立identity FAIL後只重做髮控制方法：不再球殼／6mm融合／12次全局平滑，不宣稱meshbudget或engine瓶頸。R4身份／原圖畫風仍未接受，不進衣物／材質／rig動畫。
+- 六個不同厚度的cubic／piecewiseBezier邊控制髮束＋局部拱形冠根underlap，共七個封邊兩層12×6cage，局部subdivision1，14條原生Bezier guides／控制屬性保留；前後overlap與不等薄尾分開，無全頭fusion／globalsmoothing／decimation／細髮。guide為可編輯參照非live驅動。自檢瀏海仍平片／前額偏露，冠根硬邊／斷續，後髮大片及過齊；下一步仍修中等曲率與流向，未當方法變更已過造型。
+- R3face-feature-body24組position-normal-index streams/TRS逐byte同，R3眼形／R2頰顎鼻額耳頸及原body衣物全保留；7灰材質、studio camera/light TS原檔、29已過R4/PaperR2資產作者檔及720原application保護檔bytes同。49,368tri（髮7,952）／5meshes／10primitives／902,128bytes，零images/skins/animations；props相鄰作者總121,064tri，不bulk／不宣稱LOD或裝置效能。
+- 本輪Blender4.3.2／GLB0error-warning／scope-frozen24streams-materials-assets／read-only來源眼孔頸位clip與七曲面14guides／strict作者TS（node,vite/client）／finalbuild通過；source-dist-studio-game實載SHA同，R3/R4正常camera／全燈及studio光逐值同。freshSandbox真UI買3杯5000→4790／stock3／原display3槽2／reload逐值同／Low→High／Normal隔離不變／0pageerror。前302tests-content-replay-legacychecks未重跑，SwiftShader非physicalGPU/FPS/audio/native／完整舊動作或美術認證。
+- feetY0、兩個真眼孔各40evaluated邊、頸頭縱bounds重疊58.38mm／chin至衣頂35.18mm保留。自身左+X夾156頂點unsigned髮面距離0.106–6.140mm、mean3.454mm，非完整contact/collisioncert。原生Library同image `libfile_0224bad58e5881918df7c73f50e81481`更新version3／file`file_000000001d908211b73e9df28e1cb0e0`／641,967bytes，舊0/1/2保留。
+- PlanB初次＋唯一fresh supported retry仍兩次官方helper exit1／`library file transfer failed: download failed`，兩目的地無ZIP／新圖／本機SHA；原因未明非denial，本輪無新retry／genericdownload／猜URL／替代credentials，側背推定及精確無secret錯誤原樣保留。PR建立維持先前拒絕停止，無retry／換route；main／PR8未寫，無merge／Site公開／payments／玩家Normal改動。除PlanB未比對外，無其他操作阻塞；本checkpoint證據只推隔離分支。
 
 ## Misaki R3髮量／眼口固定候選／仍未獲身份接受 — 2026-10-27T22:35:41+08:00
 

@@ -1,0 +1,6 @@
+{
+  "base": "78fbae7f519e4c443d5971bb18208e1c4f9de64e",
+  "protectedFiles": 720,
+  "byteIdentical": true,
+  "filter": "src/ assets/ public/assets/ .openai/ fixtures/ source-inputs/ + package.json package-lock.json vite.config.ts; only paths already in base"
+}

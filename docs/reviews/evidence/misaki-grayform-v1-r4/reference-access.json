@@ -1,0 +1,37 @@
+{
+  "library_file_id": "libfile_d1f1a5f43d9c819199f7d57ff7936d6a",
+  "file_id": "file_0000000062c081f5b77bad436e49ac5c",
+  "filename": "Misaki_RefPack_PlanB.zip",
+  "metadataVersion": 0,
+  "metadataBytes": 10875267,
+  "expectedSha256": "4c35ad580dfff13001d4970a7bc2b1be5299c944d127abb0fdd329f7dad6e420",
+  "prepare": "success",
+  "action": "current official Library transfer helper materialize into consumer-local /workspace/misaki-grayform-reference/Misaki_RefPack_PlanB.zip",
+  "result": "library file transfer failed: download failed",
+  "localFileExists": false,
+  "actualSha256": null,
+  "newPlanBPixelsViewed": false,
+  "read": "ZIP has no readable content in Library read",
+  "status": "both supported consumer-local transfers failed; cause uncertain; not approval denial; no alternate route",
+  "continuedScope": "canonical original pixels only, side/back explicitly inferred",
+  "attempts": [
+    {
+      "kind": "initial",
+      "destination": "/workspace/misaki-grayform-reference/Misaki_RefPack_PlanB.zip",
+      "prepare": "signed transfer; workspace_path null",
+      "helperExitCode": 1,
+      "error": "library file transfer failed: download failed",
+      "localFileExists": false
+    },
+    {
+      "kind": "one authorized fresh consumer-local retry",
+      "destination": "/workspace/misaki-planb-retry/Misaki_RefPack_PlanB.zip",
+      "prepare": "signed transfer; workspace_path null",
+      "helperExitCode": 1,
+      "error": "library file transfer failed: download failed",
+      "localFileExists": false
+    }
+  ],
+  "freshRetryCount": 1,
+  "furtherRetries": "stopped per parent"
+}
