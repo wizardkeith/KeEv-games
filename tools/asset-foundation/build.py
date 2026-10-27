@@ -3,7 +3,7 @@ Run: blender -b -t 2 --python tools/asset-foundation/build.py
 Each component is independently reusable; assembly placements live only in this source.
 """
 import bpy, math, random, json, os
-from mathutils import Vector
+from mathutils import Vector, Quaternion
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'public/assets/asset-foundation-v1'; SRC=ROOT/'assets/authoring/asset-foundation-v1'
@@ -20,25 +20,43 @@ def mat(name,color,rough=.5,coat=0):
 import numpy as np
 size=512
 xx,yy=np.meshgrid(np.arange(size)/size,np.arange(size)/size)
-wave=yy*29+.17*np.sin(yy*41)+.90*np.sin(xx*3.8+yy*1.8)+.28*np.sin(xx*11+yy*7)
-grain=.968+.014*np.sin(wave*math.tau)+.006*np.sin(wave*math.tau*2.7)
-grain+=.012*np.sin(yy*math.pi*4+.6*np.sin(xx*7))
-rng=np.random.default_rng(71);grain+=rng.normal(0,.0015,(size,size))
 rgba=np.ones((size,size,4),dtype=np.float32)
-for k in range(3):rgba[:,:,k]=np.clip(grain,0,1)
 def image_from_array(name,array,file,noncolor=False):
  image=bpy.data.images.new(name,width=size,height=size)
  if noncolor:image.colorspace_settings.name='Non-Color'
  image.pixels.foreach_set(array.ravel());image.filepath_raw=str(SRC/file);image.file_format='PNG';image.save();image.pack();return image
-img=image_from_array('Authored directional oak grain',rgba,'oak-grain.png')
-wood=[mat('Honey oak • board '+str(i),(.55+i*.012,.29+i*.010,.105+i*.006),.42+i*.012)for i in range(4)]
+
+def smooth_noise(cols,rows,seed):
+ rng=np.random.default_rng(seed);values=rng.uniform(-1,1,(rows+1,cols+1));x=xx*cols;y=yy*rows
+ ix=np.minimum(x.astype(int),cols-1);iy=np.minimum(y.astype(int),rows-1);tx=x-ix;ty=y-iy
+ tx=tx*tx*(3-2*tx);ty=ty*ty*(3-2*ty)
+ return (values[iy,ix]*(1-tx)+values[iy,ix+1]*tx)*(1-ty)+(values[iy+1,ix]*(1-tx)+values[iy+1,ix+1]*tx)*ty
+
+def board_field(seed):
+ # Broad anisotropic fibres and a few unequal/tapered growth paths, not a
+ # periodic sine barcode repeated on every plank.
+ rng=np.random.default_rng(seed);field=.974+.024*smooth_noise(3,7,seed)+.012*smooth_noise(6,23,seed+1)
+ for j in range(11):
+  base=rng.uniform(-.08,1.08);bend=rng.uniform(-.16,.16);phase=rng.uniform(0,math.tau)
+  center=base+bend*((xx-rng.uniform(.2,.8))**2-.12)+.014*np.sin(xx*rng.uniform(3,8)+phase)
+  width=rng.uniform(.003,.011)*(.7+.3*np.cos(xx*5+phase))
+  weight=.35+.65*np.exp(-((xx-rng.uniform(.2,.8))/rng.uniform(.25,.7))**2)
+  field-=rng.uniform(.015,.037)*np.exp(-((yy-center)/width)**2)*weight
+ return np.clip(field,.86,1.025)
+
+grain=board_field(71)
+for k in range(3):rgba[:,:,k]=np.clip(grain,0,1)
+img=image_from_array('Authored broad natural oak grain',rgba,'oak-grain.png')
+wood_colors=[(.55,.29,.105),(.52,.275,.104),(.57,.314,.127),(.54,.288,.117)]
+wood_roughness=[.44,.48,.42,.46]
+wood=[mat('Honey oak • board '+str(i),color,wood_roughness[i])for i,color in enumerate(wood_colors)]
 for i,m in enumerate(wood):
- nodes=m.node_tree.nodes;tex=nodes.new('ShaderNodeTexImage');tinted=rgba.copy();color=m.diffuse_color[:3]
+ grain=board_field(71+103*i);nodes=m.node_tree.nodes;tex=nodes.new('ShaderNodeTexImage');tinted=rgba.copy();color=m.diffuse_color[:3]
  for k in range(3):tinted[:,:,k]=np.clip(grain*(1.055*color[k]**(1/2.4)-.055),0,1)
- tex.image=image_from_array(m.name+' directional grain',tinted,'oak-board-'+str(i)+'.png')
+ tex.image=image_from_array(m.name+' natural grain',tinted,'oak-board-'+str(i)+'.png')
  m.node_tree.links.new(tex.outputs['Color'],nodes.get('Principled BSDF').inputs['Base Color'])
- orm=rgba.copy();orm[:,:,0]=1;orm[:,:,1]=np.clip(.42+i*.012+.016*np.sin(wave*math.tau)+.009*np.sin(xx*9+yy*4),.36,.50);orm[:,:,2]=0
- ot=nodes.new('ShaderNodeTexImage');ot.image=image_from_array(m.name+' restrained roughness',orm,'oak-orm-'+str(i)+'.png',True)
+ orm=rgba.copy();orm[:,:,0]=1;orm[:,:,1]=np.clip(wood_roughness[i]+.035*smooth_noise(3,7,900+i)+.012*smooth_noise(7,21,1300+i),.37,.56);orm[:,:,2]=0
+ ot=nodes.new('ShaderNodeTexImage');ot.image=image_from_array(m.name+' board surface',orm,'oak-orm-'+str(i)+'.png',True)
  split=nodes.new('ShaderNodeSeparateColor');m.node_tree.links.new(ot.outputs['Color'],split.inputs[0]);m.node_tree.links.new(split.outputs['Green'],nodes.get('Principled BSDF').inputs['Roughness'])
 endwood=mat('Honey oak • end grain',(.49,.27,.108),.48)
 endradius=np.sqrt(((xx-.28)*.8)**2+((yy-.57)*1.15)**2)
@@ -49,7 +67,23 @@ tex=endwood.node_tree.nodes.new('ShaderNodeTexImage');tex.image=image_from_array
 endwood.node_tree.links.new(tex.outputs['Color'],endwood.node_tree.nodes.get('Principled BSDF').inputs['Base Color'])
 cream=mat('Warm ivory glaze',(.86,.816,.687),.27,.24)
 celadon=mat('Celadon glaze',(.247,.423,.355),.29,.26)
-clothmat=mat('Warm white woven linen',(.89,.858,.772),.91)
+clothmat=mat('Warm white woven linen',(.66,.64,.59),.89)
+# One18cm repeating weave tile; low relief and low colour contrast, plus
+# restrained irregular flax surface. The same real material is used in every view.
+warp=.5+.5*np.cos(math.tau*64*xx+.12*np.sin(math.tau*3*yy))
+weft=.5+.5*np.cos(math.tau*64*yy+.10*np.sin(math.tau*4*xx))
+over=np.sin(math.tau*32*xx)*np.sin(math.tau*32*yy)
+fibre=.994+.006*(warp+weft-1)+.008*smooth_noise(7,9,181)
+linen=rgba.copy()
+for k,c in enumerate(clothmat.diffuse_color[:3]):linen[:,:,k]=np.clip(fibre*(1.055*c**(1/2.4)-.055),0,1)
+nodes=clothmat.node_tree.nodes;tex=nodes.new('ShaderNodeTexImage');tex.image=image_from_array('Warm flax colour',linen,'linen-color.png');clothmat.node_tree.links.new(tex.outputs['Color'],nodes.get('Principled BSDF').inputs['Base Color'])
+orm=rgba.copy();orm[:,:,0]=1;orm[:,:,1]=np.clip(.88+.05*smooth_noise(5,6,183)+.035*(warp-weft)+.02*over,.80,.96);orm[:,:,2]=0
+tex=nodes.new('ShaderNodeTexImage');tex.image=image_from_array('Linen roughness',orm,'linen-orm.png',True);split=nodes.new('ShaderNodeSeparateColor');clothmat.node_tree.links.new(tex.outputs['Color'],split.inputs[0]);clothmat.node_tree.links.new(split.outputs['Green'],nodes.get('Principled BSDF').inputs['Roughness'])
+height=.00008*(.6*warp+.4*weft)+.000025*over
+gx=np.gradient(height,axis=1)*size/.18;gy=np.gradient(height,axis=0)*size/.18
+normal=np.stack((-gx,-gy,np.ones_like(gx)),axis=2);normal/=np.linalg.norm(normal,axis=2)[:,:,None]
+normalrgba=rgba.copy();normalrgba[:,:,:3]=normal*.5+.5
+tex=nodes.new('ShaderNodeTexImage');tex.image=image_from_array('Restrained flax relief',normalrgba,'linen-normal.png',True);normalmap=nodes.new('ShaderNodeNormalMap');normalmap.inputs['Strength'].default_value=.65;clothmat.node_tree.links.new(tex.outputs['Color'],normalmap.inputs['Color']);clothmat.node_tree.links.new(normalmap.outputs[0],nodes.get('Principled BSDF').inputs['Normal'])
 green=mat('Soft sage leaves',(.19,.29,.105),.65)
 stemmat=mat('Fine olive stems',(.22,.28,.105),.71)
 petalmat=mat('Warm white petals',(.94,.91,.81),.59)
@@ -155,19 +189,25 @@ for s in range(7):
   t=.80+k*.04;root=main_at(t)
   pts=[root.lerp(tip,u)+Vector((0,0,.012*math.sin(math.pi*u)))for u in [i/8 for i in range(9)]]
   tube('Connected flower branch',pts,.00135,stemmat,6)
-  rotation=Vector((.15*math.sin(n*1.2),.19*math.cos(n*.9),1)).normalized().to_track_quat('Z','Y')
-  # Five cupped petals have curved surfaces and thickness, not billboard planes.
+  head_index=s*5+k;kind=(head_index*7+head_index//5)%5
+  head_scale=[1.25,1.10,.95,1.20,.82][kind];opening=[1.0,.82,.92,.70,.50][kind]
+  tilt=[.12,.48,-.28,.40,-.52][kind]
+  rotation=Vector((tilt+.14*math.sin(head_index*1.2),.40*math.cos(head_index*1.7),1)).normalized().to_track_quat('Z','Y')@Quaternion(Vector((0,0,1)),head_index*.73)
+  # Same five petals and topology. Elliptic shoulder/cap, unequal opening and
+  # cupping replace the pointed, equally open radial star silhouette.
   for j in range(5):
-   a=j*math.tau/5;vs=[];fs=[]
+   a=j*math.tau/5+.08*math.sin(head_index*1.3+j);vs=[];fs=[]
    for row in range(7):
-    u=row/6;w=.0085*math.sin(math.pi*u)**.7
+    u=row/6;lengthwise=(1-math.cos(math.pi*u))*.5
+    w=.0092*head_scale*math.sin(math.pi*u)**.85*(.48+.52*opening)*(1+.09*math.sin(j*2.7+head_index))
     for col in range(5):
-     v=(col/4-.5)*2;along=.003+.017*u;side=w*v
-     vs.append(tip+rotation@Vector((along*math.cos(a)-side*math.sin(a),along*math.sin(a)+side*math.cos(a),.007*u*u+.003*v*v)))
+     v=(col/4-.5)*2;along=head_scale*(.0015+.017*lengthwise*opening);side=w*v
+     lift=head_scale*((.002+.014*(1-opening))*lengthwise**1.4+.0025*v*v*math.sin(math.pi*u)+.0012*math.sin(head_index+j)*lengthwise)
+     vs.append(tip+rotation@Vector((along*math.cos(a)-side*math.sin(a),along*math.sin(a)+side*math.cos(a),lift)))
    for row in range(6):
-    for col in range(4):n=row*5+col;fs.append((n,n+1,n+6,n+5))
-   o=mesh('Cupped ivory petal',vs,fs,petalmat);sol=o.modifiers.new('Petal thickness','SOLIDIFY');sol.thickness=.0007
-  bpy.ops.mesh.primitive_uv_sphere_add(segments=8,ring_count=4,radius=.0035,location=tip);finish(bpy.context.object,'Pollen heart',heartmat)
+    for col in range(4):index=row*5+col;fs.append((index,index+1,index+6,index+5))
+   o=mesh('Rounded unequal ivory petal',vs,fs,petalmat);sol=o.modifiers.new('Petal thickness','SOLIDIFY');sol.thickness=.0007
+  bpy.ops.mesh.primitive_uv_sphere_add(segments=8,ring_count=4,radius=.0035*head_scale,location=tip);finish(bpy.context.object,'Pollen heart',heartmat)
  for k in range(2):
   t=.40+k*.17;p=Vector(main[round(t*16)]);a=s*2.1+k*2;vs=[];fs=[]
   for i in range(13):
@@ -199,10 +239,22 @@ for j in range(ny+1):
   if t<.60:dz=top*(.35+.65*t/.60);dy=0
   else:dz=top*(1-fall)+(.022*broad-.016*valley)*fall;dy=-(.065*broad+.025*(1-valley)+.024*shoulder)*fall
   hem=(.012*(2*u-1)**2+.009*broad-.006*valley)*fall**4
-  vs.append((x,y+dy,z+dz+hem))
+  # Small asymmetric pull and free-edge response preserve the broad R2 folds.
+  tension=.0028*math.exp(-((u-(.18+.12*t))/.18)**2)*math.exp(-((t-.50)/.24)**2)
+  x+=.006*fall**2*(1-u)**2
+  dy-=.0045*math.exp(-((u-.17)/.15)**2)*fall**3+.003*math.exp(-((u-.98)/.09)**2)*fall**4
+  hem+=(.006*math.exp(-((u-.08)/.14)**2)-.004*math.exp(-((u-.68)/.23)**2)+.0045*u)*fall**5
+  vs.append((x,y+dy,z+dz+hem+tension))
 for j in range(ny):
  for i in range(nx):n=j*(nx+1)+i;fs.append((n,n+1,n+nx+2,n+nx+1))
-o=mesh('Linen runner • continuous weighted fall',vs,fs,clothmat);so=o.modifiers.new('Actual 2 mm linen thickness','SOLIDIFY');so.thickness=.002;so.offset=0
+o=mesh('Linen runner • continuous weighted fall',vs,fs,clothmat)
+uv=o.data.uv_layers.new(name='Unstrained linen weave')
+for poly in o.data.polygons:
+ for li in poly.loop_indices:
+  index=o.data.loops[li].vertex_index;u=(index%(nx+1))/nx;t=(index//(nx+1))/ny
+  length=.9275*(t/.60) if t<.60 else .9275+.0125*math.pi/2*((t-.60)/.13) if t<.73 else .9275+.0125*math.pi/2+.394*((t-.73)/.27)
+  uv.data[li].uv=(u*.57/.18,length/.18)
+so=o.modifiers.new('Actual 2 mm linen thickness','SOLIDIFY');so.thickness=.002;so.offset=0
 # The real2mm solidified edge needs no sub-pixel bevel geometry.
 components['cloth']=current
 
@@ -220,7 +272,7 @@ def export_component(objects,path):
   bpy.context.view_layer.objects.active=group[0];bpy.ops.object.join();o=group[0];o.name=key;o['component']=key;baked.append(o)
  bpy.ops.object.select_all(action='DESELECT')
  for o in baked:o.select_set(True)
- bpy.ops.export_scene.gltf(filepath=str(path),export_format='GLB',use_selection=True,export_apply=True,export_extras=True)
+ bpy.ops.export_scene.gltf(filepath=str(path),export_format='GLB',use_selection=True,export_apply=True,export_extras=True,export_tangents=True)
  for o in baked:bpy.data.objects.remove(o,do_unlink=True)
 
 # Set component contact origins from evaluated geometry, not raw lathe controls.
@@ -244,5 +296,5 @@ for key,offset in [('cup',(.58,-.14,.905)),('vase',(-.35,.08,.905)),('flowers',(
  for o in components[key]:o.location+=Vector(offset)
 export_component([o for group in components.values() for o in group],OUT/'display-set.glb')
 bpy.ops.wm.save_as_mainfile(filepath=str(SRC/'display-set.blend'))
-receipt={'id':'asset-foundation-v1','units':'metres','base':'78fbae7f519e4c443d5971bb18208e1c4f9de64e','originalTargetSha256':'9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114','revision':'r2-style-and-contact','contactNormalizationMetres':contact_normalization,'tableTopY':.905,'flowerHeads':35,'petals':175,'flowerClusterHeadCounts':[20,10,5],'components':{k:len(v)for k,v in components.items()},'rebuild':'blender -b -t 2 --python tools/asset-foundation/build.py','limitations':['First component prototype; no art acceptance','Restrained oak grain only; silhouette and medium surfaces first','No character or whole-shop reconstruction']}
+receipt={'id':'asset-foundation-v1','units':'metres','base':'78fbae7f519e4c443d5971bb18208e1c4f9de64e','originalTargetSha256':'9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114','revision':'r3-floral-linen-natural-wood','contactNormalizationMetres':contact_normalization,'tableTopY':.905,'flowerHeads':35,'petals':175,'flowerClusterHeadCounts':[20,10,5],'headSizeVariants':[1.25,1.10,.95,1.20,.82],'headOpeningVariants':[1.0,.82,.92,.70,.50],'linenBaseLinear':[.66,.64,.59],'components':{k:len(v)for k,v in components.items()},'rebuild':'blender -b -t 2 --python tools/asset-foundation/build.py','limitations':['First component prototype; no art acceptance','Restrained oak grain only; silhouette and medium surfaces first','No character or whole-shop reconstruction']}
 (SRC/'manifest.json').write_text(json.dumps(receipt,indent=2)+'\n')

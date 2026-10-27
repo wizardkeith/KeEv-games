@@ -3,7 +3,7 @@
   "units": "metres",
   "base": "78fbae7f519e4c443d5971bb18208e1c4f9de64e",
   "originalTargetSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
-  "revision": "r2-style-and-contact",
+  "revision": "r3-floral-linen-natural-wood",
   "contactNormalizationMetres": {
     "table": 0.0,
     "cup": 0.006000000983476639,
@@ -16,6 +16,25 @@
     20,
     10,
     5
+  ],
+  "headSizeVariants": [
+    1.25,
+    1.1,
+    0.95,
+    1.2,
+    0.82
+  ],
+  "headOpeningVariants": [
+    1.0,
+    0.82,
+    0.92,
+    0.7,
+    0.5
+  ],
+  "linenBaseLinear": [
+    0.66,
+    0.64,
+    0.59
   ],
   "components": {
     "table": 24,

@@ -1,9 +1,11 @@
 # Component foundation v1
 
-Revision2 remains within the same representative set after the first prototype
-failed the style gate. It changes the crown grouping, broad cloth folds and
-wood proportions/palette, corrects contact origins and aligns gray/material
-lighting. No whole-shop expansion and no draft-PR retry.
+Revision3 remains within the same set after R2 failed the style gate. It keeps
+table proportions/construction/UVs, all stem/leaf placements and broad cloth
+folds/contact, while varying rounded flower-head size/opening/orientation,
+adding restrained actual linen response and replacing periodic veneer stripes
+with broad irregular board grain/surface variation. No whole-shop expansion,
+character import or draft-PR retry.
 
 This is a separate asset-authoring stage based on application
 `78fbae7f519e4c443d5971bb18208e1c4f9de64e`. It does not adopt C50 or change
@@ -46,7 +48,7 @@ beta/radius/target. This explicit authoring camera adjustment is recorded;
 normal screenshots use the untouched application camera. The helper buys three existing mugs on a side display,
 checks the ledger, reloads Sandbox, switches Low→High and confirms its isolated
 Normal baseline was unchanged. It does not access a player's profile. Outputs default to
-`docs/reviews/evidence/asset-foundation-v1-r2`; the original v1 evidence remains
+`docs/reviews/evidence/asset-foundation-v1-r3`; the original v1/R2 evidence remains
 unchanged. `QA_OUTPUT` can select another evidence directory.
 `python3 tools/asset-foundation/compare.py` builds the labelled480px comparison
 only after raw captures exist.
@@ -94,3 +96,22 @@ tabletop solids; it detects the interim corner intersection and gates positive
 clearance in the final candidate. This is not a full arbitrary-mesh collision
 certification. Interim source08db124 and its raw views remain recorded in
 `docs/reviews/evidence/asset-foundation-v1-r2-interim`.
+
+R3 keeps35 heads/175 petals and the same20/10/5 cluster centres. Five size and
+opening variants use rounded elliptic petal shoulders/caps with unequal cups
+and orientations, rather than adding heads. R2 table position/normal/UV and
+stem/leaf geometry are checked canonically through node transforms at1µm
+precision; ceramic position/normal/index streams remain exact.
+
+Linen uses512px real albedo, roughness and restrained tangent-normal maps on
+an18cm repeating unstrained UV tile, with a lower plausible white reflectance
+(linear.66/.64/.59) in every view. Small asymmetric tension/hem movements retain
+the broad folds and2mm thickness. Explicit glTF tangents avoid implementation-
+dependent tangent generation. Material white clipping is measured on a declared
+fixed studio ROI; no lights/exposure/cameras are changed to unclip it.
+
+Wood uses per-board warm colour/surface means and unequal tapered growth paths
+plus broad anisotropic variation, not a periodic sine barcode. Resolution stays
+512px; end-grain mapping and construction remain R2. Character reference handoff
+is recorded separately in docs/MISAKI_NEXT_STAGE_REFERENCE_HANDOFF_2026-10-27.md;
+this checkpoint does not consume or model from that pack.
