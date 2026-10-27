@@ -3,7 +3,7 @@ import bpy,json
 from mathutils.bvhtree import BVHTree
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
-OUT=ROOT/'docs/reviews/evidence/misaki-grayform-v1-r5';OUT.mkdir(parents=True,exist_ok=True)
+OUT=ROOT/'docs/reviews/evidence/misaki-grayform-v1-r6';OUT.mkdir(parents=True,exist_ok=True)
 deps=bpy.context.evaluated_depsgraph_get();bounds={}
 for o in bpy.data.objects:
  if o.type!='MESH':continue
@@ -45,5 +45,12 @@ main=bpy.data.objects['10 / primary swept fringe'];sections=[]
 for i in range(2,10):
  l=main.data.vertices[i*6].co;r=main.data.vertices[i*6+5].co;middle=main.data.vertices[i*6+3].co
  delta=middle-(l+r)*.5;sections.append({'sourceRow':i,'centreMinusBorderChord':list(delta),'distance':delta.length})
-result={'boundsBlenderZUp':bounds,'evaluatedFaceEyeBoundaryLoops':rings,'neckHeadVerticalOverlap':neck['max'][2]-chin,'chinToFrozenClothesTop':chin-bodytop,'clipAttachment':attachment,'hairAuthoring':authoring,'mainClumpInternalSections':sections,'nativeBezierGuides':sum(o.type=='CURVE'and o.name.startswith('GUIDE /')for o in bpy.data.objects),'noGlobalHairFusionOrSmoothing':True,'limits':'Vertical/bounds relationships do not prove watertight skin, collisions or art acceptance; side/back inferred.'}
+front_layout={}
+for name in ['10 / primary swept fringe','11 / underlapping temple turn']:
+ o=bpy.data.objects[name];rows=[]
+ for i in [0,4,7,11]:
+  points=[o.matrix_world@o.data.vertices[i*6+j].co for j in [0,3,5]]
+  rows.append({'sourceRow':i,'leftCentreRightBlenderWorld':[list(p)for p in points],'lateralWidth':abs(points[2].x-points[0].x),'borderDistance':(points[2]-points[0]).length})
+ front_layout[name]=rows
+result={'boundsBlenderZUp':bounds,'evaluatedFaceEyeBoundaryLoops':rings,'neckHeadVerticalOverlap':neck['max'][2]-chin,'chinToFrozenClothesTop':chin-bodytop,'clipAttachment':attachment,'hairAuthoring':authoring,'frontSweepLayout':front_layout,'mainClumpInternalSections':sections,'nativeBezierGuides':sum(o.type=='CURVE'and o.name.startswith('GUIDE /')for o in bpy.data.objects),'noGlobalHairFusionOrSmoothing':True,'limits':'Vertical/bounds relationships do not prove watertight skin, collisions or art acceptance; side/back inferred.'}
 (OUT/'source-inspection.json').write_text(json.dumps(result,indent=2)+'\n');print({k:v for k,v in result.items()if k!='boundsBlenderZUp'})

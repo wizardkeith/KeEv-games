@@ -1,71 +1,71 @@
-# Misaki R5 — internal cross-sections, main sweep and crown roots
+# Misaki R6 — dominant and supporting sweep layout only
 
-R4 independent hair identity gate FAILED. R5 retains separate clump surfaces,
-but replaces the border-only main fringe with an independent internal spine.
-The canonical original portrait was viewed again, with its off-centre sweep
-descending toward one eyebrow. Identity/style is still unaccepted.
+R5 independent hair identity gate FAILED despite its lower sweep, fuller
+curvature and reduced crown opening. R6 preserves those authoring gains and
+changes ONLY the primary fringe10 and underlying temple surface11. It is an
+identity candidate, not a style PASS. Rear hair is not refined this checkpoint.
 
-Authority: `docs/codex-v4/reference/Approved_Visual_Target_Misaki.png`,1536×1024,
-SHA256 `9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114`.
-PlanB initial transfer and its only authorized fresh retry remain failed and
-stopped. No new transfer or new reference pixels; side/back remain inferred.
+Canonical original was viewed again: `docs/codex-v4/reference/Approved_Visual_Target_Misaki.png`,
+1536×1024, SHA256 `9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114`.
+PlanB initial and only fresh authorized retry remain failed and stopped; no
+new transfer/pixels. Side/back remain inferred.
 
 ```sh
-blender -b -t 2 --python tools/asset-foundation/build-misaki-gray.py
+blender -b -t 2 --python-exit-code 1 --python tools/asset-foundation/build-misaki-gray.py
 node tools/asset-foundation/validate-misaki-gray.mjs
-blender -b assets/authoring/misaki-grayform-v1/misaki-grayform.blend -t 2 --python tools/asset-foundation/inspect-misaki-gray.py
+blender -b assets/authoring/misaki-grayform-v1/misaki-grayform.blend -t 2 --python-exit-code 1 --python tools/asset-foundation/inspect-misaki-gray.py
+blender -b assets/authoring/misaki-grayform-v1/misaki-grayform.blend -t 2 --python-exit-code 1 --python tools/asset-foundation/check-misaki-r6-scope.py
 npm exec vite -- --host 127.0.0.1 --port 4199
 node tools/asset-foundation/capture-misaki-gray.cjs
 python3 tools/asset-foundation/compare-misaki-gray.py
 ```
 
-The builder executes the unchanged R3 face/eyes/ear/neck prefix, then
-`misaki-hair-r5.py`. R2/R3/R4 authoring modules remain unchanged.
-Each clump has cubic or piecewise cubic left/right borders. Six of seven also
-have a separately shaped internal Bezier spine: main fringe, temple turn,
-three rear flows and the small local root join. The seventh short ear/clip
-side retains its border controls. A transverse quadratic section passes
-through both borders AND the independent spine, varying its direction,
-curvature and depth down the clump. The spine is not a scalar bulge on a
-linear chord. Its control cage contains actual middle vertices (u=.5).
+`misaki-hair-r6.py` retains R5's cubic/piecewise cubic borders and independent
+internal spine controlling genuine curved transverse sections. Main10 uses a
+new two-segment control layout: shoulder, diagonal descending turn and narrow
+unequal terminal edge toward the own-right brow. Its shoulder width is about
+127–133mm and terminal lateral width33mm. The centre path and end sections
+change direction/depth independently; this is not a uniform height/width edit.
+The local crest remains shallow and thickness controls remain1.5–10mm.
 
-The main sweep now descends to the own-right brow side from a shared off-centre
-root region. Root collars gather into that small region and overlap locally,
-without a floating broad crown plate. Internal side/rear spines restore
-outward-then-inward bob volume and unequal lower turns. No global fusion,
-voxel remesh, global smoothing, decimation, extra subdivision or fine strands.
-Visible overlaps remain separate geometry, not a watertight welded hairstyle.
+Surface11 is rearranged from the long outer temple curtain into a shorter
+inner supporting sweep. It is about81–91mm wide at the sampled shoulder,
+29mm laterally at its terminal. Its terminal centre is about76mm higher and
+20mm behind the main terminal in Blender front−Y coordinates. It therefore
+recedes and ends separately rather than sharing the old long cut edge.
+These are measurements of this candidate, not numeric target specifications.
+The off-centre root controls and crown support remain R5's.
 
-Every closed two-layer cage remains12×6 vertices per layer, subdivision1.
-There are still7 surfaces and7,952 hair triangles, exactly R4's count.
-Twenty native hidden Bezier guides and custom control properties remain in
-the .blend. Guides document editable controls; they are not live cage drivers.
-Edit cage vertices directly or change source controls and regenerate.
+All other hair surfaces12–16 are frozen. `check-misaki-r6-scope.py` loads the
+pinned R5 .blend from git into temporary memory and compares evaluated vertex
+positions/normals, triangle indices and world matrices for each of those five
+surfaces. It does not save the loaded baseline or modify the current .blend.
+All27 non-hair POSITION/NORMAL/index streams and node TRS, including the clip,
+match R5 source1e9680481bc16273b09bd1db39917dc06ba0f276 byte for byte.
+R3 face/eye/body24streams and R2 cheek-jaw/nose-forehead/ear-neck remain checked.
+All7gray materials, studio camera/light TS,29accepted prop files and720original
+application files are unchanged. The own-left+X clip does not move.
 
-All27 POSITION/NORMAL/index streams and node TRS of EVERY non-hair group,
-including both clip leaves, match R4 source42d99f7d01515577e46605fa43f635e0708ee3e0.
-The frozen clip's local control coordinates are in `misaki-frozen-clip-r4.json`;
-it is not moved to disguise contact. Read-only current clip distances remain
-sampled unsigned distances, not signed collision/attachment certification.
-R3 face/eye/body24streams and R2 profile/ear/neck are separately verified.
-All7gray materials and the studio camera/light TS source remain unchanged.
-The29accepted props/source files and720original application files are frozen.
+Seven closed two-layer12×6cages, subdivision1,20native hidden Bezier guides
+and six independent spines remain. No new strands or topology budget.
+Guides document controls, not live cage drivers; edit source or cage directly.
+No global fusion, voxel remesh, global smoothing or decimation. Root overlap
+is not a full watertight weld. Runtime49,368tri /hair7,952 /5meshes /10primitives /
+7gray materials /902,132bytes, no images/skins/animations. Frozen props make
+121,064tri staged authoring total; no replication/LOD/device acceptance.
 
-Runtime49,368tri /5semantic meshes /10primitives /7gray roughness1materials /
-902,132bytes, no images/skins/animations. With71,696tri frozen prop baseline,
-the DEV authoring scene stages121,064tri. No replication, LOD, device/FPS or
-rig acceptance. FeetY0 and own-left+X clip remain unchanged.
+Evidence: `docs/reviews/evidence/misaki-grayform-v1-r6`. Fixed front/three-quarter
+were inspected against actual original pixels before freezing this candidate.
+Final7engine captures include side/back context and normal shop height480 plus
+two obliques. Camera/light and all material conditions stay R5's; nozoom.
+Original keeps its different pose/projection. Comparisons only crop/scale/
+arrange pixels. DEV static sample remains [.85,.079,1.35],yawπ; ordinary `/`,
+existing gameplay staff/rig/actions/economy/data/saves remain untouched.
 
-Evidence: `docs/reviews/evidence/misaki-grayform-v1-r5`. Fixed2light studio
-front/side/back/three-quarter uses unchanged R4 camera/light. Original/R4/R5
-head comparisons only crop/resize/arrange real pixels; canonical portrait keeps
-its different three-quarter pose/projection. Actual normal shop height480 and
-two obliques use unchanged [.85,.079,1.35],yawπ and nozoom. Existing staff,
-rig/actions/data/economy/saves are not replaced; ordinary `/` omits the DEV sample.
-
-Residuals: the dominant fringe remains very broad and its lower edge can still
-look cut; the side/back silhouette is too regular and rear mass still reads
-heavy. Crown overlap boundaries remain visible at some angles. Do not call this
-identity PASS or proceed to clothing, final material, fine strands, rig or
-animation. Technical tests/counts are not art acceptance. PlanB/PR retries,
-main/PR8 writes, merge, public Site, payments and player Normal changes stay stopped.
+Residuals: the primary is still an overly regular single forelock; the shorter
+support can be weak in three-quarter view, and the relationship to the original
+loose overlapping fringe remains unaccepted. Frozen rear heaviness/regularity
+is not this checkpoint's correction. Review front sweep hierarchy before any
+rear refinement, clothes, final materials, fine strands, rig or animation.
+Counts/technical checks are not art acceptance. PlanB/PR retries, main/PR8
+writes, merge, public Site, payments and player Normal changes stay stopped.

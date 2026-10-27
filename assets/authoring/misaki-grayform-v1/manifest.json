@@ -285,7 +285,7 @@
     "clothed-body"
   ],
   "hairMethod": "independent internal spine and borders for varying curved cross-sections; six flow clumps plus local crown root join; local subdivision1 only, no global fusion or smoothing",
-  "revision": "R5 main sweep and bob internal sections / all R4 non-hair frozen",
+  "revision": "R6 tapered dominant and recessed support sweep / rear and all non-hair frozen",
   "headNeckOffset": 0.045,
   "bodyFrozenSource": "038740fbd7f6428cc82d5f442646c2d86a4143e3"
 }

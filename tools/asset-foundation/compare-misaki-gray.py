@@ -1,11 +1,11 @@
 """Actual pixel crops / proportional scaling only. Canonical pose differs;
-R4/R5 share the same camera and crop. No colour edits or new reference views.
+R5/R6 share the same camera and crop. No colour edits or new reference views.
 """
 from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
 root=Path(__file__).resolve().parents[2]
-out=root/'docs/reviews/evidence/misaki-grayform-v1-r5'
-before=root/'docs/reviews/evidence/misaki-grayform-v1-r4'
+out=root/'docs/reviews/evidence/misaki-grayform-v1-r6'
+before=root/'docs/reviews/evidence/misaki-grayform-v1-r5'
 original=root/'docs/codex-v4/reference/Approved_Visual_Target_Misaki.png'
 font=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',16)
 def arrange(name,items,height=480):
@@ -16,17 +16,17 @@ def arrange(name,items,height=480):
  for label,im in panels:d.text((x,12),label,fill='#302b26',font=font);frame.paste(im,(x,44));x+=im.width+12
  frame.save(out/name)
 for view,label in [('front','FRONT'),('threequarter','3/4'),('side','SIDE / inferred')]:
- arrange('original-r4-r5-'+view+'-head480.png',[
+ arrange('original-r5-r6-'+view+'-head480.png',[
   ('ORIGINAL / 3/4, pose differs',original,(1206,678,1512,966)),
-  ('R4 / '+label,before/('grayform-'+view+'.png'),(170,4,550,330)),
-  ('R5 / '+label,out/('grayform-'+view+'.png'),(170,4,550,330))])
- arrange('r4-r5-'+view+'-body-same-scale480.png',[
-  ('R4 / identity gate FAIL',before/('grayform-'+view+'.png'),(0,0,720,900)),
-  ('R5 / hair candidate',out/('grayform-'+view+'.png'),(0,0,720,900))])
+  ('R5 / '+label,before/('grayform-'+view+'.png'),(170,4,550,330)),
+  ('R6 / '+label,out/('grayform-'+view+'.png'),(170,4,550,330))])
+ arrange('r5-r6-'+view+'-body-same-scale480.png',[
+  ('R5 / identity gate FAIL',before/('grayform-'+view+'.png'),(0,0,720,900)),
+  ('R6 / hair candidate',out/('grayform-'+view+'.png'),(0,0,720,900))])
 arrange('original-game-normal-shop480.png',[
  ('EXACT ORIGINAL / left shop',original,(0,0,1184,1024)),
- ('ACTUAL NORMAL / R5 grayform',out/'grayform-game-normal.png',(105,75,1190,800))])
-arrange('r4-r5-normal-shop480.png',[
- ('R4 / actual normal',before/'grayform-game-normal.png',(105,75,1190,800)),
- ('R5 / actual normal',out/'grayform-game-normal.png',(105,75,1190,800))])
+ ('ACTUAL NORMAL / R6 grayform',out/'grayform-game-normal.png',(105,75,1190,800))])
+arrange('r5-r6-normal-shop480.png',[
+ ('R5 / actual normal',before/'grayform-game-normal.png',(105,75,1190,800)),
+ ('R6 / actual normal',out/'grayform-game-normal.png',(105,75,1190,800))])
 arrange('grayform-four-views480.png',[(label,out/('grayform-'+view+'.png'),(100,4,620,850))for label,view in [('FRONT / canonical only','front'),('SIDE / inferred','side'),('BACK / inferred','back'),('3/4 / canonical only','threequarter')]])
