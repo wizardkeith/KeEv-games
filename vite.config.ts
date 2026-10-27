@@ -24,4 +24,7 @@ if(process.env.VITE_V11_SOURCE_LEAF_SHADOW!==undefined&&!['same','two-sided'].in
 if(process.env.VITE_V11_SOURCE_LEAF_SHADOW==='two-sided'&&process.env.VITE_V11_SOURCE_SEPARATION!=='key')throw Error('C48 leaf shadow override requires key-only diagnostic');
 if(process.env.VITE_V11_SOURCE_DEPTH!==undefined&&!['off','on'].includes(process.env.VITE_V11_SOURCE_DEPTH))throw Error('Unknown C48 depth readback');
 if(process.env.VITE_V11_SOURCE_DEPTH==='on'&&process.env.VITE_V11_SOURCE_SEPARATION!=='key')throw Error('C48 depth readback requires key-only');
+process.env.VITE_V11_SPATIAL_DIFFUSE??='off';
+if(!['off','on'].includes(process.env.VITE_V11_SPATIAL_DIFFUSE))throw Error('Unknown C49 spatial diffuse');
+if(process.env.VITE_V11_SPATIAL_DIFFUSE==='on'&&(process.env.VITE_V11_SCENE_WINDOW!=='reach'||process.env.VITE_V11_SOURCE_SEPARATION!=='off'))throw Error('C49 requires fixed C47 reach without source-separation overrides');
 export default defineConfig({});
