@@ -1,0 +1,36 @@
+{
+  "sourceCommit": "049dbf31d53436070bcdecadd0ca695ad91ff230",
+  "baseApplication": "78fbae7f519e4c443d5971bb18208e1c4f9de64e",
+  "loadedAssetMatchesCommittedBytes": true,
+  "loadedAssetSha256": "3caa2d92bb91cd513d27ab293eb6ef7750938460d62088646f76c585b9dfc76e",
+  "normalCameraEqualAcrossGrayAndMaterial": true,
+  "lifecycle": {
+    "buy3": true,
+    "cashBefore": 5000,
+    "cashAfter": 4790,
+    "stock": 3,
+    "shelf": 0,
+    "reloadEqual": true,
+    "lowHighRetained": true,
+    "normalUnchanged": true
+  },
+  "pageErrors": [],
+  "checks": {
+    "tests": 302,
+    "build": true,
+    "contentValidate": true,
+    "replay": true,
+    "legacyAssetCheck": true,
+    "newGLBValidation": {
+      "files": 6,
+      "errors": 0,
+      "warnings": 0
+    },
+    "fixtureStrictTypecheck": true,
+    "originalProtectedFilesUnchanged": 720
+  },
+  "libraryScreenshot": "material-normal-game.png saved as native Library image, version1",
+  "visualStatus": "Not accepted. Flowers sparse at480px; cloth broad folds and table medium surfaces need correction. No whole-shop expansion or lighting pass.",
+  "exportRebuildLimit": "Fixed-seed geometry/material reconstruction; Blender can reorder multi-material/buffer layout, so byte-identical rebuild is not claimed.",
+  "capture": "Actual unchanged app plus isolated DEV authoring insert. Normal camera unchanged; obliques explicitly set actual camera alpha +/- .24, beta/radius/target retained. Static SwiftShader evidence, not physical performance."
+}

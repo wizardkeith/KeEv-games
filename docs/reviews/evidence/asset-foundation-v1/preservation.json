@@ -1,0 +1,22 @@
+{
+  "base": "78fbae7f519e4c443d5971bb18208e1c4f9de64e",
+  "source": "049dbf31d53436070bcdecadd0ca695ad91ff230",
+  "protectedOriginalFiles": 720,
+  "alteredOriginalFiles": [],
+  "newAssetSha256": {
+    "cloth.glb": "2a7697a6aa08734f2d763d1db1f2236d6b6eb016d58187144ab0b3467950d31f",
+    "cup.glb": "62cd877b8b669262fc741c4bb9c53008eb670f2e4ba763a88449de62a95d06e6",
+    "display-set.glb": "3caa2d92bb91cd513d27ab293eb6ef7750938460d62088646f76c585b9dfc76e",
+    "flowers.glb": "37018b45d92bb854650d3dedcf5707c87e746c93c3ea4b898abbd4ac1b90fd1c",
+    "table.glb": "dfe4fa7bbdb9d8ab3504209933ea5640b80e6ffbbb1f2b838897e3111f1a3a9c",
+    "vase.glb": "3558939077746ea424bc4d9d2d2bbaafebd06951d4afa70f0efadb4e53ec97b5"
+  },
+  "target": {
+    "path": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+    "sha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+    "pixels": [
+      1536,
+      1024
+    ]
+  }
+}
