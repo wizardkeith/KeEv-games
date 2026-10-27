@@ -1,3 +1,4 @@
+import {SRGB8_LINEAR} from './srgb8-linear';
 // Engine-neutral W1.1A material intent. IDs are stable across Web/GLB/native adapters.
 export const materialRoles=['wood','paper','fabric','ceramic','glass','metal','skin','hair','leaf','paint','ink'] as const;
 export type MaterialRole=typeof materialRoles[number];
@@ -21,7 +22,7 @@ export function materialIdentity(role:MaterialRole,color:string,alpha=1){const s
 // IEC 61966-2-1 transfer, without engine-specific approximate gamma or renderer state.
 export function linearColor(hex:string):[number,number,number]{
  if(!/^#[0-9a-f]{6}$/i.test(hex))throw Error('invalid authored sRGB color');
- return [1,3,5].map(i=>{const c=parseInt(hex.slice(i,i+2),16)/255;return c<=.04045?c/12.92:Math.pow((c+.055)/1.055,2.4);}) as [number,number,number];
+ return [1,3,5].map(i=>SRGB8_LINEAR[parseInt(hex.slice(i,i+2),16)]) as [number,number,number];
 }
 // Shared neutral adapter contract: renderer/exporter map these explicit values.
 export function materialRenderState(role:MaterialRole,color:string,alpha=1){

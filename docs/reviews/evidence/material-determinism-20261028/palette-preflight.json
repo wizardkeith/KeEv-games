@@ -1,0 +1,2622 @@
+{
+  "baseline": "f0492e66f30a076bed0aede48a1ff219e162756c",
+  "counts": {
+    "masters": 91,
+    "materials": 561,
+    "labeledLinear": 342,
+    "matchedChannels": 930,
+    "explicitOverrides": 0
+  },
+  "constrainedEntries": 187,
+  "conflicts": [],
+  "explicitOverrides": [],
+  "verifiedMaterialValues": 342,
+  "mismatches": [],
+  "canonicalDiffersFromLocal": [
+    {
+      "byte": 41,
+      "canonical": 0.02217388479338738,
+      "local": 0.022173884793387385
+    }
+  ],
+  "table": [
+    0,
+    0.0003035269835488375,
+    0.000607053967097675,
+    0.0009105809506465125,
+    0.00121410793419535,
+    0.0015176349177441874,
+    0.001821161901293025,
+    0.0021246888848418626,
+    0.0024282158683907,
+    0.0027317428519395373,
+    0.003035269835488375,
+    0.003346535763899161,
+    0.003676507324047436,
+    0.004024717018496307,
+    0.004391442037410293,
+    0.004776953480693729,
+    0.005181516702338386,
+    0.005605391624202723,
+    0.006048833022857054,
+    0.006512090792594475,
+    0.006995410187265387,
+    0.007499032043226175,
+    0.008023192985384994,
+    0.008568125618069307,
+    0.009134058702220787,
+    0.00972121732023785,
+    0.010329823029626936,
+    0.010960094006488246,
+    0.011612245179743885,
+    0.012286488356915872,
+    0.012983032342173012,
+    0.013702083047289686,
+    0.014443843596092545,
+    0.01520851442291271,
+    0.01599629336550963,
+    0.016807375752887384,
+    0.017641954488384078,
+    0.018500220128379697,
+    0.019382360956935723,
+    0.0202885630566524,
+    0.021219010376003555,
+    0.02217388479338738,
+    0.02315336617811041,
+    0.024157632448504756,
+    0.02518685962736163,
+    0.026241221894849898,
+    0.027320891639074894,
+    0.028426039504420793,
+    0.0295568344378088,
+    0.030713443732993635,
+    0.03189603307301153,
+    0.033104766570885055,
+    0.03433980680868217,
+    0.03560131487502034,
+    0.03688945040110004,
+    0.0382043715953465,
+    0.03954623527673284,
+    0.04091519690685319,
+    0.042311410620809675,
+    0.043735029256973465,
+    0.04518620438567554,
+    0.046665086336880095,
+    0.04817182422688942,
+    0.04970656598412723,
+    0.05126945837404324,
+    0.052860647023180246,
+    0.05448027644244237,
+    0.05612849004960009,
+    0.05780543019106723,
+    0.0595112381629812,
+    0.06124605423161761,
+    0.06301001765316767,
+    0.06480326669290577,
+    0.06662593864377289,
+    0.06847816984440017,
+    0.07036009569659588,
+    0.07227185068231748,
+    0.07421356838014963,
+    0.07618538148130785,
+    0.07818742180518633,
+    0.08021982031446832,
+    0.0822827071298148,
+    0.08437621154414882,
+    0.08650046203654976,
+    0.08865558628577294,
+    0.09084171118340768,
+    0.09305896284668745,
+    0.0953074666309647,
+    0.09758734714186246,
+    0.09989872824711389,
+    0.10224173308810132,
+    0.10461648409110419,
+    0.10702310297826761,
+    0.10946171077829933,
+    0.1119324278369056,
+    0.11443537382697373,
+    0.11697066775851084,
+    0.11953842798834562,
+    0.12213877222960187,
+    0.12477181756095049,
+    0.12743768043564743,
+    0.1301364766903643,
+    0.13286832155381798,
+    0.13563332965520566,
+    0.13843161503245183,
+    0.14126329114027164,
+    0.14412847085805777,
+    0.14702726649759498,
+    0.14995978981060856,
+    0.15292615199615017,
+    0.1559264637078274,
+    0.1589608350608804,
+    0.162029375639111,
+    0.1651321945016676,
+    0.16826940018969075,
+    0.1714411007328226,
+    0.17464740365558504,
+    0.17788841598362912,
+    0.18116424424986022,
+    0.184474994500441,
+    0.18782077230067787,
+    0.19120168274079138,
+    0.1946178304415758,
+    0.19806931955994886,
+    0.20155625379439707,
+    0.20507873639031693,
+    0.20863687014525575,
+    0.21223075741405523,
+    0.21586050011389926,
+    0.2195261997292692,
+    0.2232279573168085,
+    0.22696587351009836,
+    0.23074004852434915,
+    0.23455058216100522,
+    0.238397573812271,
+    0.24228112246555486,
+    0.24620132670783548,
+    0.25015828472995344,
+    0.25415209433082675,
+    0.2581828529215958,
+    0.26225065752969623,
+    0.26635560480286247,
+    0.2704977910130658,
+    0.27467731206038465,
+    0.2788942634768104,
+    0.2831487404299921,
+    0.2874408377269175,
+    0.29177064981753587,
+    0.2961382707983211,
+    0.3005437944157765,
+    0.3049873140698863,
+    0.30946892281750854,
+    0.31398871337571754,
+    0.31854677812509186,
+    0.32314320911295075,
+    0.3277780980565422,
+    0.33245153634617935,
+    0.33716361504833037,
+    0.3419144249086609,
+    0.3467040563550296,
+    0.35153259950043936,
+    0.3564001441459435,
+    0.3613067797835095,
+    0.3662525955988395,
+    0.3712376804741491,
+    0.3762621229909065,
+    0.38132601143253014,
+    0.386429433787049,
+    0.39157247774972326,
+    0.39675523072562685,
+    0.4019777798321958,
+    0.4072402119017367,
+    0.41254261348390375,
+    0.4178850708481375,
+    0.4232676699860717,
+    0.4286904966139066,
+    0.43415363617474895,
+    0.4396571738409188,
+    0.44520119451622786,
+    0.45078578283822346,
+    0.45641102318040466,
+    0.4620769996544071,
+    0.467783796112159,
+    0.47353149614800955,
+    0.4793201831008268,
+    0.4851499400560704,
+    0.4910208498478356,
+    0.4969329950608704,
+    0.5028864580325687,
+    0.5088813208549338,
+    0.5149176653765214,
+    0.5209955732043543,
+    0.5271151257058131,
+    0.5332764040105052,
+    0.5394794890121072,
+    0.5457244613701866,
+    0.5520114015120001,
+    0.5583403896342679,
+    0.5647115057049292,
+    0.5711248294648731,
+    0.5775804404296506,
+    0.5840784178911641,
+    0.5906188409193369,
+    0.5972017883637634,
+    0.6038273388553378,
+    0.6104955708078648,
+    0.6172065624196511,
+    0.6239603916750761,
+    0.6307571363461468,
+    0.6375968739940326,
+    0.6444796819705821,
+    0.6514056374198242,
+    0.6583748172794485,
+    0.665387298282272,
+    0.6724431569576875,
+    0.6795424696330938,
+    0.6866853124353135,
+    0.6938717612919899,
+    0.7011018919329731,
+    0.7083757798916868,
+    0.7156935005064807,
+    0.7230551289219693,
+    0.7304607400903537,
+    0.7379104087727308,
+    0.7454042095403874,
+    0.7529422167760779,
+    0.7605245046752924,
+    0.768151147247507,
+    0.7758222183174236,
+    0.7835377915261935,
+    0.7912979403326302,
+    0.799102738014409,
+    0.8069522576692516,
+    0.8148465722161012,
+    0.8227857543962835,
+    0.8307698767746546,
+    0.83879901174074,
+    0.846873231509858,
+    0.8549926081242338,
+    0.8631572134541023,
+    0.8713671191987972,
+    0.8796223968878317,
+    0.8879231178819663,
+    0.8962693533742664,
+    0.9046611743911496,
+    0.9130986517934192,
+    0.9215818562772946,
+    0.9301108583754237,
+    0.938685728457888,
+    0.9473065367331999,
+    0.9559733532492861,
+    0.9646862478944651,
+    0.9734452903984125,
+    0.9822505503331171,
+    0.9911020971138298,
+    1
+  ],
+  "tableSha256": "4210c27d186eac98ef2b3ba3c256bf146fe6857ac5314a32c209794366164fe4",
+  "masterSha256": {
+    "assets/masters/counter.glb": "4abfa586bcd31bae50b75a264f32415e24d9a3f6592629cc71062bc66f5c68bb",
+    "assets/masters/day1/misaki-calm-v1.glb": "f61a3dd54935f4c88c6d341e2b2c7c07311bff4e58c84ddb40697343cc811b05",
+    "assets/masters/day1/misaki-smile-v1.glb": "b6c1ba01ac8c697f6230f745e86ceceefd47abd8af14eedc00e62aef72541283",
+    "assets/masters/native-v3/misaki-native-v3.glb": "22ca967d70f39705b3c5f91eacfddaeefec9cc302311ddc58a85ff5997319c33",
+    "assets/masters/native-v3/visitor-a-native-v3.glb": "aa17730b19f6f914447fa56f26ccdac2b0f8de2be21e67801aba6f4dff2ccbf7",
+    "assets/masters/native-v3/visitor-b-native-v3.glb": "75272ae3b1c4c20cfd92129c88ff5482bb6e2b6fa1db0cb879901c3751387abd",
+    "assets/masters/native-v4/counter.glb": "46ae720b21264cd12e365cdec60a67b4d56875d24d90cec5a8e6931d36514fb5",
+    "assets/masters/native-v4/display-1.glb": "355a792fec898cabf33f5779846cb3396cb75ec7c2a096b5f7e2d3ca3f61fda1",
+    "assets/masters/native-v4/display-2.glb": "c01ec5f761f88f9e6490c14b306830322021151648c826cef9b3e569d8ef6a63",
+    "assets/masters/native-v4/display-3.glb": "d84d53667afcdacdf516de64bc8f77d7a5b5f784c60dee9321379fd9218e4419",
+    "assets/masters/native-v4/entry-garden-v11.glb": "5e4142614fac2e2276277b92089345f1a9335e47d1e94fb0249e5c8e29d6a4bb",
+    "assets/masters/native-v4/planter-base-v11.glb": "cc99d988901fcede6c8e1bd550f3b3b8e2d91cb465b78e00f005ce1c1b928596",
+    "assets/masters/native-v4/product-off.card.glb": "b45d3d3fe29a2a7447f53eeffc2ddd6ddd9bf33e5205eaf3e9b6d4a45af183cd",
+    "assets/masters/native-v4/product-off.cookie.glb": "e36da81b33559855e72bbf3b58f0418759203b74cfb2f907eed972368b47da14",
+    "assets/masters/native-v4/product-off.mug.glb": "59cc5b59b55b10a81c75ed9b81d74ce21d7796e2831121c34ef7e406ae3ddbb0",
+    "assets/masters/native-v4/product-off.notebook.glb": "6001eaf6a2df3172b2d8e12d9c9eb4e4530db4ab3cd654e89141e43c2503cbcc",
+    "assets/masters/native-v4/product-off.pencil.glb": "9c9f15d10c2bd2c5e9a8557ca2a0edf415674b25f1c31d4d153cc9c3e0b4e4f0",
+    "assets/masters/native-v4/product-off.tea.glb": "519332346e8ff6c09b1988c6a6627d9d700ff4c12f9a75df67634a7197f8baa9",
+    "assets/masters/native-v4/product-off.tote.glb": "78965953b670414b76dd4b929d2c01eed2bc14bdf948f61a8db7de615cf3724c",
+    "assets/masters/native-v4/product-off.towel.glb": "da48b91dd571fdeb73b581bcffed224998845f9f5f1255ec1e8175d575118a34",
+    "assets/masters/native-v4/product-off.tray.glb": "8f89635e2d2455d03044e1f687480051c680f76879a4cab4be0bc1f3284770bf",
+    "assets/masters/native-v4/product-off.vase.glb": "f0eff8ed2a9f61205c779f1a8cfbd7b32e0759b2e205391a862a88e4c4dd4ea4",
+    "assets/masters/native-v4/quality-crown-v11.glb": "0d3de325afb80f8b1657e811f533a76a18cbde159f31a58cd6fdb5ad2c2ff70b",
+    "assets/masters/native-v4/quality-flower-jug-v11.glb": "7486d8d01542b0f37b4ee0a4a6088258c822942a65e1ba680e4315bcac5a06a5",
+    "assets/masters/native-v4/quality-flower-spray-v11.glb": "71738fc38b7cba82d18aad33cc0732c89e2c7b28d955685ee260841232aac929",
+    "assets/masters/native-v4/quality-lookbook-v11.glb": "2c7951e99f6619a9d50a66b3dad053c2c41028e34b252cffdd6b86b3bd901fea",
+    "assets/masters/native-v4/quality-mug-v11.glb": "61e08783667276d611743935f8953e4f96839810643e889f09db11e27cfda392",
+    "assets/masters/native-v4/room.glb": "cf002c8928c567cf048bf0b773fa94610877470eea90d4abb41de7f83cde1eb0",
+    "assets/masters/native-v4/styling-v9.glb": "655c94fc3f99c40b6de6b71def6fbe9ba0fa3ac30e06b921c6ec8ee41eefda17",
+    "assets/masters/native-v4/window-canopy-v9.glb": "1956bb89db91fa28e9c9c4c3b962d98605df71e79a998e932488c37d130e55e1",
+    "assets/masters/skin-test.glb": "7472fe82516c54ad646d025ff9ad2115f9f3b2d6d06a8767a31f52b13376b01e",
+    "assets/masters/w1_1/card.glb": "aa8a32236fd5001e90c50bc1c25fe24159ac4627ed07e5c4713470a05f2659ac",
+    "assets/masters/w1_1/cookie.glb": "640f770550fc75352db0fce6fc3e151f9c29f8ec4e8d7bda4b19e8d4f708427d",
+    "assets/masters/w1_1/counter-w1_1.glb": "6f7c049686f17feeabcdba3bcc6594b320013508336bd3d27c4f14e52358cd43",
+    "assets/masters/w1_1/display-w1_1.glb": "262b5d19636fb1d7b0e3a2b4f4b55701e907b0bb1987b7890ec6213298164791",
+    "assets/masters/w1_1/generic-staff-w1_1.glb": "0424a2726d4236bd555731549062ff95ed01b64d1dee3e2ccca631f5697481c5",
+    "assets/masters/w1_1/mug.glb": "1059b8569f028ec01dbe9f4d6524fd73fa22cf8f047f1e49d1900ac1eef472e9",
+    "assets/masters/w1_1/notebook.glb": "8543abae07663deb8897984fcdd1e391680c5f20e097df73c654fba66650129f",
+    "assets/masters/w1_1/pencil.glb": "7770a19a8b4d49e6c112493772abec5415e0cfd6d35f42a2d52a24c6bda4168f",
+    "assets/masters/w1_1/plant-w1_1.glb": "a6a737f6f7513e448482b86dfbb265e822894262a4b1744a318802f56420fb66",
+    "assets/masters/w1_1/room-w1_1.glb": "2a560e9c2e1d8e98299f4c10d70b0851f2d7fb960653db6303d9e96ede97d998",
+    "assets/masters/w1_1/tea.glb": "5700cf84d949c83e8cb1f5b2d44410294a9f7341e4ba42f972576d0364fd1862",
+    "assets/masters/w1_1/tote.glb": "16bc44b791fbed0b972b61778f24e4a26acad917f7f43f17c308c351c0a92f28",
+    "assets/masters/w1_1/towel.glb": "a1bb9dd4f7ca055fe15594f19c5caf1efe6929b063e43081291d848e68604045",
+    "assets/masters/w1_1/tray.glb": "8667182404da277a68c5066e0dbec5fd4bc35854694fb89315a0ad3ff56833b3",
+    "assets/masters/w1_1/vase.glb": "10d319300b0f14b535d2443655d11bc0c6030aca0ec0512b5774799ec73894ca",
+    "assets/masters/w1_1a/card.glb": "44b7c523c7b806460616372f5ec5eb14ebd13d945740c9266fca72edaefee6f1",
+    "assets/masters/w1_1a/cookie.glb": "56d3f7e37e3786194a50fd595ee34a551935a86410200744b4fee8dbed9669ef",
+    "assets/masters/w1_1a/counter-w1_1a.glb": "58e5cef53fb60bff7c364e478a71018aab31804f1c7027b83335a31f22fa8a7d",
+    "assets/masters/w1_1a/display-w1_1a.glb": "27c93d6233cc1877b80d52ff82d8a994f811afb42a22d1a43953ab3e0ab1df30",
+    "assets/masters/w1_1a/generic-staff-w1_1a.glb": "3b8cabce823bf59f194af946cf26882d4deb1eb82606b91ea73ead6d56ad1bc6",
+    "assets/masters/w1_1a/mug.glb": "a89356583b9e07f76c8419f57d08393fc4d89b8272329b0a5a99e37e264a7d17",
+    "assets/masters/w1_1a/notebook.glb": "557a3e91d19bae5840e4040b64a26d39466385742340ea91c8c77379448a2942",
+    "assets/masters/w1_1a/pencil.glb": "abcdda62d02b5f319f0a27e059ce325cc74b41a436cc0c83e68299fdb5a04ab3",
+    "assets/masters/w1_1a/plant-w1_1a.glb": "c21a3b5f469ec5ec3865ff1bacad6c84e204b3d5fa084138e522d9b005adc7c8",
+    "assets/masters/w1_1a/room-w1_1a.glb": "fb30caebe52c5e58bce3e23a6099b43d61c53fec43135c0b50ebb582cf7f929d",
+    "assets/masters/w1_1a/tea.glb": "601713d11fbb86696178740d7d9aed6f7b08b0f2053c18b9ca64bc1a5b186b00",
+    "assets/masters/w1_1a/tote.glb": "16195d570489bd0414fa70a311778343a59232856d68cdd9372cd12934dedd74",
+    "assets/masters/w1_1a/towel.glb": "4d8732870b6cf02cbd12c74c7451e5b6f98bee26ee3030addc66d9521ff85c85",
+    "assets/masters/w1_1a/tray.glb": "2a7b050d5c4c29b6fb8ca16c887ef78e2d1054d07c896306f7942d154cf30edc",
+    "assets/masters/w1_1a/vase.glb": "ce8ff1db6ae3d9eba482896b2b03475a064c32d38e9f189f29c273420ee96b9f",
+    "assets/masters/w1_1a1/card.glb": "d39d676df0c3b016341d99ce1530357760b65593990b8be75dcc011f0d0211a1",
+    "assets/masters/w1_1a1/cookie.glb": "7c3005f127a856d4331320c41d0a5ae1bde1c97f8c45de3dfaab722cea57c1d2",
+    "assets/masters/w1_1a1/counter-w1_1a1.glb": "4602da938fde3b8dbbc5a3ec5a5bb64007c51729e1ddb3c3d8c004e39ec54cef",
+    "assets/masters/w1_1a1/display-w1_1a1.glb": "441320f3f349a7c730dc852b71c16d3368e8242fb08ad45ed566e97821a2702c",
+    "assets/masters/w1_1a1/generic-staff-w1_1a1.glb": "33bdc81db11da1c1fe82c2c451b18d58496d1c56014be267e5c5d298c1993c04",
+    "assets/masters/w1_1a1/mug.glb": "cb3c59c5627d56ef6dbcc6d21b97a175393b038affd5174edf13ab3e85b27a41",
+    "assets/masters/w1_1a1/notebook.glb": "86eba9cf70439d72e184586876e597f9f77e84b5fbb478d77c46f5e06a272e6e",
+    "assets/masters/w1_1a1/pencil.glb": "79ac3a162044b4eb7479cbce164d8c1460f1d21ff45b3dcb9574db3bc236300a",
+    "assets/masters/w1_1a1/plant-w1_1a1.glb": "32ee494da640d1e55198c5d6cc48664a708b4bbf418d8d08052fe06c9cf212c0",
+    "assets/masters/w1_1a1/room-w1_1a1.glb": "77ebd30600952ee370e20f598ee6f8a4c0202e54335d0dd654aa3d46ee0ca71a",
+    "assets/masters/w1_1a1/tea.glb": "12a2207e6e6c020e5e481a68deb54bee2b2e03f77c85e25bee8233740a7cd36d",
+    "assets/masters/w1_1a1/tote.glb": "2b37a70ed11f2a38ce5a59ba858c32d37012afe75a18de0fa37e53db739fe42b",
+    "assets/masters/w1_1a1/towel.glb": "ea468e71a4832696c05f109afc41fc54c70e99079029e40b5c4457853dda17e8",
+    "assets/masters/w1_1a1/tray.glb": "67589b3e0792bb51c52ba57ac8b18ae3ad3a89b440449cd92010ce49df2b1a3b",
+    "assets/masters/w1_1a1/vase.glb": "7fc8f0e6461cadda77d47640e9c9c4c939c34de3df752e3aa15eef20b4e9c2b5",
+    "assets/masters/w1_1b/card.glb": "1b0ec45e2cc6bfe7e71adc856491edbb2f306f8e449aa03ce6e6c685b72fc33f",
+    "assets/masters/w1_1b/cookie.glb": "b3fe29d0193c385fa013f34f2cdb8e6cffe240341790d52a9ad69b3a45111a97",
+    "assets/masters/w1_1b/counter-w1_1b.glb": "0210373d5cc9c3662996a8970e608b7e4c2dab9d76690a4610b8e1e83b299802",
+    "assets/masters/w1_1b/display-w1_1b.glb": "39dd49e91bee6c9fc305498adaac2f07783dde79cc03fca05a920f63a5753ee7",
+    "assets/masters/w1_1b/generic-staff-w1_1b.glb": "ed48d9b32e99b290746006cf65c9082ed59d6c6380dd1177c43c0a9301f2d7bd",
+    "assets/masters/w1_1b/mug.glb": "d21c6a345c2b3798365803b2025af010ee89561af6fb53d58ed46c562c9ddc50",
+    "assets/masters/w1_1b/notebook.glb": "e9cf86b58ea868735e3bdc1763ac95f047a1043a6349bc387030466e6d807173",
+    "assets/masters/w1_1b/pencil.glb": "222c5fac7895df7b0cda2421a960e7cc7e2ee62951ab047bbaccd650d1dc9d22",
+    "assets/masters/w1_1b/plant-w1_1b.glb": "e443fb165bc9a97937893db92e27d268ec8a7d741387746af760a255fd0b43fe",
+    "assets/masters/w1_1b/room-w1_1b.glb": "24ee1be4623e0745f06b950e5545fb8580d15393fa0c2b7fb2df3a89f79c8c4e",
+    "assets/masters/w1_1b/tea.glb": "305a59d15f07f158004f93b9bb1766de96e501a619efa170117c936b86d4edaf",
+    "assets/masters/w1_1b/tote.glb": "7c258639cb378f4eb06f6df41004697665c6391ff128b3bc4c46458ad1ea9181",
+    "assets/masters/w1_1b/towel.glb": "0eadeb110572f5faffacb1e0d786fa5062cdc418390ac1ece4ecdc33c47444c5",
+    "assets/masters/w1_1b/tray.glb": "a7f4a392e9627701f6cd86fc8aa14ed8f1d547f53f9433fe32a5e4af8dcaf389",
+    "assets/masters/w1_1b/vase.glb": "188cfc7827eff27cb28a232e37d883a61b8d5990882d74a76d22d9c1ef6b5bdf"
+  },
+  "canonicalSources": {
+    "41": {
+      "value": 0.02217388479338738,
+      "bits": "3f96b4c0380d2dee",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 15,
+        "channel": 2,
+        "hex": "#4F3729",
+        "value": 0.02217388479338738
+      }
+    },
+    "45": {
+      "value": 0.026241221894849898,
+      "bits": "3f9adefa9761c020",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+        "material": 8,
+        "channel": 2,
+        "hex": "#49372D",
+        "value": 0.026241221894849898
+      }
+    },
+    "46": {
+      "value": 0.027320891639074894,
+      "bits": "3f9bfa0200597bd9",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 13,
+        "channel": 2,
+        "hex": "#603D2E",
+        "value": 0.027320891639074894
+      }
+    },
+    "48": {
+      "value": 0.0295568344378088,
+      "bits": "3f9e442595227bca",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 8,
+        "channel": 2,
+        "hex": "#674330",
+        "value": 0.0295568344378088
+      }
+    },
+    "49": {
+      "value": 0.030713443732993635,
+      "bits": "3f9f73585185e1b5",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 12,
+        "channel": 2,
+        "hex": "#4C3C31",
+        "value": 0.030713443732993635
+      }
+    },
+    "51": {
+      "value": 0.033104766570885055,
+      "bits": "3fa0f31ba386ff26",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+        "material": 9,
+        "channel": 2,
+        "hex": "#594133",
+        "value": 0.033104766570885055
+      }
+    },
+    "52": {
+      "value": 0.03433980680868217,
+      "bits": "3fa194fcb663747b",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 13,
+        "channel": 2,
+        "hex": "#5B4434",
+        "value": 0.03433980680868217
+      }
+    },
+    "53": {
+      "value": 0.03560131487502034,
+      "bits": "3fa23a55e62a662a",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 9,
+        "channel": 2,
+        "hex": "#704A35",
+        "value": 0.03560131487502034
+      }
+    },
+    "55": {
+      "value": 0.0382043715953465,
+      "bits": "3fa38f85fd21eacf",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 15,
+        "channel": 1,
+        "hex": "#4F3729",
+        "value": 0.0382043715953465
+      }
+    },
+    "56": {
+      "value": 0.03954623527673284,
+      "bits": "3fa43f67766310ff",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+        "material": 10,
+        "channel": 2,
+        "hex": "#604638",
+        "value": 0.03954623527673284
+      }
+    },
+    "59": {
+      "value": 0.043735029256973465,
+      "bits": "3fa6647010b254ee",
+      "uses": 8,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 7,
+        "channel": 1,
+        "hex": "#433B40",
+        "value": 0.043735029256973465
+      }
+    },
+    "60": {
+      "value": 0.04518620438567554,
+      "bits": "3fa722a56c2239ee",
+      "uses": 15,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 12,
+        "channel": 1,
+        "hex": "#4C3C31",
+        "value": 0.04518620438567554
+      }
+    },
+    "61": {
+      "value": 0.046665086336880095,
+      "bits": "3fa7e47c775d2427",
+      "uses": 6,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 11,
+        "channel": 2,
+        "hex": "#57443D",
+        "value": 0.046665086336880095
+      }
+    },
+    "63": {
+      "value": 0.04970656598412723,
+      "bits": "3fa973239698b9cc",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 15,
+        "channel": 2,
+        "hex": "#59483F",
+        "value": 0.04970656598412723
+      }
+    },
+    "64": {
+      "value": 0.05126945837404324,
+      "bits": "3faa3ffd8e001389",
+      "uses": 6,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 7,
+        "channel": 2,
+        "hex": "#433B40",
+        "value": 0.05126945837404324
+      }
+    },
+    "65": {
+      "value": 0.052860647023180246,
+      "bits": "3fab108cfc6b7fbc",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+        "material": 9,
+        "channel": 1,
+        "hex": "#594133",
+        "value": 0.052860647023180246
+      }
+    },
+    "66": {
+      "value": 0.05448027644244237,
+      "bits": "3fabe4d6bb31d522",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/w1_1b/generic-staff-w1_1b.glb",
+        "material": 5,
+        "channel": 1,
+        "hex": "#554237",
+        "value": 0.05448027644244237
+      }
+    },
+    "67": {
+      "value": 0.05612849004960009,
+      "bits": "3facbcdf9a4616f2",
+      "uses": 6,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 7,
+        "channel": 0,
+        "hex": "#433B40",
+        "value": 0.05612849004960009
+      }
+    },
+    "68": {
+      "value": 0.05780543019106723,
+      "bits": "3fad98ac60675833",
+      "uses": 6,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 11,
+        "channel": 1,
+        "hex": "#57443D",
+        "value": 0.05780543019106723
+      }
+    },
+    "70": {
+      "value": 0.06124605423161761,
+      "bits": "3faf5ba48fde2048",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+        "material": 10,
+        "channel": 1,
+        "hex": "#604638",
+        "value": 0.06124605423161761
+      }
+    },
+    "71": {
+      "value": 0.06301001765316767,
+      "bits": "3fb0216cad240765",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 13,
+        "channel": 2,
+        "hex": "#725447",
+        "value": 0.06301001765316767
+      }
+    },
+    "72": {
+      "value": 0.06480326669290577,
+      "bits": "3fb096f2671eb815",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 15,
+        "channel": 1,
+        "hex": "#59483F",
+        "value": 0.06480326669290577
+      }
+    },
+    "73": {
+      "value": 0.06662593864377289,
+      "bits": "3fb10e65c38a5192",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+        "material": 8,
+        "channel": 0,
+        "hex": "#49372D",
+        "value": 0.06662593864377289
+      }
+    },
+    "74": {
+      "value": 0.06847816984440017,
+      "bits": "3fb187c90bf8bce2",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 9,
+        "channel": 1,
+        "hex": "#704A35",
+        "value": 0.06847816984440017
+      }
+    },
+    "76": {
+      "value": 0.07227185068231748,
+      "bits": "3fb28068731a1952",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 12,
+        "channel": 0,
+        "hex": "#4C3C31",
+        "value": 0.07227185068231748
+      }
+    },
+    "78": {
+      "value": 0.07618538148130785,
+      "bits": "3fb380e299e53f92",
+      "uses": 12,
+      "example": {
+        "file": "assets/masters/native-v4/counter.glb",
+        "material": 12,
+        "channel": 2,
+        "hex": "#5D5B4E",
+        "value": 0.07618538148130785
+      }
+    },
+    "79": {
+      "value": 0.07818742180518633,
+      "bits": "3fb40417439ca10f",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 15,
+        "channel": 0,
+        "hex": "#4F3729",
+        "value": 0.07818742180518633
+      }
+    },
+    "80": {
+      "value": 0.08021982031446832,
+      "bits": "3fb4894940bddbfb",
+      "uses": 6,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 6,
+        "channel": 1,
+        "hex": "#5C5050",
+        "value": 0.08021982031446832
+      }
+    },
+    "81": {
+      "value": 0.0822827071298148,
+      "bits": "3fb5107ac0261e59",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 17,
+        "channel": 2,
+        "hex": "#756651",
+        "value": 0.0822827071298148
+      }
+    },
+    "82": {
+      "value": 0.08437621154414882,
+      "bits": "3fb599aded247aac",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v4/window-canopy-v9.glb",
+        "material": 1,
+        "channel": 2,
+        "hex": "#668A52",
+        "value": 0.08437621154414882
+      }
+    },
+    "84": {
+      "value": 0.08865558628577294,
+      "bits": "3fb6b221ebb4817e",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 13,
+        "channel": 1,
+        "hex": "#725447",
+        "value": 0.08865558628577294
+      }
+    },
+    "85": {
+      "value": 0.09084171118340768,
+      "bits": "3fb7416702a539d1",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v4/product-off.pencil.glb",
+        "material": 2,
+        "channel": 0,
+        "hex": "#554C43",
+        "value": 0.09084171118340768
+      }
+    },
+    "87": {
+      "value": 0.0953074666309647,
+      "bits": "3fb86611f43e9e6a",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 11,
+        "channel": 0,
+        "hex": "#57443D",
+        "value": 0.0953074666309647
+      }
+    },
+    "89": {
+      "value": 0.09989872824711389,
+      "bits": "3fb992f68abbbc89",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 15,
+        "channel": 0,
+        "hex": "#59483F",
+        "value": 0.09989872824711389
+      }
+    },
+    "90": {
+      "value": 0.10224173308810132,
+      "bits": "3fba2c83a3e6566d",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 5,
+        "channel": 2,
+        "hex": "#AC745A",
+        "value": 0.10224173308810132
+      }
+    },
+    "91": {
+      "value": 0.10461648409110419,
+      "bits": "3fbac82559cb3644",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 13,
+        "channel": 0,
+        "hex": "#5B4434",
+        "value": 0.10461648409110419
+      }
+    },
+    "92": {
+      "value": 0.10702310297826761,
+      "bits": "3fbb65ddb7354604",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 6,
+        "channel": 0,
+        "hex": "#5C5050",
+        "value": 0.10702310297826761
+      }
+    },
+    "93": {
+      "value": 0.10946171077829933,
+      "bits": "3fbc05aec3f4fe5e",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 3,
+        "channel": 1,
+        "hex": "#795D70",
+        "value": 0.10946171077829933
+      }
+    },
+    "95": {
+      "value": 0.11443537382697373,
+      "bits": "3fbd4ba2fc17a6a5",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v4/counter.glb",
+        "material": 10,
+        "channel": 1,
+        "hex": "#655F50",
+        "value": 0.11443537382697373
+      }
+    },
+    "96": {
+      "value": 0.11697066775851084,
+      "bits": "3fbdf1ca289d34b8",
+      "uses": 6,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 13,
+        "channel": 0,
+        "hex": "#603D2E",
+        "value": 0.11697066775851084
+      }
+    },
+    "97": {
+      "value": 0.11953842798834562,
+      "bits": "3fbe9a1206d34003",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 6,
+        "channel": 2,
+        "hex": "#A68D61",
+        "value": 0.11953842798834562
+      }
+    },
+    "98": {
+      "value": 0.12213877222960187,
+      "bits": "3fbf447c904cbb4e",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 0,
+        "channel": 2,
+        "hex": "#B47E62",
+        "value": 0.12213877222960187
+      }
+    },
+    "99": {
+      "value": 0.12477181756095049,
+      "bits": "3fbff10bbbe302c2",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 6,
+        "channel": 1,
+        "hex": "#596368",
+        "value": 0.12477181756095049
+      }
+    },
+    "100": {
+      "value": 0.12743768043564743,
+      "bits": "3fc04fe0bedfe5f1",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 16,
+        "channel": 2,
+        "hex": "#8C7764",
+        "value": 0.12743768043564743
+      }
+    },
+    "101": {
+      "value": 0.1301364766903643,
+      "bits": "3fc0a84fe3b36d8f",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+        "material": 4,
+        "channel": 1,
+        "hex": "#826575",
+        "value": 0.1301364766903643
+      }
+    },
+    "102": {
+      "value": 0.13286832155381798,
+      "bits": "3fc101d443dfc06f",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 17,
+        "channel": 1,
+        "hex": "#756651",
+        "value": 0.13286832155381798
+      }
+    },
+    "103": {
+      "value": 0.13563332965520566,
+      "bits": "3fc15c6ed58eefdf",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 8,
+        "channel": 0,
+        "hex": "#674330",
+        "value": 0.13563332965520566
+      }
+    },
+    "104": {
+      "value": 0.13843161503245183,
+      "bits": "3fc1b8208da5fef0",
+      "uses": 9,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 1,
+        "channel": 0,
+        "hex": "#688879",
+        "value": 0.13843161503245183
+      }
+    },
+    "105": {
+      "value": 0.14126329114027164,
+      "bits": "3fc214ea5fc9514a",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v4/styling-v9.glb",
+        "material": 11,
+        "channel": 2,
+        "hex": "#C8AD69",
+        "value": 0.14126329114027164
+      }
+    },
+    "106": {
+      "value": 0.14412847085805777,
+      "bits": "3fc272cd3e610123",
+      "uses": 12,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 3,
+        "channel": 2,
+        "hex": "#BF876A",
+        "value": 0.14412847085805777
+      }
+    },
+    "107": {
+      "value": 0.14702726649759498,
+      "bits": "3fc2d1ca1a9d1cfb",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v4/counter.glb",
+        "material": 11,
+        "channel": 0,
+        "hex": "#6B685B",
+        "value": 0.14702726649759498
+      }
+    },
+    "109": {
+      "value": 0.15292615199615017,
+      "bits": "3fc393158ac3674e",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 14,
+        "channel": 1,
+        "hex": "#B46D60",
+        "value": 0.15292615199615017
+      }
+    },
+    "111": {
+      "value": 0.1589608350608804,
+      "bits": "3fc458d421f735df",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 17,
+        "channel": 2,
+        "hex": "#C18B6F",
+        "value": 0.1589608350608804
+      }
+    },
+    "112": {
+      "value": 0.162029375639111,
+      "bits": "3fc4bd60eaae3e73",
+      "uses": 13,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 0,
+        "channel": 1,
+        "hex": "#84708B",
+        "value": 0.162029375639111
+      }
+    },
+    "113": {
+      "value": 0.1651321945016676,
+      "bits": "3fc5230d3f736034",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v4/entry-garden-v11.glb",
+        "material": 5,
+        "channel": 2,
+        "hex": "#8BA371",
+        "value": 0.1651321945016676
+      }
+    },
+    "114": {
+      "value": 0.16826940018969075,
+      "bits": "3fc589da095dbaa1",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 13,
+        "channel": 0,
+        "hex": "#725447",
+        "value": 0.16826940018969075
+      }
+    },
+    "115": {
+      "value": 0.1714411007328226,
+      "bits": "3fc5f1c8306b3a3c",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v4/styling-v9.glb",
+        "material": 15,
+        "channel": 2,
+        "hex": "#B69A73",
+        "value": 0.1714411007328226
+      }
+    },
+    "116": {
+      "value": 0.17464740365558504,
+      "bits": "3fc65ad89b841a2b",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 5,
+        "channel": 1,
+        "hex": "#AC745A",
+        "value": 0.17464740365558504
+      }
+    },
+    "117": {
+      "value": 0.17788841598362912,
+      "bits": "3fc6c50c307e53bf",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 17,
+        "channel": 0,
+        "hex": "#756651",
+        "value": 0.17788841598362912
+      }
+    },
+    "118": {
+      "value": 0.18116424424986022,
+      "bits": "3fc73063d420fc80",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 7,
+        "channel": 2,
+        "hex": "#B19A76",
+        "value": 0.18116424424986022
+      }
+    },
+    "119": {
+      "value": 0.184474994500441,
+      "bits": "3fc79ce06a279303",
+      "uses": 7,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 9,
+        "channel": 2,
+        "hex": "#C6AF77",
+        "value": 0.184474994500441
+      }
+    },
+    "120": {
+      "value": 0.18782077230067787,
+      "bits": "3fc80a82d5453b5d",
+      "uses": 8,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 10,
+        "channel": 0,
+        "hex": "#78513B",
+        "value": 0.18782077230067787
+      }
+    },
+    "121": {
+      "value": 0.19120168274079138,
+      "bits": "3fc8794bf727eb3f",
+      "uses": 8,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 1,
+        "channel": 2,
+        "hex": "#688879",
+        "value": 0.19120168274079138
+      }
+    },
+    "122": {
+      "value": 0.1946178304415758,
+      "bits": "3fc8e93cb07b8679",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/w1_1b/counter-w1_1b.glb",
+        "material": 1,
+        "channel": 1,
+        "hex": "#A77A54",
+        "value": 0.1946178304415758
+      }
+    },
+    "123": {
+      "value": 0.19806931955994886,
+      "bits": "3fc95a55e0ecec0b",
+      "uses": 7,
+      "example": {
+        "file": "assets/masters/w1_1b/notebook.glb",
+        "material": 3,
+        "channel": 0,
+        "hex": "#7B9783",
+        "value": 0.19806931955994886
+      }
+    },
+    "124": {
+      "value": 0.20155625379439707,
+      "bits": "3fc9cc98672cf47e",
+      "uses": 7,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+        "material": 6,
+        "channel": 1,
+        "hex": "#947C64",
+        "value": 0.20155625379439707
+      }
+    },
+    "125": {
+      "value": 0.20507873639031693,
+      "bits": "3fca400520f3619c",
+      "uses": 9,
+      "example": {
+        "file": "assets/masters/w1_1b/cookie.glb",
+        "material": 0,
+        "channel": 2,
+        "hex": "#CBA67D",
+        "value": 0.20507873639031693
+      }
+    },
+    "126": {
+      "value": 0.20863687014525575,
+      "bits": "3fcab49ceb01c003",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 0,
+        "channel": 1,
+        "hex": "#B47E62",
+        "value": 0.20863687014525575
+      }
+    },
+    "127": {
+      "value": 0.21223075741405523,
+      "bits": "3fcb2a60a1263b0a",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v4/window-canopy-v9.glb",
+        "material": 4,
+        "channel": 0,
+        "hex": "#7F9F5D",
+        "value": 0.21223075741405523
+      }
+    },
+    "128": {
+      "value": 0.21586050011389926,
+      "bits": "3fcba1511e3e632d",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 0,
+        "channel": 2,
+        "hex": "#819880",
+        "value": 0.21586050011389926
+      }
+    },
+    "129": {
+      "value": 0.2195261997292692,
+      "bits": "3fcc196f3c39e76f",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 0,
+        "channel": 0,
+        "hex": "#819880",
+        "value": 0.2195261997292692
+      }
+    },
+    "130": {
+      "value": 0.2232279573168085,
+      "bits": "3fcc92bbd41d41fe",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+        "material": 4,
+        "channel": 0,
+        "hex": "#826575",
+        "value": 0.2232279573168085
+      }
+    },
+    "131": {
+      "value": 0.22696587351009836,
+      "bits": "3fcd0d37be045851",
+      "uses": 7,
+      "example": {
+        "file": "assets/masters/native-v4/room.glb",
+        "material": 4,
+        "channel": 0,
+        "hex": "#839A84",
+        "value": 0.22696587351009836
+      }
+    },
+    "132": {
+      "value": 0.23074004852434915,
+      "bits": "3fcd88e3d1250f68",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 0,
+        "channel": 0,
+        "hex": "#84708B",
+        "value": 0.23074004852434915
+      }
+    },
+    "133": {
+      "value": 0.23455058216100522,
+      "bits": "3fce05c0e3d1d3e0",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 9,
+        "channel": 2,
+        "hex": "#8C9B85",
+        "value": 0.23455058216100522
+      }
+    },
+    "134": {
+      "value": 0.238397573812271,
+      "bits": "3fce83cfcb7c16f0",
+      "uses": 6,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 8,
+        "channel": 2,
+        "hex": "#BEAA86",
+        "value": 0.238397573812271
+      }
+    },
+    "135": {
+      "value": 0.24228112246555486,
+      "bits": "3fcf03115cb6bfd3",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 3,
+        "channel": 1,
+        "hex": "#BF876A",
+        "value": 0.24228112246555486
+      }
+    },
+    "136": {
+      "value": 0.24620132670783548,
+      "bits": "3fcf83866b38924d",
+      "uses": 9,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 1,
+        "channel": 1,
+        "hex": "#688879",
+        "value": 0.24620132670783548
+      }
+    },
+    "137": {
+      "value": 0.25015828472995344,
+      "bits": "3fd00297e4ef4553",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 11,
+        "channel": 1,
+        "hex": "#70897C",
+        "value": 0.25015828472995344
+      }
+    },
+    "138": {
+      "value": 0.25415209433082675,
+      "bits": "3fd044072557177a",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 14,
+        "channel": 2,
+        "hex": "#91A08A",
+        "value": 0.25415209433082675
+      }
+    },
+    "139": {
+      "value": 0.2581828529215958,
+      "bits": "3fd086115f6beb3a",
+      "uses": 9,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 0,
+        "channel": 2,
+        "hex": "#84708B",
+        "value": 0.2581828529215958
+      }
+    },
+    "140": {
+      "value": 0.26225065752969623,
+      "bits": "3fd0c8b6fb5c735e",
+      "uses": 11,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 16,
+        "channel": 0,
+        "hex": "#8C7764",
+        "value": 0.26225065752969623
+      }
+    },
+    "141": {
+      "value": 0.26635560480286247,
+      "bits": "3fd10bf860ef039a",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 6,
+        "channel": 1,
+        "hex": "#A68D61",
+        "value": 0.26635560480286247
+      }
+    },
+    "142": {
+      "value": 0.2704977910130658,
+      "bits": "3fd14fd5f782a5a6",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v4/product-off.tea.glb",
+        "material": 1,
+        "channel": 2,
+        "hex": "#C6B28E",
+        "value": 0.2704977910130658
+      }
+    },
+    "143": {
+      "value": 0.27467731206038465,
+      "bits": "3fd1945026102997",
+      "uses": 8,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 19,
+        "channel": 2,
+        "hex": "#D7978F",
+        "value": 0.27467731206038465
+      }
+    },
+    "144": {
+      "value": 0.2788942634768104,
+      "bits": "3fd1d967532b31b1",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v4/counter.glb",
+        "material": 17,
+        "channel": 2,
+        "hex": "#B7AA90",
+        "value": 0.2788942634768104
+      }
+    },
+    "145": {
+      "value": 0.2831487404299921,
+      "bits": "3fd21f1be50339e7",
+      "uses": 12,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 2,
+        "channel": 0,
+        "hex": "#91AA98",
+        "value": 0.2831487404299921
+      }
+    },
+    "146": {
+      "value": 0.2874408377269175,
+      "bits": "3fd2656e41649ae3",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/w1_1b/generic-staff-w1_1b.glb",
+        "material": 0,
+        "channel": 0,
+        "hex": "#9277A4",
+        "value": 0.2874408377269175
+      }
+    },
+    "147": {
+      "value": 0.29177064981753587,
+      "bits": "3fd2ac5ecdb988f8",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 6,
+        "channel": 1,
+        "hex": "#AB9370",
+        "value": 0.29177064981753587
+      }
+    },
+    "148": {
+      "value": 0.2961382707983211,
+      "bits": "3fd2f3edef0b0ed8",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+        "material": 6,
+        "channel": 0,
+        "hex": "#947C64",
+        "value": 0.2961382707983211
+      }
+    },
+    "149": {
+      "value": 0.3005437944157765,
+      "bits": "3fd33c1c0a020438",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v4/product-off.pencil.glb",
+        "material": 3,
+        "channel": 2,
+        "hex": "#B9AF95",
+        "value": 0.3005437944157765
+      }
+    },
+    "150": {
+      "value": 0.3049873140698863,
+      "bits": "3fd384e982e800b1",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+        "material": 14,
+        "channel": 1,
+        "hex": "#7C96A1",
+        "value": 0.3049873140698863
+      }
+    },
+    "151": {
+      "value": 0.30946892281750854,
+      "bits": "3fd3ce56bda84a81",
+      "uses": 9,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 19,
+        "channel": 1,
+        "hex": "#D7978F",
+        "value": 0.30946892281750854
+      }
+    },
+    "152": {
+      "value": 0.31398871337571754,
+      "bits": "3fd418641dd0c1bc",
+      "uses": 9,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 2,
+        "channel": 2,
+        "hex": "#91AA98",
+        "value": 0.31398871337571754
+      }
+    },
+    "153": {
+      "value": 0.31854677812509186,
+      "bits": "3fd463120692c7af",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 2,
+        "channel": 2,
+        "hex": "#DFB799",
+        "value": 0.31854677812509186
+      }
+    },
+    "154": {
+      "value": 0.32314320911295075,
+      "bits": "3fd4ae60dac4229d",
+      "uses": 13,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 7,
+        "channel": 1,
+        "hex": "#B19A76",
+        "value": 0.32314320911295075
+      }
+    },
+    "155": {
+      "value": 0.3277780980565422,
+      "bits": "3fd4fa50fcdfde15",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 9,
+        "channel": 1,
+        "hex": "#8C9B85",
+        "value": 0.3277780980565422
+      }
+    },
+    "156": {
+      "value": 0.33245153634617935,
+      "bits": "3fd546e2cf0727a9",
+      "uses": 6,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 10,
+        "channel": 1,
+        "hex": "#B99C7C",
+        "value": 0.33245153634617935
+      }
+    },
+    "157": {
+      "value": 0.33716361504833037,
+      "bits": "3fd59416b3022858",
+      "uses": 15,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 4,
+        "channel": 2,
+        "hex": "#C9B89D",
+        "value": 0.33716361504833037
+      }
+    },
+    "158": {
+      "value": 0.3419144249086609,
+      "bits": "3fd5e1ed0a40daab",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 16,
+        "channel": 0,
+        "hex": "#9E6657",
+        "value": 0.3419144249086609
+      }
+    },
+    "159": {
+      "value": 0.3467040563550296,
+      "bits": "3fd6306635dbdd7b",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v4/window-canopy-v9.glb",
+        "material": 4,
+        "channel": 1,
+        "hex": "#7F9F5D",
+        "value": 0.3467040563550296
+      }
+    },
+    "160": {
+      "value": 0.35153259950043936,
+      "bits": "3fd67f82969543a2",
+      "uses": 7,
+      "example": {
+        "file": "assets/masters/native-v4/counter.glb",
+        "material": 5,
+        "channel": 2,
+        "hex": "#D1BEA0",
+        "value": 0.35153259950043936
+      }
+    },
+    "161": {
+      "value": 0.3564001441459435,
+      "bits": "3fd6cf428cd96079",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+        "material": 14,
+        "channel": 2,
+        "hex": "#7C96A1",
+        "value": 0.3564001441459435
+      }
+    },
+    "162": {
+      "value": 0.3613067797835095,
+      "bits": "3fd71fa678bf915d",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v4/product-off.vase.glb",
+        "material": 0,
+        "channel": 0,
+        "hex": "#A2B29C",
+        "value": 0.3613067797835095
+      }
+    },
+    "163": {
+      "value": 0.3662525955988395,
+      "bits": "3fd770aeba0b042a",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v4/entry-garden-v11.glb",
+        "material": 5,
+        "channel": 1,
+        "hex": "#8BA371",
+        "value": 0.3662525955988395
+      }
+    },
+    "164": {
+      "value": 0.3712376804741491,
+      "bits": "3fd7c25bb02b7ac5",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v4/product-off.notebook.glb",
+        "material": 2,
+        "channel": 2,
+        "hex": "#C8BBA4",
+        "value": 0.3712376804741491
+      }
+    },
+    "165": {
+      "value": 0.3762621229909065,
+      "bits": "3fd814adba3e0bd9",
+      "uses": 6,
+      "example": {
+        "file": "assets/masters/native-v4/product-off.cookie.glb",
+        "material": 1,
+        "channel": 2,
+        "hex": "#DEC9A5",
+        "value": 0.3762621229909065
+      }
+    },
+    "166": {
+      "value": 0.38132601143253014,
+      "bits": "3fd867a5370de0b1",
+      "uses": 15,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 6,
+        "channel": 0,
+        "hex": "#A68D61",
+        "value": 0.38132601143253014
+      }
+    },
+    "167": {
+      "value": 0.386429433787049,
+      "bits": "3fd8bb428514f067",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v4/room.glb",
+        "material": 16,
+        "channel": 0,
+        "hex": "#A78D61",
+        "value": 0.386429433787049
+      }
+    },
+    "168": {
+      "value": 0.39157247774972326,
+      "bits": "3fd90f86027cb84e",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v4/display-3.glb",
+        "material": 2,
+        "channel": 2,
+        "hex": "#D9C8A8",
+        "value": 0.39157247774972326
+      }
+    },
+    "169": {
+      "value": 0.39675523072562685,
+      "bits": "3fd964700d1ef1b1",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 19,
+        "channel": 0,
+        "hex": "#A99A81",
+        "value": 0.39675523072562685
+      }
+    },
+    "170": {
+      "value": 0.4019777798321958,
+      "bits": "3fd9ba0102864521",
+      "uses": 9,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 2,
+        "channel": 1,
+        "hex": "#91AA98",
+        "value": 0.4019777798321958
+      }
+    },
+    "171": {
+      "value": 0.4072402119017367,
+      "bits": "3fda10393feefafd",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 6,
+        "channel": 0,
+        "hex": "#AB9370",
+        "value": 0.4072402119017367
+      }
+    },
+    "172": {
+      "value": 0.41254261348390375,
+      "bits": "3fda67192247a9be",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 17,
+        "channel": 1,
+        "hex": "#C2AC88",
+        "value": 0.41254261348390375
+      }
+    },
+    "173": {
+      "value": 0.4178850708481375,
+      "bits": "3fdabea10631e195",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v4/entry-garden-v11.glb",
+        "material": 6,
+        "channel": 0,
+        "hex": "#ADBFC4",
+        "value": 0.4178850708481375
+      }
+    },
+    "174": {
+      "value": 0.4232676699860717,
+      "bits": "3fdb16d14802d5ca",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v4/product-off.pencil.glb",
+        "material": 4,
+        "channel": 1,
+        "hex": "#CCAEAA",
+        "value": 0.4232676699860717
+      }
+    },
+    "175": {
+      "value": 0.4286904966139066,
+      "bits": "3fdb6faa43c403bb",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 9,
+        "channel": 1,
+        "hex": "#C6AF77",
+        "value": 0.4286904966139066
+      }
+    },
+    "177": {
+      "value": 0.4396571738409188,
+      "bits": "3fdc2357d7c64e5d",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 7,
+        "channel": 0,
+        "hex": "#B19A76",
+        "value": 0.4396571738409188
+      }
+    },
+    "178": {
+      "value": 0.44520119451622786,
+      "bits": "3fdc7e2d26a596de",
+      "uses": 6,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 2,
+        "channel": 2,
+        "hex": "#F2CBB2",
+        "value": 0.44520119451622786
+      }
+    },
+    "179": {
+      "value": 0.45078578283822346,
+      "bits": "3fdcd9ac9cb2aef2",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 2,
+        "channel": 1,
+        "hex": "#C8B38F",
+        "value": 0.45078578283822346
+      }
+    },
+    "180": {
+      "value": 0.45641102318040466,
+      "bits": "3fdd35d69485ffc5",
+      "uses": 6,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 14,
+        "channel": 0,
+        "hex": "#B46D60",
+        "value": 0.45641102318040466
+      }
+    },
+    "181": {
+      "value": 0.4620769996544071,
+      "bits": "3fdd92ab686ff782",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 5,
+        "channel": 2,
+        "hex": "#E5D3B5",
+        "value": 0.4620769996544071
+      }
+    },
+    "182": {
+      "value": 0.467783796112159,
+      "bits": "3fddf02b7279a10d",
+      "uses": 7,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 18,
+        "channel": 2,
+        "hex": "#D7CCB6",
+        "value": 0.467783796112159
+      }
+    },
+    "183": {
+      "value": 0.47353149614800955,
+      "bits": "3fde4e570c6539c5",
+      "uses": 6,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 2,
+        "channel": 1,
+        "hex": "#DFB799",
+        "value": 0.47353149614800955
+      }
+    },
+    "184": {
+      "value": 0.4793201831008268,
+      "bits": "3fdead2e8faec526",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 4,
+        "channel": 1,
+        "hex": "#C9B89D",
+        "value": 0.4793201831008268
+      }
+    },
+    "185": {
+      "value": 0.4851499400560704,
+      "bits": "3fdf0cb2558c9ea4",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 10,
+        "channel": 0,
+        "hex": "#B99C7C",
+        "value": 0.4851499400560704
+      }
+    },
+    "186": {
+      "value": 0.4910208498478356,
+      "bits": "3fdf6ce2b6f00983",
+      "uses": 11,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 8,
+        "channel": 1,
+        "hex": "#E7BA9D",
+        "value": 0.4910208498478356
+      }
+    },
+    "187": {
+      "value": 0.4969329950608704,
+      "bits": "3fdfcdc00c85bec2",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 1,
+        "channel": 2,
+        "hex": "#E7D6BB",
+        "value": 0.4969329950608704
+      }
+    },
+    "188": {
+      "value": 0.5028864580325687,
+      "bits": "3fe017a5575b3cb2",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v4/window-canopy-v9.glb",
+        "material": 3,
+        "channel": 0,
+        "hex": "#BCD28A",
+        "value": 0.5028864580325687
+      }
+    },
+    "189": {
+      "value": 0.5088813208549338,
+      "bits": "3fe048c17ad3c04b",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v4/product-off.towel.glb",
+        "material": 0,
+        "channel": 1,
+        "hex": "#9ABDB6",
+        "value": 0.5088813208549338
+      }
+    },
+    "190": {
+      "value": 0.5149176653765214,
+      "bits": "3fe07a349c9d9837",
+      "uses": 6,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 8,
+        "channel": 0,
+        "hex": "#BEAA86",
+        "value": 0.5149176653765214
+      }
+    },
+    "191": {
+      "value": 0.5209955732043543,
+      "bits": "3fe0abfee888c050",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 3,
+        "channel": 0,
+        "hex": "#BF876A",
+        "value": 0.5209955732043543
+      }
+    },
+    "192": {
+      "value": 0.5271151257058131,
+      "bits": "3fe0de208a4444c8",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v4/entry-garden-v11.glb",
+        "material": 4,
+        "channel": 0,
+        "hex": "#C0CCA0",
+        "value": 0.5271151257058131
+      }
+    },
+    "193": {
+      "value": 0.5332764040105052,
+      "bits": "3fe11099ad5e83eb",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 17,
+        "channel": 0,
+        "hex": "#C18B6F",
+        "value": 0.5332764040105052
+      }
+    },
+    "194": {
+      "value": 0.5394794890121072,
+      "bits": "3fe1436a7d456eef",
+      "uses": 7,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 17,
+        "channel": 0,
+        "hex": "#C2AC88",
+        "value": 0.5394794890121072
+      }
+    },
+    "195": {
+      "value": 0.5457244613701866,
+      "bits": "3fe176932546ca12",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 4,
+        "channel": 2,
+        "hex": "#E9DCC3",
+        "value": 0.5457244613701866
+      }
+    },
+    "196": {
+      "value": 0.5520114015120001,
+      "bits": "3fe1aa13d0906bda",
+      "uses": 7,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 4,
+        "channel": 0,
+        "hex": "#C48C70",
+        "value": 0.5520114015120001
+      }
+    },
+    "197": {
+      "value": 0.5583403896342679,
+      "bits": "3fe1ddecaa307b85",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/w1_1b/room-w1_1b.glb",
+        "material": 0,
+        "channel": 1,
+        "hex": "#D9C5B3",
+        "value": 0.5583403896342679
+      }
+    },
+    "198": {
+      "value": 0.5647115057049292,
+      "bits": "3fe2121ddd15aece",
+      "uses": 7,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 9,
+        "channel": 0,
+        "hex": "#C6AF77",
+        "value": 0.5647115057049292
+      }
+    },
+    "199": {
+      "value": 0.5711248294648731,
+      "bits": "3fe246a7940f86d1",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 11,
+        "channel": 2,
+        "hex": "#F1E2C7",
+        "value": 0.5711248294648731
+      }
+    },
+    "200": {
+      "value": 0.5775804404296506,
+      "bits": "3fe27b89f9ce8c4b",
+      "uses": 10,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 2,
+        "channel": 0,
+        "hex": "#C8B38F",
+        "value": 0.5775804404296506
+      }
+    },
+    "201": {
+      "value": 0.5840784178911641,
+      "bits": "3fe2b0c538e48b07",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 4,
+        "channel": 0,
+        "hex": "#C9B89D",
+        "value": 0.5840784178911641
+      }
+    },
+    "202": {
+      "value": 0.5906188409193369,
+      "bits": "3fe2e6597bc4cca0",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+        "material": 1,
+        "channel": 2,
+        "hex": "#F0E3CA",
+        "value": 0.5906188409193369
+      }
+    },
+    "203": {
+      "value": 0.5972017883637634,
+      "bits": "3fe31c46ecc4528d",
+      "uses": 16,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 2,
+        "channel": 1,
+        "hex": "#F2CBB2",
+        "value": 0.5972017883637634
+      }
+    },
+    "204": {
+      "value": 0.6038273388553378,
+      "bits": "3fe3528db61a0f73",
+      "uses": 6,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 18,
+        "channel": 1,
+        "hex": "#D7CCB6",
+        "value": 0.6038273388553378
+      }
+    },
+    "205": {
+      "value": 0.6104955708078648,
+      "bits": "3fe3892e01df1fcc",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v4/product-off.cookie.glb",
+        "material": 0,
+        "channel": 0,
+        "hex": "#CDB48D",
+        "value": 0.6104955708078648
+      }
+    },
+    "206": {
+      "value": 0.6172065624196511,
+      "bits": "3fe3c027fa0f01eb",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v4/product-off.tea.glb",
+        "material": 2,
+        "channel": 2,
+        "hex": "#EFE4CE",
+        "value": 0.6172065624196511
+      }
+    },
+    "207": {
+      "value": 0.6239603916750761,
+      "bits": "3fe3f77bc887cd3b",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 3,
+        "channel": 2,
+        "hex": "#F1E5CF",
+        "value": 0.6239603916750761
+      }
+    },
+    "208": {
+      "value": 0.6307571363461468,
+      "bits": "3fe42f29970a68f8",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 3,
+        "channel": 2,
+        "hex": "#EEE4D0",
+        "value": 0.6307571363461468
+      }
+    },
+    "209": {
+      "value": 0.6375968739940326,
+      "bits": "3fe467318f3ac22d",
+      "uses": 7,
+      "example": {
+        "file": "assets/masters/native-v4/counter.glb",
+        "material": 5,
+        "channel": 0,
+        "hex": "#D1BEA0",
+        "value": 0.6375968739940326
+      }
+    },
+    "210": {
+      "value": 0.6444796819705821,
+      "bits": "3fe49f93daa00113",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v4/entry-garden-v11.glb",
+        "material": 0,
+        "channel": 1,
+        "hex": "#D3D2B5",
+        "value": 0.6444796819705821
+      }
+    },
+    "211": {
+      "value": 0.6514056374198242,
+      "bits": "3fe4d850a2a4bde1",
+      "uses": 8,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 5,
+        "channel": 1,
+        "hex": "#E5D3B5",
+        "value": 0.6514056374198242
+      }
+    },
+    "212": {
+      "value": 0.6583748172794485,
+      "bits": "3fe51168109734e5",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 1,
+        "channel": 2,
+        "hex": "#F3E8D4",
+        "value": 0.6583748172794485
+      }
+    },
+    "213": {
+      "value": 0.665387298282272,
+      "bits": "3fe54ada4da97a1b",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v4/product-off.pencil.glb",
+        "material": 0,
+        "channel": 0,
+        "hex": "#D5BA78",
+        "value": 0.665387298282272
+      }
+    },
+    "214": {
+      "value": 0.6724431569576875,
+      "bits": "3fe584a782f1ac23",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 1,
+        "channel": 1,
+        "hex": "#E7D6BB",
+        "value": 0.6724431569576875
+      }
+    },
+    "215": {
+      "value": 0.6795424696330938,
+      "bits": "3fe5becfd96a2698",
+      "uses": 6,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 19,
+        "channel": 0,
+        "hex": "#D7978F",
+        "value": 0.6795424696330938
+      }
+    },
+    "216": {
+      "value": 0.6866853124353135,
+      "bits": "3fe5f95379f1b3ed",
+      "uses": 10,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 20,
+        "channel": 1,
+        "hex": "#E3D8C2",
+        "value": 0.6866853124353135
+      }
+    },
+    "217": {
+      "value": 0.6938717612919899,
+      "bits": "3fe634328d4bbe97",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v4/display-3.glb",
+        "material": 2,
+        "channel": 0,
+        "hex": "#D9C8A8",
+        "value": 0.6938717612919899
+      }
+    },
+    "218": {
+      "value": 0.7011018919329731,
+      "bits": "3fe66f6d3c2081cf",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v4/counter.glb",
+        "material": 4,
+        "channel": 1,
+        "hex": "#E7DAC4",
+        "value": 0.7011018919329731
+      }
+    },
+    "219": {
+      "value": 0.7083757798916868,
+      "bits": "3fe6ab03aefd39aa",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+        "material": 3,
+        "channel": 1,
+        "hex": "#E7DBBF",
+        "value": 0.7083757798916868
+      }
+    },
+    "220": {
+      "value": 0.7156935005064807,
+      "bits": "3fe6e6f60e5452b1",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 4,
+        "channel": 1,
+        "hex": "#E9DCC3",
+        "value": 0.7156935005064807
+      }
+    },
+    "221": {
+      "value": 0.7230551289219693,
+      "bits": "3fe72344827d98f6",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 8,
+        "channel": 1,
+        "hex": "#E7DDC8",
+        "value": 0.7230551289219693
+      }
+    },
+    "222": {
+      "value": 0.7304607400903537,
+      "bits": "3fe75fef33b6669b",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v4/product-off.cookie.glb",
+        "material": 1,
+        "channel": 0,
+        "hex": "#DEC9A5",
+        "value": 0.7304607400903537
+      }
+    },
+    "223": {
+      "value": 0.7379104087727308,
+      "bits": "3fe79cf64a21d1e2",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 2,
+        "channel": 0,
+        "hex": "#DFB799",
+        "value": 0.7379104087727308
+      }
+    },
+    "224": {
+      "value": 0.7454042095403874,
+      "bits": "3fe7da59edc8dab0",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 4,
+        "channel": 1,
+        "hex": "#EEE0C6",
+        "value": 0.7454042095403874
+      }
+    },
+    "226": {
+      "value": 0.7605245046752924,
+      "bits": "3fe856377c6c6224",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 11,
+        "channel": 1,
+        "hex": "#F1E2C7",
+        "value": 0.7605245046752924
+      }
+    },
+    "227": {
+      "value": 0.768151147247507,
+      "bits": "3fe894b1b6fa0377",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+        "material": 20,
+        "channel": 0,
+        "hex": "#E3D8C2",
+        "value": 0.768151147247507
+      }
+    },
+    "228": {
+      "value": 0.7758222183174236,
+      "bits": "3fe8d3891de5df49",
+      "uses": 9,
+      "example": {
+        "file": "assets/masters/native-v4/counter.glb",
+        "material": 6,
+        "channel": 1,
+        "hex": "#EFE4D1",
+        "value": 0.7758222183174236
+      }
+    },
+    "229": {
+      "value": 0.7835377915261935,
+      "bits": "3fe912bdd8b91f45",
+      "uses": 8,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 3,
+        "channel": 1,
+        "hex": "#F1E5CF",
+        "value": 0.7835377915261935
+      }
+    },
+    "230": {
+      "value": 0.7912979403326302,
+      "bits": "3fe952500ee3dda5",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v4/counter.glb",
+        "material": 16,
+        "channel": 1,
+        "hex": "#F0E6D3",
+        "value": 0.7912979403326302
+      }
+    },
+    "231": {
+      "value": 0.799102738014409,
+      "bits": "3fe9923fe7bd4f67",
+      "uses": 17,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 8,
+        "channel": 0,
+        "hex": "#E7BA9D",
+        "value": 0.799102738014409
+      }
+    },
+    "232": {
+      "value": 0.8069522576692516,
+      "bits": "3fe9d28d8a83edfc",
+      "uses": 10,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 5,
+        "channel": 2,
+        "hex": "#FFF6E8",
+        "value": 0.8069522576692516
+      }
+    },
+    "233": {
+      "value": 0.8148465722161012,
+      "bits": "3fea13391e5da09f",
+      "uses": 12,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 4,
+        "channel": 0,
+        "hex": "#E9DCC3",
+        "value": 0.8148465722161012
+      }
+    },
+    "235": {
+      "value": 0.8307698767746546,
+      "bits": "3fea95aab567f88f",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 12,
+        "channel": 1,
+        "hex": "#F4EBD8",
+        "value": 0.8307698767746546
+      }
+    },
+    "237": {
+      "value": 0.846873231509858,
+      "bits": "3feb1995e4262a69",
+      "uses": 4,
+      "example": {
+        "file": "assets/masters/native-v4/product-off.notebook.glb",
+        "material": 1,
+        "channel": 0,
+        "hex": "#EDE4D1",
+        "value": 0.846873231509858
+      }
+    },
+    "238": {
+      "value": 0.8549926081242338,
+      "bits": "3feb5c197546e3f8",
+      "uses": 3,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 4,
+        "channel": 0,
+        "hex": "#EEE0C6",
+        "value": 0.8549926081242338
+      }
+    },
+    "239": {
+      "value": 0.8631572134541023,
+      "bits": "3feb9efbe062f086",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v4/counter.glb",
+        "material": 6,
+        "channel": 0,
+        "hex": "#EFE4D1",
+        "value": 0.8631572134541023
+      }
+    },
+    "240": {
+      "value": 0.8713671191987972,
+      "bits": "3febe23d4bf8981b",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+        "material": 1,
+        "channel": 0,
+        "hex": "#F0E3CA",
+        "value": 0.8713671191987972
+      }
+    },
+    "241": {
+      "value": 0.8796223968878317,
+      "bits": "3fec25ddde6ecbbb",
+      "uses": 9,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 3,
+        "channel": 0,
+        "hex": "#F1E5CF",
+        "value": 0.8796223968878317
+      }
+    },
+    "242": {
+      "value": 0.8879231178819663,
+      "bits": "3fec69ddbe154af1",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 2,
+        "channel": 0,
+        "hex": "#F2CBB2",
+        "value": 0.8879231178819663
+      }
+    },
+    "243": {
+      "value": 0.8962693533742664,
+      "bits": "3fecae3d1124c90b",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v3/misaki-native-v3.glb",
+        "material": 1,
+        "channel": 0,
+        "hex": "#F3E8D4",
+        "value": 0.8962693533742664
+      }
+    },
+    "244": {
+      "value": 0.9046611743911496,
+      "bits": "3fecf2fbfdbf11f1",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v4/display-1.glb",
+        "material": 12,
+        "channel": 0,
+        "hex": "#F4EBD8",
+        "value": 0.9046611743911496
+      }
+    },
+    "245": {
+      "value": 0.9130986517934192,
+      "bits": "3fed381aa9ef2e82",
+      "uses": 1,
+      "example": {
+        "file": "assets/masters/native-v4/styling-v9.glb",
+        "material": 10,
+        "channel": 1,
+        "hex": "#FFF5E5",
+        "value": 0.9130986517934192
+      }
+    },
+    "246": {
+      "value": 0.9215818562772946,
+      "bits": "3fed7d993ba988d4",
+      "uses": 5,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 5,
+        "channel": 1,
+        "hex": "#FFF6E8",
+        "value": 0.9215818562772946
+      }
+    },
+    "247": {
+      "value": 0.9301108583754237,
+      "bits": "3fedc377d8cc0fd5",
+      "uses": 11,
+      "example": {
+        "file": "assets/masters/w1_1b/card.glb",
+        "material": 0,
+        "channel": 1,
+        "hex": "#FFF7E9",
+        "value": 0.9301108583754237
+      }
+    },
+    "248": {
+      "value": 0.938685728457888,
+      "bits": "3fee09b6a71e5aa6",
+      "uses": 2,
+      "example": {
+        "file": "assets/masters/native-v4/room.glb",
+        "material": 22,
+        "channel": 0,
+        "hex": "#F8DDA5",
+        "value": 0.938685728457888
+      }
+    },
+    "255": {
+      "value": 1,
+      "bits": "3ff0000000000000",
+      "uses": 71,
+      "example": {
+        "file": "assets/masters/day1/misaki-calm-v1.glb",
+        "material": 5,
+        "channel": 0,
+        "hex": "#FFF6E8",
+        "value": 1
+      }
+    }
+  },
+  "preservationPossible": true,
+  "sourceOrAssetsModified": false
+}

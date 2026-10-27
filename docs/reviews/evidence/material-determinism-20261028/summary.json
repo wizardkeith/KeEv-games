@@ -1,0 +1,64 @@
+{
+  "baseline": "f0492e66f30a076bed0aede48a1ff219e162756c",
+  "recordedUtc": "2026-10-27T17:34:34.839Z",
+  "suite": {
+    "tests": 304,
+    "passed": 304,
+    "failed": 0,
+    "skipped": 0,
+    "originalTestsRetained": 302,
+    "newTests": 2
+  },
+  "commands": [
+    {
+      "Script": "test",
+      "ExitCode": 0,
+      "StartedUtc": "2026-10-27T17:25:12.7635592Z",
+      "FinishedUtc": "2026-10-27T17:25:30.5868142Z"
+    },
+    {
+      "Script": "validate",
+      "ExitCode": 0,
+      "StartedUtc": "2026-10-27T17:25:30.6166138Z",
+      "FinishedUtc": "2026-10-27T17:25:31.1423356Z"
+    },
+    {
+      "Script": "replay",
+      "ExitCode": 0,
+      "StartedUtc": "2026-10-27T17:25:31.1474022Z",
+      "FinishedUtc": "2026-10-27T17:25:31.6658410Z"
+    },
+    {
+      "Script": "asset-check",
+      "ExitCode": 0,
+      "StartedUtc": "2026-10-27T17:25:31.6801810Z",
+      "FinishedUtc": "2026-10-27T17:25:32.4163032Z"
+    },
+    {
+      "Script": "build",
+      "ExitCode": 0,
+      "StartedUtc": "2026-10-27T17:25:32.4258051Z",
+      "FinishedUtc": "2026-10-27T17:25:41.3399041Z"
+    }
+  ],
+  "authoringStrictTypeCheckExitCode": 0,
+  "preflightAndActualGlbRebuilds": 44,
+  "originalMasterGlbsUnchanged": 91,
+  "masterAndPublicFilesUnchanged": 458,
+  "relevantMaterialRgbSetsExact": 342,
+  "tableEntries": 256,
+  "pinnedFromOriginalMasterFactors": 187,
+  "otherEntriesRetainPreviousFormula": 69,
+  "onlyChangedLocalFormulaInput": 41,
+  "tableJsonSha256": "4210c27d186eac98ef2b3ba3c256bf146fe6857ac5314a32c209794366164fe4",
+  "nodeAndChromeWindowsVerified": true,
+  "linuxABTested": false,
+  "masterFilesWritten": false,
+  "existingByteHashAssertionsRetained": true,
+  "newArt": false,
+  "authActions": false,
+  "pushAttempted": false,
+  "unsyncedCleanup": false,
+  "browserClosed": true,
+  "serversClosed": true
+}

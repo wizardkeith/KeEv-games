@@ -39,9 +39,9 @@ the source commits used by preservation tests. If `git rev-parse
 Historical blob reads may then use the existing authorized Git connection.
 Do not reset or overwrite another checkout to apply these steps.
 
-Current validation: build/type checks and isolated headless runtime passed;
-the unchanged test suite is **301/302**, with one strict byte-rebuild mismatch
-in Visitor A's JSON blue material factor (~3.47e-18). Geometry binary bytes
-match. Do not replace the committed master or weaken its test to hide this.
-See `docs/LOCAL_WEB_VALIDATION_2026-10-28_zh-HK.md` for the exact evidence and
-limits. The GUI hold, Web-first scope and unaccepted R6 art status remain.
+Current validation: **304/304** (the original 302 assertions retained plus two
+canonical-color regression checks), build/type checks and isolated headless
+runtime passed. A fixed shared sRGB8 table resolves the Visitor A JSON 1-ULP
+mismatch while preserving every master/public asset byte and strict hashes.
+See `docs/DETERMINISTIC_SRGB8_2026-10-28_zh-HK.md`. Linux A/B is not yet run.
+The auth/push hold, GUI hold, Web-first scope and unaccepted R6 art status remain.

@@ -1,0 +1,73 @@
+{
+  "masterBytesUnchanged": true,
+  "changes": [
+    {
+      "file": "assets/authoring/day1/manifest.json",
+      "key": "sourceSha256",
+      "changed": [
+        {
+          "source": "src/art/materials.ts",
+          "before": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
+          "after": "88570a868b8d51696bd624afb362a3870f9b88e2c2860d9ac187d4bf5fde9e6f"
+        },
+        {
+          "source": "tools/export-misaki.ts",
+          "before": "769dd339befc62e442d5371b483b3ff3da602bd60ca1ed4dd9ea8acbbb977a8e",
+          "after": "e322a7bb2d1e60acd8a8c1c42abffc834c35842ecfbcbfc708a3084d7ed8105c"
+        }
+      ],
+      "addedCanonicalTableDependency": true
+    },
+    {
+      "file": "assets/authoring/native-v3/manifest.json",
+      "key": "sourceSha256",
+      "changed": [
+        {
+          "source": "src/art/materials.ts",
+          "before": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
+          "after": "88570a868b8d51696bd624afb362a3870f9b88e2c2860d9ac187d4bf5fde9e6f"
+        },
+        {
+          "source": "tools/export-native-characters.ts",
+          "before": "326569d5262fd8d4ae8f91734674efe42616e4098736b15200b220ba37fab861",
+          "after": "fc44618831785704fa650d163cf85ac6309ecad7b98e5deee9fa6ad35bc229d2"
+        }
+      ],
+      "addedCanonicalTableDependency": true
+    },
+    {
+      "file": "assets/authoring/native-v3/products-manifest.json",
+      "key": "sourceSha256",
+      "changed": [
+        {
+          "source": "src/art/materials.ts",
+          "before": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
+          "after": "88570a868b8d51696bd624afb362a3870f9b88e2c2860d9ac187d4bf5fde9e6f"
+        },
+        {
+          "source": "tools/export-native-products.ts",
+          "before": "ea5850505c825962025ebbd315ad3427540770b12545ba74845151297d645209",
+          "after": "cf36f53a4cb3dbcd2951f1129fa2204cbcfb369a5326d1619c1762ecaa97bca2"
+        }
+      ],
+      "addedCanonicalTableDependency": true
+    },
+    {
+      "file": "assets/authoring/native-v3/environment/manifest.json",
+      "key": "sources",
+      "changed": [
+        {
+          "source": "src/art/materials.ts",
+          "before": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
+          "after": "88570a868b8d51696bd624afb362a3870f9b88e2c2860d9ac187d4bf5fde9e6f"
+        },
+        {
+          "source": "tools/export-native-environment.ts",
+          "before": "e55ede937666cfbe9c617a26b6b04dc81eef765f7744a20ce0fcf46040ac645a",
+          "after": "22896b1b2ba71c272b90abbfef8f909934fa744b5ac37987eaaf69fbe1bdb64e"
+        }
+      ],
+      "addedCanonicalTableDependency": true
+    }
+  ]
+}

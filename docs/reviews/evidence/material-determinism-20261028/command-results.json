@@ -1,0 +1,32 @@
+[
+  {
+    "Script": "test",
+    "ExitCode": 0,
+    "StartedUtc": "2026-10-27T17:25:12.7635592Z",
+    "FinishedUtc": "2026-10-27T17:25:30.5868142Z"
+  },
+  {
+    "Script": "validate",
+    "ExitCode": 0,
+    "StartedUtc": "2026-10-27T17:25:30.6166138Z",
+    "FinishedUtc": "2026-10-27T17:25:31.1423356Z"
+  },
+  {
+    "Script": "replay",
+    "ExitCode": 0,
+    "StartedUtc": "2026-10-27T17:25:31.1474022Z",
+    "FinishedUtc": "2026-10-27T17:25:31.6658410Z"
+  },
+  {
+    "Script": "asset-check",
+    "ExitCode": 0,
+    "StartedUtc": "2026-10-27T17:25:31.6801810Z",
+    "FinishedUtc": "2026-10-27T17:25:32.4163032Z"
+  },
+  {
+    "Script": "build",
+    "ExitCode": 0,
+    "StartedUtc": "2026-10-27T17:25:32.4258051Z",
+    "FinishedUtc": "2026-10-27T17:25:41.3399041Z"
+  }
+]

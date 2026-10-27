@@ -59,7 +59,7 @@
     "src/presentation/native-visible-clock.ts": "aebff05c819ef1e25d8c71cb1ce5e088f42d6cd7c8f55008d97c45790b0468d4",
     "src/art/native-characters.ts": "7812c35e5d0f2697b1d21575beaed4aa30ced2acfa9def0a3840a95c3bf6cead",
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
-    "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
+    "src/art/materials.ts": "88570a868b8d51696bd624afb362a3870f9b88e2c2860d9ac187d4bf5fde9e6f",
     "src/art/native-materials.ts": "432f387c45f07b2ef9c0adb8207e0e1d44e143d64343bd8cd49b240dee72001d",
     "src/presentation/native-handoff.ts": "c13f02b2846cd5936265e4f0c2148738b3ab107767b7f60d788b7f2c981b02dc",
     "src/presentation/native-staff-routine.ts": "9b1bfe70c17704ca7a3f49605a6702be52b6c451b3c46ddd0895f2988990ccb1",
@@ -73,12 +73,13 @@
     "src/world.ts": "7e6fdb4a3ad8f8fbe615bbdff0d399cbf2f89e824a59124c3a8aa7826c0181d8",
     "src/presentation/native-routes.ts": "fbbaee9df6cfed3fb0e992198e394860c7399ee75baf5d7997bf0485fe3763a3",
     "src/presentation/native-scene.ts": "bed32138150cdbf9e5441a3af30b190d0b34f7ffe70e3d4f6ff6b43ddd04ae70",
-    "tools/export-native-characters.ts": "326569d5262fd8d4ae8f91734674efe42616e4098736b15200b220ba37fab861",
+    "tools/export-native-characters.ts": "fc44618831785704fa650d163cf85ac6309ecad7b98e5deee9fa6ad35bc229d2",
     "tools/generate-v10-surfaces.py": "e550229e751c35e818e74188652b8153525595c74d6e3e5a6430d8c1ba66e11d",
     "assets/masters/native-v10/hair-strand-basecolor.png": "2476f73f419fa1c57b05eeef611f3712959356c1e71df4896357df0838fb8e67",
     "assets/masters/native-v10/hair-strand-normal.png": "530c689078f71ffddbd8637da000d235933a5b103cb01cfb8e34b1163855d1b7",
     "assets/masters/native-v10/cloth-weave-basecolor.png": "e6a6af427f293bddccd02aec231f2d17a161e5f72a4c16b73b1e64da6a5c0443",
-    "assets/masters/native-v10/linen-normal.png": "a814d8c51bbbb121dca3490105db31e0c4e075ec33137eab6fe3f01f77701f47"
+    "assets/masters/native-v10/linen-normal.png": "a814d8c51bbbb121dca3490105db31e0c4e075ec33137eab6fe3f01f77701f47",
+    "src/art/srgb8-linear.ts": "c590d92135cfbfeecb3e9e99ab9b1397495ec6bbf980e04a1d3b99a6e5b5493d"
   },
   "rig": "assets/authoring/native-v3/rig-contract.json",
   "motion": {

@@ -1,6 +1,14 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-28T01:04:43+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-28T01:34:34+08:00** (Asia/Hong_Kong).
+
+## 本機固定sRGB8修正／304tests全過，原master逐byte不變；仍未同步
+
+- 依父緒的限定deterministic修正範圍，先證明候選bundle44個現用GLB逐byte同master，再改共享8-bit decode為256常數表；342組既有linear材質值精確相同，91個原GLB及458個tracked master/public檔不變。只把本機byte41的1ULP還原為原master值，沒有新美術或放寬hash／容差。[完整修正／provenance及證據](docs/DETERMINISTIC_SRGB8_2026-10-28_zh-HK.md)。
+- 原302項不改，另加2項回歸檢查，**304/304 pass／0fail／0skip**；build含原TS、validate、replay、asset-check、作者strict TS、R6 validator及修正後隔離headless runtime全過。Windows Node24.19及Chrome156的256表digest同`4210c27d186eac98ef2b3ba3c256bf146fe6857ac5314a32c209794366164fe4`；未跑Linux A/B，不聲稱已跨OS實測。
+- 四個exporter來源清單／四份外部receipt準確加入新表及新source hash；環境JSON master內嵌原來源snapshot不改，外部manifest明確標示current-source compatibility。沒有重寫master或把原asset hash換成新輸出。
+- 本輪起點為本機`f0492e66f30a076bed0aede48a1ff219e162756c`，前兩個未推提交保留；新增修正只作額外local commit。Git認證／push hold維持，沒有再push、登入或改route，遠端最後確認仍`0638d652ebdca1280320fb93058bc5167bb2e2ca`。未同步資料不清理，保留dependencies／store／最新dist。GUI hold、唯一writer待分派及R6未身份／畫風接受均不變，無Unity／Site／PR／merge／玩家Normal操作；最終local SHA由外部回報。
+
 
 ## 本機Web build／背景資產實載通過，原測試301/302／R6美術仍未接受 — 2026-10-28T01:01:44+08:00
 

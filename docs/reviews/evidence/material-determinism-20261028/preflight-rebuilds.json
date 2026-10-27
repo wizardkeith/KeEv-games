@@ -1,0 +1,277 @@
+{
+  "baseline": "f0492e66f30a076bed0aede48a1ff219e162756c",
+  "tableSha256": "4210c27d186eac98ef2b3ba3c256bf146fe6857ac5314a32c209794366164fe4",
+  "originalMasterGlbsChecked": 91,
+  "activeMasterRebuilds": 44,
+  "allActiveRebuildsByteIdentical": true,
+  "allOriginalMasterGlbsUnchanged": true,
+  "relevantMaterialValuesExact": 342,
+  "sourceFilesWritten": false,
+  "masterFilesWritten": false,
+  "results": [
+    {
+      "file": "assets/masters/native-v3/misaki-native-v3.glb",
+      "bytes": 719636,
+      "sha256": "22ca967d70f39705b3c5f91eacfddaeefec9cc302311ddc58a85ff5997319c33",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v3/visitor-a-native-v3.glb",
+      "bytes": 732016,
+      "sha256": "aa17730b19f6f914447fa56f26ccdac2b0f8de2be21e67801aba6f4dff2ccbf7",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v3/visitor-b-native-v3.glb",
+      "bytes": 1888140,
+      "sha256": "75272ae3b1c4c20cfd92129c88ff5482bb6e2b6fa1db0cb879901c3751387abd",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/day1/misaki-calm-v1.glb",
+      "bytes": 270328,
+      "sha256": "f61a3dd54935f4c88c6d341e2b2c7c07311bff4e58c84ddb40697343cc811b05",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/day1/misaki-smile-v1.glb",
+      "bytes": 246948,
+      "sha256": "b6c1ba01ac8c697f6230f745e86ceceefd47abd8af14eedc00e62aef72541283",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/w1_1b/notebook.glb",
+      "bytes": 21492,
+      "sha256": "e9cf86b58ea868735e3bdc1763ac95f047a1043a6349bc387030466e6d807173",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/w1_1b/pencil.glb",
+      "bytes": 14448,
+      "sha256": "222c5fac7895df7b0cda2421a960e7cc7e2ee62951ab047bbaccd650d1dc9d22",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/w1_1b/mug.glb",
+      "bytes": 21304,
+      "sha256": "d21c6a345c2b3798365803b2025af010ee89561af6fb53d58ed46c562c9ddc50",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/w1_1b/tea.glb",
+      "bytes": 9644,
+      "sha256": "305a59d15f07f158004f93b9bb1766de96e501a619efa170117c936b86d4edaf",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/w1_1b/cookie.glb",
+      "bytes": 23432,
+      "sha256": "b3fe29d0193c385fa013f34f2cdb8e6cffe240341790d52a9ad69b3a45111a97",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/w1_1b/tote.glb",
+      "bytes": 25672,
+      "sha256": "7c258639cb378f4eb06f6df41004697665c6391ff128b3bc4c46458ad1ea9181",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/w1_1b/card.glb",
+      "bytes": 14112,
+      "sha256": "1b0ec45e2cc6bfe7e71adc856491edbb2f306f8e449aa03ce6e6c685b72fc33f",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/w1_1b/towel.glb",
+      "bytes": 10284,
+      "sha256": "0eadeb110572f5faffacb1e0d786fa5062cdc418390ac1ece4ecdc33c47444c5",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/w1_1b/tray.glb",
+      "bytes": 20408,
+      "sha256": "a7f4a392e9627701f6cd86fc8aa14ed8f1d547f53f9433fe32a5e4af8dcaf389",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/w1_1b/vase.glb",
+      "bytes": 15516,
+      "sha256": "188cfc7827eff27cb28a232e37d883a61b8d5990882d74a76d22d9c1ef6b5bdf",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/w1_1b/counter-w1_1b.glb",
+      "bytes": 31052,
+      "sha256": "0210373d5cc9c3662996a8970e608b7e4c2dab9d76690a4610b8e1e83b299802",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/w1_1b/display-w1_1b.glb",
+      "bytes": 36364,
+      "sha256": "39dd49e91bee6c9fc305498adaac2f07783dde79cc03fca05a920f63a5753ee7",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/w1_1b/plant-w1_1b.glb",
+      "bytes": 45088,
+      "sha256": "e443fb165bc9a97937893db92e27d268ec8a7d741387746af760a255fd0b43fe",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/w1_1b/generic-staff-w1_1b.glb",
+      "bytes": 103816,
+      "sha256": "ed48d9b32e99b290746006cf65c9082ed59d6c6380dd1177c43c0a9301f2d7bd",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/w1_1b/room-w1_1b.glb",
+      "bytes": 110424,
+      "sha256": "24ee1be4623e0745f06b950e5545fb8580d15393fa0c2b7fb2df3a89f79c8c4e",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/quality-flower-jug-v11.glb",
+      "bytes": 232728,
+      "sha256": "7486d8d01542b0f37b4ee0a4a6088258c822942a65e1ba680e4315bcac5a06a5",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/quality-flower-spray-v11.glb",
+      "bytes": 2213088,
+      "sha256": "71738fc38b7cba82d18aad33cc0732c89e2c7b28d955685ee260841232aac929",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/quality-crown-v11.glb",
+      "bytes": 2497696,
+      "sha256": "0d3de325afb80f8b1657e811f533a76a18cbde159f31a58cd6fdb5ad2c2ff70b",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/quality-lookbook-v11.glb",
+      "bytes": 2247172,
+      "sha256": "2c7951e99f6619a9d50a66b3dad053c2c41028e34b252cffdd6b86b3bd901fea",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/quality-mug-v11.glb",
+      "bytes": 2416052,
+      "sha256": "61e08783667276d611743935f8953e4f96839810643e889f09db11e27cfda392",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/entry-garden-v11.glb",
+      "bytes": 2511320,
+      "sha256": "5e4142614fac2e2276277b92089345f1a9335e47d1e94fb0249e5c8e29d6a4bb",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/planter-base-v11.glb",
+      "bytes": 185224,
+      "sha256": "cc99d988901fcede6c8e1bd550f3b3b8e2d91cb465b78e00f005ce1c1b928596",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/room.glb",
+      "bytes": 6140324,
+      "sha256": "cf002c8928c567cf048bf0b773fa94610877470eea90d4abb41de7f83cde1eb0",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/styling-v9.glb",
+      "bytes": 3017376,
+      "sha256": "655c94fc3f99c40b6de6b71def6fbe9ba0fa3ac30e06b921c6ec8ee41eefda17",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/window-canopy-v9.glb",
+      "bytes": 2346876,
+      "sha256": "1956bb89db91fa28e9c9c4c3b962d98605df71e79a998e932488c37d130e55e1",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/counter.glb",
+      "bytes": 2362296,
+      "sha256": "46ae720b21264cd12e365cdec60a67b4d56875d24d90cec5a8e6931d36514fb5",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/display-1.glb",
+      "bytes": 4857028,
+      "sha256": "355a792fec898cabf33f5779846cb3396cb75ec7c2a096b5f7e2d3ca3f61fda1",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/display-2.glb",
+      "bytes": 3277344,
+      "sha256": "c01ec5f761f88f9e6490c14b306830322021151648c826cef9b3e569d8ef6a63",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/display-3.glb",
+      "bytes": 4864408,
+      "sha256": "d84d53667afcdacdf516de64bc8f77d7a5b5f784c60dee9321379fd9218e4419",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.notebook.glb",
+      "bytes": 2517260,
+      "sha256": "6001eaf6a2df3172b2d8e12d9c9eb4e4530db4ab3cd654e89141e43c2503cbcc",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.pencil.glb",
+      "bytes": 2167516,
+      "sha256": "9c9f15d10c2bd2c5e9a8557ca2a0edf415674b25f1c31d4d153cc9c3e0b4e4f0",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.mug.glb",
+      "bytes": 149556,
+      "sha256": "59cc5b59b55b10a81c75ed9b81d74ce21d7796e2831121c34ef7e406ae3ddbb0",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.tea.glb",
+      "bytes": 2478056,
+      "sha256": "519332346e8ff6c09b1988c6a6627d9d700ff4c12f9a75df67634a7197f8baa9",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.cookie.glb",
+      "bytes": 60360,
+      "sha256": "e36da81b33559855e72bbf3b58f0418759203b74cfb2f907eed972368b47da14",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.tote.glb",
+      "bytes": 2552172,
+      "sha256": "78965953b670414b76dd4b929d2c01eed2bc14bdf948f61a8db7de615cf3724c",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.card.glb",
+      "bytes": 2448888,
+      "sha256": "b45d3d3fe29a2a7447f53eeffc2ddd6ddd9bf33e5205eaf3e9b6d4a45af183cd",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.towel.glb",
+      "bytes": 2480468,
+      "sha256": "da48b91dd571fdeb73b581bcffed224998845f9f5f1255ec1e8175d575118a34",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.tray.glb",
+      "bytes": 2178304,
+      "sha256": "8f89635e2d2455d03044e1f687480051c680f76879a4cab4be0bc1f3284770bf",
+      "byteIdentical": true
+    },
+    {
+      "file": "assets/masters/native-v4/product-off.vase.glb",
+      "bytes": 364140,
+      "sha256": "f0eff8ed2a9f61205c779f1a8cfbd7b32e0759b2e205391a862a88e4c4dd4ea4",
+      "byteIdentical": true
+    }
+  ]
+}

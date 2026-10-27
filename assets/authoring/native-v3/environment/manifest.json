@@ -165,9 +165,10 @@
     "src/art/native-view.ts": "237c7fa164702a498ed1a987e08a920c31a4d40d4c0e24a1b3ee3f36357ca5cf",
     "src/art/recipes.ts": "b3c6890ff3e025f14373f28f10a68f3eeeb54f8a733a26192233f81f0090b905",
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
-    "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
+    "src/art/materials.ts": "88570a868b8d51696bd624afb362a3870f9b88e2c2860d9ac187d4bf5fde9e6f",
     "src/art/native-materials.ts": "432f387c45f07b2ef9c0adb8207e0e1d44e143d64343bd8cd49b240dee72001d",
-    "tools/export-native-environment.ts": "e55ede937666cfbe9c617a26b6b04dc81eef765f7744a20ce0fcf46040ac645a"
+    "tools/export-native-environment.ts": "22896b1b2ba71c272b90abbfef8f909934fa744b5ac37987eaaf69fbe1bdb64e",
+    "src/art/srgb8-linear.ts": "c590d92135cfbfeecb3e9e99ab9b1397495ec6bbf980e04a1d3b99a6e5b5493d"
   },
   "rebuild": "node --import tsx tools/export-native-environment.ts",
   "runtime": "src/world.ts imports native-environment.ts and native-view.ts; geometry.ts builds the same authored recipes. nativeGrouped/nativeMaterialIntent respect per-surface roughness while shared legacy materials remain unchanged.",
@@ -178,5 +179,17 @@
     "counter drawer/edge/base detail, display tabletop/feet/label detail; native-only floor/table roughness and colour separation",
     "actionable-shop and staff camera contracts with actual-safe-viewport fit, and restricted-face-fill lighting intent"
   ],
-  "validation": "tests/native-environment.test.ts checks geometric aperture, opened leaf clearance, stable plant bases, finite geometry/material intent and five Minimal FX translations; tests/v31-art.test.ts checks actual Babylon RH projection fit, bounded low architectural geometry, native roughness and exported presentation parity. Neither is actual WebGL appearance acceptance."
+  "validation": "tests/native-environment.test.ts checks geometric aperture, opened leaf clearance, stable plant bases, finite geometry/material intent and five Minimal FX translations; tests/v31-art.test.ts checks actual Babylon RH projection fit, bounded low architectural geometry, native roughness and exported presentation parity. Neither is actual WebGL appearance acceptance.",
+  "deterministicMaterialCompatibility": {
+    "kind": "current-source-compatible-with-frozen-master",
+    "baseline": "f0492e66f30a076bed0aede48a1ff219e162756c",
+    "frozenMasterPath": "assets/masters/native-v3/environment-v3.json",
+    "frozenMasterSha256": "0c7f9c21d07808d07a040c55acc72a087003ee64bf1db28ce413a34a2dd10210",
+    "embeddedSourceSnapshotPreserved": true,
+    "embeddedMaterialsSourceSha256": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
+    "currentSourceReceipt": "manifest.sources",
+    "canonicalTableSha256": "4210c27d186eac98ef2b3ba3c256bf146fe6857ac5314a32c209794366164fe4",
+    "verification": "44 active GLB rebuilds and 342 relevant material RGB values exact; all existing master bytes retained",
+    "note": "Embedded master.sources is original snapshot provenance. This external sources map records the current compatible implementation, not a claim that the frozen master was rewritten."
+  }
 }

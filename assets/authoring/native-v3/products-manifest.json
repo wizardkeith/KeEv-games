@@ -21,8 +21,9 @@
     "src/art/shop-v10.ts": "0ac65000bb42de57c335410b3e1af6f12ab2557d78c89b9eac3d548ae12c0623",
     "src/art/tote-v10.ts": "2b357b54c9f233b5f4ba398b04ac384632ea0c582978840c886266f0fa25fe74",
     "src/art/recipes.ts": "b3c6890ff3e025f14373f28f10a68f3eeeb54f8a733a26192233f81f0090b905",
-    "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
+    "src/art/materials.ts": "88570a868b8d51696bd624afb362a3870f9b88e2c2860d9ac187d4bf5fde9e6f",
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
-    "tools/export-native-products.ts": "ea5850505c825962025ebbd315ad3427540770b12545ba74845151297d645209"
+    "tools/export-native-products.ts": "cf36f53a4cb3dbcd2951f1129fa2204cbcfb369a5326d1619c1762ecaa97bca2",
+    "src/art/srgb8-linear.ts": "c590d92135cfbfeecb3e9e99ab9b1397495ec6bbf980e04a1d3b99a6e5b5493d"
   }
 }

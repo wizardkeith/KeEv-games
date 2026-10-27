@@ -19,9 +19,10 @@
   "sourceSha256": {
     "src/art/misaki.ts": "a357d337d3e0ba769f463c5dc6750bd27191de6e7ec6a7c93e27fd08c00b7d74",
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
-    "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
+    "src/art/materials.ts": "88570a868b8d51696bd624afb362a3870f9b88e2c2860d9ac187d4bf5fde9e6f",
     "src/art/recipes.ts": "b3c6890ff3e025f14373f28f10a68f3eeeb54f8a733a26192233f81f0090b905",
-    "tools/export-misaki.ts": "769dd339befc62e442d5371b483b3ff3da602bd60ca1ed4dd9ea8acbbb977a8e"
+    "tools/export-misaki.ts": "e322a7bb2d1e60acd8a8c1c42abffc834c35842ecfbcbfc708a3084d7ed8105c",
+    "src/art/srgb8-linear.ts": "c590d92135cfbfeecb3e9e99ab9b1397495ec6bbf980e04a1d3b99a6e5b5493d"
   },
   "palette": {
     "hair": "#57443D",
