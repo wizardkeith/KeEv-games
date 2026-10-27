@@ -1,6 +1,10 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T13:55:46+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T14:09:04+08:00** (Asia/Hong_Kong).
+
+## V11 C49世界空間漫射補光診斷進行中 — 2026-10-27T14:09:04+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送application`82014abaf0be78e0cf1859236b82b9d90bd44f8a`。依C48獨立診斷只測一組世界位置／法線漫射權重：水平面減少均勻底光，背牆與收銀平滑保留補光；分別改半球漫射及IBL漫射，不改key／shadow／specular IBL／曝光／.20AO／已過模型材質／192反射。非GI，作者旗標限定C47，普通仍C45。首輪實拍可見方向對比，未自判PASS；300tests／146GLB／305保護檔通過，同來源正常與雙斜角／Low-High／買入reload正在收尾。整體原圖未接受；main僅進度指標，無merge／公開V17／玩家Normal／Chrome／Unity改動或使用者動作阻塞。
 
 ## V11 C48來源分離固定證據／能量試驗未採用 — 2026-10-27T13:55:46+08:00
 
