@@ -1,5 +1,7 @@
 # 木層架／紙本 R2 — 分開上下層輪廓的固定候選
 
+後續獨立覆核：**Paper R2 grouped-silhouette/layering gate PASS**。本組與R4凍結；這不是整體原圖畫風接受。下一階段另做[Misaki比例灰模](MISAKI_GRAYFORM_V1_2026-10-27_zh-HK.md)，下方保留本輪當時交審紀錄。
+
 Source `669b5aaa97641fb597ae5e83095056d8c7ee1229`，只在`codex/asset-foundation-v1`。獨立覆核：v1單件形體暫時PASS，但**成組展示層次FAIL**。本輪只加寬層架、移開托盤／上下紙本；**R2尚未獨立判PASS，整體原圖畫風仍未接受。** R4花冠／布形／陶瓷／材質、此組薄板／開放承托／書厚／封面外伸／圓轉書脊全部保留，沒有加道具、頁線、貼圖或燈。
 
 ![唯一原圖／R2實際正常鏡頭材質與灰模；店景裁切各480px](reviews/evidence/asset-foundation-paper-v1-r2/target-paper-material-gray-shop480.png)

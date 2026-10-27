@@ -1,6 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T20:45:10+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T21:17:53+08:00** (Asia/Hong_Kong).
+
+## Misaki僅原圖頭身灰模首候選／PlanB下載待解 — 2026-10-27T21:17:53+08:00
+
+- 只在未合併`codex/asset-foundation-v1`，source `038740fbd7f6428cc82d5f442646c2d86a4143e3`（最終形體`206b789e11dece84eda4b51bb82bd38104a5acc6`）；[原圖／四面灰模／實際正常480px雙斜角／來源及限制](docs/MISAKI_GRAYFORM_V1_2026-10-27_zh-HK.md)。PaperR2 grouped-silhouette/layering獨立PASS，R4主形PASS，兩組29個資產／作者檔全凍結；整體原圖畫風仍未接受，本輪不擴店／最終材質／rig／動畫。
+- 已可編輯3D中性A姿勢頭臉／鮑伯髮量／著衣全身，連續臉鼻、粗髮束、罩衫／圍裙／裙、前臂手腕手掌環；髮夾只自身左+X。實際高1.44225m／3.24268頭高、髮寬.46267m、髮尾低於下顎約49mm，修掉初稿髮尾過短／寬和可見手腕斷開。42來源物件／6130控制頂點／5536四邊面；輸出47,576tri／5meshes／10primitives／7灰材質／868,528bytes／零貼圖-skin-animation。非最終眼孔／表情flow／權重或碰撞認證。
+- PlanB Library `libfile_d1f1a5f43d9c819199f7d57ff7936d6a` 準備成功但現行官方consumer-local transfer helper回報`download failed`，本機無ZIP；Library read無可讀內容。原因未明、非審批拒絕；新圖與ZIP SHA未在此環境核實。依授權只用已實看canonical唯一原圖，側背明確推定、背bow未做；未自行curl／換route／盲retry或幻想新視圖。參考優先級handoff保留。
+- 本輪Blender／新GLB零error-warning／TRS-bounds-floor0-leftclip-gray-only及凍結檢查／原application720保護bytes／strict作者TS／finalbuild通過；前302tests等未重跑。七實拍studio+game實載SHA同source，正常camera／全燈與PaperR2逐值同；新灰模只空走道靜態作者樣件，原staff-rig-actions來源未改。freshSandbox真UI買3杯5000→4790／stock3／原display3槽2上架／reload逐值同／Low→High／隔離Normal不變／0pageerror。原型作者總119,272tri，不bulk；SwiftShader靜態非physicalGPU-FPS-audio-native／完整舊動作驗收。
+- 灰模未過風格：臉眼泛人偶、鼻額／眼眶弱、寬髮束厚硬／後腦髮殼、衣物重力偏幾何。下一步先恢復可讀PlanB並判頭髮／側臉與全身比例，再修量體，不進細髮／手指／最終貼圖或動畫。新Library原生正常image `libfile_0224bad58e5881918df7c73f50e81481` version0，舊R4及紙本identity／版本保留。
+- source/evidence只推隔離分支；main／PR8未寫，PR建立因先前拒絕保持停止無retry／換route；無merge／Site公開／payments／玩家Normal改動。唯一操作阻塞是上述PlanB consumer下載／新圖比對未完成，無其他操作阻塞。
 
 ## 紙本R2分層固定候選／仍待獨立判形 — 2026-10-27T20:45:10+08:00
 

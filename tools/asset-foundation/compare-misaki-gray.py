@@ -15,9 +15,9 @@ def arrange(name,items,height=480):
  result.save(out/name)
 original=root/'docs/codex-v4/reference/Approved_Visual_Target_Misaki.png'
 arrange('original-grayform-proportion480.png',[
- ('EXACT ORIGINAL / relaxed pose',original,(1206,76,1460,654)),
- ('ACTUAL GLB / neutral A-pose',out/'grayform-front.png',(100,42,620,850)),
- ('ACTUAL GLB / 3-quarter',out/'grayform-threequarter.png',(100,42,620,850))])
+ ('ORIGINAL / relaxed',original,(1206,76,1460,654)),
+ ('GLB / neutral A-pose',out/'grayform-front.png',(100,42,620,850)),
+ ('GLB / 3-quarter',out/'grayform-threequarter.png',(100,42,620,850))])
 arrange('original-game-normal-shop480.png',[
  ('EXACT ORIGINAL / left shop',original,(0,0,1184,1024)),
  ('ACTUAL NORMAL / static grayform at front',out/'grayform-game-normal.png',(105,75,1190,800))])

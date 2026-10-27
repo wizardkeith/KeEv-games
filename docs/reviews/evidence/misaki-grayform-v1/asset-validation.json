@@ -1,0 +1,103 @@
+{
+  "file": "public/assets/misaki-grayform-v1/misaki-grayform.glb",
+  "sha256": "f3a49851b5ef1b428990ddf0b242c344a3e41cf578dc30d202c508b8e011bb2e",
+  "bytes": 868528,
+  "triangles": 47576,
+  "meshes": 5,
+  "materials": 7,
+  "primitives": 10,
+  "images": 0,
+  "skins": 0,
+  "animations": 0,
+  "bounds": {
+    "misaki-grayform/face": {
+      "min": [
+        -0.17712678015232086,
+        0.9646496272762306,
+        -0.15240482985973358
+      ],
+      "max": [
+        0.17712678015232086,
+        1.4013225532253273,
+        0.14125974476337433
+      ],
+      "triangles": 7760
+    },
+    "misaki-grayform/feature-placement": {
+      "min": [
+        -0.10669999569654465,
+        1.0652594066341408,
+        0.10653073340654373
+      ],
+      "max": [
+        0.1066879853606224,
+        1.2248593068798073,
+        0.13691411912441254
+      ],
+      "triangles": 1336
+    },
+    "misaki-grayform/hair": {
+      "min": [
+        -0.23133619129657745,
+        0.9484806156833656,
+        -0.22862467169761658
+      ],
+      "max": [
+        0.23133620619773865,
+        1.4422503209789284,
+        0.18892022967338562
+      ],
+      "triangles": 13696
+    },
+    "misaki-grayform/own-left-clip": {
+      "min": [
+        0.15153716504573822,
+        1.2832910514553078,
+        0.16908222436904907
+      ],
+      "max": [
+        0.19146287441253662,
+        1.3334276176174171,
+        0.17386606335639954
+      ],
+      "triangles": 304
+    },
+    "misaki-grayform/clothed-body": {
+      "min": [
+        -0.4153306484222412,
+        0,
+        -0.1802259236574173
+      ],
+      "max": [
+        0.4153306484222412,
+        1.0172874427516945,
+        0.1808842569589615
+      ],
+      "triangles": 24480
+    }
+  },
+  "min": [
+    -0.4153306484222412,
+    0,
+    -0.22862467169761658
+  ],
+  "max": [
+    0.4153306484222412,
+    1.4422503209789284,
+    0.18892022967338562
+  ],
+  "height": 1.4422503209789284,
+  "issues": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 0,
+    "numHints": 0,
+    "messages": [],
+    "truncated": false
+  },
+  "frozenAcceptedAssetFiles": 29,
+  "limits": [
+    "Origin/bounds/standard checks do not certify collisions, topology suitability, rigging or art",
+    "PlanB download failed before pixels; side/back inferred from canonical original only"
+  ]
+}

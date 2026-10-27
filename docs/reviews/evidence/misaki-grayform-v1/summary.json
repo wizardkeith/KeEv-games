@@ -1,0 +1,72 @@
+{
+  "source": "038740fbd7f6428cc82d5f442646c2d86a4143e3",
+  "assetSource": "206b789e11dece84eda4b51bb82bd38104a5acc6",
+  "reference": "canonical original only",
+  "canonicalSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+  "PlanBStatus": "official consumer-local helper download failed; no local bytes/new pixels; cause uncertain, not approval denial",
+  "triangles": 47576,
+  "meshes": 5,
+  "primitives": 10,
+  "materials": 7,
+  "images": 0,
+  "skins": 0,
+  "animations": 0,
+  "bytes": 868528,
+  "height": 1.4422503209789284,
+  "headUnits": 3.242678984121707,
+  "hairWidth": 0.4626723974943161,
+  "chin": 0.9974791407585144,
+  "hairCrown": 1.442250370979309,
+  "hairBottom": 0.9484806060791016,
+  "hairBelowChin": 0.04899853467941284,
+  "controlVertices": 6130,
+  "controlQuads": 5536,
+  "editableObjects": 42,
+  "frozenAcceptedSetFiles": 29,
+  "protectedOriginalApplicationFiles": 720,
+  "prototypeTotalTriangles": 119272,
+  "sha256": "f3a49851b5ef1b428990ddf0b242c344a3e41cf578dc30d202c508b8e011bb2e",
+  "actualLoadedStudioAndGameMatch": true,
+  "priorPaperR2FullLightingAndCameraMatch": true,
+  "lifecycle": {
+    "buy3": true,
+    "cashBefore": 5000,
+    "cashAfter": 4790,
+    "stock": 3,
+    "shelf": 2,
+    "reloadEqual": true,
+    "lowHighRetained": true,
+    "normalUnchanged": true
+  },
+  "pageErrors": [],
+  "newChecks": [
+    "Blender4.3.2 generation",
+    "one GLB strict zero error/warning",
+    "finite whole-node bounds / sole0 / own LEFT clip / gray-only materials / no skins or animation",
+    "29 accepted asset files frozen",
+    "720 original application files identical",
+    "strict authoring TypeScript",
+    "final build",
+    "seven real engine images and fresh Sandbox UI lifecycle"
+  ],
+  "priorChecksNotRepeated": [
+    "302 application tests",
+    "content validation",
+    "replay",
+    "legacy asset checks"
+  ],
+  "style": "Grayform proportions candidate; face/hair/garment style NOT accepted; side/back inferred; PlanB comparison incomplete",
+  "Library": {
+    "library_file_id": "libfile_0224bad58e5881918df7c73f50e81481",
+    "file_id": "file_00000000f0588207a5ff847f315f86d2",
+    "filename": "grayform-game-normal.png",
+    "version": 0,
+    "bytes": 642403
+  },
+  "limits": [
+    "No final facial edge-flow/eye holes/weights or rig certification",
+    "No full collision/device/FPS/audio/native certification",
+    "Static sample separate from unchanged old gameplay staff; no new economic capability",
+    "No full shop, final textures, fine strands, fingers or animation work"
+  ]
+}
