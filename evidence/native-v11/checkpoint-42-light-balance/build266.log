@@ -1,0 +1,79 @@
+
+> next-stop-little-shop-w1@0.1.1 build
+> tsc --noEmit && vite build --outDir /workspace/qa/v11-slice/immutable266-c42-resize-fixed
+
+vite v7.1.12 building for production...
+transforming...
+✓ 677 modules transformed.
+
+(!) outDir /workspace/qa/v11-slice/immutable266-c42-resize-fixed is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
+rendering chunks...
+computing gzip size...
+../qa/v11-slice/immutable266-c42-resize-fixed/index.html                                                     0.69 kB │ gzip:     0.49 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/index-CiMc3Tjj.css                                     37.15 kB │ gzip:     8.15 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/kernelBlurVaryingDeclaration-CbwcnxSA.js                0.17 kB │ gzip:     0.15 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/kernelBlurVaryingDeclaration-CI08oc1o.js                0.18 kB │ gzip:     0.16 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/pass.fragment-OD40k_g7.js                               0.35 kB │ gzip:     0.27 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/shadowMapFragmentSoftTransparentShadow-C974nOZn.js      0.40 kB │ gzip:     0.28 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/shadowMapFragmentSoftTransparentShadow-CbpUNgvp.js      0.43 kB │ gzip:     0.30 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/rgbdEncode.fragment-CmiWqLh3.js                         0.43 kB │ gzip:     0.32 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/rgbdDecode.fragment-KP_IKRYZ.js                         0.44 kB │ gzip:     0.32 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/pass.fragment-B_gWhvwq.js                               0.48 kB │ gzip:     0.32 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/packingFunctions-C2T8Rl3L.js                            0.52 kB │ gzip:     0.29 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/meshUboDeclaration-DqhqRoVx.js                          0.56 kB │ gzip:     0.31 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/depthBoxBlur.fragment-7AkdhpHC.js                       0.56 kB │ gzip:     0.37 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/meshUboDeclaration-iHNeEsSs.js                          0.56 kB │ gzip:     0.31 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/rgbdEncode.fragment-DHfLZISZ.js                         0.57 kB │ gzip:     0.36 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/rgbdDecode.fragment-DtfUDhqN.js                         0.58 kB │ gzip:     0.37 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/envTextureLoader-BoaC6Il3.js                            0.58 kB │ gzip:     0.38 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/postprocess.vertex-BXbjpc-G.js                          0.61 kB │ gzip:     0.38 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/depthBoxBlur.fragment-9aMr39tR.js                       0.74 kB │ gzip:     0.44 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/kernelBlur.vertex-Bu4dTE82.js                           0.79 kB │ gzip:     0.44 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/passCube.fragment-CRRGCTX3.js                           0.85 kB │ gzip:     0.37 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/kernelBlur.vertex-BRDe5cod.js                           0.93 kB │ gzip:     0.48 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/mesh.vertexData.functions-ayNlGC5K.js                   0.96 kB │ gzip:     0.49 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/instancesDeclaration-BREJsrt-.js                        1.00 kB │ gzip:     0.34 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/passCube.fragment-CFP-EeDO.js                           1.16 kB │ gzip:     0.42 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/clipPlaneFragment-DtOp0He_.js                           1.21 kB │ gzip:     0.34 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/depth.fragment-T7juI3V5.js                              1.29 kB │ gzip:     0.57 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/ddsTextureLoader-CV30-2C6.js                            1.29 kB │ gzip:     0.63 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/table-reflection-v11-BWjcRJMh.js                        1.35 kB │ gzip:     0.80 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/room-specular-v11-CZQ0Hh9r.js                           1.47 kB │ gzip:     0.87 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/depth.vertex-Blvx4ROH.js                                2.06 kB │ gzip:     0.77 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/kernelBlur.fragment-B1HFkKy0.js                         2.13 kB │ gzip:     0.71 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/hdrTextureLoader-BS1VUeXX.js                            2.46 kB │ gzip:     1.18 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/kernelBlur.fragment-hCbq_aSx.js                         2.70 kB │ gzip:     0.80 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/iesTextureLoader-AGvs6Xf0.js                            2.73 kB │ gzip:     1.18 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/shadowMap.fragment-Chqv5Bxe.js                          3.06 kB │ gzip:     1.08 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/tgaTextureLoader-glFqlUIO.js                            3.56 kB │ gzip:     1.39 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/shadowMap.fragment-Dy_nlF6Q.js                          3.69 kB │ gzip:     1.19 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/shadowMap.vertex-BU5yGSF4.js                            4.36 kB │ gzip:     1.39 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/shadowMap.vertex-BUWWmcD_.js                            4.45 kB │ gzip:     1.43 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/helperFunctions-Bz0Sp58X.js                             5.30 kB │ gzip:     1.78 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/helperFunctions-Nzm8hErZ.js                             5.71 kB │ gzip:     1.89 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/dds-2dO4mwcB.js                                         7.03 kB │ gzip:     2.48 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/basisTextureLoader-DpZmIYm9.js                          8.21 kB │ gzip:     3.25 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/clipPlaneVertex-CgF6INYk.js                            14.12 kB │ gzip:     2.40 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/logDepthDeclaration-DfXtG7cC.js                        14.12 kB │ gzip:     4.78 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/exrTextureLoader-CjqakPt6.js                           15.56 kB │ gzip:     5.82 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/logDepthDeclaration-CpgYzGRj.js                        15.70 kB │ gzip:     4.93 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/ktxTextureLoader-H9fCHMyJ.js                           15.83 kB │ gzip:     4.63 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/pbr.vertex-L0Ts2OCE.js                                 22.34 kB │ gzip:     4.28 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/pbr.vertex-lzCwS1sT.js                                 23.92 kB │ gzip:     4.72 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/index-C7pg4THm.js                                     171.34 kB │ gzip:    62.80 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/pbr.fragment-CBnxm5Ug.js                              204.97 kB │ gzip:    38.14 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/pbr.fragment-BrzA_BX-.js                              213.80 kB │ gzip:    38.72 kB
+../qa/v11-slice/immutable266-c42-resize-fixed/assets/world-DwpEhhsF.js                                   6,918.97 kB │ gzip: 1,526.61 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.76s
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
