@@ -1,0 +1,137 @@
+{
+  "completedUtc": "2026-10-27T22:59:03.8917637+00:00",
+  "verifiedRemoteCheckpoint": "52cf6601ad7dc70638cb034a478c21ff3ad1e1aa",
+  "scope": "Only task-owned hair-r7 scratch: duplicate R6 baseline, superseded preview log, raw command logs and temporary preparation helpers",
+  "recovery": "Verified ZIP archive of every file retained in task workspace before removing original scratch; no irrecoverable data deletion",
+  "archiveRelativeToWorkspace": "hair-r7-scratch-rollback-52cf660.zip",
+  "archiveSha256": "c19e26692111b9a6b184ece08dfd097c4ff6960f9da88c2dfd4c2443262683c9",
+  "fileCount": 22,
+  "logicalBytesBefore": 2298681,
+  "recoveryArchiveBytes": 933145,
+  "logicalDataReductionBytes": 1365536,
+  "physicalFreeDiskSavingsBytes": null,
+  "physicalFreeDiskSavingsLimit": "Not measured or claimed; figures compare logical file sizes",
+  "originalScratchDirectoryRemoved": true,
+  "retained": [
+    "canonical R7 blend/glb and editable source",
+    "original target",
+    "R6 rollback in synced Git history",
+    "all necessary PNG/JSON/log evidence",
+    "node_modules, pnpm store and usable dist",
+    "unrelated user files and apps"
+  ],
+  "processesTerminated": [],
+  "memorySavingsMeasured": false,
+  "files": [
+    {
+      "path": "asset-check.log",
+      "bytes": 2720,
+      "sha256": "3ec12413f82f6f5b7cafdb47389046cf7188560624d169e467cbbb4d4fc4cf88"
+    },
+    {
+      "path": "asset-validation.log",
+      "bytes": 172,
+      "sha256": "28c2624f8caf539c935e70152c0787d94d82fb3efc5cd61526158f9ae6c41cdb"
+    },
+    {
+      "path": "authoring-types.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "blender-edit.log",
+      "bytes": 1747,
+      "sha256": "024537618a26f0ddf139aa6b431a2cc248452ecdc76b8915a96859883490690b"
+    },
+    {
+      "path": "build.log",
+      "bytes": 7082,
+      "sha256": "de84d7e4cbdeb6da39d7b87384806cadf4d2e70ec023f853c62876f2f472740f"
+    },
+    {
+      "path": "evidence-commit.txt",
+      "bytes": 391,
+      "sha256": "c0f95097325dabc3238817967b8d3ebbdc89888e05fded48bfca775ad21eb995"
+    },
+    {
+      "path": "inspect-baseline.py",
+      "bytes": 563,
+      "sha256": "d3eada8d44be3063b8e6febb6e287ec9e0ec3594a42af8ca5a3e01a9e3a89224"
+    },
+    {
+      "path": "locomotion-after-this-run.json",
+      "bytes": 1643,
+      "sha256": "07fc9e19f75a31899a7bd247ec03d0aece282fb40c5915b526dc62a41d0d8253"
+    },
+    {
+      "path": "prepare-evidence.cjs",
+      "bytes": 5526,
+      "sha256": "9df7450211955a2164cd00cbb7bef1ac305919c1dc084a25a1e38216d9511042"
+    },
+    {
+      "path": "reconcile-evidence.cjs",
+      "bytes": 7511,
+      "sha256": "a89426568230ee2ad1ef3ae1463ff6810414992393fe5627a44d5199982469ca"
+    },
+    {
+      "path": "reopen.log",
+      "bytes": 1084,
+      "sha256": "7156e725ce40e27a9d360e4cc79a845e13114d0e510c4e9d25e1328beb648320"
+    },
+    {
+      "path": "replay.log",
+      "bytes": 136,
+      "sha256": "f52e86ae86ca7d696fde8688ab151d2e965c2af844096ff2d090365a49431c3f"
+    },
+    {
+      "path": "runtime-full.log",
+      "bytes": 233,
+      "sha256": "66357c0f645ee91c38f42b9277c7a3c6e4fc2d4ee9e14828e6c7cac25fff3509"
+    },
+    {
+      "path": "scope-after-recovery.log",
+      "bytes": 4073,
+      "sha256": "fec20347b452f6671f2f878878479faacb2f23fd51fd62bd4a210d3bb3f37c21"
+    },
+    {
+      "path": "scope.log",
+      "bytes": 3929,
+      "sha256": "78ec10432cde58f3d8b2149db343242324f1f407ca190e291037487450e64b9d"
+    },
+    {
+      "path": "source-commit.txt",
+      "bytes": 361,
+      "sha256": "a9a369ced9392e21640f5467d737647e0fa9ce36c8c9c11155dd672eac402124"
+    },
+    {
+      "path": "studio-preview.log",
+      "bytes": 124,
+      "sha256": "2c92861a646893680be1788d4830d23a23949b82728224e683feb0b8179760a3"
+    },
+    {
+      "path": "test.log",
+      "bytes": 38650,
+      "sha256": "95e6c5e641c83fcea2be1e68f34ba9a2a6b12e8efc05f72339845f6074345fec"
+    },
+    {
+      "path": "validate.log",
+      "bytes": 325,
+      "sha256": "37ecb0293efb667658af0076a6a3b5fa10af7ef3c36de1c76ee2edf7170b801c"
+    },
+    {
+      "path": "baseline/manifest.json",
+      "bytes": 7643,
+      "sha256": "81c7c8b0d0f2b8df5f90d179867658cfb7cccbe3ff02dd29e2d05fdea33203de"
+    },
+    {
+      "path": "baseline/misaki-grayform.blend",
+      "bytes": 1312636,
+      "sha256": "e8d5b774c5aba9fecbba3800732592c6b1eb66b34e74e6622c0099d6b60ed7a9"
+    },
+    {
+      "path": "baseline/misaki-grayform.glb",
+      "bytes": 902132,
+      "sha256": "29f4ff9e8711f80cef1f5d899d9c5f0fab0facbf1841274678313581998bb823"
+    }
+  ]
+}

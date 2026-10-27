@@ -76,7 +76,7 @@
     "production adoption/public deployment"
   ],
   "sync": {
-    "state": "source_synced_evidence_checkpoint",
+    "state": "source_and_full_evidence_synced",
     "sourceCommit": "d5ad1dc746c84274ef455ead76681ce4c3782f5d",
     "sourceRemoteReadback": "d5ad1dc746c84274ef455ead76681ce4c3782f5d",
     "normalPushExitCode": 0,
@@ -84,11 +84,19 @@
     "priorAutoReviewDenialResolved": true,
     "subsequentTransportInterruptionReconciled": true,
     "authBypassOrAlternateWriteRoute": false,
-    "evidenceCommitAndRemoteReadback": "See external delivery; do not self-reference this commit"
+    "evidenceCommitAndRemoteReadback": "See external delivery; do not self-reference this commit",
+    "evidenceCommit": "52cf6601ad7dc70638cb034a478c21ff3ad1e1aa",
+    "evidenceRemoteReadback": "52cf6601ad7dc70638cb034a478c21ff3ad1e1aa"
   },
   "cleanup": {
-    "performed": false,
-    "reason": "Await verified full evidence checkpoint before task-only redundant scratch cleanup",
-    "measuredDiskSavingsBytes": null
+    "performed": true,
+    "receipt": "cleanup.json",
+    "recoveryArchiveSha256": "c19e26692111b9a6b184ece08dfd097c4ff6960f9da88c2dfd4c2443262683c9",
+    "verifiedFiles": 22,
+    "logicalBytesBefore": 2298681,
+    "recoveryArchiveBytes": 933145,
+    "logicalDataReductionBytes": 1365536,
+    "physicalFreeDiskSavingsBytes": null,
+    "memorySavingsMeasured": false
   }
 }

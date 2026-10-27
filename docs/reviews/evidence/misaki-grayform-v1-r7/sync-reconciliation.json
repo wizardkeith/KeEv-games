@@ -23,5 +23,8 @@
   },
   "postRecoveryArtifactAndComparisonShaAssertions": true,
   "noNewArtOrRenderOrFullTestRunDuringReconciliation": true,
-  "evidenceCheckpoint": "Final commit and remote SHA reported externally"
+  "evidenceCheckpoint": "Final commit and remote SHA reported externally",
+  "fullEvidenceCommit": "52cf6601ad7dc70638cb034a478c21ff3ad1e1aa",
+  "fullEvidenceRemoteReadback": "52cf6601ad7dc70638cb034a478c21ff3ad1e1aa",
+  "cleanupReceipt": "cleanup.json"
 }

@@ -1,8 +1,8 @@
-# Misaki R7：額前髮幕候選，未接受／來源已同步
+# Misaki R7：額前髮幕候選，未接受／來源與證據已同步
 
-更新：2026-10-28T06:56:14+08:00，Asia/Hong_Kong。
+更新：2026-10-28T07:00:40+08:00，Asia/Hong_Kong。
 
-本機已完成一輪有結構變化的髮型候選及實際引擎對照。**R7 仍未獲美術接受；source checkpoint 已成功同步，報告／PNG／驗證JSON集中於本檔所在的額外證據checkpoint。** Source commit是`d5ad1dc746c84274ef455ead76681ce4c3782f5d`，已由正常non-force push送到既有`codex/asset-foundation-v1`並獨立讀回相同遠端SHA。證據checkpoint的最終SHA及同步結果由交付訊息外部讀回，不在本文自引用。
+本機已完成一輪有結構變化的髮型候選及實際引擎對照。**R7 仍未獲美術接受；source及完整證據checkpoint均已成功同步，報告／PNG／驗證JSON的不可變證據提交為52cf6601ad7dc70638cb034a478c21ff3ad1e1aa。** Source commit是`d5ad1dc746c84274ef455ead76681ce4c3782f5d`，已由正常non-force push送到既有`codex/asset-foundation-v1`並獨立讀回相同遠端SHA。證據checkpoint的最終SHA及同步結果由交付訊息外部讀回，不在本文自引用。
 
 隔離checkout：`KeEv-games-handoff`。本輪基線`cec0c83464291d885ae363ff22d2881ba7d08dda`保留完整R6及確定性修正；沒有checkout舊快照或改寫歷史。最新讀取main仍為`beda04d6852c05bbcbb528f4edce32c027ade2ed`，其PROJECT_STATE已讀，main／PR／Site均未改。
 
@@ -49,7 +49,7 @@ Blender5.2.3LTS 先保存真正 `.blend`、輸出 GLB，再以另一個背景程
 
 正常遊戲鏡頭中的新物件是後方灰色 A-pose authoring sample，放置 `[.85,.079,1.35]`、yawπ；前方彩色 gameplay staff 是原版本，沒有替換。縮至正常遊戲尺度，髮型差異很小；截圖不是整體原圖相似度或新造型採用證明。無實體裝置／持續FPS／音訊／動畫認證。
 
-重現指令在 [authoring README](../tools/asset-foundation/MISAKI_GRAY_README.md)。原R6 `.blend`／manifest／GLB 仍在本輪 task-owned `hair-r7/baseline`，亦可由CEC提交逐byte取回。
+重現指令在 [authoring README](../tools/asset-foundation/MISAKI_GRAY_README.md)。原R6回退可由CEC提交逐byte取回。本輪baseline暫存已在完整證據同步後收入逐檔驗證的壓縮回退檔，詳見清理回執；重建時可按README重新建立暫存目錄。
 
 ## 同步狀態、恢復經過與下一步
 
@@ -57,6 +57,8 @@ Blender5.2.3LTS 先保存真正 `.blend`、輸出 GLB，再以另一個背景程
 
 隨後第一次推送遇exec-server transport disconnected，環境變為unavailable；獨立GitHub唯讀確認當時遠端仍CEC，未聲稱已交付。恢復同一環境後先核對本地HEAD、空index、完整未提交證據及實際遠端CEC，確認remote為ancestor才正常push。這次exit0，獨立ls-remote讀回d5ad1dc746c84274ef455ead76681ce4c3782f5d。
 
-本檔、14張原始實拍、6張比較圖及來源／測試JSON將隨同一證據checkpoint提供，最後遠端讀回見外部交付。來源／匯出／每張比較圖的來源SHA已在環境恢復後再次核對，未再改美術、執行新一輪render或冒充重新跑測試。
+完整證據commit 52cf6601ad7dc70638cb034a478c21ff3ad1e1aa包含本檔、14張原始實拍、6張比較圖及來源／測試JSON，已normal push並獨立讀回同SHA。此後只補充同步／清理收尾記錄，沒有更改來源、美術或圖片。來源／匯出／比較圖的SHA在環境恢復後再次核對；沒有冒充重新跑全套測試。
 
-完整證據同步並讀回前不清理任何本輪資料。之後只可回收本任務冗餘暫存，保留原圖、最新候選、Git中的R6回退、必要驗證及可重用依賴；清理結果另記，不預先宣稱磁碟節省。現在停在獨立視覺覆核checkpoint：主髮幕仍整塊、短層偏窄、髮根與bob未達原圖。無新美術迭代、GUI、Unity遷移、PR重試、merge、公開Site或玩家存檔變更。
+完整證據同步後，只清理本任務hair-r7冗餘暫存。先建立ZIP並逐一核對22個檔案的長度及SHA256，確認全部可回復才移除原暫存目錄；2,298,681 bytes變為933,145 bytes的回退ZIP，實測邏輯資料容量減少1,365,536 bytes。未量度或聲稱實體磁碟free-space／RAM節省。回退ZIP仍在task根目錄，sha256 c19e26692111b9a6b184ece08dfd097c4ff6960f9da88c2dfd4c2443262683c9；正式blend/glb、原圖、Git回退、必要證據、node_modules／store／dist及其他用戶資料全保留。詳見[清理回執](reviews/evidence/misaki-grayform-v1-r7/cleanup.json)。
+
+現在停在獨立視覺覆核checkpoint：主髮幕仍整塊、短層偏窄、髮根與bob未達原圖。無新美術迭代、GUI、Unity遷移、PR重試、merge、公開Site或玩家存檔變更。最終收尾commit與遠端讀回仍由交付訊息外部回報，避免自引用。

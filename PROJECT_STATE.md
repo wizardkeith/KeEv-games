@@ -1,13 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-28T06:56:14+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-28T06:59:47+08:00** (Asia/Hong_Kong).
 
-## 本機 R7 髮幕候選：來源已同步／完整證據checkpoint待獨立覆核 — 2026-10-28T06:56:14+08:00
+## 本機 R7 髮幕候選：來源與完整證據已同步／待獨立視覺覆核 — 2026-10-28T06:56:14+08:00
 
 - [實際原圖／同機R6／R7正面、三分之四及正常遊戲尺度](docs/MISAKI_HAIR_R7_2026-10-28_zh-HK.md)：只改10／11原生控制網，42其他cages、R3眼臉頸、身體髮夾、accepted props、確定性sRGB8及遊戲src／五語／存檔不變。真正blend及GLB背景重開，49,720tri、5mesh、10primitives、7灰材質，validator零錯警告。
 - 本輪實際304/304tests、Web build、validate／replay／asset-check／authoring strict TS及fresh Sandbox買入上架reload／Low-High通過；14張GLB原始實拍、6張來源可追比較圖及所有命令log在本證據checkpoint。原圖姿勢投影不同；主髮幕仍整塊、短層偏窄、髮根與bob未達原圖，**未美術接受、未採用**。沒有GUI拖點、Unity遷移或玩家profile存取。
 - Source commit d5ad1dc746c84274ef455ead76681ce4c3782f5d 已normal push到既有codex/asset-foundation-v1並讀回相同遠端SHA。原auto-review缺少直接用戶證據的問題已解決；其後環境斷線導致中斷，恢復同一環境後先核對local/index/remote仍為預期ancestorCEC，再完成push。沒有新登入、認證／安全設定改動或其他寫入route。證據checkpoint最終hash由外部交付讀回；完整同步前不清理，完成後僅回收task-owned冗餘暫存。
 - 本輪基線CEC已包含先前3個handoff／確定性commits，**下列舊段「仍未同步／等待授權」只描述當時狀態，並非現行阻塞**。main仍beda04d6852c05bbcbb528f4edce32c027ade2ed；本未合併分支不等於main或公開版。下一步獨立看圖覆核，停止新美術迭代；GUI hold、無PR重試／merge／Site／Normal變更維持。
+
+- 完整證據52cf6601ad7dc70638cb034a478c21ff3ad1e1aa已normal push並獨立讀回，先前斷線／審批問題均已解決。同步後22個task-owned冗餘暫存檔逐byte驗證收入回退ZIP才移除原目錄，邏輯資料容量2,298,681→933,145 bytes，減少1,365,536 bytes；實體free-space／RAM節省未量度。正式資產、原圖、必要證據及依賴保留，無用戶程序被終止。此收尾只改同步／清理記錄，最終SHA外部讀回，造型仍未接受。
 
 ## 本機固定sRGB8修正／304tests全過，原master逐byte不變；仍未同步
 
