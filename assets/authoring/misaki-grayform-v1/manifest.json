@@ -132,10 +132,40 @@
       "controlQuads": 72,
       "triangles": 152
     },
-    "10 / continuous side-part swept bob with unequal ends": {
-      "controlVertices": 954,
-      "controlQuads": 945,
-      "triangles": 7998
+    "16 / local crown root underlap": {
+      "controlVertices": 144,
+      "controlQuads": 142,
+      "triangles": 1136
+    },
+    "13 / rear central flow": {
+      "controlVertices": 144,
+      "controlQuads": 142,
+      "triangles": 1136
+    },
+    "14 / fuller rear own-right flow": {
+      "controlVertices": 144,
+      "controlQuads": 142,
+      "triangles": 1136
+    },
+    "15 / shorter rear own-left flow": {
+      "controlVertices": 144,
+      "controlQuads": 142,
+      "triangles": 1136
+    },
+    "10 / primary swept fringe": {
+      "controlVertices": 144,
+      "controlQuads": 142,
+      "triangles": 1136
+    },
+    "11 / underlapping temple turn": {
+      "controlVertices": 144,
+      "controlQuads": 142,
+      "triangles": 1136
+    },
+    "12 / shorter swept own-left ear side": {
+      "controlVertices": 144,
+      "controlQuads": 142,
+      "triangles": 1136
     },
     "17 / own LEFT clip leaf 0": {
       "controlVertices": 14,
@@ -238,7 +268,7 @@
       "triangles": 832
     }
   },
-  "triangles": 49414,
+  "triangles": 49368,
   "limitations": [
     "Grayform only, not final facial topology, skin weights, animation or art acceptance",
     "Side/back volumes inferred from canonical original; PlanB comparison pending readable access",
@@ -254,7 +284,8 @@
     "own-left-clip",
     "clothed-body"
   ],
-  "revision": "R3 head/neck only",
+  "hairMethod": "six flow clumps plus a local crown root underlap, varying-thickness cubic edge surfaces, native Bezier guides, local subdivision1 only, no global fusion or smoothing",
+  "revision": "R4 hair only / R3 eyes and R2 face-neck frozen",
   "headNeckOffset": 0.045,
   "bodyFrozenSource": "038740fbd7f6428cc82d5f442646c2d86a4143e3"
 }

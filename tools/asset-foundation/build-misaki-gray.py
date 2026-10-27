@@ -53,8 +53,10 @@ def tube(name,path,radii,mat,cols=10,sub=1):
    a=j*math.tau/cols;vs.append(Vector(c)+u*rx*math.cos(a)+v*ry*math.sin(a))
  fs=connect(len(path),cols);fs.extend([tuple(reversed(range(cols))),tuple((len(path)-1)*cols+j for j in range(cols))]);return mesh(name,vs,fs,mat,sub)
 
-# R3 replaces only head/face/hair/neck. Garment and limb cage code below is frozen.
-exec(compile((ROOT/'tools/asset-foundation/misaki-head-neck-r3.py').read_text(), 'misaki-head-neck-r3.py', 'exec'), globals())
+# R4 freezes the full R3 face/eye/ear/neck section and replaces hair only.
+frozen_head=(ROOT/'tools/asset-foundation/misaki-head-neck-r3.py').read_text()
+exec(compile(frozen_head[:frozen_head.index('# The dominant swept fringe')], 'frozen-R3-face-neck', 'exec'), globals())
+exec(compile((ROOT/'tools/asset-foundation/misaki-hair-r4.py').read_text(), 'misaki-hair-r4.py', 'exec'), globals())
 
 # The canonical clip is on her OWN LEFT (+X), never mirrored onto both sides.
 for k,(dx,dz,angle)in enumerate([(0,0,-.6),(.015,.014,.6)]):
@@ -137,6 +139,6 @@ bpy.ops.export_scene.gltf(filepath=str(OUT/'misaki-grayform.glb'),export_format=
 manifest={'id':'misaki-grayform-v1','reference':'canonical Approved_Visual_Target_Misaki.png only','referenceSha256':hashlib.sha256((ROOT/'docs/codex-v4/reference/Approved_Visual_Target_Misaki.png').read_bytes()).hexdigest(),'PlanB':{'library_file_id':'libfile_d1f1a5f43d9c819199f7d57ff7936d6a','expectedSha256':'4c35ad580dfff13001d4970a7bc2b1be5299c944d127abb0fdd329f7dad6e420','materialization':'official helper download failed; no local bytes or new views inspected'},'axes':'Blender Z-up / face -Y / own LEFT +X; glTF Y-up / face +Z / own LEFT +X','pose':'normalized neutral A-pose; hands are coarse masses','intendedHeight':1.442,'headChin':.998,'hairCrown':1.442,'headUnits':1.442/(1.442-.998),'jointsBlender':{'neck':[0,0,1.00],'leftShoulder':[.162,0,.966],'leftElbow':[.289,-.005,.770],'leftWrist':[.368,-.012,.631],'rightShoulder':[-.162,0,.966],'rightElbow':[-.289,-.005,.770],'rightWrist':[-.368,-.012,.631]},'objects':source_stats,'triangles':sum(s['triangles']for s in source_stats.values()),'limitations':['Grayform only, not final facial topology, skin weights, animation or art acceptance','Side/back volumes inferred from canonical original; PlanB comparison pending readable access','Existing gameplay rig/actions/data/saves untouched','No final materials, textures, fine strands, weave or finger topology','Back bow omitted rather than claiming an unseen reference']}
 manifest['soleNormalization']=sole;manifest['semanticExportGroups']=list(groups)
 for key in ['intendedHeight','headChin','hairCrown','headUnits']:manifest.pop(key,None)
-manifest['revision']='R3 head/neck only';manifest['headNeckOffset']=head_offset;manifest['bodyFrozenSource']='038740fbd7f6428cc82d5f442646c2d86a4143e3';manifest['jointsBlender']['neck']=[0,.019,1.04]
+manifest['hairMethod']='six flow clumps plus a local crown root underlap, varying-thickness cubic edge surfaces, native Bezier guides, local subdivision1 only, no global fusion or smoothing';manifest['revision']='R4 hair only / R3 eyes and R2 face-neck frozen';manifest['headNeckOffset']=head_offset;manifest['bodyFrozenSource']='038740fbd7f6428cc82d5f442646c2d86a4143e3';manifest['jointsBlender']['neck']=[0,.019,1.04]
 manifest['PlanB']['materialization']='official helper download failed, and one fresh authorized retry also failed; no local bytes/new views inspected'
 (SRC/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');print(json.dumps({'objects':len(objects),'triangles':manifest['triangles'],'headNeckOffset':head_offset}))
