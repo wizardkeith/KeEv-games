@@ -1,0 +1,152 @@
+{
+  "sourceCommit": "c912b62242b9a113ec6c77f3bc0a2cf12a9f1ce4",
+  "priorR2Source": "9c8104038fd78c9f7ababa9cc56e2f0c32c032c1",
+  "baseApplication": "78fbae7f519e4c443d5971bb18208e1c4f9de64e",
+  "visualStatus": "Style gate remains open / no acceptance claimed. Fixed R3 candidate for independent review.",
+  "changes": [
+    "Same35 heads/175 petals/cluster centres, five size-opening variants, rounded shoulders/caps and unequal cup/orientation",
+    "Broad cloth folds and2mm body retained; small asymmetric tension/hem,512px real linen albedo-ORM-normal with explicit glTF tangents",
+    "Table shape/endgrainUV/supports retained; broad irregular per-board grain and plausible board colour/roughness,512px unchanged"
+  ],
+  "loadedAssetSha256": "62fd21806c563bacb52b7a02a0ef79af914091f6a7a8e73cb38ec769ec95532c",
+  "loadedAssetsMatchSource": true,
+  "lightingMatched": true,
+  "normalCameraMatched": true,
+  "lifecycle": {
+    "buy3": true,
+    "cashBefore": 5000,
+    "cashAfter": 4790,
+    "stock": 3,
+    "shelf": 0,
+    "reloadEqual": true,
+    "lowHighRetained": true,
+    "normalUnchanged": true
+  },
+  "pageErrors": [],
+  "contact": {
+    "feet": 0,
+    "cupBottom": 0.904999990016222,
+    "vaseBottom": 0.9049999639391899,
+    "tableTop": 0.9050000123679638,
+    "cupGap": -2.2351741790771484e-8,
+    "vaseGap": -4.842877388000488e-8
+  },
+  "clothSupport": {
+    "minimumClearanceMetres": 0.0010288579015828112,
+    "sampledTrianglePoints": 52640,
+    "method": "All actual GLB cloth triangle vertices, three edge midpoints and centroid against three authored11mm rounded tabletop solids"
+  },
+  "preservedR2": {
+    "tableShapeNormalsUV": {
+      "triangles": 6480,
+      "sha256": "82755d850236f3c41095651855c1a16537849533e582d5002d721705476704b1",
+      "unchangedAtMicrometrePrecision": true
+    },
+    "flowerStemsLeaves": {
+      "triangles": 7644,
+      "sha256": "6407c2d3631db6d9c2cac6d65746dbb4b3495071ec27b8b48ce15c375ca10588",
+      "unchangedAtMicrometrePrecision": true
+    }
+  },
+  "preservedCeramics": {
+    "cup": {
+      "geometrySha256": "d3511f0abeb9596e5af4da515af993a8d6a2bf5c45ac3533c2f69032d9fa7064",
+      "positionsNormalsIndicesUnchanged": true
+    },
+    "vase": {
+      "geometrySha256": "a3e1c936ba257dfac58885420610232574684bab6d9788abd1b211071206e50a",
+      "positionsNormalsIndicesUnchanged": true
+    }
+  },
+  "budget": {
+    "flowerTriangles": 33124,
+    "setTriangles": 62120,
+    "heads": 35,
+    "petals": 175,
+    "addedTriangles": 0,
+    "reducedTriangles": 1472
+  },
+  "clothFixedStudioROI": {
+    "R2": {
+      "image": "docs/reviews/evidence/asset-foundation-v1-r2/fixed-light-material.png",
+      "sha256": "d5a822ccb7ae8ddecf80354eeb2a22dbc55a873ed02331e982814438e05f1412",
+      "roiXYXY": [
+        530,
+        360,
+        610,
+        390
+      ],
+      "meanRGB": [
+        255,
+        254.83458333333334,
+        242.92625
+      ],
+      "stdRGB": [
+        0,
+        0.3715561775230609,
+        0.26136361166006455
+      ],
+      "clippedFractionRGBAt254": [
+        1,
+        1,
+        0
+      ],
+      "anyChannelClippedFraction": 1
+    },
+    "R3": {
+      "image": "docs/reviews/evidence/asset-foundation-v1-r3/fixed-light-material.png",
+      "sha256": "e025f2c83719521dc01063f37a78683504e189eb13887310e82ba1687935472c",
+      "roiXYXY": [
+        530,
+        360,
+        610,
+        390
+      ],
+      "meanRGB": [
+        225.7275,
+        222.62583333333333,
+        214.74041666666668
+      ],
+      "stdRGB": [
+        0.8514167115265299,
+        0.8336661835264594,
+        0.7977258257418754
+      ],
+      "clippedFractionRGBAt254": [
+        0,
+        0,
+        0
+      ],
+      "anyChannelClippedFraction": 0
+    }
+  },
+  "checks": {
+    "tests": 302,
+    "build": true,
+    "contentValidate": true,
+    "replay": true,
+    "legacyAssetCheck": true,
+    "blenderRebuild": true,
+    "newGLBFiles": 6,
+    "newGLBErrors": 0,
+    "newGLBWarnings": 0,
+    "fixtureStrictTypes": true,
+    "protectedOriginalFiles": 720
+  },
+  "library": {
+    "image": "material-normal-game.png",
+    "version": 4,
+    "nativeImageSaved": true
+  },
+  "limitations": [
+    "No technical or clipping metric constitutes style acceptance",
+    "Linen may be too gray in gameplay and fibre response too weak at480px",
+    "Crown may remain sparse/regular; wood remains orderly despite less periodic grain",
+    "Flower33124tri still requires future LOD before replication",
+    "Cloth support is sampled, not full collision proof",
+    "Blender buffer ordering may vary; byte-identical re-export not claimed",
+    "Static SwiftShader only, no physical GPU/FPS/motion/audio/native certification"
+  ],
+  "nextStage": "Misaki PlanB handoff recorded; no pack materialization or character work this turn",
+  "pr": "Stopped; no retry or alternate route"
+}

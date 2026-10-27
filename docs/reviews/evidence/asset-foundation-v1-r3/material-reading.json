@@ -1,0 +1,57 @@
+{
+  "condition": "Unchanged fixed2light studio/camera/exposure; actual LDR PNG pixels. ROI is an interior patch on the linen tabletop, not a whole-cloth segmentation or physical reflectance measurement.",
+  "readings": {
+    "R2": {
+      "image": "docs/reviews/evidence/asset-foundation-v1-r2/fixed-light-material.png",
+      "sha256": "d5a822ccb7ae8ddecf80354eeb2a22dbc55a873ed02331e982814438e05f1412",
+      "roiXYXY": [
+        530,
+        360,
+        610,
+        390
+      ],
+      "meanRGB": [
+        255.0,
+        254.83458333333334,
+        242.92625
+      ],
+      "stdRGB": [
+        0.0,
+        0.3715561775230609,
+        0.26136361166006455
+      ],
+      "clippedFractionRGBAt254": [
+        1.0,
+        1.0,
+        0.0
+      ],
+      "anyChannelClippedFraction": 1.0
+    },
+    "R3": {
+      "image": "docs/reviews/evidence/asset-foundation-v1-r3/fixed-light-material.png",
+      "sha256": "e025f2c83719521dc01063f37a78683504e189eb13887310e82ba1687935472c",
+      "roiXYXY": [
+        530,
+        360,
+        610,
+        390
+      ],
+      "meanRGB": [
+        225.7275,
+        222.62583333333333,
+        214.74041666666668
+      ],
+      "stdRGB": [
+        0.8514167115265299,
+        0.8336661835264594,
+        0.7977258257418754
+      ],
+      "clippedFractionRGBAt254": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "anyChannelClippedFraction": 0.0
+    }
+  }
+}

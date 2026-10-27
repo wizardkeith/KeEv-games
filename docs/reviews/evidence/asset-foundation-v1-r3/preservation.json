@@ -1,0 +1,37 @@
+{
+  "base": "78fbae7f519e4c443d5971bb18208e1c4f9de64e",
+  "source": "c912b62242b9a113ec6c77f3bc0a2cf12a9f1ce4",
+  "protectedOriginalFiles": 720,
+  "alteredOriginalFiles": [],
+  "newAssetSha256": {
+    "cloth.glb": "00d8561b088deb36a3ade814b67b9b9b24d347a91679fb0c27f39ec3d14b250b",
+    "cup.glb": "6e538c183df3f6e4dffc169127096cf76e1e8e6bac18088367febd9b5e2283ab",
+    "display-set.glb": "62fd21806c563bacb52b7a02a0ef79af914091f6a7a8e73cb38ec769ec95532c",
+    "flowers.glb": "7b36556e613f9d95bb7cde85011f46676e111de8a0ee059a9b8cdd77c4270346",
+    "table.glb": "af1e69bcc7932d1dc862b7e57f3b79ec5386fffeeafd9594980f729c44c44405",
+    "vase.glb": "ae16caeb26d3cdbe453c67804b550cc875dbac35e4b5e248af40ef26f7e1b7a6"
+  },
+  "preservedR2": {
+    "tableShapeNormalsUV": {
+      "triangles": 6480,
+      "sha256": "82755d850236f3c41095651855c1a16537849533e582d5002d721705476704b1",
+      "unchangedAtMicrometrePrecision": true
+    },
+    "flowerStemsLeaves": {
+      "triangles": 7644,
+      "sha256": "6407c2d3631db6d9c2cac6d65746dbb4b3495071ec27b8b48ce15c375ca10588",
+      "unchangedAtMicrometrePrecision": true
+    }
+  },
+  "preservedCeramics": {
+    "cup": {
+      "geometrySha256": "d3511f0abeb9596e5af4da515af993a8d6a2bf5c45ac3533c2f69032d9fa7064",
+      "positionsNormalsIndicesUnchanged": true
+    },
+    "vase": {
+      "geometrySha256": "a3e1c936ba257dfac58885420610232574684bab6d9788abd1b211071206e50a",
+      "positionsNormalsIndicesUnchanged": true
+    }
+  },
+  "targetSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114"
+}

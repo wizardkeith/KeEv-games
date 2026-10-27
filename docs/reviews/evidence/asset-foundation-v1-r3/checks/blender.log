@@ -1,0 +1,53 @@
+ERROR Draco mesh compression is not available because library could not be found at /usr/bin/4.3/python/lib/python3.13/site-packages/libextern_draco.so
+10:51:21 | INFO: Starting glTF 2.0 export
+10:51:21 | INFO: Extracting primitive: Cube.021
+10:51:21 | INFO: Primitives created: 5
+10:51:21 | INFO: Finished glTF 2.0 export in 0.08095073699951172 s
+
+10:51:21 | INFO: Starting glTF 2.0 export
+10:51:21 | INFO: Extracting primitive: Ivory cup • continuous interior and rolled rim.001
+10:51:21 | INFO: Primitives created: 1
+10:51:21 | INFO: Finished glTF 2.0 export in 0.01166987419128418 s
+
+Warning: No mesh data to join
+10:51:22 | INFO: Starting glTF 2.0 export
+10:51:22 | INFO: Extracting primitive: Celadon vase • hollow wheel profile.001
+10:51:22 | INFO: Primitives created: 1
+10:51:22 | INFO: Finished glTF 2.0 export in 0.012206077575683594 s
+
+10:51:22 | INFO: Starting glTF 2.0 export
+10:51:22 | INFO: Extracting primitive: Arching main stem 0.001
+Blender 4.3.2
+Error: Tangent space can only be computed for tris/quads, aborting
+10:51:22 | WARNING: Arching main stem 0.001: Could not calculate tangents. Please try to triangulate the mesh first.
+10:51:22 | INFO: Primitives created: 4
+10:51:22 | INFO: Finished glTF 2.0 export in 0.0401921272277832 s
+
+Warning: Arching main stem 0.001: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: No mesh data to join
+10:51:22 | INFO: Starting glTF 2.0 export
+10:51:22 | INFO: Extracting primitive: Linen runner • continuous weighted fall.001
+10:51:22 | INFO: Primitives created: 1
+10:51:22 | INFO: Finished glTF 2.0 export in 0.041095733642578125 s
+
+Warning: No mesh data to join
+Warning: No mesh data to join
+10:51:22 | INFO: Starting glTF 2.0 export
+10:51:22 | INFO: Extracting primitive: Cube.041
+10:51:22 | INFO: Primitives created: 5
+10:51:22 | INFO: Extracting primitive: Ivory cup • continuous interior and rolled rim.002
+10:51:22 | INFO: Primitives created: 1
+10:51:22 | INFO: Extracting primitive: Celadon vase • hollow wheel profile.002
+10:51:22 | INFO: Primitives created: 1
+10:51:22 | INFO: Extracting primitive: Arching main stem 0.002
+Error: Tangent space can only be computed for tris/quads, aborting
+10:51:22 | WARNING: Arching main stem 0.002: Could not calculate tangents. Please try to triangulate the mesh first.
+10:51:22 | INFO: Primitives created: 4
+10:51:22 | INFO: Extracting primitive: Linen runner • continuous weighted fall.002
+10:51:22 | INFO: Primitives created: 1
+10:51:22 | INFO: Finished glTF 2.0 export in 0.17565345764160156 s
+
+Warning: Arching main stem 0.002: Could not calculate tangents. Please try to triangulate the mesh first.
+Info: Saved "display-set.blend"
+
+Blender quit

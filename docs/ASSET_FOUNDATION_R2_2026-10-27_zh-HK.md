@@ -1,5 +1,7 @@
 # 部件風格修正 R2 — 固定候選，畫風未接受
 
+> 歷史R2，獨立STYLE門檻FAIL。幾何／接觸保留，後續同組修正在[R3候選](ASSET_FOUNDATION_R3_2026-10-27_zh-HK.md)。本頁原始證據與來源commit不改。
+
 最終部件來源：`9c8104038fd78c9f7ababa9cc56e2f0c32c032c1`（包含風格／接觸修正 `08db124e54c5b03184338d3764faa77ebcaab6e9`）。只在 `codex/asset-foundation-v1` 延續原五個部件，不擴展整店或角色。**這組仍不是目標畫風 PASS；以下技術檢查不能代替美術接受。**
 
 ![唯一原圖左店景／R2實際遊戲材質／同光灰模；店景各480px高](reviews/evidence/asset-foundation-v1-r2/target-material-gray-shop480.png)

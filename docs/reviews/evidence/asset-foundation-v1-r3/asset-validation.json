@@ -1,0 +1,503 @@
+[
+  {
+    "file": "cloth.glb",
+    "bytes": 552316,
+    "sha256": "00d8561b088deb36a3ade814b67b9b9b24d347a91679fb0c27f39ec3d14b250b",
+    "meshes": 1,
+    "triangles": 7520,
+    "bounds": [
+      {
+        "min": [
+          -0.04504993185400963,
+          0.49014216661453247,
+          -0.4200047552585602
+        ],
+        "max": [
+          0.5251659154891968,
+          0.9160326719284058,
+          0.5944945216178894
+        ]
+      }
+    ],
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 0,
+      "numHints": 0,
+      "messages": [],
+      "truncated": false
+    }
+  },
+  {
+    "file": "cup.glb",
+    "bytes": 121648,
+    "sha256": "6e538c183df3f6e4dffc169127096cf76e1e8e6bac18088367febd9b5e2283ab",
+    "meshes": 1,
+    "triangles": 6548,
+    "bounds": [
+      {
+        "min": [
+          -0.1298374980688095,
+          0.006000000983476639,
+          -0.07029895484447479
+        ],
+        "max": [
+          0.07029895484447479,
+          0.1420000195503235,
+          0.07029895484447479
+        ]
+      }
+    ],
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 0,
+      "numHints": 0,
+      "messages": [],
+      "truncated": false
+    }
+  },
+  {
+    "file": "display-set.glb",
+    "bytes": 2864144,
+    "sha256": "62fd21806c563bacb52b7a02a0ef79af914091f6a7a8e73cb38ec769ec95532c",
+    "meshes": 5,
+    "triangles": 62120,
+    "bounds": [
+      {
+        "min": [
+          -0.9267781972885132,
+          -0.8740000128746033,
+          -0.7739999890327454
+        ],
+        "max": [
+          0.9267781972885132,
+          0.03099999949336052,
+          0.17149999737739563
+        ]
+      },
+      {
+        "min": [
+          -0.9300000071525574,
+          -0.8740000128746033,
+          -0.862278163433075
+        ],
+        "max": [
+          0.9300000071525574,
+          0.027778172865509987,
+          0.16827817261219025
+        ]
+      },
+      {
+        "min": [
+          -0.9267781972885132,
+          -0.8716570138931274,
+          -0.7799237370491028
+        ],
+        "max": [
+          0.9267781972885132,
+          0.03099999949336052,
+          0.08592373877763748
+        ]
+      },
+      {
+        "min": [
+          -0.9267781972885132,
+          -0.6470000147819519,
+          -0.8654999732971191
+        ],
+        "max": [
+          0.9267781972885132,
+          0.03099999949336052,
+          0.03324270248413086
+        ]
+      },
+      {
+        "min": [
+          -0.7632426023483276,
+          -0.6470000147819519,
+          -0.7425000071525574
+        ],
+        "max": [
+          0.7632426023483276,
+          -0.6150000691413879,
+          -0.48149996995925903
+        ]
+      },
+      {
+        "min": [
+          -0.1298374980688095,
+          0.006000000983476639,
+          -0.07029895484447479
+        ],
+        "max": [
+          0.07029895484447479,
+          0.1420000195503235,
+          0.07029895484447479
+        ]
+      },
+      {
+        "min": [
+          -0.10985250771045685,
+          0.0040000006556510925,
+          -0.10985250771045685
+        ],
+        "max": [
+          0.10985250771045685,
+          0.26600000262260437,
+          0.10985250771045685
+        ]
+      },
+      {
+        "min": [
+          -0.12952369451522827,
+          0.2093452513217926,
+          -0.07830268144607544
+        ],
+        "max": [
+          0.0995638519525528,
+          0.6329025030136108,
+          0.06871561706066132
+        ]
+      },
+      {
+        "min": [
+          -0.14027820527553558,
+          0.5030770301818848,
+          -0.09405974298715591
+        ],
+        "max": [
+          0.12142745405435562,
+          0.640673816204071,
+          0.07732079923152924
+        ]
+      },
+      {
+        "min": [
+          -0.13204094767570496,
+          0.502352237701416,
+          -0.08128301799297333
+        ],
+        "max": [
+          0.10329403728246689,
+          0.6360251903533936,
+          0.07118266075849533
+        ]
+      },
+      {
+        "min": [
+          -0.09244446456432343,
+          0.3198866844177246,
+          -0.11343784630298615
+        ],
+        "max": [
+          0.10167327523231506,
+          0.4375000298023224,
+          0.09043911099433899
+        ]
+      },
+      {
+        "min": [
+          -0.04504993185400963,
+          0.49014216661453247,
+          -0.4200047552585602
+        ],
+        "max": [
+          0.5251659154891968,
+          0.9160326719284058,
+          0.5944945216178894
+        ]
+      }
+    ],
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 9,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/0/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/1/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/2/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/3/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/4/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/3/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/3/primitives/1/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/3/primitives/2/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/3/primitives/3/attributes/TEXCOORD_0"
+        }
+      ],
+      "truncated": false
+    }
+  },
+  {
+    "file": "flowers.glb",
+    "bytes": 846648,
+    "sha256": "7b36556e613f9d95bb7cde85011f46676e111de8a0ee059a9b8cdd77c4270346",
+    "meshes": 1,
+    "triangles": 33124,
+    "bounds": [
+      {
+        "min": [
+          -0.12952369451522827,
+          0.2093452513217926,
+          -0.07830268144607544
+        ],
+        "max": [
+          0.0995638519525528,
+          0.6329025030136108,
+          0.06871561706066132
+        ]
+      },
+      {
+        "min": [
+          -0.14027820527553558,
+          0.5030770301818848,
+          -0.09405974298715591
+        ],
+        "max": [
+          0.12142745405435562,
+          0.640673816204071,
+          0.07732079923152924
+        ]
+      },
+      {
+        "min": [
+          -0.13204094767570496,
+          0.5023522973060608,
+          -0.08128301799297333
+        ],
+        "max": [
+          0.10329403728246689,
+          0.6360252499580383,
+          0.07118266075849533
+        ]
+      },
+      {
+        "min": [
+          -0.09244446456432343,
+          0.3198866844177246,
+          -0.11343784630298615
+        ],
+        "max": [
+          0.10167327523231506,
+          0.4375000298023224,
+          0.09043911099433899
+        ]
+      }
+    ],
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 4,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/2/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/3/attributes/TEXCOORD_0"
+        }
+      ],
+      "truncated": false
+    }
+  },
+  {
+    "file": "table.glb",
+    "bytes": 1188748,
+    "sha256": "af1e69bcc7932d1dc862b7e57f3b79ec5386fffeeafd9594980f729c44c44405",
+    "meshes": 1,
+    "triangles": 6480,
+    "bounds": [
+      {
+        "min": [
+          -0.9267781972885132,
+          -0.8740000128746033,
+          -0.7739999890327454
+        ],
+        "max": [
+          0.9267781972885132,
+          0.03099999949336052,
+          0.17149999737739563
+        ]
+      },
+      {
+        "min": [
+          -0.9300000071525574,
+          -0.8740000128746033,
+          -0.862278163433075
+        ],
+        "max": [
+          0.9300000071525574,
+          0.027778172865509987,
+          0.16827817261219025
+        ]
+      },
+      {
+        "min": [
+          -0.9267781972885132,
+          -0.8716570138931274,
+          -0.7799237370491028
+        ],
+        "max": [
+          0.9267781972885132,
+          0.03099999949336052,
+          0.08592373877763748
+        ]
+      },
+      {
+        "min": [
+          -0.9267781972885132,
+          -0.6470000147819519,
+          -0.8654999732971191
+        ],
+        "max": [
+          0.9267781972885132,
+          0.03099999949336052,
+          0.03324270248413086
+        ]
+      },
+      {
+        "min": [
+          -0.7632426023483276,
+          -0.6470000147819519,
+          -0.7425000071525574
+        ],
+        "max": [
+          0.7632426023483276,
+          -0.6150000691413879,
+          -0.48149996995925903
+        ]
+      }
+    ],
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 5,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/0/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/1/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/2/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/3/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/4/attributes/TANGENT"
+        }
+      ],
+      "truncated": false
+    }
+  },
+  {
+    "file": "vase.glb",
+    "bytes": 155792,
+    "sha256": "ae16caeb26d3cdbe453c67804b550cc875dbac35e4b5e248af40ef26f7e1b7a6",
+    "meshes": 1,
+    "triangles": 8448,
+    "bounds": [
+      {
+        "min": [
+          -0.10985250771045685,
+          0.0040000006556510925,
+          -0.10985250771045685
+        ],
+        "max": [
+          0.10985250771045685,
+          0.26600000262260437,
+          0.10985250771045685
+        ]
+      }
+    ],
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 0,
+      "numHints": 0,
+      "messages": [],
+      "truncated": false
+    }
+  }
+]

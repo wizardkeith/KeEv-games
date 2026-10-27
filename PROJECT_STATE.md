@@ -1,6 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T18:31:21+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T19:03:40+08:00** (Asia/Hong_Kong).
+
+## 獨立部件R3固定候選／同組風格仍待接受 — 2026-10-27T19:03:40+08:00
+
+- `codex/asset-foundation-v1` source `c912b62242b9a113ec6c77f3bc0a2cf12a9f1ce4`；[唯一原圖／正常480px／雙斜角／灰模／同兩光R2-R3材質對照及限制](docs/ASSET_FOUNDATION_R3_2026-10-27_zh-HK.md)。R2 STYLE門檻FAIL後仍只修同組，**R3不宣稱畫風PASS**，不擴店／角色或改光。
+- 保留35頭／175瓣／20-10-5簇中心，改五種尺寸／開合／圓肩圓端／杯形及朝向，減弱等大尖星；保留大布折面及2mm體，加克制不對稱張力／hem和512px真linen albedo／ORM／normal，明確glTF tangents；木改不等距收斂自然紋／寬方向變化／板色與roughness差異，512px不增。R2桌形／normals／端紋UV及全部枝葉幾何在1µm canonical檢查同；杯瓶原position-normal-index streams逐byte同。
+- feetY0、杯瓶桌面差約−2.24e−8／−4.84e−8m保留；布52,640樣本最低clearance約1.029mm（非完整collisionproof）。總62,120tri／花33,124不增，仍無LOD／不可bulk複製。灰／材質全燈設定、8lights／environment.8及正常camera逐值同，兩組實際GLB bytes等於提交素材。
+- 同固定key2.1／fill.65／camera／曝光的指定布面ROI，R2 R/G皆100%≥254，R3 RGB皆0%≥254，meanRGB約225.7／222.6／214.7；只代表指定LDR表面區未剪白，非物理reflectance或材質／畫風接受。實際正常相機仍可能偏灰／纖維弱，花冠可能疏／規整，木構仍工整；交固定候選獨立覆核，未用更多細節代替風格。
+- fresh302tests／build／contentvalidate／replay／legacyassetcheck／作者strictTS／geometry-materialcontracts通過，六GLB零error／warning；720原application來源／素材／設定bytes保留。真freshSandbox買3杯5000→4790／stock3／側桌上架／reload逐值同／Low→High保留／隔離Normal不變／0pageerror；正常實拍Library原生image第4版，v1-R2證據及舊版保留。靜態SwiftShader非physicalGPU／FPS／motion／audio／native／新完整交接或五語窄UI認證；Blender buffer排序可能不同，未宣稱byte同rebuild。
+- [Misaki下一階段參考交接](docs/MISAKI_NEXT_STAGE_REFERENCE_HANDOFF_2026-10-27.md)保存PlanB包Library ID／SHA及原圖比例／自身左髮夾等規則；本輪未materialize／匯入／建模角色，沒有要求整包重生。PR仍停止、無retry／換route；main／PR8／merge／公開Site／publication／payments／玩家Normal未改，無其他操作阻塞。
 
 ## 獨立部件R2固定候選／畫風仍未接受 — 2026-10-27T18:31:21+08:00
 
