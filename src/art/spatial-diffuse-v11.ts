@@ -11,7 +11,7 @@ const smooth=(a:number,b:number,v:number)=>{const t=Math.max(0,Math.min(1,(v-a)/
 export function spatialDiffuseWeight(p:readonly number[],n:readonly number[]){
  const inside=smooth(-4.65,-4.35,p[0])*(1-smooth(3.15,3.55,Math.abs(p[2])));
  const up=smooth(.25,.85,n[1]),cashier=Math.exp(-1.2*(((p[0]-2.6)/1.65)**2+((p[2]+1.5)/1.4)**2));
- const back=(1-smooth(-2.8,-1.95,p[2]))*.65,entry=smooth(1.3,2.7,p[2])*smooth(.8,2,p[0])*.55;
+ const back=(1-smooth(-2.8,-1.95,p[2]))*.65,entry=smooth(1.3,2.7,p[2])*smooth(.8,2,p[0])*1.0;
  return 1-inside*up*.52*(1-Math.max(cashier,back,entry));
 }
 export const spatialDiffuseGLSL=`
@@ -21,7 +21,7 @@ float c49DiffuseWeight(vec3 p, vec3 n) {
  vec2 cashierDelta=(p.xz-vec2(2.6,-1.5))/vec2(1.65,1.4);
  float cashier=exp(-1.2*dot(cashierDelta,cashierDelta));
  float back=(1.0-smoothstep(-2.8,-1.95,p.z))*.65;
- float entry=smoothstep(1.3,2.7,p.z)*smoothstep(.8,2.0,p.x)*.55;
+ float entry=smoothstep(1.3,2.7,p.z)*smoothstep(.8,2.0,p.x)*1.0;
  return 1.0-inside*up*.52*(1.0-max(cashier,max(back,entry)));
 }`;
 // Babylon's public plugin regex insertion runs after include expansion. Restrict

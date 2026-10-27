@@ -1,0 +1,27 @@
+{
+  "id": "v11.c50.entrance-retention.v1",
+  "defaultAdopted": false,
+  "baselineApplication": "82014abaf0be78e0cf1859236b82b9d90bd44f8a",
+  "entranceRetention": {
+    "before": 0.55,
+    "after": 1
+  },
+  "glsl": "\nfloat c49DiffuseWeight(vec3 p, vec3 n) {\n float inside=smoothstep(-4.65,-4.35,p.x)*(1.0-smoothstep(3.15,3.55,abs(p.z)));\n float up=smoothstep(.25,.85,n.y);\n vec2 cashierDelta=(p.xz-vec2(2.6,-1.5))/vec2(1.65,1.4);\n float cashier=exp(-1.2*dot(cashierDelta,cashierDelta));\n float back=(1.0-smoothstep(-2.8,-1.95,p.z))*.65;\n float entry=smoothstep(1.3,2.7,p.z)*smoothstep(.8,2.0,p.x)*1.0;\n return 1.0-inside*up*.52*(1.0-max(cashier,max(back,entry)));\n}",
+  "sources": {
+    "src/art/spatial-diffuse-v11.ts": "8cbd116209f54be45b07ba51ee706cb7dd57a630d43ddc05554a9d02f208bc91",
+    "tools/export-v11-spatial-entrance.ts": "3da5aa7439a22cd249b91dda672463e5e2e53f3218dce6f3b1fed2fb372408d2"
+  },
+  "locks": {
+    "assets/authoring/native-v11/spatial-diffuse-c49.json": "60587f9a13775c7d51bc610b36fe14a6bff5ca89baa79c5e4b8832e850453741",
+    "src/world.ts": "7e6fdb4a3ad8f8fbe615bbdff0d399cbf2f89e824a59124c3a8aa7826c0181d8",
+    "vite.config.ts": "1a0771eb292ffbf91e44c85de125c29914071bc175445b03a02de5e8f0ead53e",
+    "src/art/scene-window-reach-v11.ts": "336f38e2815397c7a281193afdf4b5a1f36dbccdaa43a74d1c193d89c9234c7c",
+    "src/art/scene-window-light-v11.ts": "aba824a7383dbfc9ac9c481782146bbc3b2216599d28a5173a135a1f11ed67d5",
+    "src/art/scene-contact-intent-v11.ts": "fa47f1de82237669f97d6ee3848e10a63b8660a081a63c55121d4084e21b0741",
+    "src/art/scene-occlusion-v11.ts": "942ecdb6fd23e3f45d12bad1e6de6242b44c84fa90aac87ae061ecb5466c1ae5",
+    "src/art/shadow-pass-audit-v11.ts": "09d4ba2a4c4830169fca54a7c5a24925774997e37b994f99bdd14c873b39f377",
+    "public/assets/native-v11/soft-window-specular.env": "ab2ddab4e6f5b7e64370f7ba2fb63497326a4f19b669a5ccb459cfef8e2f3258",
+    "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114"
+  },
+  "scope": "Only the two mirrored CPU/GLSL entrance coefficients change; smooth bounds, central response, cashier/backwall retention, key/shadows/exposure/AO/assets/specular and default remain C49/C45. Authored indirect diffuse approximation, not GI. Actual visual review required."
+}
