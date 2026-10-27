@@ -14,10 +14,11 @@
     "No device or WebGL visual validation is implied by this export."
   ],
   "sources": {
+    "src/art/table-contact-v11.ts": "fb6d76573f5a4fb3168775c35d142c66277bf954b8149d34a9e2e22d6c677f22",
     "src/art/scene-light-balance-v11.ts": "49e12ae2f32a181f28decb67da201d56ea97389d00f6d4d8b05fa9cf897bf53a",
     "src/art/shadow-pass-audit-v11.ts": "09d4ba2a4c4830169fca54a7c5a24925774997e37b994f99bdd14c873b39f377",
-    "tools/export-v11-scene-balance.ts": "073b6e7021cda1c9c31d5a0937d38ec7024ff5068b541c497092583769bf834e",
-    "assets/authoring/native-v11/scene-balance-c42.json": "e65bbb9deb3bbe4ea8b98673893b9c60140f7cc3002c2e6c17e010ec064f8e91",
+    "tools/export-v11-scene-balance.ts": "99e4b0fd40a07f363f4879072e255d1a75c01de62ccc71f728530e4ede6a2287",
+    "assets/authoring/native-v11/scene-balance-c42.json": "ba3423b0a6bb0d85bde22f1bf09c9c70c25e650939ff1e34130d13c422242ab4",
     "src/art/scene-window-light-v11.ts": "76629c29a74fb597c9640ce6f4958c2e0241d9f00acf1671b1ce2514185683f9",
     "tools/export-v11-scene-window.ts": "da4fb6922ff22188f7c354409d2e29f5a363eec716f04421983e91292a221434",
     "assets/authoring/native-v11/scene-window-c41.json": "5d1be5f3c13b935b6636a05870a9845243c30b63abeac8f24223fd25d2cef6b6",
@@ -48,7 +49,6 @@
     "assets/masters/native-v11/display-quality/linen-c29-provenance.json": "65e4bdb25f536e9ebbbb490bdea38074ae8fd6f6397b446cff845ec91b461034",
     "src/art/table-look-v11.ts": "d5281061589bc46d3b077dc4f2265c711c968893bfae8e32324c159e1b88ffa1",
     "src/art/table-reflection-v11.ts": "9448abd914eec4993f915ac39295ee14a763076755b338b0d30a845456d759f5",
-    "src/art/table-contact-v11.ts": "8eedbcbedb34cc1b374c51f7d3851fd81458cf6fcca1c1a9a63165cb5cdfd751",
     "src/art/table-contact-atlas-v11.ts": "a02a3b1e8a262bb1c74db2084b5e327e3a2717264a66a2a8ae89c9f991ff7eae",
     "tools/export-v11-table-contact.ts": "113d44ddd2f7b709547363ed22d2706eb3df7b39e96cb225d428f207916f1d43",
     "tools/bake-v11-table-contact.py": "e40c6d71dcdc64a6b45018a55e0c15f938e60695c50f3c083272b2d2c7430bb2",
@@ -155,7 +155,7 @@
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "432f387c45f07b2ef9c0adb8207e0e1d44e143d64343bd8cd49b240dee72001d",
-    "tools/export-native-environment.ts": "350596a55eb95e144a5b23482715111ae419dfc88560f5c5d7dd482316f9bb95"
+    "tools/export-native-environment.ts": "a9932d75dfe47db562015524ca7973e5cb88e816047aa18620a21a18499a0e07"
   },
   "presentation": {
     "camera": {

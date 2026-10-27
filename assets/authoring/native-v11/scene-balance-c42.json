@@ -48,12 +48,13 @@
     "format": "RGBA8 linear128x128 original scalar aperture, alpha255"
   },
   "sources": {
+    "src/art/table-contact-v11.ts": "fb6d76573f5a4fb3168775c35d142c66277bf954b8149d34a9e2e22d6c677f22",
     "src/art/scene-light-balance-v11.ts": "49e12ae2f32a181f28decb67da201d56ea97389d00f6d4d8b05fa9cf897bf53a",
     "src/art/scene-window-light-v11.ts": "76629c29a74fb597c9640ce6f4958c2e0241d9f00acf1671b1ce2514185683f9",
     "src/art/shadow-pass-audit-v11.ts": "09d4ba2a4c4830169fca54a7c5a24925774997e37b994f99bdd14c873b39f377",
     "src/world.ts": "c749658e596957d27b8986313330fda0d03b8aee2e3f0b3b93b0eac64898d0f3",
     "vite.config.ts": "32e1b75e9010ce9ecfe851f5236e64f5b8281e818c490658f313f9f0abcf6c56",
-    "tools/export-v11-scene-balance.ts": "073b6e7021cda1c9c31d5a0937d38ec7024ff5068b541c497092583769bf834e"
+    "tools/export-v11-scene-balance.ts": "99e4b0fd40a07f363f4879072e255d1a75c01de62ccc71f728530e4ede6a2287"
   },
   "baseline": "C40 accepted ordinary default; C41 rejected and OFF",
   "limits": "Authoring candidate only; indirect-light proxy, not full GI/physical calibration or original-target acceptance. Draw telemetry is same-render-ID CPU dispatch evidence, not GPU completion."
