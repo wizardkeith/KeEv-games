@@ -1,0 +1,98 @@
+{
+  "source": "7b0d20fd91f537a43244a51c64afe64a1b7ec425",
+  "priorHeadSource": "45d596e9d27f67c48c163033374f8981bbbeb65a",
+  "scope": "main hair and eye aperture only; R2 profile/ear/neck and body frozen",
+  "priorVerdict": "R2 independent head/neck identity gate FAIL",
+  "R3Verdict": "not identity/style accepted; main volumes still thick/regular and rear helmet-like; fixed candidate for review",
+  "reference": "canonical original only; model head-scale crops matched, original pose/projection differs; side/back inferred",
+  "PlanB": "no new attempts; original and one fresh supported retry failed and remain stopped",
+  "canonicalSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+  "sha256": "42c5593d3a3547a5eec2e419011c17ad847e7b0476dff1981f08cdc7226e1bf8",
+  "bytes": 902632,
+  "triangles": 49414,
+  "deltaFromR2": -4066,
+  "runtimeHairTriangles": 7998,
+  "meshes": 5,
+  "primitives": 10,
+  "materials": 7,
+  "images": 0,
+  "skins": 0,
+  "animations": 0,
+  "sourceObjects": 38,
+  "hairMethod": "three editable volumetric cages / same subdivision1 / voxel union / bounded runtime reduction; no fine strands",
+  "R2FaceProfileNeckEarDefinitionsFrozen": true,
+  "frozenBodySource": "038740fbd7f6428cc82d5f442646c2d86a4143e3",
+  "frozenBodyStreams": 12,
+  "frozenBodyTRS": true,
+  "all7GrayMaterialDefinitionsFrozen": true,
+  "R4PaperFrozenFiles": 29,
+  "protectedOriginalApplicationFiles": 720,
+  "soleY": 0,
+  "headOffset": 0.045,
+  "headRatioTarget": null,
+  "eyeOpening": {
+    "halfWidth": 0.037,
+    "centralUpper": 0.036,
+    "centralLower": 0.0275,
+    "outerTilt": 0.0025,
+    "upperFoldWidth": 0.003,
+    "textureIdentity": false
+  },
+  "eyeApertureBoundaryLoops": [
+    40,
+    40
+  ],
+  "neckHeadBoundsOverlap": 0.05838418006896973,
+  "chinToFrozenClothingTop": 0.03517806529998779,
+  "clipAttachment": {
+    "sampledEvaluatedClipVertices": 156,
+    "minDistance": 0.0012525602942332625,
+    "meanDistance": 0.004889196466254548,
+    "maxDistance": 0.011780855245888233,
+    "limits": "Unsigned sampled vertex-to-hair distance, not collision/attachment certification."
+  },
+  "prototypeTotalTriangles": 121110,
+  "sourceDistStudioGameBytesMatch": true,
+  "R2R3CameraAndLightingMatch": true,
+  "lifecycle": {
+    "buy3": true,
+    "cashBefore": 5000,
+    "cashAfter": 4790,
+    "stock": 3,
+    "shelf": 2,
+    "reloadEqual": true,
+    "lowHighRetained": true,
+    "normalUnchanged": true
+  },
+  "pageErrors": [],
+  "newChecks": [
+    "Blender4.3.2",
+    "strict new GLB zero errors/warnings",
+    "body12streams/TRS,7gray materials,29accepted asset files frozen",
+    "R2 cheek-jaw-nose-forehead profiles and neck/ear definitions preserved",
+    "720 original application files unchanged",
+    "read-only actual eye holes/neck bounds/clip surface distance",
+    "strict authoring TypeScript / final build / dist source bytes equal",
+    "7 real engine captures and fresh Sandbox UI lifecycle"
+  ],
+  "priorTestsNotRepeated": [
+    "302 app tests",
+    "content validation",
+    "replay",
+    "legacy asset checks"
+  ],
+  "Library": {
+    "library_file_id": "libfile_0224bad58e5881918df7c73f50e81481",
+    "file_id": "file_000000008f0c8211ac36409628159317",
+    "filename": "grayform-game-normal.png",
+    "version": 2,
+    "bytes": 641830
+  },
+  "limits": [
+    "Geometry and count checks are not identity/style acceptance",
+    "Clip unsigned distance samples are not full attachment/collision certification",
+    "No final facial retopo/rig/animation/character integration",
+    "Unchanged clothes remain deferred after head/neck gate",
+    "Cloud SwiftShader static evidence, not physical GPU/FPS/audio/native or full old action certification"
+  ]
+}

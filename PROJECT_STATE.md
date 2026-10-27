@@ -1,6 +1,16 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T21:49:51+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T22:35:41+08:00** (Asia/Hong_Kong).
+
+## Misaki R3髮量／眼口固定候選／仍未獲身份接受 — 2026-10-27T22:35:41+08:00
+
+- 未合併`codex/asset-foundation-v1` source `7b0d20fd91f537a43244a51c64afe64a1b7ec425`；[原圖-R2-R3近似頭尺度正／三分四／側面、同尺度全身、實際正常480px雙斜角及限制](docs/MISAKI_HEAD_NECK_R3_2026-10-27_zh-HK.md)。R2獨立head-neck identity仍FAIL後只修主瀏海髮量與眼口，R3尚未獲identity/style PASS；衣身、材質、rig／動畫及手指仍後續，不湊3.24頭高。
+- 髮改基礎bob／主導斜瀏海／較小露耳側分三個體積cage＋named vertex groups，以實際合成連續曲面保根厚與不等下緣；髮runtime7,998tri、同一級subdivision、不加細髮。全角仍偏厚／規整，後腦過整、眼神泛通用人偶，作者自檢不當原圖鬆軟感已過。眼口半寬42→37mm、中央上下31/22→36/27.5mm、外角傾斜4→2.5mm、上瞼折面6→3mm，無iris貼圖。
+- R2頰顎／鼻額profile及頸耳cage定義、45mm offset保留；body12組position-normal-index streams/TRS逐byte同source038740fbd7f6428cc82d5f442646c2d86a4143e3，7灰材質／studio camera-light TS原檔同，29R4/PaperR2資產檔及720原application保護bytes同。新49,414tri／5meshes／10primitives／902,632bytes／零images-skins-animations，比R2少4,066tri；作者場景121,110tri不bulk。
+- 本輪Blender4.3.2／GLB0error-warning／scope-bodybytes-material-floor0-ownleftclip及凍結檢查／read-only兩40邊眼孔-頸位-clip距離／strict作者TS／finalbuild通過；source/dist/studio/game實載SHA同。新freshSandbox買3杯5000→4790／stock3／原display3槽2／reload逐值同／Low→High／Normal隔離不變／0pageerror，正常camera及全燈同R2，無zoom。前302tests未重跑，非完整舊動作／實體GPU-FPS-native或美術認證。
+- 自身左+X夾以剛體切線接近實際髮面，156個頂點unsigned距離約1.25–11.78mm僅初步附著資料，非完整contact/collisioncert；feetY0及原body接觸保留。頸頭縱bounds重疊58.38mm、chin至凍結衣物35.18mm保留。新正常Library同image `libfile_0224bad58e5881918df7c73f50e81481` version2，舊0/1保留。
+- PlanB仍初次＋唯一fresh retry兩次官方helper exit1／`library file transfer failed: download failed`，無ZIP／新圖／本機SHA；原因未明非審批拒絕，本輪沒有新試／genericdownload／猜URL／替代credentials，側背推定及原精確錯誤紀錄保留。
+- 下一步仍獨立看頭髮中等曲率／主從體積與眼瞼形狀，未接受前不進衣服／細髮／貼圖／rig動畫。source/evidence只推隔離分支；main／PR8未寫，PR建立維持先前拒絕停止無retry／換route；無merge／Site公開／payments／玩家Normal改動。除PlanB比對未完成外，無其他操作阻塞。
 
 ## Misaki R2只修頭頸固定候選／衣身凍結 — 2026-10-27T21:49:51+08:00
 

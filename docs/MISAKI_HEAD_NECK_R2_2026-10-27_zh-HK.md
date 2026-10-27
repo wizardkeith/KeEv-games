@@ -1,5 +1,7 @@
 # Misaki R2 — 只修頭／臉／髮量／頸部的固定候選
 
+後續獨立覆核：**R2頭頸identity gate仍FAIL**。R2原證據保留，後續只修主瀏海髮量與眼口見[R3](MISAKI_HEAD_NECK_R3_2026-10-27_zh-HK.md)，衣身與材質仍凍結。
+
 Source `45d596e9d27f67c48c163033374f8981bbbeb65a`，獨立分支`codex/asset-foundation-v1`。首灰模獨立FAIL後，本輪只做頭頸，**R2未判風格PASS，整體原圖畫風仍未接受**。衣身／硬袖口／平圍裙／裙／手腳暫時凍結，留待頭頸過關後；R4與PaperR2亦全部凍結。不做最終材質、rig、動畫、細髮或手指。
 
 ![原圖／R1／R2頭部，同一原始像素裁切；原圖姿勢不同](reviews/evidence/misaki-grayform-v1-r2/original-r1-r2-head480.png)
