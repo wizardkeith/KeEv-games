@@ -1,0 +1,47 @@
+ERROR Draco mesh compression is not available because library could not be found at /usr/bin/4.3/python/lib/python3.13/site-packages/libextern_draco.so
+11:30:19 | INFO: Starting glTF 2.0 export
+11:30:19 | INFO: Extracting primitive: Cube.021
+11:30:19 | INFO: Primitives created: 5
+11:30:19 | INFO: Finished glTF 2.0 export in 0.08403158187866211 s
+
+11:30:19 | INFO: Starting glTF 2.0 export
+11:30:19 | INFO: Extracting primitive: Ivory cup • continuous interior and rolled rim.001
+11:30:19 | INFO: Primitives created: 1
+11:30:19 | INFO: Finished glTF 2.0 export in 0.011831045150756836 s
+
+Warning: No mesh data to join
+11:30:19 | INFO: Starting glTF 2.0 export
+11:30:19 | INFO: Extracting primitive: Celadon vase • hollow wheel profile.001
+11:30:19 | INFO: Primitives created: 1
+11:30:19 | INFO: Finished glTF 2.0 export in 0.012406587600708008 s
+
+11:30:20 | INFO: Starting glTF 2.0 export
+11:30:20 | INFO: Extracting primitive: Low arching crown support 0.001
+11:30:20 | INFO: Primitives created: 4
+11:30:20 | INFO: Finished glTF 2.0 export in 0.03328680992126465 s
+
+Warning: No mesh data to join
+11:30:20 | INFO: Starting glTF 2.0 export
+11:30:20 | INFO: Extracting primitive: Linen sheet • diagonal pull and relaxed unequal hem.001
+11:30:20 | INFO: Primitives created: 1
+11:30:20 | INFO: Finished glTF 2.0 export in 0.03674817085266113 s
+
+Warning: No mesh data to join
+Warning: No mesh data to join
+11:30:20 | INFO: Starting glTF 2.0 export
+11:30:20 | INFO: Extracting primitive: Cube.041
+11:30:20 | INFO: Primitives created: 5
+11:30:20 | INFO: Extracting primitive: Ivory cup • continuous interior and rolled rim.002
+11:30:20 | INFO: Primitives created: 1
+11:30:20 | INFO: Extracting primitive: Celadon vase • hollow wheel profile.002
+11:30:20 | INFO: Primitives created: 1
+11:30:20 | INFO: Extracting primitive: Low arching crown support 0.002
+11:30:20 | INFO: Primitives created: 4
+11:30:20 | INFO: Extracting primitive: Linen sheet • diagonal pull and relaxed unequal hem.002
+11:30:20 | INFO: Primitives created: 1
+11:30:20 | INFO: Finished glTF 2.0 export in 0.15306711196899414 s
+
+Info: Saved "display-set.blend"
+Blender 4.3.2
+
+Blender quit

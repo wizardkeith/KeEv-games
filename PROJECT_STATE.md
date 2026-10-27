@@ -1,6 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T19:03:40+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T19:45:34+08:00** (Asia/Hong_Kong).
+
+## 獨立部件R4主形候選／未判風格PASS — 2026-10-27T19:45:34+08:00
+
+- `codex/asset-foundation-v1` source `70746f7269bf4b1ac27e1eed87146532cf413866`；[唯一原圖／R3-R4正常480px／同光灰模／雙斜角及限制](docs/ASSET_FOUNDATION_R4_2026-10-27_zh-HK.md)。R3 STYLE仍FAIL後，只釋放花枝葉／冠及布主形，不再木／織紋微磨，不擴整店／角色；R4固定候選**未判STYLE PASS**。
+- 花改七根低細彎曲承托、較小外轉葉，前後高低帶連成25頭主冠＋兩側5／5頭，仍35頭／175瓣／33,124tri。白瓣bounds寬26.17→47.06cm、最高點降16.25cm、最低白瓣距瓶口24.11→11.48cm；仍可辨獨立花頭／露莖，未當柔白花冠已接受。224個瓶口範圍莖頂點最大徑距17.32mm，根部留原瓶。
+- 布放棄R2/R3直條，整幅.60×1.30m斜放20°、不同材質列到達真桌邊，形成斜向自由邊／局部聚褶／對角受力及弧形不齊鬆邊；真2mm體及物理尺度UV保留。52,640樣本minclearance1.374mm，門檻≥1mm（非完整collisionproof）；局部收攏仍可能偏硬／幾何感強，交獨立判形。
+- 所有12個R3 glTF材質定義及嵌入圖頁SHA完全相同，桌geometry／normals／UV canonical保留，杯瓶原position-normal-index逐byte同；feet0／杯瓶桌面差−2.24e−8／−4.84e−8m保留。總62,120tri不增，仍無LOD／不可bulk複製。跨R3/R4及灰／材質的實際燈設定、8lights／environment.8、正常camera逐值同，沒有改光。
+- fresh302tests／build／contentvalidate／replay／legacyassetcheck／作者strictTS／shape-material-contact contracts通過，六GLB零error／warning，720原application來源／素材／設定bytes同。兩組實際載入GLB等於sourcebytes；freshSandbox真買3杯5000→4790／stock3／側桌上架／reload逐值同／Low→High／隔離Normal不變／0pageerror。正常實拍Library原生image第5版，R3第4版及全部原證據保留。
+- 靜態SwiftShader非physicalGPU／FPS／motion／audio／native／新完整交接或五語窄UI認證；Blender buffer排序可能不同，未宣稱byte同rebuild。下一步只獨立覆核新部件的白冠體塊／枝葉遮露及布受力／鬆垂，不把舊背景差距歸給新件，也不靠加細節補主形。PR仍停止／無retry或換route；main／PR8／merge／公開Site／publication／payments／玩家Normal未改，角色參考handoff保留但未開角色工作，無其他操作阻塞。
 
 ## 獨立部件R3固定候選／同組風格仍待接受 — 2026-10-27T19:03:40+08:00
 

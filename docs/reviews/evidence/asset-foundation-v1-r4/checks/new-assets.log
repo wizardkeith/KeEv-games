@@ -1,0 +1,8 @@
+[
+  { file: 'cloth.glb', triangles: 7520, errors: 0, warnings: 0 },
+  { file: 'cup.glb', triangles: 6548, errors: 0, warnings: 0 },
+  { file: 'display-set.glb', triangles: 62120, errors: 0, warnings: 0 },
+  { file: 'flowers.glb', triangles: 33124, errors: 0, warnings: 0 },
+  { file: 'table.glb', triangles: 6480, errors: 0, warnings: 0 },
+  { file: 'vase.glb', triangles: 8448, errors: 0, warnings: 0 }
+]

@@ -1,0 +1,33 @@
+{
+  "base": "78fbae7f519e4c443d5971bb18208e1c4f9de64e",
+  "source": "70746f7269bf4b1ac27e1eed87146532cf413866",
+  "protectedOriginalFiles": 720,
+  "alteredOriginalFiles": [],
+  "newAssetSha256": {
+    "cloth.glb": "e96702b57c4f9fc7a6a8ce6c2dd9ef8be119603fa9f16488ae5efc43a1b3e248",
+    "cup.glb": "6e538c183df3f6e4dffc169127096cf76e1e8e6bac18088367febd9b5e2283ab",
+    "display-set.glb": "bb20b0adc6628b3bfa676d4b688ef03899e10853f26ba7389737070a59038ce3",
+    "flowers.glb": "bcff9da1bfd7150875717e9bcde70ccdf07ceebc51f845bb1df23ed0435b93ce",
+    "table.glb": "42f19873b900e689884d25d47a892b20e40c78c68efe07d754b508b3544c908f",
+    "vase.glb": "ae16caeb26d3cdbe453c67804b550cc875dbac35e4b5e248af40ef26f7e1b7a6"
+  },
+  "R3MaterialsAndEmbeddedImagesUnchanged": true,
+  "preservedTable": {
+    "tableShapeNormalsUV": {
+      "triangles": 6480,
+      "sha256": "82755d850236f3c41095651855c1a16537849533e582d5002d721705476704b1",
+      "unchangedAtMicrometrePrecision": true
+    }
+  },
+  "preservedCeramics": {
+    "cup": {
+      "geometrySha256": "d3511f0abeb9596e5af4da515af993a8d6a2bf5c45ac3533c2f69032d9fa7064",
+      "positionsNormalsIndicesUnchanged": true
+    },
+    "vase": {
+      "geometrySha256": "a3e1c936ba257dfac58885420610232574684bab6d9788abd1b211071206e50a",
+      "positionsNormalsIndicesUnchanged": true
+    }
+  },
+  "targetSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114"
+}

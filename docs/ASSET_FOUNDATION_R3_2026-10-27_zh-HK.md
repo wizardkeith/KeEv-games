@@ -1,5 +1,7 @@
 # 部件 R3 — 花頭／亞麻／自然木面候選，畫風未接受
 
+> 歷史R3，獨立STYLE門檻FAIL：主要阻塞仍是花冠與布輪廓。[R4形狀候選](ASSET_FOUNDATION_R4_2026-10-27_zh-HK.md)保留本輪材質，釋放枝葉／花冠與布的大形；本頁原圖及來源保留。
+
 來源：`c912b62242b9a113ec6c77f3bc0a2cf12a9f1ce4`。仍只改同五個部件；R2桌形／承托、花簇位置、布的大折面及真接觸保留。**R3只交固定候選，未判畫風PASS，不以材質數、拓撲或技術檢查代替原圖接受。**
 
 ![唯一原圖左店景／R3材質／同光灰模，各店景480px高](reviews/evidence/asset-foundation-v1-r3/target-material-gray-shop480.png)

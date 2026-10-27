@@ -1,0 +1,127 @@
+{
+  "sourceCommit": "70746f7269bf4b1ac27e1eed87146532cf413866",
+  "priorR3Source": "c912b62242b9a113ec6c77f3bc0a2cf12a9f1ce4",
+  "baseApplication": "78fbae7f519e4c443d5971bb18208e1c4f9de64e",
+  "visualStatus": "Fixed R4 shape candidate; no STYLE acceptance claimed.",
+  "scope": "Only flower branches/leaves/crown and cloth silhouette released; no wood/weave material polish.",
+  "changes": [
+    "Lower thinner arching branches and smaller outward leaves; interleaved white crown bands,25-head main and5/5 unequal wings,35 heads/175 petals unchanged",
+    "20degree diagonally laid.60x1.30m sheet, localized supported gathering, diagonal tension and unequal relaxed free hem;2mm body retained"
+  ],
+  "shapeComparison": {
+    "R3WhiteCrown": {
+      "width": 0.2617056593298912,
+      "height": 0.13759678602218628,
+      "depth": 0.17138054221868515,
+      "minY": 1.4080770015716553,
+      "maxY": 1.5456737875938416
+    },
+    "R4WhiteCrown": {
+      "width": 0.47063136100769043,
+      "height": 0.10130709409713745,
+      "depth": 0.19100813567638397,
+      "minY": 1.2818332314491272,
+      "maxY": 1.3831403255462646
+    },
+    "R3Cloth": {
+      "width": 0.5702158473432064,
+      "height": 0.4258905053138733,
+      "depth": 1.0144992768764496,
+      "minY": 0.49014216661453247,
+      "maxY": 0.9160326719284058
+    },
+    "R4Cloth": {
+      "width": 1.020760953426361,
+      "height": 0.5071471035480499,
+      "depth": 1.0319375395774841,
+      "minY": 0.4575991928577423,
+      "maxY": 0.9647462964057922
+    }
+  },
+  "R3MaterialsAndEmbeddedImagesUnchanged": true,
+  "loadedAssetSha256": "bb20b0adc6628b3bfa676d4b688ef03899e10853f26ba7389737070a59038ce3",
+  "loadedAssetsMatchSource": true,
+  "grayMaterialLightingMatched": true,
+  "R3R4LightingAndNormalCameraMatched": true,
+  "lifecycle": {
+    "buy3": true,
+    "cashBefore": 5000,
+    "cashAfter": 4790,
+    "stock": 3,
+    "shelf": 0,
+    "reloadEqual": true,
+    "lowHighRetained": true,
+    "normalUnchanged": true
+  },
+  "pageErrors": [],
+  "contact": {
+    "feet": 0,
+    "cupBottom": 0.904999990016222,
+    "vaseBottom": 0.9049999639391899,
+    "tableTop": 0.9050000123679638,
+    "cupGap": -2.2351741790771484e-8,
+    "vaseGap": -4.842877388000488e-8
+  },
+  "clothSupport": {
+    "minimumClearanceMetres": 0.001374109492092988,
+    "sampledTrianglePoints": 52640,
+    "method": "All actual GLB cloth triangle vertices, three edge midpoints and centroid against three authored11mm rounded tabletop solids"
+  },
+  "vaseNeckVertices": {
+    "maxRadius": 0.017323695342363516,
+    "samples": 224
+  },
+  "preservedTable": {
+    "tableShapeNormalsUV": {
+      "triangles": 6480,
+      "sha256": "82755d850236f3c41095651855c1a16537849533e582d5002d721705476704b1",
+      "unchangedAtMicrometrePrecision": true
+    }
+  },
+  "preservedCeramics": {
+    "cup": {
+      "geometrySha256": "d3511f0abeb9596e5af4da515af993a8d6a2bf5c45ac3533c2f69032d9fa7064",
+      "positionsNormalsIndicesUnchanged": true
+    },
+    "vase": {
+      "geometrySha256": "a3e1c936ba257dfac58885420610232574684bab6d9788abd1b211071206e50a",
+      "positionsNormalsIndicesUnchanged": true
+    }
+  },
+  "budget": {
+    "flowerTriangles": 33124,
+    "setTriangles": 62120,
+    "heads": 35,
+    "petals": 175,
+    "addedTriangles": 0,
+    "reducedTriangles": 1472
+  },
+  "checks": {
+    "tests": 302,
+    "build": true,
+    "contentValidate": true,
+    "replay": true,
+    "legacyAssetCheck": true,
+    "blenderRebuild": true,
+    "newGLBFiles": 6,
+    "newGLBErrors": 0,
+    "newGLBWarnings": 0,
+    "fixtureStrictTypes": true,
+    "protectedOriginalFiles": 720
+  },
+  "library": {
+    "image": "material-normal-game.png",
+    "version": 5,
+    "nativeImageSaved": true
+  },
+  "limitations": [
+    "White crown is wider/lower, but separate blossoms and exposed branch lines remain visible; not yet the target soft continuous crown",
+    "Cloth silhouette changed clearly, but gathering/turns may read too stiff or geometric",
+    "No clipping or geometric bound metric constitutes STYLE acceptance",
+    "Flower33124tri still needs LOD before replication",
+    "Cloth support is sampled, not full collision proof",
+    "Blender buffer ordering may vary; byte-identical re-export not claimed",
+    "Static SwiftShader only; no physical GPU/FPS/motion/audio/native certification"
+  ],
+  "pr": "Stopped; no retry or alternate route; no main/PR8/publication/player Normal changes"
+}
