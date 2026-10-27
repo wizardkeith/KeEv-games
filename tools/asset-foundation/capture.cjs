@@ -1,6 +1,6 @@
 const {chromium}=require('/opt/codex/cua_node/lib/node_modules/playwright');
 const fs=require('fs'),assert=require('node:assert/strict');
-const out=process.env.QA_OUTPUT||'docs/reviews/evidence/asset-foundation-v1-r3';fs.mkdirSync(out,{recursive:true});
+const out=process.env.QA_OUTPUT||'docs/reviews/evidence/asset-foundation-v1-r4';fs.mkdirSync(out,{recursive:true});
 async function save(p,mode){return p.evaluate(mode=>new Promise(resolve=>{const r=indexedDB.open('next-stop-little-shop-w1');r.onsuccess=()=>{const d=r.result,q=d.transaction('saves','readonly').objectStore('saves').get('shop.w1.'+mode);q.onsuccess=()=>{resolve(q.result);d.close()}}}),mode)}
 (async()=>{const b=await chromium.launch({executablePath:'/usr/bin/chromium',headless:true,args:['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']});const report={screenshots:[],errors:[],limitations:['Chromium SwiftShader cloud render, no physical GPU/FPS/native acceptance','Prototype decoration does not represent player inventory']};try{
  for(const mode of ['material','gray']){

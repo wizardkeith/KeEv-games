@@ -1,11 +1,11 @@
 # Component foundation v1
 
-Revision3 remains within the same set after R2 failed the style gate. It keeps
-table proportions/construction/UVs, all stem/leaf placements and broad cloth
-folds/contact, while varying rounded flower-head size/opening/orientation,
-adding restrained actual linen response and replacing periodic veneer stripes
-with broad irregular board grain/surface variation. No whole-shop expansion,
-character import or draft-PR retry.
+Revision4 releases the previous flower branch/leaf/crown and cloth-strip
+freezes. It reshapes those two foundations together: a lower wider layered
+white crown, and a diagonally laid sheet with localized gathering and unequal
+relaxed hem. All R3 materials and embedded image bytes, table shape/UVs,
+ceramics and contact fixes remain. No wood/weave micro-polish, whole-shop
+expansion, character import or draft-PR retry.
 
 This is a separate asset-authoring stage based on application
 `78fbae7f519e4c443d5971bb18208e1c4f9de64e`. It does not adopt C50 or change
@@ -48,7 +48,7 @@ beta/radius/target. This explicit authoring camera adjustment is recorded;
 normal screenshots use the untouched application camera. The helper buys three existing mugs on a side display,
 checks the ledger, reloads Sandbox, switches Low→High and confirms its isolated
 Normal baseline was unchanged. It does not access a player's profile. Outputs default to
-`docs/reviews/evidence/asset-foundation-v1-r3`; the original v1/R2 evidence remains
+`docs/reviews/evidence/asset-foundation-v1-r4`; the original v1/R2/R3 evidence remains
 unchanged. `QA_OUTPUT` can select another evidence directory.
 `python3 tools/asset-foundation/compare.py` builds the labelled480px comparison
 only after raw captures exist.
@@ -97,10 +97,10 @@ clearance in the final candidate. This is not a full arbitrary-mesh collision
 certification. Interim source08db124 and its raw views remain recorded in
 `docs/reviews/evidence/asset-foundation-v1-r2-interim`.
 
-R3 keeps35 heads/175 petals and the same20/10/5 cluster centres. Five size and
+Historical R3 kept35 heads/175 petals and the same20/10/5 cluster centres. Five size and
 opening variants use rounded elliptic petal shoulders/caps with unequal cups
 and orientations, rather than adding heads. R2 table position/normal/UV and
-stem/leaf geometry are checked canonically through node transforms at1µm
+the then-frozen stem/leaf geometry were checked canonically through node transforms at1µm
 precision; ceramic position/normal/index streams remain exact.
 
 Linen uses512px real albedo, roughness and restrained tangent-normal maps on
@@ -115,3 +115,25 @@ plus broad anisotropic variation, not a periodic sine barcode. Resolution stays
 512px; end-grain mapping and construction remain R2. Character reference handoff
 is recorded separately in docs/MISAKI_NEXT_STAGE_REFERENCE_HANDOFF_2026-10-27.md;
 this checkpoint does not consume or model from that pack.
+
+R4 retains35 heads/175 petals/33,124 flower triangles but releases all flower
+placements except the base in the existing vase. Short lower curved supports
+and smaller outward leaves carry interleaved depth/height bands. Twenty-five
+heads form the main crown, five each form the unequal outer wings. Existing
+head variation is retained with a1.15 silhouette scale and broader/deeper
+rounded corollas; no petals or triangles are added. The GLB neck-radius check
+keeps actual stem vertices inside the retained vase opening.
+
+Cloth is an unstrained.60×1.30m rectangular sheet laid20degrees diagonally.
+Each material column reaches the real rounded tabletop edge at a different
+location, producing an unequal free hem; localized nonperiodic gathering
+and diagonal tension replace the former strip. Physical18cm weave UVs and
+2mm thickness remain. The sampled support gate now explicitly retains at
+least1mm clearance; it remains a sampled check, not full collision proof.
+
+The current preservation contract keeps table geometry/normals/UVs (the old
+stem/leaf freeze is intentionally removed), exact ceramic streams, and all
+12 R3 material definitions plus actual embedded texture bytes. It records
+actual white-crown and cloth bounds versus R3 as geometry evidence only, not
+style acceptance. Untextured flower export copies drop unused UV layers so
+Blender does not attempt an unnecessary tangent basis; cloth tangents remain.

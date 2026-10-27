@@ -170,27 +170,31 @@ lathe('Celadon vase • hollow wheel profile',[(0,.004),(.058,.004),(.078,.011),
 components['vase']=current
 
 current=[]
-# Same seven stems /35 existing heads /175 petals, recomposed into20/10/5
-# overlapping high/main, lower-front and lower-side clusters. No added topology.
-clusters=[{'center':Vector((-.025,.035,.600)),'r':(.073,.044),'stems':range(4),'count':20},
- {'center':Vector((.060,-.035,.555)),'r':(.054,.039),'stems':range(4,6),'count':10},
- {'center':Vector((-.097,.055,.535)),'r':(.041,.029),'stems':range(6,7),'count':5}]
+# Seven low arching supports carry a broad, layered crown. Same35 heads and
+# same175 petals; branches/leaves are released with the crown, not held tall.
+stem_crowns=[(-.205,.020,.385),(-.130,-.015,.410),(-.065,.045,.425),(-.015,0,.415),
+             (.020,.055,.420),(.080,-.030,.395),(.190,.015,.370)]
+head_band_x=[-.014,.020,-.025,.010,.025]
+head_band_y=[-.065,.065,-.015,.035,-.045]
+head_band_z=[.368,.430,.405,.390,.415]
 for s in range(7):
- cluster=next(c for c in clusters if s in c['stems']);center=cluster['center'];group_index=s-cluster['stems'].start
- end=center+Vector((.014*math.sin(s*2.1),.011*math.cos(s*1.3),-.030))
- root_xy=Vector((.006*math.sin(s*1.7),.006*math.cos(s*1.9),0))
- def main_at(t):
-  return Vector((root_xy.x*(1-t)+end.x*t**1.25+.009*math.sin(math.pi*t)*math.sin(s),root_xy.y*(1-t)+end.y*t**1.2+.009*math.sin(math.pi*t)*math.cos(s),.21+(end.z-.21)*t))
- main=[main_at(i/16)for i in range(17)];tube('Arching main stem '+str(s),main,.0026,stemmat)
+ center=Vector(stem_crowns[s]);end=center+Vector((0,0,-.016))
+ root=Vector((.006*math.sin(s*1.7),.006*math.cos(s*1.9),.21))
+ c1=Vector((root.x+.002*math.sin(s),root.y+.002*math.cos(s),.295))
+ c2=Vector((end.x*.72,end.y*.72,end.z-.018))
+ def main_at(t):return root*(1-t)**3+c1*3*(1-t)**2*t+c2*3*(1-t)*t*t+end*t**3
+ main=[main_at(i/16)for i in range(17)];tube('Low arching crown support '+str(s),main,.0018,stemmat)
  for k in range(5):
-  n=group_index*5+k;angle=n*2.399+.4;radius=math.sqrt((n+.35)/cluster['count'])
-  tip=center+Vector((cluster['r'][0]*radius*math.cos(angle),cluster['r'][1]*radius*math.sin(angle),.027*math.sin(n*1.71)+.008*math.cos(n*.73)))
-  # Attach high on the parent stem, shortening exposed spans beneath the crown.
-  t=.80+k*.04;root=main_at(t)
-  pts=[root.lerp(tip,u)+Vector((0,0,.012*math.sin(math.pi*u)))for u in [i/8 for i in range(9)]]
-  tube('Connected flower branch',pts,.00135,stemmat,6)
+  # Interleaved front/back/height bands bridge the seven supports instead of
+  # hiding five coincident heads at each tip or making seven separate tufts.
+  x=center.x+head_band_x[k]+.006*math.sin(s*1.7+k)
+  dome=.025*math.sqrt(max(0,1-(x/.25)**2))
+  tip=Vector((x,head_band_y[k]+center.y*.2,head_band_z[k]+dome+.007*math.sin(s*1.9+k)))
+  branch_root=main_at(.69+k*.06)
+  pts=[branch_root.lerp(tip,u)+Vector((0,0,.008*math.sin(math.pi*u)))for u in [i/8 for i in range(9)]]
+  tube('Connected short crown branch',pts,.00095,stemmat,6)
   head_index=s*5+k;kind=(head_index*7+head_index//5)%5
-  head_scale=[1.25,1.10,.95,1.20,.82][kind];opening=[1.0,.82,.92,.70,.50][kind]
+  head_scale=1.15*[1.25,1.10,.95,1.20,.82][kind];opening=[1.0,.82,.92,.70,.50][kind]
   tilt=[.12,.48,-.28,.40,-.52][kind]
   rotation=Vector((tilt+.14*math.sin(head_index*1.2),.40*math.cos(head_index*1.7),1)).normalized().to_track_quat('Z','Y')@Quaternion(Vector((0,0,1)),head_index*.73)
   # Same five petals and topology. Elliptic shoulder/cap, unequal opening and
@@ -199,61 +203,71 @@ for s in range(7):
    a=j*math.tau/5+.08*math.sin(head_index*1.3+j);vs=[];fs=[]
    for row in range(7):
     u=row/6;lengthwise=(1-math.cos(math.pi*u))*.5
-    w=.0092*head_scale*math.sin(math.pi*u)**.85*(.48+.52*opening)*(1+.09*math.sin(j*2.7+head_index))
+    w=.0108*head_scale*math.sin(math.pi*u)**.85*(.48+.52*opening)*(1+.09*math.sin(j*2.7+head_index))
     for col in range(5):
      v=(col/4-.5)*2;along=head_scale*(.0015+.017*lengthwise*opening);side=w*v
-     lift=head_scale*((.002+.014*(1-opening))*lengthwise**1.4+.0025*v*v*math.sin(math.pi*u)+.0012*math.sin(head_index+j)*lengthwise)
+     lift=head_scale*((.006+.012*(1-opening))*lengthwise**1.4+.0025*v*v*math.sin(math.pi*u)+.0012*math.sin(head_index+j)*lengthwise)
      vs.append(tip+rotation@Vector((along*math.cos(a)-side*math.sin(a),along*math.sin(a)+side*math.cos(a),lift)))
    for row in range(6):
     for col in range(4):index=row*5+col;fs.append((index,index+1,index+6,index+5))
    o=mesh('Rounded unequal ivory petal',vs,fs,petalmat);sol=o.modifiers.new('Petal thickness','SOLIDIFY');sol.thickness=.0007
   bpy.ops.mesh.primitive_uv_sphere_add(segments=8,ring_count=4,radius=.0035*head_scale,location=tip);finish(bpy.context.object,'Pollen heart',heartmat)
  for k in range(2):
-  t=.40+k*.17;p=Vector(main[round(t*16)]);a=s*2.1+k*2;vs=[];fs=[]
+  p=main_at(.60+k*.17);a=math.atan2(end.y,end.x)+(-.65 if k==0 else .78);vs=[];fs=[]
+  length=[.045,.055][k];width=.010+.0015*(s%2)
   for i in range(13):
-   u=i/12;w=.020*math.sin(math.pi*u);q=p+Vector((.085*u*math.cos(a),.085*u*math.sin(a),.025*math.sin(math.pi*u)))
-   for v in [-1,0,1]:vs.append(q+Vector((-math.sin(a)*w*v,math.cos(a)*w*v,-.007*abs(v)*math.sin(math.pi*u))))
+   u=i/12;w=width*math.sin(math.pi*u);q=p+Vector((length*u*math.cos(a),length*u*math.sin(a),.016*math.sin(math.pi*u)-(.022+.008*k)*u*u))
+   for v in [-1,0,1]:vs.append(q+Vector((-math.sin(a)*w*v,math.cos(a)*w*v,-.006*abs(v)*math.sin(math.pi*u))))
   for i in range(12):
-   for j in range(2):n=i*3+j;fs.append((n,n+3,n+4,n+1))
-  o=mesh('Connected lance leaf',vs,fs,green);sol=o.modifiers.new('Leaf body','SOLIDIFY');sol.thickness=.001
+   for j in range(2):index=i*3+j;fs.append((index,index+3,index+4,index+1))
+  o=mesh('Low outward crown leaf',vs,fs,green);sol=o.modifiers.new('Leaf body','SOLIDIFY');sol.thickness=.001
 components['flowers']=current
 
 current=[]
-# Continuous support over the deeper tabletop, then two broad unequal folds
-# and one smaller shoulder; lobes drift sideways/deepen under gravity.
-vs=[];fs=[];nx=32;ny=56
+# A rotated rectangular linen sheet, supported by the tabletop and a rounded
+# front edge. Each material column reaches the edge at a different flat-sheet
+# position; the free hem therefore falls on a real diagonal, not a strip.
+vs=[];fs=[];cloth_uv=[];nx=32;ny=56
+angle=math.radians(20);ca=math.cos(angle);sa=math.sin(angle)
+cx=.20;cy=-.23;sheet_width=.60;back=.62;front=-.68;edge=-.5075;radius=.0135
+pin=.24;arc_length=radius*math.pi/2
+
+def gather_height(x,y):
+ distance=y-edge
+ g1=.045*math.exp(-((x-.20)/.065)**2);g2=.018*math.exp(-((x-.31)/.055)**2)
+ diagonal=.028*math.exp(-((x-(pin-.38*distance))/.070)**2)*math.exp(-((distance-.28)/.30)**2)
+ return (g1+g2)*math.exp(-(distance/.17)**2)+diagonal
+
 for j in range(ny+1):
- t=j/ny;fall=max(0,min(1,(t-.60)/.40));fall=fall*fall*(3-2*fall)
- if t<.60:
-  q=t/.60;y=.42-.9275*q;z=.9065
- elif t<.73:
-  q=(t-.60)/.13;a=q*math.pi/2;y=-.5075-.0125*math.sin(a);z=.894+.0125*math.cos(a)
- else:
-  q=(t-.73)/.27;y=-.520;z=.894-.394*q
+ v=j/ny
  for i in range(nx+1):
-  u=i/nx;x=(u-.5)*.57+.24
-  broad=math.exp(-((u-(.21+.13*fall))/.22)**2)
-  valley=math.exp(-((u-(.57-.10*fall))/.26)**2)
-  shoulder=math.exp(-((u-(.87-.055*fall))/.15)**2)
-  top=.006*broad+.0035*shoulder+.0015*valley
-  if t<.60:dz=top*(.35+.65*t/.60);dy=0
-  else:dz=top*(1-fall)+(.022*broad-.016*valley)*fall;dy=-(.065*broad+.025*(1-valley)+.024*shoulder)*fall
-  hem=(.012*(2*u-1)**2+.009*broad-.006*valley)*fall**4
-  # Small asymmetric pull and free-edge response preserve the broad R2 folds.
-  tension=.0028*math.exp(-((u-(.18+.12*t))/.18)**2)*math.exp(-((t-.50)/.24)**2)
-  x+=.006*fall**2*(1-u)**2
-  dy-=.0045*math.exp(-((u-.17)/.15)**2)*fall**3+.003*math.exp(-((u-.98)/.09)**2)*fall**4
-  hem+=(.006*math.exp(-((u-.08)/.14)**2)-.004*math.exp(-((u-.68)/.23)**2)+.0045*u)*fall**5
-  vs.append((x,y+dy,z+dz+hem+tension))
+  u=i/nx;s=(u-.5)*sheet_width
+  t_edge=(edge-cy-s*sa)/ca;x_edge=cx+s*ca-t_edge*sa
+  compression=-(x_edge-pin)*.14*math.exp(-((x_edge-pin)/.21)**2)
+  edge_lift=gather_height(x_edge+compression,edge)
+  if v<.60:
+   q=v/.60;t=back+(t_edge-back)*q;y=cy+s*sa+t*ca;x=cx+s*ca-t*sa
+   x-=(x-pin)*.14*math.exp(-((x-pin)/.21)**2)*math.exp(-((y-edge)/.15)**2)
+   z=.9075+gather_height(x,y)
+  elif v<.73:
+   q=(v-.60)/.13;a=q*math.pi/2;flat_y=edge-radius*a;t=(flat_y-cy-s*sa)/ca
+   x=cx+s*ca-t*sa+compression;y=edge-(radius+edge_lift)*math.sin(a);z=.894+(radius+edge_lift)*math.cos(a)
+  else:
+   q=(v-.73)/.27;front_y=cy+s*sa+front*ca;hang=edge-front_y-arc_length
+   flat_y=edge-arc_length-q*hang;t=(flat_y-cy-s*sa)/ca
+   x=cx+s*ca-t*sa+compression*math.exp(-2.3*q)+.025*q*q*(u-.5)
+   bulge=.035*q*(1-q)*math.exp(-((u-.62)/.40)**2)
+   curl=.010*q**5*(math.exp(-((u-.07)/.15)**2)+.6*math.exp(-((u-.90)/.18)**2))
+   y=edge-radius-edge_lift*(1-.30*q)-bulge-curl
+   relaxed=q**4*(.020*(2*u-1)**2-.055*math.exp(-((u-.32)/.22)**2)+.025*math.exp(-((u-.85)/.17)**2))
+   z=.894-q*hang+relaxed
+  vs.append((x,y,z));cloth_uv.append(((s+sheet_width/2)/.18,(t-front)/.18))
 for j in range(ny):
- for i in range(nx):n=j*(nx+1)+i;fs.append((n,n+1,n+nx+2,n+nx+1))
-o=mesh('Linen runner • continuous weighted fall',vs,fs,clothmat)
+ for i in range(nx):index=j*(nx+1)+i;fs.append((index,index+1,index+nx+2,index+nx+1))
+o=mesh('Linen sheet • diagonal pull and relaxed unequal hem',vs,fs,clothmat)
 uv=o.data.uv_layers.new(name='Unstrained linen weave')
 for poly in o.data.polygons:
- for li in poly.loop_indices:
-  index=o.data.loops[li].vertex_index;u=(index%(nx+1))/nx;t=(index//(nx+1))/ny
-  length=.9275*(t/.60) if t<.60 else .9275+.0125*math.pi/2*((t-.60)/.13) if t<.73 else .9275+.0125*math.pi/2+.394*((t-.73)/.27)
-  uv.data[li].uv=(u*.57/.18,length/.18)
+ for li in poly.loop_indices:uv.data[li].uv=cloth_uv[o.data.loops[li].vertex_index]
 so=o.modifiers.new('Actual 2 mm linen thickness','SOLIDIFY');so.thickness=.002;so.offset=0
 # The real2mm solidified edge needs no sub-pixel bevel geometry.
 components['cloth']=current
@@ -269,7 +283,10 @@ def export_component(objects,path):
  for key,group in groups.items():
   bpy.ops.object.select_all(action='DESELECT')
   for o in group:o.select_set(True)
-  bpy.context.view_layer.objects.active=group[0];bpy.ops.object.join();o=group[0];o.name=key;o['component']=key;baked.append(o)
+  bpy.context.view_layer.objects.active=group[0];bpy.ops.object.join();o=group[0];o.name=key;o['component']=key
+  if key.endswith('/flowers'):
+   for layer in list(o.data.uv_layers):o.data.uv_layers.remove(layer) # untextured, no tangent basis required
+  baked.append(o)
  bpy.ops.object.select_all(action='DESELECT')
  for o in baked:o.select_set(True)
  bpy.ops.export_scene.gltf(filepath=str(path),export_format='GLB',use_selection=True,export_apply=True,export_extras=True,export_tangents=True)
@@ -296,5 +313,5 @@ for key,offset in [('cup',(.58,-.14,.905)),('vase',(-.35,.08,.905)),('flowers',(
  for o in components[key]:o.location+=Vector(offset)
 export_component([o for group in components.values() for o in group],OUT/'display-set.glb')
 bpy.ops.wm.save_as_mainfile(filepath=str(SRC/'display-set.blend'))
-receipt={'id':'asset-foundation-v1','units':'metres','base':'78fbae7f519e4c443d5971bb18208e1c4f9de64e','originalTargetSha256':'9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114','revision':'r3-floral-linen-natural-wood','contactNormalizationMetres':contact_normalization,'tableTopY':.905,'flowerHeads':35,'petals':175,'flowerClusterHeadCounts':[20,10,5],'headSizeVariants':[1.25,1.10,.95,1.20,.82],'headOpeningVariants':[1.0,.82,.92,.70,.50],'linenBaseLinear':[.66,.64,.59],'components':{k:len(v)for k,v in components.items()},'rebuild':'blender -b -t 2 --python tools/asset-foundation/build.py','limitations':['First component prototype; no art acceptance','Restrained oak grain only; silhouette and medium surfaces first','No character or whole-shop reconstruction']}
+receipt={'id':'asset-foundation-v1','units':'metres','base':'78fbae7f519e4c443d5971bb18208e1c4f9de64e','originalTargetSha256':'9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114','revision':'r4-wide-crown-diagonal-drape','contactNormalizationMetres':contact_normalization,'tableTopY':.905,'flowerHeads':35,'petals':175,'flowerClusterHeadCounts':[25,5,5],'relativeHeadScaleFactor':1.15,'stemCrownCenters':stem_crowns,'clothSheetAngleDegrees':20,'headSizeVariants':[1.25,1.10,.95,1.20,.82],'headOpeningVariants':[1.0,.82,.92,.70,.50],'linenBaseLinear':[.66,.64,.59],'components':{k:len(v)for k,v in components.items()},'rebuild':'blender -b -t 2 --python tools/asset-foundation/build.py','limitations':['First component prototype; no art acceptance','Restrained oak grain only; silhouette and medium surfaces first','No character or whole-shop reconstruction']}
 (SRC/'manifest.json').write_text(json.dumps(receipt,indent=2)+'\n')
