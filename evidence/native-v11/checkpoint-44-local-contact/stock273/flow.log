@@ -1,0 +1,11 @@
+00-empty real stock0; contact target renders1
+01-three real stock3; contact target renders2
+02-eight real stock8; contact target renders3
+03-eight-reload real stock8; contact target renders1
+04-hour1-stock2 real stock2; contact target renders2
+quality-stock2 low actual same-render RTT202 /stock2
+quality-stock2 high actual same-render RTT290 /stock2
+04-hour2-stock0 real stock0; contact target renders4
+quality-stock0 low actual same-render RTT442 /stock0
+quality-stock0 high actual same-render RTT506 /stock0
+05-soldout-reload real stock0; contact target renders1

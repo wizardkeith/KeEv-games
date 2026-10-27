@@ -1,0 +1,225 @@
+{
+  "application": "35301d7b59b42c1875558665d8daf21298c1d4ca",
+  "variants": {
+    "contact": {
+      "build": 273,
+      "flag": "VITE_V11_SCENE_WINDOW=contact"
+    },
+    "broad": {
+      "build": 274,
+      "flag": "VITE_V11_SCENE_WINDOW=occluded"
+    },
+    "ordinaryBuildOnly": {
+      "build": 275,
+      "flag": "VITE_V11_SCENE_WINDOW=control"
+    }
+  },
+  "default": "C40 ordinary lighting. C43 narrow visual FAIL; C44 not adopted. Independently passed RTT fix preserved.",
+  "reference": {
+    "path": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+    "sha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114"
+  },
+  "cameraAndEconomicFieldsEqual": true,
+  "obliquePosesEqual": true,
+  "onlyOpticalControlDifference": {
+    "radiusBefore": 0.7,
+    "radiusAfter": 0.2,
+    "otherAOFieldsCompared": [
+      "defaultAdopted",
+      "engine",
+      "strength",
+      "base",
+      "samples",
+      "epsilon",
+      "geometryRatio",
+      "blurRatio",
+      "bilateralSamples",
+      "bilateralSoften",
+      "bilateralTolerance",
+      "maxZ",
+      "minZAspect",
+      "low",
+      "limits"
+    ],
+    "lightFieldsCompared": [
+      "position",
+      "target",
+      "aperture",
+      "angle",
+      "intensity",
+      "color",
+      "residualKind",
+      "residualDirection",
+      "residualColor",
+      "residualGround",
+      "residualIntensity",
+      "exteriorSunIntensity",
+      "exteriorFillIntensity",
+      "shadowSoftness",
+      "shadowDarkness",
+      "textureSize",
+      "maxLights"
+    ]
+  },
+  "actualContact": {
+    "id": "v11.c44.localized-contact.v1",
+    "defaultAdopted": false,
+    "engine": "Babylon8.32.0 SSAO2",
+    "radius": 0.2,
+    "strength": 1,
+    "base": 0.12,
+    "samples": 16,
+    "epsilon": 0.025,
+    "geometryRatio": 0.5,
+    "blurRatio": 0.5,
+    "bilateralSamples": 8,
+    "bilateralSoften": 0.35,
+    "bilateralTolerance": 0.1,
+    "maxZ": 50,
+    "minZAspect": 0.1,
+    "low": "No added geometry buffer or SSAO passes; existing Low lighting retained",
+    "limits": "Screen-space depth/normal approximation, not complete indirect-light occlusion or GI. Final color multiplication also affects direct/specular response; hidden geometry and screen-edge limitations require actual normal/oblique review. No baked stock shadows or screen-fixed image.",
+    "supported": true,
+    "enabled": true,
+    "quality": "high",
+    "epoch": 1,
+    "geometry": {
+      "size": {
+        "width": 720,
+        "height": 600
+      },
+      "normalsWorldSpace": false,
+      "transparentOccluders": false,
+      "ignoreCameraViewport": true,
+      "textures": [
+        {
+          "name": "gBuffer_Depth",
+          "size": {
+            "width": 720,
+            "height": 600
+          },
+          "ready": true
+        },
+        {
+          "name": "gBuffer_Normal",
+          "size": {
+            "width": 720,
+            "height": 600
+          },
+          "ready": true
+        },
+        {
+          "name": "gBuffer_DepthBuffer",
+          "size": {
+            "width": 720,
+            "height": 600
+          },
+          "ready": true
+        }
+      ]
+    },
+    "pipeline": {
+      "className": "SSAO2RenderingPipeline",
+      "useViewportInCombineStage": false,
+      "supported": true,
+      "radius": 0.2,
+      "strength": 1,
+      "base": 0.12,
+      "samples": 16,
+      "blurSamples": 8
+    }
+  },
+  "actualBroad": {
+    "id": "v11.c43.depth-normal-grounding.v3",
+    "defaultAdopted": false,
+    "engine": "Babylon8.32.0 SSAO2",
+    "radius": 0.7,
+    "strength": 1,
+    "base": 0.12,
+    "samples": 16,
+    "epsilon": 0.025,
+    "geometryRatio": 0.5,
+    "blurRatio": 0.5,
+    "bilateralSamples": 8,
+    "bilateralSoften": 0.35,
+    "bilateralTolerance": 0.1,
+    "maxZ": 50,
+    "minZAspect": 0.1,
+    "low": "No added geometry buffer or SSAO passes; existing Low lighting retained",
+    "limits": "Screen-space depth/normal approximation, not complete indirect-light occlusion or GI. Final color multiplication also affects direct/specular response; hidden geometry and screen-edge limitations require actual normal/oblique review. No baked stock shadows or screen-fixed image.",
+    "supported": true,
+    "enabled": true,
+    "quality": "high",
+    "epoch": 1,
+    "geometry": {
+      "size": {
+        "width": 720,
+        "height": 600
+      },
+      "normalsWorldSpace": false,
+      "transparentOccluders": false,
+      "ignoreCameraViewport": true,
+      "textures": [
+        {
+          "name": "gBuffer_Depth",
+          "size": {
+            "width": 720,
+            "height": 600
+          },
+          "ready": true
+        },
+        {
+          "name": "gBuffer_Normal",
+          "size": {
+            "width": 720,
+            "height": 600
+          },
+          "ready": true
+        },
+        {
+          "name": "gBuffer_DepthBuffer",
+          "size": {
+            "width": 720,
+            "height": 600
+          },
+          "ready": true
+        }
+      ]
+    },
+    "pipeline": {
+      "className": "SSAO2RenderingPipeline",
+      "useViewportInCombineStage": false,
+      "supported": true,
+      "radius": 0.7,
+      "strength": 1,
+      "base": 0.12,
+      "samples": 16,
+      "blurSamples": 8
+    }
+  },
+  "recordings": {
+    "contact": {
+      "seconds": 85.52,
+      "sourceFrames": 27,
+      "medianIntervalSeconds": 3.1782000064849854,
+      "maxIntervalSeconds": 6.652515888214111,
+      "motionCertification": false
+    },
+    "occluded": {
+      "seconds": 67.2,
+      "sourceFrames": 29,
+      "medianIntervalSeconds": 2.4529030323028564,
+      "maxIntervalSeconds": 5.682519912719727,
+      "motionCertification": false
+    }
+  },
+  "media": "Actual1440x1200 Chromium154/ANGLE SwiftShader; matrix only crop/resize/label. Natural actor phases differ; no fake HUD or mockup. Some headless rasters omit HUD despite visible DOM, not Zen.",
+  "limits": "SSAO final-color multiplication, not GI/indirect-only. No supported-WebGL GPU resource-release/fence/completed-frame certification from CPU state or unsupported NullEngine toggles; sparse clips not continuous-motion acceptance.",
+  "stockUncutSeconds": 293.4,
+  "stockSourceFrames": {
+    "count": 177,
+    "medianIntervalSeconds": 1.8188610076904297,
+    "maxIntervalSeconds": 7.159203052520752,
+    "motionCertification": false
+  }
+}
