@@ -1,6 +1,14 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-28T00:05:55+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-28T00:09:10+08:00** (Asia/Hong_Kong).
+
+## R6安全暫停／待本機Unity與Blender能力核對，尚未移交唯一寫入權 — 2026-10-28T00:09:10+08:00
+
+- 使用者改要求核對其本機Codex能否使用已安裝Unity與Blender；本作者停止新迭代，不啟動R7、Unity移植、PR／merge或公開。這個`/workspace/KeEv-games`是本委派執行環境，不能當作使用者電腦已可操作的證據。
+- R6美術source `9e62928511d0da45012c05d3197e0bc5d04bc309`及完整證據head `4c7a540ac85b2c42b47abb1b968455ab87675a5e`已normalpush/readback；暫停記錄前本機HEAD與遠端隔離分支完全相同、工作樹乾淨，沒有未提交資產或未推R6。此handoff只改本進度文件，R6 `.blend`／GLB／控制碼／實拍及Library version5不變，身份／畫風仍未接受。
+- 無運行中的Blender建模或Misaki capture；已停止本作者的`127.0.0.1:4199` Vite預覽及其wrapper。保留全部檔案／提交，不discard或清理參考／證據。記錄提交後本作者不再寫資產或啟動capture，避免與後續本機作者並行。
+- 唯一資產寫入權尚未移交。下一步由父工作緒先核對真正本機的repo／分支／乾淨狀態、Unity／Blender實際路徑與可執行能力，再明確選定單一writer及版本基線；這不是已完成本機能力驗證或引擎遷移。
+- main仍`db21f3cb4f57b254c3dcfd99c2737411ba4301b8`、PR8仍`78fbae7f519e4c443d5971bb18208e1c4f9de64e`，未寫。既有PR建立拒絕及PlanB兩次失敗後的retry停止保持；無merge／Site公開／payments／玩家Normal變更。此次只核對狀態／暫停，不重跑歷史美術或測試。
 
 ## Misaki R6只重排兩前髮主次掃形／其餘五髮面凍結 — 2026-10-28T00:05:55+08:00
 
