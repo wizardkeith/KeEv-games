@@ -1,0 +1,25 @@
+import {Engine} from '@babylonjs/core/Engines/engine';
+import {Scene} from '@babylonjs/core/scene';
+import {ArcRotateCamera} from '@babylonjs/core/Cameras/arcRotateCamera';
+import {Vector3} from '@babylonjs/core/Maths/math.vector';
+import {Color3,Color4} from '@babylonjs/core/Maths/math.color';
+import {HemisphericLight} from '@babylonjs/core/Lights/hemisphericLight';
+import {DirectionalLight} from '@babylonjs/core/Lights/directionalLight';
+import {ShadowGenerator} from '@babylonjs/core/Lights/Shadows/shadowGenerator';
+import {MeshBuilder} from '@babylonjs/core/Meshes/meshBuilder';
+import {PBRMaterial} from '@babylonjs/core/Materials/PBR/pbrMaterial';
+import {SceneLoader} from '@babylonjs/core/Loading/sceneLoader';
+import '@babylonjs/loaders/glTF';
+import '@babylonjs/core/Lights/Shadows/shadowGeneratorSceneComponent';
+import '@babylonjs/core/Rendering/depthRendererSceneComponent';
+const canvas=document.querySelector<HTMLCanvasElement>('canvas')!,engine=new Engine(canvas,true,{preserveDrawingBuffer:true}),scene=new Scene(engine);scene.useRightHandedSystem=true;scene.clearColor=new Color4(.81,.81,.81,1);
+const camera=new ArcRotateCamera('Fixed studio',-Math.PI/4,1.03,3.2,new Vector3(0,.73,0),scene);camera.attachControl(canvas,true);
+const fill=new HemisphericLight('Fixed neutral fill',new Vector3(0,1,0),scene);fill.intensity=.65;fill.groundColor=new Color3(.32,.32,.32);
+const key=new DirectionalLight('Fixed neutral key',new Vector3(.6,-1,.4),scene);key.position=new Vector3(-3,5,-3);key.intensity=2.1;
+const shadow=new ShadowGenerator(2048,key);shadow.usePercentageCloserFiltering=true;shadow.bias=.0003;shadow.normalBias=.008;
+const ground=MeshBuilder.CreateGround('Studio floor',{width:200,height:200},scene);const gm=new PBRMaterial('Neutral matte floor',scene);gm.albedoColor=new Color3(.56,.56,.56);gm.roughness=1;ground.material=gm;ground.receiveShadows=true;ground.position.y=-.001;
+const imported=await SceneLoader.ImportMeshAsync(null,'/assets/asset-foundation-v1/','display-set.glb',scene);imported.meshes[0].rotation.y=Math.PI;
+const gray=new PBRMaterial('Neutral gray',scene);gray.albedoColor=Color3.FromHexString('#BEBEBE').toLinearSpace();gray.roughness=.78;
+const neutral=new URLSearchParams(location.search).has('gray');
+for(const m of imported.meshes){shadow.addShadowCaster(m);m.receiveShadows=true;if(neutral&&m.getTotalVertices())m.material=gray;}
+await scene.whenReadyAsync();engine.runRenderLoop(()=>scene.render());window.addEventListener('resize',()=>engine.resize());Object.assign(window,{foundationStudio:{ready:true,gray:neutral,lights:{fill:.65,key:2.1},camera:{alpha:camera.alpha,beta:camera.beta,radius:camera.radius,target:camera.target.asArray()}}});

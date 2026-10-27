@@ -1,0 +1,19 @@
+{
+  "id": "asset-foundation-v1",
+  "units": "metres",
+  "base": "78fbae7f519e4c443d5971bb18208e1c4f9de64e",
+  "originalTargetSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+  "components": {
+    "table": 24,
+    "cup": 2,
+    "vase": 1,
+    "flowers": 266,
+    "cloth": 1
+  },
+  "rebuild": "blender -b -t 2 --python tools/asset-foundation/build.py",
+  "limitations": [
+    "First component prototype; no art acceptance",
+    "Restrained oak grain only; silhouette and medium surfaces first",
+    "No character or whole-shop reconstruction"
+  ]
+}
