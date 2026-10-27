@@ -1,3 +1,4 @@
+import{windowReachHierarchy}from'./art/scene-window-reach-v11';
 import{daylightHierarchy}from'./art/scene-daylight-intent-v11';
 import{adoptedContactHierarchy,adoptedContactIntent,contactDevelopmentAdoption}from'./art/scene-contact-adoption-v11';
 import{occludedHierarchy}from'./art/scene-occlusion-intent-v11';
@@ -139,8 +140,8 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo
  const faceFill=new HemisphericLight('soft local face fill',Vector3.FromArray([...nativeLighting.faceFill.direction]),scene);faceFill.intensity=nativeLighting.faceFill.intensity;faceFill.diffuse=Color3.FromArray(linearColor(nativeLighting.faceFill.color));faceFill.groundColor=Color3.FromArray(linearColor(nativeLighting.faceFill.ground));faceFill.includedOnlyMeshes=scene.meshes.filter(m=>nativeLighting.faceFill.parts.some(p=>m.name.includes('.'+p+'.material'))&&nativeLighting.faceFill.roles.includes(m.metadata?.materialRole));
  const practicalLights=nativeLighting.practicals.map(spec=>{const light=new SpotLight('native.practical.'+spec.id,Vector3.FromArray([...spec.position]),Vector3.FromArray([...spec.direction]).normalize(),spec.angle,2,scene);light.diffuse=Color3.FromArray(linearColor(spec.color));light.intensityMode=Light.INTENSITYMODE_LUMINOUSINTENSITY;light.intensity=spec.intensity;light.range=5;light.excludedMeshes=outsideMeshes;return light;});
  tableContact=tableContactLighting?installTableContact(scene,practicalLights[1]):undefined;
- const sceneWindow=sceneWindowMode!=='control'?installWindowHierarchy(scene,sun,shadow,outsideMeshes,sceneWindowMode==='daylight'?daylightHierarchy:sceneWindowMode==='contact'?adoptedContactHierarchy:sceneWindowMode==='occluded'?occludedHierarchy:sceneWindowMode==='balanced'?balancedHierarchy:windowHierarchy):undefined;
- const sceneOcclusion=(sceneWindowMode==='occluded'||sceneWindowMode==='contact'||sceneWindowMode==='daylight')?(await import('./art/scene-occlusion-v11')).installSceneOcclusion(scene,camera,(sceneWindowMode==='contact'||sceneWindowMode==='daylight')?adoptedContactIntent:undefined):undefined;
+ const sceneWindow=sceneWindowMode!=='control'?installWindowHierarchy(scene,sun,shadow,outsideMeshes,sceneWindowMode==='reach'?windowReachHierarchy:sceneWindowMode==='daylight'?daylightHierarchy:sceneWindowMode==='contact'?adoptedContactHierarchy:sceneWindowMode==='occluded'?occludedHierarchy:sceneWindowMode==='balanced'?balancedHierarchy:windowHierarchy):undefined;
+ const sceneOcclusion=(sceneWindowMode==='occluded'||sceneWindowMode==='contact'||sceneWindowMode==='daylight'||sceneWindowMode==='reach')?(await import('./art/scene-occlusion-v11')).installSceneOcclusion(scene,camera,(sceneWindowMode==='contact'||sceneWindowMode==='daylight'||sceneWindowMode==='reach')?adoptedContactIntent:undefined):undefined;
  const parcel=model('discovery.graybox-sample',[
   {shape:'round',size:[.52,.30,.38],at:[0,.15,0],color:'#C8B3D4',radius:.035},
   {shape:'box',size:[.045,.31,.385],at:[0,.15,0],color:'#F6E5C1'},
