@@ -1,0 +1,60 @@
+{
+  "intent": {
+    "id": "v11.c42.broad-warm-balance.v2",
+    "mode": "balanced",
+    "defaultAdopted": false,
+    "position": [
+      -6.8,
+      3.1,
+      0
+    ],
+    "target": [
+      -4.47,
+      1.84,
+      0
+    ],
+    "aperture": {
+      "x": -4.47,
+      "minY": 0.925,
+      "maxY": 2.755,
+      "minZ": -2.055,
+      "maxZ": 2.055,
+      "softEdge": 0.35
+    },
+    "angle": 1.9,
+    "intensity": 120,
+    "color": "#FFF2DC",
+    "residualKind": "hemisphere",
+    "residualDirection": [
+      0,
+      1,
+      0
+    ],
+    "residualColor": "#FFF0D9",
+    "residualGround": "#75624C",
+    "residualIntensity": 0.85,
+    "exteriorSunIntensity": 2.8,
+    "exteriorFillIntensity": 1.25,
+    "shadowSize": 1024,
+    "shadowSoftness": 0.16,
+    "shadowDarkness": 0.32,
+    "textureSize": 128,
+    "maxLights": 6,
+    "limits": "Authoring-only C42 candidate: broad warm indirect baseline, reduced aperture peak, softened transition and lower exterior light contrast. Geometry/material/exposure unchanged; not target acceptance or adoption."
+  },
+  "mask": {
+    "path": "assets/masters/native-v11/lighting-c42/window-aperture.rgba",
+    "sha256": "6f290a38ea9620803d6fee693c77ac85b2273824870aa321676c70959c07a1a2",
+    "format": "RGBA8 linear128x128 original scalar aperture, alpha255"
+  },
+  "sources": {
+    "src/art/scene-light-balance-v11.ts": "49e12ae2f32a181f28decb67da201d56ea97389d00f6d4d8b05fa9cf897bf53a",
+    "src/art/scene-window-light-v11.ts": "76629c29a74fb597c9640ce6f4958c2e0241d9f00acf1671b1ce2514185683f9",
+    "src/art/shadow-pass-audit-v11.ts": "09d4ba2a4c4830169fca54a7c5a24925774997e37b994f99bdd14c873b39f377",
+    "src/world.ts": "c749658e596957d27b8986313330fda0d03b8aee2e3f0b3b93b0eac64898d0f3",
+    "vite.config.ts": "32e1b75e9010ce9ecfe851f5236e64f5b8281e818c490658f313f9f0abcf6c56",
+    "tools/export-v11-scene-balance.ts": "073b6e7021cda1c9c31d5a0937d38ec7024ff5068b541c497092583769bf834e"
+  },
+  "baseline": "C40 accepted ordinary default; C41 rejected and OFF",
+  "limits": "Authoring candidate only; indirect-light proxy, not full GI/physical calibration or original-target acceptance. Draw telemetry is same-render-ID CPU dispatch evidence, not GPU completion."
+}
