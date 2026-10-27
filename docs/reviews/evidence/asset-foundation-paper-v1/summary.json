@@ -1,0 +1,46 @@
+{
+  "source": "c16461fab229b4054575bcee5b956c339bfaf94f",
+  "R4Source": "70746f7269bf4b1ac27e1eed87146532cf413866",
+  "referenceSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+  "newTriangles": 3096,
+  "reusedTableTriangles": 6480,
+  "R4BaselineTriangles": 62120,
+  "previewPrototypeTriangles": 71696,
+  "frozenR4Files": 21,
+  "protectedOriginalApplicationFiles": 720,
+  "GLBsValidated": 6,
+  "errors": 0,
+  "warnings": 0,
+  "cameraMatched": true,
+  "lightingMatched": true,
+  "materialLoadedSha256": "0736989bcce2eec5dc196788ff2b68c4adefb0852cfe1033d24676eca94134b6",
+  "grayLoadedSha256": "0736989bcce2eec5dc196788ff2b68c4adefb0852cfe1033d24676eca94134b6",
+  "tests": {
+    "pass": 302,
+    "fail": 0
+  },
+  "lifecycle": {
+    "buy3": true,
+    "cashBefore": 5000,
+    "cashAfter": 4790,
+    "stock": 3,
+    "shelf": 2,
+    "reloadEqual": true,
+    "lowHighRetained": true,
+    "normalUnchanged": true
+  },
+  "pageErrors": [],
+  "contacts": {
+    "riserBase": 0,
+    "trayBase": 0,
+    "bookToRiser": -6.752088665962219e-09,
+    "cardToRiser": 8.025381248444319e-09,
+    "paperToTrayFloor": 1.0430812810713341e-10
+  },
+  "style": "R4 independent main-shape PASS; new paper set first candidate pending independent review; overall target style unaccepted",
+  "limitations": [
+    "Cloud Chromium SwiftShader static evidence, not physical GPU/FPS/audio/native certification",
+    "Decorative authoring fixture only; new stock slot-height adoption is outside this checkpoint",
+    "AABB support/contact checks are not full collision certification; no bulk replication or LOD claim"
+  ]
+}

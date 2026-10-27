@@ -1,5 +1,7 @@
 # 部件 R4 — 低寬花冠／斜向聚褶布，固定形狀候選
 
+後續獨立覆核：**R4 MAIN-SHAPE gate PASS**，花冠及布形凍結；這不是整體畫風接受。下方保留當時交審紀錄，後續新增範圍見[木層架／紙本基礎v1](ASSET_FOUNDATION_PAPER_V1_2026-10-27_zh-HK.md)，未重做R4。
+
 來源：`70746f7269bf4b1ac27e1eed87146532cf413866`。R3獨立STYLE門檻仍FAIL，本輪只重做**花枝葉連花冠**與**布的整體輪廓**，不再磨木紋／織紋。R3所有實際材質與嵌入圖頁、木桌形體／承托／UV、陶瓷形材及接觸修正保留。**R4未判畫風PASS，交固定候選獨立看形。**
 
 ![唯一原圖／R3 STYLE FAIL／R4形狀候選；店景各480px高](reviews/evidence/asset-foundation-v1-r4/target-r3-r4-normal480.png)

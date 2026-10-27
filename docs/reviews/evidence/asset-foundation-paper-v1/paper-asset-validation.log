@@ -1,0 +1,24 @@
+[
+  { file: 'book-stack.glb', triangles: 1224, errors: 0, warnings: 0 },
+  { file: 'folded-card.glb', triangles: 36, errors: 0, warnings: 0 },
+  {
+    file: 'paper-display-set.glb',
+    triangles: 3096,
+    errors: 0,
+    warnings: 0
+  },
+  { file: 'paper-stack.glb', triangles: 432, errors: 0, warnings: 0 },
+  { file: 'shallow-tray.glb', triangles: 540, errors: 0, warnings: 0 },
+  { file: 'tiered-riser.glb', triangles: 864, errors: 0, warnings: 0 }
+]
+{
+  contacts: {
+    riserBase: 0,
+    trayBase: 0,
+    bookToRiser: -6.752088665962219e-9,
+    cardToRiser: 8.025381248444319e-9,
+    paperToTrayFloor: 1.0430812810713341e-10
+  },
+  newTriangles: 3096,
+  frozenR4Files: 21
+}

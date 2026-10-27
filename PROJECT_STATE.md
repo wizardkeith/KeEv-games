@@ -1,6 +1,14 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T19:45:34+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T20:32:54+08:00** (Asia/Hong_Kong).
+
+## R4主形獨立PASS／木層架紙本v1首候選 — 2026-10-27T20:32:54+08:00
+
+- 只在 `codex/asset-foundation-v1`，新source `c16461fab229b4054575bcee5b956c339bfaf94f`；[原圖／實際正常480px／雙斜角／同光灰模及限制](docs/ASSET_FOUNDATION_PAPER_V1_2026-10-27_zh-HK.md)。R4獨立 **MAIN-SHAPE PASS**，整體畫風仍未接受；全部21個R4資產／作者檔凍結在`70746f7269bf4b1ac27e1eed87146532cf413866`。沒有再調花／布／燈，未擴整店或角色。
+- 新建開放木層架、淺托盤、三本30／13／21mm書疊（實際圓轉binding與封面外伸）、奶油紙塊／三散頁及有厚度摺卡；新3,096tri／5meshes／9materials／14primitives／7重用木圖。再用一張R4桌作獨立測試承托6,480tri，連相鄰R4作者總71,696tri，不bulk複製／不宣稱LOD完成。正常縮圖仍小疏／書紙偏齊／卡空白，首候選待獨立判比例重量，不靠更多微紋理當風格。
+- 六新GLB零error／warning、實際TRS接觸及支承footprint／托盤開口檢查；原application720保護檔逐byte同。302tests／finalbuild／contentvalidate／replay／legacyassetcheck／strict作者TS通過；灰材質燈及camera逐值同，實際載入SHA同source，0pageerror。fresh Sandbox真UI買3杯5000→4790／stock3／原display3槽2上架／reload逐值同／Low→High／隔離Normal不變；新件只作者裝飾，生產槽高整合未做。
+- 新正常實拍Library原生image `libfile_b2eae1dd4f888191863e3d6eac738404` version0，舊R4第5版保留。靜態SwiftShader非physicalGPU／FPS／audio／native或美術接受；bounds支承非完整collisioncert。下一步只獨立看同組正常／斜角的層架高度重量與紙本柔和比例；角色handoff留後。
+- 本entry隨source/evidence只推隔離分支，main仍`db21f3cb4f57b254c3dcfd99c2737411ba4301b8`、PR8仍`78fbae7f519e4c443d5971bb18208e1c4f9de64e`，未寫兩者。PR建立因先前拒絕仍停止，無retry／換route；無merge／Site公開／payments／玩家Normal改動，無其他操作阻塞。
 
 ## 獨立部件R4主形候選／未判風格PASS — 2026-10-27T19:45:34+08:00
 
