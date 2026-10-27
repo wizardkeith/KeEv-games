@@ -110,7 +110,7 @@ for layer in range(2):
  for i in range(hr):
   t=i/(hr-1)
   for j in range(hc):
-   a=j*math.tau/hc;front=max(0,math.cos(a));end=2.29-1.19*front**4+.045*math.sin(a*5+.3)*(1-front)
+   a=j*math.tau/hc;front=max(0,math.cos(a));end=2.72-1.62*front**4+.045*math.sin(a*5+.3)*(1-front)
    theta=.025+(end-.025)*t;spread=math.sin(theta)if theta<1.45 else math.sin(1.45)-.075*(theta-1.45)
    rx=.226-layer*.009;ry=.192-layer*.009;z=1.210+(.232-layer*.009)*math.cos(theta)
    vs.append((math.sin(a)*rx*spread,.023-math.cos(a)*ry*spread,z))
@@ -124,7 +124,7 @@ def lock(name,points,width,depth=.010):
  vs=[];steps=12;cols=8
  for i in range(steps):
   t=i/(steps-1);c=Vector(sample(points,t));ta=Vector(sample(points,min(1,t+.002)))-Vector(sample(points,max(0,t-.002)));ta.normalize();normal=Vector((c.x,c.y-.023,0)).normalized();u=ta.cross(normal).normalized();v=ta.cross(u).normalized()
-  w=width*(.28+.72*math.sin(math.pi*(.08+.87*t))**.55)*(1-.78*t**8)
+  w=width*(.06+.94*math.sin(math.pi*(.005+.98*t))**.55)*(1-.78*t**8)
   for j in range(cols):
    a=j*math.tau/cols;vs.append(c+u*w*math.cos(a)+v*depth*math.sin(a))
  fs=connect(steps,cols);fs.extend([tuple(reversed(range(cols))),tuple((steps-1)*cols+j for j in range(cols))]);mesh(name,vs,fs,hair)
@@ -132,10 +132,10 @@ lock('11 / large swept fringe left',[(.025,-.012,1.438),(-.045,-.140,1.360),(-.1
 lock('12 / large swept fringe right',[(.035,-.016,1.437),(.105,-.142,1.354),(.170,-.153,1.270),(.194,-.108,1.190)],.031,.007)
 lock('13 / inner fringe broad turn',[(.026,-.064,1.412),(.037,-.163,1.330),(.086,-.171,1.279),(.123,-.155,1.252)],.024,.006)
 for side in [-1,1]:
- lock('14 / cheek-side broad curl '+str(side),[(side*.150,-.102,1.315),(side*.204,-.110,1.200),(side*.229,-.080,1.084),(side*.190,-.102,1.027)],.036,.015)
- lock('15 / side-back broad mass '+str(side),[(side*.126,.112,1.354),(side*.211,.118,1.227),(side*.231,.103,1.107),(side*.205,.073,1.034)],.039,.014)
+ lock('14 / cheek-side broad curl '+str(side),[(side*.150,-.102,1.315),(side*.196,-.110,1.200),(side*.212,-.080,1.054),(side*.176,-.102,.948)],.025,.012)
+ lock('15 / side-back broad mass '+str(side),[(side*.126,.112,1.354),(side*.205,.118,1.227),(side*.217,.103,1.077),(side*.191,.073,.959)],.028,.012)
 for k in range(3):
- x=(k-1)*.112;lock('16 / inferred broad back mass '+str(k),[(x*.35,.145,1.354),(x*.80,.202,1.230),(x,.208,1.118),(x+.008*math.sin(k),.176,1.052)],.047,.011)
+ x=(k-1)*.112;lock('16 / inferred broad back mass '+str(k),[(x*.35,.145,1.354),(x*.80,.202,1.230),(x,.208,1.078),(x+.008*math.sin(k),.176,.970)],.039,.009)
 
 # The canonical clip is on her OWN LEFT (+X), never mirrored onto both sides.
 for k,(dx,dz,angle)in enumerate([(0,0,-.6),(.015,.014,.6)]):
