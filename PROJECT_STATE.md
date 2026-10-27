@@ -1,6 +1,10 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T14:24:32+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T14:35:03+08:00** (Asia/Hong_Kong).
+
+## V11 C50入口保留係數修正驗證中 — 2026-10-27T14:35:03+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送application`78fbae7f519e4c443d5971bb18208e1c4f9de64e`。依C49獨立門檻FAIL只改兩處鏡像入口係數 .55→1.0；新增測試逐byte鎖定其餘補光公式，中央／收銀／牆面、key／shadow／specular／曝光／.20AO／素材相機不變。302tests／146GLB／305保護檔／509資產重建同通過。正用保留C49build318與新版本做正常／雙斜角／完整DOM捕圖，入口恢復與無亮圈尚未宣稱通過；普通仍C45，原圖整體未接受，main僅文件指標，無merge／公開版／玩家Normal／Chrome或Unity改動。無需使用者動作阻塞。
 
 ## V11 C49世界空間漫射固定候選／未採用 — 2026-10-27T14:24:32+08:00
 
