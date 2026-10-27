@@ -132,45 +132,10 @@
       "controlQuads": 72,
       "triangles": 152
     },
-    "10 / loose bob connected lobes with ear notches": {
-      "controlVertices": 864,
-      "controlQuads": 864,
-      "triangles": 6912
-    },
-    "11 / off-centre swept broad fringe": {
-      "controlVertices": 96,
-      "controlQuads": 88,
-      "triangles": 736
-    },
-    "12 / shorter parted own-left fringe": {
-      "controlVertices": 96,
-      "controlQuads": 88,
-      "triangles": 736
-    },
-    "13 / inner curved fringe turn": {
-      "controlVertices": 96,
-      "controlQuads": 88,
-      "triangles": 736
-    },
-    "14 / cheek curl with open ear gap -1": {
-      "controlVertices": 96,
-      "controlQuads": 88,
-      "triangles": 736
-    },
-    "15 / rounded side volume turning inward -1": {
-      "controlVertices": 96,
-      "controlQuads": 88,
-      "triangles": 736
-    },
-    "14 / cheek curl with open ear gap 1": {
-      "controlVertices": 96,
-      "controlQuads": 88,
-      "triangles": 736
-    },
-    "15 / rounded side volume turning inward 1": {
-      "controlVertices": 96,
-      "controlQuads": 88,
-      "triangles": 736
+    "10 / continuous side-part swept bob with unequal ends": {
+      "controlVertices": 954,
+      "controlQuads": 945,
+      "triangles": 7998
     },
     "17 / own LEFT clip leaf 0": {
       "controlVertices": 14,
@@ -273,7 +238,7 @@
       "triangles": 832
     }
   },
-  "triangles": 53480,
+  "triangles": 49414,
   "limitations": [
     "Grayform only, not final facial topology, skin weights, animation or art acceptance",
     "Side/back volumes inferred from canonical original; PlanB comparison pending readable access",
@@ -289,7 +254,7 @@
     "own-left-clip",
     "clothed-body"
   ],
-  "revision": "R2 head/neck only",
+  "revision": "R3 head/neck only",
   "headNeckOffset": 0.045,
   "bodyFrozenSource": "038740fbd7f6428cc82d5f442646c2d86a4143e3"
 }

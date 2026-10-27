@@ -1,8 +1,9 @@
 """Read-only evaluated source inspection; run with the saved .blend loaded."""
 import bpy,json
+from mathutils.bvhtree import BVHTree
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
-OUT=ROOT/'docs/reviews/evidence/misaki-grayform-v1-r2';OUT.mkdir(parents=True,exist_ok=True)
+OUT=ROOT/'docs/reviews/evidence/misaki-grayform-v1-r3';OUT.mkdir(parents=True,exist_ok=True)
 deps=bpy.context.evaluated_depsgraph_get();bounds={}
 for o in bpy.data.objects:
  if o.type!='MESH':continue
@@ -28,5 +29,12 @@ e.to_mesh_clear()
 neck=bounds['02 / visible neck bridge'];chin=bounds[face.name]['min'][2]
 body=[b for name,b in bounds.items()if int(name[:2])>=20];bodytop=max(b['max'][2]for b in body)
 assert neck['max'][2]>chin and neck['min'][2]<bodytop,'neck overlaps head and enters frozen collar envelope'
-result={'boundsBlenderZUp':bounds,'evaluatedFaceEyeBoundaryLoops':rings,'neckHeadVerticalOverlap':neck['max'][2]-chin,'chinToFrozenClothesTop':chin-bodytop,'limits':'Vertical/bounds relationships do not prove watertight skin, collisions or art acceptance; side/back inferred.'}
+hair=bpy.data.objects['10 / continuous side-part swept bob with unequal ends'];e=hair.evaluated_get(deps);d=e.to_mesh();tree=BVHTree.FromPolygons([hair.matrix_world@v.co for v in d.vertices],[list(p.vertices)for p in d.polygons]);e.to_mesh_clear();distances=[]
+for o in bpy.data.objects:
+ if not o.name.startswith('17 /'):continue
+ e=o.evaluated_get(deps);d=e.to_mesh()
+ for v in d.vertices:distances.append(tree.find_nearest(o.matrix_world@v.co)[3])
+ e.to_mesh_clear()
+attachment={'sampledEvaluatedClipVertices':len(distances),'minDistance':min(distances),'meanDistance':sum(distances)/len(distances),'maxDistance':max(distances),'limits':'Unsigned sampled vertex-to-hair distance, not collision/attachment certification.'}
+result={'boundsBlenderZUp':bounds,'evaluatedFaceEyeBoundaryLoops':rings,'neckHeadVerticalOverlap':neck['max'][2]-chin,'chinToFrozenClothesTop':chin-bodytop,'clipAttachment':attachment,'limits':'Vertical/bounds relationships do not prove watertight skin, collisions or art acceptance; side/back inferred.'}
 (OUT/'source-inspection.json').write_text(json.dumps(result,indent=2)+'\n');print({k:v for k,v in result.items()if k!='boundsBlenderZUp'})
