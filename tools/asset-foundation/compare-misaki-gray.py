@@ -1,0 +1,24 @@
+"""Raw-pixel crops/proportional scaling only. Pose/projection differs; no tracing.
+Canonical original governs. PlanB was not readable locally in this checkpoint.
+"""
+from pathlib import Path
+from PIL import Image, ImageDraw, ImageFont
+root=Path(__file__).resolve().parents[2]
+out=root/'docs/reviews/evidence/misaki-grayform-v1'
+font=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',16)
+def arrange(name,items,height=480):
+ panels=[]
+ for label,path,box in items:
+  im=Image.open(path).convert('RGB').crop(box);im=im.resize((round(im.width*height/im.height),height),Image.Resampling.LANCZOS);panels.append((label,im))
+ result=Image.new('RGB',(sum(im.width for _,im in panels)+12*(len(panels)+1),height+56),'#f5f1ea');d=ImageDraw.Draw(result);x=12
+ for label,im in panels:d.text((x,12),label,fill='#302b26',font=font);result.paste(im,(x,44));x+=im.width+12
+ result.save(out/name)
+original=root/'docs/codex-v4/reference/Approved_Visual_Target_Misaki.png'
+arrange('original-grayform-proportion480.png',[
+ ('EXACT ORIGINAL / relaxed pose',original,(1206,76,1460,654)),
+ ('ACTUAL GLB / neutral A-pose',out/'grayform-front.png',(100,42,620,850)),
+ ('ACTUAL GLB / 3-quarter',out/'grayform-threequarter.png',(100,42,620,850))])
+arrange('original-game-normal-shop480.png',[
+ ('EXACT ORIGINAL / left shop',original,(0,0,1184,1024)),
+ ('ACTUAL NORMAL / static grayform at front',out/'grayform-game-normal.png',(105,75,1190,800))])
+arrange('grayform-four-views480.png',[(label,out/('grayform-'+view+'.png'),(100,42,620,850))for label,view in [('FRONT / canonical only','front'),('SIDE / inferred','side'),('BACK / inferred','back'),('3-QUARTER / canonical only','threequarter')]])

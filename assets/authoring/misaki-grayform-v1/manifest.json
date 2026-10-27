@@ -1,0 +1,281 @@
+{
+  "id": "misaki-grayform-v1",
+  "reference": "canonical Approved_Visual_Target_Misaki.png only",
+  "referenceSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+  "PlanB": {
+    "library_file_id": "libfile_d1f1a5f43d9c819199f7d57ff7936d6a",
+    "expectedSha256": "4c35ad580dfff13001d4970a7bc2b1be5299c944d127abb0fdd329f7dad6e420",
+    "materialization": "official helper download failed; no local bytes or new views inspected"
+  },
+  "axes": "Blender Z-up / face -Y / own LEFT +X; glTF Y-up / face +Z / own LEFT +X",
+  "pose": "normalized neutral A-pose; hands are coarse masses",
+  "intendedHeight": 1.442,
+  "headChin": 0.998,
+  "hairCrown": 1.442,
+  "headUnits": 3.247747747747748,
+  "jointsBlender": {
+    "neck": [
+      0,
+      0,
+      1.0
+    ],
+    "leftShoulder": [
+      0.162,
+      0,
+      0.966
+    ],
+    "leftElbow": [
+      0.289,
+      -0.005,
+      0.77
+    ],
+    "leftWrist": [
+      0.368,
+      -0.012,
+      0.631
+    ],
+    "rightShoulder": [
+      -0.162,
+      0,
+      0.966
+    ],
+    "rightElbow": [
+      -0.289,
+      -0.005,
+      0.77
+    ],
+    "rightWrist": [
+      -0.368,
+      -0.012,
+      0.631
+    ]
+  },
+  "objects": {
+    "01 / continuous soft face with integrated nose": {
+      "controlVertices": 880,
+      "controlQuads": 840,
+      "triangles": 6880
+    },
+    "02 / short neck": {
+      "controlVertices": 120,
+      "controlQuads": 100,
+      "triangles": 880
+    },
+    "03 / eye volume -1": {
+      "controlVertices": 97,
+      "controlQuads": 72,
+      "triangles": 168
+    },
+    "04 / eyelid rim -1": {
+      "controlVertices": 150,
+      "controlQuads": 144,
+      "triangles": 296
+    },
+    "05 / iris placement -1": {
+      "controlVertices": 25,
+      "controlQuads": 0,
+      "triangles": 24
+    },
+    "06 / brow placement -1": {
+      "controlVertices": 54,
+      "controlQuads": 48,
+      "triangles": 104
+    },
+    "03 / eye volume 1": {
+      "controlVertices": 97,
+      "controlQuads": 72,
+      "triangles": 168
+    },
+    "04 / eyelid rim 1": {
+      "controlVertices": 150,
+      "controlQuads": 144,
+      "triangles": 296
+    },
+    "05 / iris placement 1": {
+      "controlVertices": 25,
+      "controlQuads": 0,
+      "triangles": 24
+    },
+    "06 / brow placement 1": {
+      "controlVertices": 54,
+      "controlQuads": 48,
+      "triangles": 104
+    },
+    "07 / neutral mouth placement": {
+      "controlVertices": 78,
+      "controlQuads": 72,
+      "triangles": 152
+    },
+    "10 / continuous bob mass and face opening": {
+      "controlVertices": 792,
+      "controlQuads": 792,
+      "triangles": 6336
+    },
+    "11 / large swept fringe left": {
+      "controlVertices": 96,
+      "controlQuads": 88,
+      "triangles": 736
+    },
+    "12 / large swept fringe right": {
+      "controlVertices": 96,
+      "controlQuads": 88,
+      "triangles": 736
+    },
+    "13 / inner fringe broad turn": {
+      "controlVertices": 96,
+      "controlQuads": 88,
+      "triangles": 736
+    },
+    "14 / cheek-side broad curl -1": {
+      "controlVertices": 96,
+      "controlQuads": 88,
+      "triangles": 736
+    },
+    "15 / side-back broad mass -1": {
+      "controlVertices": 96,
+      "controlQuads": 88,
+      "triangles": 736
+    },
+    "14 / cheek-side broad curl 1": {
+      "controlVertices": 96,
+      "controlQuads": 88,
+      "triangles": 736
+    },
+    "15 / side-back broad mass 1": {
+      "controlVertices": 96,
+      "controlQuads": 88,
+      "triangles": 736
+    },
+    "16 / inferred broad back mass 0": {
+      "controlVertices": 96,
+      "controlQuads": 88,
+      "triangles": 736
+    },
+    "16 / inferred broad back mass 1": {
+      "controlVertices": 96,
+      "controlQuads": 88,
+      "triangles": 736
+    },
+    "16 / inferred broad back mass 2": {
+      "controlVertices": 96,
+      "controlQuads": 88,
+      "triangles": 736
+    },
+    "17 / own LEFT clip leaf 0": {
+      "controlVertices": 14,
+      "controlQuads": 6,
+      "triangles": 152
+    },
+    "17 / own LEFT clip leaf 1": {
+      "controlVertices": 14,
+      "controlQuads": 6,
+      "triangles": 152
+    },
+    "20 / inner shirt torso": {
+      "controlVertices": 336,
+      "controlQuads": 308,
+      "triangles": 2576
+    },
+    "21 / open cardigan around shoulders and waist": {
+      "controlVertices": 377,
+      "controlQuads": 336,
+      "triangles": 5696
+    },
+    "22 / shaped A-pose sleeve -1": {
+      "controlVertices": 84,
+      "controlQuads": 70,
+      "triangles": 616
+    },
+    "23 / rolled broad cuff -1": {
+      "controlVertices": 42,
+      "controlQuads": 28,
+      "triangles": 280
+    },
+    "24 / continuous forearm wrist and simple hand mass -1": {
+      "controlVertices": 96,
+      "controlQuads": 84,
+      "triangles": 720
+    },
+    "26 / thumb mass only -1": {
+      "controlVertices": 30,
+      "controlQuads": 20,
+      "triangles": 200
+    },
+    "22 / shaped A-pose sleeve 1": {
+      "controlVertices": 84,
+      "controlQuads": 70,
+      "triangles": 616
+    },
+    "23 / rolled broad cuff 1": {
+      "controlVertices": 42,
+      "controlQuads": 28,
+      "triangles": 280
+    },
+    "24 / continuous forearm wrist and simple hand mass 1": {
+      "controlVertices": 96,
+      "controlQuads": 84,
+      "triangles": 720
+    },
+    "26 / thumb mass only 1": {
+      "controlVertices": 30,
+      "controlQuads": 20,
+      "triangles": 200
+    },
+    "30 / broad skirt with unequal turning folds": {
+      "controlVertices": 544,
+      "controlQuads": 512,
+      "triangles": 4224
+    },
+    "31 / continuous apron bib to broad hem": {
+      "controlVertices": 255,
+      "controlQuads": 224,
+      "triangles": 3824
+    },
+    "32 / apron shoulder strap -1": {
+      "controlVertices": 30,
+      "controlQuads": 24,
+      "triangles": 216
+    },
+    "32 / apron shoulder strap 1": {
+      "controlVertices": 30,
+      "controlQuads": 24,
+      "triangles": 216
+    },
+    "40 / sock calf -1": {
+      "controlVertices": 160,
+      "controlQuads": 144,
+      "triangles": 1216
+    },
+    "41 / rounded shoe and sole -1": {
+      "controlVertices": 112,
+      "controlQuads": 96,
+      "triangles": 832
+    },
+    "40 / sock calf 1": {
+      "controlVertices": 160,
+      "controlQuads": 144,
+      "triangles": 1216
+    },
+    "41 / rounded shoe and sole 1": {
+      "controlVertices": 112,
+      "controlQuads": 96,
+      "triangles": 832
+    }
+  },
+  "triangles": 47576,
+  "limitations": [
+    "Grayform only, not final facial topology, skin weights, animation or art acceptance",
+    "Side/back volumes inferred from canonical original; PlanB comparison pending readable access",
+    "Existing gameplay rig/actions/data/saves untouched",
+    "No final materials, textures, fine strands, weave or finger topology",
+    "Back bow omitted rather than claiming an unseen reference"
+  ],
+  "soleNormalization": 0.0006406807224266231,
+  "semanticExportGroups": [
+    "face",
+    "feature-placement",
+    "hair",
+    "own-left-clip",
+    "clothed-body"
+  ]
+}
