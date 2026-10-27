@@ -1,0 +1,14 @@
+{
+  "Babylon": "8.32.0 pinned package-lock",
+  "files": {
+    "node_modules/@babylonjs/core/Shaders/ShadersInclude/shadowsVertex.js": "a697319636fafa38d586614f98436a717c0cb8a8469f756b4fdb9693186b4d9e",
+    "node_modules/@babylonjs/core/Shaders/ShadersInclude/shadowMapVertexMetric.js": "577e247c4ad7906668c49e1c056aec33af2b613090f2cbfeaef3888ff9405b5c",
+    "node_modules/@babylonjs/core/Shaders/ShadersInclude/shadowsFragmentFunctions.js": "1231df5c87c83c86d006e069783b90a33fb94fc8518e2476765c1fb465860965",
+    "node_modules/@babylonjs/core/Materials/PBR/pbrBaseMaterial.js": "286bb7e0922b0e7462db6ce65e52b2649bfae87329f47a52edc287da26bfd332"
+  },
+  "equations": [
+    "receiverDepth=(clip.z+minZ)/(minZ+maxZ)",
+    "hardVisibility=receiverDepth>sampleDepth ? darkness : 1",
+    "IBL material multiplier=material.environmentIntensity*scene.environmentIntensity"
+  ]
+}

@@ -1,0 +1,1741 @@
+{
+  "application": "8091d04ba67256d9f19e69363efeacfa219b8452",
+  "referenceSHA": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+  "reflection192SHA": "ab2ddab4e6f5b7e64370f7ba2fb63497326a4f19b669a5ccb459cfef8e2f3258",
+  "sameCameraAndEconomy": true,
+  "controlledReduceMotion": true,
+  "sceneWindow": "Fixed C47, same exposure/assets/materials/AO/shadow recipe in key/base/composite/balance. Hard/off/2sided are separately labelled diagnostics.",
+  "ordinaryNoFlag": "Actual current no-flag page strictly verified as C45 contact; no authoring controller active.",
+  "cases": [
+    {
+      "case": "key",
+      "energy": {
+        "key": 1,
+        "nonKey": 0,
+        "IBL": 0
+      },
+      "environmentIntensity": 0,
+      "lights": [
+        {
+          "name": "soft cream sky",
+          "enabled": false,
+          "intensity": 0.27
+        },
+        {
+          "name": "static window sunlight",
+          "enabled": false,
+          "intensity": 2.8
+        },
+        {
+          "name": "cool exterior sky",
+          "enabled": false,
+          "intensity": 1.25
+        },
+        {
+          "name": "soft local face fill",
+          "enabled": false,
+          "intensity": 0.43
+        },
+        {
+          "name": "native.practical.cashier",
+          "enabled": false,
+          "intensity": 20
+        },
+        {
+          "name": "native.practical.central",
+          "enabled": false,
+          "intensity": 24
+        },
+        {
+          "name": "v11.c47.window-direction-reach.v2.indoor-sky",
+          "enabled": false,
+          "intensity": 0.85
+        },
+        {
+          "name": "v11.c47.window-direction-reach.v2",
+          "enabled": true,
+          "intensity": 110000
+        }
+      ],
+      "filter": {
+        "filter": 7,
+        "pcss": true,
+        "pcf": false,
+        "enabled": true
+      },
+      "leafRaster": {
+        "renderId": 96,
+        "passId": 8,
+        "rows": [
+          {
+            "name": "native.window.foliage.0.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#C3D1BD:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.925",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.1.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#C3D1BD:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.87:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.2.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#D5DDD0:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.925",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.3.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#D5DDD0:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.87:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.4.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#668A52:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.5.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.6.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#BCD28A:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.7.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#7F9F5D:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          }
+        ]
+      },
+      "receivers": [
+        {
+          "id": 13,
+          "world": [
+            -1.217,
+            0.079,
+            -0.333
+          ],
+          "pixel": [
+            868.6516791532188,
+            601.3877111664124,
+            0.99326574135134
+          ],
+          "leafHit": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.946533426714362,
+              1.5386545473623119,
+              0.04914335077421522
+            ],
+            "distance": 4.964384289374153
+          },
+          "firstShadowCaster": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.946533426714361,
+              1.5386545473623117,
+              0.049143350774215167
+            ],
+            "distance": 4.964384289374152,
+            "faceNormalDotLight": -0.9983141530769339,
+            "material": {
+              "name": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+              "backFaceCulling": true,
+              "clipDistances": [
+                -1.3261299791881047,
+                -2.4906131550961748,
+                -0.4302174590221277,
+                -1.4844782619108945
+              ]
+            }
+          },
+          "leafIsFirst": true,
+          "cameraHit": {
+            "name": "room.modular.material23",
+            "point": [
+              -1.2169999999999996,
+              0.07900000000000063,
+              -0.3330000000000002
+            ],
+            "receiverDistance": 7.841871149431394e-16
+          },
+          "visible": true
+        },
+        {
+          "id": 15,
+          "world": [
+            -1.021,
+            0.079,
+            -0.333
+          ],
+          "pixel": [
+            856.8411720008386,
+            609.859924599949,
+            0.9931998996689994
+          ],
+          "leafHit": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.930179569086073,
+              1.5908423994092904,
+              0.06280633746307251
+            ],
+            "distance": 5.151929166725771
+          },
+          "firstShadowCaster": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.930179569086072,
+              1.5908423994092904,
+              0.06280633746307246
+            ],
+            "distance": 5.15192916672577,
+            "faceNormalDotLight": -0.9983229545316796,
+            "material": {
+              "name": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+              "backFaceCulling": true,
+              "clipDistances": [
+                -1.3606481092150675,
+                -2.4699593277359435,
+                -0.390799762074983,
+                -1.5028480854045472
+              ]
+            }
+          },
+          "leafIsFirst": true,
+          "cameraHit": {
+            "name": "room.modular.material23",
+            "point": [
+              -1.0210000000000008,
+              0.07899999999999885,
+              -0.3329999999999993
+            ],
+            "receiverDistance": 1.6237011735142914e-15
+          },
+          "visible": true
+        }
+      ]
+    },
+    {
+      "case": "base",
+      "energy": {
+        "key": 0,
+        "nonKey": 1,
+        "IBL": 1
+      },
+      "environmentIntensity": 1,
+      "lights": [
+        {
+          "name": "soft cream sky",
+          "enabled": true,
+          "intensity": 0.27
+        },
+        {
+          "name": "static window sunlight",
+          "enabled": true,
+          "intensity": 2.8
+        },
+        {
+          "name": "cool exterior sky",
+          "enabled": true,
+          "intensity": 1.25
+        },
+        {
+          "name": "soft local face fill",
+          "enabled": true,
+          "intensity": 0.43
+        },
+        {
+          "name": "native.practical.cashier",
+          "enabled": true,
+          "intensity": 20
+        },
+        {
+          "name": "native.practical.central",
+          "enabled": true,
+          "intensity": 24
+        },
+        {
+          "name": "v11.c47.window-direction-reach.v2.indoor-sky",
+          "enabled": true,
+          "intensity": 0.85
+        },
+        {
+          "name": "v11.c47.window-direction-reach.v2",
+          "enabled": false,
+          "intensity": 110000
+        }
+      ],
+      "filter": {
+        "filter": 7,
+        "pcss": true,
+        "pcf": false,
+        "enabled": true
+      },
+      "leafRaster": null,
+      "receivers": [
+        {
+          "id": 13,
+          "world": [
+            -1.217,
+            0.079,
+            -0.333
+          ],
+          "pixel": [
+            868.6516791532188,
+            601.3877111664124,
+            0.99326574135134
+          ],
+          "leafHit": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.946533426714362,
+              1.5386545473623119,
+              0.04914335077421522
+            ],
+            "distance": 4.964384289374153
+          },
+          "firstShadowCaster": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.946533426714361,
+              1.5386545473623117,
+              0.049143350774215167
+            ],
+            "distance": 4.964384289374152,
+            "faceNormalDotLight": -0.9983141530769339,
+            "material": {
+              "name": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+              "backFaceCulling": true,
+              "clipDistances": [
+                -1.3261299791881047,
+                -2.4906131550961748,
+                -0.4302174590221277,
+                -1.4844782619108945
+              ]
+            }
+          },
+          "leafIsFirst": true,
+          "cameraHit": {
+            "name": "room.modular.material23",
+            "point": [
+              -1.2169999999999996,
+              0.07900000000000063,
+              -0.3330000000000002
+            ],
+            "receiverDistance": 7.841871149431394e-16
+          },
+          "visible": true
+        },
+        {
+          "id": 15,
+          "world": [
+            -1.021,
+            0.079,
+            -0.333
+          ],
+          "pixel": [
+            856.8411720008386,
+            609.859924599949,
+            0.9931998996689994
+          ],
+          "leafHit": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.930179569086073,
+              1.5908423994092904,
+              0.06280633746307251
+            ],
+            "distance": 5.151929166725771
+          },
+          "firstShadowCaster": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.930179569086072,
+              1.5908423994092904,
+              0.06280633746307246
+            ],
+            "distance": 5.15192916672577,
+            "faceNormalDotLight": -0.9983229545316796,
+            "material": {
+              "name": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+              "backFaceCulling": true,
+              "clipDistances": [
+                -1.3606481092150675,
+                -2.4699593277359435,
+                -0.390799762074983,
+                -1.5028480854045472
+              ]
+            }
+          },
+          "leafIsFirst": true,
+          "cameraHit": {
+            "name": "room.modular.material23",
+            "point": [
+              -1.0210000000000008,
+              0.07899999999999885,
+              -0.3329999999999993
+            ],
+            "receiverDistance": 1.6237011735142914e-15
+          },
+          "visible": true
+        }
+      ]
+    },
+    {
+      "case": "composite",
+      "energy": {
+        "key": 1,
+        "nonKey": 1,
+        "IBL": 1
+      },
+      "environmentIntensity": 1,
+      "lights": [
+        {
+          "name": "soft cream sky",
+          "enabled": true,
+          "intensity": 0.27
+        },
+        {
+          "name": "static window sunlight",
+          "enabled": true,
+          "intensity": 2.8
+        },
+        {
+          "name": "cool exterior sky",
+          "enabled": true,
+          "intensity": 1.25
+        },
+        {
+          "name": "soft local face fill",
+          "enabled": true,
+          "intensity": 0.43
+        },
+        {
+          "name": "native.practical.cashier",
+          "enabled": true,
+          "intensity": 20
+        },
+        {
+          "name": "native.practical.central",
+          "enabled": true,
+          "intensity": 24
+        },
+        {
+          "name": "v11.c47.window-direction-reach.v2.indoor-sky",
+          "enabled": true,
+          "intensity": 0.85
+        },
+        {
+          "name": "v11.c47.window-direction-reach.v2",
+          "enabled": true,
+          "intensity": 110000
+        }
+      ],
+      "filter": {
+        "filter": 7,
+        "pcss": true,
+        "pcf": false,
+        "enabled": true
+      },
+      "leafRaster": {
+        "renderId": 69,
+        "passId": 8,
+        "rows": [
+          {
+            "name": "native.window.foliage.0.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#C3D1BD:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.925",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.1.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#C3D1BD:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.87:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.2.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#D5DDD0:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.925",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.3.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#D5DDD0:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.87:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.4.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#668A52:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.5.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.6.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#BCD28A:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.7.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#7F9F5D:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          }
+        ]
+      },
+      "receivers": [
+        {
+          "id": 13,
+          "world": [
+            -1.217,
+            0.079,
+            -0.333
+          ],
+          "pixel": [
+            868.6516791532188,
+            601.3877111664124,
+            0.99326574135134
+          ],
+          "leafHit": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.946533426714362,
+              1.5386545473623119,
+              0.04914335077421522
+            ],
+            "distance": 4.964384289374153
+          },
+          "firstShadowCaster": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.946533426714361,
+              1.5386545473623117,
+              0.049143350774215167
+            ],
+            "distance": 4.964384289374152,
+            "faceNormalDotLight": -0.9983141530769339,
+            "material": {
+              "name": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+              "backFaceCulling": true,
+              "clipDistances": [
+                -1.3261299791881047,
+                -2.4906131550961748,
+                -0.4302174590221277,
+                -1.4844782619108945
+              ]
+            }
+          },
+          "leafIsFirst": true,
+          "cameraHit": {
+            "name": "room.modular.material23",
+            "point": [
+              -1.2169999999999996,
+              0.07900000000000063,
+              -0.3330000000000002
+            ],
+            "receiverDistance": 7.841871149431394e-16
+          },
+          "visible": true
+        },
+        {
+          "id": 15,
+          "world": [
+            -1.021,
+            0.079,
+            -0.333
+          ],
+          "pixel": [
+            856.8411720008386,
+            609.859924599949,
+            0.9931998996689994
+          ],
+          "leafHit": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.930179569086073,
+              1.5908423994092904,
+              0.06280633746307251
+            ],
+            "distance": 5.151929166725771
+          },
+          "firstShadowCaster": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.930179569086072,
+              1.5908423994092904,
+              0.06280633746307246
+            ],
+            "distance": 5.15192916672577,
+            "faceNormalDotLight": -0.9983229545316796,
+            "material": {
+              "name": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+              "backFaceCulling": true,
+              "clipDistances": [
+                -1.3606481092150675,
+                -2.4699593277359435,
+                -0.390799762074983,
+                -1.5028480854045472
+              ]
+            }
+          },
+          "leafIsFirst": true,
+          "cameraHit": {
+            "name": "room.modular.material23",
+            "point": [
+              -1.0210000000000008,
+              0.07899999999999885,
+              -0.3329999999999993
+            ],
+            "receiverDistance": 1.6237011735142914e-15
+          },
+          "visible": true
+        }
+      ]
+    },
+    {
+      "case": "balance",
+      "energy": {
+        "key": 2,
+        "interiorHemispheres": 0.7,
+        "IBL": 0.8,
+        "practicalsAndFaceAndExterior": 1
+      },
+      "environmentIntensity": 0.8,
+      "lights": [
+        {
+          "name": "soft cream sky",
+          "enabled": true,
+          "intensity": 0.189
+        },
+        {
+          "name": "static window sunlight",
+          "enabled": true,
+          "intensity": 2.8
+        },
+        {
+          "name": "cool exterior sky",
+          "enabled": true,
+          "intensity": 1.25
+        },
+        {
+          "name": "soft local face fill",
+          "enabled": true,
+          "intensity": 0.43
+        },
+        {
+          "name": "native.practical.cashier",
+          "enabled": true,
+          "intensity": 20
+        },
+        {
+          "name": "native.practical.central",
+          "enabled": true,
+          "intensity": 24
+        },
+        {
+          "name": "v11.c47.window-direction-reach.v2.indoor-sky",
+          "enabled": true,
+          "intensity": 0.595
+        },
+        {
+          "name": "v11.c47.window-direction-reach.v2",
+          "enabled": true,
+          "intensity": 220000
+        }
+      ],
+      "filter": {
+        "filter": 7,
+        "pcss": true,
+        "pcf": false,
+        "enabled": true
+      },
+      "leafRaster": {
+        "renderId": 69,
+        "passId": 8,
+        "rows": [
+          {
+            "name": "native.window.foliage.0.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#C3D1BD:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.925",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.1.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#C3D1BD:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.87:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.2.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#D5DDD0:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.925",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.3.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#D5DDD0:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.87:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.4.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#668A52:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.5.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.6.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#BCD28A:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.7.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#7F9F5D:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          }
+        ]
+      },
+      "receivers": [
+        {
+          "id": 13,
+          "world": [
+            -1.217,
+            0.079,
+            -0.333
+          ],
+          "pixel": [
+            868.6516791532188,
+            601.3877111664124,
+            0.99326574135134
+          ],
+          "leafHit": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.946533426714362,
+              1.5386545473623119,
+              0.04914335077421522
+            ],
+            "distance": 4.964384289374153
+          },
+          "firstShadowCaster": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.946533426714361,
+              1.5386545473623117,
+              0.049143350774215167
+            ],
+            "distance": 4.964384289374152,
+            "faceNormalDotLight": -0.9983141530769339,
+            "material": {
+              "name": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+              "backFaceCulling": true,
+              "clipDistances": [
+                -1.3261299791881047,
+                -2.4906131550961748,
+                -0.4302174590221277,
+                -1.4844782619108945
+              ]
+            }
+          },
+          "leafIsFirst": true,
+          "cameraHit": {
+            "name": "room.modular.material23",
+            "point": [
+              -1.2169999999999996,
+              0.07900000000000063,
+              -0.3330000000000002
+            ],
+            "receiverDistance": 7.841871149431394e-16
+          },
+          "visible": true
+        },
+        {
+          "id": 15,
+          "world": [
+            -1.021,
+            0.079,
+            -0.333
+          ],
+          "pixel": [
+            856.8411720008386,
+            609.859924599949,
+            0.9931998996689994
+          ],
+          "leafHit": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.930179569086073,
+              1.5908423994092904,
+              0.06280633746307251
+            ],
+            "distance": 5.151929166725771
+          },
+          "firstShadowCaster": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.930179569086072,
+              1.5908423994092904,
+              0.06280633746307246
+            ],
+            "distance": 5.15192916672577,
+            "faceNormalDotLight": -0.9983229545316796,
+            "material": {
+              "name": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+              "backFaceCulling": true,
+              "clipDistances": [
+                -1.3606481092150675,
+                -2.4699593277359435,
+                -0.390799762074983,
+                -1.5028480854045472
+              ]
+            }
+          },
+          "leafIsFirst": true,
+          "cameraHit": {
+            "name": "room.modular.material23",
+            "point": [
+              -1.0210000000000008,
+              0.07899999999999885,
+              -0.3329999999999993
+            ],
+            "receiverDistance": 1.6237011735142914e-15
+          },
+          "visible": true
+        }
+      ]
+    },
+    {
+      "case": "off",
+      "energy": {
+        "key": 1,
+        "nonKey": 0,
+        "IBL": 0
+      },
+      "environmentIntensity": 0,
+      "lights": [
+        {
+          "name": "soft cream sky",
+          "enabled": false,
+          "intensity": 0.27
+        },
+        {
+          "name": "static window sunlight",
+          "enabled": false,
+          "intensity": 2.8
+        },
+        {
+          "name": "cool exterior sky",
+          "enabled": false,
+          "intensity": 1.25
+        },
+        {
+          "name": "soft local face fill",
+          "enabled": false,
+          "intensity": 0.43
+        },
+        {
+          "name": "native.practical.cashier",
+          "enabled": false,
+          "intensity": 20
+        },
+        {
+          "name": "native.practical.central",
+          "enabled": false,
+          "intensity": 24
+        },
+        {
+          "name": "v11.c47.window-direction-reach.v2.indoor-sky",
+          "enabled": false,
+          "intensity": 0.85
+        },
+        {
+          "name": "v11.c47.window-direction-reach.v2",
+          "enabled": true,
+          "intensity": 110000
+        }
+      ],
+      "filter": {
+        "filter": 7,
+        "pcss": true,
+        "pcf": false,
+        "enabled": false
+      },
+      "leafRaster": null,
+      "receivers": [
+        {
+          "id": 13,
+          "world": [
+            -1.217,
+            0.079,
+            -0.333
+          ],
+          "pixel": [
+            868.6516791532188,
+            601.3877111664124,
+            0.99326574135134
+          ],
+          "leafHit": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.946533426714362,
+              1.5386545473623119,
+              0.04914335077421522
+            ],
+            "distance": 4.964384289374153
+          },
+          "firstShadowCaster": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.946533426714361,
+              1.5386545473623117,
+              0.049143350774215167
+            ],
+            "distance": 4.964384289374152,
+            "faceNormalDotLight": -0.9983141530769339,
+            "material": {
+              "name": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+              "backFaceCulling": true,
+              "clipDistances": [
+                -1.3261299791881047,
+                -2.4906131550961748,
+                -0.4302174590221277,
+                -1.4844782619108945
+              ]
+            }
+          },
+          "leafIsFirst": true,
+          "cameraHit": {
+            "name": "room.modular.material23",
+            "point": [
+              -1.2169999999999996,
+              0.07900000000000063,
+              -0.3330000000000002
+            ],
+            "receiverDistance": 7.841871149431394e-16
+          },
+          "visible": true
+        },
+        {
+          "id": 15,
+          "world": [
+            -1.021,
+            0.079,
+            -0.333
+          ],
+          "pixel": [
+            856.8411720008386,
+            609.859924599949,
+            0.9931998996689994
+          ],
+          "leafHit": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.930179569086073,
+              1.5908423994092904,
+              0.06280633746307251
+            ],
+            "distance": 5.151929166725771
+          },
+          "firstShadowCaster": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.930179569086072,
+              1.5908423994092904,
+              0.06280633746307246
+            ],
+            "distance": 5.15192916672577,
+            "faceNormalDotLight": -0.9983229545316796,
+            "material": {
+              "name": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+              "backFaceCulling": true,
+              "clipDistances": [
+                -1.3606481092150675,
+                -2.4699593277359435,
+                -0.390799762074983,
+                -1.5028480854045472
+              ]
+            }
+          },
+          "leafIsFirst": true,
+          "cameraHit": {
+            "name": "room.modular.material23",
+            "point": [
+              -1.0210000000000008,
+              0.07899999999999885,
+              -0.3329999999999993
+            ],
+            "receiverDistance": 1.6237011735142914e-15
+          },
+          "visible": true
+        }
+      ]
+    },
+    {
+      "case": "hard",
+      "energy": {
+        "key": 1,
+        "nonKey": 0,
+        "IBL": 0
+      },
+      "environmentIntensity": 0,
+      "lights": [
+        {
+          "name": "soft cream sky",
+          "enabled": false,
+          "intensity": 0.27
+        },
+        {
+          "name": "static window sunlight",
+          "enabled": false,
+          "intensity": 2.8
+        },
+        {
+          "name": "cool exterior sky",
+          "enabled": false,
+          "intensity": 1.25
+        },
+        {
+          "name": "soft local face fill",
+          "enabled": false,
+          "intensity": 0.43
+        },
+        {
+          "name": "native.practical.cashier",
+          "enabled": false,
+          "intensity": 20
+        },
+        {
+          "name": "native.practical.central",
+          "enabled": false,
+          "intensity": 24
+        },
+        {
+          "name": "v11.c47.window-direction-reach.v2.indoor-sky",
+          "enabled": false,
+          "intensity": 0.85
+        },
+        {
+          "name": "v11.c47.window-direction-reach.v2",
+          "enabled": true,
+          "intensity": 110000
+        }
+      ],
+      "filter": {
+        "filter": 0,
+        "pcss": false,
+        "pcf": false,
+        "enabled": true
+      },
+      "leafRaster": {
+        "renderId": 436,
+        "passId": 8,
+        "rows": [
+          {
+            "name": "native.window.foliage.0.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#C3D1BD:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.925",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.1.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#C3D1BD:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.87:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.2.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#D5DDD0:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.925",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.3.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#D5DDD0:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.87:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.4.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#668A52:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.5.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.6.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#BCD28A:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          },
+          {
+            "name": "native.window.foliage.7.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#7F9F5D:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+            "backFaceCulling": true
+          }
+        ]
+      },
+      "receivers": [
+        {
+          "id": 13,
+          "world": [
+            -1.217,
+            0.079,
+            -0.333
+          ],
+          "pixel": [
+            868.6516791532188,
+            601.3877111664124,
+            0.99326574135134
+          ],
+          "leafHit": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.946533426714362,
+              1.5386545473623119,
+              0.04914335077421522
+            ],
+            "distance": 4.964384289374153
+          },
+          "firstShadowCaster": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.946533426714361,
+              1.5386545473623117,
+              0.049143350774215167
+            ],
+            "distance": 4.964384289374152,
+            "faceNormalDotLight": -0.9983141530769339,
+            "material": {
+              "name": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+              "backFaceCulling": true,
+              "clipDistances": [
+                -1.3261299791881047,
+                -2.4906131550961748,
+                -0.4302174590221277,
+                -1.4844782619108945
+              ]
+            }
+          },
+          "leafIsFirst": true,
+          "cameraHit": {
+            "name": "room.modular.material23",
+            "point": [
+              -1.2169999999999996,
+              0.07900000000000063,
+              -0.3330000000000002
+            ],
+            "receiverDistance": 7.841871149431394e-16
+          },
+          "visible": true
+        },
+        {
+          "id": 15,
+          "world": [
+            -1.021,
+            0.079,
+            -0.333
+          ],
+          "pixel": [
+            856.8411720008386,
+            609.859924599949,
+            0.9931998996689994
+          ],
+          "leafHit": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.930179569086073,
+              1.5908423994092904,
+              0.06280633746307251
+            ],
+            "distance": 5.151929166725771
+          },
+          "firstShadowCaster": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.930179569086072,
+              1.5908423994092904,
+              0.06280633746307246
+            ],
+            "distance": 5.15192916672577,
+            "faceNormalDotLight": -0.9983229545316796,
+            "material": {
+              "name": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+              "backFaceCulling": true,
+              "clipDistances": [
+                -1.3606481092150675,
+                -2.4699593277359435,
+                -0.390799762074983,
+                -1.5028480854045472
+              ]
+            }
+          },
+          "leafIsFirst": true,
+          "cameraHit": {
+            "name": "room.modular.material23",
+            "point": [
+              -1.0210000000000008,
+              0.07899999999999885,
+              -0.3329999999999993
+            ],
+            "receiverDistance": 1.6237011735142914e-15
+          },
+          "visible": true
+        }
+      ]
+    },
+    {
+      "case": "double",
+      "energy": {
+        "key": 1,
+        "nonKey": 0,
+        "IBL": 0
+      },
+      "environmentIntensity": 0,
+      "lights": [
+        {
+          "name": "soft cream sky",
+          "enabled": false,
+          "intensity": 0.27
+        },
+        {
+          "name": "static window sunlight",
+          "enabled": false,
+          "intensity": 2.8
+        },
+        {
+          "name": "cool exterior sky",
+          "enabled": false,
+          "intensity": 1.25
+        },
+        {
+          "name": "soft local face fill",
+          "enabled": false,
+          "intensity": 0.43
+        },
+        {
+          "name": "native.practical.cashier",
+          "enabled": false,
+          "intensity": 20
+        },
+        {
+          "name": "native.practical.central",
+          "enabled": false,
+          "intensity": 24
+        },
+        {
+          "name": "v11.c47.window-direction-reach.v2.indoor-sky",
+          "enabled": false,
+          "intensity": 0.85
+        },
+        {
+          "name": "v11.c47.window-direction-reach.v2",
+          "enabled": true,
+          "intensity": 110000
+        }
+      ],
+      "filter": {
+        "filter": 0,
+        "pcss": false,
+        "pcf": false,
+        "enabled": true
+      },
+      "leafRaster": {
+        "renderId": 91,
+        "passId": 8,
+        "rows": [
+          {
+            "name": "native.window.foliage.0.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#C3D1BD:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.925.C48.shadow-only-two-sided",
+            "backFaceCulling": false
+          },
+          {
+            "name": "native.window.foliage.1.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#C3D1BD:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.87:texture:/assets/native-v11/broadleaf-albedo.png.C48.shadow-only-two-sided",
+            "backFaceCulling": false
+          },
+          {
+            "name": "native.window.foliage.2.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#D5DDD0:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.925.C48.shadow-only-two-sided",
+            "backFaceCulling": false
+          },
+          {
+            "name": "native.window.foliage.3.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#D5DDD0:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.87:texture:/assets/native-v11/broadleaf-albedo.png.C48.shadow-only-two-sided",
+            "backFaceCulling": false
+          },
+          {
+            "name": "native.window.foliage.4.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#668A52:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png.C48.shadow-only-two-sided",
+            "backFaceCulling": false
+          },
+          {
+            "name": "native.window.foliage.5.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png.C48.shadow-only-two-sided",
+            "backFaceCulling": false
+          },
+          {
+            "name": "native.window.foliage.6.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#BCD28A:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png.C48.shadow-only-two-sided",
+            "backFaceCulling": false
+          },
+          {
+            "name": "native.window.foliage.7.material0",
+            "material": "window.portal.mat.sage-leaf.v1:#7F9F5D:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png.C48.shadow-only-two-sided",
+            "backFaceCulling": false
+          }
+        ]
+      },
+      "receivers": [
+        {
+          "id": 13,
+          "world": [
+            -1.217,
+            0.079,
+            -0.333
+          ],
+          "pixel": [
+            868.6516791532188,
+            601.3877111664124,
+            0.99326574135134
+          ],
+          "leafHit": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.946533426714362,
+              1.5386545473623119,
+              0.04914335077421522
+            ],
+            "distance": 4.964384289374153
+          },
+          "firstShadowCaster": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.946533426714361,
+              1.5386545473623117,
+              0.049143350774215167
+            ],
+            "distance": 4.964384289374152,
+            "faceNormalDotLight": -0.9983141530769339,
+            "material": {
+              "name": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+              "backFaceCulling": true,
+              "clipDistances": [
+                -1.3261299791881047,
+                -2.4906131550961748,
+                -0.4302174590221277,
+                -1.4844782619108945
+              ]
+            }
+          },
+          "leafIsFirst": true,
+          "cameraHit": {
+            "name": "room.modular.material23",
+            "point": [
+              -1.2169999999999996,
+              0.07900000000000063,
+              -0.3330000000000002
+            ],
+            "receiverDistance": 7.841871149431394e-16
+          },
+          "visible": true
+        },
+        {
+          "id": 15,
+          "world": [
+            -1.021,
+            0.079,
+            -0.333
+          ],
+          "pixel": [
+            856.8411720008386,
+            609.859924599949,
+            0.9931998996689994
+          ],
+          "leafHit": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.930179569086073,
+              1.5908423994092904,
+              0.06280633746307251
+            ],
+            "distance": 5.151929166725771
+          },
+          "firstShadowCaster": {
+            "name": "native.window.foliage.5.material0",
+            "point": [
+              -5.930179569086072,
+              1.5908423994092904,
+              0.06280633746307246
+            ],
+            "distance": 5.15192916672577,
+            "faceNormalDotLight": -0.9983229545316796,
+            "material": {
+              "name": "window.portal.mat.sage-leaf.v1:#90AE65:1:r0.81:m0:ior1.45:OPAQUE:ds0:linear-srgb-v2:native-r0.78:texture:/assets/native-v11/broadleaf-albedo.png",
+              "backFaceCulling": true,
+              "clipDistances": [
+                -1.3606481092150675,
+                -2.4699593277359435,
+                -0.390799762074983,
+                -1.5028480854045472
+              ]
+            }
+          },
+          "leafIsFirst": true,
+          "cameraHit": {
+            "name": "room.modular.material23",
+            "point": [
+              -1.0210000000000008,
+              0.07899999999999885,
+              -0.3329999999999993
+            ],
+            "receiverDistance": 1.6237011735142914e-15
+          },
+          "visible": true
+        }
+      ]
+    }
+  ],
+  "depthComparison": [
+    {
+      "receiver": 13,
+      "uv": [
+        0.5108406917387063,
+        0.38782025792855723
+      ],
+      "mapPixel": [
+        523,
+        397
+      ],
+      "sampledHalfFloatDepth": 0.257568359375,
+      "receiverDepthMetric": 0.3192219073935666,
+      "hardShaderFactor": 0.12,
+      "scope": "Exact hard compare from pinned shader; not PCSS kernel visibility or display-RGB ratio."
+    },
+    {
+      "receiver": 15,
+      "uv": [
+        0.5084878599553102,
+        0.39639001331513085
+      ],
+      "mapPixel": [
+        520,
+        405
+      ],
+      "sampledHalfFloatDepth": 0.257568359375,
+      "receiverDepthMetric": 0.3215617226287045,
+      "hardShaderFactor": 0.12,
+      "scope": "Exact hard compare from pinned shader; not PCSS kernel visibility or display-RGB ratio."
+    }
+  ],
+  "RGBsamples": [
+    {
+      "case": "key",
+      "samples": [
+        {
+          "receiver": 13,
+          "pixelFloat": [
+            868.6516791532188,
+            601.3877111664124
+          ],
+          "samplePixel": [
+            869,
+            601
+          ],
+          "RGB_sRGB8": [
+            53,
+            39,
+            23
+          ]
+        },
+        {
+          "receiver": 15,
+          "pixelFloat": [
+            856.8411720008386,
+            609.859924599949
+          ],
+          "samplePixel": [
+            857,
+            610
+          ],
+          "RGB_sRGB8": [
+            123,
+            93,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "case": "off",
+      "samples": [
+        {
+          "receiver": 13,
+          "pixelFloat": [
+            868.6516791532188,
+            601.3877111664124
+          ],
+          "samplePixel": [
+            869,
+            601
+          ],
+          "RGB_sRGB8": [
+            163,
+            129,
+            84
+          ]
+        },
+        {
+          "receiver": 15,
+          "pixelFloat": [
+            856.8411720008386,
+            609.859924599949
+          ],
+          "samplePixel": [
+            857,
+            610
+          ],
+          "RGB_sRGB8": [
+            164,
+            131,
+            85
+          ]
+        }
+      ]
+    },
+    {
+      "case": "hard",
+      "samples": [
+        {
+          "receiver": 13,
+          "pixelFloat": [
+            868.6516791532188,
+            601.3877111664124
+          ],
+          "samplePixel": [
+            869,
+            601
+          ],
+          "RGB_sRGB8": [
+            39,
+            28,
+            17
+          ]
+        },
+        {
+          "receiver": 15,
+          "pixelFloat": [
+            856.8411720008386,
+            609.859924599949
+          ],
+          "samplePixel": [
+            857,
+            610
+          ],
+          "RGB_sRGB8": [
+            39,
+            29,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "case": "double",
+      "samples": [
+        {
+          "receiver": 13,
+          "pixelFloat": [
+            868.6516791532188,
+            601.3877111664124
+          ],
+          "samplePixel": [
+            869,
+            601
+          ],
+          "RGB_sRGB8": [
+            39,
+            28,
+            17
+          ]
+        },
+        {
+          "receiver": 15,
+          "pixelFloat": [
+            856.8411720008386,
+            609.859924599949
+          ],
+          "samplePixel": [
+            857,
+            610
+          ],
+          "RGB_sRGB8": [
+            39,
+            29,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "case": "composite",
+      "samples": [
+        {
+          "receiver": 13,
+          "pixelFloat": [
+            868.6516791532188,
+            601.3877111664124
+          ],
+          "samplePixel": [
+            869,
+            601
+          ],
+          "RGB_sRGB8": [
+            189,
+            158,
+            110
+          ]
+        },
+        {
+          "receiver": 15,
+          "pixelFloat": [
+            856.8411720008386,
+            609.859924599949
+          ],
+          "samplePixel": [
+            857,
+            610
+          ],
+          "RGB_sRGB8": [
+            199,
+            169,
+            123
+          ]
+        }
+      ]
+    },
+    {
+      "case": "balance",
+      "samples": [
+        {
+          "receiver": 13,
+          "pixelFloat": [
+            868.6516791532188,
+            601.3877111664124
+          ],
+          "samplePixel": [
+            869,
+            601
+          ],
+          "RGB_sRGB8": [
+            171,
+            139,
+            94
+          ]
+        },
+        {
+          "receiver": 15,
+          "pixelFloat": [
+            856.8411720008386,
+            609.859924599949
+          ],
+          "samplePixel": [
+            857,
+            610
+          ],
+          "RGB_sRGB8": [
+            196,
+            167,
+            122
+          ]
+        }
+      ]
+    }
+  ],
+  "nonfocalROI": [
+    {
+      "region": "left_wall",
+      "box": [
+        480,
+        260,
+        560,
+        310
+      ],
+      "composite": {
+        "meanRGB_sRGB8": [
+          188.0,
+          169.0,
+          139.00075
+        ],
+        "displayLumaMean": 170.87345415000001
+      },
+      "balance": {
+        "meanRGB_sRGB8": [
+          165.9985,
+          145.04625,
+          115.0
+        ],
+        "displayLumaMean": 147.33135910000004
+      }
+    },
+    {
+      "region": "entry_floor",
+      "box": [
+        370,
+        785,
+        435,
+        840
+      ],
+      "composite": {
+        "meanRGB_sRGB8": [
+          192.10545454545453,
+          159.53286713286712,
+          111.12447552447553
+        ],
+        "displayLumaMean": 162.96271334265737
+      },
+      "balance": {
+        "meanRGB_sRGB8": [
+          182.08475524475526,
+          148.40615384615384,
+          100.53958041958042
+        ],
+        "displayLumaMean": 152.1102579020979
+      }
+    },
+    {
+      "region": "cashier_top",
+      "box": [
+        650,
+        825,
+        740,
+        870
+      ],
+      "composite": {
+        "meanRGB_sRGB8": [
+          166.41925925925926,
+          123.6283950617284,
+          78.60765432098765
+        ],
+        "displayLumaMean": 129.47523530864197
+      },
+      "balance": {
+        "meanRGB_sRGB8": [
+          146.2627160493827,
+          104.87827160493828,
+          64.89876543209877
+        ],
+        "displayLumaMean": 110.79008414814815
+      }
+    }
+  ],
+  "projectionCorrection": {
+    "GLviewportY": 104,
+    "topViewportY": 88,
+    "deltaY": -16,
+    "status": "Early markers invalid/excluded; actual game camera was not changed."
+  },
+  "assessment": "Key-only receiver leaf shadows and RTT depths agree. Base+IBL alone nearly reproduces composite brightness; one energy redistribution improves directional readability but original target/style remains unmet. No default adoption.",
+  "coverage": "295tests/build/validate/replay,146GLB,305protected,512rebuild,317originalraw and old environment data preserved. Eight actual High still variants, normal camera, fresh Sandbox UI imports/economy equal/Normal baseline unchanged/pageErrors0. No new stock-cycle/Low/high motion/hidden-tab/native/device/FPS/audio certification.",
+  "limits": "Software WebGL, CPU scene picks + specific RTT readback, not universal GPU-frame acceptance or physical photometry. Diagnostic marker overlays exist only in clearly labelled derived images, never game assets. No merge/publication/Normal player/Chrome/Unity/Library-LTC retry."
+}
