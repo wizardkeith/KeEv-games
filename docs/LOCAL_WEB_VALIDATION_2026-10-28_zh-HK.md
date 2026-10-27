@@ -61,3 +61,9 @@
 機器可用於後續Web-first＋背景Blender資產流程。GUI直接建模、Unity授權／Pipeline整合與單一writer分派仍維持原限制；這輪沒有操作用戶Unity／Hub或改三螢幕協作範圍。
 
 所有本輪設定、工具、最小source／sanitized logs／JSON／PNG會同步到同一隔離分支並核對local=remote。依賴、store、dist、暫存profile及私人日誌不提交；成功readback後才刪除task-owned冗餘驗證輸出，保留可重用依賴及最新可用dist。
+
+## 交接時同步阻塞（尚未同步）
+
+本機source/evidence checkpoint已提交為 `1142d8e7bc987fe1bf041c625e87423bea4fa4f5`。同一Git transport的normal push exit128：`Cannot prompt because user interactivity has been disabled`／`could not read Username for 'https://github.com': terminal prompts disabled`。隨後實讀遠端仍是 `0638d652ebdca1280320fb93058bc5167bb2e2ca`，main仍原SHA，沒有不明推送結果。這是缺少本機Git寫入憑證，不是build失敗，也不是auto-review拒絕。
+
+依「不繞過authentication/permission失敗」限制，已停止推送，未改用另一個API／分支／credential路徑。需要恢復既有GitHub寫入認證，或由父緒取得針對此阻塞的新明確授權後再決定傳輸方式。沒有mint credentials、登入操作、權限擴張、PR retry或公開。尚未同步的新設定／工具／證據／依賴／最新dist均保留；不清理此批unsynced scratch。唯一測試浮點差異與GUI／writer限制不變。

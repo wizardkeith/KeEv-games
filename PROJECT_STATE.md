@@ -1,8 +1,10 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-28T01:01:44+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-28T01:04:43+08:00** (Asia/Hong_Kong).
 
 ## 本機Web build／背景資產實載通過，原測試301/302／R6美術仍未接受 — 2026-10-28T01:01:44+08:00
+
+- **交接阻塞：** 本機source/evidence checkpoint `1142d8e7bc987fe1bf041c625e87423bea4fa4f5` 已commit，但同Git transport normal push exit128，缺少GitHub username／interactive prompts disabled。實讀遠端仍`0638d652ebdca1280320fb93058bc5167bb2e2ca`，結果明確未推；不是auto-review拒絕。已停止寫遠端，不改route繞過、不mint credentials／改安全設定。父緒需處理既有Git寫入認證或取得針對阻塞的新明確授權；unsynced設定／證據／依賴／最新dist保留，暫不清理。本local-only阻塞記錄的最終SHA由外部回報，不能當成雲端已更新。
 
 - 使用者明確批准獨立工程的鎖定依賴及esbuild必需script。從原npm lock匯入pnpm lock，25個實裝name/version逐一符合原lock；只跑esbuild0.25.12 postinstall。專案局部strict白名單／run不自動安裝／hoisted佈局與Windows native command link已核對，無global install／PATH／安全／Unity外掛變更。[完整本機驗證、唯一失敗及截圖](docs/LOCAL_WEB_VALIDATION_2026-10-28_zh-HK.md)。
 - build含原TypeScript、內容validate、replay、root asset-check、作者entry strict TS及R6 validator均exit0；R6 GLB0錯警、29accepted資產與source/streams保護通過。原測試302項301pass/1fail/0skip：VisitorA GLB唯一JSON材質blue值差3.469446951953614e-18，binary／accessors相同；Misaki/B逐byte同，原master及原斷言不改，不稱全套PASS。
