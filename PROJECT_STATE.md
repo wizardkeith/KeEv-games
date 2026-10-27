@@ -1,10 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T09:04:31+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T09:18:03+08:00** (Asia/Hong_Kong).
 
-## V11 C42廣域暖光／同render陰影核對進行中 — 2026-10-27T09:04:31+08:00
+## V11 C42固定廣域光／同render證據，待獨立視覺覆核 — 2026-10-27T09:18:03+08:00
 
-- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送application`78b0889312496ddc9e9c1fdb288621cd6b7ad2b9`。C41獨立視覺FAIL、保持OFF，C40普通開發預設保留；C42降低窗光峰值並恢復廣域暖間接光，曝光／已過模型材質／camera／rig／economy／saves不變，整體原圖仍未接受，未採用。277tests通過；實拍初稿2.30沖淡拒用，最終.85／120的正常與雙斜角及庫存8→2→0／畫質同render-ID draw證據正在固定。264售罄檢查暴露中央接觸RTT resize後refresh0重設1，已以真ShadowGenerator回歸重現並修正，266重跑中；不把264未完成流程當PASS。main僅文件指標、功能未合併／PR8仍Draft／公開V17不變，沒有merge或Site／Normal／玩家Chrome操作，無使用者動作阻塞。
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)推送`4cda03dfd9c92b5e8fd66f525b2202d25264965e`／application`78b0889312496ddc9e9c1fdb288621cd6b7ad2b9`；[原圖／control267／balanced266正常480px、雙斜角、665.160秒真UI原片與來源](https://github.com/wizardkeith/KeEv-games/blob/4cda03dfd9c92b5e8fd66f525b2202d25264965e/docs/V11_C42_BROAD_LIGHT_AND_SAME_RENDER_2026-10-27_zh-HK.md)。**C41獨立視覺FAIL、OFF；C40仍普通開發預設，C42未採用，整體原圖品質／風格未接受。** C42只恢復廣域暖間接／降低窗光峰值與屋面對比，曝光、已過模型材質／camera／rig／routes／economy／saves保留；實拍亮度恢復，但仍偏平／接觸層次不足／灰屋面過強，不能稱美術PASS。
+- 277tests/tsc/build/validate/replay/assets、146GLB零錯警告／305保護檔；506資產與兩組各182runtime重建byte同。真UI0→3→8→reload8→2→0→soldoutreload0、七會計快照／2與0各Low/High核對通過，fresh隔離Normal不變／0pageerror。同shadow RTT before/sample/after render315之商品source/target/draw全0；quality texture UID/epoch及實際draw核對是CPU dispatch證據，非GPU fence／逐幀或實體FPS。首輪264逾時如實保留：既有接觸RTT resize回到refresh1／observer留舊map，已真引擎重現、最小修正並266完整重跑。無新完整B接袋／hidden-tab／closure／五語窄屏／ReduceMotion／physical GPU-FPS-audio-native認證。main僅文件指標、功能未合併／PR8仍Draft，本輪未改公開V17；無merge／Site／玩家Normal或Chrome／Unity／Library或LTC重試／關機，無使用者動作阻塞。下一步固定候選獨立覆核，原圖重建目標仍繼續。
 
 ## V11 C41窗側→收銀光照候選／待視覺覆核 — 2026-10-27T08:13:38+08:00
 
