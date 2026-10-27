@@ -1,10 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T09:47:05+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T10:03:31+08:00** (Asia/Hong_Kong).
 
-## V11 C43有遮蔽廣域光試樣／驗證中 — 2026-10-27T09:47:05+08:00
+## V11 C43有遮蔽廣域光固定候選／待視覺覆核 — 2026-10-27T10:03:31+08:00
 
-- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)推送application`4df471263d6bb5c2aaf6d0591f66f5240a875d94`。C42獨立視覺FAIL、RTT生命週期修正PASS並保留；普通光照仍C40。C43在完全相同C42光量／模型／材質／相機／192反射下，以實際深度法線SSAO2測試層架背面、桌底及前櫃落地的柔遮蔽，非GI或原圖達標。首輪viewport錯位及玻璃黑塊試樣拒用；270修正純buffer／合成座標並只用不透明occluder，實際正常與雙斜角已取得，279tests通過；控制組及庫存／Low-High流程進行中。**未採用／未合併／未發佈，原圖美術仍未接受。** C42原片665.160秒只有184來源幀（中位約3.94秒、最大17.61秒間隔），不是連續動作認證；本輪亦不以稀疏雲端片推論平滑度或GPU完成畫格。main僅文件指標，本輪未改公開V17，無玩家Normal或Chrome／Unity／Site／Library或LTC重試／關機，無使用者動作阻塞。
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)推送`ba80b4d1ab338cd819eabe712d9f3adafd6c51b0`／application`4df471263d6bb5c2aaf6d0591f66f5240a875d94`；[唯一原圖／普通C40／拒用C42／C43正常480px、三處介面、雙斜角、實測及來源](https://github.com/wizardkeith/KeEv-games/blob/ba80b4d1ab338cd819eabe712d9f3adafd6c51b0/docs/V11_C43_OCCLUDED_BROAD_FILL_2026-10-27_zh-HK.md)。**C42獨立視覺FAIL、RTT生命週期修正PASS並保留；普通光照仍C40，C43未採用，整體原圖品質／風格未接受。** C43只在同光量／曝光／已過模型材質／camera／192反射加入實際深度法線SSAO軟遮蔽，層架背牆／桌底／櫃底有可見差異，但全景受光及材質轉面仍偏平、灰屋面過強，未稱視覺PASS。viewport錯位及半透明黑塊兩試樣拒用，270只修buffer/combine座標及opaque occluder，實拍消除黑塊；非GI／native完成。
+- 279tests/tsc/build/validate/replay/assets、146GLB零錯警告／305保護檔，507資產及三組195／182／182runtime重建byte同。真UI七stock階段0→3→8→reload8→2→0→soldoutreload0、四Low/High、會計與同render caster/draw通過；Low移除新增AO/buffer、High新epoch恢復，core無畫質寫入、0pageerror／fresh隔離Normal不變。300.720秒原片僅184來源幀，中位約1.84秒／最大7.57秒；C43pointer73.080秒僅31幀，**稀疏雲端片不作連續動作／GPU完成畫格／實體FPS認證**；C42舊665.160秒／184幀亦不稱motionPASS。SSAO乘最終色亦影響direct/specular、有額外成本與screen-space限制；無新完整B接袋／closure-hidden-tab／五語窄屏／ReduceMotion／physicalGPU-audio-native驗收。main僅文件指標，功能未合併／PR8仍Draft，本輪未改公開V17；無merge／Site／玩家Normal或Chrome／Unity／Library或LTC重試／關機，無使用者動作阻塞。下一步固定候選獨立視覺覆核，原圖重建目標繼續。
 
 ## V11 C42固定廣域光／同render證據，待獨立視覺覆核 — 2026-10-27T09:18:03+08:00
 
