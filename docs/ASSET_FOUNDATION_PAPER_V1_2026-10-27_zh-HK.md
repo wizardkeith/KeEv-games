@@ -1,5 +1,7 @@
 # 木層架／紙本基礎 v1 — 首個固定候選
 
+後續獨立覆核：單件形體暫時PASS，**成組展示層次FAIL**。下方保留首候選證據；只修比例／擺位的後續見[紙本R2](ASSET_FOUNDATION_PAPER_R2_2026-10-27_zh-HK.md)，未擴整店。
+
 來源：`c16461fab229b4054575bcee5b956c339bfaf94f`，獨立分支 `codex/asset-foundation-v1`。R4 經獨立覆核 **MAIN-SHAPE PASS**，本輪將其花冠、布形、陶瓷及木材全部凍結，只新增開放式木層架／淺托盤與不同厚度的書、紙、摺卡。**新組仍待獨立風格覆核；整體原圖畫風未被接受。** 沒有擴整店、角色、燈光或商品系統。
 
 ![唯一原圖／實際正常鏡頭材質與灰模；店景裁切各480px高](reviews/evidence/asset-foundation-paper-v1/target-paper-material-gray-shop480.png)

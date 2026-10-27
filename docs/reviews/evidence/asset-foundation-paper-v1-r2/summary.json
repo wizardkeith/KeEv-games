@@ -1,0 +1,76 @@
+{
+  "source": "669b5aaa97641fb597ae5e83095056d8c7ee1229",
+  "priorPaperSource": "c16461fab229b4054575bcee5b956c339bfaf94f",
+  "R4Source": "70746f7269bf4b1ac27e1eed87146532cf413866",
+  "newTriangles": 3096,
+  "previewPrototypeTriangles": 71696,
+  "newGLBBytes": 645596,
+  "GLBs": 6,
+  "errors": 0,
+  "warnings": 0,
+  "fourReviewedStandaloneGLBsByteIdentical": true,
+  "nineMaterialsIdentical": true,
+  "sevenEmbeddedImageHashesIdentical": true,
+  "frozenR4Files": 21,
+  "protectedOriginalApplicationFiles": 720,
+  "contacts": {
+    "riserBase": 0,
+    "trayBase": 0,
+    "bookToRiser": -6.752088665962219e-09,
+    "cardToRiser": 8.025381248444319e-09,
+    "paperToTrayFloor": 1.0430812810713341e-10
+  },
+  "hierarchy": {
+    "riserWidth": 0.800000011920929,
+    "tableWidth": 1.8600000143051147,
+    "riserHeight": 0.2599999960511923,
+    "trayRiserDepthGap": 0.07649998366832733,
+    "upperLowerPaperLateralGap": 0.15933907412508674,
+    "riserTableWidthRatio": 0.4301075299828986
+  },
+  "materialGrayLightingAndCameraMatch": true,
+  "priorV1R2LightingAndCameraMatch": true,
+  "fixedStudioConditionsUnchanged": true,
+  "materialLoadedSha256": "d5b51435c8571a63f8ae54e54c2b73c979ca00715b1983b52a750cfde11053aa",
+  "grayLoadedSha256": "d5b51435c8571a63f8ae54e54c2b73c979ca00715b1983b52a750cfde11053aa",
+  "lifecycle": {
+    "buy3": true,
+    "cashBefore": 5000,
+    "cashAfter": 4790,
+    "stock": 3,
+    "shelf": 2,
+    "reloadEqual": true,
+    "lowHighRetained": true,
+    "normalUnchanged": true
+  },
+  "pageErrors": [],
+  "newChecks": [
+    "Blender generation",
+    "six strict GLB validations",
+    "transformed contacts / support / hierarchy",
+    "four standalone bytes and all R4 files frozen",
+    "720 protected original files unchanged",
+    "final build",
+    "fresh Sandbox real UI lifecycle and eight actual screenshots"
+  ],
+  "priorChecksNotRepeated": [
+    "302 application tests",
+    "content validation",
+    "replay",
+    "legacy asset checks"
+  ],
+  "Library": {
+    "library_file_id": "libfile_b2eae1dd4f888191863e3d6eac738404",
+    "file_id": "file_00000000125c8211b68e0cfe2119597a",
+    "filename": "paper-material-normal-game.png",
+    "version": 1,
+    "bytes": 639882
+  },
+  "style": "v1 individual forms provisionally PASS / grouped hierarchy FAIL; R2 hierarchy candidate pending independent review; overall target style unaccepted",
+  "limits": [
+    "AABB contacts and support are not full collision proof",
+    "Cloud Chromium SwiftShader static evidence, not physical GPU/FPS/native",
+    "Decorative authoring only; production stock slot-height integration outside this stage",
+    "No whole-shop assembly, character work, light changes or bulk replication"
+  ]
+}

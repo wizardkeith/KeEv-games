@@ -1,0 +1,45 @@
+ERROR Draco mesh compression is not available because library could not be found at /usr/bin/4.3/python/lib/python3.13/site-packages/libextern_draco.so
+12:39:23 | INFO: Starting glTF 2.0 export
+12:39:23 | INFO: Extracting primitive: Cube.027
+12:39:23 | INFO: Primitives created: 3
+12:39:23 | INFO: Finished glTF 2.0 export in 0.06199812889099121 s
+
+12:39:23 | INFO: Starting glTF 2.0 export
+12:39:23 | INFO: Extracting primitive: Cube.035
+12:39:23 | INFO: Primitives created: 4
+12:39:23 | INFO: Finished glTF 2.0 export in 0.06023120880126953 s
+
+12:39:23 | INFO: Starting glTF 2.0 export
+12:39:23 | INFO: Extracting primitive: Cube.040
+12:39:23 | INFO: Primitives created: 4
+12:39:23 | INFO: Finished glTF 2.0 export in 0.012541055679321289 s
+
+12:39:23 | INFO: Starting glTF 2.0 export
+12:39:23 | INFO: Extracting primitive: Cube.049
+12:39:23 | INFO: Primitives created: 2
+12:39:23 | INFO: Finished glTF 2.0 export in 0.007370471954345703 s
+
+Warning: No mesh data to join
+12:39:23 | INFO: Starting glTF 2.0 export
+12:39:23 | INFO: Extracting primitive: Folded cream card • real panels.001
+12:39:23 | INFO: Primitives created: 1
+12:39:23 | INFO: Finished glTF 2.0 export in 0.0034627914428710938 s
+
+Warning: No mesh data to join
+12:39:23 | INFO: Starting glTF 2.0 export
+12:39:23 | INFO: Extracting primitive: Cube.053
+12:39:23 | INFO: Primitives created: 3
+12:39:23 | INFO: Extracting primitive: Cube.061
+12:39:23 | INFO: Primitives created: 4
+12:39:23 | INFO: Extracting primitive: Cube.066
+12:39:23 | INFO: Primitives created: 4
+12:39:23 | INFO: Extracting primitive: Cube.075
+12:39:23 | INFO: Primitives created: 2
+12:39:23 | INFO: Extracting primitive: Folded cream card • real panels.002
+12:39:23 | INFO: Primitives created: 1
+12:39:23 | INFO: Finished glTF 2.0 export in 0.07929420471191406 s
+
+Info: Saved "paper-display-set.blend"
+Blender 4.3.2
+
+Blender quit

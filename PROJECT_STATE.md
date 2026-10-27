@@ -1,6 +1,14 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T20:32:54+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T20:45:10+08:00** (Asia/Hong_Kong).
+
+## 紙本R2分層固定候選／仍待獨立判形 — 2026-10-27T20:45:10+08:00
+
+- `codex/asset-foundation-v1` source `669b5aaa97641fb597ae5e83095056d8c7ee1229`；[唯一原圖／v1-R2正常480px／雙斜角／同光灰模與限制](docs/ASSET_FOUNDATION_PAPER_R2_2026-10-27_zh-HK.md)。獨立v1單件形體暫時PASS、成組層次FAIL後，只修層架寬度與擺位；R2未判PASS／整體畫風仍未接受，不加props／頁紋／光／整店／角色。
+- 層架580→800mm，實測桌寬1,860mm的31.18→43.01%，只是試驗比例；頂高260mm、24mm板／27mm柱／書厚及圓脊不變。托盤前移215mm並側移150mm，上下紙本錯位；實際tray/riser深向footprint淨距76.5mm、上下紙本X bounds淨距159.3mm。四個已過獨立GLB（托盤／書／紙／摺卡）bytes同v1、9材質／7嵌入圖頁hash同；仍3,096tri，作者總71,696tri。
+- 本輪Blender／六GLB零error-warning／TRS接觸-support-footprint／R4全部21檔凍結／原application720保護bytes／finalbuild通過；前checkpoint302tests等結果保留，本輪沒有重跑不測新比例的app tests。fresh真UI Sandbox買3杯5000→4790／stock3／未改display3槽2／reload逐值同／Low→High／隔離Normal不變／0pageerror；灰材質及v1-R2全燈相機逐值同、實際GLBbytes同source。bounds非完整collisioncert、靜態SwiftShader非實體GPU-FPS-native，作者裝飾未做生產stock槽高整合。
+- Library同一image `libfile_b2eae1dd4f888191863e3d6eac738404` 更新version1，v1第0版與R4獨立第5版保留。正常／斜角上下層現可分開，但層架或偏輕／留白多、紙書偏齊；下一步只獨立看同組分層／寬高重量及柔和比例，不用test數當美術接受。
+- 此entry隨來源／證據只推隔離分支；main／PR8未寫、PR建立因先前拒絕保持停止無retry／換route；無merge／Site公開／payments／玩家Normal改動，無其他操作阻塞，角色handoff仍後續。
 
 ## R4主形獨立PASS／木層架紙本v1首候選 — 2026-10-27T20:32:54+08:00
 

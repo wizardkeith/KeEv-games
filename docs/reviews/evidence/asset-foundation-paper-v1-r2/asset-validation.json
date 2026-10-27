@@ -1,0 +1,345 @@
+{
+  "results": [
+    {
+      "file": "book-stack.glb",
+      "bytes": 78080,
+      "sha256": "2e6b631686e9b94765480e4058443f11bc3af20eac0c279f58206920a47acecd",
+      "bounds": {
+        "book-stack": {
+          "min": [
+            -0.1579377636131143,
+            -1.1641532182693481e-10,
+            -0.11708304607908729
+          ],
+          "max": [
+            0.15448220495042161,
+            0.0640000042039901,
+            0.115208640030456
+          ],
+          "triangles": 1224
+        }
+      },
+      "meshes": 1,
+      "materials": 4,
+      "primitives": 4,
+      "images": 0,
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 4,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/2/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/3/attributes/TEXCOORD_0"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "file": "folded-card.glb",
+      "bytes": 1960,
+      "sha256": "fcb03faf44999d96d63ab06e29579613dc4df7437e6938c252d38349e3eaba19",
+      "bounds": {
+        "folded-card": {
+          "min": [
+            -0.042500000447034836,
+            0,
+            -0.03638473153114319
+          ],
+          "max": [
+            0.042500000447034836,
+            0.1185094503525761,
+            0.03638473153114319
+          ],
+          "triangles": 36
+        }
+      },
+      "meshes": 1,
+      "materials": 1,
+      "primitives": 1,
+      "images": 0,
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    },
+    {
+      "file": "paper-display-set.glb",
+      "bytes": 645596,
+      "sha256": "d5b51435c8571a63f8ae54e54c2b73c979ca00715b1983b52a750cfde11053aa",
+      "bounds": {
+        "tiered-riser": {
+          "min": [
+            -0.45000000670552254,
+            0,
+            -0.24500000476837158
+          ],
+          "max": [
+            0.3500000052154064,
+            0.2599999960511923,
+            0.01850000023841858
+          ],
+          "triangles": 864
+        },
+        "shallow-tray": {
+          "min": [
+            -0.01000000536441803,
+            0,
+            0.09499998390674591
+          ],
+          "max": [
+            0.45000001788139343,
+            0.03599999938160181,
+            0.36500000953674316
+          ],
+          "triangles": 540
+        },
+        "book-stack": {
+          "min": [
+            -0.331225678571234,
+            0.2599999892991036,
+            -0.23721856929958085
+          ],
+          "max": [
+            -0.01180739777180062,
+            0.3240000009536743,
+            0.00536777083076917
+          ],
+          "triangles": 1224
+        },
+        "paper-stack": {
+          "min": [
+            0.14753167635328612,
+            0.012000000104308128,
+            0.1547092998207155
+          ],
+          "max": [
+            0.29152744686590154,
+            0.033949997276067734,
+            0.34488159748133773
+          ],
+          "triangles": 432
+        },
+        "folded-card": {
+          "min": [
+            0.1734499347698304,
+            0.26000000407657353,
+            -0.14621084126257167
+          ],
+          "max": [
+            0.2665500628459838,
+            0.3785094544291496,
+            -0.06378915218091741
+          ],
+          "triangles": 36
+        }
+      },
+      "meshes": 5,
+      "materials": 9,
+      "primitives": 14,
+      "images": 7,
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 6,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/2/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/2/primitives/1/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/2/primitives/2/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/2/primitives/3/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/3/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/3/primitives/1/attributes/TEXCOORD_0"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "file": "paper-stack.glb",
+      "bytes": 32568,
+      "sha256": "afaf9d187925f098617278f270cf4eeb40509533a229478eed1c5b0e6d77b7c9",
+      "bounds": {
+        "paper-stack": {
+          "min": [
+            -0.07085053622722626,
+            0,
+            -0.09419216960668564
+          ],
+          "max": [
+            0.07309703528881073,
+            0.021949999034404755,
+            0.09607730060815811
+          ],
+          "triangles": 432
+        }
+      },
+      "meshes": 1,
+      "materials": 2,
+      "primitives": 2,
+      "images": 0,
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 2,
+        "numHints": 0,
+        "messages": [
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+          },
+          {
+            "code": "UNUSED_OBJECT",
+            "message": "This object may be unused.",
+            "severity": 2,
+            "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_0"
+          }
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "file": "shallow-tray.glb",
+      "bytes": 470872,
+      "sha256": "7c1662928519061f87c048e856def1fcfd58af9a9bfa6611531c8f9dc072689d",
+      "bounds": {
+        "shallow-tray": {
+          "min": [
+            -0.23000000417232513,
+            0,
+            -0.13500000536441803
+          ],
+          "max": [
+            0.23000000417232513,
+            0.03599999938160181,
+            0.13500000536441803
+          ],
+          "triangles": 540
+        }
+      },
+      "meshes": 1,
+      "materials": 4,
+      "primitives": 4,
+      "images": 7,
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    },
+    {
+      "file": "tiered-riser.glb",
+      "bytes": 402628,
+      "sha256": "995218abac9fe9027aeeab9aabeb4f46b6c571552697341419d005f5e5c7dae6",
+      "bounds": {
+        "tiered-riser": {
+          "min": [
+            -0.4000000059604645,
+            0,
+            -0.18500000424683094
+          ],
+          "max": [
+            0.4000000059604645,
+            0.2599999960511923,
+            0.07849999330937862
+          ],
+          "triangles": 864
+        }
+      },
+      "meshes": 1,
+      "materials": 3,
+      "primitives": 3,
+      "images": 5,
+      "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 0,
+        "numHints": 0,
+        "messages": [],
+        "truncated": false
+      }
+    }
+  ],
+  "contacts": {
+    "riserBase": 0,
+    "trayBase": 0,
+    "bookToRiser": -6.752088665962219e-9,
+    "cardToRiser": 8.025381248444319e-9,
+    "paperToTrayFloor": 1.0430812810713341e-10
+  },
+  "hierarchy": {
+    "riserWidth": 0.800000011920929,
+    "tableWidth": 1.8600000143051147,
+    "riserHeight": 0.2599999960511923,
+    "trayRiserDepthGap": 0.07649998366832733,
+    "upperLowerPaperLateralGap": 0.15933907412508674,
+    "riserTableWidthRatio": 0.4301075299828986
+  },
+  "preservedStandaloneComponents": 4,
+  "newTriangles": 3096,
+  "reusedTableTriangles": 6480,
+  "R4BaselineTriangles": 62120,
+  "previewPrototypeTriangles": 71696,
+  "frozenR4Files": 21,
+  "limits": "AABB contact relations are not full collision/style/device proof; decorative prototype, no inventory units."
+}
