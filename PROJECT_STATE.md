@@ -1,10 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T13:39:37+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T13:55:46+08:00** (Asia/Hong_Kong).
 
-## V11 C48來源能量分離診斷進行中 — 2026-10-27T13:39:37+08:00
+## V11 C48來源分離固定證據／能量試驗未採用 — 2026-10-27T13:55:46+08:00
 
-- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)應用來源已推送`8091d04ba67256d9f19e69363efeacfa219b8452`。固定C47方向／資產／.20AO，做key-only、base+IBL、composite實拍；已知葉片第一caster接收點及實際shadow texel支持葉影存在，早期marker漏算16px非對稱viewport偏移的標記／像素推論作廢並修正。只測一組key2倍、室內半球.70／IBL.80能量重配，實用燈／面部／室外光保留，未採用／原圖仍未接受。295tests／146GLB／305保護檔通過，同來源最終圖片及控制收尾中；普通仍C45，本輪無merge／公開V17／玩家Normal／Chrome或Unity改動，main只存進度指標，無使用者動作阻塞。
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送`4181819fc97811dee96f7b8354c3eab70ef4f9b1`／application`8091d04ba67256d9f19e69363efeacfa219b8452`；[同來源key-only／base+IBL／composite、原圖對照、已知葉影點及原始證據](https://github.com/wizardkeith/KeEv-games/blob/4181819fc97811dee96f7b8354c3eab70ef4f9b1/docs/V11_C48_SOURCE_CONTRIBUTIONS_2026-10-27_zh-HK.md)。實際葉影點的影圖HALF_FLOAT／hard-off像素一致支持葉影存在；底光+IBL本身已接近完整亮度，雙面caster控制無收益。只試key×2／室內半球×.70／IBL×.80，實用燈／面部／室外光保留：方向較清楚但非焦點變暗，**未採用／未判視覺PASS，整體原圖仍未接受**。早期marker錯16px及其推論已作廢隔離，最終308–315為修正投影／同來源；普通no-flag實際核對仍C45，.20AO／已過資產與192反射保留。
+- 295tests／tsc-build-validate-replay-assets、146GLB零錯警告、305保護檔、512資產重建同／317原素材bytes及既有環境資料保留；八組195runtime已pin。八實際High靜態頁面同camera／經濟、0pageerror／fresh隔離Normal不變；**無新stock-cycle／Low／完整B-handoff／連續動作／hidden-tab／五語窄UI／實體GPU-FPS-audio-native認證**。具體軟體WebGL影圖讀回非全場GPU完成認證。main只更新文件指標，功能未合併／PR8仍Draft，本輪未改公開V17；無Site／玩家Normal／Chrome／Unity／Library或LTC重試／關機。tracked source/evidence全已推送，既有兩master備份及node_modules連結保留未track，無需使用者動作阻塞。先交來源分離與唯一能量試驗供獨立看圖，原圖重建目標持續。
 
 ## V11 C47方向假設固定證據／自檢視覺未過 — 2026-10-27T12:49:57+08:00
 
