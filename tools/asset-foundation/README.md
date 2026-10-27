@@ -67,10 +67,11 @@ editable boards, joinery, lathe profiles, thick petals, connected curved stems
 and the continuous linen surface. `build.py` reconstructs the geometry and materials from a fixed seed.
 Blender export may reorder material buffers between runs, so GLB byte hashes
 are recorded for the committed artifacts rather than assumed to reproduce. Only export copies are evaluated and joined, by semantic component;
-the original editable objects retain their modifiers. Exported set: 63,592
+the original editable objects retain their modifiers. Exported set: 62,120
 triangles, five component meshes, 12 material primitives (see validation receipt
 for exact values). The same35 heads/175 petals are grouped20/10/5 with overlap and unequal
-depth. No triangles were added. This is a prototype; flowers still dominate its
+depth. No heads/petals/triangles were added; omitting the sub-pixel cloth edge bevel
+reduces the set by1,472 triangles while retaining its closed2mm body. This is a prototype; flowers still dominate its
 triangle cost and no bulk replication is appropriate before an LOD strategy.
 
 Material textures are restrained generated oak grain carried in actual GLB UVs.
@@ -82,6 +83,14 @@ The contact probe reads actual exported POSITION accessors and full glTF node
 TRS/matrices. It gates table feet at0 and cup/vase bottoms at tabletop within
 1 micrometre, and verifies cup/vase position/normal/index streams are unchanged
 from049dbf3 (only their contact translations changed). It also enforces the
-original63,592 set /33,124 flower triangle budget and actual wood ORM presence.
+final62,120 set /33,124 flower triangle budget (below the original63,592 cap) and actual wood ORM presence.
 The first v1 gameplay gray/color comparison had different light budgets/IBL
 intensities; it is historical evidence, not a strict material A/B control.
+
+The final cloth turn follows the actual11mm tabletop corner with a continuous
+12.5mm midsurface turn. A sampled support check reads all exported cloth
+triangle vertices, edge midpoints and centroids against the three rounded
+tabletop solids; it detects the interim corner intersection and gates positive
+clearance in the final candidate. This is not a full arbitrary-mesh collision
+certification. Interim source08db124 and its raw views remain recorded in
+`docs/reviews/evidence/asset-foundation-v1-r2-interim`.

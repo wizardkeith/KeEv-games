@@ -185,11 +185,11 @@ vs=[];fs=[];nx=32;ny=56
 for j in range(ny+1):
  t=j/ny;fall=max(0,min(1,(t-.60)/.40));fall=fall*fall*(3-2*fall)
  if t<.60:
-  q=t/.60;y=.42-.91*q;z=.906
+  q=t/.60;y=.42-.9275*q;z=.9065
  elif t<.73:
-  q=(t-.60)/.13;a=q*math.pi/2;y=-.49-.05*math.sin(a);z=.863+.043*math.cos(a)
+  q=(t-.60)/.13;a=q*math.pi/2;y=-.5075-.0125*math.sin(a);z=.894+.0125*math.cos(a)
  else:
-  q=(t-.73)/.27;y=-.54;z=.863-.363*q
+  q=(t-.73)/.27;y=-.520;z=.894-.394*q
  for i in range(nx+1):
   u=i/nx;x=(u-.5)*.57+.24
   broad=math.exp(-((u-(.21+.13*fall))/.22)**2)
@@ -197,13 +197,13 @@ for j in range(ny+1):
   shoulder=math.exp(-((u-(.87-.055*fall))/.15)**2)
   top=.006*broad+.0035*shoulder+.0015*valley
   if t<.60:dz=top*(.35+.65*t/.60);dy=0
-  else:dz=top*(1-fall)+(.022*broad-.016*valley)*fall;dy=-(.075*broad-.025*valley+.024*shoulder)*fall
+  else:dz=top*(1-fall)+(.022*broad-.016*valley)*fall;dy=-(.065*broad+.025*(1-valley)+.024*shoulder)*fall
   hem=(.012*(2*u-1)**2+.009*broad-.006*valley)*fall**4
   vs.append((x,y+dy,z+dz+hem))
 for j in range(ny):
  for i in range(nx):n=j*(nx+1)+i;fs.append((n,n+1,n+nx+2,n+nx+1))
 o=mesh('Linen runner • continuous weighted fall',vs,fs,clothmat);so=o.modifiers.new('Actual 2 mm linen thickness','SOLIDIFY');so.thickness=.002;so.offset=0
-be=o.modifiers.new('Soft hem edge','BEVEL');be.width=.0007;be.segments=2
+# The real2mm solidified edge needs no sub-pixel bevel geometry.
 components['cloth']=current
 
 # Bake copies into one mesh per semantic component for reusable draw cost.
