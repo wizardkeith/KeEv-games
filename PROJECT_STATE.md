@@ -1,6 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T23:22:14+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T23:45:23+08:00** (Asia/Hong_Kong).
+
+## Misaki R5主掃內部截面／非髮全凍結／identity未接受 — 2026-10-27T23:45:23+08:00
+
+- 未合併`codex/asset-foundation-v1` source `1e9680481bc16273b09bd1db39917dc06ba0f276`已normalpush／readback同SHA；[原圖-R4-R5正面三分四頭尺度／全身／實際正常480px雙斜角及限制](docs/MISAKI_HAIR_R5_2026-10-27_zh-HK.md)。R4獨立hair identity FAIL後優先改主掃與髮根，再用內部截面修側後量體；R5身份／原圖畫風仍未接受，無衣物／材質／rig／動畫／細髮進展。
+- 七個獨立封邊兩層12×6cage及subdivision1維持，其中主瀏海／太陽穴／三後流面／局部根接面六個有獨立Bezier spine，與兩邊界共同決定真正曲截面；20條原生Bezier guides和控制屬性保留，guide參照非live驅動。主掃從偏側分線下降向自身右眉，中段cage中心偏離border直連約12.9–39.3mm；側後外鼓內收、根部收束局部overlap減冠頂大缺口。無全頭fusion／voxelremesh／global smoothing／decimation；同髮7,952tri／全49,368tri，不靠加面數。自檢瀏海仍太寬切齊、overlap硬轉、後髮偏重規整，下一步仍獨立判主掃及冠根，不宣稱style過。
+- R4全部非髮含髮夾27組position-normal-index streams/TRS逐byte同；夾控制JSON固定R4未重新移位。R3face-feature-body24組／R2頰顎鼻額頸耳和45mm offset另驗保留；7灰材質／studio camera-light TS／29已過資產作者檔及720原application保護檔全同。新GLB5meshes／10primitives／902,132bytes，零images/skins/animations，作者場景121,064tri，不bulk／無LOD-device接受。
+- 本輪Blender4.3.2／GLB0error-warning／scope-nonhair27streams-material-assets／來源read-only眼孔頸位clip／20guides-6internalspines截面取樣／strict作者TS／finalbuild通過；source-dist-studio-game實載SHA同，R4/R5正常camera及全燈／studio光逐值同。freshSandbox真UI買3杯5000→4790／stock3／原display3槽2／reload逐值同／Low→High／Normal隔離不變／0pageerror。前302tests-content-replay-legacychecks未重跑，SwiftShader非physicalGPU/FPS/audio/native／完整舊動作或美術認證。
+- feetY0、兩真眼孔各40evaluated邊、頸頭縱bounds overlap58.38mm／chin至凍結衣頂35.18mm保留。原位自身左+X夾156頂點unsigned髮面距離0.103–6.171mm／mean3.267mm，非signedcollision或完整attachmentcert；局部髮根overlap不是整頭watertight焊接。Library同image `libfile_0224bad58e5881918df7c73f50e81481`更新version4／file`file_000000003850821199984010a36feb86`／641,214bytes，舊0–3全保留。
+- PlanB仍初次＋唯一fresh supported retry兩次官方helper exit1／`library file transfer failed: download failed`，兩目的地無ZIP／新圖／本機SHA，原因未明非denial；無新retry或替代下載，精確無secret原記錄保留、側背推定。PR建立維持先前拒絕停止，無retry／換route；main／PR8未寫，無merge／Site公開／payments／玩家Normal改動。除PlanB未比對外，無其他操作阻塞；證據只推隔離分支。
 
 ## Misaki R4只改獨立髮束控制曲面／identity仍未接受 — 2026-10-27T23:22:14+08:00
 

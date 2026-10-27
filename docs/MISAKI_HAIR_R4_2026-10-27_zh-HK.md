@@ -1,5 +1,7 @@
 # Misaki R4 — 只改髮束控制曲面，身份仍未接受
 
+獨立覆核已判 **R4 hair identity FAIL**：主瀏海仍高平／額位過露及冠根斷續；[R5改用獨立內部截面控制](MISAKI_HAIR_R5_2026-10-27_zh-HK.md)，保留全部非髮幾何。以下為原固定候選紀錄。
+
 Source `42d99f7d01515577e46605fa43f635e0708ee3e0`，只在未合併的 `codex/asset-foundation-v1`。R3 獨立 identity gate **FAIL**：球形基礎控制加 6mm voxel fusion 及 12 次全局 smoothing 抹掉髮束流向／重疊。這次換作者方法，不把問題說成三角面預算或引擎瓶頸；**R4 仍未獲身份／原圖畫風接受**。
 
 ![原圖／R3／R4同近似頭尺度三分四](reviews/evidence/misaki-grayform-v1-r4/original-r3-r4-threequarter-head480.png)

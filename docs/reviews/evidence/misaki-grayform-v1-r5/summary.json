@@ -1,0 +1,174 @@
+{
+  "source": "1e9680481bc16273b09bd1db39917dc06ba0f276",
+  "priorHeadSource": "42d99f7d01515577e46605fa43f635e0708ee3e0",
+  "scope": "hair only; independent main sweep cross-sections and gathered roots, then side/back internal sections; all R4 non-hair geometry frozen",
+  "priorVerdict": "R4 independent hair identity FAIL: main fringe high/flat and crown-root gaps",
+  "R5Verdict": "identity/style unaccepted; lower broad sweep and reduced crown openings; broad cut-looking fringe edge, root overlap turns and heavy regular rear remain",
+  "reference": "actual canonical pixels only; same R4/R5 model camera/crop; canonical pose/projection differs; side/back inferred",
+  "PlanB": "initial and only fresh authorized supported retry failed; stopped, no new transfer",
+  "canonicalSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+  "sha256": "d8683a45bf52cb06c1e00d8658da6130201d0f484ce1c39bea392927bce7aa36",
+  "bytes": 902132,
+  "triangles": 49368,
+  "deltaFromR4": 0,
+  "runtimeHairTriangles": 7952,
+  "meshes": 5,
+  "primitives": 10,
+  "materials": 7,
+  "images": 0,
+  "skins": 0,
+  "animations": 0,
+  "sourceMeshObjects": 44,
+  "hairMethod": "independent internal spine and borders for varying curved cross-sections; six flow clumps plus local crown root join; local subdivision1 only, no global fusion or smoothing",
+  "hairSurfaces": 7,
+  "independentInternalSpines": 6,
+  "nativeBezierGuides": 20,
+  "mainClumpInternalSections": [
+    {
+      "sourceRow": 2,
+      "centreMinusBorderChord": [
+        0.006001374684274197,
+        -0.0031978562474250793,
+        0.01094973087310791
+      ],
+      "distance": 0.012889506967908136
+    },
+    {
+      "sourceRow": 3,
+      "centreMinusBorderChord": [
+        0.012089082039892673,
+        -0.012315809726715088,
+        0.015373826026916504
+      ],
+      "distance": 0.02311232552862096
+    },
+    {
+      "sourceRow": 4,
+      "centreMinusBorderChord": [
+        0.017730779945850372,
+        -0.019999250769615173,
+        0.017540574073791504
+      ],
+      "distance": 0.03196908403328836
+    },
+    {
+      "sourceRow": 5,
+      "centreMinusBorderChord": [
+        0.021260526031255722,
+        -0.02554735541343689,
+        0.017327308654785156
+      ],
+      "distance": 0.037482168663252546
+    },
+    {
+      "sourceRow": 6,
+      "centreMinusBorderChord": [
+        0.021366916596889496,
+        -0.029401689767837524,
+        0.015013694763183594
+      ],
+      "distance": 0.039324490199450474
+    },
+    {
+      "sourceRow": 7,
+      "centreMinusBorderChord": [
+        0.016775354743003845,
+        -0.031337037682533264,
+        0.011680841445922852
+      ],
+      "distance": 0.037414763334893346
+    },
+    {
+      "sourceRow": 8,
+      "centreMinusBorderChord": [
+        0.00940200686454773,
+        -0.031964510679244995,
+        0.009035587310791016
+      ],
+      "distance": 0.03452201430849458
+    },
+    {
+      "sourceRow": 9,
+      "centreMinusBorderChord": [
+        0.0019316896796226501,
+        -0.03205190598964691,
+        0.007586836814880371
+      ],
+      "distance": 0.03299418465530177
+    }
+  ],
+  "noGlobalHairFusionOrSmoothing": true,
+  "frozenR4NonHairStreams": 27,
+  "allR4NonHairGeometryTRSFrozen": true,
+  "frozenR3FaceFeatureBodyStreams": 24,
+  "R2FaceProfileNeckEarDefinitionsFrozen": true,
+  "frozenBodySource": "038740fbd7f6428cc82d5f442646c2d86a4143e3",
+  "frozenBodyStreams": 12,
+  "all7GrayMaterialDefinitionsFrozen": true,
+  "R4PaperFrozenFiles": 29,
+  "protectedOriginalApplicationFiles": 720,
+  "soleY": 0,
+  "height": 1.477132435888052,
+  "headOffset": 0.045,
+  "headRatioTarget": null,
+  "eyeApertureBoundaryLoops": [
+    40,
+    40
+  ],
+  "neckHeadBoundsOverlap": 0.05838418006896973,
+  "chinToFrozenClothingTop": 0.03517806529998779,
+  "clipGeometryFrozenFromR4": true,
+  "clipAttachment": {
+    "sampledEvaluatedClipVertices": 156,
+    "minDistance": 0.00010347599891247228,
+    "meanDistance": 0.0032665101444320334,
+    "maxDistance": 0.006171149201691151,
+    "limits": "Unsigned sampled vertex-to-hair distance, not collision/attachment certification."
+  },
+  "prototypeTotalTriangles": 121064,
+  "sourceDistStudioGameBytesMatch": true,
+  "R4R5CameraAndLightingMatch": true,
+  "lifecycle": {
+    "buy3": true,
+    "cashBefore": 5000,
+    "cashAfter": 4790,
+    "stock": 3,
+    "shelf": 2,
+    "reloadEqual": true,
+    "lowHighRetained": true,
+    "normalUnchanged": true
+  },
+  "pageErrors": [],
+  "newChecks": [
+    "Blender4.3.2",
+    "strict GLB0errors/warnings",
+    "every non-hair group27streams/TRS frozen including clip; R3face-feature-body24streams frozen",
+    "7gray materials,29accepted files,720original app files unchanged",
+    "read-only source eyes/neck/clip/20guides/6internalspines and measured primary sections",
+    "strict authoring TS node,vite/client; finalbuild; dist-source identity",
+    "7actual engine captures and freshSandbox UI lifecycle"
+  ],
+  "priorTestsNotRepeated": [
+    "302 app tests",
+    "content validation",
+    "replay",
+    "legacy asset checks"
+  ],
+  "Library": {
+    "library_file_id": "libfile_0224bad58e5881918df7c73f50e81481",
+    "file_id": "file_000000003850821199984010a36feb86",
+    "file_name": "grayform-game-normal.png",
+    "current_version_number": 4,
+    "file_size_bytes": 641214
+  },
+  "limits": [
+    "Counts/geometry checks are not identity/style acceptance",
+    "No global fusion: local overlap boundaries are not watertight welds",
+    "Current unsigned clip distance sampling is not signed collision or attachment certification",
+    "Side/back inferred; PlanB stopped after2failures",
+    "Guides document controls, not live cage drivers",
+    "No final retopo/rig/animation/clothing advance",
+    "Static SwiftShader not physicalGPU/FPS/audio/native/full old actions",
+    "No triangle-budget or engine-bottleneck conclusion"
+  ]
+}
