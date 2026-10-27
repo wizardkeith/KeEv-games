@@ -1,0 +1,99 @@
+{
+  "id": "paper-foundation-v1",
+  "units": "metres",
+  "axes": "glTF RH Y-up",
+  "reference": "Approved_Visual_Target_Misaki.png",
+  "referenceSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+  "R4FrozenSource": "70746f7269bf4b1ac27e1eed87146532cf413866",
+  "R4BlendSha256": "905a306db4ce88cf3ce1e8f22bc0538ca0d0b880f6573432c3fe90b5f30a5e5a",
+  "contactNormalization": {
+    "tiered-riser": 0.0,
+    "shallow-tray": 0.0,
+    "book-stack": 0.0,
+    "paper-stack": 0.0,
+    "folded-card": -0.00010945031681330875
+  },
+  "placements": {
+    "tiered-riser": [
+      [
+        0.07,
+        0.06,
+        0
+      ],
+      0
+    ],
+    "shallow-tray": [
+      [
+        0.07,
+        -0.015,
+        0
+      ],
+      0
+    ],
+    "book-stack": [
+      [
+        -0.01,
+        0.115,
+        0.26
+      ],
+      -0.035
+    ],
+    "paper-stack": [
+      [
+        0.07,
+        -0.04,
+        0.012
+      ],
+      0.018
+    ],
+    "folded-card": [
+      [
+        0.255,
+        0.105,
+        0.26
+      ],
+      -0.12
+    ]
+  },
+  "books": [
+    [
+      0.305,
+      0.225,
+      0.03,
+      1,
+      [
+        0,
+        0
+      ],
+      -0.018
+    ],
+    [
+      0.285,
+      0.205,
+      0.013,
+      2,
+      [
+        0.003,
+        -0.003
+      ],
+      0.026
+    ],
+    [
+      0.3,
+      0.215,
+      0.021,
+      0,
+      [
+        -0.004,
+        0.004
+      ],
+      -0.038
+    ]
+  ],
+  "limits": [
+    "Decorative prototype, no inventory grant",
+    "R4 main-shape gate passed; overall style not accepted",
+    "No new lighting, whole-shop assembly, character or release"
+  ],
+  "rebuild": "blender -b -t 2 --python tools/asset-foundation/build-paper.py"
+}
