@@ -1,4 +1,4 @@
-"""Paper/display foundation v1. New components only; R4 source/assets frozen.
+"""Paper/display foundation v1 R2. Group hierarchy only; R4 frozen.
 blender -b -t 2 --python tools/asset-foundation/build-paper.py
 Metres, Blender Z-up -> standard glTF RH Y-up. No SKU or save changes.
 """
@@ -75,12 +75,13 @@ def book(name,w,d,h,m):
  mesh(name+' • rounded binding',vs,fs,m,True)
  return current[objects_before:]
 
-# An open riser, not a solid stair block. Lower tier is a separate reusable tray.
+# R2: experimental 43% of R4 table width; height/board thickness remain v1.
+# Lower tray/paper move forward and laterally; four reviewed standalone props freeze.
 current=[]
-for i,y in enumerate([-.01025,.12025]):box('Riser top • separate board '+str(i),(0,y,.248),(.58,.1295,.024),wood[i],.004)
-for x in [-.255,.255]:
+for i,y in enumerate([-.01025,.12025]):box('Riser top • separate board '+str(i),(0,y,.248),(.80,.1295,.024),wood[i],.004)
+for x in [-.365,.365]:
  for y in [-.065,.155]:box('Riser foot/post',(x,y,.118),(.027,.027,.236),wood[1],.003)
-for y in [-.065,.155]:box('Riser housed bearer',(0,y,.220),(.51,.022,.032),wood[0],.0025)
+for y in [-.065,.155]:box('Riser housed bearer',(0,y,.220),(.73,.022,.032),wood[0],.0025)
 components['tiered-riser']=current
 
 current=[]
@@ -132,9 +133,9 @@ def export(objects,path):
  for o in baked:bpy.data.objects.remove(o,do_unlink=True)
 
 for key,objects in components.items():export(objects,OUT/(key+'.glb'))
-placements={'tiered-riser':((.07,.060,0),0),'shallow-tray':((.07,-.015,0),0),
- 'book-stack':((-.010,.115,.260),-.035),'paper-stack':((.07,-.040,.012),.018),
- 'folded-card':((.255,.105,.260),-.12)}
+placements={'tiered-riser':((-.05,.060,0),0),'shallow-tray':((.22,-.230,0),0),
+ 'book-stack':((-.17,.115,.260),-.035),'paper-stack':((.22,-.250,.012),.018),
+ 'folded-card':((.22,.105,.260),-.12)}
 for key,(position,yaw)in placements.items():move(components[key],position,yaw)
 export([o for group in components.values()for o in group],OUT/'paper-display-set.glb')
 bpy.ops.wm.save_as_mainfile(filepath=str(SRC/'paper-display-set.blend'))

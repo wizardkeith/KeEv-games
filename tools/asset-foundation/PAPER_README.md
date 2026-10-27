@@ -1,5 +1,8 @@
-# Paper / display foundation v1
+# Paper / display foundation v1 R2
 
+Independent v1 review provisionally passed individual forms, but FAILED grouped
+display hierarchy. R2 widens the riser and offsets upper/lower paper footprints;
+it preserves height, board/post thickness, covers, spines and materials.
 New representative component set after independent R4 MAIN-SHAPE PASS. Overall
 style remains unaccepted. R4's crown/cloth, ceramic forms and material response
 are frozen; no original asset or R4 generator is rebuilt by this stage.
@@ -28,7 +31,7 @@ R4 generator/assets. Editable source preserves individual boards/posts,
 continuous curved bindings, overhanging covers, page blocks and paper leaves.
 Only evaluated export copies are merged by semantic component.
 
-- `tiered-riser.glb`: open.58m-wide upper platform atY=.260m, two24mm boards,
+- `tiered-riser.glb`: open.80m-wide upper platform atY=.260m, two24mm boards,
   four27mm posts and housed bearers;864tri.
 - `shallow-tray.glb`: separate hollow tray.46×.27m,12mm floor and9mm rims,
   height.036m;540tri.
@@ -47,9 +50,16 @@ Only evaluated export copies are merged by semantic component.
 Units/metres; Blender Z-up exports standard glTF RH Y-up. Each standalone
 component has actual transformed minimumY=0. In the assembly the book/card sit
 on the riser atY=.260, and the paper block sits on the tray floor atY=.012.
+The .80m riser is43.01% of the1.86m R4 table width, an experimental proportion,
+not a recovered target measurement. Its centreX=-.05; booksX=-.17, trayX=.22
+and forwardY=-.230 (Blender axes), paperY=-.250. The complete tray footprint is
+76.5mm in front of the riser footprint; upper/lower paper are laterally separate.
 The GLB validator checks these contacts, support/opening footprints, finite
 standard assets, the modest triangle budget and all21 frozen R4 files bytewise.
+Four reviewed standalone GLBs (tray/books/paper/card) are byte-identical to v1.
 These checks do not certify arbitrary collision, physical performance or art.
+Current validation/capture/comparison outputs go to
+`docs/reviews/evidence/asset-foundation-paper-v1-r2`; v1 evidence is preserved.
 
 ## Real game fixture
 
