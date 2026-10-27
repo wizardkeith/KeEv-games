@@ -1,10 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T12:02:02+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T12:16:31+08:00** (Asia/Hong_Kong).
 
-## V11 C46方向窗光開發控制進行中 — 2026-10-27T12:02:02+08:00
+## V11 C46方向窗光固定控制／待獨立看圖 — 2026-10-27T12:16:31+08:00
 
-- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)應用來源已推送`875d43351bc0644ef0411d0a7a61ae5d0b7e9343`。C45獨立開發採用PASS並鎖定；C46以遠距窄角世界窗洞光測試全景受光方向，平行光控制不足未採用，普通預設仍C45／.20 AO，公開V17不變。285tests／146GLB／305保護檔／510資產重建通過；正常及雙斜角對照、隔離Sandbox庫存與Low/ReduceMotion來源證據收尾中，尚未宣稱C46視覺或整體原圖PASS。main只存文件進度指標，功能未合併；沒有merge／Site發佈／玩家Normal／Chrome或Unity操作，無使用者動作阻塞。
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送`7b49d264ed03c8e82164e81dfdffd33463729d20`／application`875d43351bc0644ef0411d0a7a61ae5d0b7e9343`；[原圖／C45／C46正常480px、雙斜角、Low/RM、stock及來源原片](https://github.com/wizardkeith/KeEv-games/blob/7b49d264ed03c8e82164e81dfdffd33463729d20/docs/V11_C46_DIRECTIONAL_WINDOW_2026-10-27_zh-HK.md)。C45獨立開發採用PASS並鎖定；C46遠距窄角世界窗洞光只屬explicit-daylight開發候選，普通仍C45／.20 AO，**未採用／整體原圖仍未接受**。實拍窗側桌面與地板方向亮區可見，但規整光帶、米棕中間調與重灰屋面仍距原圖遠，交固定全景覆核，非完成原圖重建。
+- 285tests／tsc-build-validate-replay-assetcheck、146GLB零錯警告、305保護檔、510資產重建前後byte同，317模型貼圖反射原bytes保留；兩組195runtime對上推送來源。七真UI stock／會計、四Low-High、三Low/ReduceMotion、售罄reload／素材SHA通過，fresh隔離Normal不變／0pageerror。310.800秒原片僅183來源幀，中位1.88秒／最大7.71秒，不是連續動作／完成GPU畫格／實體GPU-FPS-audio-native認證，無新完整B／handoff／closure-hidden-tab／五語窄UI驗收；18件+¥8,400明確是批次結算毛利。main只更新文件指標，功能未合併／PR8仍Draft，本輪未改公開V17，無Site／玩家Normal／Chrome／Unity／Library或LTC重試／關機。source/evidence已推送，無未推送tracked改動；既有兩個未追蹤master備份及node_modules連結保留。無使用者動作阻塞；下一步獨立全景覆核後持續原圖重建，保留已過AO及模型材質。
 
 ## V11 C45開發預設採用固定候選／待覆核 — 2026-10-27T11:13:29+08:00
 
