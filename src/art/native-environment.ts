@@ -2,6 +2,8 @@
  * Recipes feed the actual world adapter and can be rebuilt without Babylon.
  * The historical W1.1A recipe remains intact for its frozen master exports.
  */
+import {buildV10Room,buildV10Counter,buildV10Display,buildV10Door,buildV10Sign,buildV10Plant,buildV10Exterior} from './shop-v10';
+import type {NativeSurface} from './native-characters';
 import {roomRecipe,counterRecipe,displayRecipe,palette,type Part,type V3} from './recipes';
 import type {MaterialRole} from './materials';
 
@@ -17,7 +19,7 @@ export const nativeDoorContract=Object.freeze({
  crossingOpenRadians:1.30,signPivot:[.80,1.56,-.073] as V3,
 });
 
-export function nativeRoomRecipe():NativeEnvironmentPart[]{
+export function legacyV9_nativeRoomRecipe():NativeEnvironmentPart[]{
  // These five pieces are the frozen full back wall, full-width skirting,
  // decorative solid door panel, old glass, and old handle respectively.
  // Removing only the glass would leave both an opaque wall and opaque panel.
@@ -53,7 +55,7 @@ export function nativeRoomRecipe():NativeEnvironmentPart[]{
 }
 
 /** Local to the contract hinge. Negative Y rotation opens toward exterior +Z. */
-export function doorLeafRecipe():Part[]{
+export function legacyV9_doorLeafRecipe():Part[]{
  const wood='#AC805B',width=nativeDoorContract.leafWidth,height=2.47;
  return [
   round([.065,height,.105],[.0325,height/2,0],wood,.012),
@@ -68,16 +70,16 @@ export function doorLeafRecipe():Part[]{
 }
 
 /** Parent this lightweight sign to the door at nativeDoorContract.signPivot. */
-export function doorSignRecipe():Part[]{return [
+export function legacyV9_doorSignRecipe():Part[]{return [
  round([.30,.13,.018],[0,-.09,0],'#E5D9BF',.014,'paper'),
  part('box',[.004,.07,.004],[-.10,-.025,0],palette.dark),
  part('box',[.004,.07,.004],[.10,-.025,0],palette.dark),
  part('sphere',[.09,.032,.006],[0,-.09,-.012],palette.sage,'ink'),
  ];}
 
-export interface NativeLeafCluster {pivot:V3;recipe:Part[];}
-export interface NativePlantParts {base:Part[];leaves:NativeLeafCluster[];}
-export function plantParts(scale=1):NativePlantParts{
+export interface NativeLeafCluster {pivot:V3;recipe:NativeSurface[];}
+export interface NativePlantParts {base:NativeSurface[];leaves:NativeLeafCluster[];}
+export function legacyV9_plantParts(scale=1):NativePlantParts{
  if(!Number.isFinite(scale)||scale<=0)throw new RangeError('positive plant scale');
  const scaled=(p:Part):Part=>({...p,size:p.size.map(v=>v*scale) as V3,at:p.at.map(v=>v*scale) as V3});
  const base:Part[]=[
@@ -102,7 +104,7 @@ export function plantParts(scale=1):NativePlantParts{
  * Low rooflines, paired pitched roof planes, ridges, recessed window bays and
  * a small chimney read as architecture rather than exposed tall test boxes.
  * It remains scenery, never a new map or player destination. */
-export function exteriorRecipe():Part[]{
+export function legacyV9_exteriorRecipe():Part[]{
  const result:Part[]=[
   round([2.0,.09,6.2],[-5.45,-.015,0],'#BCC6BA',.03),
  ];
@@ -130,7 +132,7 @@ export function exteriorRecipe():Part[]{
  return result;
 }
 
-export function nativeCounterRecipe():NativeEnvironmentPart[]{return [...counterRecipe().filter((_,i)=>i<2||i>6).map((p,i)=>i===0?{...p,color:'#D1AF86',roughness:.57}:i===1?{...p,color:'#B28C67'}:p),
+export function legacyV9_nativeCounterRecipe():NativeEnvironmentPart[]{return [...counterRecipe().filter((_,i)=>i<2||i>6).map((p,i)=>i===0?{...p,color:'#D1AF86',roughness:.57}:i===1?{...p,color:'#B28C67'}:p),
  // Recesses, a bevel beneath the thick top, and restrained drawer construction.
 
  round([1.65,.065,.65],[0,.050,0],'#77583F',.014),
@@ -147,7 +149,7 @@ export function nativeCounterRecipe():NativeEnvironmentPart[]{return [...counter
 
  ];}
 
-export function nativeDisplayRecipe(variant=0):NativeEnvironmentPart[]{return [...displayRecipe().map((p,i)=>i===0?{...p,color:'#D0AF85',roughness:.64}:p.role==='wood'&&p.color===palette.dark?{...p,color:'#806B58'}:p),
+export function legacyV9_nativeDisplayRecipe(variant=0):NativeEnvironmentPart[]{return [...displayRecipe().map((p,i)=>i===0?{...p,color:'#D0AF85',roughness:.64}:p.role==='wood'&&p.color===palette.dark?{...p,color:'#806B58'}:p),
  round([1.49,.020,.86],[0,.879,0],'#B89268',.008),
  // Existing upright price card retained; spare underside trim budget moves
  // to the visible back cabinet in the room recipe.
@@ -157,3 +159,9 @@ export function nativeDisplayRecipe(variant=0):NativeEnvironmentPart[]{return [.
  round([.50,.27,.012],[variant===1?-.20:.12,.865,-.472],variant===2?'#DCE0CD':'#E9DCC3',.006,'fabric'),
  round([.50,.016,.017],[variant===1?-.20:.12,.734,-.473],'#C2B49A',.005,'fabric'),
  ];}
+
+// Active V10 assets, preserving structural contracts and named animation roots.
+export const nativeRoomRecipe=()=>buildV10Room(nativeDoorContract);
+export const nativeCounterRecipe=buildV10Counter,nativeDisplayRecipe=buildV10Display;
+export const doorLeafRecipe=()=>buildV10Door(nativeDoorContract.leafWidth),doorSignRecipe=buildV10Sign;
+export const plantParts=buildV10Plant,exteriorRecipe=buildV10Exterior;

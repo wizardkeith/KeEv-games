@@ -1,0 +1,18 @@
+{
+  "application": "0626469e7d376fe7cd1962370e2955017154bacf",
+  "uiLifePriorExecution": "770e09ce356977b51e3f8a864dd7239ef52d80fd",
+  "highArtLifecycleSaveExecution": "9758ca19cdd090eed0d0a366c2d4d94866db3755",
+  "unchangedPathsSinceUIExecution": [
+    "src/ui",
+    "src/core",
+    "src/platform",
+    "src/content",
+    "src/locales",
+    "src/main.ts",
+    "src/style.css",
+    "src/presentation"
+  ],
+  "changes": [],
+  "finalWorldDeltaSinceHighArt": "diff --git a/src/world.ts b/src/world.ts\nindex 4075698..2fe19a3 100644\n--- a/src/world.ts\n+++ b/src/world.ts\n@@ -157,7 +157,7 @@ export async function createWorld(canvas:HTMLCanvasElement,onSlot:(n:number)=>vo\n   const arrival=routeFrame.actors.some(a=>a.enabled&&a.state==='entering');if(arrival&&!previousArrival&&!nativePresentation.current)gestureClock.start('greet',policy);previousArrival=arrival;\n    service=delivery.tick(seconds,nativePresentation,routes,nativePolicy,nativeActors.workReady(),nativeActors.handoffReady());const greet=gestureClock.active;routeFrame=routes.tick(0,{open:trading,visible:true,reduceMotion:reduced.matches,capacity:nativePolicy.customerCapacity,staff:nativeActors.staffPosition(),serviceStaffReady:nativeActors.workReady()});\n    nativeActors.frame(seconds,nativePolicy,routeFrame,service,greet?.kind==='greet'?greet.elapsed/greet.duration:undefined,!!nativePresentation.current);\n-   const lifeMotion=nativeActors.metrics();life.tick(seconds,routeFrame,{target:lifeMotion.greetingTargetId,kind:lifeMotion.greetingKind,elapsed:lifeMotion.localGreeting},nativePolicy.nativeMotion&&trading&&!panelOpen&&!document.querySelector('#day1-story')&&!clock.active&&!nativePresentation.current&&!activeMargin&&pendingMargins.size===0,!!shelfContents.some(Boolean));\n+   const lifeMotion=nativeActors.metrics();life.tick(seconds,routeFrame,{target:lifeMotion.greetingTargetId,kind:lifeMotion.greetingKind,elapsed:lifeMotion.localGreeting},nativePolicy.nativeMotion&&trading&&!panelOpen&&!document.querySelector('#day1-story')&&!clock.active&&!nativePresentation.current&&!activeMargin&&pendingMargins.size===0,productRoots.some(root=>root.getChildren().length>0));\n    if(service?.cue.kind==='sale'&&service.progress>=.72){const item=pendingMargins.get(service.receiptRevision);if(item){showMargin(item.payload);pendingMargins.delete(service.receiptRevision);}}\n   }\n   currentRoutes=routeFrame;\n",
+  "interpretation": "Final app adds only actual product-child gating for browse remarks after the apron-only character fix. Final empty-stock and five-locale life browser run covers this predicate. High/art/lifecycle/save evidence executes identical final character, motion and accounting sources; UI55-case evidence is attributed per directory, not falsely all rerun at final head."
+}

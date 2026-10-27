@@ -1,7 +1,7 @@
 import {productRecipe,type Part} from './recipes';
 /** Small native-v3 finishing pass. IDs, selection, quantities and A1 mug walls
  * are unchanged. The wrapper adds geometry, never authoritative shelf objects. */
-export function nativeProductRecipe(id:string,color:string):Part[]{
+export function legacyV9ProductRecipe(id:string,color:string):Part[]{
  const base=productRecipe(id,color);
  if(id==='off.mug')return [...base,
   {shape:'torus',size:[.239,.008,.239],at:[0,.053,0],color:'#D8C5A9',role:'ceramic'},
@@ -20,3 +20,5 @@ export function nativeProductRecipe(id:string,color:string):Part[]{
  ];
  return base;
 }
+
+export {buildV10Product as nativeProductRecipe} from './products-v10';

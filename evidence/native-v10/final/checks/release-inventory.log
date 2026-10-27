@@ -1,0 +1,5 @@
+Aligned six-column inventory table; native vertical wheel; no rail; all 580px drawers preserve orbit/zoom/target
+Keyboard quantity → buy → place → real shelf placement; buy focus and vertical position retained
+Invalid, repeated, delayed and aborted real writes remain atomic and capture original quantity once
+Selected vase, raw 007 and per-filter vertical position survive search/filter round trip, panels and reload
+20 five-locale short/narrow touch buy/place cases; 44px controls; no horizontal or nested scrolling; reduced motion; Normal unchanged

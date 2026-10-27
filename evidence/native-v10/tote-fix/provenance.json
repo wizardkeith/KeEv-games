@@ -1,0 +1,115 @@
+{
+  "application": "b06247fcae6d02a69e8cff56e2ace124f4bfc883",
+  "beforeApplication": "0626469e7d376fe7cd1962370e2955017154bacf",
+  "scope": "Author self-check of tote P2 only; independent re-review pending",
+  "files": {
+    "before-recipe.json": {
+      "bytes": 138379,
+      "sha256": "266be736dc69972822aee69b9b1dc4776f9aab7ff0979544558ea9e0ef36c380"
+    },
+    "studio/after-side.png": {
+      "bytes": 141708,
+      "sha256": "c890361fa25e8200321b1577d0ba4f2f137dd02aff63bf158edc49cb76a3142a"
+    },
+    "studio/before-front.png": {
+      "bytes": 154257,
+      "sha256": "e3fc6668482708739c5b8d4da083387f765c87982521e5916218b4c4630d7d2e"
+    },
+    "studio/results.json": {
+      "bytes": 2891,
+      "sha256": "f71174c653d7081cf4289f911247f7ab65c82e6d03ba233a35a7e2afa053eac2"
+    },
+    "studio/before-side.png": {
+      "bytes": 73437,
+      "sha256": "d44ea937ea9d30cf4c31f9d3bbc57ce29a354b92045b1bc70cafea6af9ce9a00"
+    },
+    "studio/after-front.png": {
+      "bytes": 261113,
+      "sha256": "75e91bde37e954d9cc159f02b30f7d40491255e961d5147e4813773b6f5f8460"
+    },
+    "delivery/receipt.json": {
+      "bytes": 21796,
+      "sha256": "d9759f78b8df86be2be74c2cb39f66ab827c011be93e67403c5066dba7eab27d"
+    },
+    "delivery/NextStopLittleShop-v10-deploy.tar.gz": {
+      "bytes": 6304337,
+      "sha256": "4b6d1d360489bd0034d12202f71de32c9b37af5f99110e241c3d67c47dc8297a"
+    },
+    "play/tote-after-reload.png": {
+      "bytes": 475621,
+      "sha256": "e7842dfc2f914301ae2b4a2979ca5a79b449f77cc1e0bcc770256f8f432c1a1e"
+    },
+    "play/tote-in-shop.png": {
+      "bytes": 482939,
+      "sha256": "4fe4e8e2877215f161b38303a4d5c7036bd605fe5f567058b20d4ae562ef3252"
+    },
+    "play/results.json": {
+      "bytes": 757,
+      "sha256": "71c37392fbf344780185f0b2296f555341ec10b4588a82f324c3d61952d34b3a"
+    },
+    "play/purchase-place-reload-full.webm": {
+      "bytes": 2570169,
+      "sha256": "0c93894b14b8eaf371f1749ff606472801f78f083f16d65eb9f687d6ce0cb366"
+    },
+    "checks/replay.log": {
+      "bytes": 421,
+      "sha256": "67beb9a30e2f137d3025faa962d635b85a8275a326918698204bc5e1becbf447"
+    },
+    "checks/174-tests.log": {
+      "bytes": 22265,
+      "sha256": "c71118fc591757905bf802a98fc554d8314bbb44aa2d7ff6bc6420cb72b5d035"
+    },
+    "checks/locomotion.json": {
+      "bytes": 1642,
+      "sha256": "02316d0a033e40b6d9dc2355c88e3f29c7d7d2b20c35e64c85614ec96ac72a45"
+    },
+    "checks/asset-check.log": {
+      "bytes": 2917,
+      "sha256": "04d31a908a4425d5a0cc612197dd214203b0110c294e5de8d67b423ca7e44b58"
+    },
+    "checks/attachment-and-apron-tests.log": {
+      "bytes": 443,
+      "sha256": "69bdc248d39592ff1987556108f7d87d706cd4fee27096aaddb2ed79d7c887dd"
+    },
+    "checks/glb-parity.json": {
+      "bytes": 321,
+      "sha256": "b34740720c8e115e578f47ffbe47acaaf6c6ecd13ea691d0f5f38e84a760a5e5"
+    },
+    "checks/content.log": {
+      "bytes": 599,
+      "sha256": "d8cf77a1e38e0b04929bd0774b8f25dee39e9ff7717ea0b8ef7fe1e5a477369b"
+    },
+    "checks/attachments.json": {
+      "bytes": 3047,
+      "sha256": "30c70310bc8bb035e2bd732d26faeda7c066ade329b547ad1edb856c9549d1ed"
+    },
+    "checks/build.log": {
+      "bytes": 5845,
+      "sha256": "9c774786657460cbf73acdbc37618b3471161ccbf80000d5e7ca0a8134414114"
+    },
+    "checks/139-glbs.json": {
+      "bytes": 13057,
+      "sha256": "071c3ec6b7b3d2d79a0fafa72ca8faa46f501beaea243844e2fba50fd72121fe"
+    },
+    "checks/asset-rebuild.json": {
+      "bytes": 126,
+      "sha256": "6b196a87bd6c63ead02b4e7a0eac58f181b08608bc3f8c4f3753a6d2e7a2803e"
+    },
+    "checks/browser-build-parity.json": {
+      "bytes": 81,
+      "sha256": "a063d5c2209636f9983fded0d3e6332809cc2362e566d8126edd194d29531976"
+    },
+    "checks/scope.json": {
+      "bytes": 1491,
+      "sha256": "a28d74fffe5ad8536c4b713e5eff00afab8ad5e5c8c0d9bbd1041a770f94ddeb"
+    },
+    "checks/geometry.log": {
+      "bytes": 251,
+      "sha256": "0abe086642f797aa434ed1a83402e2fa20dc0034ee91ba21b9e0eaeb2a8e8f14"
+    },
+    "checks/preservation.json": {
+      "bytes": 14063,
+      "sha256": "4e33edb656b631d68793e60d41beae64d5612b2da6e953df5d8af6ecfeb52d48"
+    }
+  }
+}

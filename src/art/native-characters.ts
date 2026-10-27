@@ -2,16 +2,18 @@
  * All node translations are LOCAL to the named parent. All surfaces are LOCAL
  * to their node. A rigid articulated hierarchy, deliberately no skin/clip claims.
  */
+import {sculptTangents} from './sculpt-v10';
+import {buildV10Character} from './characters-v10';
 import {geometry,type Geometry} from './geometry';
 import type {MaterialRole} from './materials';
 import {nativeMaterialIntent} from './native-materials';
 import type {Part,V3} from './recipes';
 export type NativeCharacterKind='misaki'|'visitor-a'|'visitor-b';
-export interface NativeMesh {shape:'mesh';at:V3;color:string;role:MaterialRole;geometry:Geometry;alpha?:number;roughness?:number;}
+export interface NativeMesh {shape:'mesh';at:V3;color:string;role:MaterialRole;geometry:Geometry&{uvs?:number[]};alpha?:number;roughness?:number;}
 export type NativePrimitive=Part&{roughness?:number};
 export type NativeSurface=NativePrimitive|NativeMesh;
 export interface NativePart {id:string;parent?:string;pivot:V3;recipe:NativeSurface[];}
-export const nativeCharacterIdentity={version:'native-characters-v9-r1',misaki:{id:'actor.misaki.native.v3',economicBinding:'staff.graybox'},'visitor-a':{id:'actor.visitor-a.native.v3',economicBinding:null},'visitor-b':{id:'actor.visitor-b.native.v3',economicBinding:null}} as const;
+export const nativeCharacterIdentity={version:'native-characters-v10-r1',misaki:{id:'actor.misaki.native.v3',economicBinding:'staff.graybox'},'visitor-a':{id:'actor.visitor-a.native.v3',economicBinding:null},'visitor-b':{id:'actor.visitor-b.native.v3',economicBinding:null}} as const;
 const P={skin:'#F0C9B0',skinB:'#E1B99D',blush:'#D99D91',hair:'#654735',hairLight:'#87634C',sage:'#89A189',sageDark:'#607B6A',cream:'#F5EBDD',ivory:'#F1E6CF',plum:'#785A70',ink:'#57413D',shoe:'#59483F',sole:'#8C7764',terracotta:'#B77F62',blue:'#748F9D',trousers:'#555E61'};
 const p=(shape:Part['shape'],size:V3,at:V3,color:string,role:MaterialRole='fabric',extra:Partial<NativePrimitive>={}):NativePrimitive=>({shape,size,at,color,role,...extra});
 const round=(size:V3,at:V3,color:string,role:MaterialRole='fabric',radius=.014)=>p('round',size,at,color,role,{radius});
@@ -91,23 +93,23 @@ function apron():NativeMesh {
 }
 export function nativeSurfaceGeometry(surface:NativeSurface):Geometry & {uvs?:number[]} {
  if(surface.shape!=='mesh'){const g=geometry(surface),uvs:number[]=[];for(let i=0;i<g.positions.length;i+=3){const [x,y,z]=g.positions.slice(i,i+3),[nx,ny,nz]=g.normals.slice(i,i+3).map(Math.abs);uvs.push(...(ny>=nx&&ny>=nz?[x,z]:nx>=nz?[z,y]:[x,y]));}return {...g,uvs};}
- const g={positions:surface.geometry.positions.map((x,i)=>x+surface.at[i%3]),normals:[...surface.geometry.normals],indices:[...surface.geometry.indices],uvs:[] as number[]};
+ const authoredUV=surface.geometry.uvs;const g={positions:surface.geometry.positions.map((x,i)=>x+surface.at[i%3]),normals:[...surface.geometry.normals],indices:[...surface.geometry.indices],uvs:authoredUV?[...authoredUV]:[] as number[]};
  if(surface.role==='hair'&&surface.roughness===.60){
-  for(let i=0;i<g.positions.length;i+=3)g.uvs.push(Math.atan2(g.positions[i+2]-.028,g.positions[i])/(Math.PI*2)+.5,(g.positions[i+1]+.06)/.46);
+  if(!authoredUV)for(let i=0;i<g.positions.length;i+=3)g.uvs.push(Math.atan2(g.positions[i+2]-.028,g.positions[i])/(Math.PI*2)+.5,(g.positions[i+1]+.06)/.46);
   // Split wrap-crossing triangles without changing any rendered positions or
   // topology. Both Web and standard glTF receive these same seam vertices.
   const shifted=new Map<number,number>();
   for(let i=0;i<g.indices.length;i+=3){const ids=g.indices.slice(i,i+3),u=ids.map(n=>g.uvs[n*2]);if(Math.max(...u)-Math.min(...u)>.5)for(let k=0;k<3;k++){const n=ids[k];if(g.uvs[n*2]<.5){let copy=shifted.get(n);if(copy===undefined){copy=g.positions.length/3;g.positions.push(...g.positions.slice(n*3,n*3+3));g.normals.push(...g.normals.slice(n*3,n*3+3));g.uvs.push(g.uvs[n*2]+1,g.uvs[n*2+1]);shifted.set(n,copy);}g.indices[i+k]=copy;}}}
   // A cylindrical pole has no unique u. Give each cap triangle its own pole
   // corner at the adjacent strand mean, rather than stretching a wrap seam.
-  for(let i=0;i<g.indices.length;i+=3)for(let k=0;k<3;k++){const n=g.indices[i+k];if(Math.hypot(g.positions[n*3],g.positions[n*3+2]-.028)<1e-10){const a=g.indices[i+(k+1)%3],b=g.indices[i+(k+2)%3],copy=g.positions.length/3;g.positions.push(...g.positions.slice(n*3,n*3+3));g.normals.push(...g.normals.slice(n*3,n*3+3));g.uvs.push((g.uvs[a*2]+g.uvs[b*2])/2,g.uvs[n*2+1]);g.indices[i+k]=copy;}}
+  if(!authoredUV)for(let i=0;i<g.indices.length;i+=3)for(let k=0;k<3;k++){const n=g.indices[i+k];if(Math.hypot(g.positions[n*3],g.positions[n*3+2]-.028)<1e-10){const a=g.indices[i+(k+1)%3],b=g.indices[i+(k+2)%3],copy=g.positions.length/3;g.positions.push(...g.positions.slice(n*3,n*3+3));g.normals.push(...g.normals.slice(n*3,n*3+3));g.uvs.push((g.uvs[a*2]+g.uvs[b*2])/2,g.uvs[n*2+1]);g.indices[i+k]=copy;}}
  }
  return {...g,...(!g.uvs.length?{uvs:undefined}:{})};
 }
 export function nativeGrouped(recipe:NativeSurface[]){
  const groups=new Map<string,{role:MaterialRole;materialId:string;color:string;alpha:number;roughness:number;geometry:Geometry & {uvs:number[];tangents?:number[]}} >();
  for(const surface of recipe){const role=surface.role??'paint',alpha=surface.alpha??1,intent=nativeMaterialIntent(surface),key=intent.materialId;let group=groups.get(key);if(!group){group={role,materialId:key,color:surface.color,alpha,roughness:intent.roughness,geometry:{positions:[],normals:[],indices:[],uvs:[]}};groups.set(key,group);}const a=nativeSurfaceGeometry(surface),offset=group.geometry.positions.length/3;group.geometry.positions.push(...a.positions);group.geometry.normals.push(...a.normals);group.geometry.indices.push(...a.indices.map(x=>x+offset));group.geometry.uvs!.push(...(a.uvs??Array(a.positions.length/3*2).fill(0)));}
- for(const g of groups.values())if(g.role==='hair'&&g.roughness===.60){const tangents:number[]=[];for(let i=0;i<g.geometry.positions.length;i+=3){const n=g.geometry.normals.slice(i,i+3),x=g.geometry.positions[i],z=g.geometry.positions[i+2]-.028,axis=[-z,0,x],dot=axis.reduce((a,v,k)=>a+v*n[k],0);let t=axis.map((v,k)=>v-dot*n[k]),length=Math.hypot(...t);if(length<1e-10){t=Math.abs(n[1])<.9?[-n[2],0,n[0]]:[n[1],-n[0],0];length=Math.hypot(...t);}t=t.map(v=>v/length);const bitangentY=n[2]*t[0]-n[0]*t[2];tangents.push(...t,bitangentY>=0?1:-1);}g.geometry.tangents=tangents;}
+ for(const g of groups.values())if(g.role==='hair'&&g.roughness===.60)g.geometry.tangents=sculptTangents(g.geometry);
  return [...groups.values()];
 }
 function eyes(kind:NativeCharacterKind):NativePart[]{
@@ -171,7 +173,7 @@ function body(kind:NativeCharacterKind):NativeSurface[]{
  }
  return torso;
 }
-export function nativeCharacterParts(kind:NativeCharacterKind):NativePart[]{
+export function legacyV9CharacterParts(kind:NativeCharacterKind):NativePart[]{
  const misaki=kind==='misaki',a=kind==='visitor-a',coat=misaki?P.sage:a?P.terracotta:P.blue,skin=a?P.skinB:P.skin;
  const parts:NativePart[]=[{id:'body',pivot:[0,0,0],recipe:body(kind)},...head(kind)];
  for(const side of [-1,1]){const s=side<0?'left':'right',x=side*.222;
@@ -186,3 +188,6 @@ export function nativeCharacterParts(kind:NativeCharacterKind):NativePart[]{
  return parts;
 }
 export const nativeRigContract={version:'native-rigid-rig.v4-v3-compatible',units:'metres',axes:'right-handed; +Y up; face -Z; positive local X pitch moves hanging hands/feet toward -Z',pivotSpace:'local to parent; surfaces local to node; body is actor-local root',soleRestY:.015,rootMotion:'Only route adapter translates actor root; local gesture clips have no root motion',binding:'Misaki remains staff.graybox; visitors have no economic identity or capability',expressions:{eyelids:'eyelid-left/right are thin curved closed-lid strokes without opaque face patches; disabled at rest; animate scale.y or enable only for blink, iris geometry stays on same face; GLB master has scale Y=.001 at rest because glTF has no visibility property; runtime adapter restores scale=1 then disables until blink',mouth:'independent curved mouth; scale/tilt for smile/focus; no head replacement',brows:'independent stable brow pivots'},attachments:['socket-left','socket-right'],motion:'rigid articulated parts; external flat-floor world-foot anchoring and two-link leg IK; no skeleton, skins or embedded glTF clips',restArms:'shoulder→forearm→hand hangs downward; elbow and wrist local rotations blend on authored rest',restLegs:'hips at y=.65; knees -.25; ankles -.30; actual rest sole .015; NativeFootPlant solves .25/.30m links from immutable world stance anchors and bounded swing targets; apply bodyDrop and local hip/knee/foot quaternions',material:'Existing IEC sRGB→linear PBR semantic material intent; opaque soft fallback; custom lofts use finite smooth normals; shared native bob UVs and original strand colour/normal inputs; no external image dependency'} as const;
+
+/** Active V10 remake; old builder retained for historical/native comparison. */
+export const nativeCharacterParts=buildV10Character;

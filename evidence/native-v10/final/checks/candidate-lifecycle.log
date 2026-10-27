@@ -1,0 +1,7 @@
+{"seconds":11.074,"name":"Tab to buy + Enter retains visible focus; next Tab reaches same-item placement"}
+{"seconds":12.568,"name":"Keyboard shelf submission returns focus to persistent same-row action"}
+{"seconds":12.834,"name":"Delayed real write captures 3 units once despite repeated activation and changed drafts"}
+{"seconds":19.986,"name":"Raw text, actual input node, caret, focus and scroll survive asynchronous repaint"}
+{"seconds":21.568,"name":"Interrupted persistence preserves complete snapshot and shows recovery without stale success toast"}
+{"seconds":53.086,"name":"Ten five-locale 320/375 × 420 touch-emulated buy-and-place cases pass"}
+{"seconds":55.329,"name":"Reload and real frozen→active preserve Sandbox; Normal remains byte-equivalent"}

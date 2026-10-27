@@ -1,3 +1,4 @@
+import {nativeSurfaceGeometry} from '../src/art/native-characters';
 /** Non-rendering camera projection and geometry checks. This is not visual QA. */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -41,10 +42,10 @@ test('v3.1 staff view has separate intent; lighting preserves exposure and limit
 });
 
 test('v3.1 exterior replaces exposed high blocks with low gable/eave/window geometry and preserves warm indoor / cool outdoor material separation',()=>{
- const exterior=exteriorRecipe(),architecture=exterior.filter(p=>p.role!=='leaf'&&p.role!=='wood'),positions=architecture.flatMap(p=>geometry(p).positions.filter((_,i)=>i%3===1));
- assert.ok(Math.max(...positions)<2.40,'architecture is lower than old3.1m exposed block');assert.ok(exterior.filter(p=>p.turn?.[2]&&p.role==='paint').length===4,'paired3D pitched roofs');assert.equal(exterior.filter(p=>p.role==='glass').length,4,'bounded recessed window bays');assert.ok(exterior.some(p=>p.role==='leaf'));
- assert.ok(exterior.length<=28,'small scenery geometry budget');for(const p of exterior){const g=geometry(p);assert.ok(g.positions.every(Number.isFinite));assert.ok(g.normals.every(Number.isFinite));}
- const floor=nativeRoomRecipe().filter(p=>p.size[2]===6.45&&p.size[1]===.018);assert.equal(new Set(floor.map(p=>p.color)).size,2);assert.ok(floor.every(p=>p.role==='wood'));
+ const exterior=exteriorRecipe(),architecture=exterior.filter(p=>p.role!=='leaf'&&p.role!=='wood'),positions=architecture.flatMap(p=>nativeSurfaceGeometry(p).positions.filter((_,i)=>i%3===1));
+ assert.ok(Math.max(...positions)<2.40,'architecture is lower than old3.1m exposed block');assert.ok(exterior.filter(p=>p.shape!=='mesh'&&p.turn?.[2]&&p.role==='paint').length===4,'paired3D pitched roofs');assert.equal(exterior.filter(p=>p.role==='glass').length,4,'bounded recessed window bays');assert.ok(exterior.some(p=>p.role==='leaf'));
+ assert.ok(exterior.length<=28,'small scenery geometry budget');for(const p of exterior){const g=nativeSurfaceGeometry(p);assert.ok(g.positions.every(Number.isFinite));assert.ok(g.normals.every(Number.isFinite));}
+ const floor=nativeRoomRecipe().filter(p=>p.role==='wood'&&p.roughness===.83);assert.equal(floor.length,2,'remade staggered plank meshes stay batched into two material groups');assert.equal(new Set(floor.map(p=>p.color)).size,2);for(const surface of floor){const y=nativeSurfaceGeometry(surface).positions.filter((_,i)=>i%3===1);assert.ok(Math.abs(Math.max(...y)-.079)<1e-10&&Math.abs(Math.min(...y)-.061)<1e-10,'same real floor thickness and elevation');}assert.ok(floor.every(p=>p.role==='wood'));
  const floorColors=new Set(floor.map(p=>p.color));assert.ok(!floorColors.has(nativeCounterRecipe()[0].color));assert.ok(!floorColors.has(nativeDisplayRecipe()[0].color));
  assert.ok(floor.every(p=>p.roughness===.83));assert.equal(nativeCounterRecipe()[0].roughness,.57);assert.equal(nativeDisplayRecipe()[0].roughness,.64);
 });

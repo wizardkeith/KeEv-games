@@ -1,3 +1,4 @@
+import {nativeSurfaceGeometry,type NativeSurface} from '../src/art/native-characters';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -9,8 +10,8 @@ import {nativeRoomRecipe,nativeDoorContract,doorLeafRecipe,doorSignRecipe,plantP
 const sub=(a:number[],b:number[])=>a.map((v,i)=>v-b[i]);
 const cross=(a:number[],b:number[])=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
 const dot=(a:number[],b:number[])=>a.reduce((n,v,i)=>n+v*b[i],0);
-function rayHit(recipe:Part[],origin:V3,direction:V3,maxT:number){
- for(const p of recipe){const g=geometry(p);for(let i=0;i<g.indices.length;i+=3){
+function rayHit(recipe:NativeSurface[],origin:V3,direction:V3,maxT:number){
+ for(const p of recipe){const g=nativeSurfaceGeometry(p);for(let i=0;i<g.indices.length;i+=3){
   const a=g.positions.slice(g.indices[i]*3,g.indices[i]*3+3),b=g.positions.slice(g.indices[i+1]*3,g.indices[i+1]*3+3),c=g.positions.slice(g.indices[i+2]*3,g.indices[i+2]*3+3);
   const e1=sub(b,a),e2=sub(c,a),h=cross(direction,e2),det=dot(e1,h);if(Math.abs(det)<1e-10)continue;
   const inv=1/det,s=sub(origin,a),u=inv*dot(s,h);if(u<0||u>1)continue;const q=cross(s,e1),v=inv*dot(direction,q);if(v<0||u+v>1)continue;
@@ -32,12 +33,12 @@ test('native entry is a genuine gap through the back wall, including its skirtin
 test('door hinge opens the real leaf outside and clears the reserved central traveler radius',()=>{
  const {hinge,openRadians,crossingOpenRadians}=nativeDoorContract;
  assert.equal(hinge[0],2.34);assert.ok(openRadians<0);assert.ok(Math.abs(openRadians)>crossingOpenRadians);
- const points=doorLeafRecipe().flatMap(p=>{const g=geometry(p),out:number[][]=[];for(let i=0;i<g.positions.length;i+=3)out.push(g.positions.slice(i,i+3));return out;});
+ const points=doorLeafRecipe().flatMap(p=>{const g=nativeSurfaceGeometry(p),out:number[][]=[];for(let i=0;i<g.positions.length;i+=3)out.push(g.positions.slice(i,i+3));return out;});
  const transformed=points.map(([x,y,z])=>[hinge[0]+x*Math.cos(openRadians)+z*Math.sin(openRadians),hinge[1]+y,hinge[2]-x*Math.sin(openRadians)+z*Math.cos(openRadians)]);
  assert.ok(Math.max(...transformed.map(p=>p[2]))>4.5,'leaf is opened toward +Z exterior');
  assert.ok(Math.max(...transformed.map(p=>p[0]))<3.05-.24,'fully opened leaf clears traveler body');
  assert.equal(rayHit(doorLeafRecipe(),[.71,1,-.20],[0,0,1],.4),true,'closed leaf has real glass geometry');
- assert.ok(doorSignRecipe().every(p=>p.size.every(Number.isFinite)));
+ assert.ok(doorSignRecipe().every(p=>nativeSurfaceGeometry(p).positions.every(Number.isFinite)));
 });
 
 test('plant movement is authored on seven local leaf attachments, never on pot or roots',()=>{
@@ -47,7 +48,7 @@ test('plant movement is authored on seven local leaf attachments, never on pot o
  const rest=JSON.stringify(full.base);
  for(let frame=0;frame<120;frame++)for(const [i,leaf] of full.leaves.entries()){
   const angle=Math.sin(frame*.01+i*1.7)*.018;
-  for(const p of leaf.recipe){const g=geometry(p);for(let j=0;j<g.positions.length;j+=3){const y=g.positions[j+1],z=g.positions[j+2];assert.ok(Number.isFinite(leaf.pivot[1]+y*Math.cos(angle)-z*Math.sin(angle)));}}
+  for(const p of leaf.recipe){const g=nativeSurfaceGeometry(p);for(let j=0;j<g.positions.length;j+=3){const y=g.positions[j+1],z=g.positions[j+2];assert.ok(Number.isFinite(leaf.pivot[1]+y*Math.cos(angle)-z*Math.sin(angle)));}}
  }
  assert.equal(JSON.stringify(full.base),rest,'base remains unchanged while leaf-local transforms are sampled');
  for(let i=0;i<full.leaves.length;i++)for(let k=0;k<3;k++)assert.ok(Math.abs(small.leaves[i].pivot[k]-full.leaves[i].pivot[k]*.38)<1e-12);
@@ -57,7 +58,7 @@ test('plant movement is authored on seven local leaf attachments, never on pot o
 test('new environment recipes retain finite unit normals, bounded geometry and material intent',()=>{
  const all=[...nativeRoomRecipe(),...doorLeafRecipe(),...doorSignRecipe(),...exteriorRecipe(),...nativeCounterRecipe(),...nativeDisplayRecipe(),...plantParts().base,...plantParts().leaves.flatMap(l=>l.recipe)];
  assert.ok(all.length<160,'small fixed scene authoring budget');
- for(const p of all){const g=geometry(p);assert.ok(g.positions.every(Number.isFinite));assert.ok(g.indices.length>0);for(let i=0;i<g.normals.length;i+=3)assert.ok(Math.abs(Math.hypot(...g.normals.slice(i,i+3))-1)<1e-8);}
+ for(const p of all){const g=nativeSurfaceGeometry(p);assert.ok(g.positions.every(Number.isFinite));assert.ok(g.indices.length>0);for(let i=0;i<g.normals.length;i+=3)assert.ok(Math.abs(Math.hypot(...g.normals.slice(i,i+3))-1)<1e-8);}
  assert.ok(exteriorRecipe().some(p=>p.role==='leaf'));
  assert.ok(nativeCounterRecipe().some(p=>p.role==='metal'));
 });

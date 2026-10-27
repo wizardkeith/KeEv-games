@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "file": "assets/masters/native-v4/product-off.tote.glb",
+  "groups": 4,
+  "actualValuesChecked": 21144,
+  "maxFloatError": 2.9728781658633352e-8,
+  "scope": "Actual Web/nativeGrouped position,normal,UV,index arrays match reopened GLB binary; separate from physical-native appearance acceptance"
+}

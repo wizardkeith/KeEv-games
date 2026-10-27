@@ -1,0 +1,130 @@
+{
+  "status": "pass",
+  "emptyDisplay": {
+    "status": "pass",
+    "samples": [
+      {
+        "time": 24.462600000001512,
+        "bubble": null
+      },
+      {
+        "time": 24.804200000002997,
+        "bubble": null
+      },
+      {
+        "time": 25.338000000000026,
+        "bubble": null
+      },
+      {
+        "time": 25.818000000000012,
+        "bubble": null
+      },
+      {
+        "time": 26.167799999997033,
+        "bubble": null
+      },
+      {
+        "time": 26.618200000002986,
+        "bubble": null
+      },
+      {
+        "time": 27.10239999999851,
+        "bubble": null
+      },
+      {
+        "time": 27.60770000000298,
+        "bubble": null
+      },
+      {
+        "time": 28.101100000001477,
+        "bubble": null
+      },
+      {
+        "time": 28.44510000000147,
+        "bubble": null
+      },
+      {
+        "time": 28.953200000002948,
+        "bubble": null
+      },
+      {
+        "time": 29.41820000000294,
+        "bubble": null
+      }
+    ],
+    "preparation": "Fresh Sandbox, no purchase or display commands before this actual browse"
+  },
+  "kinds": [
+    "farewell",
+    "goodbye",
+    "welcome",
+    "reply",
+    "browse"
+  ],
+  "departure": true,
+  "cases": [
+    {
+      "locale": "zh-HK",
+      "left": 34.96875,
+      "right": 254.96875,
+      "top": 339.09375,
+      "bottom": 382.09375,
+      "scroll": 218,
+      "width": 218,
+      "text": "慢走，祝你今天愉快。",
+      "count": 1,
+      "document": 375
+    },
+    {
+      "locale": "zh-CN",
+      "left": 16.203125,
+      "right": 236.203125,
+      "top": 325.765625,
+      "bottom": 368.765625,
+      "scroll": 218,
+      "width": 218,
+      "text": "欢迎进来，随意看看。",
+      "count": 1,
+      "document": 375
+    },
+    {
+      "locale": "en",
+      "left": 67.484375,
+      "right": 287.484375,
+      "top": 313.90625,
+      "bottom": 377.90625,
+      "scroll": 218,
+      "width": 218,
+      "text": "I’d like to find something useful for every day.",
+      "count": 1,
+      "document": 375
+    },
+    {
+      "locale": "ja",
+      "left": 47.84375,
+      "right": 267.84375,
+      "top": 337.703125,
+      "bottom": 401.703125,
+      "scroll": 218,
+      "width": 218,
+      "text": "ありがとうございました。またお待ちしています。",
+      "count": 1,
+      "document": 375
+    },
+    {
+      "locale": "th",
+      "left": 16.203125,
+      "right": 236.203125,
+      "top": 325.765625,
+      "bottom": 368.765625,
+      "scroll": 218,
+      "width": 218,
+      "text": "สวัสดีค่ะ เชิญเลือกชมตามสบาย",
+      "count": 1,
+      "document": 375
+    }
+  ],
+  "errors": [],
+  "quality": "Low + Minimal retains basic life; Reduce Motion freezes without hidden replay",
+  "limits": "Actual cloud SwiftShader WebGL. No physical hardware/FPS/audio claim; ambient guests are presentation, not accounting buyers."
+}

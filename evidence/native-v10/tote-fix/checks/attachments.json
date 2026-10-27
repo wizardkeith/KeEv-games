@@ -1,0 +1,114 @@
+{
+  "method": "Actual production vertices. Independent triangle ray intersection at reviewer XY samples, actual swept-ring centroids at both handles/all seam rings. Print has real back/edge geometry; no depth bias.",
+  "beforeSource": "0626469e7d376fe7cd1962370e2955017154bacf",
+  "oldSamples": [
+    {
+      "name": "print centre",
+      "x": 0,
+      "y": 0.164,
+      "z": -0.047,
+      "gapMetres": 0.051217004986183715
+    },
+    {
+      "name": "left seam middle",
+      "x": -0.139,
+      "y": 0.16,
+      "z": -0.047,
+      "gapMetres": 0.0803046714493586
+    },
+    {
+      "name": "right seam middle",
+      "x": 0.139,
+      "y": 0.16,
+      "z": -0.047,
+      "gapMetres": 0.08005088161242704
+    },
+    {
+      "name": "front handle left root",
+      "x": -0.095,
+      "y": 0.281,
+      "z": -0.039,
+      "gapMetres": 0.05945682747027885
+    }
+  ],
+  "patches": [
+    {
+      "name": "print centre",
+      "x": 0,
+      "y": 0.164,
+      "part": 3,
+      "bodyFrontZ": -0.03878299501381628,
+      "accessoryFrontZ": -0.039382995013816285,
+      "accessoryBackZ": -0.03873299501381628,
+      "frontOffsetMetres": 0.0006000000000000033,
+      "backPenetrationMetres": 0.00005000000000000143,
+      "actualLayerBridgesSupport": true
+    },
+    {
+      "name": "left seam middle",
+      "x": -0.139,
+      "y": 0.16,
+      "part": 4,
+      "bodyFrontZ": -0.009695328550641404,
+      "accessoryFrontZ": -0.011498174463454369,
+      "accessoryBackZ": -0.008896188434625169,
+      "frontOffsetMetres": 0.001802845912812965,
+      "backPenetrationMetres": 0.0007991401160162351,
+      "actualLayerBridgesSupport": true
+    },
+    {
+      "name": "right seam middle",
+      "x": 0.139,
+      "y": 0.16,
+      "part": 5,
+      "bodyFrontZ": -0.00994911838757296,
+      "accessoryFrontZ": -0.011754509418948051,
+      "accessoryBackZ": -0.009150393681910007,
+      "frontOffsetMetres": 0.0018053910313750917,
+      "backPenetrationMetres": 0.0007987247056629523,
+      "actualLayerBridgesSupport": true
+    }
+  ],
+  "handles": [
+    {
+      "part": 1,
+      "ring": 0,
+      "x": -0.095,
+      "y": 0.281,
+      "z": -0.022543172529721146,
+      "supportZ": -0.022543172529721146,
+      "centerGapMetres": 0
+    },
+    {
+      "part": 1,
+      "ring": 12,
+      "x": 0.09499999999500001,
+      "y": 0.2810000005700001,
+      "z": -0.023679163999407123,
+      "supportZ": -0.023679163940633893,
+      "centerGapMetres": 5.877322933889317e-11
+    },
+    {
+      "part": 2,
+      "ring": 0,
+      "x": -0.09499999999999999,
+      "y": 0.281,
+      "z": 0.06345682747027885,
+      "supportZ": 0.06345682747027884,
+      "centerGapMetres": 1.3877787807814457e-17
+    },
+    {
+      "part": 2,
+      "ring": 12,
+      "x": 0.094999999995,
+      "y": 0.2810000005700001,
+      "z": 0.06232083612059289,
+      "supportZ": 0.0623208360593661,
+      "centerGapMetres": 6.122678752884525e-11
+    }
+  ],
+  "maxSeamCenterGapMetres": 0.0011431468580293145,
+  "seamRadiusMetres": 0.0015,
+  "allSeamRingsContact": true,
+  "sharedClothAndApron": "unchanged"
+}

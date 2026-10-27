@@ -1,0 +1,20 @@
+{
+  "id": "native.v10.botanical-print-atlas",
+  "generator": "OpenAI image_gen through ChatGPT Work",
+  "generation_date": "2026-10-25",
+  "original_path": "/workspace/generated_images/exec-db307e4c-6851-4b83-a924-c6e43c58e2a8.png",
+  "actual_dimensions": [
+    1254,
+    1254
+  ],
+  "color": "sRGB RGB, opaque ivory paper",
+  "requested_dimensions": [
+    1024,
+    1024
+  ],
+  "sha256": "0b0b41604dc76a1215b781c91246b12c2b82bbd8b79817655b898c435189976e",
+  "use": "Original2D albedo artwork for new real3D framed prints and existing stationery models; not scene replacement or model/animation",
+  "reference_pixels_supplied_to_generator": false,
+  "prompt": "Original four-quadrant hand-painted botanical albedo atlas on ivory, eucalyptus/cream wildflowers/sage leaf/plum-olive seed stems; orthographic neutral light, no frames/text/brands/cast shadows. Full prompt is retained in task generation history. Actual output1254x1254 retained losslessly, no fabricated1024 claim.",
+  "master_preservation": "Original generated PNG remains unchanged; public copy is byte-identical."
+}

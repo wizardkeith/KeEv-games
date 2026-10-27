@@ -9,4 +9,4 @@ export function nativeMaterialIntent(surface:{role?:MaterialRole;color:string;al
 }
 
 /** Original authored strand colour and OpenGL tangent normal inputs, shared by Web/GLB. */
-export const nativeHairMaterial={roughness:.60,baseColor:'/assets/native-v5/hair-strand-basecolor.png',normal:'/assets/native-v5/hair-strand-normal.png',normalScale:.32} as const;
+export const nativeHairMaterial={roughness:.60,baseColor:'/assets/native-v10/hair-strand-basecolor.png',normal:'/assets/native-v10/hair-strand-normal.png',normalScale:.22} as const;

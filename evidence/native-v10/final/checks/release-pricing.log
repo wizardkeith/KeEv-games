@@ -1,0 +1,7 @@
+Three existing shelf slots use aligned five-column pricing rows; empty slots and all 580px drawers/camera are preserved
+Leading-zero price draft survives panels/reload; Enter commits the same price rule once and retains keyboard focus
+Invalid values show same-row errors without state changes; cancel restores the actual price
+Delayed/repeated save captures 830 once, blocks cancel while busy, and preserves the newer 940 draft
+Interrupted real price persistence leaves snapshot/draft intact; retry then save succeeds
+Existing remove/restock/placement actions remain available and retain inventory and price
+Twenty five-locale narrow/short touch pricing cases: 44px targets, no horizontal/nested scrolling, unchanged economy/Normal and reduced-motion draft retention
