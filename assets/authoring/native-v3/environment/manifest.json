@@ -3,15 +3,18 @@
   "version": "3.1",
   "master": {
     "path": "assets/masters/native-v3/environment-v3.json",
-    "sizeBytes": 28677735,
-    "sha256": "31a05607df6e0c0910cfc2f5e6ae7085e351a3184929dfc1954206f6a9cacf8b"
+    "sizeBytes": 28680595,
+    "sha256": "85799a7d3f4fd7da074f2d289b7fff65ae1daad358adf4ed99cc8929739ab0ec"
   },
   "sources": {
+    "src/art/scene-contact-adoption-v11.ts": "fed33f324a294a075558cc4eb8b6935287d36c1b35231c5e742889f255e9ce0b",
+    "tools/export-v11-scene-contact-adoption.ts": "46c8e2beb4d64b5d84d2cfd06248cdaa42ca098e3ad5ffdd81920efa011ef4d3",
+    "assets/authoring/native-v11/scene-contact-c45-adoption.json": "c947fd48f74793bc288ec73e0eed451073e84f117b73398597220effc7ebc5bf",
     "src/art/scene-contact-intent-v11.ts": "fa47f1de82237669f97d6ee3848e10a63b8660a081a63c55121d4084e21b0741",
     "tools/export-v11-scene-contact.ts": "10719dbbdfd4a9b3654b8ac7f40ec131ad6ae65e604baf0a3e0f9f38bc307632",
     "assets/authoring/native-v11/scene-contact-c44.json": "41bc40c83c557292a63ac31bf6bd2ee1e23bfc7670645a6d06d962ad9f140147",
     "src/art/scene-occlusion-intent-v11.ts": "5a8e78465949f332425d2018764fc7ce6f8c876c96ec44be132b7a0bfefcfd19",
-    "src/art/scene-occlusion-v11.ts": "dd559842d4e0959f2f85fa67816684a3fb8f8f03d554e90ccb43415c91448b22",
+    "src/art/scene-occlusion-v11.ts": "942ecdb6fd23e3f45d12bad1e6de6242b44c84fa90aac87ae061ecb5466c1ae5",
     "tools/export-v11-scene-occlusion.ts": "89ce9bcb70e9d2b6c015fd00fe87e94dfa92547701a5a37feed1a88fbd992d4f",
     "assets/authoring/native-v11/scene-occlusion-c43.json": "fffc12320a96244be7daf1650222635cd7a686ec823dc82b339b8289a158e22a",
     "src/art/table-contact-v11.ts": "fb6d76573f5a4fb3168775c35d142c66277bf954b8149d34a9e2e22d6c677f22",
@@ -155,7 +158,7 @@
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "432f387c45f07b2ef9c0adb8207e0e1d44e143d64343bd8cd49b240dee72001d",
-    "tools/export-native-environment.ts": "8bf444ec847e7f74741ede333b5cf346a45e6cdbc1b9e615de8e175937580d5d"
+    "tools/export-native-environment.ts": "0c90849876bb0ac9a5beaf2cb1864f0419f4d39628e031f547b87a5dd5c2963c"
   },
   "rebuild": "node --import tsx tools/export-native-environment.ts",
   "runtime": "src/world.ts imports native-environment.ts and native-view.ts; geometry.ts builds the same authored recipes. nativeGrouped/nativeMaterialIntent respect per-surface roughness while shared legacy materials remain unchanged.",
