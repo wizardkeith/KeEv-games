@@ -1,10 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T14:09:04+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T14:24:32+08:00** (Asia/Hong_Kong).
 
-## V11 C49世界空間漫射補光診斷進行中 — 2026-10-27T14:09:04+08:00
+## V11 C49世界空間漫射固定候選／未採用 — 2026-10-27T14:24:32+08:00
 
-- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送application`82014abaf0be78e0cf1859236b82b9d90bd44f8a`。依C48獨立診斷只測一組世界位置／法線漫射權重：水平面減少均勻底光，背牆與收銀平滑保留補光；分別改半球漫射及IBL漫射，不改key／shadow／specular IBL／曝光／.20AO／已過模型材質／192反射。非GI，作者旗標限定C47，普通仍C45。首輪實拍可見方向對比，未自判PASS；300tests／146GLB／305保護檔通過，同來源正常與雙斜角／Low-High／買入reload正在收尾。整體原圖未接受；main僅進度指標，無merge／公開V17／玩家Normal／Chrome／Unity改動或使用者動作阻塞。
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送`49a7a504d42a7873897164585c14ebc266abe1ce`／application`82014abaf0be78e0cf1859236b82b9d90bd44f8a`；[唯一原圖／同來源composite與單一候選正常480px、雙斜角、來源及取捨](https://github.com/wizardkeith/KeEv-games/blob/49a7a504d42a7873897164585c14ebc266abe1ce/docs/V11_C49_SPATIAL_DIFFUSE_2026-10-27_zh-HK.md)。只用世界位置／法線調半球漫射及diffuseIBL，保留key／shadow／specularIBL／exposure／.20AO／192reflection／已過資產；非GI或螢幕光斑。正常固定ROI牆面0.00%、收銀−0.72%，入口地板−17.08%仍有取捨，**未採用／未判視覺PASS，整體原圖仍未接受**。普通no-flag實際確認仍C45，不追加第二組參數，交獨立全圖覆核。
+- 300tests／tsc-build-validate-replay-assets、146GLB零錯警告／305保護檔／508資產重建byte同／284原GLB-PNG-JPG-ENV-RGBA及環境母檔不變；三組195runtime已pin。High+RM、Low→High、真UI買1杯cash3840→3770／stock8→9／purchases及bookCost+70／shelves不變、reload逐值存檔與實際3D插件恢復、fresh隔離Normal不變／0pageerror通過。部分正常PNG漏HUD合成層，實際DOM visible/opacity1及shop camera、雙斜角有HUD；限制已記錄，不當UI合成通過。三段原片21–29來源幀／45–54秒，非連續動作／GPU完成／實體GPU-FPS-audio-native／新完整stock-cycle-settlement-handoff-B-hidden-tab或五語窄UI認證。main僅文件指標，功能未合併／PR8仍Draft，本輪未改公開V17；無Site／玩家Normal／Chrome／Unity／Library或LTC重試／關機。tracked source/evidence已推送，既有兩master備份及node_modules連結保留未track；無需使用者動作阻塞。原圖重建目標持續，先覆核此固定方案而不盲調或擴展資產。
 
 ## V11 C48來源分離固定證據／能量試驗未採用 — 2026-10-27T13:55:46+08:00
 
