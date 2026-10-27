@@ -25,8 +25,8 @@ arrange('grayform-four-views480.png',[(label,out/('grayform-'+view+'.png'),(100,
 before=root/'docs/reviews/evidence/misaki-grayform-v1'
 for view in ['front','threequarter','side']:
  arrange('r1-r2-'+view+'-body-same-scale480.png',[
-  ('R1 / independent FAIL',before/('grayform-'+view+'.png'),(100,4,620,850)),
-  ('R2 / head-neck candidate',out/('grayform-'+view+'.png'),(100,4,620,850))])
+  ('R1 / independent FAIL',before/('grayform-'+view+'.png'),(0,0,720,900)),
+  ('R2 / head-neck candidate',out/('grayform-'+view+'.png'),(0,0,720,900))])
 arrange('r1-r2-normal-shop480.png',[
  ('R1 / actual normal',before/'grayform-game-normal.png',(105,75,1190,800)),
  ('R2 / actual normal',out/'grayform-game-normal.png',(105,75,1190,800))])
