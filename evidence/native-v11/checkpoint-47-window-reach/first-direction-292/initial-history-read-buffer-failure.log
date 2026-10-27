@@ -1,0 +1,56 @@
+✔ C45 development default preserves the independently reviewed C44 optical recipe (1.233158ms)
+✔ Vite no-flag resolves to contact while explicit control survives; current adoption provenance is exact (1982.68816ms)
+BJS - [04:27:12]: Babylon.js v8.32.0 - Null engine
+✔ C46 is explicit authoring only; accepted AO/light budget remain; bounded key-to-indirect ratio is explicit (62.378411ms)
+✔ C46 uses a distant physical window key with generated world-aperture gating and preserves dynamic stock RTT lifecycle (79.326088ms)
+✖ C46 current authoring receipt pins implementation and preserved target/reflection/default receipts (104.626862ms)
+✔ C47 changes only source direction on the same-distance sphere, preserving every other C46 optical control (1.076965ms)
+✔ C47 aperture reaches actual central tabletop, aisle and cashier-floor probes that C46 misses; no geometry or mask fabrication (0.16073ms)
+✔ C47 receipt binds current source and frozen C46 target/material/contact baseline (36.101201ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 7
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2263.093852
+
+✖ failing tests:
+
+test at tests/v11-scene-daylight.test.ts:1:3456
+✖ C46 current authoring receipt pins implementation and preserved target/reflection/default receipts (104.626862ms)
+  Error: spawnSync git ENOBUFS
+      at Object.spawnSync (node:internal/child_process:1160:20)
+      at spawnSync (node:child_process:928:24)
+      at execFileSync (node:child_process:971:15)
+      at TestContext.<anonymous> (/workspace/game-v10-art-life/tests/v11-scene-daylight.test.ts:7:377)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    errno: -105,
+    code: 'ENOBUFS',
+    syscall: 'spawnSync git',
+    path: 'git',
+    spawnargs: [ 'show', '875d43351bc0644ef0411d0a7a61ae5d0b7e9343:docs/codex-v4/reference/Approved_Visual_Target_Misaki.png' ],
+    error: Error: spawnSync git ENOBUFS
+        at Object.spawnSync (node:internal/child_process:1160:20)
+        at spawnSync (node:child_process:928:24)
+        at execFileSync (node:child_process:971:15)
+        at TestContext.<anonymous> (/workspace/game-v10-art-life/tests/v11-scene-daylight.test.ts:7:377)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1382:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+        at Test.postRun (node:internal/test_runner/test:1522:19)
+        at Test.run (node:internal/test_runner/test:1447:12)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:960:7),
+    status: null,
+    signal: 'SIGTERM',
+    output: [ null, <Buffer 89 50 4e 47 0d 0a 1a 0a 00 00 00 0d 49 48 44 52 00 00 06 00 00 00 04 00 08 02 00 00 00 a8 13 05 15 00 00 5c 66 63 61 42 58 00 00 5c 66 6a 75 6d 62 00 ... 1114062 more bytes>, <Buffer > ],
+    pid: 393735,
+    stdout: <Buffer 89 50 4e 47 0d 0a 1a 0a 00 00 00 0d 49 48 44 52 00 00 06 00 00 00 04 00 08 02 00 00 00 a8 13 05 15 00 00 5c 66 63 61 42 58 00 00 5c 66 6a 75 6d 62 00 ... 1114062 more bytes>,
+    stderr: <Buffer >
+  }
