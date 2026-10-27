@@ -1,6 +1,10 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T12:16:31+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T12:34:55+08:00** (Asia/Hong_Kong).
+
+## V11 C47固定距離窗光方向控制進行中 — 2026-10-27T12:34:55+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)來源已推送`56a213c65f2725be0e10dbd1bbee16c0c083224d`。C46獨立方向門檻FAIL；C47只沿同91.901m球面調整方向／高度，其他光量、底光、軟度、曝光、AO、模型材質不變，C45仍普通開發預設。中央桌／通道／收銀地板幾何射線現在穿窗，正常圖提升仍有限，沒有宣稱視覺PASS；288tests、146GLB、305保護檔、511檔重建／317原素材與既有環境資料保留通過。新來源庫存／Low-RM與C46控制畫面收尾中；無merge／本輪無公開V17改動／玩家Normal或Chrome、Unity操作，無使用者動作阻塞，main僅文件進度指標。
 
 ## V11 C46方向窗光固定控制／待獨立看圖 — 2026-10-27T12:16:31+08:00
 
