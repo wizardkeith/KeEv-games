@@ -1,63 +1,66 @@
-# Misaki proportion grayform v1
+# Misaki grayform R2 — head / neck only
 
-Editable actual 3D, canonical-original-only checkpoint. User-supplied PlanB
-Library preparation succeeded, but the current official consumer-local transfer
-helper returned `download failed`; no local ZIP bytes or new reference pixels
-were available. The Library metadata read could not render the ZIP. No raw-URL
-fallback, imagined sheet tracing or full-pack regeneration request was used.
+Independent first-grayform review FAILED. This checkpoint changes head, face,
+hair, ears and neck only. Clothes/cuffs/apron/skirt/hands/feet are frozen for a
+later stage. Overall original style remains unaccepted; no ratio score or
+technical check is art acceptance.
 
-Canonical authority is `docs/codex-v4/reference/Approved_Visual_Target_Misaki.png`,
-1536×1024, SHA256
-`9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114`.
-PlanB ID/expected SHA and contradictory-view rules remain in
-`docs/MISAKI_NEXT_STAGE_REFERENCE_HANDOFF_2026-10-27.md`. Its unseen side/back
-images were not used. This candidate's side/back volumes are author inference.
+Canonical authority, viewed again at actual pixels and head scale:
+`docs/codex-v4/reference/Approved_Visual_Target_Misaki.png`,1536×1024,
+SHA256 `9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114`.
+PlanB initial official consumer-local transfer and its one authorized fresh
+retry both failed with `library file transfer failed: download failed`,exit1.
+Both prepares returned signed transfers, no workspace_path; neither destination
+has ZIP bytes. No further PlanB retry or generic download; side/back remain
+inferred. Exact nonsensitive record is in the R2 evidence/reference-access.json.
 
 ```sh
 blender -b -t 2 --python tools/asset-foundation/build-misaki-gray.py
 node tools/asset-foundation/validate-misaki-gray.mjs
+blender -b assets/authoring/misaki-grayform-v1/misaki-grayform.blend -t 2 --python tools/asset-foundation/inspect-misaki-gray.py
 npm exec vite -- --host 127.0.0.1 --port 4199
 node tools/asset-foundation/capture-misaki-gray.cjs
 python3 tools/asset-foundation/compare-misaki-gray.py
 ```
 
-The `.blend` keeps42 semantic editable objects with quad cages and subdivision.
-Five evaluated export groups limit the GLB to10material primitives,7neutral
-gray PBR materials, no textures, no skin, no animations;47,576tri/868,528bytes.
-No target-image projection, video planes, generated concepts or texture tricks.
-Floor-normalized GLB height1.44225m; source evaluated crown/chin give3.24268head
-units, hair width.46267m, lowest hair.048999m below chin. These are author
-proportions, not precise recovered measurements from an illustrated pose.
+The builder calls `misaki-head-neck-r2.py` before the unchanged body cage code.
+Face is one continuous cheek-to-narrowing-jaw mesh with two actual eye apertures,
+not circular raised eye patches. Separate upper fold / lower lid surfaces and
+convex eyes fit behind the holes; no concentric torus rims or iris textures.
+Simple grayscale iris placement is geometry and does not claim final identity.
+Broad ear bowls and notched side hair create negative spaces. Bob uses one
+unequal lobed cap and7broad curved volumes, removing the3old back paddles and
+long flat cheek pieces; tips taper in both width/depth and turn inward.
 
-Blender Z-up/front−Y/own LEFT+X exports glTF Y-up/front+Z/own LEFT+X. The two
-clip leaves are on +X only. The normal game fixture rotates the static sampleπ;
-it is not a replacement for the production rig's −Z facing convention.
+An actual45mm head offset opens the neck above the frozen collar. The model
+is not scaled to preserve the rejected3.24ratio. Whole-body comparisons use the
+same raw camera/orthographic bounds and equal pixel crops; body remains the
+same size, so the resulting head/neck height change is visible. Evaluated
+chin-to-frozen-clothing top is35.18mm; neck vertically overlaps face58.38mm.
+Those bounds relations are not full collision or watertight-skin proof.
 
-Continuous soft face/jaw/nose surface, broad bob cap/locks, open cardigan,
-continuous apron panel, skirt, arm/wrist loops, simple hand/foot masses are
-geometry. Hands have no fine fingers, hair no fine strands, cloth no weave.
-The face has editable ring flow and separate eye/lid placement geometry, not
-final eye-opening topology, expression loops, skin weights or rig certification.
-Source garment overlaps/collisions still need dedicated work before animation.
-Back bow is omitted instead of claiming unseen reference support.
+The `.blend` retains editable quad cages/subdivision. Evaluated face has two
+boundary loops of40edges each. GLB is5semantic meshes/10material primitives,
+7unchanged neutral roughness1materials,53,480tri/976,156bytes, no textures,
+skins or animations. Full authoring scene125,176tri including frozen71,696tri
+props; no bulk replication/device/FPS acceptance. No fine strands, weave,
+fingers, final facial expression flow, rig or animation.
 
-`studio-misaki-gray.html` shows front/side/back/three-quarter under fixed neutral
-key2.1/fill.65. Front/side/back are orthographic; three-quarter retains the same
-orthographic scale with a small elevated angle. No per-view light tuning.
-`gameplay-misaki-gray.html` imports the frozen R4/paperR2 fixture and actual app,
-then adds one non-pickable static grayform at `[.85,.079,1.35]` in a clear aisle.
-The old gameplay staff, rig/actions/data/saves and normal camera remain intact.
-The ordinary `/` entry never imports this DEV authoring sample. It is not stock,
-a new NPC or an economic capability. Staged authoring total119,272tri includes
-the frozen71,696tri props; no bulk replication or device/FPS acceptance.
+Blender Z-up/front−Y/own LEFT+X exports glTF Y-up/front+Z/own LEFT+X. Clip stays
+own LEFT only. Real game fixture remains one static nonpickable sample at
+`[.85,.079,1.35]`,yawπ in clear aisle, alongside untouched gameplay staff/rig.
+Ordinary `/` never loads this DEV page. Existing data/saves/actions are not
+replaced. Production stock/character integration is outside this checkpoint.
 
-Capture uses fresh Sandbox UI buy3mugs/untouched display3slot2/reload/Low→High,
-checks Normal baseline unchanged and actual loaded asset SHA, prior camera and
-full lighting identity. Seven actual images and raw diagnostics are separate
-from art acceptance. R4/PaperR2's29asset/authoring files are byte-frozen.
+Validator compares all12POSITION/NORMAL/index streams and node TRS of the whole
+clothed-body group bytewise to source038740fbd7f6428cc82d5f442646c2d86a4143e3.
+All7material definitions,29R4/PaperR2asset-authoring files and the studio camera
+/light TS source remain unchanged. Studio HTML label only wraps to avoid the
+higher head. FeetY0 and own-left clip are checked. Source inspection is read-only.
 
-This is a grayform candidate, not style PASS. Face/eye/nose softness and broad
-hair mass remain too doll-like/hard; cardigan/apron gravity and side/back are
-provisional. Resolve readable PlanB access and judge these forms before final
-material, rig, animation or fine topology. No main/PR8/PR retry/merge/publication
-or player Normal changes are authorized by this stage.
+R2 evidence goes to `docs/reviews/evidence/misaki-grayform-v1-r2`; rejected v1
+raw evidence remains intact. Four views and actual normal/two obliques are real
+engine captures, fixed key2.1/fill.65 and actual game lights unchanged. Fresh
+Sandbox UI lifecycle and source SHA are checked separately from art. Face/eyes
+and back hair can still read generic/helmet-like; judge head/neck before clothes.
+No main/PR8/PR retry/merge/publication/player Normal changes.

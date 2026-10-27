@@ -53,89 +53,8 @@ def tube(name,path,radii,mat,cols=10,sub=1):
    a=j*math.tau/cols;vs.append(Vector(c)+u*rx*math.cos(a)+v*ry*math.sin(a))
  fs=connect(len(path),cols);fs.extend([tuple(reversed(range(cols))),tuple((len(path)-1)*cols+j for j in range(cols))]);return mesh(name,vs,fs,mat,sub)
 
-# One continuous cheek/jaw/forehead surface. Integrated nose is an offset in
-# that surface, not a separate ball. Ring flow is editable, not final face retopo.
-face_profile=[(.998,.012,.020,.010),(1.025,.077,.065,-.005),(1.073,.143,.105,-.008),(1.135,.172,.132,.000),(1.205,.178,.140,.010),(1.28,.169,.137,.015),(1.35,.131,.115,.018),(1.39,.057,.055,.018),(1.402,.005,.006,.018)]
-def face_section(z):
- for a,b in zip(face_profile,face_profile[1:]):
-  if a[0]<=z<=b[0]:t=(z-a[0])/(b[0]-a[0]);return [a[k]*(1-t)+b[k]*t for k in range(1,4)]
- return face_profile[0][1:]if z<face_profile[0][0]else face_profile[-1][1:]
-def face_front(x,z):
- rx,ry,cy=face_section(z);f=math.sqrt(max(.01,1-(x/rx)**2));y=cy-ry*f
- nose=.020*math.exp(-((z-1.124)/.032)**2)*math.exp(-(x/.024)**2)
- cheeks=.007*math.exp(-((abs(x)-.105)/.040)**2)*math.exp(-((z-1.108)/.040)**2)
- return y-nose-cheeks
-vs=[];rows=22;cols=40
-for i in range(rows):
- z,rx,ry,cy=sample(face_profile,i/(rows-1))
- for j in range(cols):
-  a=j*math.tau/cols;x=math.sin(a)*rx;y=cy-math.cos(a)*ry
-  if math.cos(a)>0:y+=(face_front(x,z)-(cy-ry*math.sqrt(max(.01,1-(x/rx)**2))))*math.cos(a)**5
-  vs.append((x,y,z))
-fs=connect(rows,cols);fs.extend([tuple(reversed(range(cols))),tuple((rows-1)*cols+j for j in range(cols))]);mesh('01 / continuous soft face with integrated nose',vs,fs,skin)
-loft('02 / short neck',[(.965,.049,.044,.005),(1.000,.052,.047,.005),(1.065,.040,.035,.005)],skin,6,20)
-
-# Real convex eye patches, eyelid loops and restrained placement strokes;
-# all grayscale geometry. No portrait projection, alpha card or texture.
-for side in [-1,1]:
- cx=side*.073;cz=1.164;vs=[(cx,face_front(cx,cz)-.010,cz)];rings=4;n=24
- for r in range(1,rings+1):
-  t=r/rings
-  for j in range(n):
-   a=j*math.tau/n;x=cx+.031*t*math.cos(a);z=cz+.034*t*math.sin(a)+side*(x-cx)*.06;y=face_front(x,z)-.003-.007*(1-t*t);vs.append((x,y,z))
- fs=[(0,1+j,1+(j+1)%n)for j in range(n)]
- for r in range(rings-1):
-  for j in range(n):a=1+r*n+j;b=1+r*n+(j+1)%n;fs.append((a,a+n,b+n,b))
- mesh('03 / eye volume '+str(side),vs,fs,eye,0)
- rim=[]
- for j in range(25):
-  a=j*math.tau/24;x=cx+.032*math.cos(a);z=cz+.035*math.sin(a)+side*(x-cx)*.06;rim.append((x,face_front(x,z)-.004,z))
- tube('04 / eyelid rim '+str(side),rim,[.0017]*len(rim),skin,6,0)
- vs=[(cx,face_front(cx,cz)-.013,cz)]
- for j in range(24):
-  a=j*math.tau/24;x=cx+.019*math.cos(a);z=cz+.027*math.sin(a);vs.append((x,face_front(x,z)-.012,z))
- mesh('05 / iris placement '+str(side),vs,[(0,j+1,(j+1)%24+1)for j in range(24)],feature,0)
- path=[]
- for j in range(9):
-  t=j/8;x=cx-.026+.052*t;z=1.217+.007*math.sin(t*math.pi);path.append((x,face_front(x,z)-.003,z))
- tube('06 / brow placement '+str(side),path,[.0015]*9,feature,6,0)
-path=[]
-for j in range(13):
- x=-.018+j*.003;z=1.067+.004*(x/.018)**2;path.append((x,face_front(x,z)-.002,z))
-tube('07 / neutral mouth placement',path,[.0011]*13,feature,6,0)
-
-# Continuous bob cap with a real face opening, thickness and broad scallop.
-vs=[];hr=11;hc=36
-for layer in range(2):
- for i in range(hr):
-  t=i/(hr-1)
-  for j in range(hc):
-   a=j*math.tau/hc;front=max(0,math.cos(a));end=2.72-1.62*front**4+.045*math.sin(a*5+.3)*(1-front)
-   theta=.025+(end-.025)*t;spread=math.sin(theta)if theta<1.45 else math.sin(1.45)-.075*(theta-1.45)
-   rx=.226-layer*.009;ry=.192-layer*.009;z=1.210+(.232-layer*.009)*math.cos(theta)
-   vs.append((math.sin(a)*rx*spread,.023-math.cos(a)*ry*spread,z))
-N=hr*hc;fs=[]
-for layer in range(2):
- for f in connect(hr,hc):fs.append(tuple(k+layer*N for k in(f if layer==0 else tuple(reversed(f)))))
-for j in range(hc):
- b=(j+1)%hc;fs.extend([(j,b,b+N,j+N),((hr-1)*hc+j,(hr-1)*hc+j+N,(hr-1)*hc+b+N,(hr-1)*hc+b)])
-mesh('10 / continuous bob mass and face opening',vs,fs,hair)
-def lock(name,points,width,depth=.010):
- vs=[];steps=12;cols=8
- for i in range(steps):
-  t=i/(steps-1);c=Vector(sample(points,t));ta=Vector(sample(points,min(1,t+.002)))-Vector(sample(points,max(0,t-.002)));ta.normalize();normal=Vector((c.x,c.y-.023,0)).normalized();u=ta.cross(normal).normalized();v=ta.cross(u).normalized()
-  w=width*(.06+.94*math.sin(math.pi*(.005+.98*t))**.55)*(1-.78*t**8)
-  for j in range(cols):
-   a=j*math.tau/cols;vs.append(c+u*w*math.cos(a)+v*depth*math.sin(a))
- fs=connect(steps,cols);fs.extend([tuple(reversed(range(cols))),tuple((steps-1)*cols+j for j in range(cols))]);mesh(name,vs,fs,hair)
-lock('11 / large swept fringe left',[(.025,-.012,1.438),(-.045,-.140,1.360),(-.135,-.169,1.255),(-.177,-.126,1.178)],.052,.007)
-lock('12 / large swept fringe right',[(.035,-.016,1.437),(.105,-.142,1.354),(.170,-.153,1.270),(.194,-.108,1.190)],.031,.007)
-lock('13 / inner fringe broad turn',[(.026,-.064,1.412),(.037,-.163,1.330),(.086,-.171,1.279),(.123,-.155,1.252)],.024,.006)
-for side in [-1,1]:
- lock('14 / cheek-side broad curl '+str(side),[(side*.150,-.102,1.315),(side*.196,-.110,1.200),(side*.212,-.080,1.054),(side*.176,-.102,.948)],.025,.012)
- lock('15 / side-back broad mass '+str(side),[(side*.126,.112,1.354),(side*.205,.118,1.227),(side*.217,.103,1.077),(side*.191,.073,.959)],.028,.012)
-for k in range(3):
- x=(k-1)*.112;lock('16 / inferred broad back mass '+str(k),[(x*.35,.145,1.354),(x*.80,.202,1.230),(x,.208,1.078),(x+.008*math.sin(k),.176,.970)],.039,.009)
+# R2 replaces only head/face/hair/neck. Garment and limb cage code below is frozen.
+exec(compile((ROOT/'tools/asset-foundation/misaki-head-neck-r2.py').read_text(), 'misaki-head-neck-r2.py', 'exec'), globals())
 
 # The canonical clip is on her OWN LEFT (+X), never mirrored onto both sides.
 for k,(dx,dz,angle)in enumerate([(0,0,-.6),(.015,.014,.6)]):
@@ -144,6 +63,10 @@ for k,(dx,dz,angle)in enumerate([(0,0,-.6),(.015,.014,.6)]):
   for i in range(7):
    t=i/6;long=(t-.5)*.044;wide=side*.009*math.sin(math.pi*t);x=cx+long*math.sin(angle)+wide*math.cos(angle);z=cz+long*math.cos(angle)-wide*math.sin(angle);vs.append((x,-.170-.003*math.sin(math.pi*t),z))
  fs=[(i,i+1,i+8,i+7)for i in range(6)];mesh('17 / own LEFT clip leaf '+str(k),vs,fs,apron,1,.002)
+
+# Open an actual neck gap above the unchanged collar; no scaling of the body.
+for o in objects:
+ if o.name!='02 / visible neck bridge':o.location.z+=head_offset
 
 # Clothed torso and open cardigan. A-pose is independently normalized; it is
 # not described as matching the unavailable front/back versus side sheets.
@@ -208,4 +131,7 @@ for o in baked:o.select_set(True)
 bpy.ops.export_scene.gltf(filepath=str(OUT/'misaki-grayform.glb'),export_format='GLB',use_selection=True,export_apply=True,export_extras=True,export_animations=False)
 manifest={'id':'misaki-grayform-v1','reference':'canonical Approved_Visual_Target_Misaki.png only','referenceSha256':hashlib.sha256((ROOT/'docs/codex-v4/reference/Approved_Visual_Target_Misaki.png').read_bytes()).hexdigest(),'PlanB':{'library_file_id':'libfile_d1f1a5f43d9c819199f7d57ff7936d6a','expectedSha256':'4c35ad580dfff13001d4970a7bc2b1be5299c944d127abb0fdd329f7dad6e420','materialization':'official helper download failed; no local bytes or new views inspected'},'axes':'Blender Z-up / face -Y / own LEFT +X; glTF Y-up / face +Z / own LEFT +X','pose':'normalized neutral A-pose; hands are coarse masses','intendedHeight':1.442,'headChin':.998,'hairCrown':1.442,'headUnits':1.442/(1.442-.998),'jointsBlender':{'neck':[0,0,1.00],'leftShoulder':[.162,0,.966],'leftElbow':[.289,-.005,.770],'leftWrist':[.368,-.012,.631],'rightShoulder':[-.162,0,.966],'rightElbow':[-.289,-.005,.770],'rightWrist':[-.368,-.012,.631]},'objects':source_stats,'triangles':sum(s['triangles']for s in source_stats.values()),'limitations':['Grayform only, not final facial topology, skin weights, animation or art acceptance','Side/back volumes inferred from canonical original; PlanB comparison pending readable access','Existing gameplay rig/actions/data/saves untouched','No final materials, textures, fine strands, weave or finger topology','Back bow omitted rather than claiming an unseen reference']}
 manifest['soleNormalization']=sole;manifest['semanticExportGroups']=list(groups)
-(SRC/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');print(json.dumps({'objects':len(objects),'triangles':manifest['triangles'],'headUnits':manifest['headUnits']}))
+for key in ['intendedHeight','headChin','hairCrown','headUnits']:manifest.pop(key,None)
+manifest['revision']='R2 head/neck only';manifest['headNeckOffset']=head_offset;manifest['bodyFrozenSource']='038740fbd7f6428cc82d5f442646c2d86a4143e3';manifest['jointsBlender']['neck']=[0,.019,1.04]
+manifest['PlanB']['materialization']='official helper download failed, and one fresh authorized retry also failed; no local bytes/new views inspected'
+(SRC/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n');print(json.dumps({'objects':len(objects),'triangles':manifest['triangles'],'headNeckOffset':head_offset}))

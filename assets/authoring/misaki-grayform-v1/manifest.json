@@ -5,19 +5,15 @@
   "PlanB": {
     "library_file_id": "libfile_d1f1a5f43d9c819199f7d57ff7936d6a",
     "expectedSha256": "4c35ad580dfff13001d4970a7bc2b1be5299c944d127abb0fdd329f7dad6e420",
-    "materialization": "official helper download failed; no local bytes or new views inspected"
+    "materialization": "official helper download failed, and one fresh authorized retry also failed; no local bytes/new views inspected"
   },
   "axes": "Blender Z-up / face -Y / own LEFT +X; glTF Y-up / face +Z / own LEFT +X",
   "pose": "normalized neutral A-pose; hands are coarse masses",
-  "intendedHeight": 1.442,
-  "headChin": 0.998,
-  "hairCrown": 1.442,
-  "headUnits": 3.247747747747748,
   "jointsBlender": {
     "neck": [
       0,
-      0,
-      1.0
+      0.019,
+      1.04
     ],
     "leftShoulder": [
       0.162,
@@ -51,112 +47,127 @@
     ]
   },
   "objects": {
-    "01 / continuous soft face with integrated nose": {
-      "controlVertices": 880,
-      "controlQuads": 840,
-      "triangles": 6880
+    "01 / cheek to narrowing jaw and real eye apertures": {
+      "controlVertices": 1280,
+      "controlQuads": 1168,
+      "triangles": 9600
     },
-    "02 / short neck": {
-      "controlVertices": 120,
-      "controlQuads": 100,
-      "triangles": 880
+    "02 / visible neck bridge": {
+      "controlVertices": 180,
+      "controlQuads": 160,
+      "triangles": 1360
     },
-    "03 / eye volume -1": {
-      "controlVertices": 97,
-      "controlQuads": 72,
-      "triangles": 168
+    "02 / ear bowl -1": {
+      "controlVertices": 100,
+      "controlQuads": 80,
+      "triangles": 1440
     },
-    "04 / eyelid rim -1": {
-      "controlVertices": 150,
-      "controlQuads": 144,
-      "triangles": 296
+    "02 / ear bowl 1": {
+      "controlVertices": 100,
+      "controlQuads": 80,
+      "triangles": 1440
     },
-    "05 / iris placement -1": {
-      "controlVertices": 25,
+    "03 / convex eye behind almond aperture -1": {
+      "controlVertices": 129,
+      "controlQuads": 96,
+      "triangles": 224
+    },
+    "04 / upper folded lid -1": {
+      "controlVertices": 34,
+      "controlQuads": 16,
+      "triangles": 392
+    },
+    "04 / lower soft lid -1": {
+      "controlVertices": 34,
+      "controlQuads": 16,
+      "triangles": 392
+    },
+    "05 / iris placement under upper lid -1": {
+      "controlVertices": 33,
       "controlQuads": 0,
-      "triangles": 24
+      "triangles": 32
     },
-    "06 / brow placement -1": {
-      "controlVertices": 54,
-      "controlQuads": 48,
-      "triangles": 104
-    },
-    "03 / eye volume 1": {
-      "controlVertices": 97,
+    "06 / upper lash placement -1": {
+      "controlVertices": 78,
       "controlQuads": 72,
-      "triangles": 168
+      "triangles": 152
     },
-    "04 / eyelid rim 1": {
-      "controlVertices": 150,
-      "controlQuads": 144,
-      "triangles": 296
+    "06 / broad brow placement -1": {
+      "controlVertices": 66,
+      "controlQuads": 60,
+      "triangles": 128
     },
-    "05 / iris placement 1": {
-      "controlVertices": 25,
+    "03 / convex eye behind almond aperture 1": {
+      "controlVertices": 129,
+      "controlQuads": 96,
+      "triangles": 224
+    },
+    "04 / upper folded lid 1": {
+      "controlVertices": 34,
+      "controlQuads": 16,
+      "triangles": 392
+    },
+    "04 / lower soft lid 1": {
+      "controlVertices": 34,
+      "controlQuads": 16,
+      "triangles": 392
+    },
+    "05 / iris placement under upper lid 1": {
+      "controlVertices": 33,
       "controlQuads": 0,
-      "triangles": 24
+      "triangles": 32
     },
-    "06 / brow placement 1": {
-      "controlVertices": 54,
-      "controlQuads": 48,
-      "triangles": 104
+    "06 / upper lash placement 1": {
+      "controlVertices": 78,
+      "controlQuads": 72,
+      "triangles": 152
+    },
+    "06 / broad brow placement 1": {
+      "controlVertices": 66,
+      "controlQuads": 60,
+      "triangles": 128
     },
     "07 / neutral mouth placement": {
       "controlVertices": 78,
       "controlQuads": 72,
       "triangles": 152
     },
-    "10 / continuous bob mass and face opening": {
-      "controlVertices": 792,
-      "controlQuads": 792,
-      "triangles": 6336
+    "10 / loose bob connected lobes with ear notches": {
+      "controlVertices": 864,
+      "controlQuads": 864,
+      "triangles": 6912
     },
-    "11 / large swept fringe left": {
+    "11 / off-centre swept broad fringe": {
       "controlVertices": 96,
       "controlQuads": 88,
       "triangles": 736
     },
-    "12 / large swept fringe right": {
+    "12 / shorter parted own-left fringe": {
       "controlVertices": 96,
       "controlQuads": 88,
       "triangles": 736
     },
-    "13 / inner fringe broad turn": {
+    "13 / inner curved fringe turn": {
       "controlVertices": 96,
       "controlQuads": 88,
       "triangles": 736
     },
-    "14 / cheek-side broad curl -1": {
+    "14 / cheek curl with open ear gap -1": {
       "controlVertices": 96,
       "controlQuads": 88,
       "triangles": 736
     },
-    "15 / side-back broad mass -1": {
+    "15 / rounded side volume turning inward -1": {
       "controlVertices": 96,
       "controlQuads": 88,
       "triangles": 736
     },
-    "14 / cheek-side broad curl 1": {
+    "14 / cheek curl with open ear gap 1": {
       "controlVertices": 96,
       "controlQuads": 88,
       "triangles": 736
     },
-    "15 / side-back broad mass 1": {
-      "controlVertices": 96,
-      "controlQuads": 88,
-      "triangles": 736
-    },
-    "16 / inferred broad back mass 0": {
-      "controlVertices": 96,
-      "controlQuads": 88,
-      "triangles": 736
-    },
-    "16 / inferred broad back mass 1": {
-      "controlVertices": 96,
-      "controlQuads": 88,
-      "triangles": 736
-    },
-    "16 / inferred broad back mass 2": {
+    "15 / rounded side volume turning inward 1": {
       "controlVertices": 96,
       "controlQuads": 88,
       "triangles": 736
@@ -262,7 +273,7 @@
       "triangles": 832
     }
   },
-  "triangles": 47576,
+  "triangles": 53480,
   "limitations": [
     "Grayform only, not final facial topology, skin weights, animation or art acceptance",
     "Side/back volumes inferred from canonical original; PlanB comparison pending readable access",
@@ -277,5 +288,8 @@
     "hair",
     "own-left-clip",
     "clothed-body"
-  ]
+  ],
+  "revision": "R2 head/neck only",
+  "headNeckOffset": 0.045,
+  "bodyFrozenSource": "038740fbd7f6428cc82d5f442646c2d86a4143e3"
 }
