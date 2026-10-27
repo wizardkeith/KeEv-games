@@ -1,0 +1,15 @@
+{
+  "mode": "glb",
+  "blender": "5.2.3 LTS",
+  "background": true,
+  "object": "SmokeTest_NotGameArt",
+  "vertices": 24,
+  "polygons": 12,
+  "materials": 1,
+  "location": [
+    0.0,
+    0.0,
+    1.0
+  ],
+  "passed": true
+}

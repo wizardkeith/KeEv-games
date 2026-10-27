@@ -1,0 +1,27 @@
+{
+  "blender": "5.2.3 LTS",
+  "background": true,
+  "source": {
+    "meshObjects": 44,
+    "curveObjects": 20,
+    "evaluatedTriangles": 49368,
+    "materialSlots": 8
+  },
+  "glb": {
+    "bytes": 902132,
+    "gltfMeshes": 5,
+    "gltfPrimitives": 10,
+    "gltfMaterials": 7,
+    "gltfImages": 0,
+    "gltfSkins": 0,
+    "gltfAnimations": 0,
+    "importedMeshObjects": 5,
+    "importedTriangles": 49368
+  },
+  "sha256": {
+    "assets\\authoring\\misaki-grayform-v1\\misaki-grayform.blend": "e8d5b774c5aba9fecbba3800732592c6b1eb66b34e74e6622c0099d6b60ed7a9",
+    "public\\assets\\misaki-grayform-v1\\misaki-grayform.glb": "29f4ff9e8711f80cef1f5d899d9c5f0fab0facbf1841274678313581998bb823"
+  },
+  "sourceFilesUnchanged": true,
+  "passed": true
+}

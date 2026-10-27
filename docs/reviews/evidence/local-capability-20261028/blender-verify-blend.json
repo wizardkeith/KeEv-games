@@ -1,0 +1,15 @@
+{
+  "mode": "blend",
+  "blender": "5.2.3 LTS",
+  "background": true,
+  "object": "SmokeTest_NotGameArt",
+  "vertices": 8,
+  "polygons": 6,
+  "materials": 1,
+  "location": [
+    0.0,
+    0.0,
+    1.0
+  ],
+  "passed": true
+}

@@ -1,0 +1,9 @@
+{
+  "node": "v24.19.0",
+  "httpStatus": 200,
+  "bytes": 1984,
+  "magic": "glTF",
+  "localhostOnly": true,
+  "passed": true,
+  "browserRenderTested": false
+}

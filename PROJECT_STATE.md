@@ -1,6 +1,14 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-28T00:09:10+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-28T00:25:40+08:00** (Asia/Hong_Kong).
+
+## 本機Web-first交接能力核對／R6資產原檔完整，build與GUI仍有界限 — 2026-10-28T00:25:40+08:00
+
+- 新獨立本機checkout起點及實際remote同為`56dd5e3361917d7394d4e37eedbddd759c06d0f2`，branch `codex/asset-foundation-v1`，初始clean；已實讀current main／AGENTS／R6進度，舊本機工程未碰。[本輪實際命令結果、整合限制及意外記錄](docs/LOCAL_WEB_HANDOFF_2026-10-28_zh-HK.md)。
+- 本機Blender5.2.3／Python3.13.13已真輸出smoke .blend/.glb並重開；又直接載入已提交R6 .blend及GLB，49,368tri、原SHA前後完全不變。R6身份／畫風仍未接受，無新美術、未重新匯出原資產，唯一writer尚待父緒分派。
+- 三螢幕協作範圍未定，GUI input/focus hold維持；只證明Blender畫面可見，未證明直接GUI造型／reference matching。Unity Hub3.22.4可見，CLI1.0.0-beta.12已存在；本身分Editor batch仍license exit198，Pipeline無可用instance證據，無安裝外掛／MCP配置／條款接受／引擎遷移。
+- Node24.19.0 localhost GLB roundtrip exit0；npm未找到，bundled pnpm11.25.0可執行。但pnpm run意外自動下載25個專案依賴，兩次pre-run均因esbuild ignored-builds exit1，真正test/build未跑；已停止、不approve-builds、不改政策。原tracked package/source/assets保留，自動lock/workspace/cache不提交。此意外完整保留，不能稱Web build已通過。
+- 本checkpoint僅同步交接文件及最小診斷source／smoke／JSON證據，不含raw logs、credentials、個人存檔或cache；之後須fetch/readback精確SHA再清理task-owned可重建檔。main仍`db21f3cb4f57b254c3dcfd99c2737411ba4301b8`未寫，無PR retry／merge／Site公開／玩家Normal更改；原R6／Library version5／PlanB retry停止保持。
 
 ## R6安全暫停／待本機Unity與Blender能力核對，尚未移交唯一寫入權 — 2026-10-28T00:09:10+08:00
 

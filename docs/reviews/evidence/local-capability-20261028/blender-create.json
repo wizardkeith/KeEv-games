@@ -1,0 +1,12 @@
+{
+  "blender": "5.2.3 LTS",
+  "python": "3.13.13 (main, May  8 2026, 12:37:03) [MSC v.1944 64 bit (AMD64)]",
+  "background": true,
+  "object": "SmokeTest_NotGameArt",
+  "vertices": 8,
+  "polygons": 6,
+  "files": {
+    "smoke.blend": 88573,
+    "smoke.glb": 1984
+  }
+}
