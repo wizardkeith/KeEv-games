@@ -1,6 +1,10 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T10:37:56+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T10:57:24+08:00** (Asia/Hong_Kong).
+
+## V11 C45開發預設採用C44／驗證中 — 2026-10-27T10:57:24+08:00
+
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)推送application`1aaf9ce67c465f0fd1a3a10d8c5465f161608f84`。父任務轉達C44局部接觸獨立PASS，鎖定.20、不再調窄門檻；C45只把無flag開發build指向同一C44光照／AO，更新採用metadata，原配方／模型材質／camera／192反射／RTT修正保留。282tests與no-flag／explicit-contact195檔byte相同已通過，實際普通正常圖已讀回C44數值；Low/High、Reduce Motion及stock/reload驗證中。首輪QA漏設C44預期ID仍等C43，120秒逾時未計PASS，已用正確ID重跑，沒有改光或放寬值。**僅V11開發採用，整體原圖未接受，非公開release。** main僅文件指標、未合併／PR8仍Draft，本輪未改公開V17；無玩家Normal／Chrome／Unity／Site／Library或LTC重試／關機，無使用者動作阻塞。
 
 ## V11 C44局部接觸半徑固定候選／待視覺覆核 — 2026-10-27T10:37:56+08:00
 
