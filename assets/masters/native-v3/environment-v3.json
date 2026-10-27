@@ -14,6 +14,9 @@
     "No device or WebGL visual validation is implied by this export."
   ],
   "sources": {
+    "src/art/source-separation-v11.ts": "7132ab0c767af6b40012e7de28f7c48365bb2e61a98e188369ab3bf7702194ae",
+    "tools/export-v11-source-separation.ts": "0c1806cdaaffa9120c170a1792b2eb44f4c8c6e9d5e557dd320903a96f432bd1",
+    "assets/authoring/native-v11/source-separation-c48.json": "9a3de5b2a60062bd2427a7ad855d232a68e3386e269af9966c4752bb2e830134",
     "src/art/scene-window-reach-v11.ts": "336f38e2815397c7a281193afdf4b5a1f36dbccdaa43a74d1c193d89c9234c7c",
     "tools/export-v11-window-reach.ts": "80d0cf0b089a654d64bf72cb40740bfec9772806f2c0790b184fe0620d4e451f",
     "assets/authoring/native-v11/scene-window-reach-c47.json": "922a071cab30e746bad5b5e56aedc7d4e71150bf0a9825d9946d31429c72463a",
@@ -171,7 +174,7 @@
     "src/art/geometry.ts": "937c809d19e0dd860808cc41e2ee9cb16c325462d85c95a0dae2eaac8ea9da7a",
     "src/art/materials.ts": "5547b28612dbc58218d9304bc462b81da1aae37637665c2a311ad071b9ece87d",
     "src/art/native-materials.ts": "432f387c45f07b2ef9c0adb8207e0e1d44e143d64343bd8cd49b240dee72001d",
-    "tools/export-native-environment.ts": "263dbfb6b0881e79d00e9f928e86e29dca710ce73cbefeb60ca973621bda83c7"
+    "tools/export-native-environment.ts": "e55ede937666cfbe9c617a26b6b04dc81eef765f7744a20ce0fcf46040ac645a"
   },
   "presentation": {
     "camera": {
@@ -432,6 +435,12 @@
     }
   },
   "rendererExtensions": {
+    "sourceContributionDiagnostic": {
+      "id": "v11.c48.fixed-c47-source-diagnostic.v2",
+      "defaultAdopted": false,
+      "defaultMode": "off",
+      "scope": "Authoring-only source energy and receiver/caster diagnostics; no asset/material/default-lighting changes"
+    },
     "windowReachAuthoring": {
       "id": "v11.c47.window-direction-reach.v2",
       "mode": "control",
