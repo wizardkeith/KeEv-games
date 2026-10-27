@@ -1,0 +1,21 @@
+00:01.578  blend            | Read blend: "<TASK_ROOT>\hair-r7\baseline\misaki-grayform.blend"
+Info: Saved as "misaki-grayform.blend"
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+06:20:54 | INFO: Starting glTF 2.0 export
+06:20:54 | INFO: Extracting primitive: 20 / inner shirt torso editable quads.001
+06:20:54 | INFO: Primitives created: 4
+06:20:54 | INFO: Extracting primitive: 01 / cheek to narrowing jaw and real eye apertures editable qua.001
+06:20:54 | INFO: Primitives created: 1
+06:20:54 | INFO: Extracting primitive: 03 / convex eye behind almond aperture -1 editable quads.001
+06:20:54 | INFO: Primitives created: 3
+06:20:54 | INFO: Extracting primitive: 16 / local curved crown root join editable quads.001
+06:20:54 | INFO: Primitives created: 1
+06:20:54 | INFO: Extracting primitive: 17 / own LEFT clip leaf 0 editable quads.001
+06:20:54 | INFO: Primitives created: 1
+06:20:54 | INFO: Finished glTF 2.0 export in 0.1837935447692871 s
+
+{"baselineBlendSha256": "e8d5b774c5aba9fecbba3800732592c6b1eb66b34e74e6622c0099d6b60ed7a9", "changedNativeCages": ["10 / primary swept fringe", "11 / underlapping temple turn"], "frozenSourceCages": 42, "triangles": 49720, "newBlendSha256": "71a6de35f99476a3d155a6912eb5a3eac05a5ddcecf00521928729765e7e8702", "newGlbSha256": "764d578b0b1fd5958b9773c6abfa0efa87ab13bf0f99b653dbbfc0bb853da4cf"}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

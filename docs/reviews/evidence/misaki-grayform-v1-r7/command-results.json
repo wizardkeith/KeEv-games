@@ -1,0 +1,94 @@
+{
+  "recordedUtc": "2026-10-27T22:29:14.788Z",
+  "baselineCommit": "cec0c83464291d885ae363ff22d2881ba7d08dda",
+  "execution": "Windows; existing locked dependencies; no installation or GUI input this phase",
+  "commands": [
+    {
+      "command": "Blender --background --factory-startup --python-exit-code 1 --python tools/asset-foundation/misaki-hair-r7.py -- --baseline ../hair-r7/baseline/misaki-grayform.blend --manifest ../hair-r7/baseline/manifest.json",
+      "exitCode": 0,
+      "log": "logs/blender-edit.log"
+    },
+    {
+      "command": "Blender --background --factory-startup --python-exit-code 1 --python tools/asset-foundation/inspect-misaki-r7.py",
+      "exitCode": 0,
+      "log": "logs/reopen.log"
+    },
+    {
+      "command": "QA_OUTPUT=docs/reviews/evidence/misaki-grayform-v1-r7 node tools/asset-foundation/validate-misaki-gray.mjs",
+      "exitCode": 0,
+      "log": "logs/asset-validation.log"
+    },
+    {
+      "command": "node node_modules/typescript/bin/tsc --noEmit; node node_modules/vite/bin/vite.js build (sequential, stop on nonzero)",
+      "exitCode": 0,
+      "log": "logs/build.log"
+    },
+    {
+      "command": "node --import tsx --test tests/*.test.ts",
+      "exitCode": 0,
+      "log": "logs/test.log"
+    },
+    {
+      "command": "node node_modules/typescript/bin/tsc --noEmit --target ES2022 --module ESNext --moduleResolution Bundler --strict --resolveJsonModule --esModuleInterop --lib ES2022,DOM --types node --skipLibCheck src/env.d.ts tools/asset-foundation/studio-misaki-gray.ts tools/asset-foundation/gameplay-misaki-gray.ts",
+      "exitCode": 0,
+      "log": "logs/authoring-types.log"
+    },
+    {
+      "command": "node --import tsx tools/validate.ts",
+      "exitCode": 0,
+      "log": "logs/validate.log"
+    },
+    {
+      "command": "node --import tsx tools/replay.ts",
+      "exitCode": 0,
+      "log": "logs/replay.log"
+    },
+    {
+      "command": "node tools/validate-assets.mjs",
+      "exitCode": 0,
+      "log": "logs/asset-check.log"
+    },
+    {
+      "command": "CODEX_NODE_MODULES=<EXISTING_BUNDLED_MODULES> R6_GLB=<TASK_BASELINE_GLB> node tools/asset-foundation/capture-misaki-r7.cjs",
+      "exitCode": 0,
+      "log": "logs/runtime-full.log"
+    },
+    {
+      "command": "node tools/asset-foundation/check-misaki-r7-scope.cjs",
+      "exitCode": 0,
+      "log": "logs/scope.log"
+    },
+    {
+      "command": "git diff --check; node --check capture-misaki-r7.cjs; node --check check-misaki-r7-scope.cjs; source/export/comparison SHA assertions (read-only)",
+      "exitCode": 0
+    }
+  ],
+  "testSummary": {
+    "tests": 304,
+    "pass": 304,
+    "fail": 0,
+    "skip": 0
+  },
+  "notRun": [
+    "Linux A/B",
+    "GUI editing",
+    "Unity integration",
+    "production adoption/public deployment"
+  ],
+  "sync": {
+    "state": "source_synced_evidence_checkpoint",
+    "sourceCommit": "d5ad1dc746c84274ef455ead76681ce4c3782f5d",
+    "sourceRemoteReadback": "d5ad1dc746c84274ef455ead76681ce4c3782f5d",
+    "normalPushExitCode": 0,
+    "baselineCommit": "cec0c83464291d885ae363ff22d2881ba7d08dda",
+    "priorAutoReviewDenialResolved": true,
+    "subsequentTransportInterruptionReconciled": true,
+    "authBypassOrAlternateWriteRoute": false,
+    "evidenceCommitAndRemoteReadback": "See external delivery; do not self-reference this commit"
+  },
+  "cleanup": {
+    "performed": false,
+    "reason": "Await verified full evidence checkpoint before task-only redundant scratch cleanup",
+    "measuredDiskSavingsBytes": null
+  }
+}

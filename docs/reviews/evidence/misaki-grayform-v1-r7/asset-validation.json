@@ -1,0 +1,112 @@
+{
+  "file": "public/assets/misaki-grayform-v1/misaki-grayform.glb",
+  "sha256": "764d578b0b1fd5958b9773c6abfa0efa87ab13bf0f99b653dbbfc0bb853da4cf",
+  "bytes": 908476,
+  "triangles": 49720,
+  "meshes": 5,
+  "materials": 7,
+  "primitives": 10,
+  "images": 0,
+  "skins": 0,
+  "animations": 0,
+  "bounds": {
+    "misaki-grayform/clothed-body": {
+      "min": [
+        -0.4153306484222412,
+        0,
+        -0.1802259236574173
+      ],
+      "max": [
+        0.4153306484222412,
+        1.0172874427516945,
+        0.1808842569589615
+      ],
+      "triangles": 24480
+    },
+    "misaki-grayform/face": {
+      "min": [
+        -0.2072591930627823,
+        0.9755296669900417,
+        -0.15646634995937347
+      ],
+      "max": [
+        0.2072591930627823,
+        1.4462883435189724,
+        0.14566971361637115
+      ],
+      "triangles": 13840
+    },
+    "misaki-grayform/feature-placement": {
+      "min": [
+        -0.11237769573926926,
+        1.1152594052255154,
+        0.0977243185043335
+      ],
+      "max": [
+        0.11237769573926926,
+        1.2778581343591213,
+        0.13045145571231842
+      ],
+      "triangles": 2792
+    },
+    "misaki-grayform/hair": {
+      "min": [
+        -0.2282228320837021,
+        1.0465011559426785,
+        -0.22293142974376678
+      ],
+      "max": [
+        0.22639600932598114,
+        1.477132435888052,
+        0.1913006603717804
+      ],
+      "triangles": 8304
+    },
+    "misaki-grayform/own-left-clip": {
+      "min": [
+        0.14147496223449707,
+        1.329735156148672,
+        0.07120004296302795
+      ],
+      "max": [
+        0.1698503941297531,
+        1.3743697367608547,
+        0.11155138909816742
+      ],
+      "triangles": 304
+    }
+  },
+  "min": [
+    -0.4153306484222412,
+    0,
+    -0.22293142974376678
+  ],
+  "max": [
+    0.4153306484222412,
+    1.477132435888052,
+    0.1913006603717804
+  ],
+  "height": 1.477132435888052,
+  "issues": {
+    "numErrors": 0,
+    "numWarnings": 0,
+    "numInfos": 0,
+    "numHints": 0,
+    "messages": [],
+    "truncated": false
+  },
+  "frozenBodySource": "038740fbd7f6428cc82d5f442646c2d86a4143e3",
+  "frozenBodyStreams": 12,
+  "frozenR3NonHairStreams": 24,
+  "frozenR5NonHairStreams": 27,
+  "allR5NonHairGeometryTRSFrozen": true,
+  "R3FaceEyesBodyTRSFrozen": true,
+  "R2FaceProfileNeckEarDefinitionsFrozen": true,
+  "frozenBodyNodeTRS": true,
+  "allGrayMaterialDefinitionsFrozen": true,
+  "frozenAcceptedAssetFiles": 29,
+  "limits": [
+    "Origin/bounds/standard checks do not certify collisions, topology suitability, rigging or art",
+    "PlanB original attempt and one fresh supported retry failed; no further retry; side/back inferred from canonical only"
+  ]
+}

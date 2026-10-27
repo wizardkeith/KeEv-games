@@ -1,0 +1,13 @@
+00:01.484  blend            | Read blend: "<REPO>\assets\authoring\misaki-grayform-v1\misaki-grayform.blend"
+Extensions: writing cache failed ([WinError 5] 摮?鋡急??? 'C:\\Users\\wizar\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\extensions').
+06:23:09 | INFO: Data are loaded, start creating Blender stuff
+06:23:09 | INFO: Blender create Mesh node 20 / inner shirt torso editable quads.001
+06:23:10 | INFO: Blender create Mesh node 01 / cheek to narrowing jaw and real eye apertures editable qua.001
+06:23:10 | INFO: Blender create Mesh node 03 / convex eye behind almond aperture -1 editable quads.001
+06:23:10 | INFO: Blender create Mesh node 16 / local curved crown root join editable quads.001
+06:23:10 | INFO: Blender create Mesh node 17 / own LEFT clip leaf 0 editable quads.001
+06:23:10 | INFO: glTF import finished in 0.06s
+{"nativeMeshes": 44, "triangles": 49720, "importedGlbMeshes": 5, "reopenedBoth": true}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

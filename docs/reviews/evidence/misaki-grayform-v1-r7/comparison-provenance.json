@@ -1,0 +1,214 @@
+{
+  "method": "Unedited source pixels, specified crop, proportional Lanczos resize, layout and labels only",
+  "originalSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+  "referenceViewLimit": "Original illustration has different three-quarter pose/projection; no exact front/side/back reference claimed",
+  "panels": [
+    {
+      "file": "original-r6-r7-front-head480.png",
+      "sha256": "2038338bece49d13f8eed1ed60f9adbacdf5379f375479a4271cbb6f3eb41b50",
+      "panels": [
+        {
+          "label": "ORIGINAL / 3/4; pose differs",
+          "source": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+          "sourceSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+          "crop": [
+            1206,
+            678,
+            1512,
+            966
+          ]
+        },
+        {
+          "label": "R6 / FRONT / same local renderer",
+          "source": "docs/reviews/evidence/misaki-grayform-v1-r7/r6-front.png",
+          "sourceSha256": "4c3bd345bd5f4dac69365680d86498bacb8efc9d63da22e1f756a9bff79ebf47",
+          "crop": [
+            170,
+            4,
+            550,
+            330
+          ]
+        },
+        {
+          "label": "R7 / FRONT / review candidate",
+          "source": "docs/reviews/evidence/misaki-grayform-v1-r7/r7-front.png",
+          "sourceSha256": "cb20f566f4988c268c973f4c106e6f9c0559311a29ae2c650d5500d1b3c9036b",
+          "crop": [
+            170,
+            4,
+            550,
+            330
+          ]
+        }
+      ],
+      "height": 480
+    },
+    {
+      "file": "r6-r7-front-body480.png",
+      "sha256": "80e25dbe24a06fdad63b7bc2a9b43ef06a39fb9f3af54eae311e4dcda72ff0a7",
+      "panels": [
+        {
+          "label": "R6 / FRONT",
+          "source": "docs/reviews/evidence/misaki-grayform-v1-r7/r6-front.png",
+          "sourceSha256": "4c3bd345bd5f4dac69365680d86498bacb8efc9d63da22e1f756a9bff79ebf47",
+          "crop": [
+            0,
+            0,
+            720,
+            900
+          ]
+        },
+        {
+          "label": "R7 / FRONT",
+          "source": "docs/reviews/evidence/misaki-grayform-v1-r7/r7-front.png",
+          "sourceSha256": "cb20f566f4988c268c973f4c106e6f9c0559311a29ae2c650d5500d1b3c9036b",
+          "crop": [
+            0,
+            0,
+            720,
+            900
+          ]
+        }
+      ],
+      "height": 480
+    },
+    {
+      "file": "original-r6-r7-threequarter-head480.png",
+      "sha256": "04df01221bad43d423dbd85f85eec1a396c7936c2c52cc377c6197649c3e826f",
+      "panels": [
+        {
+          "label": "ORIGINAL / 3/4; pose differs",
+          "source": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+          "sourceSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+          "crop": [
+            1206,
+            678,
+            1512,
+            966
+          ]
+        },
+        {
+          "label": "R6 / 3/4 / same local renderer",
+          "source": "docs/reviews/evidence/misaki-grayform-v1-r7/r6-threequarter.png",
+          "sourceSha256": "cb52adf0d4a44c65d7f8d3f6cb2f34ae899c727f69e8f699c4036666df304f58",
+          "crop": [
+            170,
+            4,
+            550,
+            330
+          ]
+        },
+        {
+          "label": "R7 / 3/4 / review candidate",
+          "source": "docs/reviews/evidence/misaki-grayform-v1-r7/r7-threequarter.png",
+          "sourceSha256": "af640d0b53a5e60d0327733607cc1d5d35915f2ed08c80d951d2d1fdce57203f",
+          "crop": [
+            170,
+            4,
+            550,
+            330
+          ]
+        }
+      ],
+      "height": 480
+    },
+    {
+      "file": "r6-r7-threequarter-body480.png",
+      "sha256": "24cc421d0452a58474119d4b27ab0fca1a0f9ec970f24040d360f84866d5bb20",
+      "panels": [
+        {
+          "label": "R6 / 3/4",
+          "source": "docs/reviews/evidence/misaki-grayform-v1-r7/r6-threequarter.png",
+          "sourceSha256": "cb52adf0d4a44c65d7f8d3f6cb2f34ae899c727f69e8f699c4036666df304f58",
+          "crop": [
+            0,
+            0,
+            720,
+            900
+          ]
+        },
+        {
+          "label": "R7 / 3/4",
+          "source": "docs/reviews/evidence/misaki-grayform-v1-r7/r7-threequarter.png",
+          "sourceSha256": "af640d0b53a5e60d0327733607cc1d5d35915f2ed08c80d951d2d1fdce57203f",
+          "crop": [
+            0,
+            0,
+            720,
+            900
+          ]
+        }
+      ],
+      "height": 480
+    },
+    {
+      "file": "original-r6-r7-normal-game480.png",
+      "sha256": "51313415f7154560d08d51f598070d544e674dc3b19e1473598bce11b8fecf0e",
+      "panels": [
+        {
+          "label": "ORIGINAL / left shop",
+          "source": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+          "sourceSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+          "crop": [
+            0,
+            0,
+            1184,
+            1024
+          ]
+        },
+        {
+          "label": "R6 / actual normal camera",
+          "source": "docs/reviews/evidence/misaki-grayform-v1-r7/r6-game-normal.png",
+          "sourceSha256": "1c4a26e058d367e637f6614f2c38ad50298439f9f906b7046f2e1d3995eb091d",
+          "crop": [
+            105,
+            75,
+            1190,
+            800
+          ]
+        },
+        {
+          "label": "R7 / actual normal camera",
+          "source": "docs/reviews/evidence/misaki-grayform-v1-r7/r7-game-normal.png",
+          "sourceSha256": "344d1cd5f9d37c1019cf94f15813afe0401bf90d5f07f18dfa4f85894d6ab392",
+          "crop": [
+            105,
+            75,
+            1190,
+            800
+          ]
+        }
+      ],
+      "height": 480
+    },
+    {
+      "file": "r7-inferred-side-back480.png",
+      "sha256": "bab6a89c5cd4e59a4435485337fa699c5e2409eec4019476b9359596f5db7ee5",
+      "panels": [
+        {
+          "label": "SIDE / inferred",
+          "source": "docs/reviews/evidence/misaki-grayform-v1-r7/r7-side.png",
+          "sourceSha256": "364c6ba70e442ebbd17539157fb4854c1ad89c8b33a88185f00147d9aec0d418",
+          "crop": [
+            100,
+            4,
+            620,
+            850
+          ]
+        },
+        {
+          "label": "BACK / inferred",
+          "source": "docs/reviews/evidence/misaki-grayform-v1-r7/r7-back.png",
+          "sourceSha256": "0145114794f7b078577abb562798605bf1c67981159b544ce49cb362e509f964",
+          "crop": [
+            100,
+            4,
+            620,
+            850
+          ]
+        }
+      ],
+      "height": 480
+    }
+  ]
+}

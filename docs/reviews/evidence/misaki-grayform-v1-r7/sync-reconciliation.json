@@ -1,0 +1,27 @@
+{
+  "checkedHongKong": "2026-10-28T06:56:14+08:00",
+  "baselineCommit": "cec0c83464291d885ae363ff22d2881ba7d08dda",
+  "sourceCommit": "d5ad1dc746c84274ef455ead76681ce4c3782f5d",
+  "initialCommitDenial": {
+    "knownNotExecuted": true,
+    "resolvedWithDirectUserEvidence": true,
+    "sameOperationRetryCount": 1,
+    "result": "source commit created"
+  },
+  "initialPushInterruption": {
+    "reason": "exec-server transport disconnected; selected environment unavailable",
+    "independentReadOnlyRemoteCheck": "cec0c83464291d885ae363ff22d2881ba7d08dda"
+  },
+  "sameEnvironmentRecovery": {
+    "localHead": "d5ad1dc746c84274ef455ead76681ce4c3782f5d",
+    "indexEmpty": true,
+    "remoteHeadBeforePush": "cec0c83464291d885ae363ff22d2881ba7d08dda",
+    "remoteWasAncestor": true,
+    "push": "normal non-force Git origin",
+    "pushExitCode": 0,
+    "remoteHeadAfterPush": "d5ad1dc746c84274ef455ead76681ce4c3782f5d"
+  },
+  "postRecoveryArtifactAndComparisonShaAssertions": true,
+  "noNewArtOrRenderOrFullTestRunDuringReconciliation": true,
+  "evidenceCheckpoint": "Final commit and remote SHA reported externally"
+}

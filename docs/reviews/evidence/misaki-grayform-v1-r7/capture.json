@@ -1,0 +1,907 @@
+{
+  "startedUtc": "2026-10-27T22:24:10.073Z",
+  "headless": true,
+  "independentBrowser": true,
+  "freshContexts": true,
+  "errors": [],
+  "screenshots": [
+    {
+      "file": "r6-front.png",
+      "sha256": "4c3bd345bd5f4dac69365680d86498bacb8efc9d63da22e1f756a9bff79ebf47",
+      "bytes": 66663
+    },
+    {
+      "file": "r6-threequarter.png",
+      "sha256": "cb52adf0d4a44c65d7f8d3f6cb2f34ae899c727f69e8f699c4036666df304f58",
+      "bytes": 61290
+    },
+    {
+      "file": "r6-side.png",
+      "sha256": "23d720a1b1bf4676f7031943917b2abcf117f2de6442425f715d7d4c24cf544b",
+      "bytes": 42465
+    },
+    {
+      "file": "r6-back.png",
+      "sha256": "de1f70cab2ed5f1fe18d12dd647eeb2d8fb165b484ac2415e7a1717605979a79",
+      "bytes": 46513
+    },
+    {
+      "file": "r7-front.png",
+      "sha256": "cb20f566f4988c268c973f4c106e6f9c0559311a29ae2c650d5500d1b3c9036b",
+      "bytes": 66016
+    },
+    {
+      "file": "r7-threequarter.png",
+      "sha256": "af640d0b53a5e60d0327733607cc1d5d35915f2ed08c80d951d2d1fdce57203f",
+      "bytes": 61381
+    },
+    {
+      "file": "r7-side.png",
+      "sha256": "364c6ba70e442ebbd17539157fb4854c1ad89c8b33a88185f00147d9aec0d418",
+      "bytes": 42839
+    },
+    {
+      "file": "r7-back.png",
+      "sha256": "0145114794f7b078577abb562798605bf1c67981159b544ce49cb362e509f964",
+      "bytes": 46401
+    },
+    {
+      "file": "r6-game-normal.png",
+      "sha256": "1c4a26e058d367e637f6614f2c38ad50298439f9f906b7046f2e1d3995eb091d",
+      "bytes": 636835
+    },
+    {
+      "file": "r6-game-oblique-left.png",
+      "sha256": "c4208d922d514c38fb1e065ea0ad2a7512c50e67b3286d3dcb2deb4c69eb2f56",
+      "bytes": 639110
+    },
+    {
+      "file": "r6-game-oblique-right.png",
+      "sha256": "f15571e3afe14df6c9936ae5e49931fd36640d923391bc1fb051d33257c7c6f4",
+      "bytes": 609901
+    },
+    {
+      "file": "r7-game-normal.png",
+      "sha256": "344d1cd5f9d37c1019cf94f15813afe0401bf90d5f07f18dfa4f85894d6ab392",
+      "bytes": 637006
+    },
+    {
+      "file": "r7-game-oblique-left.png",
+      "sha256": "cd75dc9f518fb17c00cc8b44108b072a9853cec2c221473ba03fdcf14a9efc67",
+      "bytes": 638964
+    },
+    {
+      "file": "r7-game-oblique-right.png",
+      "sha256": "aaf9f339215d5b91aa08a5bef3e8a1fa343fe5357bd36bcb7b9e3bf9f442c882",
+      "bytes": 610451
+    }
+  ],
+  "loadedAssets": [
+    {
+      "revision": "r6",
+      "sha256": "29f4ff9e8711f80cef1f5d899d9c5f0fab0facbf1841274678313581998bb823",
+      "bytes": 902132,
+      "status": 200
+    },
+    {
+      "revision": "r7",
+      "sha256": "764d578b0b1fd5958b9773c6abfa0efa87ab13bf0f99b653dbbfc0bb853da4cf",
+      "bytes": 908476,
+      "status": 200
+    },
+    {
+      "revision": "r6",
+      "sha256": "29f4ff9e8711f80cef1f5d899d9c5f0fab0facbf1841274678313581998bb823",
+      "bytes": 902132,
+      "status": 200
+    },
+    {
+      "revision": "r7",
+      "sha256": "764d578b0b1fd5958b9773c6abfa0efa87ab13bf0f99b653dbbfc0bb853da4cf",
+      "bytes": 908476,
+      "status": 200
+    },
+    {
+      "revision": "r7",
+      "sha256": "764d578b0b1fd5958b9773c6abfa0efa87ab13bf0f99b653dbbfc0bb853da4cf",
+      "bytes": 908476,
+      "status": 200
+    }
+  ],
+  "limits": [
+    "No existing profile/window/display controlled",
+    "Grayform review fixture; production staff and player saves unchanged",
+    "No visual acceptance, collision/rig, sustained FPS or native-device certification",
+    "Original is a three-quarter illustration; front render is not an exact original front view"
+  ],
+  "browser": "156.0.8078.48",
+  "studio": {
+    "r6": {
+      "gpu": {
+        "webgl2": true,
+        "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A78B) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "details": {
+        "lighting": {
+          "key": 2.1,
+          "fill": 0.65,
+          "exposure": 1,
+          "environment": 1
+        },
+        "source": "Actual GLB, neutral gray values, no textures; side/back inferred; no final rig"
+      },
+      "captureLabelOnly": "R6",
+      "views": [
+        "r6-front.png",
+        "r6-threequarter.png",
+        "r6-side.png",
+        "r6-back.png"
+      ]
+    },
+    "r7": {
+      "gpu": {
+        "webgl2": true,
+        "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A78B) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "details": {
+        "lighting": {
+          "key": 2.1,
+          "fill": 0.65,
+          "exposure": 1,
+          "environment": 1
+        },
+        "source": "Actual GLB, neutral gray values, no textures; side/back inferred; no final rig"
+      },
+      "captureLabelOnly": "R7",
+      "views": [
+        "r7-front.png",
+        "r7-threequarter.png",
+        "r7-side.png",
+        "r7-back.png"
+      ]
+    }
+  },
+  "game": {
+    "r6": {
+      "camera": {
+        "alpha": -0.7853981633974483,
+        "beta": 0.8726646259971648,
+        "radius": 9.980211978474616,
+        "target": [
+          0.7,
+          1.15,
+          0
+        ]
+      },
+      "quality": "high",
+      "grayform": {
+        "ready": true,
+        "placement": [
+          0.85,
+          0.079,
+          1.35
+        ],
+        "yaw": 3.141592653589793,
+        "triangles": 49368,
+        "meshes": [
+          {
+            "name": "misaki-grayform/face",
+            "triangles": 13840
+          },
+          {
+            "name": "misaki-grayform/feature-placement_primitive0",
+            "triangles": 448
+          },
+          {
+            "name": "misaki-grayform/feature-placement_primitive1",
+            "triangles": 1568
+          },
+          {
+            "name": "misaki-grayform/feature-placement_primitive2",
+            "triangles": 776
+          },
+          {
+            "name": "misaki-grayform/hair",
+            "triangles": 7952
+          },
+          {
+            "name": "misaki-grayform/own-left-clip",
+            "triangles": 304
+          },
+          {
+            "name": "misaki-grayform/clothed-body_primitive0",
+            "triangles": 9264
+          },
+          {
+            "name": "misaki-grayform/clothed-body_primitive1",
+            "triangles": 7488
+          },
+          {
+            "name": "misaki-grayform/clothed-body_primitive2",
+            "triangles": 1840
+          },
+          {
+            "name": "misaki-grayform/clothed-body_primitive3",
+            "triangles": 5888
+          }
+        ],
+        "lighting": {
+          "maxLights": 8,
+          "environmentIntensity": 0.8,
+          "sceneEnvironmentIntensity": 1,
+          "exposure": 1,
+          "lights": [
+            {
+              "name": "soft cream sky",
+              "type": "HemisphericLight",
+              "intensity": 0.27,
+              "enabled": true
+            },
+            {
+              "name": "static window sunlight",
+              "type": "DirectionalLight",
+              "intensity": 2.8,
+              "enabled": true
+            },
+            {
+              "name": "cool exterior sky",
+              "type": "HemisphericLight",
+              "intensity": 1.25,
+              "enabled": true
+            },
+            {
+              "name": "soft local face fill",
+              "type": "HemisphericLight",
+              "intensity": 0.43,
+              "enabled": true
+            },
+            {
+              "name": "native.practical.cashier",
+              "type": "SpotLight",
+              "intensity": 20,
+              "enabled": true
+            },
+            {
+              "name": "native.practical.central",
+              "type": "SpotLight",
+              "intensity": 24,
+              "enabled": true
+            },
+            {
+              "name": "v11.c44.same-broad-light.v1.indoor-sky",
+              "type": "HemisphericLight",
+              "intensity": 0.85,
+              "enabled": true
+            },
+            {
+              "name": "v11.c44.same-broad-light.v1",
+              "type": "SpotLight",
+              "intensity": 120,
+              "enabled": true
+            }
+          ]
+        },
+        "source": "Independent static grayform, existing staff rig/actions remain the real app; no animation binding or save commands"
+      },
+      "foundation": {
+        "maxSimultaneousLights": 8,
+        "environmentIntensity": 0.8,
+        "sceneEnvironmentIntensity": 1,
+        "exposure": 1,
+        "lights": [
+          {
+            "name": "soft cream sky",
+            "type": "HemisphericLight",
+            "intensity": 0.27,
+            "enabled": true
+          },
+          {
+            "name": "static window sunlight",
+            "type": "DirectionalLight",
+            "intensity": 2.8,
+            "enabled": true
+          },
+          {
+            "name": "cool exterior sky",
+            "type": "HemisphericLight",
+            "intensity": 1.25,
+            "enabled": true
+          },
+          {
+            "name": "soft local face fill",
+            "type": "HemisphericLight",
+            "intensity": 0.43,
+            "enabled": true
+          },
+          {
+            "name": "native.practical.cashier",
+            "type": "SpotLight",
+            "intensity": 20,
+            "enabled": true
+          },
+          {
+            "name": "native.practical.central",
+            "type": "SpotLight",
+            "intensity": 24,
+            "enabled": true
+          },
+          {
+            "name": "v11.c44.same-broad-light.v1.indoor-sky",
+            "type": "HemisphericLight",
+            "intensity": 0.85,
+            "enabled": true
+          },
+          {
+            "name": "v11.c44.same-broad-light.v1",
+            "type": "SpotLight",
+            "intensity": 120,
+            "enabled": true
+          }
+        ],
+        "actualMaterials": [
+          {
+            "name": "Honey oak • board 0",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • end grain",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • board 1",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • board 2",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • board 3",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Warm ivory glaze",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Celadon glaze",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Fine olive stems",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Warm white petals",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Muted pollen",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Soft sage leaves",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Warm white woven linen",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Foundation neutral grayform",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          }
+        ]
+      },
+      "paper": {
+        "maxSimultaneousLights": 8,
+        "environmentIntensity": 0.8,
+        "sceneEnvironmentIntensity": 1,
+        "exposure": 1,
+        "lights": [
+          {
+            "name": "soft cream sky",
+            "type": "HemisphericLight",
+            "intensity": 0.27,
+            "enabled": true
+          },
+          {
+            "name": "static window sunlight",
+            "type": "DirectionalLight",
+            "intensity": 2.8,
+            "enabled": true
+          },
+          {
+            "name": "cool exterior sky",
+            "type": "HemisphericLight",
+            "intensity": 1.25,
+            "enabled": true
+          },
+          {
+            "name": "soft local face fill",
+            "type": "HemisphericLight",
+            "intensity": 0.43,
+            "enabled": true
+          },
+          {
+            "name": "native.practical.cashier",
+            "type": "SpotLight",
+            "intensity": 20,
+            "enabled": true
+          },
+          {
+            "name": "native.practical.central",
+            "type": "SpotLight",
+            "intensity": 24,
+            "enabled": true
+          },
+          {
+            "name": "v11.c44.same-broad-light.v1.indoor-sky",
+            "type": "HemisphericLight",
+            "intensity": 0.85,
+            "enabled": true
+          },
+          {
+            "name": "v11.c44.same-broad-light.v1",
+            "type": "SpotLight",
+            "intensity": 120,
+            "enabled": true
+          }
+        ],
+        "actualMaterials": [
+          {
+            "name": "Cream uncoated paper",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Dusty rose book cover",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Foundation neutral grayform",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • board 0",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • board 1",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • board 2",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • board 3",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • end grain",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Oat linen book cover",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Sage cloth book cover",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Warm cut page edges",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          }
+        ]
+      },
+      "renderer": {
+        "vendor": "Google Inc. (Intel)",
+        "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A78B) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    },
+    "r7": {
+      "camera": {
+        "alpha": -0.7853981633974483,
+        "beta": 0.8726646259971648,
+        "radius": 9.980211978474616,
+        "target": [
+          0.7,
+          1.15,
+          0
+        ]
+      },
+      "quality": "high",
+      "grayform": {
+        "ready": true,
+        "placement": [
+          0.85,
+          0.079,
+          1.35
+        ],
+        "yaw": 3.141592653589793,
+        "triangles": 49720,
+        "meshes": [
+          {
+            "name": "misaki-grayform/clothed-body_primitive0",
+            "triangles": 9264
+          },
+          {
+            "name": "misaki-grayform/clothed-body_primitive1",
+            "triangles": 7488
+          },
+          {
+            "name": "misaki-grayform/clothed-body_primitive2",
+            "triangles": 1840
+          },
+          {
+            "name": "misaki-grayform/clothed-body_primitive3",
+            "triangles": 5888
+          },
+          {
+            "name": "misaki-grayform/face",
+            "triangles": 13840
+          },
+          {
+            "name": "misaki-grayform/feature-placement_primitive0",
+            "triangles": 448
+          },
+          {
+            "name": "misaki-grayform/feature-placement_primitive1",
+            "triangles": 1568
+          },
+          {
+            "name": "misaki-grayform/feature-placement_primitive2",
+            "triangles": 776
+          },
+          {
+            "name": "misaki-grayform/hair",
+            "triangles": 8304
+          },
+          {
+            "name": "misaki-grayform/own-left-clip",
+            "triangles": 304
+          }
+        ],
+        "lighting": {
+          "maxLights": 8,
+          "environmentIntensity": 0.8,
+          "sceneEnvironmentIntensity": 1,
+          "exposure": 1,
+          "lights": [
+            {
+              "name": "soft cream sky",
+              "type": "HemisphericLight",
+              "intensity": 0.27,
+              "enabled": true
+            },
+            {
+              "name": "static window sunlight",
+              "type": "DirectionalLight",
+              "intensity": 2.8,
+              "enabled": true
+            },
+            {
+              "name": "cool exterior sky",
+              "type": "HemisphericLight",
+              "intensity": 1.25,
+              "enabled": true
+            },
+            {
+              "name": "soft local face fill",
+              "type": "HemisphericLight",
+              "intensity": 0.43,
+              "enabled": true
+            },
+            {
+              "name": "native.practical.cashier",
+              "type": "SpotLight",
+              "intensity": 20,
+              "enabled": true
+            },
+            {
+              "name": "native.practical.central",
+              "type": "SpotLight",
+              "intensity": 24,
+              "enabled": true
+            },
+            {
+              "name": "v11.c44.same-broad-light.v1.indoor-sky",
+              "type": "HemisphericLight",
+              "intensity": 0.85,
+              "enabled": true
+            },
+            {
+              "name": "v11.c44.same-broad-light.v1",
+              "type": "SpotLight",
+              "intensity": 120,
+              "enabled": true
+            }
+          ]
+        },
+        "source": "Independent static grayform, existing staff rig/actions remain the real app; no animation binding or save commands"
+      },
+      "foundation": {
+        "maxSimultaneousLights": 8,
+        "environmentIntensity": 0.8,
+        "sceneEnvironmentIntensity": 1,
+        "exposure": 1,
+        "lights": [
+          {
+            "name": "soft cream sky",
+            "type": "HemisphericLight",
+            "intensity": 0.27,
+            "enabled": true
+          },
+          {
+            "name": "static window sunlight",
+            "type": "DirectionalLight",
+            "intensity": 2.8,
+            "enabled": true
+          },
+          {
+            "name": "cool exterior sky",
+            "type": "HemisphericLight",
+            "intensity": 1.25,
+            "enabled": true
+          },
+          {
+            "name": "soft local face fill",
+            "type": "HemisphericLight",
+            "intensity": 0.43,
+            "enabled": true
+          },
+          {
+            "name": "native.practical.cashier",
+            "type": "SpotLight",
+            "intensity": 20,
+            "enabled": true
+          },
+          {
+            "name": "native.practical.central",
+            "type": "SpotLight",
+            "intensity": 24,
+            "enabled": true
+          },
+          {
+            "name": "v11.c44.same-broad-light.v1.indoor-sky",
+            "type": "HemisphericLight",
+            "intensity": 0.85,
+            "enabled": true
+          },
+          {
+            "name": "v11.c44.same-broad-light.v1",
+            "type": "SpotLight",
+            "intensity": 120,
+            "enabled": true
+          }
+        ],
+        "actualMaterials": [
+          {
+            "name": "Honey oak • board 0",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • end grain",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • board 1",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • board 2",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • board 3",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Warm ivory glaze",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Celadon glaze",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Fine olive stems",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Warm white petals",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Muted pollen",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Soft sage leaves",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Warm white woven linen",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Foundation neutral grayform",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          }
+        ]
+      },
+      "paper": {
+        "maxSimultaneousLights": 8,
+        "environmentIntensity": 0.8,
+        "sceneEnvironmentIntensity": 1,
+        "exposure": 1,
+        "lights": [
+          {
+            "name": "soft cream sky",
+            "type": "HemisphericLight",
+            "intensity": 0.27,
+            "enabled": true
+          },
+          {
+            "name": "static window sunlight",
+            "type": "DirectionalLight",
+            "intensity": 2.8,
+            "enabled": true
+          },
+          {
+            "name": "cool exterior sky",
+            "type": "HemisphericLight",
+            "intensity": 1.25,
+            "enabled": true
+          },
+          {
+            "name": "soft local face fill",
+            "type": "HemisphericLight",
+            "intensity": 0.43,
+            "enabled": true
+          },
+          {
+            "name": "native.practical.cashier",
+            "type": "SpotLight",
+            "intensity": 20,
+            "enabled": true
+          },
+          {
+            "name": "native.practical.central",
+            "type": "SpotLight",
+            "intensity": 24,
+            "enabled": true
+          },
+          {
+            "name": "v11.c44.same-broad-light.v1.indoor-sky",
+            "type": "HemisphericLight",
+            "intensity": 0.85,
+            "enabled": true
+          },
+          {
+            "name": "v11.c44.same-broad-light.v1",
+            "type": "SpotLight",
+            "intensity": 120,
+            "enabled": true
+          }
+        ],
+        "actualMaterials": [
+          {
+            "name": "Cream uncoated paper",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Dusty rose book cover",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Foundation neutral grayform",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • board 0",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • board 1",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • board 2",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • board 3",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Honey oak • end grain",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Oat linen book cover",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Sage cloth book cover",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          },
+          {
+            "name": "Warm cut page edges",
+            "maxSimultaneousLights": 8,
+            "environmentIntensity": 0.8
+          }
+        ]
+      },
+      "renderer": {
+        "vendor": "Google Inc. (Intel)",
+        "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A78B) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+      }
+    }
+  },
+  "lifecycle": {
+    "buy3": true,
+    "cashBefore": 5000,
+    "cashAfter": 4790,
+    "stock": 3,
+    "shelf": 2,
+    "reloadExact": true,
+    "normalUnchanged": true,
+    "lowHighRetained": true
+  },
+  "assetSha256": {
+    "r6": "29f4ff9e8711f80cef1f5d899d9c5f0fab0facbf1841274678313581998bb823",
+    "r7": "764d578b0b1fd5958b9773c6abfa0efa87ab13bf0f99b653dbbfc0bb853da4cf"
+  },
+  "finishedUtc": "2026-10-27T22:24:35.810Z"
+}
