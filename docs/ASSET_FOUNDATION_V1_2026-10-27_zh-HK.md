@@ -1,5 +1,7 @@
 # 第一組底層可重用 3D 部件 — 獨立原型
 
+> 歷史v1，畫風門檻未過。後續確認灰模4lights／environment1與材質8／.8不一致，不能作嚴格A/B；桌腳及杯瓶亦有接觸間隙。請看[R2固定候選及限制](ASSET_FOUNDATION_R2_2026-10-27_zh-HK.md)。原始PNG與來源commit保留。
+
 來源提交：`049dbf31d53436070bcdecadd0ca695ad91ff230`。由 application `78fbae7f519e4c443d5971bb18208e1c4f9de64e` 建立獨立分支 `codex/asset-foundation-v1`。**這是部件原型，整體畫風仍未達原圖、未獲美術接受。** PR8／C50 由另一 maker 處理；本輪沒有改其分支、main、光照參數或公開 Site。
 
 ![原圖左店景／新部件材質／新部件灰模；店景各480px高](reviews/evidence/asset-foundation-v1/target-material-gray-shop480.png)

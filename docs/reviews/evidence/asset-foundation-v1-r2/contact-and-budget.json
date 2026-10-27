@@ -1,0 +1,258 @@
+{
+  "clothSupport": {
+    "current": {
+      "minimumClearanceMetres": 0.0010049240462411888,
+      "sampledTrianglePoints": 52640,
+      "method": "All actual GLB cloth triangle vertices, three edge midpoints and centroid against three authored11mm rounded tabletop solids"
+    },
+    "interim": {
+      "minimumClearanceMetres": -0.00228523202298702,
+      "sampledTrianglePoints": 62944,
+      "method": "All actual GLB cloth triangle vertices, three edge midpoints and centroid against three authored11mm rounded tabletop solids"
+    }
+  },
+  "preservedCeramics": {
+    "cup": {
+      "geometrySha256": "d3511f0abeb9596e5af4da515af993a8d6a2bf5c45ac3533c2f69032d9fa7064",
+      "positionsNormalsIndicesUnchanged": true
+    },
+    "vase": {
+      "geometrySha256": "a3e1c936ba257dfac58885420610232574684bab6d9788abd1b211071206e50a",
+      "positionsNormalsIndicesUnchanged": true
+    }
+  },
+  "method": "Actual exported GLB positions transformed through standard node TRS/matrices; metre units. No shadow-based inference.",
+  "contact": {
+    "feet": 0,
+    "cupBottom": 0.904999990016222,
+    "vaseBottom": 0.9049999639391899,
+    "tableTop": 0.9050000123679638,
+    "cupGap": -2.2351741790771484e-8,
+    "vaseGap": -4.842877388000488e-8
+  },
+  "gameplay": {
+    "previewRootY": 0.079,
+    "floorY": 0.079,
+    "feetY": 0.079,
+    "cupBottomY": 0.983999990016222,
+    "tableTopY": 0.9840000123679638
+  },
+  "standalone": {
+    "table": {
+      "sha256": "70856131e03ccdc780ccc09a63a24fa663b2f0b2fcd0f122822f1169be526563",
+      "bounds": {
+        "table": {
+          "min": [
+            -0.9300000071525574,
+            0,
+            -0.5184999704360962
+          ],
+          "max": [
+            0.9300000071525574,
+            0.9050000123679638,
+            0.5185000002384186
+          ],
+          "triangles": 6480
+        }
+      },
+      "materials": [
+        {
+          "name": "Honey oak • board 0",
+          "roughnessTexture": true
+        },
+        {
+          "name": "Honey oak • end grain",
+          "roughnessTexture": false
+        },
+        {
+          "name": "Honey oak • board 1",
+          "roughnessTexture": true
+        },
+        {
+          "name": "Honey oak • board 2",
+          "roughnessTexture": true
+        },
+        {
+          "name": "Honey oak • board 3",
+          "roughnessTexture": true
+        }
+      ]
+    },
+    "cup": {
+      "sha256": "6e538c183df3f6e4dffc169127096cf76e1e8e6bac18088367febd9b5e2283ab",
+      "bounds": {
+        "cup": {
+          "min": [
+            -0.1298374980688095,
+            0,
+            -0.07029895484447479
+          ],
+          "max": [
+            0.07029895484447479,
+            0.13600001856684685,
+            0.07029895484447479
+          ],
+          "triangles": 6548
+        }
+      },
+      "materials": [
+        {
+          "name": "Warm ivory glaze",
+          "roughnessTexture": false
+        }
+      ]
+    },
+    "vase": {
+      "sha256": "ae16caeb26d3cdbe453c67804b550cc875dbac35e4b5e248af40ef26f7e1b7a6",
+      "bounds": {
+        "vase": {
+          "min": [
+            -0.10985250771045685,
+            0,
+            -0.10985250771045685
+          ],
+          "max": [
+            0.10985250771045685,
+            0.2620000019669533,
+            0.10985250771045685
+          ],
+          "triangles": 8448
+        }
+      },
+      "materials": [
+        {
+          "name": "Celadon glaze",
+          "roughnessTexture": false
+        }
+      ]
+    }
+  },
+  "set": {
+    "sha256": "626c7274d8748a47e0d1e0450518d1624af644c217ed1001498f7e1a74ed7c58",
+    "bounds": {
+      "table": {
+        "min": [
+          -0.9300000071525574,
+          0,
+          -0.5184999704360962
+        ],
+        "max": [
+          0.9300000071525574,
+          0.9050000123679638,
+          0.5185000002384186
+        ],
+        "triangles": 6480
+      },
+      "cup": {
+        "min": [
+          0.45016248524188995,
+          0.904999990016222,
+          0.06970104575157166
+        ],
+        "max": [
+          0.6502989381551743,
+          1.0410000085830688,
+          0.21029895544052124
+        ],
+        "triangles": 6548
+      },
+      "vase": {
+        "min": [
+          -0.45985250174999237,
+          0.9049999639391899,
+          -0.1898525059223175
+        ],
+        "max": [
+          -0.24014748632907867,
+          1.1669999659061432,
+          0.02985250949859619
+        ],
+        "triangles": 8448
+      },
+      "flowers": {
+        "min": [
+          -0.5003526359796524,
+          1.114345222711563,
+          -0.1934378445148468
+        ],
+        "max": [
+          -0.23337525129318237,
+          1.5510632991790771,
+          0.010439112782478333
+        ],
+        "triangles": 33124
+      },
+      "cloth": {
+        "min": [
+          -0.04516105353832245,
+          0.4910644292831421,
+          -0.42000430822372437
+        ],
+        "max": [
+          0.5251610279083252,
+          0.913697361946106,
+          0.592671275138855
+        ],
+        "triangles": 7520
+      }
+    },
+    "materials": [
+      {
+        "name": "Honey oak • board 0",
+        "roughnessTexture": true
+      },
+      {
+        "name": "Honey oak • end grain",
+        "roughnessTexture": false
+      },
+      {
+        "name": "Honey oak • board 1",
+        "roughnessTexture": true
+      },
+      {
+        "name": "Honey oak • board 2",
+        "roughnessTexture": true
+      },
+      {
+        "name": "Honey oak • board 3",
+        "roughnessTexture": true
+      },
+      {
+        "name": "Warm ivory glaze",
+        "roughnessTexture": false
+      },
+      {
+        "name": "Celadon glaze",
+        "roughnessTexture": false
+      },
+      {
+        "name": "Fine olive stems",
+        "roughnessTexture": false
+      },
+      {
+        "name": "Warm white petals",
+        "roughnessTexture": false
+      },
+      {
+        "name": "Muted pollen",
+        "roughnessTexture": false
+      },
+      {
+        "name": "Soft sage leaves",
+        "roughnessTexture": false
+      },
+      {
+        "name": "Warm white woven linen",
+        "roughnessTexture": false
+      }
+    ]
+  },
+  "budget": {
+    "flowerTriangles": 33124,
+    "setTriangles": 62120,
+    "heads": 35,
+    "petals": 175,
+    "addedTriangles": 0,
+    "reducedTriangles": 1472
+  }
+}

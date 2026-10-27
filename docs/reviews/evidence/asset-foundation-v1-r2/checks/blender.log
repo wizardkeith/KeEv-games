@@ -1,0 +1,47 @@
+ERROR Draco mesh compression is not available because library could not be found at /usr/bin/4.3/python/lib/python3.13/site-packages/libextern_draco.so
+10:23:58 | INFO: Starting glTF 2.0 export
+10:23:58 | INFO: Extracting primitive: Cube.021
+10:23:58 | INFO: Primitives created: 5
+10:23:58 | INFO: Finished glTF 2.0 export in 0.07183313369750977 s
+
+10:23:58 | INFO: Starting glTF 2.0 export
+10:23:58 | INFO: Extracting primitive: Ivory cup • continuous interior and rolled rim.001
+10:23:58 | INFO: Primitives created: 1
+10:23:58 | INFO: Finished glTF 2.0 export in 0.010166645050048828 s
+
+Warning: No mesh data to join
+10:23:58 | INFO: Starting glTF 2.0 export
+10:23:58 | INFO: Extracting primitive: Celadon vase • hollow wheel profile.001
+10:23:58 | INFO: Primitives created: 1
+10:23:58 | INFO: Finished glTF 2.0 export in 0.012810707092285156 s
+
+10:23:58 | INFO: Starting glTF 2.0 export
+10:23:58 | INFO: Extracting primitive: Arching main stem 0.001
+10:23:58 | INFO: Primitives created: 4
+10:23:58 | INFO: Finished glTF 2.0 export in 0.04112410545349121 s
+
+Warning: No mesh data to join
+10:23:58 | INFO: Starting glTF 2.0 export
+10:23:58 | INFO: Extracting primitive: Linen runner • continuous weighted fall.001
+10:23:58 | INFO: Primitives created: 1
+10:23:58 | INFO: Finished glTF 2.0 export in 0.011785030364990234 s
+
+Warning: No mesh data to join
+Warning: No mesh data to join
+10:23:59 | INFO: Starting glTF 2.0 export
+10:23:59 | INFO: Extracting primitive: Cube.041
+10:23:59 | INFO: Primitives created: 5
+10:23:59 | INFO: Extracting primitive: Ivory cup • continuous interior and rolled rim.002
+10:23:59 | INFO: Primitives created: 1
+10:23:59 | INFO: Extracting primitive: Celadon vase • hollow wheel profile.002
+10:23:59 | INFO: Primitives created: 1
+10:23:59 | INFO: Extracting primitive: Arching main stem 0.002
+10:23:59 | INFO: Primitives created: 4
+10:23:59 | INFO: Extracting primitive: Linen runner • continuous weighted fall.002
+10:23:59 | INFO: Primitives created: 1
+10:23:59 | INFO: Finished glTF 2.0 export in 0.1441059112548828 s
+
+Info: Saved "display-set.blend"
+Blender 4.3.2
+
+Blender quit

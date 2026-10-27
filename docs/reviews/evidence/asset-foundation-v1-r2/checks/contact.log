@@ -1,0 +1,18 @@
+{
+  "contact": {
+    "feet": 0,
+    "cupBottom": 0.904999990016222,
+    "vaseBottom": 0.9049999639391899,
+    "tableTop": 0.9050000123679638,
+    "cupGap": -2.2351741790771484e-8,
+    "vaseGap": -4.842877388000488e-8
+  },
+  "budget": {
+    "flowerTriangles": 33124,
+    "setTriangles": 62120,
+    "heads": 35,
+    "petals": 175,
+    "addedTriangles": 0,
+    "reducedTriangles": 1472
+  }
+}

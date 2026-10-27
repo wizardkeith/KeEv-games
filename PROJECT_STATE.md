@@ -1,6 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T17:49:06+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T18:31:21+08:00** (Asia/Hong_Kong).
+
+## 獨立部件R2固定候選／畫風仍未接受 — 2026-10-27T18:31:21+08:00
+
+- 仍只在 `codex/asset-foundation-v1`，最終source `9c8104038fd78c9f7ababa9cc56e2f0c32c032c1`，包含風格修正 `08db124e54c5b03184338d3764faa77ebcaab6e9`；[唯一原圖／正常480px／同光灰模／雙斜角／固定兩光及限制](docs/ASSET_FOUNDATION_R2_2026-10-27_zh-HK.md)。**原圖風格門檻仍未過**，不以細節／三角形／tests代替美術接受，不擴展整店或角色。
+- 三項風格差異集中修正：保留35頭／175瓣／七主莖，改重疊20／10／5主低側花簇及短露莖；布改兩個不等寬轉向大折面＋小肩折，保留連續轉邊／2mm厚度；桌深.875→1.037m、板厚52→62mm／腳柱87→102mm、暖蜂蜜木色／順長軸與端紋／克制ORM。杯瓶曲線、內腔／rim／handle的position-normal-index指紋與v1完全相同。
+- 真GLB全節點transform量度桌腳minY0、杯瓶桌面差<1µm，作者rootY對上floor.079；布轉邊已按真11mm桌邊圓角修正，52,640樣本最低clearance約1.005mm（中途−2.285mm原證據保留，非完整碰撞cert）。省去不可讀小布邊bevel後總62,120tri，比原少1,472；花仍33,124，無LOD／不可bulk複製。
+- 六新GLB零error／warning、fresh302既有tests／finalbuild／contentvalidate／replay／legacyassetcheck／作者strictTS／contact-budget通過；720原application來源／素材／設定bytes保留。灰／材質均8lights／environment.8，完整實際燈設定及normalcamera逐值同；兩組下載GLB均等於提交bytes。v1灰／材質受光不一致已明確標為歷史非strictA/B。
+- freshSandbox真UI買3杯cash5000→4790、stock3／上架側桌／reload逐值同、Low→High保留／隔離Normal不變／0pageerror；最終正常實拍為Library原生image第3版，v2中途圖與所有原證據保留。靜態SwiftShader非physicalGPU／FPS／motion／audio／native／新完整交接或五語窄UI認證；Blender重排buffer，未宣稱byte同rebuild。
+- 下一步先獨立覆核固定候選：花頭仍近似／簇規整、布頂白值與乾淨垂段、木構工整感仍距原圖；只在此組改大形／比例／色塊與轉面。main／PR8／Site／merge／publication／payments／玩家Normal未改，新增角色參考未匯入。PR建立保持停止且不是繼續工作的前提，沒有重試或改route；無其他操作阻塞。
 
 ## 獨立部件基礎v1／branch-only prototype — 2026-10-27T17:49:06+08:00
 

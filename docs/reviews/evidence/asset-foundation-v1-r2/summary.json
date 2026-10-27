@@ -1,0 +1,92 @@
+{
+  "sourceCommit": "9c8104038fd78c9f7ababa9cc56e2f0c32c032c1",
+  "priorStyleCommit": "08db124e54c5b03184338d3764faa77ebcaab6e9",
+  "baseApplication": "78fbae7f519e4c443d5971bb18208e1c4f9de64e",
+  "visualStatus": "Style gate remains OPEN / not accepted. No whole-shop expansion.",
+  "changes": [
+    "Same35 heads/175 petals recomposed20/10/5 into overlapping unequal crowns; shorter exposed branches",
+    "Two broad unequal drifting cloth folds and smaller shoulder; continuous physical corner and2mm thickness",
+    "Fuller table depth/planks/posts, honey wood palette, directional and end grain, restrained ORM roughness",
+    "Actual feet/cup/vase contact origins fixed; cup/vase curve/interior position-normal-index streams unchanged",
+    "Gray and material both max8lights/environment.8; identical actual scene light settings and normal cameras"
+  ],
+  "loadedAssetSha256": "626c7274d8748a47e0d1e0450518d1624af644c217ed1001498f7e1a74ed7c58",
+  "loadedAssetsMatchSource": true,
+  "lightingMatched": true,
+  "normalCameraMatched": true,
+  "lifecycle": {
+    "buy3": true,
+    "cashBefore": 5000,
+    "cashAfter": 4790,
+    "stock": 3,
+    "shelf": 0,
+    "reloadEqual": true,
+    "lowHighRetained": true,
+    "normalUnchanged": true
+  },
+  "pageErrors": [],
+  "contact": {
+    "feet": 0,
+    "cupBottom": 0.904999990016222,
+    "vaseBottom": 0.9049999639391899,
+    "tableTop": 0.9050000123679638,
+    "cupGap": -2.2351741790771484e-8,
+    "vaseGap": -4.842877388000488e-8
+  },
+  "clothSupport": {
+    "current": {
+      "minimumClearanceMetres": 0.0010049240462411888,
+      "sampledTrianglePoints": 52640,
+      "method": "All actual GLB cloth triangle vertices, three edge midpoints and centroid against three authored11mm rounded tabletop solids"
+    },
+    "interim": {
+      "minimumClearanceMetres": -0.00228523202298702,
+      "sampledTrianglePoints": 62944,
+      "method": "All actual GLB cloth triangle vertices, three edge midpoints and centroid against three authored11mm rounded tabletop solids"
+    }
+  },
+  "preservedCeramics": {
+    "cup": {
+      "geometrySha256": "d3511f0abeb9596e5af4da515af993a8d6a2bf5c45ac3533c2f69032d9fa7064",
+      "positionsNormalsIndicesUnchanged": true
+    },
+    "vase": {
+      "geometrySha256": "a3e1c936ba257dfac58885420610232574684bab6d9788abd1b211071206e50a",
+      "positionsNormalsIndicesUnchanged": true
+    }
+  },
+  "budget": {
+    "flowerTriangles": 33124,
+    "setTriangles": 62120,
+    "heads": 35,
+    "petals": 175,
+    "addedTriangles": 0,
+    "reducedTriangles": 1472
+  },
+  "checks": {
+    "tests": 302,
+    "build": true,
+    "contentValidate": true,
+    "replay": true,
+    "legacyAssetCheck": true,
+    "blenderRebuild": true,
+    "newGLBFiles": 6,
+    "newGLBErrors": 0,
+    "newGLBWarnings": 0,
+    "fixtureStrictTypes": true,
+    "protectedOriginalFiles": 720
+  },
+  "library": {
+    "image": "material-normal-game.png",
+    "version": 3,
+    "nativeImageSaved": true
+  },
+  "limitations": [
+    "Technical checks are not style acceptance",
+    "Flowers remain regular/similar heads; cloth top values clip in fixed studio and broad forms remain clean",
+    "Flower triangle cost still dominates; no LOD or bulk replication",
+    "Blender buffer ordering may vary; byte-identical export rebuild not claimed",
+    "Static SwiftShader only; no physical GPU/FPS/motion/audio/native certification"
+  ],
+  "pr": "Creation remains stopped; no retry or alternate route; not a prerequisite"
+}

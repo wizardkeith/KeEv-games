@@ -1,0 +1,15 @@
+{
+  "base": "78fbae7f519e4c443d5971bb18208e1c4f9de64e",
+  "source": "9c8104038fd78c9f7ababa9cc56e2f0c32c032c1",
+  "protectedOriginalFiles": 720,
+  "alteredOriginalFiles": [],
+  "newAssetSha256": {
+    "cloth.glb": "2c29fdf1bc99843e8385aa9bbbe4c766b89d67e39422614c1d070af82222ee76",
+    "cup.glb": "6e538c183df3f6e4dffc169127096cf76e1e8e6bac18088367febd9b5e2283ab",
+    "display-set.glb": "626c7274d8748a47e0d1e0450518d1624af644c217ed1001498f7e1a74ed7c58",
+    "flowers.glb": "db7be26fc5cecd975a9990ef889bdd6613b178cc5ac3860efe461ade4375cf1e",
+    "table.glb": "70856131e03ccdc780ccc09a63a24fa663b2f0b2fcd0f122822f1169be526563",
+    "vase.glb": "ae16caeb26d3cdbe453c67804b550cc875dbac35e4b5e248af40ef26f7e1b7a6"
+  },
+  "targetSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114"
+}
