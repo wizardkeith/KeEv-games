@@ -1,0 +1,10 @@
+ordinary page loaded
+ordinary identity submitted
+ordinary WebGL ready
+ordinary import input submitted
+page.waitForFunction: Timeout 120000ms exceeded.
+    at module.exports (/workspace/game-v10-art-life/tools/v11-occlusion-qa.cjs:2:139)
+    at /workspace/game-v10-art-life/tools/v11-table-look-qa.cjs:8:2185 {
+  log: [],
+  name: 'TimeoutError'
+}

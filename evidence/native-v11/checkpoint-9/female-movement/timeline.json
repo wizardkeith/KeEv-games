@@ -1,0 +1,3027 @@
+[
+  {
+    "seconds": 0.007,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1,
+      "yaw": 1.5707963267948966,
+      "speed": 0,
+      "distance": 7.50115387782208,
+      "state": "browsing",
+      "browseProgress": 0.5277934782595728,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.49450080050743,
+        "z": -0.10931660260059912,
+        "yaw": -0.1927007586623929,
+        "speed": 0.4,
+        "distance": 3.6258424836321845,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-a",
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-a"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": -0.1927007586623929,
+        "target": -0.1927007586623929,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 40.442499999984946
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 0.517,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1,
+      "yaw": 1.5707963267948966,
+      "speed": 0,
+      "distance": 7.50115387782208,
+      "state": "browsing",
+      "browseProgress": 0.5277934782595728,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.49450080050743,
+        "z": -0.10931660260059912,
+        "yaw": -0.1927007586623929,
+        "speed": 0.4,
+        "distance": 3.6258424836321845,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-a",
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-a"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": -0.1927007586623929,
+        "target": -0.1927007586623929,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 40.442499999984946
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 1.024,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1,
+      "yaw": 1.5707963267948966,
+      "speed": 0,
+      "distance": 7.50115387782208,
+      "state": "browsing",
+      "browseProgress": 0.5277934782595728,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.49450080050743,
+        "z": -0.10931660260059912,
+        "yaw": -0.1927007586623929,
+        "speed": 0.4,
+        "distance": 3.6258424836321845,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-a",
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-a"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": -0.1927007586623929,
+        "target": -0.1927007586623929,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 40.442499999984946
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 1.537,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1,
+      "yaw": 1.5707963267948966,
+      "speed": 0,
+      "distance": 7.50115387782208,
+      "state": "browsing",
+      "browseProgress": 0.6364891304334855,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.5366330795797545,
+        "z": -0.3252445328462526,
+        "yaw": 0.7972992413376072,
+        "speed": 0,
+        "distance": 3.8458424836321847,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-a",
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-a"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 0.7972992413376072,
+        "target": 0.7972992413376072,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 41.44249999998489
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 2.049,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1,
+      "yaw": 1.5707963267948966,
+      "speed": 0,
+      "distance": 7.50115387782208,
+      "state": "browsing",
+      "browseProgress": 0.6364891304334855,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.5366330795797545,
+        "z": -0.3252445328462526,
+        "yaw": 0.7972992413376072,
+        "speed": 0,
+        "distance": 3.8458424836321847,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-a",
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-a"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 0.7972992413376072,
+        "target": 0.7972992413376072,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 41.44249999998489
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 2.586,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1,
+      "yaw": 1.5707963267948966,
+      "speed": 0,
+      "distance": 7.50115387782208,
+      "state": "browsing",
+      "browseProgress": 0.7451847826073982,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.5327907125990263,
+        "z": -0.31547282798039594,
+        "yaw": 2.7669503005448073,
+        "speed": 0.10499999999999998,
+        "distance": 3.8563424836321847,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-a",
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-a"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 2.7669503005448073,
+        "target": 2.7669503005448073,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 42.44249999998483
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 3.092,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1,
+      "yaw": 1.5707963267948966,
+      "speed": 0,
+      "distance": 7.50115387782208,
+      "state": "browsing",
+      "browseProgress": 0.7451847826073982,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.5327907125990263,
+        "z": -0.31547282798039594,
+        "yaw": 2.7669503005448073,
+        "speed": 0.10499999999999998,
+        "distance": 3.8563424836321847,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-a",
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-a"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 2.7669503005448073,
+        "target": 2.7669503005448073,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 42.44249999998483
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 3.597,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1,
+      "yaw": 1.5707963267948966,
+      "speed": 0,
+      "distance": 7.50115387782208,
+      "state": "browsing",
+      "browseProgress": 0.8538804347813108,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.4065415118036597,
+        "z": 0.005597474754894031,
+        "yaw": 2.766950300544804,
+        "speed": 0.4,
+        "distance": 4.20134248363218,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-a",
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-a"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 2.766950300544804,
+        "target": 2.766950300544804,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 43.442499999984776
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 4.102,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1,
+      "yaw": 1.5707963267948966,
+      "speed": 0,
+      "distance": 7.50115387782208,
+      "state": "browsing",
+      "browseProgress": 0.8538804347813108,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.4065415118036597,
+        "z": 0.005597474754894031,
+        "yaw": 2.766950300544804,
+        "speed": 0.4,
+        "distance": 4.20134248363218,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-a",
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-a"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 2.766950300544804,
+        "target": 2.766950300544804,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 43.442499999984776
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 4.605,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1,
+      "yaw": 1.5707963267948966,
+      "speed": 0,
+      "distance": 7.50115387782208,
+      "state": "browsing",
+      "browseProgress": 0.9625760869552251,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2601656268235217,
+        "z": 0.3778528982160993,
+        "yaw": 2.766950300544801,
+        "speed": 0.4,
+        "distance": 4.6013424836321715,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-a",
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-a"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 2.766950300544801,
+        "target": 2.766950300544801,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 44.44249999998472
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 5.113,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1,
+      "yaw": 1.5707963267948966,
+      "speed": 0,
+      "distance": 7.50115387782208,
+      "state": "browsing",
+      "browseProgress": 0.9625760869552251,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2601656268235217,
+        "z": 0.3778528982160993,
+        "yaw": 2.766950300544801,
+        "speed": 0.4,
+        "distance": 4.6013424836321715,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-a",
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-a"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 2.766950300544801,
+        "target": 2.766950300544801,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 44.44249999998472
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 5.62,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1,
+      "yaw": 1.5707963267948966,
+      "speed": 0,
+      "distance": 7.50115387782208,
+      "state": "browsing",
+      "browseProgress": 0.9625760869552251,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2601656268235217,
+        "z": 0.3778528982160993,
+        "yaw": 2.766950300544801,
+        "speed": 0.4,
+        "distance": 4.6013424836321715,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-a",
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-a"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 2.766950300544801,
+        "target": 2.766950300544801,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 44.44249999998472
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 6.128,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1,
+      "yaw": 1.5707963267948966,
+      "speed": 0,
+      "distance": 7.50115387782208,
+      "state": "waiting",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.22,
+        "z": 0.48,
+        "yaw": 2.7669503005448304,
+        "speed": 0,
+        "distance": 4.710155857385569,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "greetedVisitors": [
+        "visitor-a",
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-a"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 1.7835547393541935,
+        "target": 1.7835547393541935,
+        "entry": 1,
+        "work": false,
+        "mode": "customer"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 45.44249999998466
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 6.632,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1,
+      "yaw": 1.5707963267948966,
+      "speed": 0,
+      "distance": 7.50115387782208,
+      "state": "waiting",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.22,
+        "z": 0.48,
+        "yaw": 2.7669503005448304,
+        "speed": 0,
+        "distance": 4.710155857385569,
+        "intent": "inspect",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "greetedVisitors": [
+        "visitor-a",
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-a"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 1.7835547393541935,
+        "target": 1.7835547393541935,
+        "entry": 1,
+        "work": false,
+        "mode": "customer"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 45.44249999998466
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 7.142,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": -0.65,
+      "z": 1.1138,
+      "yaw": 3.1415926535897936,
+      "speed": 0.138,
+      "distance": 7.51495387782208,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.greet.v3",
+      "staffRoutine": {
+        "x": 2.22,
+        "z": 0.48,
+        "yaw": 2.7669503005448304,
+        "speed": 0,
+        "distance": 4.710155857385569,
+        "intent": "farewell",
+        "target": {
+          "x": 2.22,
+          "z": 0.48
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": 0.8000000000000002,
+      "greetingTargetId": "visitor-b",
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 1.7881441232249347,
+        "target": 1.7881441232249347,
+        "entry": 1,
+        "work": false,
+        "mode": "customer"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 46.442499999984605
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 13.506,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 0.3642499999999998,
+      "z": 2.05,
+      "yaw": 4.71238898038469,
+      "speed": 0.505,
+      "distance": 9.339259203503497,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.210534844999288,
+        "z": 0.9153971300328152,
+        "yaw": 3.1198569467479986,
+        "speed": 0.4,
+        "distance": 5.145655857385563,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 3.1198569467479986,
+        "target": 3.1198569467479986,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 50.44249999998438
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 14.017,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 0.8692499999999997,
+      "z": 2.05,
+      "yaw": 4.71238898038469,
+      "speed": 0.505,
+      "distance": 9.844259203503492,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2018598408933845,
+        "z": 1.3144473189043504,
+        "yaw": 3.1198569467479906,
+        "speed": 0.38288942513036717,
+        "distance": 5.544800328642073,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 3.1198569467479906,
+        "target": 3.1198569467479906,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 51.44249999998432
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 14.529,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 0.8692499999999997,
+      "z": 2.05,
+      "yaw": 4.71238898038469,
+      "speed": 0.505,
+      "distance": 9.844259203503492,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2018598408933845,
+        "z": 1.3144473189043504,
+        "yaw": 3.1198569467479906,
+        "speed": 0.38288942513036717,
+        "distance": 5.544800328642073,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 3.1198569467479906,
+        "target": 3.1198569467479906,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 51.44249999998432
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 15.034,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 0.8692499999999997,
+      "z": 2.05,
+      "yaw": 4.71238898038469,
+      "speed": 0.505,
+      "distance": 9.844259203503492,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2018598408933845,
+        "z": 1.3144473189043504,
+        "yaw": 3.1198569467479906,
+        "speed": 0.38288942513036717,
+        "distance": 5.544800328642073,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 3.1198569467479906,
+        "target": 3.1198569467479906,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 51.44249999998432
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 15.542,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 1.3742499999999997,
+      "z": 2.05,
+      "yaw": 4.71238898038469,
+      "speed": 0.505,
+      "distance": 10.349259203503488,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 3.119856946747952,
+        "speed": 0,
+        "distance": 5.630137521914831,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 3.582772134004774,
+        "target": -2.700413173174813,
+        "entry": 1,
+        "work": false,
+        "mode": "welcome"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 52.442499999984264
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 16.046,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 1.3742499999999997,
+      "z": 2.05,
+      "yaw": 4.71238898038469,
+      "speed": 0.505,
+      "distance": 10.349259203503488,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 3.119856946747952,
+        "speed": 0,
+        "distance": 5.630137521914831,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 3.582772134004774,
+        "target": -2.700413173174813,
+        "entry": 1,
+        "work": false,
+        "mode": "welcome"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 52.442499999984264
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 16.583,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 1.8792499999999996,
+      "z": 2.05,
+      "yaw": 4.71238898038469,
+      "speed": 0.505,
+      "distance": 10.854259203503483,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 3.119856946747952,
+        "speed": 0,
+        "distance": 5.630137521914831,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 3.582772134004774,
+        "target": -2.700413173174813,
+        "entry": 1,
+        "work": false,
+        "mode": "welcome"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 53.44249999998421
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 17.088,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 1.8792499999999996,
+      "z": 2.05,
+      "yaw": 4.71238898038469,
+      "speed": 0.505,
+      "distance": 10.854259203503483,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 3.119856946747952,
+        "speed": 0,
+        "distance": 5.630137521914831,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 3.582772134004774,
+        "target": -2.700413173174813,
+        "entry": 1,
+        "work": false,
+        "mode": "welcome"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 53.44249999998421
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 17.6,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 2.384250000000003,
+      "z": 2.05,
+      "yaw": 4.71238898038469,
+      "speed": 0.505,
+      "distance": 11.359259203503479,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 3.119856946747952,
+        "speed": 0,
+        "distance": 5.630137521914831,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 3.582772134004774,
+        "target": -2.700413173174813,
+        "entry": 1,
+        "work": false,
+        "mode": "welcome"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 54.44249999998415
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 18.107,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 2.384250000000003,
+      "z": 2.05,
+      "yaw": 4.71238898038469,
+      "speed": 0.505,
+      "distance": 11.359259203503479,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 3.119856946747952,
+        "speed": 0,
+        "distance": 5.630137521914831,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 3.582772134004774,
+        "target": -2.700413173174813,
+        "entry": 1,
+        "work": false,
+        "mode": "welcome"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 54.44249999998415
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 18.613,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 2.8465805035559306,
+      "z": 2.085604774343605,
+      "yaw": 4.375590132330779,
+      "speed": 0.505,
+      "distance": 11.826211103161375,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 3.119856946747952,
+        "speed": 0,
+        "distance": 5.630137521914831,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 3.582772134004774,
+        "target": -2.700413173174813,
+        "entry": 1,
+        "work": false,
+        "mode": "welcome"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 55.44249999998409
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 19.128,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 2.8465805035559306,
+      "z": 2.085604774343605,
+      "yaw": 4.375590132330779,
+      "speed": 0.505,
+      "distance": 11.826211103161375,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 3.119856946747952,
+        "speed": 0,
+        "distance": 5.630137521914831,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 3.582772134004774,
+        "target": -2.700413173174813,
+        "entry": 1,
+        "work": false,
+        "mode": "welcome"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 55.44249999998409
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 19.636,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 2.8465805035559306,
+      "z": 2.085604774343605,
+      "yaw": 4.375590132330779,
+      "speed": 0.505,
+      "distance": 11.826211103161375,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 3.119856946747952,
+        "speed": 0,
+        "distance": 5.630137521914831,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 3.582772134004774,
+        "target": -2.700413173174813,
+        "entry": 1,
+        "work": false,
+        "mode": "welcome"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 55.44249999998409
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 20.147,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 3.0487497525471756,
+      "z": 2.4337462882076375,
+      "yaw": 3.208160817365619,
+      "speed": 0.505,
+      "distance": 12.256012415139534,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 3.119856946747952,
+        "speed": 0,
+        "distance": 5.630137521914831,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 3.582772134004774,
+        "target": -2.700413173174813,
+        "entry": 1,
+        "work": false,
+        "mode": "welcome"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 56.44249999998404
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 20.652,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 3.0487497525471756,
+      "z": 2.4337462882076375,
+      "yaw": 3.208160817365619,
+      "speed": 0.505,
+      "distance": 12.256012415139534,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 3.119856946747952,
+        "speed": 0,
+        "distance": 5.630137521914831,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": true,
+        "moving": false
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 3.582772134004774,
+        "target": -2.700413173174813,
+        "entry": 1,
+        "work": false,
+        "mode": "welcome"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 56.44249999998404
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 21.185,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 3.05,
+      "z": 2.932250000000004,
+      "yaw": 3.141592653589794,
+      "speed": 0.505,
+      "distance": 12.754557755644141,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 4.109856946747951,
+        "speed": 0,
+        "distance": 5.630137521914831,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 4.109856946747951,
+        "target": 4.109856946747951,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 57.44249999998398
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 21.702,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 3.05,
+      "z": 2.932250000000004,
+      "yaw": 3.141592653589794,
+      "speed": 0.505,
+      "distance": 12.754557755644141,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2,
+        "z": 1.4,
+        "yaw": 4.109856946747951,
+        "speed": 0,
+        "distance": 5.630137521914831,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 4.109856946747951,
+        "target": 4.109856946747951,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 57.44249999998398
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 22.213,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 3.05,
+      "z": 3.427250000000002,
+      "yaw": 3.141592653589794,
+      "speed": 0.505,
+      "distance": 13.249557755644132,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2020108587739067,
+        "z": 1.3896943487837299,
+        "yaw": 6.090484548517201,
+        "speed": 0.10499999999999998,
+        "distance": 5.640637521914831,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 6.090484548517201,
+        "target": 6.090484548517201,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 58.44249999998392
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 22.72,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 3.05,
+      "z": 3.427250000000002,
+      "yaw": 3.141592653589794,
+      "speed": 0.505,
+      "distance": 13.249557755644132,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2020108587739067,
+        "z": 1.3896943487837299,
+        "yaw": 6.090484548517201,
+        "speed": 0.10499999999999998,
+        "distance": 5.640637521914831,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 6.090484548517201,
+        "target": 6.090484548517201,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 58.44249999998392
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 23.222,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 3.05,
+      "z": 3.427250000000002,
+      "yaw": 3.141592653589794,
+      "speed": 0.505,
+      "distance": 13.249557755644132,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.2020108587739067,
+        "z": 1.3896943487837299,
+        "yaw": 6.090484548517201,
+        "speed": 0.10499999999999998,
+        "distance": 5.640637521914831,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 6.090484548517201,
+        "target": 6.090484548517201,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 58.44249999998392
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 23.733,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 3.05,
+      "z": 3.9322500000000065,
+      "yaw": 3.141592653589794,
+      "speed": 0.46546750692179123,
+      "distance": 13.754557755644127,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.268081932773684,
+        "z": 1.0510800945348628,
+        "yaw": 6.0904845485172,
+        "speed": 0.4,
+        "distance": 5.985637521914827,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 6.0904845485172,
+        "target": 6.0904845485172,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 59.442499999983866
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 24.241,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 3.05,
+      "z": 3.9322500000000065,
+      "yaw": 3.141592653589794,
+      "speed": 0.46546750692179123,
+      "distance": 13.754557755644127,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.268081932773684,
+        "z": 1.0510800945348628,
+        "yaw": 6.0904845485172,
+        "speed": 0.4,
+        "distance": 5.985637521914827,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 6.0904845485172,
+        "target": 6.0904845485172,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 59.442499999983866
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 24.751,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 3.05,
+      "z": 4.05,
+      "yaw": 4.351592653589794,
+      "speed": 0,
+      "distance": 13.872307755644123,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.344686076541542,
+        "z": 0.658483857724584,
+        "yaw": 6.090484548517199,
+        "speed": 0.4,
+        "distance": 6.385637521914818,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 6.090484548517199,
+        "target": 6.090484548517199,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 60.44249999998381
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 25.276,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 3.05,
+      "z": 4.05,
+      "yaw": 4.351592653589794,
+      "speed": 0,
+      "distance": 13.872307755644123,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.344686076541542,
+        "z": 0.658483857724584,
+        "yaw": 6.090484548517199,
+        "speed": 0.4,
+        "distance": 6.385637521914818,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 6.090484548517199,
+        "target": 6.090484548517199,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 60.44249999998381
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 25.788,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 3.4037500000000014,
+      "z": 4.05,
+      "yaw": 4.71238898038469,
+      "speed": 0.505,
+      "distance": 14.226057755644119,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.4212902203093996,
+        "z": 0.2658876209143046,
+        "yaw": 6.090484548517196,
+        "speed": 0.4,
+        "distance": 6.7856375219148095,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 6.090484548517196,
+        "target": 6.090484548517196,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 61.44249999998375
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 26.294,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 3.4037500000000014,
+      "z": 4.05,
+      "yaw": 4.71238898038469,
+      "speed": 0.505,
+      "distance": 14.226057755644119,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.4212902203093996,
+        "z": 0.2658876209143046,
+        "yaw": 6.090484548517196,
+        "speed": 0.4,
+        "distance": 6.7856375219148095,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 6.090484548517196,
+        "target": 6.090484548517196,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 61.44249999998375
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 26.802,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 3.4037500000000014,
+      "z": 4.05,
+      "yaw": 4.71238898038469,
+      "speed": 0.505,
+      "distance": 14.226057755644119,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.4212902203093996,
+        "z": 0.2658876209143046,
+        "yaw": 6.090484548517196,
+        "speed": 0.4,
+        "distance": 6.7856375219148095,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 6.090484548517196,
+        "target": 6.090484548517196,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 61.44249999998375
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 27.316,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 3.9087500000000057,
+      "z": 4.05,
+      "yaw": 4.71238898038469,
+      "speed": 0.505,
+      "distance": 14.731057755644114,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.4978943640772595,
+        "z": -0.12670861589597454,
+        "yaw": 6.0904845485171935,
+        "speed": 0.4,
+        "distance": 7.185637521914801,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 6.0904845485171935,
+        "target": 6.0904845485171935,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 62.442499999983696
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 27.824,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": true,
+      "x": 3.9087500000000057,
+      "z": 4.05,
+      "yaw": 4.71238898038469,
+      "speed": 0.505,
+      "distance": 14.731057755644114,
+      "state": "leaving",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.4978943640772595,
+        "z": -0.12670861589597454,
+        "yaw": 6.0904845485171935,
+        "speed": 0.4,
+        "distance": 7.185637521914801,
+        "intent": "home",
+        "target": {
+          "x": 2.6,
+          "z": -0.65
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [
+        "visitor-b"
+      ],
+      "farewelledVisitors": [
+        "visitor-b"
+      ],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 6.0904845485171935,
+        "target": 6.0904845485171935,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 62.442499999983696
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  },
+  {
+    "seconds": 28.348,
+    "guest": {
+      "id": "visitor-b",
+      "enabled": false,
+      "x": 4.18,
+      "z": 4.05,
+      "yaw": 4.71238898038469,
+      "speed": 0,
+      "distance": 15.002307755644107,
+      "state": "outside",
+      "browseProgress": 1,
+      "hasBag": false,
+      "handoverProgress": 0
+    },
+    "nativeMotion": {
+      "rigVersion": "native-characters-v11-target-slice-r1",
+      "staffClip": "native.staff.idle.v3",
+      "staffRoutine": {
+        "x": 2.5553474719031564,
+        "z": -0.4211557935036837,
+        "yaw": 5.540484548517192,
+        "speed": 0,
+        "distance": 7.485637521914795,
+        "intent": "welcome",
+        "target": {
+          "x": 2.2,
+          "z": 1.4
+        },
+        "atHome": false,
+        "atWorkplace": false,
+        "moving": true
+      },
+      "greetedVisitors": [],
+      "farewelledVisitors": [],
+      "greetingKind": "departure",
+      "localGreeting": null,
+      "greetingTargetId": null,
+      "contactDistance": null,
+      "contact": null,
+      "attention": {
+        "yaw": 5.540484548517192,
+        "target": 5.540484548517192,
+        "entry": 1,
+        "work": false,
+        "mode": "walking"
+      },
+      "propCount": 5,
+      "carriedBag": null,
+      "activeProps": [],
+      "visibleTime": 63.44249999998364
+    },
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 9.980211978474616,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    }
+  }
+]

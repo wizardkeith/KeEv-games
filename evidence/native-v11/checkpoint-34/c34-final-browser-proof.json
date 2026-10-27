@@ -1,0 +1,83 @@
+{
+  "base": {
+    "build": 229,
+    "frames": 31,
+    "durationSeconds": 85.64,
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 11.212076960563294,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    },
+    "poses": [
+      {
+        "alpha": -0.5153981633974483,
+        "beta": 0.8726646259971648,
+        "radius": 11.212076960563294,
+        "target": [
+          0.7,
+          1.15,
+          0
+        ]
+      },
+      {
+        "alpha": -1.0553981633974483,
+        "beta": 0.8726646259971648,
+        "radius": 11.212076960563294,
+        "target": [
+          0.7,
+          1.15,
+          0
+        ]
+      }
+    ],
+    "normal": "fresh isolated baseline unchanged",
+    "errors": []
+  },
+  "values": {
+    "build": 228,
+    "frames": 32,
+    "durationSeconds": 107.24,
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 11.212076960563294,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    },
+    "poses": [
+      {
+        "alpha": -0.5153981633974483,
+        "beta": 0.8726646259971648,
+        "radius": 11.212076960563294,
+        "target": [
+          0.7,
+          1.15,
+          0
+        ]
+      },
+      {
+        "alpha": -1.0553981633974483,
+        "beta": 0.8726646259971648,
+        "radius": 11.212076960563294,
+        "target": [
+          0.7,
+          1.15,
+          0
+        ]
+      }
+    ],
+    "normal": "fresh isolated baseline unchanged",
+    "errors": []
+  },
+  "application": "0e20d41262e5234db57d800f9ab965eb019dce49",
+  "sameFinalSourceCameraEconomyAndOrbits": true,
+  "scope": "Actual supported Sandbox8-stock import and pointer orbits; no new full transaction/Low/locale/physical smoothness certification"
+}

@@ -1,0 +1,23 @@
+{
+  "source": "92e3ac399be783780f3ef06e5f144e67e4d12946",
+  "builds": {
+    "131": "authoring control VITE_V11_CUTAWAY_SHADOW=0",
+    "132": "same source ordinary build, shadow-only cutaway ceiling on",
+    "128": "C21 model/light diagnosis:126lighting with127timber normal scale; no new C22 dressing"
+  },
+  "targetStillUnmet": true,
+  "roofDecision": "132 too dark on back wall; NOT accepted. One bounded directed-bounce/focal-light comparison running; withdraw if it does not improve whole-scene hierarchy.",
+  "actualScope": "Normal camera only, true fresh Sandbox buy/place; no new transaction/handoff/fullflow/three-pose/physical GPU claim",
+  "knownExcludedPrototype": "130 captured before one shelf-file placement was moved away from existing plant; not a final candidate;129 exceeded entrance material budget then corrected without increasing cap",
+  "files": {
+    "initial-glb.json": "b1fcdf1b3c1da236da3e4a880f1a7d692c73523edb4c0ec86696077d2236ce6e",
+    "initial-223-tests.log": "c1a86952aada28a56476c7059a3370c84be98ee63ca0171fe346a7d0da1061ec",
+    "light-diagnostic/roi-comparison.json": "c761e88aa77281e8cf5a74679eca2f17f1305c4bb6980b5ddbbb230240ac63e7",
+    "light-diagnostic/128-old-light-soft-wood.patch": "947a075e9ec16de832898c8894812506b8aa0df311e5eaa21a301cd4eca51ea0",
+    "shadow-ab131-132/after-normal-game.png": "f9a1fcd453c513df6e47b478a7aa5328703b6b60541a45a2863d1324ae1edc17",
+    "shadow-ab131-132/results.json": "2ee4a67985f17341de49f03348b73a4fa20e815e514e36c3c6f87c45ed61eaff",
+    "shadow-ab131-132/before-normal-game.png": "61ee3a5fce12059d43acc6a1ec4d6ea8bf5c8e346c75d9e515b0faaad7eb5cff",
+    "light-diagnostic/old-light-soft-wood128/after-normal-game.png": "00a56cb79af9d8d8b86bdf34b29a7132413726281aab02600466a2f832bc3917",
+    "light-diagnostic/old-light-soft-wood128/results.json": "6254f273cb4d838f60e680ff6f14f3008f57bc5e104d9489f033facb9080cc47"
+  }
+}

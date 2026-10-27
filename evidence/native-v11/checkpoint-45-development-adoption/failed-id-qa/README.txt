@@ -1,0 +1,1 @@
+First normal QA omitted QA_OCCLUSION_ID, so the shared waiter expected legacy C43 ID instead of reviewed C44 ID and timed out120s. Not counted as pass; dependent stock/Low/RM commands had not run. Repeated once in fresh isolated context with explicit C44 expected ID and unchanged runtime. No optical assertion weakened.

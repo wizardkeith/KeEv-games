@@ -1,0 +1,38 @@
+{
+  "source": "Read-only flower-spray-c36.json against actual retained C25jug",
+  "mouthHeight": 0.3707999885082245,
+  "rimRadii": [
+    0.07156846144251945,
+    0.07243153414558337
+  ],
+  "C27Scale": 1.1,
+  "parts": [
+    {
+      "part": 0,
+      "minRadius": 0.0043391418921985775,
+      "maxRadius": 0.009022557435524084,
+      "outsideEvenOuterRim": false,
+      "minimumWorldRadialOverhangMetres": 0.0
+    },
+    {
+      "part": 11,
+      "minRadius": 0.04558618395637017,
+      "maxRadius": 0.050203263441839695,
+      "outsideEvenOuterRim": false,
+      "minimumWorldRadialOverhangMetres": 0.0
+    },
+    {
+      "part": 22,
+      "minRadius": 0.04632859023582898,
+      "maxRadius": 0.05078135692187825,
+      "outsideEvenOuterRim": false,
+      "minimumWorldRadialOverhangMetres": 0.0
+    }
+  ],
+  "lockedSourceSHA256": {
+    "flower-jug.json": "90bc93ede6dfc0eaf0fe8b56e58909c9e0bd0b9f8d5a56ccc7acde83fbe29dd4",
+    "flower-spray-c36.json": "dc75569c4682ecbe2e286894ca8d56b3133add8d88f6e105fe49e9404148a787"
+  },
+  "status": "pass",
+  "limits": "Cross-section proof, not a new physical device or artistic acceptance. C33 visible crown/C32cloth/C35values retained; only C36 lower trunks change."
+}

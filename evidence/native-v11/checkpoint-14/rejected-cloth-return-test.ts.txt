@@ -1,0 +1,19 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {NullEngine} from '@babylonjs/core/Engines/nullEngine';
+import {Scene} from '@babylonjs/core/scene';
+import {Mesh} from '@babylonjs/core/Meshes/mesh';
+import {PBRMaterial} from '@babylonjs/core/Materials/PBR/pbrMaterial';
+import {HemisphericLight} from '@babylonjs/core/Lights/hemisphericLight';
+import {Vector3} from '@babylonjs/core/Maths/math.vector';
+import {createClothBounce} from '../src/art/cloth-light-v11';
+test('cloth return reaches the real fifth shader slot without lighting faces or fixtures',()=>{
+ const engine=new NullEngine(),scene=new Scene(engine);try{
+  for(let i=0;i<4;i++)new HemisphericLight('existing'+i,Vector3.Up(),scene);
+  const actor=new Mesh('actor.visitor-b.native.v3.body.material0',scene),face=new Mesh('actor.visitor-b.native.v3.head.material0',scene),fixture=new Mesh('fixture.runner',scene);
+  actor.metadata={materialRole:'fabric'};face.metadata={materialRole:'skin'};fixture.metadata={materialRole:'fabric'};
+  for(const m of [actor,face,fixture])m.material=new PBRMaterial(m.name,scene);
+  const bounce=createClothBounce(scene),metrics=bounce.metrics();assert.equal(metrics.meshCount,1);assert.ok(metrics.bindings[0].bound.includes(bounce.light.name),'created light must actually enter the bound shader inputs');
+  assert.deepEqual(actor.lightSources.slice(0,4).map(l=>l.name),['existing0','existing1','existing2','existing3'],'all four accepted key/fill/practical lights retained');
+  for(const m of [face,fixture]){assert.ok(!m.lightSources.includes(bounce.light));assert.equal((m.material as PBRMaterial).maxSimultaneousLights,4);}
+ }finally{scene.dispose();engine.dispose();}
+});

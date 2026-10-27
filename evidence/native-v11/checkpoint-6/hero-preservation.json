@@ -1,0 +1,7 @@
+{
+  "heroRecipe": "exact deep equality with checkpoint5 snapshot",
+  "maleTriangles": 11172,
+  "camera": "src/art/native-view.ts byte unchanged",
+  "light": "src/world.ts byte unchanged",
+  "environment": "all environment recipes byte unchanged"
+}

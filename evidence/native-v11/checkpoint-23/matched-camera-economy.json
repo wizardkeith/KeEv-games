@@ -1,0 +1,19 @@
+{
+  "beforeApplication": "e13ef125f50ce8603a9c1104cc4344f17afc898d",
+  "afterApplication": "53555cc5e5960826d82d7f3891618ebc4e80bcc2",
+  "beforeBuild": 134,
+  "afterBuild": 140,
+  "cameraPose": {
+    "alpha": -0.7853981633974483,
+    "beta": 0.8726646259971648,
+    "radius": 11.212076960563294,
+    "target": [
+      0.7,
+      1.15,
+      0
+    ]
+  },
+  "cameraExact": true,
+  "cashInventoryShelvesExact": true,
+  "scope": "1440x1200 actual production game and ordinary buy/place; no pose or save injection; natural actor/leaf phase differs"
+}

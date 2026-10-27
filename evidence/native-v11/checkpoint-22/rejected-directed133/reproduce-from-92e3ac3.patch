@@ -1,0 +1,28 @@
+--- a/src/art/native-view.ts
++++ b/src/art/native-view.ts
+@@ -48,12 +48,12 @@
+ export const nativeLighting={
+  id:'native.light.v11-slice',
+  key:{color:'#FFE0B7',intensity:3.30,direction:[.88,-.48,.25] as const,position:[-8,8,-2] as const},
+- fill:{color:'#DFE9EF',ground:'#B6A38C',intensity:.36},
++ fill:{color:'#DFE9EF',ground:'#B6A38C',intensity:.36,direction:[.15,.75,-.55] as const},
+  faceFill:{color:'#FFF0DC',ground:'#B9B6B0',intensity:.43,direction:[.12,.35,-1] as const,parts:['head','eye-left','eye-right','eyelid-left','eyelid-right','brow-left','brow-right','mouth'] as readonly string[],roles:['skin','ink'] as readonly string[]},
+  shadow:{size:2048,normalBias:.010,bias:.0007,darkness:.16,lightSizeUVRatio:.040},
+  exteriorFill:{color:'#D0E1E5',ground:'#94A88F',intensity:.56},
+  // Bounded art-directed bounce proxies; point/spot candela are not directional lux.
+- practicals:[{id:'cashier',position:[3.05,2.75,-1.05],color:'#FFD5A7',intensity:12.0,angle:1.52},{id:'central',position:[.1,2.615,-.1],color:'#FFE0B5',intensity:9.0,angle:1.62}] as const,
++ practicals:[{id:'cashier',position:[3.05,2.75,-1.05],color:'#FFD5A7',intensity:20.0,angle:1.52},{id:'central',position:[.1,2.615,-.1],color:'#FFE0B5',intensity:9.0,angle:1.62}] as const,
+  exposure:1,
+  note:'C22 restrained global fill, service-dock warm focal bounce and cool layered exterior, original room IBL, soft contact-hardening shadows and actual floor AO. ACES exposure1/contrast1.06. No bloom or dynamic reflection. Face fill remains restricted to skin/ink. Actual game render, not metadata or tests, determines visual fidelity.',
+ } as const;
+--- a/src/world.ts
++++ b/src/world.ts
+@@ -64,7 +64,7 @@
+  const scene=new Scene(engine);scene.useRightHandedSystem=true;scene.clearColor=Color4.FromHexString('#F4EFE8FF');scene.imageProcessingConfiguration.toneMappingEnabled=true;scene.imageProcessingConfiguration.toneMappingType=ImageProcessingConfiguration.TONEMAPPING_ACES;scene.imageProcessingConfiguration.exposure=nativeLighting.exposure;scene.imageProcessingConfiguration.contrast=1.06;
+  const camera=new ArcRotateCamera('curated.40deg',-Math.PI/4,50*Math.PI/180,18,new Vector3(0,1,0),scene);
+  camera.attachControl(canvas,true);camera.lowerBetaLimit=45*Math.PI/180;camera.upperBetaLimit=55*Math.PI/180;camera.lowerAlphaLimit=-Math.PI/4-.27;camera.upperAlphaLimit=-Math.PI/4+.27;camera.lowerRadiusLimit=13;camera.upperRadiusLimit=26;camera.panningSensibility=0;camera.wheelDeltaPercentage=.012;camera.minZ=.1;camera.maxZ=90;
+- const sky=new HemisphericLight('soft cream sky',new Vector3(0,1,0),scene);sky.intensity=nativeLighting.fill.intensity;sky.diffuse=Color3.FromArray(linearColor(nativeLighting.fill.color));sky.groundColor=Color3.FromArray(linearColor(nativeLighting.fill.ground));
++ const sky=new HemisphericLight('soft cream sky',Vector3.FromArray([...nativeLighting.fill.direction]),scene);sky.intensity=nativeLighting.fill.intensity;sky.diffuse=Color3.FromArray(linearColor(nativeLighting.fill.color));sky.groundColor=Color3.FromArray(linearColor(nativeLighting.fill.ground));
+  const sun=new DirectionalLight('static window sunlight',Vector3.FromArray([...nativeLighting.key.direction]),scene);sun.position.set(...nativeLighting.key.position);sun.diffuse=Color3.FromArray(linearColor(nativeLighting.key.color));sun.intensity=nativeLighting.key.intensity;sun.shadowMinZ=.1;sun.shadowMaxZ=35;
+  const shadow=new ShadowGenerator(nativeLighting.shadow.size,sun);shadow.useContactHardeningShadow=true;shadow.contactHardeningLightSizeUVRatio=nativeLighting.shadow.lightSizeUVRatio;shadow.filteringQuality=ShadowGenerator.QUALITY_MEDIUM;shadow.bias=nativeLighting.shadow.bias;shadow.normalBias=nativeLighting.shadow.normalBias;shadow.darkness=nativeLighting.shadow.darkness;
+  installCutawayShadow(scene,shadow,import.meta.env.VITE_V11_CUTAWAY_SHADOW!=='0');

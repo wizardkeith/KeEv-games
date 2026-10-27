@@ -3,109 +3,151 @@
   "rights": "Original authored procedural geometry and texture for this game",
   "units": "metres",
   "axes": "RH +Y up",
-  "uv": "nativeSurfaceGeometry metre UV; KHR_texture_transform for floor/cloth; embedded original V9 colour/normal maps; no baked lighting",
+  "uv": "nativeSurfaceGeometry metre UV; KHR_texture_transform for floor/cloth; embedded original V9 colour/normal maps; original actual-geometry Cycles floor contact AO in UV2; no dynamic objects baked",
   "assets": [
+    {
+      "id": "quality-flower-jug-v11",
+      "file": "assets/masters/native-v4/quality-flower-jug-v11.glb",
+      "bytes": 232728,
+      "sha256": "7486d8d01542b0f37b4ee0a4a6088258c822942a65e1ba680e4315bcac5a06a5"
+    },
+    {
+      "id": "quality-flower-spray-v11",
+      "file": "assets/masters/native-v4/quality-flower-spray-v11.glb",
+      "bytes": 2213088,
+      "sha256": "71738fc38b7cba82d18aad33cc0732c89e2c7b28d955685ee260841232aac929"
+    },
+    {
+      "id": "quality-crown-v11",
+      "file": "assets/masters/native-v4/quality-crown-v11.glb",
+      "bytes": 2497696,
+      "sha256": "0d3de325afb80f8b1657e811f533a76a18cbde159f31a58cd6fdb5ad2c2ff70b"
+    },
+    {
+      "id": "quality-lookbook-v11",
+      "file": "assets/masters/native-v4/quality-lookbook-v11.glb",
+      "bytes": 2247172,
+      "sha256": "2c7951e99f6619a9d50a66b3dad053c2c41028e34b252cffdd6b86b3bd901fea"
+    },
+    {
+      "id": "quality-mug-v11",
+      "file": "assets/masters/native-v4/quality-mug-v11.glb",
+      "bytes": 2416052,
+      "sha256": "61e08783667276d611743935f8953e4f96839810643e889f09db11e27cfda392"
+    },
+    {
+      "id": "entry-garden-v11",
+      "file": "assets/masters/native-v4/entry-garden-v11.glb",
+      "bytes": 2511320,
+      "sha256": "5e4142614fac2e2276277b92089345f1a9335e47d1e94fb0249e5c8e29d6a4bb"
+    },
+    {
+      "id": "planter-base-v11",
+      "file": "assets/masters/native-v4/planter-base-v11.glb",
+      "bytes": 185224,
+      "sha256": "cc99d988901fcede6c8e1bd550f3b3b8e2d91cb465b78e00f005ce1c1b928596"
+    },
     {
       "id": "room",
       "file": "assets/masters/native-v4/room.glb",
-      "bytes": 3542020,
-      "sha256": "9e5eaa886649e98132dc4d255e5a8357a281dddbb96b90af62e888e9dd608e86"
+      "bytes": 6140324,
+      "sha256": "cf002c8928c567cf048bf0b773fa94610877470eea90d4abb41de7f83cde1eb0"
     },
     {
       "id": "styling-v9",
       "file": "assets/masters/native-v4/styling-v9.glb",
-      "bytes": 343448,
-      "sha256": "055f896ee6e5c14881af2d17ad4b4f8dda92cf5011a95ee0a9b746deb13072d8"
+      "bytes": 3017376,
+      "sha256": "655c94fc3f99c40b6de6b71def6fbe9ba0fa3ac30e06b921c6ec8ee41eefda17"
     },
     {
       "id": "window-canopy-v9",
       "file": "assets/masters/native-v4/window-canopy-v9.glb",
-      "bytes": 408872,
-      "sha256": "ef555e0e9952f38d92a513d519cd9300bfc8150e2ca63860c2fe0e11d30d5e5e"
+      "bytes": 2346876,
+      "sha256": "1956bb89db91fa28e9c9c4c3b962d98605df71e79a998e932488c37d130e55e1"
     },
     {
       "id": "counter",
       "file": "assets/masters/native-v4/counter.glb",
-      "bytes": 249640,
-      "sha256": "ce100e782f4a11fefc4a03a9b5f5d3acc1f5b72b46a0d5c90dffce4039a0c4d5"
+      "bytes": 2362296,
+      "sha256": "46ae720b21264cd12e365cdec60a67b4d56875d24d90cec5a8e6931d36514fb5"
     },
     {
       "id": "display-1",
       "file": "assets/masters/native-v4/display-1.glb",
-      "bytes": 261076,
-      "sha256": "edd2fccafba381db367aebb5481ab2f1fc2ef1d9cd950741ee8dde61dc978149"
+      "bytes": 4857028,
+      "sha256": "355a792fec898cabf33f5779846cb3396cb75ec7c2a096b5f7e2d3ca3f61fda1"
     },
     {
       "id": "display-2",
       "file": "assets/masters/native-v4/display-2.glb",
-      "bytes": 261088,
-      "sha256": "001fb56688ee0893e338d6a1c3f74a425f3c98191a48ebc0bd3fc6970f534088"
+      "bytes": 3277344,
+      "sha256": "c01ec5f761f88f9e6490c14b306830322021151648c826cef9b3e569d8ef6a63"
     },
     {
       "id": "display-3",
       "file": "assets/masters/native-v4/display-3.glb",
-      "bytes": 261076,
-      "sha256": "5c567d53cecbee53ea913b24c1ecb52ce86ce14f126298df94f386ccdb727238"
+      "bytes": 4864408,
+      "sha256": "d84d53667afcdacdf516de64bc8f77d7a5b5f784c60dee9321379fd9218e4419"
     },
     {
       "id": "product-off.notebook",
       "file": "assets/masters/native-v4/product-off.notebook.glb",
-      "bytes": 2514708,
-      "sha256": "7716ca5e470ef09b02242863744d66efe8c8054e223d25cf5cdd1b30e14c1f6b"
+      "bytes": 2517260,
+      "sha256": "6001eaf6a2df3172b2d8e12d9c9eb4e4530db4ab3cd654e89141e43c2503cbcc"
     },
     {
       "id": "product-off.pencil",
       "file": "assets/masters/native-v4/product-off.pencil.glb",
-      "bytes": 164260,
-      "sha256": "5b73e7633d866ef32259f99be3cec57b2bb84bdb4884f6c7b02acebf5c7c5a12"
+      "bytes": 2167516,
+      "sha256": "9c9f15d10c2bd2c5e9a8557ca2a0edf415674b25f1c31d4d153cc9c3e0b4e4f0"
     },
     {
       "id": "product-off.mug",
       "file": "assets/masters/native-v4/product-off.mug.glb",
-      "bytes": 46556,
-      "sha256": "70dc0d94b41226db8281af2569283f7ba43bc971a23341004cbff8bca4ff26d5"
+      "bytes": 149556,
+      "sha256": "59cc5b59b55b10a81c75ed9b81d74ce21d7796e2831121c34ef7e406ae3ddbb0"
     },
     {
       "id": "product-off.tea",
       "file": "assets/masters/native-v4/product-off.tea.glb",
       "bytes": 2478056,
-      "sha256": "f2be4f9272ded4f00e3a27f5c374a430ac64ccd2a467f541684707774068dbfa"
+      "sha256": "519332346e8ff6c09b1988c6a6627d9d700ff4c12f9a75df67634a7197f8baa9"
     },
     {
       "id": "product-off.cookie",
       "file": "assets/masters/native-v4/product-off.cookie.glb",
-      "bytes": 60216,
-      "sha256": "0808dcf4c2a33b3c8f93b5ba5e160806d5dcddd2ebcf6c19bf0742628a200cd8"
+      "bytes": 60360,
+      "sha256": "e36da81b33559855e72bbf3b58f0418759203b74cfb2f907eed972368b47da14"
     },
     {
       "id": "product-off.tote",
       "file": "assets/masters/native-v4/product-off.tote.glb",
       "bytes": 2552172,
-      "sha256": "298854ceb6cc9e10e2232f5aa8e620a8317176ed353ba1f2ae3196699108b249"
+      "sha256": "78965953b670414b76dd4b929d2c01eed2bc14bdf948f61a8db7de615cf3724c"
     },
     {
       "id": "product-off.card",
       "file": "assets/masters/native-v4/product-off.card.glb",
       "bytes": 2448888,
-      "sha256": "2bd82a0478b1eb0f1e861d7330619199ef21877b0e68c09667ce434f158f9dd0"
+      "sha256": "b45d3d3fe29a2a7447f53eeffc2ddd6ddd9bf33e5205eaf3e9b6d4a45af183cd"
     },
     {
       "id": "product-off.towel",
       "file": "assets/masters/native-v4/product-off.towel.glb",
-      "bytes": 2478736,
-      "sha256": "080658fc59d760b49a5a49e642c87323c21316cd9808a5aa80c408ec92a497dd"
+      "bytes": 2480468,
+      "sha256": "da48b91dd571fdeb73b581bcffed224998845f9f5f1255ec1e8175d575118a34"
     },
     {
       "id": "product-off.tray",
       "file": "assets/masters/native-v4/product-off.tray.glb",
-      "bytes": 165328,
-      "sha256": "1221d87924714025331d8b205cabb95aa3be99fa846f65bbfdd872bbbc2ff211"
+      "bytes": 2178304,
+      "sha256": "8f89635e2d2455d03044e1f687480051c680f76879a4cab4be0bc1f3284770bf"
     },
     {
       "id": "product-off.vase",
       "file": "assets/masters/native-v4/product-off.vase.glb",
-      "bytes": 54680,
-      "sha256": "28c6f15b48cb004d2e20a4c052d0f743f9ffe3bd8bd1efc893328fdd0b2d016c"
+      "bytes": 364140,
+      "sha256": "f0eff8ed2a9f61205c779f1a8cfbd7b32e0759b2e205391a862a88e4c4dd4ea4"
     }
   ]
 }

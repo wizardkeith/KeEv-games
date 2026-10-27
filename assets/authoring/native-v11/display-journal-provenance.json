@@ -1,0 +1,8 @@
+{
+  "source": "OpenAI image_gen tool in this task, original lossless output retained unchanged",
+  "original": "/workspace/generated_images/exec-3680bf52-a55f-4b57-bbe0-aad4bbc2f548.png",
+  "targetGuidance": "Approved_Visual_Target_Misaki.png SHA2569f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114, already approved sole reference; no new target",
+  "type": "2D diffuse book-cover artwork, NOT a 3D model, concept target or gameplay screenshot",
+  "brief": "Flat portrait3:4 warm ivory paper, single sage/olive botanical watercolor sprig, no typography, perspective, scene, book edge, lighting gradient or shadow; mapped only onto existing three central non-inventory display journals",
+  "sha256": "0245933473e615e9c30ef6e47df41dbd9e4977fe07b15587801e2f2dbf6b470c"
+}

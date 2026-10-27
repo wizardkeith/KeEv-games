@@ -1,0 +1,22 @@
+{
+  "application": "567c4fb51794be7d17b472fc7201795f91ba7fda",
+  "files": {
+    "assets/masters/native-v11/display-quality/linen-c29.json": {
+      "byteEqual": true,
+      "sha256": "5e52d29dd007b738344c22fa1e1adb77dd621a98cdd454ec45c2e70afff8180c"
+    },
+    "assets/masters/native-v11/display-quality/linen-c29-provenance.json": {
+      "byteEqual": true,
+      "sha256": "65e4bdb25f536e9ebbbb490bdea38074ae8fd6f6397b446cff845ec91b461034"
+    },
+    "assets/masters/native-v11/c29-contact/central-contact-atlas.png": {
+      "byteEqual": true,
+      "sha256": "5145f3cd5f22a7588be0ddafd41c7001663f4de06c0999d8402b9342fab801d0"
+    },
+    "assets/masters/native-v11/c29-contact/provenance.json": {
+      "byteEqual": true,
+      "sha256": "7ccc00ab4fefa58c45171485f9d8664d91b714542d905fdd5ae0dd3003ccdb8e"
+    }
+  },
+  "blendLimit": "Editable Blend files retained; binary metadata/filepaths vary and are not claimed byte-identical. Scratch rebuild never overwrites canonical masters."
+}

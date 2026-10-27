@@ -58,7 +58,7 @@ test('plant movement is authored on seven local leaf attachments, never on pot o
 test('new environment recipes retain finite unit normals, bounded geometry and material intent',()=>{
  const all=[...nativeRoomRecipe(),...doorLeafRecipe(),...doorSignRecipe(),...exteriorRecipe(),...nativeCounterRecipe(),...nativeDisplayRecipe(),...plantParts().base,...plantParts().leaves.flatMap(l=>l.recipe)];
  assert.ok(all.length<160,'small fixed scene authoring budget');
- for(const p of all){const g=nativeSurfaceGeometry(p);assert.ok(g.positions.every(Number.isFinite));assert.ok(g.indices.length>0);for(let i=0;i<g.normals.length;i+=3)assert.ok(Math.abs(Math.hypot(...g.normals.slice(i,i+3))-1)<1e-8);}
+ for(const p of all){const g=nativeSurfaceGeometry(p);assert.ok(g.positions.every(Number.isFinite));assert.ok(g.indices.length>0);for(let i=0;i<g.normals.length;i+=3){const n=g.normals.slice(i,i+3);assert.ok(n.every(Number.isFinite));const float32=n.every(v=>Math.fround(v)===v);assert.ok(Math.abs(Math.hypot(...n)-1)<(float32?2**-23:1e-8),'unit normal within two Float32 half-ULPs for imported Blender normals; double authoring remains1e-8')};}
  assert.ok(exteriorRecipe().some(p=>p.role==='leaf'));
  assert.ok(nativeCounterRecipe().some(p=>p.role==='metal'));
 });

@@ -1,0 +1,31 @@
+{
+  "baseline": "875d43351bc0644ef0411d0a7a61ae5d0b7e9343",
+  "rawAssetFiles": 317,
+  "changed": [],
+  "environmentGeometryAndPresentationKeysUnchanged": [
+    "id",
+    "format",
+    "version",
+    "authoringVersion",
+    "units",
+    "coordinateSystem",
+    "colors",
+    "notes",
+    "presentation",
+    "roomProbe",
+    "surfaceAssets",
+    "backDisplaySamples",
+    "stagingVariants",
+    "displayVariants",
+    "staging",
+    "styling",
+    "windowCanopy",
+    "room",
+    "door",
+    "plants",
+    "exterior",
+    "counter",
+    "display"
+  ],
+  "onlyNewRendererExtension": "windowReachAuthoring"
+}

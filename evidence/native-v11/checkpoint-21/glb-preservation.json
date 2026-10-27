@@ -1,0 +1,860 @@
+{
+  "source": "01dc573430c8306da3c0d1fc1d8afe52785eeb85",
+  "baseline": "7bba600761f6998d76785ccd6bf3be252dde1bf2",
+  "baselineFiles": 140,
+  "unchanged": 131,
+  "changed": [
+    "assets/masters/native-v4/counter.glb",
+    "assets/masters/native-v4/display-1.glb",
+    "assets/masters/native-v4/display-2.glb",
+    "assets/masters/native-v4/display-3.glb",
+    "assets/masters/native-v4/product-off.pencil.glb",
+    "assets/masters/native-v4/product-off.tray.glb",
+    "assets/masters/native-v4/room.glb",
+    "assets/masters/native-v4/styling-v9.glb",
+    "assets/masters/native-v4/window-canopy-v9.glb"
+  ],
+  "files": [
+    {
+      "path": "assets/masters/counter.glb",
+      "baselineBlob": "08b34582c4d43c1ee29ebfec99195938c6c56ee0",
+      "currentBlob": "08b34582c4d43c1ee29ebfec99195938c6c56ee0",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/day1/misaki-calm-v1.glb",
+      "baselineBlob": "87992d6a3833e0d1238ed8ff3e2f5e086a1de986",
+      "currentBlob": "87992d6a3833e0d1238ed8ff3e2f5e086a1de986",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/day1/misaki-smile-v1.glb",
+      "baselineBlob": "32b6641de5cb7954b043be48ebdae1e3bd28d42d",
+      "currentBlob": "32b6641de5cb7954b043be48ebdae1e3bd28d42d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/native-v3/misaki-native-v3.glb",
+      "baselineBlob": "c3885249b29fbb1e55d21651b79292389a721320",
+      "currentBlob": "c3885249b29fbb1e55d21651b79292389a721320",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/native-v3/visitor-a-native-v3.glb",
+      "baselineBlob": "c431200682b0ec1216653ddc2f7755d27906b71c",
+      "currentBlob": "c431200682b0ec1216653ddc2f7755d27906b71c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/native-v3/visitor-b-native-v3.glb",
+      "baselineBlob": "9dcb3ff3edaa990190e50c6222034194fa571367",
+      "currentBlob": "9dcb3ff3edaa990190e50c6222034194fa571367",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/native-v4/counter.glb",
+      "baselineBlob": "61a766a86e47d629a57b12a60185de1ac5a56693",
+      "currentBlob": "2de1330f6d9f555e7ddf638de1288e726a9908cf",
+      "unchanged": false
+    },
+    {
+      "path": "assets/masters/native-v4/display-1.glb",
+      "baselineBlob": "06a24f4e5ddc6324a2c11530eaf7c6165472c691",
+      "currentBlob": "cf3499184daf744c5813abced0043292ac91d827",
+      "unchanged": false
+    },
+    {
+      "path": "assets/masters/native-v4/display-2.glb",
+      "baselineBlob": "0a0024cd86b08f1df8ac16ba38dc5dd92998a3e5",
+      "currentBlob": "01a3c78daffcc114668349f774b1ddc1bde7c810",
+      "unchanged": false
+    },
+    {
+      "path": "assets/masters/native-v4/display-3.glb",
+      "baselineBlob": "a531a861d33fdccfe2b05813c51bbfb77fbe2813",
+      "currentBlob": "1da4db63c6e8644600e6473912a1dc250685dcf2",
+      "unchanged": false
+    },
+    {
+      "path": "assets/masters/native-v4/planter-base-v11.glb",
+      "baselineBlob": "2b6bcf9e6527534af40700eff5e496ce7b410314",
+      "currentBlob": "2b6bcf9e6527534af40700eff5e496ce7b410314",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/native-v4/product-off.card.glb",
+      "baselineBlob": "d96a0d17035094e7c9ac7eabaeaef70405464140",
+      "currentBlob": "d96a0d17035094e7c9ac7eabaeaef70405464140",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/native-v4/product-off.cookie.glb",
+      "baselineBlob": "477e304815b1a1808e2901ffad57639a51f4aba9",
+      "currentBlob": "477e304815b1a1808e2901ffad57639a51f4aba9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/native-v4/product-off.mug.glb",
+      "baselineBlob": "e1d80ee67f7af4fd6fd3b8eb4121231d487e88ff",
+      "currentBlob": "e1d80ee67f7af4fd6fd3b8eb4121231d487e88ff",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/native-v4/product-off.notebook.glb",
+      "baselineBlob": "4f0b36f36e593bd313c54278b80debb21452354e",
+      "currentBlob": "4f0b36f36e593bd313c54278b80debb21452354e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/native-v4/product-off.pencil.glb",
+      "baselineBlob": "3d60ad640821fb3102078fa28a405b44ad8b3fa7",
+      "currentBlob": "a7a3f0f9d863321794f9f0844f0dfeff2df85c05",
+      "unchanged": false
+    },
+    {
+      "path": "assets/masters/native-v4/product-off.tea.glb",
+      "baselineBlob": "dab9dadae53e41c30c13fac2330cbc3f9c43d310",
+      "currentBlob": "dab9dadae53e41c30c13fac2330cbc3f9c43d310",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/native-v4/product-off.tote.glb",
+      "baselineBlob": "659b05138f5e940332e385adc450dde6ed74795b",
+      "currentBlob": "659b05138f5e940332e385adc450dde6ed74795b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/native-v4/product-off.towel.glb",
+      "baselineBlob": "024ae62f52c109c22a8daee461d7ba80add5956c",
+      "currentBlob": "024ae62f52c109c22a8daee461d7ba80add5956c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/native-v4/product-off.tray.glb",
+      "baselineBlob": "ae3b9d3d491eed75ff3c0f81283612477fe14f5c",
+      "currentBlob": "b14acd59fbb9594462def83f8a673f1b157e06ec",
+      "unchanged": false
+    },
+    {
+      "path": "assets/masters/native-v4/product-off.vase.glb",
+      "baselineBlob": "401f7a793b1ebdc2bdedc3d1f737a1c0c15108f9",
+      "currentBlob": "401f7a793b1ebdc2bdedc3d1f737a1c0c15108f9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/native-v4/room.glb",
+      "baselineBlob": "8be4238407a8bd8003f839e86454e99b9dce9ecc",
+      "currentBlob": "5d4ae076c35d7f1b92f0b5dc20cba57045ed4030",
+      "unchanged": false
+    },
+    {
+      "path": "assets/masters/native-v4/styling-v9.glb",
+      "baselineBlob": "a51a3e1764d7058fb2ecc45c851f6356b1046787",
+      "currentBlob": "84eccfc49143e9d8c242aa8f596b3660549787f4",
+      "unchanged": false
+    },
+    {
+      "path": "assets/masters/native-v4/window-canopy-v9.glb",
+      "baselineBlob": "c3fea5258458c934211081d6992e382de094387d",
+      "currentBlob": "2621ce8f1a95d13aa1cef481a2f8f49183e2e8ff",
+      "unchanged": false
+    },
+    {
+      "path": "assets/masters/skin-test.glb",
+      "baselineBlob": "969c1ed4e7f807d52ae5e8b63c3902c9ba763b56",
+      "currentBlob": "969c1ed4e7f807d52ae5e8b63c3902c9ba763b56",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1/card.glb",
+      "baselineBlob": "075e9facdb0acfaf8fd381031cfb03b93217430d",
+      "currentBlob": "075e9facdb0acfaf8fd381031cfb03b93217430d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1/cookie.glb",
+      "baselineBlob": "9b7d93f63ab2bbea9b58bd2a4daa2bc31db607b5",
+      "currentBlob": "9b7d93f63ab2bbea9b58bd2a4daa2bc31db607b5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1/counter-w1_1.glb",
+      "baselineBlob": "a118869c14333498e6b8afab6a714c8293d11096",
+      "currentBlob": "a118869c14333498e6b8afab6a714c8293d11096",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1/display-w1_1.glb",
+      "baselineBlob": "7b9c386125905961dc3167fb6f543fefa9ddcbfd",
+      "currentBlob": "7b9c386125905961dc3167fb6f543fefa9ddcbfd",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1/generic-staff-w1_1.glb",
+      "baselineBlob": "825e0a92f89c12ca91c505ef2fa0c62b2dad473c",
+      "currentBlob": "825e0a92f89c12ca91c505ef2fa0c62b2dad473c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1/mug.glb",
+      "baselineBlob": "109034b6fa5e7a8e4ebd313cd81d1f9c06ac69a4",
+      "currentBlob": "109034b6fa5e7a8e4ebd313cd81d1f9c06ac69a4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1/notebook.glb",
+      "baselineBlob": "6187cdc6b4e351bc8f8f2368d87af0b3e49497de",
+      "currentBlob": "6187cdc6b4e351bc8f8f2368d87af0b3e49497de",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1/pencil.glb",
+      "baselineBlob": "136fc36d33cef67cf3905f5c14e00768dcc2cdc1",
+      "currentBlob": "136fc36d33cef67cf3905f5c14e00768dcc2cdc1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1/plant-w1_1.glb",
+      "baselineBlob": "35e0efebde943c3852ec7bf0e868b335aff908a3",
+      "currentBlob": "35e0efebde943c3852ec7bf0e868b335aff908a3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1/room-w1_1.glb",
+      "baselineBlob": "a9691466ad95f74ed55aaf390f2163b8df8ab46e",
+      "currentBlob": "a9691466ad95f74ed55aaf390f2163b8df8ab46e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1/tea.glb",
+      "baselineBlob": "1869c12f450cfc6ccbe96fd25c4178a4ffd91293",
+      "currentBlob": "1869c12f450cfc6ccbe96fd25c4178a4ffd91293",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1/tote.glb",
+      "baselineBlob": "416d5b9d8527c186e9db69c87f3c787d685236c5",
+      "currentBlob": "416d5b9d8527c186e9db69c87f3c787d685236c5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1/towel.glb",
+      "baselineBlob": "91cbd887e1059b2197ac9218bde12e34984b28f7",
+      "currentBlob": "91cbd887e1059b2197ac9218bde12e34984b28f7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1/tray.glb",
+      "baselineBlob": "5565bc9dd1d74c19301ad9eebbe9efaed8c85429",
+      "currentBlob": "5565bc9dd1d74c19301ad9eebbe9efaed8c85429",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1/vase.glb",
+      "baselineBlob": "21a5c8b65db22c97a036be7e325652f850d211c8",
+      "currentBlob": "21a5c8b65db22c97a036be7e325652f850d211c8",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a/card.glb",
+      "baselineBlob": "3345710cf1de9884e6c13b9a7054112c11e3b69e",
+      "currentBlob": "3345710cf1de9884e6c13b9a7054112c11e3b69e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a/cookie.glb",
+      "baselineBlob": "bfc35e0156adce66bf1bd12c53c9393008f8e773",
+      "currentBlob": "bfc35e0156adce66bf1bd12c53c9393008f8e773",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a/counter-w1_1a.glb",
+      "baselineBlob": "4547ca47aaadd8861d56ffa4e40e106477e3c53e",
+      "currentBlob": "4547ca47aaadd8861d56ffa4e40e106477e3c53e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a/display-w1_1a.glb",
+      "baselineBlob": "ac99520056d4829ab190ba1df72ecc482143b567",
+      "currentBlob": "ac99520056d4829ab190ba1df72ecc482143b567",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a/generic-staff-w1_1a.glb",
+      "baselineBlob": "742666f5498e96fd576e976c84d0e039e7b084ad",
+      "currentBlob": "742666f5498e96fd576e976c84d0e039e7b084ad",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a/mug.glb",
+      "baselineBlob": "c551fd6b411e79532bc876e6365edb7106c4b046",
+      "currentBlob": "c551fd6b411e79532bc876e6365edb7106c4b046",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a/notebook.glb",
+      "baselineBlob": "5e6e261d9bb5b6821f268c91d34df61854ab450f",
+      "currentBlob": "5e6e261d9bb5b6821f268c91d34df61854ab450f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a/pencil.glb",
+      "baselineBlob": "86733af2e80b84bf21c271c2c11220bc4a14aa4a",
+      "currentBlob": "86733af2e80b84bf21c271c2c11220bc4a14aa4a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a/plant-w1_1a.glb",
+      "baselineBlob": "d62f4d48cec5a153f6715ac65b4be14c600ebf83",
+      "currentBlob": "d62f4d48cec5a153f6715ac65b4be14c600ebf83",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a/room-w1_1a.glb",
+      "baselineBlob": "c9c15c2e4f8ca0f776e72c3f89933058e4ce48d3",
+      "currentBlob": "c9c15c2e4f8ca0f776e72c3f89933058e4ce48d3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a/tea.glb",
+      "baselineBlob": "4c061c2161d292c8c30f98a94f4acac8389a74d5",
+      "currentBlob": "4c061c2161d292c8c30f98a94f4acac8389a74d5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a/tote.glb",
+      "baselineBlob": "d9b229b6483266da7ed5e433160248627aca3a16",
+      "currentBlob": "d9b229b6483266da7ed5e433160248627aca3a16",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a/towel.glb",
+      "baselineBlob": "727f53be6e16cd2b0f1628f658e424c4aca3cc26",
+      "currentBlob": "727f53be6e16cd2b0f1628f658e424c4aca3cc26",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a/tray.glb",
+      "baselineBlob": "ce65fc7e4a3e44b6b35109a089281167789eea61",
+      "currentBlob": "ce65fc7e4a3e44b6b35109a089281167789eea61",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a/vase.glb",
+      "baselineBlob": "69cc1fb115cd38d8fae2e15b4d4f2fa3a8d0243a",
+      "currentBlob": "69cc1fb115cd38d8fae2e15b4d4f2fa3a8d0243a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a1/card.glb",
+      "baselineBlob": "e4ce4dea5517b4a3e1f8b29ffeab17d93c11a777",
+      "currentBlob": "e4ce4dea5517b4a3e1f8b29ffeab17d93c11a777",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a1/cookie.glb",
+      "baselineBlob": "0fdf21eee9f47d5700c9c7a25cf4c8b4138b371f",
+      "currentBlob": "0fdf21eee9f47d5700c9c7a25cf4c8b4138b371f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a1/counter-w1_1a1.glb",
+      "baselineBlob": "dd6f2bc61e76417fd511d38af98b3ca0b14030e9",
+      "currentBlob": "dd6f2bc61e76417fd511d38af98b3ca0b14030e9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a1/display-w1_1a1.glb",
+      "baselineBlob": "12831969dee1a55ccd2e4a279bcad5c75e339b07",
+      "currentBlob": "12831969dee1a55ccd2e4a279bcad5c75e339b07",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a1/generic-staff-w1_1a1.glb",
+      "baselineBlob": "3d4c80002242f4d0bda8f2d23909de3051ee3366",
+      "currentBlob": "3d4c80002242f4d0bda8f2d23909de3051ee3366",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a1/mug.glb",
+      "baselineBlob": "486c9e08c6be5397478c421e53a1df493df9345b",
+      "currentBlob": "486c9e08c6be5397478c421e53a1df493df9345b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a1/notebook.glb",
+      "baselineBlob": "dba28a424d31876208604dbebe3c03e4ac541ea2",
+      "currentBlob": "dba28a424d31876208604dbebe3c03e4ac541ea2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a1/pencil.glb",
+      "baselineBlob": "bfc5f4f69deed196d7e0789edcb7e502dcfb6329",
+      "currentBlob": "bfc5f4f69deed196d7e0789edcb7e502dcfb6329",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a1/plant-w1_1a1.glb",
+      "baselineBlob": "f390852412ce3b98aa03f2eea103bc4c1f3e740b",
+      "currentBlob": "f390852412ce3b98aa03f2eea103bc4c1f3e740b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a1/room-w1_1a1.glb",
+      "baselineBlob": "647e5ac982c357ee560ea89d458fea7352f2acb8",
+      "currentBlob": "647e5ac982c357ee560ea89d458fea7352f2acb8",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a1/tea.glb",
+      "baselineBlob": "1a71004dbe88d5b975374c84e1eba766aaf22694",
+      "currentBlob": "1a71004dbe88d5b975374c84e1eba766aaf22694",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a1/tote.glb",
+      "baselineBlob": "d890596b65ecaa5ae2ffbf4637566f01d61ddb6e",
+      "currentBlob": "d890596b65ecaa5ae2ffbf4637566f01d61ddb6e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a1/towel.glb",
+      "baselineBlob": "7aea076c37d71b77f3f2ad50b98288e6ba317c70",
+      "currentBlob": "7aea076c37d71b77f3f2ad50b98288e6ba317c70",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a1/tray.glb",
+      "baselineBlob": "4b117dcfede9e225e3d8294166c3574ecb694959",
+      "currentBlob": "4b117dcfede9e225e3d8294166c3574ecb694959",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1a1/vase.glb",
+      "baselineBlob": "e09114438829e376990223a7b9e47677aa6fd9f8",
+      "currentBlob": "e09114438829e376990223a7b9e47677aa6fd9f8",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1b/card.glb",
+      "baselineBlob": "42931f63c26b70d186ad88499c65a34f9b074edd",
+      "currentBlob": "42931f63c26b70d186ad88499c65a34f9b074edd",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1b/cookie.glb",
+      "baselineBlob": "3a61e343472c7912fe09203610f5617919c5b251",
+      "currentBlob": "3a61e343472c7912fe09203610f5617919c5b251",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1b/counter-w1_1b.glb",
+      "baselineBlob": "4a33a4e256f3a32f6eb0c25589b6b2d406299b54",
+      "currentBlob": "4a33a4e256f3a32f6eb0c25589b6b2d406299b54",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1b/display-w1_1b.glb",
+      "baselineBlob": "f54b7ce61144668c88b110133ed7cd94e58fdbc1",
+      "currentBlob": "f54b7ce61144668c88b110133ed7cd94e58fdbc1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1b/generic-staff-w1_1b.glb",
+      "baselineBlob": "fbe108425c109ba1da2146e44d75b46a294de794",
+      "currentBlob": "fbe108425c109ba1da2146e44d75b46a294de794",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1b/mug.glb",
+      "baselineBlob": "836ea9f2efd8d631cceca92a6346d4240ea63715",
+      "currentBlob": "836ea9f2efd8d631cceca92a6346d4240ea63715",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1b/notebook.glb",
+      "baselineBlob": "644b5be0fd6b529550a3797e5b247754a0270896",
+      "currentBlob": "644b5be0fd6b529550a3797e5b247754a0270896",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1b/pencil.glb",
+      "baselineBlob": "fc6ca6c3eb3f55172719900c177086c05785a133",
+      "currentBlob": "fc6ca6c3eb3f55172719900c177086c05785a133",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1b/plant-w1_1b.glb",
+      "baselineBlob": "4d35a74c0c7f84aebaf5ca36305cb0cf3aa8568c",
+      "currentBlob": "4d35a74c0c7f84aebaf5ca36305cb0cf3aa8568c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1b/room-w1_1b.glb",
+      "baselineBlob": "fe72f708577321a07ff96c87fa2751413f1bc966",
+      "currentBlob": "fe72f708577321a07ff96c87fa2751413f1bc966",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1b/tea.glb",
+      "baselineBlob": "59fd387e21774d975122722f53b15eb6715e895b",
+      "currentBlob": "59fd387e21774d975122722f53b15eb6715e895b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1b/tote.glb",
+      "baselineBlob": "155ea9eed3f80073d20cd1733b7b581bf250421c",
+      "currentBlob": "155ea9eed3f80073d20cd1733b7b581bf250421c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1b/towel.glb",
+      "baselineBlob": "db9cead2a1f0bdf7bfb430bcdf3920c334137256",
+      "currentBlob": "db9cead2a1f0bdf7bfb430bcdf3920c334137256",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1b/tray.glb",
+      "baselineBlob": "42d419f8a5db6ed0c8656044ab206d63d4aff107",
+      "currentBlob": "42d419f8a5db6ed0c8656044ab206d63d4aff107",
+      "unchanged": true
+    },
+    {
+      "path": "assets/masters/w1_1b/vase.glb",
+      "baselineBlob": "d96f2fd3e512ca33627251a40d64b139d988e5f6",
+      "currentBlob": "d96f2fd3e512ca33627251a40d64b139d988e5f6",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/counter.glb",
+      "baselineBlob": "08b34582c4d43c1ee29ebfec99195938c6c56ee0",
+      "currentBlob": "08b34582c4d43c1ee29ebfec99195938c6c56ee0",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/day1/misaki-calm-v1.glb",
+      "baselineBlob": "87992d6a3833e0d1238ed8ff3e2f5e086a1de986",
+      "currentBlob": "87992d6a3833e0d1238ed8ff3e2f5e086a1de986",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/day1/misaki-smile-v1.glb",
+      "baselineBlob": "32b6641de5cb7954b043be48ebdae1e3bd28d42d",
+      "currentBlob": "32b6641de5cb7954b043be48ebdae1e3bd28d42d",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/native-v3/misaki-native-v3.glb",
+      "baselineBlob": "c3885249b29fbb1e55d21651b79292389a721320",
+      "currentBlob": "c3885249b29fbb1e55d21651b79292389a721320",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/native-v3/visitor-a-native-v3.glb",
+      "baselineBlob": "c431200682b0ec1216653ddc2f7755d27906b71c",
+      "currentBlob": "c431200682b0ec1216653ddc2f7755d27906b71c",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/native-v3/visitor-b-native-v3.glb",
+      "baselineBlob": "9dcb3ff3edaa990190e50c6222034194fa571367",
+      "currentBlob": "9dcb3ff3edaa990190e50c6222034194fa571367",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/skin-test.glb",
+      "baselineBlob": "969c1ed4e7f807d52ae5e8b63c3902c9ba763b56",
+      "currentBlob": "969c1ed4e7f807d52ae5e8b63c3902c9ba763b56",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1/card.glb",
+      "baselineBlob": "075e9facdb0acfaf8fd381031cfb03b93217430d",
+      "currentBlob": "075e9facdb0acfaf8fd381031cfb03b93217430d",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1/cookie.glb",
+      "baselineBlob": "9b7d93f63ab2bbea9b58bd2a4daa2bc31db607b5",
+      "currentBlob": "9b7d93f63ab2bbea9b58bd2a4daa2bc31db607b5",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1/counter-w1_1.glb",
+      "baselineBlob": "a118869c14333498e6b8afab6a714c8293d11096",
+      "currentBlob": "a118869c14333498e6b8afab6a714c8293d11096",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1/display-w1_1.glb",
+      "baselineBlob": "7b9c386125905961dc3167fb6f543fefa9ddcbfd",
+      "currentBlob": "7b9c386125905961dc3167fb6f543fefa9ddcbfd",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1/generic-staff-w1_1.glb",
+      "baselineBlob": "825e0a92f89c12ca91c505ef2fa0c62b2dad473c",
+      "currentBlob": "825e0a92f89c12ca91c505ef2fa0c62b2dad473c",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1/mug.glb",
+      "baselineBlob": "109034b6fa5e7a8e4ebd313cd81d1f9c06ac69a4",
+      "currentBlob": "109034b6fa5e7a8e4ebd313cd81d1f9c06ac69a4",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1/notebook.glb",
+      "baselineBlob": "6187cdc6b4e351bc8f8f2368d87af0b3e49497de",
+      "currentBlob": "6187cdc6b4e351bc8f8f2368d87af0b3e49497de",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1/pencil.glb",
+      "baselineBlob": "136fc36d33cef67cf3905f5c14e00768dcc2cdc1",
+      "currentBlob": "136fc36d33cef67cf3905f5c14e00768dcc2cdc1",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1/plant-w1_1.glb",
+      "baselineBlob": "35e0efebde943c3852ec7bf0e868b335aff908a3",
+      "currentBlob": "35e0efebde943c3852ec7bf0e868b335aff908a3",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1/room-w1_1.glb",
+      "baselineBlob": "a9691466ad95f74ed55aaf390f2163b8df8ab46e",
+      "currentBlob": "a9691466ad95f74ed55aaf390f2163b8df8ab46e",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1/tea.glb",
+      "baselineBlob": "1869c12f450cfc6ccbe96fd25c4178a4ffd91293",
+      "currentBlob": "1869c12f450cfc6ccbe96fd25c4178a4ffd91293",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1/tote.glb",
+      "baselineBlob": "416d5b9d8527c186e9db69c87f3c787d685236c5",
+      "currentBlob": "416d5b9d8527c186e9db69c87f3c787d685236c5",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1/towel.glb",
+      "baselineBlob": "91cbd887e1059b2197ac9218bde12e34984b28f7",
+      "currentBlob": "91cbd887e1059b2197ac9218bde12e34984b28f7",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1/tray.glb",
+      "baselineBlob": "5565bc9dd1d74c19301ad9eebbe9efaed8c85429",
+      "currentBlob": "5565bc9dd1d74c19301ad9eebbe9efaed8c85429",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1/vase.glb",
+      "baselineBlob": "21a5c8b65db22c97a036be7e325652f850d211c8",
+      "currentBlob": "21a5c8b65db22c97a036be7e325652f850d211c8",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a/card.glb",
+      "baselineBlob": "3345710cf1de9884e6c13b9a7054112c11e3b69e",
+      "currentBlob": "3345710cf1de9884e6c13b9a7054112c11e3b69e",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a/cookie.glb",
+      "baselineBlob": "bfc35e0156adce66bf1bd12c53c9393008f8e773",
+      "currentBlob": "bfc35e0156adce66bf1bd12c53c9393008f8e773",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a/counter-w1_1a.glb",
+      "baselineBlob": "4547ca47aaadd8861d56ffa4e40e106477e3c53e",
+      "currentBlob": "4547ca47aaadd8861d56ffa4e40e106477e3c53e",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a/display-w1_1a.glb",
+      "baselineBlob": "ac99520056d4829ab190ba1df72ecc482143b567",
+      "currentBlob": "ac99520056d4829ab190ba1df72ecc482143b567",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a/generic-staff-w1_1a.glb",
+      "baselineBlob": "742666f5498e96fd576e976c84d0e039e7b084ad",
+      "currentBlob": "742666f5498e96fd576e976c84d0e039e7b084ad",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a/mug.glb",
+      "baselineBlob": "c551fd6b411e79532bc876e6365edb7106c4b046",
+      "currentBlob": "c551fd6b411e79532bc876e6365edb7106c4b046",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a/notebook.glb",
+      "baselineBlob": "5e6e261d9bb5b6821f268c91d34df61854ab450f",
+      "currentBlob": "5e6e261d9bb5b6821f268c91d34df61854ab450f",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a/pencil.glb",
+      "baselineBlob": "86733af2e80b84bf21c271c2c11220bc4a14aa4a",
+      "currentBlob": "86733af2e80b84bf21c271c2c11220bc4a14aa4a",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a/plant-w1_1a.glb",
+      "baselineBlob": "d62f4d48cec5a153f6715ac65b4be14c600ebf83",
+      "currentBlob": "d62f4d48cec5a153f6715ac65b4be14c600ebf83",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a/room-w1_1a.glb",
+      "baselineBlob": "c9c15c2e4f8ca0f776e72c3f89933058e4ce48d3",
+      "currentBlob": "c9c15c2e4f8ca0f776e72c3f89933058e4ce48d3",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a/tea.glb",
+      "baselineBlob": "4c061c2161d292c8c30f98a94f4acac8389a74d5",
+      "currentBlob": "4c061c2161d292c8c30f98a94f4acac8389a74d5",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a/tote.glb",
+      "baselineBlob": "d9b229b6483266da7ed5e433160248627aca3a16",
+      "currentBlob": "d9b229b6483266da7ed5e433160248627aca3a16",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a/towel.glb",
+      "baselineBlob": "727f53be6e16cd2b0f1628f658e424c4aca3cc26",
+      "currentBlob": "727f53be6e16cd2b0f1628f658e424c4aca3cc26",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a/tray.glb",
+      "baselineBlob": "ce65fc7e4a3e44b6b35109a089281167789eea61",
+      "currentBlob": "ce65fc7e4a3e44b6b35109a089281167789eea61",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a/vase.glb",
+      "baselineBlob": "69cc1fb115cd38d8fae2e15b4d4f2fa3a8d0243a",
+      "currentBlob": "69cc1fb115cd38d8fae2e15b4d4f2fa3a8d0243a",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a1/counter-w1_1a1.glb",
+      "baselineBlob": "dd6f2bc61e76417fd511d38af98b3ca0b14030e9",
+      "currentBlob": "dd6f2bc61e76417fd511d38af98b3ca0b14030e9",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a1/mug.glb",
+      "baselineBlob": "486c9e08c6be5397478c421e53a1df493df9345b",
+      "currentBlob": "486c9e08c6be5397478c421e53a1df493df9345b",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1a1/room-w1_1a1.glb",
+      "baselineBlob": "647e5ac982c357ee560ea89d458fea7352f2acb8",
+      "currentBlob": "647e5ac982c357ee560ea89d458fea7352f2acb8",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1b/card.glb",
+      "baselineBlob": "42931f63c26b70d186ad88499c65a34f9b074edd",
+      "currentBlob": "42931f63c26b70d186ad88499c65a34f9b074edd",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1b/cookie.glb",
+      "baselineBlob": "3a61e343472c7912fe09203610f5617919c5b251",
+      "currentBlob": "3a61e343472c7912fe09203610f5617919c5b251",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1b/counter-w1_1b.glb",
+      "baselineBlob": "4a33a4e256f3a32f6eb0c25589b6b2d406299b54",
+      "currentBlob": "4a33a4e256f3a32f6eb0c25589b6b2d406299b54",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1b/display-w1_1b.glb",
+      "baselineBlob": "f54b7ce61144668c88b110133ed7cd94e58fdbc1",
+      "currentBlob": "f54b7ce61144668c88b110133ed7cd94e58fdbc1",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1b/generic-staff-w1_1b.glb",
+      "baselineBlob": "fbe108425c109ba1da2146e44d75b46a294de794",
+      "currentBlob": "fbe108425c109ba1da2146e44d75b46a294de794",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1b/mug.glb",
+      "baselineBlob": "836ea9f2efd8d631cceca92a6346d4240ea63715",
+      "currentBlob": "836ea9f2efd8d631cceca92a6346d4240ea63715",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1b/notebook.glb",
+      "baselineBlob": "644b5be0fd6b529550a3797e5b247754a0270896",
+      "currentBlob": "644b5be0fd6b529550a3797e5b247754a0270896",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1b/pencil.glb",
+      "baselineBlob": "fc6ca6c3eb3f55172719900c177086c05785a133",
+      "currentBlob": "fc6ca6c3eb3f55172719900c177086c05785a133",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1b/plant-w1_1b.glb",
+      "baselineBlob": "4d35a74c0c7f84aebaf5ca36305cb0cf3aa8568c",
+      "currentBlob": "4d35a74c0c7f84aebaf5ca36305cb0cf3aa8568c",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1b/room-w1_1b.glb",
+      "baselineBlob": "fe72f708577321a07ff96c87fa2751413f1bc966",
+      "currentBlob": "fe72f708577321a07ff96c87fa2751413f1bc966",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1b/tea.glb",
+      "baselineBlob": "59fd387e21774d975122722f53b15eb6715e895b",
+      "currentBlob": "59fd387e21774d975122722f53b15eb6715e895b",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1b/tote.glb",
+      "baselineBlob": "155ea9eed3f80073d20cd1733b7b581bf250421c",
+      "currentBlob": "155ea9eed3f80073d20cd1733b7b581bf250421c",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1b/towel.glb",
+      "baselineBlob": "db9cead2a1f0bdf7bfb430bcdf3920c334137256",
+      "currentBlob": "db9cead2a1f0bdf7bfb430bcdf3920c334137256",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1b/tray.glb",
+      "baselineBlob": "42d419f8a5db6ed0c8656044ab206d63d4aff107",
+      "currentBlob": "42d419f8a5db6ed0c8656044ab206d63d4aff107",
+      "unchanged": true
+    },
+    {
+      "path": "public/assets/w1_1b/vase.glb",
+      "baselineBlob": "d96f2fd3e512ca33627251a40d64b139d988e5f6",
+      "currentBlob": "d96f2fd3e512ca33627251a40d64b139d988e5f6",
+      "unchanged": true
+    }
+  ],
+  "note": "Intentional rebuilt cabinets/floor/counter or matched timber-normal material scale. Original character, ceramic, tote and historical GLB geometry retained. New entrance GLB is additional, not replacement of an original file."
+}

@@ -1,0 +1,19 @@
+{
+  "status": "IN PROGRESS; target NOT met",
+  "images": {
+    "game-panorama-intermediate.png": "Actual production WebGL build6, real Sandbox purchases/placement and normal shop camera, intermediate visual comparison only",
+    "game-cashier-intermediate.png": "Same actual game build, actual one-hour Sandbox settlement and matching customer/staff contact; no injected pose or sale"
+  },
+  "reference": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+  "referenceSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+  "renderer": "Chromium WebGL2 ANGLE SwiftShader software; not physical GPU/FPS/audio/native",
+  "capturedRuntime": {
+    "index-Ct4omunK.js": "2e1df8ddf0e623578b9a64d54886662da797fd7521e9ff2efc62958e0e454525",
+    "world-DhjcLcTF.js": "c37dae98569b9090434e595f2c1d58b5057b3ef35154e600d51f44e44b6d4c98"
+  },
+  "imageHashes": {
+    "game-panorama-intermediate.png": "3380a43b25be6037dcc98864834bbe6ab1088241eb6b837efb0119419b86271f",
+    "game-cashier-intermediate.png": "4c9a85757980a7c9c6f63d71835616328df545c71a0f812b9747c6d72467f10c"
+  },
+  "captureLimit": "Intermediate capture6 observed greeting/contact/actual margin but final QA close selector timed out; NOT a complete passed run or final candidate evidence. Later UV/export metadata changes are not claimed to be this screenshot build. Original delivered frame files retained in /workspace/qa/v11-slice/gameplay-6. Uncut video not yet successfully finalized."
+}

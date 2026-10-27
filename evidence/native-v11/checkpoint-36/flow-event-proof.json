@@ -1,0 +1,50 @@
+{
+  "actualReceiptRevision": 9,
+  "realizedBatch": {
+    "units": 18,
+    "revenue": 1710,
+    "cogs": 870,
+    "grossMargin": 840,
+    "display": "+\u00a58,400",
+    "notNetAfterOverheads": true
+  },
+  "bagOwnershipSamples": [
+    {
+      "seconds": 256.963,
+      "guest": "visitor-a",
+      "state": "receiving",
+      "revision": 9,
+      "carriedBag": "visitor-a"
+    },
+    {
+      "seconds": 257.542,
+      "guest": "visitor-a",
+      "state": "receiving",
+      "revision": 9,
+      "carriedBag": "visitor-a"
+    },
+    {
+      "seconds": 258.095,
+      "guest": "visitor-a",
+      "state": "receiving",
+      "revision": 9,
+      "carriedBag": "visitor-a"
+    }
+  ],
+  "returnEvents": [
+    {
+      "name": "actual staff home after checkout",
+      "seconds": 269.51
+    },
+    {
+      "name": "actual served exit and prop clear",
+      "seconds": 349.329
+    }
+  ],
+  "manualPixelProof": {
+    "rawCDPFrame": "000120.jpg",
+    "recordingSeconds": 268.93,
+    "visibleText": "\u672c\u6b21\u7d50\u7b97\u6bdb\u5229\u30fb18\u4ef6 / +\u00a58,400 / \u672a\u6263\u4eba\u5de5\u3001\u79df\u91d1\u7b49\u8cbb\u7528"
+  },
+  "lateScreenshot": "04-actual-margin-in-game.png did not capture visible text; rawframe/video is the pixel evidence"
+}

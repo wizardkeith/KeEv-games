@@ -1,0 +1,25 @@
+
+> next-stop-little-shop-w1@0.1.1 validate
+> node --import tsx tools/validate.ts
+
+{
+  "errors": [],
+  "offerings": 10,
+  "locales": 5,
+  "keysPerLocale": 174,
+  "qualityTiers": [
+    "Standard",
+    "Select",
+    "Premium",
+    "Signature",
+    "Prestige",
+    "Masterpiece"
+  ],
+  "uniqueSeparate": true,
+  "review": "Provisional W1 fixtures; no cultural facts or final balance approved"
+}
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

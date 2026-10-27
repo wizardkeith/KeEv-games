@@ -1,0 +1,14 @@
+
+> next-stop-little-shop-w1@0.1.1 build
+> tsc --noEmit && vite build
+
+tests/v11-pencil.test.ts(14,9): error TS7034: Variable 'boxes' implicitly has type 'any[]' in some locations where its type cannot be determined.
+tests/v11-pencil.test.ts(21,102): error TS7005: Variable 'boxes' implicitly has an 'any[]' type.
+tests/v11-pencil.test.ts(21,117): error TS7005: Variable 'boxes' implicitly has an 'any[]' type.
+tests/v11-pencil.test.ts(21,142): error TS7005: Variable 'boxes' implicitly has an 'any[]' type.
+tests/v11-pencil.test.ts(21,157): error TS7005: Variable 'boxes' implicitly has an 'any[]' type.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

@@ -1,0 +1,1607 @@
+{
+  "input": "assets/masters/native-v11/visitor-b-cloth-input.json",
+  "source": "tools/unwrap-v11-garments.py",
+  "units": "UV area in square metres; vertical aligned islands; source-space Y up",
+  "stats": {
+    "body:0": {
+      "surfaceAreaM2": 0.5187985285288009,
+      "uvAreaM2": 0.5187985285288009,
+      "scale": 0.9419369780719017,
+      "vertices": 540,
+      "warpAlignment": [
+        {
+          "vertices": 65,
+          "rotationDegrees": -13.82454222912243
+        },
+        {
+          "vertices": 19,
+          "rotationDegrees": 59.424284282294394
+        },
+        {
+          "vertices": 71,
+          "rotationDegrees": 166.36477115936285
+        },
+        {
+          "vertices": 111,
+          "rotationDegrees": 156.63974355889837
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 179.49557752920398
+        },
+        {
+          "vertices": 9,
+          "rotationDegrees": 61.54917541033723
+        },
+        {
+          "vertices": 101,
+          "rotationDegrees": -22.76061978454101
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -174.24809089050348
+        },
+        {
+          "vertices": 3,
+          "rotationDegrees": -176.9516756118061
+        },
+        {
+          "vertices": 3,
+          "rotationDegrees": -142.58658436388012
+        },
+        {
+          "vertices": 3,
+          "rotationDegrees": -179.2739249327536
+        },
+        {
+          "vertices": 3,
+          "rotationDegrees": -142.84756646842726
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.8666860887060395
+        },
+        {
+          "vertices": 82,
+          "rotationDegrees": -96.5610342598043
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": 63.18278992687027
+        },
+        {
+          "vertices": 25,
+          "rotationDegrees": 163.82951979408307
+        },
+        {
+          "vertices": 25,
+          "rotationDegrees": 0.0
+        }
+      ]
+    },
+    "body:1": {
+      "surfaceAreaM2": 0.10244540231025598,
+      "uvAreaM2": 0.10244540231025596,
+      "scale": 0.45038680267308745,
+      "vertices": 270,
+      "warpAlignment": [
+        {
+          "vertices": 61,
+          "rotationDegrees": -20.689779617083115
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": -104.87555878904087
+        },
+        {
+          "vertices": 3,
+          "rotationDegrees": -168.880029382912
+        },
+        {
+          "vertices": 60,
+          "rotationDegrees": 20.89962975170299
+        },
+        {
+          "vertices": 10,
+          "rotationDegrees": -74.2280644265077
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.7787029378715942
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.7344193952401938
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.4818566111943214
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.4864326963250392
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 178.20425134458569
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 178.19917397499995
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -2.0535900048751143
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -2.0448882374010164
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -2.007649793905424
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -2.0060421188591815
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -2.0410649782745356
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -2.0437115844050258
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 177.95988358473
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 177.95085646250354
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 178.23710098199686
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 178.23498279951562
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 178.33222769934315
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 178.3092395537293
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 178.54905936153497
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 178.5063079340374
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 178.10828312777156
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 177.9373066091924
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 178.69729456855308
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 178.57329401003207
+        }
+      ]
+    },
+    "body:3": {
+      "surfaceAreaM2": 0.1309659900520628,
+      "uvAreaM2": 0.13096599005206278,
+      "scale": 0.4459445406798284,
+      "vertices": 292,
+      "warpAlignment": [
+        {
+          "vertices": 62,
+          "rotationDegrees": 23.569279517209814
+        },
+        {
+          "vertices": 3,
+          "rotationDegrees": -11.770149637230384
+        },
+        {
+          "vertices": 3,
+          "rotationDegrees": -7.804977931779709
+        },
+        {
+          "vertices": 13,
+          "rotationDegrees": -13.648841280857154
+        },
+        {
+          "vertices": 63,
+          "rotationDegrees": -25.907405287495777
+        },
+        {
+          "vertices": 12,
+          "rotationDegrees": 19.587241913423
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.5765805109021995
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -178.61617085065188
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.4598360454581751
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -178.61579971004926
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.3863918951423384
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.389805774809429
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.2717002405838262
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.7630317928843475
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.2036152631810622
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -178.98662054230502
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.2101796053486908
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -179.03587663264574
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.292571023512301
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -178.92034031912814
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.304964409001682
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -178.93516155855474
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 2.08795816861546
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.5575620306838838
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 2.131865961348555
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.7472013054915219
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.63575867704785
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 2.0703357141702456
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.67839353558048
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.96261251165646
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -178.07717451391622
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.0240472546377521
+        }
+      ]
+    },
+    "body:4": {
+      "surfaceAreaM2": 0.13522094554155772,
+      "uvAreaM2": 0.13522094554155772,
+      "scale": 0.4464101007160693,
+      "vertices": 288,
+      "warpAlignment": [
+        {
+          "vertices": 64,
+          "rotationDegrees": -25.316669488230747
+        },
+        {
+          "vertices": 12,
+          "rotationDegrees": 17.287774994638692
+        },
+        {
+          "vertices": 64,
+          "rotationDegrees": 25.83432290259246
+        },
+        {
+          "vertices": 12,
+          "rotationDegrees": -17.724512663639203
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.460455212771672
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 178.63973832978283
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.4166238662825756
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.3651522821788138
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.3780731262477484
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.3337379993280758
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 178.85296821485855
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -0.8553832478459839
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.1304484518629936
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 179.00594669200325
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.1387981611425584
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 179.03758698185038
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.1758269210502625
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 178.93931644373234
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.1768335566093155
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 178.96121637823524
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.838341233699165
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.5143242066202844
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.850669889164917
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.705422207324954
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 177.97555362301958
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -2.2804964597700472
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 177.9906874648851
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 177.7363197227917
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 178.28541488379676
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -1.0397342452350895
+        }
+      ]
+    },
+    "body:5": {
+      "surfaceAreaM2": 1.0359683065135077,
+      "uvAreaM2": 1.0359683065135075,
+      "scale": 1.441772189444094,
+      "vertices": 487,
+      "warpAlignment": [
+        {
+          "vertices": 71,
+          "rotationDegrees": 160.14962014841205
+        },
+        {
+          "vertices": 88,
+          "rotationDegrees": -16.018435567788202
+        },
+        {
+          "vertices": 79,
+          "rotationDegrees": 161.46941236595345
+        },
+        {
+          "vertices": 87,
+          "rotationDegrees": 162.2208718909845
+        },
+        {
+          "vertices": 87,
+          "rotationDegrees": 165.45099328024173
+        },
+        {
+          "vertices": 3,
+          "rotationDegrees": -8.07104607867606
+        },
+        {
+          "vertices": 3,
+          "rotationDegrees": 11.439816724652736
+        },
+        {
+          "vertices": 3,
+          "rotationDegrees": -168.71090858277003
+        },
+        {
+          "vertices": 33,
+          "rotationDegrees": 3.399381421683975
+        },
+        {
+          "vertices": 33,
+          "rotationDegrees": 0.0
+        }
+      ]
+    },
+    "body:6": {
+      "surfaceAreaM2": 0.06660518803763515,
+      "uvAreaM2": 0.06660518803763515,
+      "scale": 0.4963478596590467,
+      "vertices": 217,
+      "warpAlignment": [
+        {
+          "vertices": 100,
+          "rotationDegrees": 106.22144128274131
+        },
+        {
+          "vertices": 100,
+          "rotationDegrees": -118.40306367355659
+        },
+        {
+          "vertices": 3,
+          "rotationDegrees": -166.8440033345752
+        },
+        {
+          "vertices": 7,
+          "rotationDegrees": -89.99981686695635
+        },
+        {
+          "vertices": 7,
+          "rotationDegrees": -118.72404129400289
+        }
+      ]
+    },
+    "body:7": {
+      "surfaceAreaM2": 0.08101483242638688,
+      "uvAreaM2": 0.08101483242638689,
+      "scale": 0.37027305648123515,
+      "vertices": 216,
+      "warpAlignment": [
+        {
+          "vertices": 56,
+          "rotationDegrees": 17.546766869241743
+        },
+        {
+          "vertices": 56,
+          "rotationDegrees": -18.943810852603338
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -176.9653140341833
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -176.9801656261711
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 3.03417751755074
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -176.94665809580403
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.6032708418164279
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.6266579542944573
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.586150895957295
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.6113450955361956
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.7255825037794161
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.7659083108852296
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.3813254602722616
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.4316219191103832
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.7859325762561928
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.7655739485283557
+        }
+      ]
+    },
+    "body:8": {
+      "surfaceAreaM2": 0.08071314407178955,
+      "uvAreaM2": 0.08071314407178955,
+      "scale": 0.38643420421213254,
+      "vertices": 243,
+      "warpAlignment": [
+        {
+          "vertices": 9,
+          "rotationDegrees": 152.2573877228835
+        },
+        {
+          "vertices": 5,
+          "rotationDegrees": 14.343911772203937
+        },
+        {
+          "vertices": 54,
+          "rotationDegrees": -17.124221709308003
+        },
+        {
+          "vertices": 13,
+          "rotationDegrees": -117.94529391591922
+        },
+        {
+          "vertices": 54,
+          "rotationDegrees": 162.99081915548507
+        },
+        {
+          "vertices": 25,
+          "rotationDegrees": 167.90934364712376
+        },
+        {
+          "vertices": 3,
+          "rotationDegrees": 11.737234576601855
+        },
+        {
+          "vertices": 21,
+          "rotationDegrees": -11.421519811811917
+        },
+        {
+          "vertices": 19,
+          "rotationDegrees": 171.62746253706064
+        },
+        {
+          "vertices": 6,
+          "rotationDegrees": -137.8614581168651
+        },
+        {
+          "vertices": 17,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 17,
+          "rotationDegrees": 0.0
+        }
+      ]
+    },
+    "body:9": {
+      "surfaceAreaM2": 0.01864813488549458,
+      "uvAreaM2": 0.018648134885494577,
+      "scale": 0.1707125105623904,
+      "vertices": 150,
+      "warpAlignment": [
+        {
+          "vertices": 35,
+          "rotationDegrees": 112.76138061722241
+        },
+        {
+          "vertices": 35,
+          "rotationDegrees": 67.12014891281609
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.2483697986351
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.38468531038984
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -176.04336298755896
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -176.08978788840741
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -176.03075056289205
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -176.07269545410745
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -176.5905645351737
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -176.60378932347783
+        }
+      ]
+    },
+    "body:10": {
+      "surfaceAreaM2": 0.02114906560688409,
+      "uvAreaM2": 0.021149065606884093,
+      "scale": 0.3002665759394667,
+      "vertices": 315,
+      "warpAlignment": [
+        {
+          "vertices": 35,
+          "rotationDegrees": -170.54924535223452
+        },
+        {
+          "vertices": 14,
+          "rotationDegrees": 9.14507349260787
+        },
+        {
+          "vertices": 6,
+          "rotationDegrees": -170.58121964996096
+        },
+        {
+          "vertices": 18,
+          "rotationDegrees": 7.105675669142173
+        },
+        {
+          "vertices": 30,
+          "rotationDegrees": 170.10138954822128
+        },
+        {
+          "vertices": 36,
+          "rotationDegrees": -8.20083937345227
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -178.50567451476147
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -179.18929372763756
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -178.08775635314538
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -178.28746801510835
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.36324070760935
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.73696913943422
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.27884335636097
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.51865309481866
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.22636159415006
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.29133112754334
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.10286745963543
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.15657015156754
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.0879375497139
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.16143118967514
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.15697151908367
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.22906013548024
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.14418057907255
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.1802983617096
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 2.9002105616117917
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.096624012786
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 2.8026131860688737
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 2.903553697163745
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 2.90264236048816
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 3.0206944030098954
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 2.9185984002757315
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 2.956957971266038
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 3.032927128392626
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 3.0086484486263623
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -176.97008582157525
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": -177.08470694711116
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.9222242056819938
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 2.7479918263546605
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.817645492875736
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 1.8875309326251821
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 2.36809443662072
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 2.5959458631569663
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 2.4757034456374605
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 3.050208798035728
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 2.1717827926695707
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 2.8967071492923226
+        }
+      ]
+    },
+    "body:11": {
+      "surfaceAreaM2": 0.008216017272812532,
+      "uvAreaM2": 0.008216017272812532,
+      "scale": 0.19854207239025656,
+      "vertices": 52,
+      "warpAlignment": [
+        {
+          "vertices": 21,
+          "rotationDegrees": -178.94085772532864
+        },
+        {
+          "vertices": 21,
+          "rotationDegrees": -163.97165856745642
+        },
+        {
+          "vertices": 5,
+          "rotationDegrees": 73.30068761045499
+        },
+        {
+          "vertices": 5,
+          "rotationDegrees": 108.36832751013601
+        }
+      ]
+    },
+    "arm-left:0": {
+      "surfaceAreaM2": 0.11730974319807229,
+      "uvAreaM2": 0.11730974319807227,
+      "scale": 0.47512284982560316,
+      "vertices": 293,
+      "warpAlignment": [
+        {
+          "vertices": 15,
+          "rotationDegrees": 73.18158133721572
+        },
+        {
+          "vertices": 40,
+          "rotationDegrees": 158.7948658758049
+        },
+        {
+          "vertices": 28,
+          "rotationDegrees": 163.6621944514515
+        },
+        {
+          "vertices": 36,
+          "rotationDegrees": -19.8713404742536
+        },
+        {
+          "vertices": 44,
+          "rotationDegrees": 165.05507781296794
+        },
+        {
+          "vertices": 20,
+          "rotationDegrees": 18.019858652165045
+        },
+        {
+          "vertices": 32,
+          "rotationDegrees": 153.18468457194797
+        },
+        {
+          "vertices": 39,
+          "rotationDegrees": -8.477471393332406
+        },
+        {
+          "vertices": 5,
+          "rotationDegrees": -38.803852024435876
+        },
+        {
+          "vertices": 17,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 17,
+          "rotationDegrees": 0.0
+        }
+      ]
+    },
+    "arm-left:1": {
+      "surfaceAreaM2": 0.05183470295679294,
+      "uvAreaM2": 0.05183470295679293,
+      "scale": 0.35481609163747796,
+      "vertices": 180,
+      "warpAlignment": [
+        {
+          "vertices": 8,
+          "rotationDegrees": 121.3401169866109
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": -57.36506154333433
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": -58.6598943855816
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": 122.63493532956636
+        },
+        {
+          "vertices": 24,
+          "rotationDegrees": 85.68397229734545
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": 130.1067848476114
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": -48.323454029325646
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": -49.89325356867633
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": 131.6765508019855
+        },
+        {
+          "vertices": 36,
+          "rotationDegrees": -89.91047541035842
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": -171.18088660744178
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": -171.28478699541057
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": 8.81911825295724
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": 8.715221722226504
+        },
+        {
+          "vertices": 24,
+          "rotationDegrees": 0.0
+        }
+      ]
+    },
+    "foot-left:0": {
+      "surfaceAreaM2": 0.05700676858041467,
+      "uvAreaM2": 0.05700676858041466,
+      "scale": 0.3179787960799256,
+      "vertices": 192,
+      "warpAlignment": [
+        {
+          "vertices": 43,
+          "rotationDegrees": 52.21658910559631
+        },
+        {
+          "vertices": 16,
+          "rotationDegrees": -142.30355992087905
+        },
+        {
+          "vertices": 36,
+          "rotationDegrees": -152.25656655239467
+        },
+        {
+          "vertices": 18,
+          "rotationDegrees": -143.59687019569063
+        },
+        {
+          "vertices": 15,
+          "rotationDegrees": 34.735505750498476
+        },
+        {
+          "vertices": 27,
+          "rotationDegrees": 161.79032012304268
+        },
+        {
+          "vertices": 3,
+          "rotationDegrees": -123.00900568274322
+        },
+        {
+          "vertices": 17,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 17,
+          "rotationDegrees": 0.0
+        }
+      ]
+    },
+    "foot-left:2": {
+      "surfaceAreaM2": 0.0005451231646902373,
+      "uvAreaM2": 0.0005451231646902373,
+      "scale": 0.05072726559094688,
+      "vertices": 50,
+      "warpAlignment": [
+        {
+          "vertices": 10,
+          "rotationDegrees": -124.05377121798476
+        },
+        {
+          "vertices": 10,
+          "rotationDegrees": 65.18689406059906
+        },
+        {
+          "vertices": 10,
+          "rotationDegrees": 25.270133170405494
+        },
+        {
+          "vertices": 10,
+          "rotationDegrees": -116.34282448198391
+        },
+        {
+          "vertices": 5,
+          "rotationDegrees": -135.0
+        },
+        {
+          "vertices": 5,
+          "rotationDegrees": 151.58905904861396
+        }
+      ]
+    },
+    "foot-left:3": {
+      "surfaceAreaM2": 0.0005451231646902374,
+      "uvAreaM2": 0.0005451231646902374,
+      "scale": 0.05072726977654887,
+      "vertices": 50,
+      "warpAlignment": [
+        {
+          "vertices": 10,
+          "rotationDegrees": -124.05380157330723
+        },
+        {
+          "vertices": 10,
+          "rotationDegrees": 65.18688888440482
+        },
+        {
+          "vertices": 10,
+          "rotationDegrees": 25.270150823758648
+        },
+        {
+          "vertices": 10,
+          "rotationDegrees": -116.34282739543588
+        },
+        {
+          "vertices": 5,
+          "rotationDegrees": -135.00000000000009
+        },
+        {
+          "vertices": 5,
+          "rotationDegrees": 151.58907595381828
+        }
+      ]
+    },
+    "arm-right:0": {
+      "surfaceAreaM2": 0.11754026624207753,
+      "uvAreaM2": 0.11754026624207754,
+      "scale": 0.4718360565331022,
+      "vertices": 290,
+      "warpAlignment": [
+        {
+          "vertices": 41,
+          "rotationDegrees": 160.70019591189947
+        },
+        {
+          "vertices": 6,
+          "rotationDegrees": -21.001957879383497
+        },
+        {
+          "vertices": 39,
+          "rotationDegrees": 148.24137843850332
+        },
+        {
+          "vertices": 56,
+          "rotationDegrees": -17.28071864973609
+        },
+        {
+          "vertices": 39,
+          "rotationDegrees": -4.232210155920254
+        },
+        {
+          "vertices": 3,
+          "rotationDegrees": -7.9262172775548
+        },
+        {
+          "vertices": 3,
+          "rotationDegrees": 13.950063675816569
+        },
+        {
+          "vertices": 30,
+          "rotationDegrees": -18.62259631580633
+        },
+        {
+          "vertices": 4,
+          "rotationDegrees": 68.55512146994387
+        },
+        {
+          "vertices": 35,
+          "rotationDegrees": 147.14989819254296
+        },
+        {
+          "vertices": 17,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 17,
+          "rotationDegrees": 0.0
+        }
+      ]
+    },
+    "arm-right:1": {
+      "surfaceAreaM2": 0.05183470295679294,
+      "uvAreaM2": 0.05183470295679294,
+      "scale": 0.35481608443842294,
+      "vertices": 180,
+      "warpAlignment": [
+        {
+          "vertices": 8,
+          "rotationDegrees": 121.3401161857679
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": -57.36508536720216
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": -58.65988065875103
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": 122.63493947373075
+        },
+        {
+          "vertices": 24,
+          "rotationDegrees": -38.80609513092793
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": 130.10676462134325
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": -48.32343284899967
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": -49.893248512109096
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": 131.67652701240092
+        },
+        {
+          "vertices": 36,
+          "rotationDegrees": -73.05467662944534
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": -171.18088565515006
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": -171.284778762859
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": 8.819118782119935
+        },
+        {
+          "vertices": 8,
+          "rotationDegrees": 8.715226944247513
+        },
+        {
+          "vertices": 24,
+          "rotationDegrees": 0.0
+        }
+      ]
+    },
+    "foot-right:0": {
+      "surfaceAreaM2": 0.05700676858041467,
+      "uvAreaM2": 0.05700676858041466,
+      "scale": 0.3179787960799256,
+      "vertices": 192,
+      "warpAlignment": [
+        {
+          "vertices": 43,
+          "rotationDegrees": 52.21658910559631
+        },
+        {
+          "vertices": 16,
+          "rotationDegrees": -142.30355992087905
+        },
+        {
+          "vertices": 36,
+          "rotationDegrees": -152.25656655239467
+        },
+        {
+          "vertices": 18,
+          "rotationDegrees": -143.59687019569063
+        },
+        {
+          "vertices": 15,
+          "rotationDegrees": 34.735505750498476
+        },
+        {
+          "vertices": 27,
+          "rotationDegrees": 161.79032012304268
+        },
+        {
+          "vertices": 3,
+          "rotationDegrees": -123.00900568274322
+        },
+        {
+          "vertices": 17,
+          "rotationDegrees": 0.0
+        },
+        {
+          "vertices": 17,
+          "rotationDegrees": 0.0
+        }
+      ]
+    },
+    "foot-right:2": {
+      "surfaceAreaM2": 0.0005451231646902373,
+      "uvAreaM2": 0.0005451231646902373,
+      "scale": 0.05072726559094688,
+      "vertices": 50,
+      "warpAlignment": [
+        {
+          "vertices": 10,
+          "rotationDegrees": -124.05377121798476
+        },
+        {
+          "vertices": 10,
+          "rotationDegrees": 65.18689406059906
+        },
+        {
+          "vertices": 10,
+          "rotationDegrees": 25.270133170405494
+        },
+        {
+          "vertices": 10,
+          "rotationDegrees": -116.34282448198391
+        },
+        {
+          "vertices": 5,
+          "rotationDegrees": -135.0
+        },
+        {
+          "vertices": 5,
+          "rotationDegrees": 151.58905904861396
+        }
+      ]
+    },
+    "foot-right:3": {
+      "surfaceAreaM2": 0.0005451231646902374,
+      "uvAreaM2": 0.0005451231646902374,
+      "scale": 0.05072726977654887,
+      "vertices": 50,
+      "warpAlignment": [
+        {
+          "vertices": 10,
+          "rotationDegrees": -124.05380157330723
+        },
+        {
+          "vertices": 10,
+          "rotationDegrees": 65.18688888440482
+        },
+        {
+          "vertices": 10,
+          "rotationDegrees": 25.270150823758648
+        },
+        {
+          "vertices": 10,
+          "rotationDegrees": -116.34282739543588
+        },
+        {
+          "vertices": 5,
+          "rotationDegrees": -135.00000000000009
+        },
+        {
+          "vertices": 5,
+          "rotationDegrees": 151.58907595381828
+        }
+      ]
+    }
+  }
+}

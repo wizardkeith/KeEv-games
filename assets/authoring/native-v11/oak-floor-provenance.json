@@ -1,0 +1,16 @@
+{
+  "source": "tools/paint-v11-oak-floor.py",
+  "method": "Original deterministic low contrast longitudinal wood pigment, normal and ORM. Actual separate narrow plank meshes provide staggered joints and bevels. Original target used only for visual direction; no target pixels in texture.",
+  "size": [
+    512,
+    512
+  ],
+  "repeat": 1,
+  "normalScale": 0.06,
+  "roughnessFactor": 0.83,
+  "files": {
+    "oak-floor-albedo.png": "764e3d535c9a2779d3b70830a88c74a88fe42e97cf5e8782cb9551dc9b5a729f",
+    "oak-floor-normal.png": "f79f21c2796621a82152ef941121e6b2300654c598648e04e18581a4e6e5187f",
+    "oak-floor-orm.png": "116187d36442fabef9cae6acc2f4d70d02391cb7ec857b456faa5d3fc8c4533e"
+  }
+}

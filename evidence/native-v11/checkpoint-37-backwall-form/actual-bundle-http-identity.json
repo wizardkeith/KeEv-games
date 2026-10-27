@@ -1,0 +1,48 @@
+{
+  "application": "cc98c7b6efc67b58a408f9d6d1e62f2cdee8bf5c",
+  "records": [
+    {
+      "build": 245,
+      "path": "/assets/index-DPT-C0ha.js",
+      "bytes": 171335,
+      "sha256": "83f611851894bcdb2e7203f240074c5600a533a3970810a11a667b1b27064d8c",
+      "actualHTTPMatchesFrozenBuild": true
+    },
+    {
+      "build": 245,
+      "path": "/assets/index-CiMc3Tjj.css",
+      "bytes": 37148,
+      "sha256": "b72a538aa1adb953dec6bfd06831209f0ae61aea8aa3e385ac07154c91c96c72",
+      "actualHTTPMatchesFrozenBuild": true
+    },
+    {
+      "build": 246,
+      "path": "/assets/index-CFyGr6mA.js",
+      "bytes": 171335,
+      "sha256": "330301c202ed59fc569de327dc53de7759502b33c2ee622978e5ec14116f4a98",
+      "actualHTTPMatchesFrozenBuild": true
+    },
+    {
+      "build": 246,
+      "path": "/assets/index-CiMc3Tjj.css",
+      "bytes": 37148,
+      "sha256": "b72a538aa1adb953dec6bfd06831209f0ae61aea8aa3e385ac07154c91c96c72",
+      "actualHTTPMatchesFrozenBuild": true
+    },
+    {
+      "build": 247,
+      "path": "/assets/index-yGsUDGME.js",
+      "bytes": 171335,
+      "sha256": "9b588e0763bbcb5136b2e3829eec2d0b320cdcd6ee61ca22145675db78fb7176",
+      "actualHTTPMatchesFrozenBuild": true
+    },
+    {
+      "build": 247,
+      "path": "/assets/index-CiMc3Tjj.css",
+      "bytes": 37148,
+      "sha256": "b72a538aa1adb953dec6bfd06831209f0ae61aea8aa3e385ac07154c91c96c72",
+      "actualHTTPMatchesFrozenBuild": true
+    }
+  ],
+  "limit": "Local cloud authoring servers, not public Site verification"
+}

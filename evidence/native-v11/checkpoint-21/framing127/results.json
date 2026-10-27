@@ -1,0 +1,132 @@
+{
+  "status": "pass",
+  "cases": [
+    {
+      "width": 1280,
+      "height": 720,
+      "locale": "zh-HK",
+      "panels": 5,
+      "cameraStable": true,
+      "desktopDrawer": 580,
+      "buyHeight": 44
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "locale": "en",
+      "panels": 5,
+      "cameraStable": true,
+      "desktopDrawer": 580,
+      "buyHeight": 44
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "locale": "ja",
+      "panels": 5,
+      "cameraStable": true,
+      "desktopDrawer": 580,
+      "buyHeight": 44
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "locale": "th",
+      "panels": 5,
+      "cameraStable": true,
+      "desktopDrawer": 580,
+      "buyHeight": 44
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "locale": "zh-CN",
+      "panels": 5,
+      "cameraStable": true,
+      "desktopDrawer": 580,
+      "buyHeight": 44
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "locale": "zh-HK",
+      "panels": 5,
+      "cameraStable": true,
+      "buyHeight": 44
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "locale": "en",
+      "panels": 5,
+      "cameraStable": true,
+      "buyHeight": 44
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "locale": "ja",
+      "panels": 5,
+      "cameraStable": true,
+      "buyHeight": 44
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "locale": "th",
+      "panels": 5,
+      "cameraStable": true,
+      "buyHeight": 44
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "locale": "zh-CN",
+      "panels": 5,
+      "cameraStable": true,
+      "buyHeight": 44
+    },
+    {
+      "width": 320,
+      "height": 420,
+      "locale": "zh-HK",
+      "panels": 5,
+      "cameraStable": true,
+      "buyHeight": 44
+    },
+    {
+      "width": 320,
+      "height": 420,
+      "locale": "en",
+      "panels": 5,
+      "cameraStable": true,
+      "buyHeight": 44
+    },
+    {
+      "width": 320,
+      "height": 420,
+      "locale": "ja",
+      "panels": 5,
+      "cameraStable": true,
+      "buyHeight": 44
+    },
+    {
+      "width": 320,
+      "height": 420,
+      "locale": "th",
+      "panels": 5,
+      "cameraStable": true,
+      "buyHeight": 44
+    },
+    {
+      "width": 320,
+      "height": 420,
+      "locale": "zh-CN",
+      "panels": 5,
+      "cameraStable": true,
+      "buyHeight": 44
+    }
+  ],
+  "errors": [],
+  "provenance": "Actual production WebGL and UI; touch emulation/Reduce Motion, isolated Sandbox, software renderer; no physical device claim"
+}

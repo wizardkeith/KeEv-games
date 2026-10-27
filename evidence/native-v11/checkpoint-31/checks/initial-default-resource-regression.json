@@ -1,0 +1,9 @@
+{
+  "sourceBeforeFix": "3c201fd565f2de5d915862b1fa9c56759b914a66",
+  "kind": "Recorded observed failed comparison, not a new run",
+  "worldChunkBytesBeforeFix": 9964785,
+  "explicitControlWorldChunkBytes": 8810260,
+  "cause": "Unspecified optional import.meta.env property not folded, so unselected model JSON remained in bundle",
+  "fixedSource": "2cdc18cbab0eb8092f68e467b9fc7d04e65a1774",
+  "resolution": "Vite config supplies control before loadEnv. All final explicit variant rebuilds and final default/control parity pass; art remains rejected."
+}

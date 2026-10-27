@@ -1,0 +1,12 @@
+✔ celadon uses continuous height-aligned actual vessel UV and embeds exact Web colour/normal/ORM in the portable master (26.921609ms)
+BJS - [01:12:08]: Babylon.js v8.32.0 - Null engine
+✔ actual room reflection preserves exact analytic diffuse, lights and all nonceramic material response (21.146614ms)
+✔ reusable actual room asset is a complete standard HDR cube, with no actor or owned-stock data (0.517962ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 848.069522

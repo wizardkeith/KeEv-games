@@ -1,0 +1,31 @@
+{
+  "baseline": "56a213c65f2725be0e10dbd1bbee16c0c083224d",
+  "rawAssetFiles": 317,
+  "changed": [],
+  "environmentKeysUnchanged": [
+    "id",
+    "format",
+    "version",
+    "authoringVersion",
+    "units",
+    "coordinateSystem",
+    "colors",
+    "notes",
+    "presentation",
+    "roomProbe",
+    "surfaceAssets",
+    "backDisplaySamples",
+    "stagingVariants",
+    "displayVariants",
+    "staging",
+    "styling",
+    "windowCanopy",
+    "room",
+    "door",
+    "plants",
+    "exterior",
+    "counter",
+    "display"
+  ],
+  "onlyNewExtension": "sourceContributionDiagnostic"
+}

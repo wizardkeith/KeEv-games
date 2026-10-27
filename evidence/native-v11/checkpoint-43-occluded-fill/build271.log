@@ -1,0 +1,79 @@
+
+> next-stop-little-shop-w1@0.1.1 build
+> tsc --noEmit && vite build --outDir /workspace/qa/v11-slice/immutable271-c43-flat-control
+
+vite v7.1.12 building for production...
+transforming...
+✓ 700 modules transformed.
+
+(!) outDir /workspace/qa/v11-slice/immutable271-c43-flat-control is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
+rendering chunks...
+computing gzip size...
+../qa/v11-slice/immutable271-c43-flat-control/index.html                                                     0.69 kB │ gzip:     0.49 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/index-CiMc3Tjj.css                                     37.15 kB │ gzip:     8.15 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/kernelBlurVaryingDeclaration-BhFH-SXv.js                0.17 kB │ gzip:     0.16 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/kernelBlurVaryingDeclaration-CX_9MNpT.js                0.18 kB │ gzip:     0.16 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/pass.fragment-D54POb0T.js                               0.35 kB │ gzip:     0.27 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/shadowMapFragmentSoftTransparentShadow-CaAIkhU9.js      0.40 kB │ gzip:     0.29 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/shadowMapFragmentSoftTransparentShadow-D3Xq_4Q6.js      0.43 kB │ gzip:     0.30 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/rgbdEncode.fragment-D72F965O.js                         0.43 kB │ gzip:     0.32 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/rgbdDecode.fragment-DCL7Bny4.js                         0.44 kB │ gzip:     0.32 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/pass.fragment-BbIlbc19.js                               0.48 kB │ gzip:     0.32 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/packingFunctions-Dxlz30At.js                            0.52 kB │ gzip:     0.29 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/meshUboDeclaration-DlYLG_-4.js                          0.56 kB │ gzip:     0.31 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/depthBoxBlur.fragment-CaW3ZD9Z.js                       0.56 kB │ gzip:     0.37 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/meshUboDeclaration-MUBMJP55.js                          0.56 kB │ gzip:     0.31 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/rgbdEncode.fragment-ByA_Tvgd.js                         0.57 kB │ gzip:     0.36 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/rgbdDecode.fragment-CX-8GerA.js                         0.58 kB │ gzip:     0.37 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/envTextureLoader-CYGHRLqZ.js                            0.58 kB │ gzip:     0.39 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/postprocess.vertex-BL9_wzC3.js                          0.61 kB │ gzip:     0.38 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/depthBoxBlur.fragment-DtIoOYVz.js                       0.74 kB │ gzip:     0.44 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/kernelBlur.vertex-C0lYW_Sx.js                           0.79 kB │ gzip:     0.44 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/passCube.fragment-BEqG7YaO.js                           0.85 kB │ gzip:     0.37 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/kernelBlur.vertex-ClwNEtaP.js                           0.93 kB │ gzip:     0.48 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/mesh.vertexData.functions-ayNlGC5K.js                   0.96 kB │ gzip:     0.49 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/instancesDeclaration-BONkEFu1.js                        1.00 kB │ gzip:     0.34 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/passCube.fragment-B5FC_Wep.js                           1.16 kB │ gzip:     0.42 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/clipPlaneFragment-DhuUmOfG.js                           1.21 kB │ gzip:     0.34 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/depth.fragment-C0hyY7CT.js                              1.29 kB │ gzip:     0.57 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/ddsTextureLoader-J133ZRz1.js                            1.29 kB │ gzip:     0.63 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/table-reflection-v11-DXh816JJ.js                        1.35 kB │ gzip:     0.80 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/room-specular-v11-DvY-yF8l.js                           1.47 kB │ gzip:     0.87 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/depth.vertex--ZpHGVHF.js                                2.06 kB │ gzip:     0.77 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/kernelBlur.fragment-Bkjf-diS.js                         2.13 kB │ gzip:     0.71 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/hdrTextureLoader-BrdW876A.js                            2.46 kB │ gzip:     1.19 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/kernelBlur.fragment-D0SADPkL.js                         2.70 kB │ gzip:     0.80 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/iesTextureLoader-C_cHg-Gw.js                            2.73 kB │ gzip:     1.18 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/shadowMap.fragment-cCbPlvbx.js                          3.06 kB │ gzip:     1.08 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/tgaTextureLoader-HBbW74LC.js                            3.56 kB │ gzip:     1.39 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/shadowMap.fragment-HUbAnyD_.js                          3.69 kB │ gzip:     1.20 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/shadowMap.vertex-Dq6vZW2W.js                            4.36 kB │ gzip:     1.39 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/shadowMap.vertex-DGkbAGpn.js                            4.45 kB │ gzip:     1.44 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/helperFunctions-D5Ibr6xw.js                             5.30 kB │ gzip:     1.78 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/helperFunctions-CyHiUIWv.js                             5.71 kB │ gzip:     1.89 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/dds-CFAYxH_v.js                                         7.03 kB │ gzip:     2.48 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/basisTextureLoader-BIuTuW-t.js                          8.21 kB │ gzip:     3.25 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/clipPlaneVertex-BwQEmavq.js                            14.12 kB │ gzip:     2.40 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/logDepthDeclaration-DjEFIE61.js                        14.12 kB │ gzip:     4.79 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/exrTextureLoader-C0k4sqeD.js                           15.56 kB │ gzip:     5.82 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/logDepthDeclaration-DlecL1Mx.js                        15.70 kB │ gzip:     4.93 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/ktxTextureLoader-jLZYqEo0.js                           15.83 kB │ gzip:     4.63 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/pbr.vertex-CClsf8w-.js                                 22.34 kB │ gzip:     4.28 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/pbr.vertex-BdK5LIY2.js                                 23.92 kB │ gzip:     4.72 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/index-BIlHZc-K.js                                     171.34 kB │ gzip:    62.80 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/pbr.fragment-czKwSkL8.js                              204.97 kB │ gzip:    38.14 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/pbr.fragment-bjaab6Jo.js                              213.80 kB │ gzip:    38.72 kB
+../qa/v11-slice/immutable271-c43-flat-control/assets/world-Dl9H4pLS.js                                   6,919.03 kB │ gzip: 1,526.66 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 4.29s
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

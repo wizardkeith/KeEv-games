@@ -1,0 +1,32 @@
+{
+  "source": "tools/build-v11-gray-flowers.ts",
+  "sourceSHA256": "8a4128c8e319f9736e7aae69a42df2a7d47cbca99395989e045ea37f86e942fe",
+  "scope": "Only same non-inventory C27 flower crown. Fixed normal-view basis is authored into real3D, never billboarded",
+  "clusters": [
+    {
+      "id": "main-high",
+      "u": 0.005,
+      "y": 0.685,
+      "d": -0.015,
+      "r": 0.068
+    },
+    {
+      "id": "left-low-front",
+      "u": -0.151,
+      "y": 0.58,
+      "d": 0.054,
+      "r": 0.058
+    },
+    {
+      "id": "right-low-back",
+      "u": 0.148,
+      "y": 0.55,
+      "d": -0.062,
+      "r": 0.053
+    }
+  ],
+  "primarySurfaces": 15,
+  "triangles": 1524,
+  "method": "Three rooted branch systems and overlapping closed rounded-shoulder lobed corollas with depth comparable to radius; one high main /two lower depth-staggered side masses, unequal openings. No texture/material-value work.",
+  "limits": "Gray normal480px/two-oblique independent gate open; closedness does not certify appearance"
+}

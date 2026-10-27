@@ -1,3 +1,6 @@
+import{bindExistingFlowerAtlas}from'./bounded-material-v11';
+import {composeMixedStyling} from './mixed-display-v11';
+import {buildV11Garden,buildV11Styling} from './shop-v11';
 /** Original fixed shop styling, not inventory grants or new catalogue entries.
  * Real indexed recipe geometry; metres/RH/Y-up. No sale/quest authority.
  * Fixed vignettes live outside customer corridors and interactive tabletop stock.
@@ -43,4 +46,4 @@ export function legacyV9WindowCanopy():Part[]{
  return out;
 }
 
-export const nativeStylingRecipe=buildV10Styling,nativeWindowCanopy=buildV10Canopy;
+export const nativeStylingRecipe=()=>bindExistingFlowerAtlas(composeMixedStyling(buildV11Styling(1.10,true))),nativeWindowCanopy=buildV11Garden;

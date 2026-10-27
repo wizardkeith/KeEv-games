@@ -1,0 +1,67 @@
+{
+  "version": "display-diffuse.v1",
+  "position": [
+    0.1,
+    1.48,
+    -0.1
+  ],
+  "polynomial": {
+    "x": [
+      0.007140852242011649,
+      -0.0036478558987552505,
+      -0.009451944411302475
+    ],
+    "y": [
+      -0.07776874411289948,
+      -0.03383616814943313,
+      0.01178919576696966
+    ],
+    "z": [
+      -0.00786018781294219,
+      -0.01620503255453146,
+      -0.02354809246898101
+    ],
+    "xx": [
+      0.26014992933493186,
+      0.2356479161012643,
+      0.20129996184276655
+    ],
+    "yy": [
+      0.26923314458576636,
+      0.2419893193697937,
+      0.20417896946363592
+    ],
+    "zz": [
+      0.25811186525309926,
+      0.2318749576352157,
+      0.19669007325236748
+    ],
+    "xy": [
+      -0.005776783119248216,
+      -0.0010284281051029292,
+      0.0021312052643020457
+    ],
+    "yz": [
+      0.00845756000359599,
+      0.006511348380583447,
+      0.0038214415421893113
+    ],
+    "zx": [
+      -0.00018638601362657372,
+      0.0013114879061788918,
+      0.0021784765972792637
+    ]
+  },
+  "sourceSHA256": "092f723661418c713fd6607c0d926f2c5b3e63385f8e0c2fc0b62d8fa4c3b1bc",
+  "sourceSnapshotSHA256": "9d862e6faf1b9403fdc4444e100c17ace17824c3075c233c8e9fe6fce98702ba",
+  "normalizationToOriginalMean": {
+    "oldMean": 0.2394470489023665,
+    "sampledMean": 0.20518435392066642,
+    "gain": 1.1669849300251598,
+    "method": "Equal mean Lambertian luminance; isolates local directional/colour transport without a global brightness increase"
+  },
+  "method": "Cycles64sample equirectangular scene-linear radiance, original static geometry/materials with portal clips removed, excludes actors/owned stock/door/FX; original physical window-area/sky diagnostic illumination",
+  "scope": "Original scene-linear local Lambertian diffuse SH only; existing authored room radiance remains approximate. Not direct-shadow replacement or final target fidelity.",
+  "sampleCount": 8192,
+  "maxRadiance": 1.3351815938949585
+}

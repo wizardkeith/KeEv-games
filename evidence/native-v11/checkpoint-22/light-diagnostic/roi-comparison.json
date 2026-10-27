@@ -1,0 +1,76 @@
+{
+  "method": "Read-only pixel averages of fixed actual-game regions; not target acceptance or a controlled staff/leaf pose.126/128 isolate timber normal;127/128 isolate the whole lighting bundle, not fill alone.",
+  "regionsXYXY": {
+    "wall": [
+      1100,
+      300,
+      1200,
+      330
+    ],
+    "floor": [
+      915,
+      830,
+      970,
+      870
+    ],
+    "cabinet": [
+      1040,
+      600,
+      1090,
+      620
+    ]
+  },
+  "meanRGB": {
+    "126-old-light-hardwood": {
+      "wall": [
+        112.29,
+        112.2,
+        90.27
+      ],
+      "floor": [
+        166.95,
+        130.56,
+        85.08
+      ],
+      "cabinet": [
+        109.33,
+        81.48,
+        66.98
+      ]
+    },
+    "127-bright-light-softwood": {
+      "wall": [
+        135.17,
+        132.59,
+        105.66
+      ],
+      "floor": [
+        187.93,
+        154.39,
+        107.1
+      ],
+      "cabinet": [
+        141.18,
+        108.36,
+        87.9
+      ]
+    },
+    "128-old-light-softwood": {
+      "wall": [
+        111.97,
+        111.94,
+        89.53
+      ],
+      "floor": [
+        166.95,
+        130.56,
+        85.08
+      ],
+      "cabinet": [
+        109.33,
+        81.48,
+        66.98
+      ]
+    }
+  }
+}

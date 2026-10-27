@@ -1,0 +1,43 @@
+{
+  "status": "NOT ADOPTED as default; bounded primary-form experiment preserved",
+  "baseSource": "d4af87f2e9b477ac0dd437b5d2ddcb384e4d2d61",
+  "changes": "One extra22mm primary back V on existing topology, five existing skirt fold amplitudes increased; no new frequencies or cloth simulation",
+  "geometryChangedMeshes": [
+    "actor.visitor-b.native.v3.body.material0",
+    "actor.visitor-b.native.v3.body.material3",
+    "actor.visitor-b.native.v3.body.material4"
+  ],
+  "camera": {
+    "alpha": -0.7853981633974483,
+    "beta": 0.8726646259971648,
+    "radius": 7.185752624501723,
+    "target": [
+      0.7,
+      1.15,
+      0
+    ]
+  },
+  "comparison": "Current-material98 versus neutral99 have exact48geometry fingerprints and camera; old95/96 baseline retained in checkpoint15. Natural face/arm phases differ.",
+  "verdict": "Actually viewed full actual game frames and4xnearest original pixel crops. Stronger waistbreak appears in neutral, but ordinary blue-material gain remains modest/rounded. No final textile/style pass. Keep C13 accepted local silhouette in default, preserve trial inputs/editableUVBlender/patch for later use, return to whole-scene materials and product proportions.",
+  "sourceAudit": "InstalledBabylon8.32 PBR binds bumpTexture.level directly, unlike StandardMaterial reciprocal convention; no inverse-scale bug correction was made from an assumption. Material/light cause not fully isolated.",
+  "verification": "9focused garment/UV/layer tests and actual character topology/normal/triangle-budget test passed; export3actors0errors/warnings. No fresh fullsuite/cashier/fullwalk/device claim for trial.",
+  "preservedAuthoring": "assets/masters/native-v11/experiments/c16-primary, original C13 rest authoring intact",
+  "defaultRestore": "Only owned experimental female source/UV/GLB/manifest files restored to base d4af, after archival. Default build100 has no diagnostic chunk. Existing source/render94 complete transaction remains its own evidence.",
+  "next": "Actual normal-game product-scale audit, beginning pencil. Existing native pencil length0.5835m timesdisplay1.12=0.65352m; hand-scale/reference comparison needed before asset remake. No economy/catalog/save/camera change authorized or made.",
+  "evidenceSha256": {
+    "DIAGNOSTIC-neutral99-NOT-normal-art.png": "edc5824900f9106d6e0d4891dafd111ad61a242e8af4b1093bd6ab78b3ace339",
+    "budget.log": "121df08cdf12ed8312520b5bf14ad7ffae9977d6525bcbaf170bf294c3a77eda",
+    "DIAGNOSTIC99-4x-nearest.png": "f75af544fa7d192caa057e4788415e05b52c78da66e65e3e6bd0c2783364ba2d",
+    "primary-fold-experiment.patch": "54220517644fd321f32538d2bd18c0c0b590a601c61c28c2ad782d80e907c3a8",
+    "renderer-results.json": "b46155f5b6891045fe06dee0981d701c0f2ab5486c61564589ab6fe73f7cc361",
+    "control98-primary.png": "8bebac6e6ff34a05ca344bf296fa8a07faa1fece476400b8870506982f6832bd",
+    "fit-tests.log": "bfaa85962c995c1f6d2b485b08bb670378edcd50c75a30a55e04c9c1fd510959",
+    "control98-4x-nearest.png": "a412aa063ac1ee347c22ceeaab8b8313ebad68e39bbd1332035cf28f72f350b5"
+  },
+  "authoringSha256": {
+    "assets/masters/native-v11/experiments/c16-primary/cloth-uv.json": "43acabe85b796f54b98d25a23e5a1306614d5715d79e039e4a87f61c48fffcd0",
+    "assets/masters/native-v11/experiments/c16-primary/cloth-uv.blend": "d6549e1e9a92ebfa26589f0787dafe8f37f9de780931838f3b4d8e465e3ecb24",
+    "assets/masters/native-v11/experiments/c16-primary/cloth-input.json": "079ac9ebe451a27abee4967a7226d6005de7af70794cd6c68415fc66e01d0a2d",
+    "assets/masters/native-v11/experiments/c16-primary/uv-provenance.json": "cb5efe46dfb56d66baa31f65db4659e43f119f04d97347d65bc049c28805cfc6"
+  }
+}

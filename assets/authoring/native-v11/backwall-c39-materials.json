@@ -1,0 +1,48 @@
+{
+  "intent": {
+    "id": "v11.c39.backwall-window-material",
+    "mode": "values",
+    "active": true,
+    "defaultAdopted": false,
+    "geometry": "Exact passed C38/253 positions, normals, UV, counts and camera",
+    "scope": "Back-wall shelf planes versus preserved original merchandise coatings, trailing plants, near window foliage, existing exterior and geometric sky only",
+    "shelf": {
+      "albedo": "/assets/native-v11/display-oak-albedo.png",
+      "tint": "#E4CFAB",
+      "roughness": 0.66,
+      "tableAO": false
+    },
+    "farCrown": {
+      "roughness": 0.925,
+      "thinTransmission": false
+    },
+    "limits": "One values candidate, pending independent normal480px/two-oblique material gate; not whole-target acceptance or default adoption"
+  },
+  "geometryBaseline": {
+    "candidate": "1aae28cff5289bf266f523781131c65e86849001",
+    "application": "fbf6dd6859c70844cd45f0b51c283b178e9ee3a9",
+    "files": {
+      "assets/masters/native-v11/backwall-c38/fixed-back-samples.json": "48c2a3063d8fd26d8e3e4e664db0e568ae7b096823ba7703b1845259930569bc",
+      "assets/masters/native-v11/backwall-c38/paper-work-bays.json": "3f421671077f1271c336b351b5b28cfeb9303d8b28ba1bb37ad8194a02c0eed2",
+      "assets/masters/native-v11/backwall-c38/provenance.json": "811a091c1a52f85da5bb81441f95b401c72a9d1c614a032235e683f9911f589e",
+      "assets/masters/native-v11/backwall-c38/trailing-greenery.json": "20d9d2a33aebbb12693f1865e61eee5cea6056ede67d451f42789850a52bc1a4",
+      "assets/masters/native-v11/backwall-c38/window-mid-far.json": "ddf4ef688556b0c5e11c6a4cd30290610b511a931931b211ab7cc99727e17f7d",
+      "assets/masters/native-v11/backwall-c38/window-near-branches.json": "1474e1183cdcd6f8d87e6f6d8a82cb84c598096c8da4a688d62b068c1b355da0"
+    }
+  },
+  "sources": {
+    "src/art/backwall-material-v11.ts": "e70aba965e51cb0680fe6fb3801297b294735cbed00a28b8b8a97d4c39be992c",
+    "src/art/backwall-forms-v11.ts": "42f8b094612134ef9edb2de74a46d41af18ddfc315f95aeb32fd139b73559d80",
+    "src/art/shop-v11.ts": "64e120bcb12253f5eb443b3350632ccfcf7ace0c18f8a240441bf98d5e3b7cb0",
+    "src/art/fixtures-v11.ts": "259ae78ac58fccd25c81611f3270a5fbf670e7a0aa3c2dacb53e3e333e2ab109",
+    "src/art/back-display-v10.ts": "3adaa612ad99c1f8daa43e1322877562772a2c4dba0988f2fbf527c543e27f71",
+    "src/art/mixed-display-v11.ts": "d88e5d7bb1020622101603276cc077e54819c0f5d49c75384770fb76d9274ca0",
+    "src/art/window-portal-v11.ts": "d30641d8722df7e1005696eac078d7f65224fcdd46829e0258dd2977a0c9a4e5",
+    "src/art/native-materials.ts": "432f387c45f07b2ef9c0adb8207e0e1d44e143d64343bd8cd49b240dee72001d",
+    "src/world.ts": "e3b17ac19b4525bc233e0dfdb3fcaafccf20e3c5ee3cd01b695e7f6e95059dc7",
+    "vite.config.ts": "0245709b9f9395605f823b0215883909f32341d06260cc248bba0d1ede75bdf7",
+    "tools/export-v4-fixtures.ts": "42a69624d745134d961f3d75ca26245921dda59498292b3dd9abce59784242b1",
+    "tools/export-v11-backwall-materials.ts": "22f9fae67ac40ce1d8321f9fa92f84549b4bfa06e464a63e8b5590ab966e17a0"
+  },
+  "rights": "Original authored scalar palette; existing project texture assets reused. No new texture, photographed backdrop or inventory-shadow painting."
+}

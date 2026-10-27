@@ -1,0 +1,32 @@
+✔ fixed 35-sample back composition retains exact identities, physical shelf/stack contact and authored celadon response (404.369525ms)
+✔ mixed work props are bounded fixed geometry with open baskets, stay out of the threshold and retain original scene budgets (126.584949ms)
+✔ asymmetric paper stacks preserve two physical piles and stable prefixes while focal light remains inside the actual service bay (0.428649ms)
+✔ V11 painted facial features attach to actual sculpt while preserving contact rig (439.412821ms)
+✔ V11 garden is batched and plant retains seven articulated leaf attachments (46.732159ms)
+✔ exterior portal preserves real window rays across allowed orbit angles and rejects cutaway spill (5.063097ms)
+✔ atmospheric geometry fits within the original whole fixed-scene authoring budget (386.047149ms)
+✖ distant roof planes intersect the actual default window rays and animated crowns keep local tree pivots (18.421319ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 7
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1726.528245
+
+✖ failing tests:
+
+test at tests/v11-window-portal.test.ts:1:1885
+✖ distant roof planes intersect the actual default window rays and animated crowns keep local tree pivots (18.421319ms)
+  AssertionError [ERR_ASSERTION]: distant foliage intersects actual window rays
+      at TestContext.<anonymous> (/workspace/game-v10-art-life/tests/v11-window-portal.test.ts:20:387)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

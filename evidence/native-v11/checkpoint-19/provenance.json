@@ -1,0 +1,51 @@
+{
+  "application": "b20420f1163c2a64575c20dca9b0585b973f0cb4",
+  "after": "immutable118, final stablevase-prefix and actual support",
+  "before": "112/a2b32a4 same materials, old guessed heights and matrixvases",
+  "actualComparison": {
+    "oneUnit": "112\u2192117 normal/Zen/staff camera and actual cash/inventory/shelves exact; ordinarybuy1pencil/vase/mug,16ordinarywheelinputs permitted close shopview.117 physical support same as118 for these observed units; full117 source is not identical118 for other vase counts",
+    "eightUnits": "112\u2192118 normal/Zen/staff camera and cash/stock/shelves exact; realbuy8vase/pencil/tray/place3 and actual reload verified; no ownerNormal save access",
+    "visual": "Mug no longer submerged in riser, vase rests on cloth; eight true vases have stable physical size/height groups. Natural staff/leaf phases differ, not a pixel-identical posed render"
+  },
+  "fix": "Support from actual horizontal wood/cloth fixture triangles under minY product footprint, excluding paper signs/metal poles, plus original stack height. Original tier heuristic put some cups through wood and bases through cloth.1mm surface clearance retained; initial failing geometry probe kept, no tolerance weakened. Cached per3fixtures, computed onstock rebuild only, not perframe. Slots/stockcap8/economy untouched",
+  "tests": {
+    "full": 207,
+    "focused": 8,
+    "GLBfiles": 139,
+    "GLBerrors": 0,
+    "GLBwarnings": 0,
+    "protected": 305,
+    "rebuild": "2affected environment outputs byte-identical, allother nativeGLB/map outputs unchanged fromC18",
+    "physical": "all10existing product single-unit bases\u00d73tables, pencil allcounts,8vases all3tables; real triangle rays/nooverlap; surviving vase geometry prefix stable across0..8"
+  },
+  "motion": {
+    "source": "117 one-unit purchase/place/settings/camera workflow; no sale/greeting claimed",
+    "uncutSeconds": 116.6,
+    "path": "one-cup-vase117-supported/after-interaction/gameplay-uncut.webm",
+    "limits": "CloudCDP+SwiftShader only, not physicalFPS/smoothness certification"
+  },
+  "remaining": "Originaltargetart still unmet; ceramic response local, monotony/density and whole-scene warmth/materials/foliage/entry depth still open. Next actual asset remake: woven planter forms/material and curved floorleaf blades, retaining7wind pivots/canopy/camera/characters. No newfullcashier motion beyond exact112, no fresh74locale claim. No package/merge/deploy/Library retry/userChrome/Normal/Unity/shutdown",
+  "sha256": {
+    "replay.log": "67beb9a30e2f137d3025faa962d635b85a8275a326918698204bc5e1becbf447",
+    "build118.log": "d2764c2dd659e4a3e704553ba121d481bc2f577447c55241f74aa06bea921d35",
+    "EXCLUDED-initial-support-failure.log": "9d12d851f0e6f6acc479b17ee5dbcc9fd304eb3e6fc869122bfccdae7e45ec87",
+    "preserve.log": "225ce8a0134296dcf0f160c6f66ba97b1bc9e5be6a4271d4053274c9294f9baa",
+    "glbs.log": "6d0ef9cb5262cffa4230371878d63a7ffac4c8efb896a7637855803dc0c38adc",
+    "validate.log": "d8cf77a1e38e0b04929bd0774b8f25dee39e9ff7717ea0b8ef7fe1e5a477369b",
+    "rebuild-parity.json": "7314752e02dfd98edefb8f549a5cf2a6aaed118c7a055a22b6c078ee6adf5a77",
+    "tests.log": "2e6abd565d960b57a93afb709c903a6ceb9d072df47f898aa8f855864ee3bc33",
+    "focused-tests.log": "06e5ff27512a6ff2f1175926a72d596304575a62e077a9456ed8f0f49153cc60",
+    "assets.log": "6f6a6704569533baaac9c2b816da0a709b2ffd043739309b3a1fe9d064eb069b",
+    "vase-hierarchy118/after-normal-game.png": "6ba69995eda2b743caf6d8cafa5f5e931e75ce1e6b8181cd61d5ee5a9c59088e",
+    "vase-hierarchy118/after-counter-game.png": "2cfeb714d3cc7052b8ee5a3539db06b9b66df5de5ab0b60832409fcf73086e4a",
+    "vase-hierarchy118/after-reload-game.png": "631fce5d11c713d8dcf5d98ed41a902a17dbe44aff83cf13c0b7f7fde6330b05",
+    "vase-hierarchy118/results.json": "00c554e96628749b0ec3b2f5768093a1c04c1615357c0e89d94bc0742584ca8e",
+    "vase-hierarchy118/after-panorama-game.png": "f71fdc5cf0350c2f76fc4deb04a22ac242ca8722a5362c6186ea50d000d00c57",
+    "one-cup-vase117-supported/after-normal-game.png": "cc4646e51cea2847493b6775ac1ad598a66f4d460b439ff6beeac58d5f733f5a",
+    "one-cup-vase117-supported/after-counter-game.png": "ba9392ecf1931327e1cd2a5cd4af3368030c6f98c5396e494b7f0a5c187c601a",
+    "one-cup-vase117-supported/results.json": "bcd0d434e55db4e9f7fd61cb6bb13de93a95bc187cb19939e65726b724b10d5b",
+    "one-cup-vase117-supported/after-panorama-game.png": "f225460234439256a3dad4b68b63067ef4e27c797d139ce1d80da9b729bd85fe",
+    "one-cup-vase117-supported/after-interaction/gameplay-uncut.webm": "e02861ec9ea459e99cfd94b49f14c380a4a4e5f9e1d51d730090e59ffe89d45f",
+    "one-cup-vase117-supported/after-interaction/recording-provenance.json": "9936bcf4028f262da3b6cf2349b4890def21f91c1f5e234a060dca1985e2877e"
+  }
+}

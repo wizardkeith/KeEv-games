@@ -1,0 +1,92 @@
+
+> next-stop-little-shop-w1@0.1.1 build
+> tsc --noEmit && vite build --outDir /workspace/qa/v11-slice/immutable274-c44-broad-control
+
+vite v7.1.12 building for production...
+transforming...
+✓ 701 modules transformed.
+
+(!) outDir /workspace/qa/v11-slice/immutable274-c44-broad-control is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
+rendering chunks...
+computing gzip size...
+../qa/v11-slice/immutable274-c44-broad-control/index.html                                                     0.69 kB │ gzip:     0.49 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/index-CiMc3Tjj.css                                     37.15 kB │ gzip:     8.15 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/kernelBlurVaryingDeclaration-D_-r_0Ru.js                0.17 kB │ gzip:     0.16 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/kernelBlurVaryingDeclaration-CxejLOsy.js                0.18 kB │ gzip:     0.16 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/meshUboDeclaration-DZJ30UMw.js                          0.24 kB │ gzip:     0.21 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/sceneUboDeclaration-D4nJEQ6b.js                         0.30 kB │ gzip:     0.23 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/meshUboDeclaration-mu0f7H99.js                          0.30 kB │ gzip:     0.23 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/pass.fragment-EBHaRsrE.js                               0.35 kB │ gzip:     0.27 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/sceneUboDeclaration-CqslhOWb.js                         0.36 kB │ gzip:     0.25 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/shadowMapFragmentSoftTransparentShadow-BTAfa_tN.js      0.40 kB │ gzip:     0.29 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/shadowMapFragmentSoftTransparentShadow-CgI_5HER.js      0.43 kB │ gzip:     0.31 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/rgbdEncode.fragment-XM_aqN6b.js                         0.43 kB │ gzip:     0.32 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/rgbdDecode.fragment-DSYA28jA.js                         0.44 kB │ gzip:     0.33 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/pass.fragment-C1anKVmH.js                               0.48 kB │ gzip:     0.32 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/bumpVertex-DEQMqNEa.js                                  0.48 kB │ gzip:     0.30 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/packingFunctions-BADJpRP8.js                            0.52 kB │ gzip:     0.29 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/depthBoxBlur.fragment-CTURbu6_.js                       0.56 kB │ gzip:     0.37 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/rgbdEncode.fragment-C1NMBjAT.js                         0.57 kB │ gzip:     0.36 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/rgbdDecode.fragment-DAT07ywp.js                         0.58 kB │ gzip:     0.37 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/envTextureLoader-DWmh3Jgt.js                            0.58 kB │ gzip:     0.39 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/ssaoCombine.fragment-DsLNP2SK.js                        0.60 kB │ gzip:     0.36 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/postprocess.vertex-ju89C3mv.js                          0.61 kB │ gzip:     0.38 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/bumpVertex-CQssRAuN.js                                  0.66 kB │ gzip:     0.36 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/depthBoxBlur.fragment-BIkMD_aa.js                       0.74 kB │ gzip:     0.44 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/kernelBlur.vertex-wRPrtQIl.js                           0.79 kB │ gzip:     0.44 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/ssaoCombine.fragment-CiDBMSmH.js                        0.83 kB │ gzip:     0.42 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/passCube.fragment-DUJYDTkK.js                           0.85 kB │ gzip:     0.37 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/kernelBlur.vertex-BpjbKCRM.js                           0.93 kB │ gzip:     0.48 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/mesh.vertexData.functions-ayNlGC5K.js                   0.96 kB │ gzip:     0.49 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/instancesDeclaration-D5JtuzX1.js                        1.00 kB │ gzip:     0.34 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/passCube.fragment-N30vAOnw.js                           1.16 kB │ gzip:     0.42 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/clipPlaneFragment-IOMB8GId.js                           1.21 kB │ gzip:     0.34 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/depth.fragment-CMcTD11Y.js                              1.29 kB │ gzip:     0.57 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/ddsTextureLoader-DKSyZseY.js                            1.29 kB │ gzip:     0.63 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/table-reflection-v11-p5b0PzaW.js                        1.35 kB │ gzip:     0.80 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/room-specular-v11-ByDKgLEY.js                           1.47 kB │ gzip:     0.87 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/depth.vertex-DpfPIq8c.js                                2.06 kB │ gzip:     0.77 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/kernelBlur.fragment-B53zyzDD.js                         2.13 kB │ gzip:     0.72 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/hdrTextureLoader-vu5Sm_EF.js                            2.46 kB │ gzip:     1.19 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/kernelBlur.fragment-C0V6TK4k.js                         2.70 kB │ gzip:     0.81 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/iesTextureLoader-gF-p4LeP.js                            2.73 kB │ gzip:     1.18 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/shadowMap.fragment-NffWuwqj.js                          3.06 kB │ gzip:     1.08 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/tgaTextureLoader-DvcMbRrA.js                            3.56 kB │ gzip:     1.39 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/shadowMap.fragment-BKnkZXT-.js                          3.69 kB │ gzip:     1.20 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/shadowMap.vertex-95sJy6V9.js                            4.40 kB │ gzip:     1.40 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/shadowMap.vertex-Bvkt7oJp.js                            4.49 kB │ gzip:     1.45 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/ssao2.fragment-CHV5XSPc.js                              5.24 kB │ gzip:     1.66 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/helperFunctions-C0qUrc0K.js                             5.30 kB │ gzip:     1.78 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/helperFunctions-B4PZY_J0.js                             5.71 kB │ gzip:     1.89 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/geometry.fragment-yb_O_W4x.js                           5.90 kB │ gzip:     1.65 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/geometry.vertex-CfncC1o2.js                             6.70 kB │ gzip:     1.53 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/ssao2.fragment-D59ZMVAg.js                              6.72 kB │ gzip:     1.82 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/dds-DkImem0N.js                                         7.03 kB │ gzip:     2.48 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/bumpFragment-RjxI0ggR.js                                7.25 kB │ gzip:     2.41 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/basisTextureLoader-BlQUU8jP.js                          8.21 kB │ gzip:     3.25 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/bumpFragment-BSkkpxro.js                                8.47 kB │ gzip:     2.50 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/clipPlaneVertex-BNh9EHp_.js                            14.12 kB │ gzip:     2.40 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/logDepthDeclaration-DJ8UAIQo.js                        14.16 kB │ gzip:     4.80 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/exrTextureLoader-Cpv5nxBV.js                           15.56 kB │ gzip:     5.82 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/logDepthDeclaration-rp8a3YUl.js                        15.74 kB │ gzip:     4.94 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/ktxTextureLoader-bl-grrtG.js                           15.83 kB │ gzip:     4.63 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/pbr.vertex-CzcHOpjm.js                                 21.80 kB │ gzip:     4.18 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/pbr.vertex-C28dNhEP.js                                 23.56 kB │ gzip:     4.65 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/scene-occlusion-v11-qq-akT2S.js                        69.95 kB │ gzip:    17.26 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/index-BfqKCA1W.js                                     171.34 kB │ gzip:    62.80 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/pbr.fragment-CxvcQjgp.js                              197.81 kB │ gzip:    36.10 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/pbr.fragment-DBm9zwEq.js                              205.43 kB │ gzip:    36.60 kB
+../qa/v11-slice/immutable274-c44-broad-control/assets/world-D4-K1-c5.js                                   6,920.64 kB │ gzip: 1,526.92 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 6.17s
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

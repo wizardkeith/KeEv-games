@@ -1,0 +1,385 @@
+{
+  "leafTriangles": 1328,
+  "limits": "Rest-pose world-space triangle intersections only, not actual GPU shadow samples or animated foliage; no material/stock/geometry changes.",
+  "cases": [
+    {
+      "name": "C46",
+      "position": [
+        -80.0,
+        52.0,
+        -15.0
+      ],
+      "targetDistance": 91.90106909062592,
+      "probes": [
+        {
+          "name": "table-centre",
+          "point": [
+            0.1,
+            1.1,
+            0.0
+          ],
+          "windowCrossing": [
+            -4.47,
+            4.0040324594257175,
+            -0.8558052434456929
+          ],
+          "withinAperture": false,
+          "nearLeafHit": false
+        },
+        {
+          "name": "central-aisle",
+          "point": [
+            0.1,
+            0.08,
+            0.8
+          ],
+          "windowCrossing": [
+            -4.47,
+            3.042227215980025,
+            -0.10144818976279646
+          ],
+          "withinAperture": false,
+          "nearLeafHit": false
+        },
+        {
+          "name": "cashier-floor",
+          "point": [
+            2.6,
+            0.08,
+            -0.65
+          ],
+          "windowCrossing": [
+            -4.470000000000001,
+            4.524000000000001,
+            -1.8782627118644069
+          ],
+          "withinAperture": false,
+          "nearLeafHit": false
+        }
+      ],
+      "gridApertureEligible": 166,
+      "gridNearLeafHits": 0,
+      "gridHitXZ": []
+    },
+    {
+      "name": "C47-v1",
+      "position": [
+        -90.60370330710882,
+        27.680110992132647,
+        18.94941472756394
+      ],
+      "targetDistance": 91.90106909062592,
+      "probes": [
+        {
+          "name": "table-centre",
+          "point": [
+            0.1,
+            1.1,
+            0.0
+          ],
+          "windowCrossing": [
+            -4.47,
+            2.4392078030459645,
+            0.9547440969610345
+          ],
+          "withinAperture": true,
+          "nearLeafHit": false
+        },
+        {
+          "name": "central-aisle",
+          "point": [
+            0.1,
+            0.08,
+            0.8
+          ],
+          "windowCrossing": [
+            -4.47,
+            1.470599310008114,
+            1.714437032676996
+          ],
+          "withinAperture": true,
+          "nearLeafHit": false
+        },
+        {
+          "name": "cashier-floor",
+          "point": [
+            2.6,
+            0.08,
+            -0.65
+          ],
+          "windowCrossing": [
+            -4.470000000000001,
+            2.1736162168514896,
+            0.8367205615992753
+          ],
+          "withinAperture": true,
+          "nearLeafHit": false
+        }
+      ],
+      "gridApertureEligible": 366,
+      "gridNearLeafHits": 18,
+      "gridHitXZ": [
+        [
+          -1.608,
+          -1.0
+        ],
+        [
+          -1.412,
+          -1.333
+        ],
+        [
+          -1.412,
+          -1.0
+        ],
+        [
+          -1.217,
+          -1.0
+        ],
+        [
+          -0.825,
+          1.333
+        ],
+        [
+          -0.433,
+          -0.167
+        ],
+        [
+          -0.238,
+          -0.333
+        ],
+        [
+          -0.238,
+          0.0
+        ],
+        [
+          -0.042,
+          -0.333
+        ],
+        [
+          -0.042,
+          -0.167
+        ],
+        [
+          -0.042,
+          0.0
+        ],
+        [
+          0.154,
+          -0.5
+        ],
+        [
+          0.154,
+          -0.333
+        ],
+        [
+          0.154,
+          -0.167
+        ],
+        [
+          0.154,
+          0.0
+        ],
+        [
+          0.35,
+          -0.167
+        ],
+        [
+          0.35,
+          0.0
+        ],
+        [
+          0.546,
+          0.0
+        ]
+      ]
+    },
+    {
+      "name": "C47-final",
+      "position": [
+        -92.23796930319992,
+        28.170390790959974,
+        7.021437544255994
+      ],
+      "targetDistance": 91.90106909062592,
+      "probes": [
+        {
+          "name": "table-centre",
+          "point": [
+            0.1,
+            1.1,
+            0.0
+          ],
+          "windowCrossing": [
+            -4.47,
+            2.4397704849721005,
+            0.3475056882817749
+          ],
+          "withinAperture": true,
+          "nearLeafHit": false
+        },
+        {
+          "name": "central-aisle",
+          "point": [
+            0.1,
+            0.08,
+            0.8
+          ],
+          "windowCrossing": [
+            -4.47,
+            1.4702524268555512,
+            1.1079120083731862
+          ],
+          "withinAperture": true,
+          "nearLeafHit": true
+        },
+        {
+          "name": "cashier-floor",
+          "point": [
+            2.6,
+            0.08,
+            -0.65
+          ],
+          "windowCrossing": [
+            -4.469999999999999,
+            2.1740880994315654,
+            -0.07810813183386167
+          ],
+          "withinAperture": true,
+          "nearLeafHit": false
+        }
+      ],
+      "gridApertureEligible": 437,
+      "gridNearLeafHits": 32,
+      "gridHitXZ": [
+        [
+          -1.608,
+          -1.5
+        ],
+        [
+          -1.608,
+          -0.5
+        ],
+        [
+          -1.608,
+          -0.333
+        ],
+        [
+          -1.412,
+          -0.667
+        ],
+        [
+          -1.412,
+          -0.333
+        ],
+        [
+          -1.217,
+          -1.5
+        ],
+        [
+          -1.217,
+          -1.333
+        ],
+        [
+          -1.217,
+          -1.167
+        ],
+        [
+          -1.217,
+          -0.333
+        ],
+        [
+          -1.021,
+          -1.167
+        ],
+        [
+          -1.021,
+          -0.333
+        ],
+        [
+          -0.825,
+          -1.5
+        ],
+        [
+          -0.825,
+          -1.167
+        ],
+        [
+          -0.629,
+          -1.333
+        ],
+        [
+          -0.433,
+          -1.333
+        ],
+        [
+          -0.433,
+          0.5
+        ],
+        [
+          -0.433,
+          0.667
+        ],
+        [
+          -0.433,
+          0.833
+        ],
+        [
+          -0.238,
+          -1.333
+        ],
+        [
+          -0.238,
+          0.5
+        ],
+        [
+          -0.238,
+          0.833
+        ],
+        [
+          -0.042,
+          0.5
+        ],
+        [
+          -0.042,
+          0.667
+        ],
+        [
+          -0.042,
+          0.833
+        ],
+        [
+          0.154,
+          0.333
+        ],
+        [
+          0.154,
+          0.5
+        ],
+        [
+          0.154,
+          0.667
+        ],
+        [
+          0.154,
+          0.833
+        ],
+        [
+          0.35,
+          0.667
+        ],
+        [
+          0.35,
+          0.833
+        ],
+        [
+          0.546,
+          0.833
+        ],
+        [
+          0.742,
+          0.833
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+combined real Sandbox import ready; normal camera capture
+AssertionError [ERR_ASSERTION]: drawer preserves user orbit
++ actual - expected
+
+  {
+    alpha: -1.0553981633974483,
++   beta: 0.9025623424030053,
+-   beta: 0.8275465852795104,
+    radius: 11.212076960563294,
+    target: [
+      0.7,
+      1.15,
+      0
+
+    at /workspace/game-v10-art-life/tools/v11-table-look-qa.cjs:8:3298 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}

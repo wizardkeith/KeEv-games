@@ -1,0 +1,16 @@
+{
+  "status": "rendered",
+  "greeted": true,
+  "contact": false,
+  "realSettlement": false,
+  "actualMargin": false,
+  "requestedVisitor": "visitor-b",
+  "requestedVisitorObserved": false,
+  "servedExitAndStaffReturn": false,
+  "marginDOMVisible": false,
+  "elapsedSeconds": 359.937,
+  "errors": [],
+  "normal": "isolated QA baseline unchanged; no owner save access",
+  "provenance": "Actual local production WebGL game, original PNG only used for comparison; fresh Sandbox real purchases/placement/settlement; no injected pose or sale; uncut original video",
+  "limits": "SwiftShader cloud software rendering, not physical GPU/FPS/audio/native acceptance. Missing observed transitions remain unverified. Target art NOT accepted."
+}

@@ -1,0 +1,174 @@
+{
+  "method": "Public CDP Page.startScreencast, everyNthFrame1; installed /usr/bin/ffmpeg encoder",
+  "frames": [
+    {
+      "name": "000000.jpg",
+      "timestamp": 1793033527.379427,
+      "received": 1793033527.391
+    },
+    {
+      "name": "000001.jpg",
+      "timestamp": 1793033532.195837,
+      "received": 1793033532.204
+    },
+    {
+      "name": "000002.jpg",
+      "timestamp": 1793033536.992878,
+      "received": 1793033537.01
+    },
+    {
+      "name": "000003.jpg",
+      "timestamp": 1793033541.812033,
+      "received": 1793033541.827
+    },
+    {
+      "name": "000004.jpg",
+      "timestamp": 1793033546.297538,
+      "received": 1793033546.324
+    },
+    {
+      "name": "000005.jpg",
+      "timestamp": 1793033550.599956,
+      "received": 1793033550.607
+    },
+    {
+      "name": "000006.jpg",
+      "timestamp": 1793033555.179708,
+      "received": 1793033555.205
+    },
+    {
+      "name": "000007.jpg",
+      "timestamp": 1793033559.60752,
+      "received": 1793033559.621
+    },
+    {
+      "name": "000008.jpg",
+      "timestamp": 1793033563.92554,
+      "received": 1793033563.96
+    },
+    {
+      "name": "000009.jpg",
+      "timestamp": 1793033568.387415,
+      "received": 1793033568.4
+    },
+    {
+      "name": "000010.jpg",
+      "timestamp": 1793033572.906378,
+      "received": 1793033572.917
+    },
+    {
+      "name": "000011.jpg",
+      "timestamp": 1793033577.32433,
+      "received": 1793033577.355
+    },
+    {
+      "name": "000012.jpg",
+      "timestamp": 1793033582.620401,
+      "received": 1793033582.654
+    },
+    {
+      "name": "000013.jpg",
+      "timestamp": 1793033587.191876,
+      "received": 1793033587.2
+    },
+    {
+      "name": "000014.jpg",
+      "timestamp": 1793033591.797608,
+      "received": 1793033591.807
+    },
+    {
+      "name": "000015.jpg",
+      "timestamp": 1793033596.384554,
+      "received": 1793033596.394
+    },
+    {
+      "name": "000016.jpg",
+      "timestamp": 1793033600.954486,
+      "received": 1793033600.964
+    },
+    {
+      "name": "000017.jpg",
+      "timestamp": 1793033605.419082,
+      "received": 1793033605.427
+    },
+    {
+      "name": "000018.jpg",
+      "timestamp": 1793033609.799575,
+      "received": 1793033609.809
+    },
+    {
+      "name": "000019.jpg",
+      "timestamp": 1793033614.71722,
+      "received": 1793033614.758
+    },
+    {
+      "name": "000020.jpg",
+      "timestamp": 1793033618.907798,
+      "received": 1793033618.917
+    },
+    {
+      "name": "000021.jpg",
+      "timestamp": 1793033623.616277,
+      "received": 1793033623.655
+    },
+    {
+      "name": "000022.jpg",
+      "timestamp": 1793033628.492167,
+      "received": 1793033628.501
+    },
+    {
+      "name": "000023.jpg",
+      "timestamp": 1793033632.950316,
+      "received": 1793033632.96
+    },
+    {
+      "name": "000024.jpg",
+      "timestamp": 1793033640.328299,
+      "received": 1793033640.353
+    },
+    {
+      "name": "000025.jpg",
+      "timestamp": 1793033640.366945,
+      "received": 1793033640.377
+    },
+    {
+      "name": "000026.jpg",
+      "timestamp": 1793033644.493033,
+      "received": 1793033644.508
+    },
+    {
+      "name": "000027.jpg",
+      "timestamp": 1793033649.511792,
+      "received": 1793033649.519
+    },
+    {
+      "name": "000028.jpg",
+      "timestamp": 1793033658.221256,
+      "received": 1793033658.251
+    },
+    {
+      "name": "000029.jpg",
+      "timestamp": 1793033658.660484,
+      "received": 1793033658.676
+    },
+    {
+      "name": "000030.jpg",
+      "timestamp": 1793033663.67439,
+      "received": 1793033663.687
+    },
+    {
+      "name": "000031.jpg",
+      "timestamp": 1793033668.40707,
+      "received": 1793033668.415
+    },
+    {
+      "name": "000032.jpg",
+      "timestamp": 1793033673.183978,
+      "received": 1793033673.472
+    }
+  ],
+  "uncut": true,
+  "timeAcceleration": false,
+  "encodedFrameCountIsNotPhysicalGPUFPS": true,
+  "bundledPlaywrightRecorder": "Unavailable: official FFmpeg helper CDN download returned403; no alternate download attempted"
+}

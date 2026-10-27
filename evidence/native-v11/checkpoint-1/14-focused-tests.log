@@ -1,0 +1,95 @@
+TAP version 13
+# BJS - [14:20:36]: Babylon.js v8.32.0 - Null engine
+# Subtest: native v3 characters have distinct custom silhouettes, full local articulation and grounded 3.5–4 head proportions
+ok 1 - native v3 characters have distinct custom silhouettes, full local articulation and grounded 3.5–4 head proportions
+  ---
+  duration_ms: 151.954165
+  type: 'test'
+  ...
+# Subtest: native v3 GLB outputs match runtime vertices, material linear factors, local pivots and parent hierarchy
+ok 2 - native v3 GLB outputs match runtime vertices, material linear factors, local pivots and parent hierarchy
+  ---
+  duration_ms: 848.83209
+  type: 'test'
+  ...
+# Subtest: new native Misaki greeting keeps actual articulated palm/thumb vertices outside new torso, apron and skirt
+ok 3 - new native Misaki greeting keeps actual articulated palm/thumb vertices outside new torso, apron and skirt
+  ---
+  duration_ms: 85.066989
+  type: 'test'
+  ...
+# Subtest: native entry is a genuine gap through the back wall, including its skirting
+ok 4 - native entry is a genuine gap through the back wall, including its skirting
+  ---
+  duration_ms: 128.491588
+  type: 'test'
+  ...
+# Subtest: door hinge opens the real leaf outside and clears the reserved central traveler radius
+ok 5 - door hinge opens the real leaf outside and clears the reserved central traveler radius
+  ---
+  duration_ms: 3.720053
+  type: 'test'
+  ...
+# Subtest: plant movement is authored on seven local leaf attachments, never on pot or roots
+ok 6 - plant movement is authored on seven local leaf attachments, never on pot or roots
+  ---
+  duration_ms: 21.002753
+  type: 'test'
+  ...
+# Subtest: new environment recipes retain finite unit normals, bounded geometry and material intent
+ok 7 - new environment recipes retain finite unit normals, bounded geometry and material intent
+  ---
+  duration_ms: 44.479723
+  type: 'test'
+  ...
+# Subtest: all five Minimal FX explanations retain people and separate accessibility motion
+ok 8 - all five Minimal FX explanations retain people and separate accessibility motion
+  ---
+  duration_ms: 0.696377
+  type: 'test'
+  ...
+# Subtest: portable environment master and source manifest match the actual runtime authoring
+ok 9 - portable environment master and source manifest match the actual runtime authoring
+  ---
+  duration_ms: 78.581854
+  type: 'test'
+  ...
+# Subtest: V11 painted facial features attach to actual sculpt while preserving contact rig
+ok 10 - V11 painted facial features attach to actual sculpt while preserving contact rig
+  ---
+  duration_ms: 142.378448
+  type: 'test'
+  ...
+# Subtest: V11 garden is batched and plant retains seven articulated leaf attachments
+ok 11 - V11 garden is batched and plant retains seven articulated leaf attachments
+  ---
+  duration_ms: 18.939999
+  type: 'test'
+  ...
+# Subtest: v9 fixed styling keeps real entry corridor clear and uses bounded original geometry
+ok 12 - v9 fixed styling keeps real entry corridor clear and uses bounded original geometry
+  ---
+  duration_ms: 40.29607
+  type: 'test'
+  ...
+# Subtest: v9 source master retains all actual fixed styling and canopy for native reuse
+ok 13 - v9 source master retains all actual fixed styling and canopy for native reuse
+  ---
+  duration_ms: 43.011465
+  type: 'test'
+  ...
+# Subtest: v9 original lossless material inputs have matching runtime/master bytes and declared hashes
+ok 14 - v9 original lossless material inputs have matching runtime/master bytes and declared hashes
+  ---
+  duration_ms: 1.091817
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1652.77425

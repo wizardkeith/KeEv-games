@@ -1,0 +1,13 @@
+/** Existing central light gets a small local, real geometry shadow target.
+ * No screen-space dark decal or owned goods baked into a static contact image. */
+import {ShadowGenerator} from '@babylonjs/core/Lights/Shadows/shadowGenerator';import type {SpotLight} from '@babylonjs/core/Lights/spotLight';import type {Scene} from '@babylonjs/core/scene';import type {AbstractMesh} from '@babylonjs/core/Meshes/abstractMesh';import {tableLookIntent} from './table-look-v11';
+const centralProduct=(m:AbstractMesh)=>m.name.startsWith('display.2.')&&!m.name.includes('.selected.');
+export function installTableContact(scene:Scene,light:SpotLight){
+ const spec=tableLookIntent.contact;light.shadowMinZ=spec.shadowMinZ;light.shadowMaxZ=spec.shadowMaxZ;const shadow=new ShadowGenerator(spec.size,light);shadow.useContactHardeningShadow=true;shadow.filteringQuality=ShadowGenerator.QUALITY_MEDIUM;shadow.contactHardeningLightSizeUVRatio=spec.lightSizeUVRatio;shadow.normalBias=spec.normalBias;shadow.bias=spec.bias;shadow.darkness=spec.darkness;let renders=0;let observed:ReturnType<ShadowGenerator['getShadowMap']>|undefined;const watch=()=>{const target=shadow.getShadowMap()!;target.refreshRate=0;if(target!==observed){target.onAfterUnbindObservable.add(()=>renders++);observed=target;}};watch();const invalidate=()=>shadow.getShadowMap()?.resetRefreshCounter();
+ const eligible=(m:AbstractMesh)=>centralProduct(m)||m.name.startsWith('back.display.curated.v10.')||m.name.startsWith('room.styling.v9.')&&(m.metadata?.authoredColor==='#A2B29C'||m.metadata?.authoredColor==='#FFF5E5'||m.metadata?.authoredColor==='#EDE4D1'||m.metadata?.authoredColor==='#738C54'&&m.metadata?.materialRole==='wood');
+ for(const m of scene.meshes)if(eligible(m)&&m.material?.alpha===1)shadow.addShadowCaster(m,false);
+ // Explicit post-material registration avoids delayed scene notifications
+ // resurrecting already disposed stock after interrupted/repeated changes.
+ const add=(mesh:AbstractMesh)=>{if(eligible(mesh)&&!mesh.isDisposed()&&mesh.material?.alpha===1&&!shadow.getShadowMap()?.renderList?.includes(mesh)){shadow.addShadowCaster(mesh,false);invalidate();}};
+ return {add,remove:(mesh:AbstractMesh)=>{if(shadow.getShadowMap()?.renderList?.includes(mesh)){shadow.removeShadowCaster(mesh,false);invalidate();}},quality:(q:string)=>{const target=shadow.getShadowMap();if(target&&target.getSize().width!==(q==='low'?256:spec.size)){target.resize(q==='low'?256:spec.size);watch();invalidate();}},metrics:()=>({enabled:light.isEnabled(),...spec,refreshRate:shadow.getShadowMap()?.refreshRate,renderCount:renders,actualSize:shadow.getShadowMap()?.getSize().width,casters:shadow.getShadowMap()?.renderList?.map(m=>m.name)??[]}),shadow};
+}

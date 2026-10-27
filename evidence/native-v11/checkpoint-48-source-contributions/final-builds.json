@@ -1,0 +1,84 @@
+[
+  {
+    "build": 308,
+    "mode": "key",
+    "flags": {
+      "VITE_V11_SCENE_WINDOW": "reach",
+      "VITE_V11_SOURCE_SEPARATION": "key"
+    },
+    "application": "8091d04ba67256d9f19e69363efeacfa219b8452",
+    "path": "/workspace/qa/v11-slice/immutable308-c48-key"
+  },
+  {
+    "build": 309,
+    "mode": "base",
+    "flags": {
+      "VITE_V11_SCENE_WINDOW": "reach",
+      "VITE_V11_SOURCE_SEPARATION": "base"
+    },
+    "application": "8091d04ba67256d9f19e69363efeacfa219b8452",
+    "path": "/workspace/qa/v11-slice/immutable309-c48-base"
+  },
+  {
+    "build": 310,
+    "mode": "composite",
+    "flags": {
+      "VITE_V11_SCENE_WINDOW": "reach",
+      "VITE_V11_SOURCE_SEPARATION": "composite"
+    },
+    "application": "8091d04ba67256d9f19e69363efeacfa219b8452",
+    "path": "/workspace/qa/v11-slice/immutable310-c48-composite"
+  },
+  {
+    "build": 311,
+    "mode": "balance",
+    "flags": {
+      "VITE_V11_SCENE_WINDOW": "reach",
+      "VITE_V11_SOURCE_SEPARATION": "balance"
+    },
+    "application": "8091d04ba67256d9f19e69363efeacfa219b8452",
+    "path": "/workspace/qa/v11-slice/immutable311-c48-balance"
+  },
+  {
+    "build": 312,
+    "mode": "off",
+    "flags": {
+      "VITE_V11_SCENE_WINDOW": "reach",
+      "VITE_V11_SOURCE_SEPARATION": "key",
+      "VITE_V11_DAYLIGHT_SHADOW": "off"
+    },
+    "application": "8091d04ba67256d9f19e69363efeacfa219b8452",
+    "path": "/workspace/qa/v11-slice/immutable312-c48-off"
+  },
+  {
+    "build": 313,
+    "mode": "hard",
+    "flags": {
+      "VITE_V11_SCENE_WINDOW": "reach",
+      "VITE_V11_SOURCE_SEPARATION": "key",
+      "VITE_V11_SOURCE_FILTER": "hard",
+      "VITE_V11_SOURCE_DEPTH": "on"
+    },
+    "application": "8091d04ba67256d9f19e69363efeacfa219b8452",
+    "path": "/workspace/qa/v11-slice/immutable313-c48-hard"
+  },
+  {
+    "build": 314,
+    "mode": "double",
+    "flags": {
+      "VITE_V11_SCENE_WINDOW": "reach",
+      "VITE_V11_SOURCE_SEPARATION": "key",
+      "VITE_V11_SOURCE_FILTER": "hard",
+      "VITE_V11_SOURCE_LEAF_SHADOW": "two-sided"
+    },
+    "application": "8091d04ba67256d9f19e69363efeacfa219b8452",
+    "path": "/workspace/qa/v11-slice/immutable314-c48-double"
+  },
+  {
+    "build": 315,
+    "mode": "ordinary",
+    "flags": {},
+    "application": "8091d04ba67256d9f19e69363efeacfa219b8452",
+    "path": "/workspace/qa/v11-slice/immutable315-c48-ordinary"
+  }
+]

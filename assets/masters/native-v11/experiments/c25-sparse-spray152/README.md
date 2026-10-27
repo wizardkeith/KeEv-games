@@ -1,0 +1,1 @@
+EXPLORATORY/REJECTED152: actual normal camera shows overly separated white points and thin branching, not the target cloud grouping. These sources are retained, not ordinary-game assets or accepted art.

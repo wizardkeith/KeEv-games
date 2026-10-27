@@ -1,0 +1,1 @@
+REJECTED exploratory build262: warm hemisphere2.30 overexposed the indirect baseline and washed out materials. Directional/Hemi numeric intensities are not interchangeable. Exposure, geometry and materials were unchanged. Final264 uses empirical0.85, window120. These images are NOT final-source evidence or adoption.

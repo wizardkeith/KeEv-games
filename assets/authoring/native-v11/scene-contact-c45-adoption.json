@@ -1,0 +1,88 @@
+{
+  "adoption": {
+    "id": "v11.c45.local-contact-development-default",
+    "developmentDefault": true,
+    "active": true,
+    "reviewedCandidate": "6c7f0a98c70f5c278e8a0f329065a7badb785779",
+    "reviewedApplication": "35301d7b59b42c1875558665d8daf21298c1d4ca",
+    "reviewedBuild": 273,
+    "scope": "Exact C44 optics and accepted assets; metadata/default mapping only. Public V17 unchanged by this source task."
+  },
+  "lighting": {
+    "id": "v11.c44.same-broad-light.v1",
+    "mode": "contact",
+    "defaultAdopted": true,
+    "position": [
+      -6.8,
+      3.1,
+      0
+    ],
+    "target": [
+      -4.47,
+      1.84,
+      0
+    ],
+    "aperture": {
+      "x": -4.47,
+      "minY": 0.925,
+      "maxY": 2.755,
+      "minZ": -2.055,
+      "maxZ": 2.055,
+      "softEdge": 0.35
+    },
+    "angle": 1.9,
+    "intensity": 120,
+    "color": "#FFF2DC",
+    "residualKind": "hemisphere",
+    "residualDirection": [
+      0,
+      1,
+      0
+    ],
+    "residualColor": "#FFF0D9",
+    "residualGround": "#75624C",
+    "residualIntensity": 0.85,
+    "exteriorSunIntensity": 2.8,
+    "exteriorFillIntensity": 1.25,
+    "shadowSize": 1024,
+    "shadowSoftness": 0.16,
+    "shadowDarkness": 0.32,
+    "textureSize": 128,
+    "maxLights": 6,
+    "limits": "C44 narrow local-contact PASS, adopted into V11 development default. Original optical settings unchanged; not whole-target, GI, native or public-release acceptance."
+  },
+  "occlusion": {
+    "id": "v11.c44.localized-contact.v1",
+    "defaultAdopted": true,
+    "engine": "Babylon8.32.0 SSAO2",
+    "radius": 0.2,
+    "strength": 1,
+    "base": 0.12,
+    "samples": 16,
+    "epsilon": 0.025,
+    "geometryRatio": 0.5,
+    "blurRatio": 0.5,
+    "bilateralSamples": 8,
+    "bilateralSoften": 0.35,
+    "bilateralTolerance": 0.1,
+    "maxZ": 50,
+    "minZAspect": 0.1,
+    "low": "No added geometry buffer or SSAO passes; existing Low lighting retained",
+    "limits": "Screen-space depth/normal approximation, not complete indirect-light occlusion or GI. Final color multiplication also affects direct/specular response; hidden geometry and screen-edge limitations require actual normal/oblique review. No baked stock shadows or screen-fixed image."
+  },
+  "sources": {
+    "src/art/scene-contact-adoption-v11.ts": "fed33f324a294a075558cc4eb8b6935287d36c1b35231c5e742889f255e9ce0b",
+    "src/art/scene-contact-intent-v11.ts": "fa47f1de82237669f97d6ee3848e10a63b8660a081a63c55121d4084e21b0741",
+    "src/art/scene-occlusion-v11.ts": "942ecdb6fd23e3f45d12bad1e6de6242b44c84fa90aac87ae061ecb5466c1ae5",
+    "src/art/scene-window-light-v11.ts": "02e23b50644afe79f432257122398ce086fca9839247186b990c0f91ff6c8ba7",
+    "src/art/table-contact-v11.ts": "fb6d76573f5a4fb3168775c35d142c66277bf954b8149d34a9e2e22d6c677f22",
+    "src/world.ts": "a1e759f1d5fe5e01d5b1a03768e1b85f0802b5f6176c01bb1b2f9020a3bfa2fa",
+    "vite.config.ts": "04bf6ceefdb7eaabf36e533ae81a493fd8095860d4f94280ea1057fa6a21fcc4",
+    "tools/export-v11-scene-contact-adoption.ts": "46c8e2beb4d64b5d84d2cfd06248cdaa42ca098e3ad5ffdd81920efa011ef4d3"
+  },
+  "originalReceipts": {
+    "assets/authoring/native-v11/scene-contact-c44.json": "41bc40c83c557292a63ac31bf6bd2ee1e23bfc7670645a6d06d962ad9f140147",
+    "assets/authoring/native-v11/backwall-c40-adoption.json": "4832fc29ae430b3248ed2c6f0a4ca6da46b90a9bbce4eb814779d5facdaf546a"
+  },
+  "limits": "Development adoption only. Entire original target and public release not accepted; no completed-GPU/resource-release certification."
+}

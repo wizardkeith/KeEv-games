@@ -1,0 +1,957 @@
+{
+  "intent": {
+    "id": "v11.c39.backwall-window-material",
+    "mode": "values",
+    "active": true,
+    "defaultAdopted": false,
+    "geometry": "Exact passed C38/253 positions, normals, UV, counts and camera",
+    "scope": "Back-wall shelf planes versus preserved original merchandise coatings, trailing plants, near window foliage, existing exterior and geometric sky only",
+    "shelf": {
+      "albedo": "/assets/native-v11/display-oak-albedo.png",
+      "tint": "#E4CFAB",
+      "roughness": 0.66,
+      "tableAO": false
+    },
+    "farCrown": {
+      "roughness": 0.925,
+      "thinTransmission": false
+    },
+    "limits": "One values candidate, pending independent normal480px/two-oblique material gate; not whole-target acceptance or default adoption"
+  },
+  "geometry": {
+    "room": "8b2901393804b9b462a6446ec9d2c3f8901567189469ba229386c3b1ee2c510b",
+    "styling": "86db4f01f0776facee071f1ec430d830c80bbd86e8de270900d621b0e9d81f5d",
+    "canopy": "2cd1a29627a64f1c24287fb810fe653d1253a9b36d416891a92105b6b1304e46",
+    "exterior": "08a535085eec02d433decbe53a3d32503d63209786a215d5ef3c28d8b0835f25",
+    "sky": "8aae1db3ccf0f538f46a6debc80dfeb28f40f3d1396be2086cfe404996aeebe0",
+    "backDisplay": "7b106db676985209c57afed26b252e989fb54d0e52bcd1527762ad80fc1c806b",
+    "trailing": "36501cc318405d19246d183e7bfaa3f3ba210c2587446634bb07cf58f01e5cf0"
+  },
+  "locked": {
+    "fixedMerchandiseMaterials": "8a15325e0583365c225cb4fac0a42c25f7dc50d33f2ba53019067e25d48c5f54",
+    "counter": "997b36418d279ae9f3f5a13980ff4a93d2ad0165dc724a64e34c67de75970923",
+    "displays": "6763ffc45aceb81016742ab4694545383ff9ba648eb6d1f848434b65445df78e",
+    "floorPlants": "da8ff13f167e46c50e10a39ee143fe5694a7919168ede9c9907dd940c3ed9c9a",
+    "centralFlower": "c5a5c0f256a4dd43ed9b40a19513b5bc87f922403672fd25a8bff61a6fae926e",
+    "centralCloth": "0e281cc21cb9b9e2f93afb898d04e5e66ee091dbe3dd527789ebba1748da34ab",
+    "centralCounterSamples": "09da32a584bd7f3da68b963efcf8f235ba8b47db067df031cb1d3a902962a2ec",
+    "centralCounterWork": "9c0c1f121955a06535d61ff49bc4c181e71d4ba359a68b77957910f889c60663",
+    "stockPrefixes": "0e6017e8e933c5356f75e76de713789193e8cbf1b7e39ee9b62a1c66f301a861"
+  },
+  "triangles": 14036,
+  "groups": 17,
+  "materials": {
+    "room": [
+      {
+        "role": "paint",
+        "color": "#D7C2AC",
+        "roughness": 0.84,
+        "finish": null,
+        "texture": null,
+        "triangles": 108,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#AA8965",
+        "roughness": 0.73,
+        "finish": null,
+        "texture": null,
+        "triangles": 108,
+        "transmission": null
+      },
+      {
+        "role": "paint",
+        "color": "#EBD9BD",
+        "roughness": 0.84,
+        "finish": null,
+        "texture": null,
+        "triangles": 756,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#AE8C64",
+        "roughness": 0.73,
+        "finish": null,
+        "texture": null,
+        "triangles": 324,
+        "transmission": null
+      },
+      {
+        "role": "fabric",
+        "color": "#839A84",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 84,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#9E7854",
+        "roughness": 0.73,
+        "finish": null,
+        "texture": null,
+        "triangles": 1080,
+        "transmission": null
+      },
+      {
+        "role": "paint",
+        "color": "#B7B4A5",
+        "roughness": 0.84,
+        "finish": null,
+        "texture": null,
+        "triangles": 108,
+        "transmission": null
+      },
+      {
+        "role": "fabric",
+        "color": "#8C9C8B",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 84,
+        "transmission": null
+      },
+      {
+        "role": "metal",
+        "color": "#A99A82",
+        "roughness": 0.41,
+        "finish": null,
+        "texture": null,
+        "triangles": 108,
+        "transmission": null
+      },
+      {
+        "role": "glass",
+        "color": "#D6E5DC",
+        "roughness": 0.18,
+        "finish": null,
+        "texture": null,
+        "triangles": 12,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#C5A57B",
+        "roughness": 0.73,
+        "finish": null,
+        "texture": null,
+        "triangles": 108,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#AC835C",
+        "roughness": 0.73,
+        "finish": null,
+        "texture": null,
+        "triangles": 108,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#E4CFAB",
+        "roughness": 0.66,
+        "finish": null,
+        "texture": "/assets/native-v11/display-oak-albedo.png",
+        "triangles": 216,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#6C533F",
+        "roughness": 0.73,
+        "finish": null,
+        "texture": null,
+        "triangles": 432,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#B28A60",
+        "roughness": 0.73,
+        "finish": null,
+        "texture": null,
+        "triangles": 108,
+        "transmission": null
+      },
+      {
+        "role": "paint",
+        "color": "#D2BE9D",
+        "roughness": 0.84,
+        "finish": null,
+        "texture": null,
+        "triangles": 252,
+        "transmission": null
+      },
+      {
+        "role": "metal",
+        "color": "#A78D61",
+        "roughness": 0.41,
+        "finish": null,
+        "texture": null,
+        "triangles": 504,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#92704F",
+        "roughness": 0.73,
+        "finish": null,
+        "texture": null,
+        "triangles": 216,
+        "transmission": null
+      },
+      {
+        "role": "paper",
+        "color": "#EFE7D5",
+        "roughness": 0.96,
+        "finish": null,
+        "texture": null,
+        "triangles": 216,
+        "transmission": null
+      },
+      {
+        "role": "paper",
+        "color": "#FFFFFF",
+        "roughness": 0.951,
+        "finish": null,
+        "texture": null,
+        "triangles": 4,
+        "transmission": null
+      },
+      {
+        "role": "metal",
+        "color": "#685B46",
+        "roughness": 0.41,
+        "finish": null,
+        "texture": null,
+        "triangles": 96,
+        "transmission": null
+      },
+      {
+        "role": "ceramic",
+        "color": "#EFE4CB",
+        "roughness": 0.34,
+        "finish": null,
+        "texture": null,
+        "triangles": 672,
+        "transmission": null
+      },
+      {
+        "role": "paint",
+        "color": "#F8DDA5",
+        "roughness": 0.84,
+        "finish": null,
+        "texture": null,
+        "triangles": 336,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#C8A87E",
+        "roughness": 0.83,
+        "finish": "oak-floor",
+        "texture": null,
+        "triangles": 1920,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#C4A278",
+        "roughness": 0.83,
+        "finish": "oak-floor",
+        "texture": null,
+        "triangles": 1920,
+        "transmission": null
+      }
+    ],
+    "styling": [
+      {
+        "role": "wood",
+        "color": "#E4CFAB",
+        "roughness": 0.66,
+        "finish": null,
+        "texture": "/assets/native-v11/display-oak-albedo.png",
+        "triangles": 108,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#C4AC8A",
+        "roughness": 0.73,
+        "finish": null,
+        "texture": null,
+        "triangles": 192,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#CDB395",
+        "roughness": 0.73,
+        "finish": null,
+        "texture": null,
+        "triangles": 228,
+        "transmission": null
+      },
+      {
+        "role": "ceramic",
+        "color": "#C8B88F",
+        "roughness": 0.8,
+        "finish": null,
+        "texture": null,
+        "triangles": 360,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#738C54",
+        "roughness": 0.73,
+        "finish": null,
+        "texture": null,
+        "triangles": 2884,
+        "transmission": null
+      },
+      {
+        "role": "leaf",
+        "color": "#78945B",
+        "roughness": 0.82,
+        "finish": null,
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "triangles": 448,
+        "transmission": {
+          "intensity": 0.24,
+          "color": "#D4E3A2",
+          "minimumThickness": 0.0008,
+          "maximumThickness": 0.002
+        }
+      },
+      {
+        "role": "leaf",
+        "color": "#91A665",
+        "roughness": 0.81,
+        "finish": null,
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "triangles": 688,
+        "transmission": {
+          "intensity": 0.24,
+          "color": "#D4E3A2",
+          "minimumThickness": 0.0008,
+          "maximumThickness": 0.002
+        }
+      },
+      {
+        "role": "leaf",
+        "color": "#BDCB91",
+        "roughness": 0.82,
+        "finish": null,
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "triangles": 416,
+        "transmission": {
+          "intensity": 0.24,
+          "color": "#D4E3A2",
+          "minimumThickness": 0.0008,
+          "maximumThickness": 0.002
+        }
+      },
+      {
+        "role": "ceramic",
+        "color": "#91A08A",
+        "roughness": 0.34,
+        "finish": null,
+        "texture": null,
+        "triangles": 960,
+        "transmission": null
+      },
+      {
+        "role": "ink",
+        "color": "#57413D",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 120,
+        "transmission": null
+      },
+      {
+        "role": "paint",
+        "color": "#FFF5E5",
+        "roughness": 0.84,
+        "finish": null,
+        "texture": null,
+        "triangles": 2160,
+        "transmission": null
+      },
+      {
+        "role": "paint",
+        "color": "#C8AD69",
+        "roughness": 0.84,
+        "finish": null,
+        "texture": null,
+        "triangles": 192,
+        "transmission": null
+      },
+      {
+        "role": "ceramic",
+        "color": "#A2B29C",
+        "roughness": 0.56,
+        "finish": "celadon",
+        "texture": null,
+        "triangles": 708,
+        "transmission": null
+      },
+      {
+        "role": "paper",
+        "color": "#EDE4D1",
+        "roughness": 0.96,
+        "finish": null,
+        "texture": "/assets/native-v11/petal-form-values-c34.png",
+        "triangles": 1272,
+        "transmission": null
+      },
+      {
+        "role": "paper",
+        "color": "#C3AE89",
+        "roughness": 0.96,
+        "finish": null,
+        "texture": null,
+        "triangles": 288,
+        "transmission": null
+      },
+      {
+        "role": "paper",
+        "color": "#B69A73",
+        "roughness": 0.96,
+        "finish": null,
+        "texture": null,
+        "triangles": 156,
+        "transmission": null
+      },
+      {
+        "role": "fabric",
+        "color": "#70897C",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 84,
+        "transmission": null
+      }
+    ],
+    "canopy": [
+      {
+        "role": "wood",
+        "color": "#8C7959",
+        "roughness": 0.73,
+        "finish": null,
+        "texture": null,
+        "triangles": 1444,
+        "transmission": null
+      },
+      {
+        "role": "leaf",
+        "color": "#668A52",
+        "roughness": 0.78,
+        "finish": null,
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "triangles": 320,
+        "transmission": {
+          "intensity": 0.24,
+          "color": "#D4E3A2",
+          "minimumThickness": 0.0008,
+          "maximumThickness": 0.002
+        }
+      },
+      {
+        "role": "leaf",
+        "color": "#90AE65",
+        "roughness": 0.78,
+        "finish": null,
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "triangles": 336,
+        "transmission": {
+          "intensity": 0.24,
+          "color": "#D4E3A2",
+          "minimumThickness": 0.0008,
+          "maximumThickness": 0.002
+        }
+      },
+      {
+        "role": "leaf",
+        "color": "#BCD28A",
+        "roughness": 0.78,
+        "finish": null,
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "triangles": 352,
+        "transmission": {
+          "intensity": 0.24,
+          "color": "#D4E3A2",
+          "minimumThickness": 0.0008,
+          "maximumThickness": 0.002
+        }
+      },
+      {
+        "role": "leaf",
+        "color": "#7F9F5D",
+        "roughness": 0.78,
+        "finish": null,
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "triangles": 320,
+        "transmission": {
+          "intensity": 0.24,
+          "color": "#D4E3A2",
+          "minimumThickness": 0.0008,
+          "maximumThickness": 0.002
+        }
+      }
+    ],
+    "exterior": [
+      {
+        "role": "paint",
+        "color": "#E4DCC8",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 110,
+        "transmission": null
+      },
+      {
+        "role": "paint",
+        "color": "#D6DDD0",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 110,
+        "transmission": null
+      },
+      {
+        "role": "paint",
+        "color": "#94A4A4",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 216,
+        "transmission": null
+      },
+      {
+        "role": "paint",
+        "color": "#A8B5B0",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 216,
+        "transmission": null
+      },
+      {
+        "role": "glass",
+        "color": "#B3C4C0",
+        "roughness": 0.44,
+        "finish": null,
+        "texture": null,
+        "triangles": 432,
+        "transmission": null
+      },
+      {
+        "role": "paint",
+        "color": "#CBD0BC",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 120,
+        "transmission": null
+      },
+      {
+        "role": "paint",
+        "color": "#E6E5D4",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 2160,
+        "transmission": null
+      },
+      {
+        "role": "leaf",
+        "color": "#C3D1BD",
+        "roughness": 0.925,
+        "finish": null,
+        "texture": null,
+        "triangles": 510,
+        "transmission": null
+      },
+      {
+        "role": "leaf",
+        "color": "#C3D1BD",
+        "roughness": 0.87,
+        "finish": null,
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "triangles": 128,
+        "transmission": {
+          "intensity": 0.24,
+          "color": "#D4E3A2",
+          "minimumThickness": 0.0008,
+          "maximumThickness": 0.002
+        }
+      },
+      {
+        "role": "wood",
+        "color": "#AAB5A4",
+        "roughness": 0.92,
+        "finish": null,
+        "texture": null,
+        "triangles": 300,
+        "transmission": null
+      },
+      {
+        "role": "leaf",
+        "color": "#D5DDD0",
+        "roughness": 0.925,
+        "finish": null,
+        "texture": null,
+        "triangles": 510,
+        "transmission": null
+      },
+      {
+        "role": "leaf",
+        "color": "#D5DDD0",
+        "roughness": 0.87,
+        "finish": null,
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "triangles": 128,
+        "transmission": {
+          "intensity": 0.24,
+          "color": "#D4E3A2",
+          "minimumThickness": 0.0008,
+          "maximumThickness": 0.002
+        }
+      }
+    ],
+    "sky": [
+      {
+        "role": "paint",
+        "color": "#E8ECDD",
+        "roughness": 0.84,
+        "finish": null,
+        "texture": null,
+        "triangles": 12,
+        "transmission": null
+      },
+      {
+        "role": "paint",
+        "color": "#DCE8E4",
+        "roughness": 0.84,
+        "finish": null,
+        "texture": null,
+        "triangles": 12,
+        "transmission": null
+      },
+      {
+        "role": "paint",
+        "color": "#CCE0E9",
+        "roughness": 0.84,
+        "finish": null,
+        "texture": null,
+        "triangles": 12,
+        "transmission": null
+      },
+      {
+        "role": "paint",
+        "color": "#BFDAE8",
+        "roughness": 0.84,
+        "finish": null,
+        "texture": null,
+        "triangles": 12,
+        "transmission": null
+      }
+    ],
+    "backDisplay": [
+      {
+        "role": "fabric",
+        "color": "#91A18C",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 2808,
+        "transmission": null
+      },
+      {
+        "role": "paper",
+        "color": "#EDE4D1",
+        "roughness": 0.96,
+        "finish": null,
+        "texture": null,
+        "triangles": 972,
+        "transmission": null
+      },
+      {
+        "role": "paper",
+        "color": "#C8BBA4",
+        "roughness": 0.96,
+        "finish": null,
+        "texture": null,
+        "triangles": 6048,
+        "transmission": null
+      },
+      {
+        "role": "paper",
+        "color": "#FFFFFF",
+        "roughness": 0.96,
+        "finish": null,
+        "texture": "/assets/native-v11/display-journal-cover.png",
+        "triangles": 6,
+        "transmission": null
+      },
+      {
+        "role": "fabric",
+        "color": "#8B9D86",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 756,
+        "transmission": null
+      },
+      {
+        "role": "paper",
+        "color": "#F0E8D7",
+        "roughness": 0.96,
+        "finish": null,
+        "texture": null,
+        "triangles": 540,
+        "transmission": null
+      },
+      {
+        "role": "paper",
+        "color": "#FFFFFF",
+        "roughness": 0.951,
+        "finish": null,
+        "texture": null,
+        "triangles": 602,
+        "transmission": null
+      },
+      {
+        "role": "ceramic",
+        "color": "#D8DDC7",
+        "roughness": 0.31,
+        "finish": null,
+        "texture": null,
+        "triangles": 31224,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#AD8B64",
+        "roughness": 0.73,
+        "finish": null,
+        "texture": null,
+        "triangles": 84,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#A17C56",
+        "roughness": 0.73,
+        "finish": null,
+        "texture": null,
+        "triangles": 624,
+        "transmission": null
+      },
+      {
+        "role": "metal",
+        "color": "#93a998",
+        "roughness": 0.41,
+        "finish": null,
+        "texture": null,
+        "triangles": 2880,
+        "transmission": null
+      },
+      {
+        "role": "metal",
+        "color": "#C6B28E",
+        "roughness": 0.41,
+        "finish": null,
+        "texture": null,
+        "triangles": 2880,
+        "transmission": null
+      },
+      {
+        "role": "paper",
+        "color": "#EFE4CE",
+        "roughness": 0.96,
+        "finish": null,
+        "texture": null,
+        "triangles": 504,
+        "transmission": null
+      },
+      {
+        "role": "ceramic",
+        "color": "#A2B29C",
+        "roughness": 0.42,
+        "finish": "celadon",
+        "texture": null,
+        "triangles": 19872,
+        "transmission": null
+      },
+      {
+        "role": "fabric",
+        "color": "#c7b7a0",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 332,
+        "transmission": null
+      },
+      {
+        "role": "fabric",
+        "color": "#D5C2A4",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 208,
+        "transmission": null
+      },
+      {
+        "role": "fabric",
+        "color": "#AE9D86",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 600,
+        "transmission": null
+      },
+      {
+        "role": "paper",
+        "color": "#CDB48D",
+        "roughness": 0.96,
+        "finish": null,
+        "texture": null,
+        "triangles": 216,
+        "transmission": null
+      },
+      {
+        "role": "paper",
+        "color": "#DEC9A5",
+        "roughness": 0.96,
+        "finish": null,
+        "texture": null,
+        "triangles": 168,
+        "transmission": null
+      },
+      {
+        "role": "paper",
+        "color": "#E8DECA",
+        "roughness": 0.96,
+        "finish": null,
+        "texture": null,
+        "triangles": 216,
+        "transmission": null
+      },
+      {
+        "role": "ceramic",
+        "color": "#C7A679",
+        "roughness": 0.34,
+        "finish": null,
+        "texture": null,
+        "triangles": 960,
+        "transmission": null
+      },
+      {
+        "role": "paint",
+        "color": "#78604A",
+        "roughness": 0.84,
+        "finish": null,
+        "texture": null,
+        "triangles": 1176,
+        "transmission": null
+      },
+      {
+        "role": "fabric",
+        "color": "#9abdb6",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 432,
+        "transmission": null
+      },
+      {
+        "role": "fabric",
+        "color": "#DED4BE",
+        "roughness": 0.9,
+        "finish": null,
+        "texture": null,
+        "triangles": 416,
+        "transmission": null
+      },
+      {
+        "role": "paper",
+        "color": "#EEE3CC",
+        "roughness": 0.96,
+        "finish": null,
+        "texture": null,
+        "triangles": 216,
+        "transmission": null
+      }
+    ],
+    "trailing": [
+      {
+        "role": "ceramic",
+        "color": "#C8B88F",
+        "roughness": 0.8,
+        "finish": null,
+        "texture": null,
+        "triangles": 360,
+        "transmission": null
+      },
+      {
+        "role": "wood",
+        "color": "#738353",
+        "roughness": 0.73,
+        "finish": null,
+        "texture": null,
+        "triangles": 1344,
+        "transmission": null
+      },
+      {
+        "role": "leaf",
+        "color": "#78945B",
+        "roughness": 0.82,
+        "finish": null,
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "triangles": 448,
+        "transmission": {
+          "intensity": 0.24,
+          "color": "#D4E3A2",
+          "minimumThickness": 0.0008,
+          "maximumThickness": 0.002
+        }
+      },
+      {
+        "role": "leaf",
+        "color": "#91A665",
+        "roughness": 0.81,
+        "finish": null,
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "triangles": 432,
+        "transmission": {
+          "intensity": 0.24,
+          "color": "#D4E3A2",
+          "minimumThickness": 0.0008,
+          "maximumThickness": 0.002
+        }
+      },
+      {
+        "role": "leaf",
+        "color": "#BDCB91",
+        "roughness": 0.82,
+        "finish": null,
+        "texture": "/assets/native-v11/broadleaf-albedo.png",
+        "triangles": 416,
+        "transmission": {
+          "intensity": 0.24,
+          "color": "#D4E3A2",
+          "minimumThickness": 0.0008,
+          "maximumThickness": 0.002
+        }
+      }
+    ]
+  },
+  "limits": "Canonical triangles include positions/normals/UV and winding; re-batching order ignored. Not pixel quality, transactions or hardware certification."
+}

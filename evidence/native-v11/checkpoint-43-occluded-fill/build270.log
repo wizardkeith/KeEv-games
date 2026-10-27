@@ -1,0 +1,92 @@
+
+> next-stop-little-shop-w1@0.1.1 build
+> tsc --noEmit && vite build --outDir /workspace/qa/v11-slice/immutable270-c43-opaque-depth
+
+vite v7.1.12 building for production...
+transforming...
+✓ 700 modules transformed.
+
+(!) outDir /workspace/qa/v11-slice/immutable270-c43-opaque-depth is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
+rendering chunks...
+computing gzip size...
+../qa/v11-slice/immutable270-c43-opaque-depth/index.html                                                     0.69 kB │ gzip:     0.49 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/index-CiMc3Tjj.css                                     37.15 kB │ gzip:     8.15 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/kernelBlurVaryingDeclaration-iz0nHSgT.js                0.17 kB │ gzip:     0.16 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/kernelBlurVaryingDeclaration--01gFaJz.js                0.18 kB │ gzip:     0.16 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/meshUboDeclaration-BiC4voY9.js                          0.24 kB │ gzip:     0.21 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/sceneUboDeclaration-CzHNuY0o.js                         0.30 kB │ gzip:     0.23 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/meshUboDeclaration-CVaccEso.js                          0.30 kB │ gzip:     0.23 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/pass.fragment-RSe8dPey.js                               0.35 kB │ gzip:     0.27 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/sceneUboDeclaration-Q8LkdSeb.js                         0.36 kB │ gzip:     0.25 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/shadowMapFragmentSoftTransparentShadow-BEMqENBJ.js      0.40 kB │ gzip:     0.28 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/shadowMapFragmentSoftTransparentShadow-CghhwMH7.js      0.43 kB │ gzip:     0.30 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/rgbdEncode.fragment-DY6yTpqd.js                         0.43 kB │ gzip:     0.32 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/rgbdDecode.fragment-B6VFoteU.js                         0.44 kB │ gzip:     0.32 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/pass.fragment-B02iRiUx.js                               0.48 kB │ gzip:     0.31 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/bumpVertex-DGY2G4_s.js                                  0.48 kB │ gzip:     0.30 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/packingFunctions-B85-hry0.js                            0.52 kB │ gzip:     0.29 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/depthBoxBlur.fragment-Dqo3rBjS.js                       0.56 kB │ gzip:     0.37 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/rgbdEncode.fragment-BcQWA4Zt.js                         0.57 kB │ gzip:     0.36 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/rgbdDecode.fragment-BYGVPDcO.js                         0.58 kB │ gzip:     0.37 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/envTextureLoader-BtAF4Wi4.js                            0.58 kB │ gzip:     0.38 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/ssaoCombine.fragment-Bcq-KQQd.js                        0.60 kB │ gzip:     0.36 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/postprocess.vertex-mHE_RcbR.js                          0.61 kB │ gzip:     0.38 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/bumpVertex-D6M3GAK_.js                                  0.66 kB │ gzip:     0.36 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/depthBoxBlur.fragment-BlGXanUu.js                       0.74 kB │ gzip:     0.44 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/kernelBlur.vertex-B8eDJm62.js                           0.79 kB │ gzip:     0.44 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/ssaoCombine.fragment-BuNaBCEU.js                        0.83 kB │ gzip:     0.42 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/passCube.fragment-CD120rEQ.js                           0.85 kB │ gzip:     0.37 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/kernelBlur.vertex-pAiFMpQq.js                           0.93 kB │ gzip:     0.48 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/mesh.vertexData.functions-ayNlGC5K.js                   0.96 kB │ gzip:     0.49 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/instancesDeclaration-B05GzvdK.js                        1.00 kB │ gzip:     0.34 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/passCube.fragment-D8TzMmBi.js                           1.16 kB │ gzip:     0.42 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/clipPlaneFragment-CTjAfd0Q.js                           1.21 kB │ gzip:     0.34 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/depth.fragment-71SHxauP.js                              1.29 kB │ gzip:     0.57 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/ddsTextureLoader-BwD6QuV5.js                            1.29 kB │ gzip:     0.63 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/table-reflection-v11-DfJK-zwS.js                        1.35 kB │ gzip:     0.80 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/room-specular-v11-DWtPkWkS.js                           1.47 kB │ gzip:     0.87 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/depth.vertex-CQD7GsU5.js                                2.06 kB │ gzip:     0.77 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/kernelBlur.fragment-BH03aQ09.js                         2.13 kB │ gzip:     0.71 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/hdrTextureLoader-wc5l4Ge-.js                            2.46 kB │ gzip:     1.19 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/kernelBlur.fragment-5HVgX1t8.js                         2.70 kB │ gzip:     0.81 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/iesTextureLoader-COqM_klo.js                            2.73 kB │ gzip:     1.18 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/shadowMap.fragment-D7RCKK_F.js                          3.06 kB │ gzip:     1.08 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/tgaTextureLoader-Bb2pXyMR.js                            3.56 kB │ gzip:     1.39 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/shadowMap.fragment-CU7KswCs.js                          3.69 kB │ gzip:     1.19 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/shadowMap.vertex-BOipMh5r.js                            4.40 kB │ gzip:     1.40 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/shadowMap.vertex-C0EiVRZ0.js                            4.49 kB │ gzip:     1.45 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/ssao2.fragment-j2sI9mkl.js                              5.24 kB │ gzip:     1.66 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/helperFunctions-DOyc9OvU.js                             5.30 kB │ gzip:     1.78 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/helperFunctions-C9FpbFn6.js                             5.71 kB │ gzip:     1.89 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/geometry.fragment-BoXRvRWY.js                           5.90 kB │ gzip:     1.65 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/geometry.vertex-D7ivbmnM.js                             6.70 kB │ gzip:     1.53 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/ssao2.fragment-CFtIv891.js                              6.72 kB │ gzip:     1.82 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/dds-BmQ8kTHe.js                                         7.03 kB │ gzip:     2.48 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/bumpFragment-BoJP40cA.js                                7.25 kB │ gzip:     2.41 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/basisTextureLoader-DOOUSXtV.js                          8.21 kB │ gzip:     3.25 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/bumpFragment-Be5dknBp.js                                8.47 kB │ gzip:     2.50 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/clipPlaneVertex-CPxCuKDa.js                            14.12 kB │ gzip:     2.40 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/logDepthDeclaration-DZNL5RQd.js                        14.16 kB │ gzip:     4.79 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/exrTextureLoader-BXrp6LCZ.js                           15.56 kB │ gzip:     5.82 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/logDepthDeclaration-Crx04fsQ.js                        15.74 kB │ gzip:     4.94 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/ktxTextureLoader-CFfytAUw.js                           15.83 kB │ gzip:     4.63 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/pbr.vertex-CBkD5EDt.js                                 21.80 kB │ gzip:     4.18 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/pbr.vertex-hxGqThGm.js                                 23.56 kB │ gzip:     4.65 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/scene-occlusion-v11-VvUXx_J6.js                        69.95 kB │ gzip:    17.25 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/index-D7rHfHAd.js                                     171.34 kB │ gzip:    62.80 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/pbr.fragment-DEZ1Slw8.js                              197.81 kB │ gzip:    36.10 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/pbr.fragment-DkWBbdk0.js                              205.43 kB │ gzip:    36.60 kB
+../qa/v11-slice/immutable270-c43-opaque-depth/assets/world-DRypMTIL.js                                   6,920.61 kB │ gzip: 1,526.92 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.92s
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

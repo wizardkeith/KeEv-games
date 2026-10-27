@@ -1,0 +1,11 @@
+{
+  "status": "experimental not integrated, not gameplay image",
+  "sourceSha256": "0b0b311ec5d3ca54ba7b090341b985471598cd4abeecf068bdd5ced984ba11a7",
+  "method": "Cycles CPU32sample DIFFUSE, indirect + colour, direct disabled; actual static mesh geometry and original material albedo textures; no dynamic inventory/actors/door/save data",
+  "meshes": 245,
+  "resolution": [
+    2048,
+    2048
+  ],
+  "limitations": "Roughness/metallic/base texture supported; Web room IBL, normal maps/translucency and wind not identical; native atlas integration and actual-game validation pending"
+}

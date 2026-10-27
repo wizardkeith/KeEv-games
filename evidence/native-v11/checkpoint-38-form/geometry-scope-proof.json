@@ -1,0 +1,80 @@
+{
+  "application": "fbf6dd6859c70844cd45f0b51c283b178e9ee3a9",
+  "baseline": "ea4a736cf2aa71a4b1f2c6ed0a8f0183251f035f",
+  "measurements": {
+    "reviewedC37": {
+      "plantTriangles": 2944,
+      "routeBodyBoxContacts": 0,
+      "shelfContacts": 0,
+      "longThenDenseLeafProfiles": [
+        {
+          "triangles": 528,
+          "minY": 1.0065642912941235,
+          "maxY": 2.8800168125197243
+        },
+        {
+          "triangles": 528,
+          "minY": 1.0065642912941235,
+          "maxY": 2.8800168125197243
+        }
+      ]
+    },
+    "C38": {
+      "plantTriangles": 3000,
+      "routeBodyBoxContacts": 0,
+      "shelfContacts": 0,
+      "longThenDenseLeafProfiles": [
+        {
+          "triangles": 368,
+          "minY": 0.8961972235968546,
+          "maxY": 2.7716532090270465
+        },
+        {
+          "triangles": 688,
+          "minY": 1.5655854429494063,
+          "maxY": 2.7235373854912663
+        }
+      ]
+    }
+  },
+  "windowProjection": {
+    "camera": {
+      "alpha": -0.7853981633974483,
+      "beta": 0.8726646259971648,
+      "radius": 11.212076960563294,
+      "target": [
+        0.7,
+        1.15,
+        0
+      ]
+    },
+    "onPlaneX": -4.47,
+    "openingZ": [
+      -0.35,
+      1.05
+    ],
+    "openingY": [
+      1.38,
+      2.12
+    ],
+    "triangleContacts": {
+      "reviewedC37": 111,
+      "C38": 0
+    }
+  },
+  "C37MastersByteExact": [
+    "assets/masters/native-v11/backwall-c37/window-mid-far.json",
+    "assets/masters/native-v11/backwall-c37/fixed-back-samples.json",
+    "assets/masters/native-v11/backwall-c37/paper-work-bays.json",
+    "assets/masters/native-v11/backwall-c37/distant-canopy.blend",
+    "assets/masters/native-v11/backwall-c37/trailing-greenery.json",
+    "assets/masters/native-v11/backwall-c37/provenance.json",
+    "assets/masters/native-v11/backwall-c37/distant-canopy.json",
+    "assets/masters/native-v11/backwall-c37/window-near-branches.json"
+  ],
+  "mixedDisplayFilesByteExact": [
+    "fixed-back-samples.json",
+    "paper-work-bays.json"
+  ],
+  "scope": "Full triangle-box SAT with original radius.24/Y.08\u20132.10 and shelf boxes. Projected central opening at fixed normal camera only. Counts and clearance do not certify visual acceptance, every orbit, staff/animated meshes or physical hardware."
+}

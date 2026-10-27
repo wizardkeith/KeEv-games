@@ -1,0 +1,874 @@
+{
+  "application": "cc98c7b6efc67b58a408f9d6d1e62f2cdee8bf5c",
+  "reference": {
+    "path": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+    "sha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+    "comparedArea": "left shop scene; portrait excluded from equal-room-height comparison"
+  },
+  "variants": {
+    "before233": "C36 geometry / old-gray scope, app80eecd38c05d6cd6a9aac339f8f8fb651a8521dd; no new forms",
+    "after245": "Final C37 gray form gate",
+    "preview246": "Final C37 forms with inherited/placeholder palettes. NOT new material acceptance or default",
+    "default247": "Ordinary development default remains C36, C37 control/OFF"
+  },
+  "cameraEqual": true,
+  "initialEconomyEqual": true,
+  "normal": "fresh isolated baseline unchanged",
+  "stockReloadProof": {
+    "cost": 70,
+    "cashBefore": 3840,
+    "cashAfter": 3770,
+    "stockBefore": 8,
+    "stockAfter": 9,
+    "purchasesExact": true,
+    "bookCostExact": true,
+    "shelvesExact": true,
+    "saveReloadExact": true,
+    "normalUnchanged": true,
+    "actual3DPostReload": true,
+    "diagnostic": {
+      "core": "PORT_REQUIRED_FOR_UNITY",
+      "artReview": false,
+      "uiReadyMs": 36.19999998807907,
+      "startupMs": 3738.399999976158,
+      "worldReady": true,
+      "worldEverReady": true,
+      "worldAvailable": true,
+      "world": {
+        "backwallForms": {
+          "id": "v11.c37.backwall-window-form",
+          "mode": "shape",
+          "defaultAdopted": false,
+          "scope": "Only fixed back-wall showroom dressing and right-window exterior; C36 table/cashier/camera/lights/routes unchanged",
+          "grayColor": "#A5A5A5",
+          "limits": "Form gate only; no new material standard, target acceptance, economic authority or public adoption"
+        },
+        "boundedMaterial": {
+          "id": "v11.c34.locked-gray-materials",
+          "mode": "values",
+          "geometry": "C33 visible crown retained; C36 two lower trunks fit vase neck, exact C32cloth/C35atlases/C27composition/192reflection",
+          "atlases": {
+            "flower": {
+              "url": "/assets/native-v11/petal-form-values-c34.png",
+              "sha256": "8b737bb64fded646291553a5ae02f8239edfc9d8fefd4efdec32e4fc7524cc74"
+            },
+            "cloth": {
+              "url": "/assets/native-v11/linen-form-values-c34.png",
+              "sha256": "956b7673c6a61c4f133c493326e7fa4983c4d98c3e288fb3c5c4cd105b123563"
+            }
+          },
+          "values": "Original shared flower/paper material and linen finish, existing object-UV atlas pipeline; no painted inventory/contact shadows or screen-space substitute",
+          "acceptance": "C35 narrow material gate independently passed; adopted development default, overall target art remains unaccepted"
+        },
+        "grayForms": {
+          "id": "v11.c32.three-cluster-continuous-turn",
+          "mode": "control",
+          "scope": "Only existing flower crown +linen; same C27 positions/cup supports/vase/books/furniture,201 lights/camera and192 reflection",
+          "material": "One shared plain gray PBR, no albedo/normal/ORM/texture or designed value. Existing shared branch batch temporarily neutralized for comparison, no extra batch; original surface tones remain untouched in control",
+          "shape": "One high main, two lower depth-staggered overlapping cluster surfaces; support-free raised cloth forms and continuous variable-radius corner into two unequal inward main folds",
+          "limits": "Independent normal480px and two-oblique gray gate pending; no authored material work or target acceptance"
+        },
+        "grayMaterial": null,
+        "formValues": {
+          "id": "v11.c31.normal-scale-form-values",
+          "mode": "control",
+          "shape": "Thirty overlapping primary five-lobed corollas plus24 small perimeter flowers; two broad hanging cloth folds, original commodity support and C27 transforms",
+          "values": "Object UV warm-lit/cool-shadow form gradients only. No owned-stock/contact shadow painted into fixed textures, no billboard or emissive substitute",
+          "lighting": "Unchanged201 scene/exposure/camera and192 reflection; C30 transport OFF",
+          "acceptance": "Pending actual normal full frame and two oblique views; not target acceptance"
+        },
+        "brightMasses": {
+          "id": "v11.c29.same-table-bright-masses",
+          "mode": "combined",
+          "scope": "Only existing central decorative flower crown and linen, locked C27 placement and C28/192 reflection; no stock/economy/rig/camera change",
+          "flowers": {
+            "heads": 6,
+            "florets": 120,
+            "method": "Connected compound heads with12\u201330 closed cupped five-sided blossoms, variable density/negative space, no cards/alpha"
+          },
+          "linen": {
+            "method": "Three unequal primary gravity folds from actual25mm rounded edge, original planar commodity support and2mm thickness/24 fringe strands",
+            "source": "tools/build-v11-bright-linen.py"
+          },
+          "limits": "Actual normal-game material/mass gate and original-target acceptance remain open",
+          "active": false,
+          "supersededBy": "v11.c34.locked-gray-materials"
+        },
+        "tableLook": {
+          "id": "v11.c28.central-material-contact",
+          "mode": "combined",
+          "composition": "C27 positions, size, stock groups and actual world-space support unchanged",
+          "material": {
+            "vesselRoughness": 0.56,
+            "coatIntensity": 0.22,
+            "coatRoughness": 0.38,
+            "petals": "Existing closed vertices/indices; softly bent two-sided normals and existing warm-white matte paper batch, no new batch or petals",
+            "linenSheen": 0.24
+          },
+          "contact": {
+            "size": 1024,
+            "shadowMinZ": 0.2,
+            "shadowMaxZ": 5,
+            "normalBias": 0.0003,
+            "bias": 5e-05,
+            "lightSizeUVRatio": 0.065,
+            "darkness": 0.12,
+            "refresh": "Static casters: render once and invalidate on real stock add/remove or target resize; moving-actor sun shadow stays unchanged",
+            "light": "existing central practical, position/direction/intensity unchanged; no LTC, added light or shadow image",
+            "low": "existing central light disabled; contact target not rendered"
+          },
+          "limits": "Bounded actual-game A/B candidate, not original-target acceptance or physical GPU performance",
+          "contactAtlas": {
+            "active": true,
+            "path": "/assets/native-v11/central-contact-c29.png",
+            "master": "assets/masters/native-v11/c29-contact/central-contact-atlas.png",
+            "uvOrigin": "upper-left PNG/glTF; V is1 minus Blender bake V",
+            "input": "assets/masters/native-v11/c29-contact/actual-central-static.json",
+            "size": [
+              512,
+              2048
+            ],
+            "width": 2.1,
+            "depth": 1.3,
+            "heights": [
+              0.9925,
+              1.1325,
+              1.0925,
+              1.1525
+            ],
+            "distance": 0.12,
+            "strength": 0.55,
+            "analyticalImpact": 0.15,
+            "scope": "Actual fixed central wood/cloth/vessel/books only. No owned stock, actors, door, FX or player save baked. Not GI or target acceptance."
+          },
+          "reflection": {
+            "status": "ready",
+            "materials": [
+              "mat.satin-ceramic.v1:#A2B29C:1:r0.34:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2:native-r0.56:finish:celadon"
+            ],
+            "path": "/assets/native-v11/soft-window-specular.env",
+            "size": 64,
+            "source": "tools/build-v11-window-radiance.py",
+            "scope": "Only existing central non-stock celadon vessel; existing actual-room reflected baseline plus broad art-directed window bounce, same geometry/camera and original analytic diffuse",
+            "limits": "Single-point hybrid original asset, not new traced GI/parallax/measured photometry or target acceptance"
+          },
+          "contactState": {
+            "enabled": true,
+            "size": 1024,
+            "shadowMinZ": 0.2,
+            "shadowMaxZ": 5,
+            "normalBias": 0.0003,
+            "bias": 5e-05,
+            "lightSizeUVRatio": 0.065,
+            "darkness": 0.12,
+            "refresh": "Static casters: render once and invalidate on real stock add/remove or target resize; moving-actor sun shadow stays unchanged",
+            "light": "existing central practical, position/direction/intensity unchanged; no LTC, added light or shadow image",
+            "low": "existing central light disabled; contact target not rendered",
+            "refreshRate": 0,
+            "renderCount": 1,
+            "actualSize": 1024,
+            "casters": [
+              "room.styling.v9.material4",
+              "room.styling.v9.material10",
+              "room.styling.v9.material12",
+              "room.styling.v9.material13",
+              "back.display.curated.v10.material0",
+              "back.display.curated.v10.material1",
+              "back.display.curated.v10.material2",
+              "back.display.curated.v10.material3",
+              "back.display.curated.v10.material4",
+              "back.display.curated.v10.material5",
+              "back.display.curated.v10.material6",
+              "back.display.curated.v10.material7",
+              "back.display.curated.v10.material8",
+              "back.display.curated.v10.material9",
+              "back.display.curated.v10.material10",
+              "back.display.curated.v10.material11",
+              "back.display.curated.v10.material12",
+              "back.display.curated.v10.material13",
+              "back.display.curated.v10.material14",
+              "back.display.curated.v10.material15",
+              "back.display.curated.v10.material16",
+              "back.display.curated.v10.material17",
+              "back.display.curated.v10.material18",
+              "back.display.curated.v10.material19",
+              "back.display.curated.v10.material20",
+              "back.display.curated.v10.material21",
+              "back.display.curated.v10.material22",
+              "back.display.curated.v10.material23",
+              "back.display.curated.v10.material24",
+              "display.2.material0",
+              "display.2.material1",
+              "display.2.material2",
+              "display.2.material3",
+              "display.2.material4",
+              "display.2.material5",
+              "display.2.off.mug.actual-stock-batch.material0"
+            ]
+          }
+        },
+        "tableIrradiance": null,
+        "displayProbe": null,
+        "cutawayLighting": {
+          "enabled": false,
+          "reason": "C22 shadow-only ceiling trial rejected after actual131/132/133 views"
+        },
+        "roomSpecular": {
+          "status": "ready",
+          "materials": [
+            "mat.satin-ceramic.v1:#EFE4CB:1:r0.34:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2",
+            "mat.satin-ceramic.v1:#B6A17F:1:r0.34:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2",
+            "mat.satin-ceramic.v1:#91A08A:1:r0.34:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2",
+            "mat.satin-ceramic.v1:#A2B29C:1:r0.34:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2:native-r0.56:finish:celadon",
+            "mat.satin-ceramic.v1:#8C7050:1:r0.34:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2",
+            "mat.satin-ceramic.v1:#D8DDC7:1:r0.34:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2:native-r0.31",
+            "mat.satin-ceramic.v1:#A2B29C:1:r0.34:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2:native-r0.42:finish:celadon",
+            "mat.satin-ceramic.v1:#C7A679:1:r0.34:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2"
+          ],
+          "path": "/assets/native-v11/actual-static-room-specular.env",
+          "size": 128,
+          "samples": 64,
+          "position": [
+            0.1,
+            1.48,
+            -0.1
+          ],
+          "role": "ceramic",
+          "diffuse": "Original analytic SH retained; no extra diffuse or real-time light",
+          "capturedSource": "6946fad89c409f7c03b1885c2c695e52af4b8f79 C17 scene plus C18 authoring hook, immutable107",
+          "source": "Actual255 static game meshes, six linear HDR directions, GGX prefilter, original RGBD PNG mip data",
+          "limits": "Static local approximation; not parallax-correct reflections, GI or final target acceptance"
+        },
+        "clothDiagnostic": null,
+        "presentationActor": {
+          "id": "actor.misaki.native.v3",
+          "economicBinding": "staff.graybox"
+        },
+        "nativeMotion": {
+          "rigVersion": "native-characters-v11-target-slice-r1",
+          "staffClip": "native.staff.idle.v3",
+          "staffRoutine": {
+            "x": 2.6,
+            "z": -0.65,
+            "yaw": 0,
+            "speed": 0,
+            "distance": 0,
+            "intent": "home",
+            "target": {
+              "x": 2.6,
+              "z": -0.65
+            },
+            "atHome": true,
+            "atWorkplace": true,
+            "moving": false
+          },
+          "greetedVisitors": [],
+          "farewelledVisitors": [],
+          "greetingKind": "arrival",
+          "localGreeting": null,
+          "greetingTargetId": null,
+          "contactDistance": null,
+          "contact": null,
+          "attention": {
+            "yaw": -3.0252374883829187,
+            "target": -3.0252374883829187,
+            "entry": 1,
+            "work": false,
+            "mode": "welcome"
+          },
+          "propCount": 5,
+          "carriedBag": null,
+          "activeProps": [],
+          "visibleTime": 2.9999999999999973
+        },
+        "nativeTiming": {
+          "steps": 20,
+          "wallMs": 15209.5,
+          "consumedMs": 3000,
+          "droppedMs": 12209.5
+        },
+        "staticGIExperiment": null,
+        "practicalLights": [
+          {
+            "id": "native.practical.cashier",
+            "enabled": true,
+            "intensity": 20,
+            "position": [
+              3.05,
+              2.75,
+              -1.05
+            ]
+          },
+          {
+            "id": "native.practical.central",
+            "enabled": true,
+            "intensity": 24,
+            "position": [
+              -2.5,
+              3,
+              -0.3
+            ]
+          }
+        ],
+        "shopLife": {
+          "bubble": null,
+          "pending": false,
+          "serial": 0
+        },
+        "nativeService": {
+          "epoch": 0,
+          "stream": "[\"sandbox\",\"shop.player.1\",\"1\"]",
+          "consumedRevision": 3,
+          "batches": 0
+        },
+        "customers": [
+          {
+            "id": "visitor-a",
+            "enabled": false,
+            "x": 4.18,
+            "z": 4.05,
+            "yaw": 1.5707963267948966,
+            "speed": 0,
+            "distance": 0,
+            "state": "outside",
+            "browseProgress": 0,
+            "hasBag": false,
+            "handoverProgress": 0
+          },
+          {
+            "id": "visitor-b",
+            "enabled": false,
+            "x": 4.18,
+            "z": 4.05,
+            "yaw": 1.5707963267948966,
+            "speed": 0,
+            "distance": 0,
+            "state": "outside",
+            "browseProgress": 0,
+            "hasBag": false,
+            "handoverProgress": 0
+          }
+        ],
+        "gesture": null,
+        "artDirection": "native.light.v11-slice",
+        "cameraView": "shop",
+        "readyAtMs": 22564.29999998212,
+        "quality": "auto",
+        "effectiveQuality": "high",
+        "adaptivePolicy": "auto drops transient FX/dust, resolution and crowd after 90 visible samples with p75 >35ms; economy unchanged",
+        "minimalFX": false,
+        "reducedMotion": false,
+        "feedback": null,
+        "saleMargin": null,
+        "pendingSaleMargins": 0,
+        "materials": 241,
+        "dustCapacity": 8,
+        "customerRoots": [
+          {
+            "position": [
+              4.18,
+              0.065,
+              4.05
+            ],
+            "enabled": false
+          },
+          {
+            "position": [
+              4.18,
+              0.065,
+              4.05
+            ],
+            "enabled": false
+          }
+        ],
+        "selectedSlot": 0,
+        "visibleSamples": 0,
+        "frameSamplesMs": [],
+        "fps": null,
+        "meshes": 456,
+        "activeMeshes": 346,
+        "renderer": {
+          "vendor": "Google Inc. (Google)",
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+        },
+        "viewport": [
+          1440,
+          1200
+        ],
+        "cameraViewport": {
+          "x": 0,
+          "y": 0.08666666666666667,
+          "width": 1,
+          "height": 0.84
+        },
+        "cameraInertia": [
+          0,
+          0,
+          0
+        ],
+        "cameraPose": {
+          "alpha": -0.7853981633974483,
+          "beta": 0.8726646259971648,
+          "radius": 11.212076960563294,
+          "target": [
+            0.7,
+            1.15,
+            0
+          ]
+        }
+      },
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4519/assets/index-CFyGr6mA.js",
+          "duration": 8.300000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/index-CiMc3Tjj.css",
+          "duration": 7.800000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:4519/fonts/PlusJakartaSans.ttf",
+          "duration": 0,
+          "transferSize": 0,
+          "encodedBodySize": 34096
+        },
+        {
+          "name": "http://127.0.0.1:4519/fonts/NotoSansHK.ttf",
+          "duration": 0,
+          "transferSize": 0,
+          "encodedBodySize": 357952
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/sale.wav",
+          "duration": 2.5999999940395355,
+          "transferSize": 9944,
+          "encodedBodySize": 9644
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/world-CcBGIqnu.js",
+          "duration": 56.30000001192093,
+          "transferSize": 6906958,
+          "encodedBodySize": 6906658
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/shadowMap.fragment-o1vKYPjV.js",
+          "duration": 7.199999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/shadowMap.vertex-CU7Eayun.js",
+          "duration": 7.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/helperFunctions-Cz1XcZ-o.js",
+          "duration": 5.399999976158142,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/meshUboDeclaration-IJrH7XgR.js",
+          "duration": 7.0999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/depthBoxBlur.fragment-ZEIIk1ib.js",
+          "duration": 7.0999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/shadowMapFragmentSoftTransparentShadow-CAAs8d9N.js",
+          "duration": 7.300000011920929,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/shop-floor-contact.png",
+          "duration": 13,
+          "transferSize": 300,
+          "encodedBodySize": 345419
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v10/botanical-print-atlas.png",
+          "duration": 18.30000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 2441923
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/central-contact-c29.png",
+          "duration": 12.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 255440
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/honey-oak-albedo.png",
+          "duration": 17.399999976158142,
+          "transferSize": 300,
+          "encodedBodySize": 2072359
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v10/floor-colour.png",
+          "duration": 10.5,
+          "transferSize": 300,
+          "encodedBodySize": 43236
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v10/cloth-weave-basecolor.png",
+          "duration": 11.299999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 3143
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v10/hair-strand-basecolor.png",
+          "duration": 13.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 24949
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v10/hair-strand-normal.png",
+          "duration": 14.199999988079071,
+          "transferSize": 300,
+          "encodedBodySize": 54909
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v10/timber-normal.png",
+          "duration": 15.599999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 71706
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v10/plaster-normal.png",
+          "duration": 16.30000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 273120
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/oak-floor-albedo.png",
+          "duration": 17.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 28472
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/oak-floor-normal.png",
+          "duration": 17.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 16041
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v10/linen-normal.png",
+          "duration": 26.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 3423
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/oak-floor-orm.png",
+          "duration": 27.30000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 11221
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/broadleaf-albedo.png",
+          "duration": 27.5,
+          "transferSize": 300,
+          "encodedBodySize": 43097
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/celadon-albedo.png",
+          "duration": 53.5,
+          "transferSize": 300,
+          "encodedBodySize": 57770
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/celadon-normal.png",
+          "duration": 53.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 15322
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/celadon-orm.png",
+          "duration": 59.30000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 46666
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/petal-form-values-c34.png",
+          "duration": 59.5,
+          "transferSize": 300,
+          "encodedBodySize": 4684
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/wicker-albedo.png",
+          "duration": 59.5,
+          "transferSize": 300,
+          "encodedBodySize": 57221
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/wicker-normal.png",
+          "duration": 59.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 13085
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/wicker-orm.png",
+          "duration": 59.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 13589
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/display-oak-albedo.png",
+          "duration": 70.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 74503
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/display-oak-normal.png",
+          "duration": 70.60000002384186,
+          "transferSize": 300,
+          "encodedBodySize": 20313
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/display-journal-cover.png",
+          "duration": 84.90000000596046,
+          "transferSize": 300,
+          "encodedBodySize": 2171800
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/display-oak-orm.png",
+          "duration": 70.7999999821186,
+          "transferSize": 300,
+          "encodedBodySize": 68139
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/display-linen-albedo.png",
+          "duration": 71.59999999403954,
+          "transferSize": 300,
+          "encodedBodySize": 220290
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/display-linen-normal.png",
+          "duration": 70.5,
+          "transferSize": 300,
+          "encodedBodySize": 2025
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/misaki-skin.png",
+          "duration": 73,
+          "transferSize": 300,
+          "encodedBodySize": 16396
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/display-linen-orm.png",
+          "duration": 73.59999999403954,
+          "transferSize": 300,
+          "encodedBodySize": 13498
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/misaki-eyes.png",
+          "duration": 77.7999999821186,
+          "transferSize": 300,
+          "encodedBodySize": 82867
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/linen-form-values-c34.png",
+          "duration": 78.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 232512
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/visitor-a-skin.png",
+          "duration": 77.40000000596046,
+          "transferSize": 300,
+          "encodedBodySize": 10503
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/knit-albedo.png",
+          "duration": 77.59999999403954,
+          "transferSize": 300,
+          "encodedBodySize": 25915
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/knit-normal.png",
+          "duration": 79.09999999403954,
+          "transferSize": 300,
+          "encodedBodySize": 241646
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/knit-orm.png",
+          "duration": 83.30000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 29940
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/linen-albedo.png",
+          "duration": 85.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 24837
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/linen-orm.png",
+          "duration": 89.30000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 19094
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/canvas-albedo.png",
+          "duration": 89.69999998807907,
+          "transferSize": 300,
+          "encodedBodySize": 35688
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/linen-normal.png",
+          "duration": 91.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 193053
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/canvas-orm.png",
+          "duration": 90.90000000596046,
+          "transferSize": 300,
+          "encodedBodySize": 29865
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/canvas-normal.png",
+          "duration": 91.80000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 106446
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/leather-albedo.png",
+          "duration": 93.10000002384186,
+          "transferSize": 300,
+          "encodedBodySize": 46057
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/leather-normal.png",
+          "duration": 96.7000000178814,
+          "transferSize": 300,
+          "encodedBodySize": 363898
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/leather-orm.png",
+          "duration": 99.10000002384186,
+          "transferSize": 300,
+          "encodedBodySize": 29882
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/rgbdDecode.fragment-BysJSvN7.js",
+          "duration": 28.30000001192093,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/pbr.vertex-BFbr7pof.js",
+          "duration": 13.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/logDepthDeclaration-CfLqupWO.js",
+          "duration": 13.099999994039536,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/pbr.fragment-DfVg0ZQG.js",
+          "duration": 13.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/room-specular-v11-BhPiFlnh.js",
+          "duration": 2.5,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/envTextureLoader-jhKp8A7d.js",
+          "duration": 1.5999999940395355,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/actual-static-room-specular.env",
+          "duration": 1.4000000059604645,
+          "transferSize": 300,
+          "encodedBodySize": 137558
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/table-reflection-v11-rF6i1Wuj.js",
+          "duration": 9.400000005960464,
+          "transferSize": 300,
+          "encodedBodySize": 0
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/soft-window-specular.env",
+          "duration": 2.4000000059604645,
+          "transferSize": 300,
+          "encodedBodySize": 41008
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/stoneware-albedo.png",
+          "duration": 8.200000017881393,
+          "transferSize": 300,
+          "encodedBodySize": 1561449
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/stoneware-normal.png",
+          "duration": 6.899999976158142,
+          "transferSize": 300,
+          "encodedBodySize": 6688
+        },
+        {
+          "name": "http://127.0.0.1:4519/assets/native-v11/stoneware-orm.png",
+          "duration": 7.299999982118607,
+          "transferSize": 300,
+          "encodedBodySize": 33592
+        }
+      ]
+    },
+    "limits": "One real UI buy/reload in fresh isolated Sandbox. Not settlement, handoff, full stock cycle, Low/Reduce Motion, physical GPU/FPS or final art acceptance."
+  },
+  "postprocessing": {
+    "referenceShopCrop": [
+      0,
+      0,
+      1185,
+      1024
+    ],
+    "actualRoomCrop": [
+      76,
+      118,
+      1390,
+      1096
+    ],
+    "roomHeight": 480,
+    "backgroundCrop": [
+      395,
+      160,
+      1270,
+      545
+    ],
+    "operations": "only crop, uniform Lanczos resize and captions outside source pixels; raw screenshots retained"
+  },
+  "exploratoryExcluded": [
+    234,
+    235,
+    236,
+    237,
+    239,
+    240,
+    242,
+    243
+  ],
+  "scopeLimits": "No final target acceptance, C37 material gate/default adoption, fresh full stock cycle/settlement/handoff/Low/ReduceMotion/five-locale narrow UI/hidden-tab/physical GPU/audio/native certification. Those C36 results remain historical. No public Site or owner save accessed."
+}

@@ -1,0 +1,16 @@
+{
+  "equal": true,
+  "files": {
+    "assets/authoring/native-v11/display-quality-materials.json": "7fa6618cdb397c625d2d8c0036e195c98fcace6cac75651110eb97357e919c46",
+    "assets/masters/native-v11/stoneware-albedo.png": "d3d9ac939e4d7da7a356eb1ef52168acc50e137886dee0239dd335a7469afb13",
+    "assets/masters/native-v11/stoneware-normal.png": "2f9751817214fd4977bc8c276f44acdd06dda58c66639a7f637146401a9011dc",
+    "assets/masters/native-v11/stoneware-orm.png": "ee83c178ae1ab030804268cdf315c0a6e8590462532d25a60b4f170c616bbafb",
+    "assets/masters/native-v11/display-linen-albedo.png": "1cb751e243036845a1e4823ed59eaa7720699494ab90c46d2c82db7b63fa55cc",
+    "assets/masters/native-v11/display-linen-normal.png": "1ddca02ca7781556c9edca20ccedfd9ce186b08fd2b31e838642c4c1ce5b7c82",
+    "assets/masters/native-v11/display-linen-orm.png": "acccac2e8a781bea1f12a64f5bdd22a9d16b395cea313f7e464035275e2855d6",
+    "assets/masters/native-v11/display-oak-albedo.png": "697422d30122b3af106ea77373820e9584bf0d12baf713439b13055acbf48852",
+    "assets/masters/native-v11/display-oak-normal.png": "8eacaecd7703a7ee0413c9365bc0b873cb751613f6106a7753244f32362c9d6e",
+    "assets/masters/native-v11/display-oak-orm.png": "36121714f136481966bbdfc042c918cb3868b3c8b7eb9dcdeae10135b77f068f"
+  },
+  "method": "Regenerated deterministic field maps, exact retained generated albedo copy; editable Blender blends are not claimed byte-reproducible"
+}

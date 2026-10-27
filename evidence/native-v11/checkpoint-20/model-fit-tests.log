@@ -1,0 +1,14 @@
+✔ floor blade is a finite closed curved surface with correct two-sided outward normals and preserved outline scale (4.021813ms)
+✔ woven cover is hollow, planted at ground and bounded, while all seven wind pivots and accepted canopy/dressing are exact (95.009608ms)
+✔ portable planter base preserves actual woven UV/normal/ORM images and remains a fixture, never a catalog grant (5.04658ms)
+✔ all28 curved leaf bases meet the actual curved stem surface instead of floating on a straight guide (2.659654ms)
+✔ denser connected plant stays inside the original canopy radius rather than widening into customer paths (18.096238ms)
+✔ curved stems enter the retained soil without moving their wind anchors (3.700504ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 518.741917

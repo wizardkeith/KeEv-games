@@ -1,0 +1,60 @@
+{
+  "htmlClass": "",
+  "bodyClass": "",
+  "hud": [
+    {
+      "class": "top",
+      "hidden": false,
+      "display": "flex",
+      "visibility": "visible",
+      "opacity": "1",
+      "bounds": {
+        "x": 36,
+        "y": 24,
+        "width": 1368,
+        "height": 123.34375,
+        "top": 24,
+        "right": 1404,
+        "bottom": 147.34375,
+        "left": 36
+      },
+      "text": "◇原目標重建 · 全店實拍池袋 · 生活選物店休息中沙盒現金¥38,40010月21日 10:00 · Tokyo"
+    },
+    {
+      "class": "shop-controls",
+      "hidden": false,
+      "display": "flex",
+      "visibility": "visible",
+      "opacity": "1",
+      "bounds": {
+        "x": 1230.859375,
+        "y": 1103.40625,
+        "width": 181.140625,
+        "height": 74.59375,
+        "top": 1103.40625,
+        "right": 1412,
+        "bottom": 1178,
+        "left": 1230.859375
+      },
+      "text": "獨立測試存檔 · 不參與排行開始營業＋1 小時"
+    },
+    {
+      "class": "dock",
+      "hidden": false,
+      "display": "grid",
+      "visibility": "visible",
+      "opacity": "1",
+      "bounds": {
+        "x": 36,
+        "y": 1107.609375,
+        "width": 390,
+        "height": 70.390625,
+        "top": 1107.609375,
+        "right": 426,
+        "bottom": 1178,
+        "left": 36
+      },
+      "text": "店務入貨報告手記更多"
+    }
+  ]
+}

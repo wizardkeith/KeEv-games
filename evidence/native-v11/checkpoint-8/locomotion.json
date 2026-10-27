@@ -1,0 +1,62 @@
+{
+  "basis": "actual runtime authoring positions / indexed triangles transformed by Babylon matrices; output GLB parity covered by native-characters test",
+  "visualClaim": false,
+  "units": "metres; seconds; radians",
+  "stanceToleranceMetres": 0.002,
+  "skirtSeamToleranceMetres": 0.001,
+  "straightSupport": {
+    "maximumSoleCentroidDriftMetres": 1.2392248116555038e-7,
+    "contacts": 9,
+    "leftSwingFrames": 198,
+    "rightSwingFrames": 154
+  },
+  "routeCapacity1": {
+    "maximumSoleCentroidDriftMetres": 9.844053889801297e-7,
+    "sawTurn": true,
+    "sawStop": true,
+    "frames": 4200
+  },
+  "routeCapacity2": {
+    "maximumSoleCentroidDriftMetres": 9.844053889801297e-7,
+    "sawTurn": true,
+    "sawStop": true,
+    "frames": 4200
+  },
+  "straightSkirt": {
+    "testedVertices": 29245,
+    "maximumOutsideMetres": 0,
+    "minimumZClearanceMetres": 0.002762739017976412,
+    "fullLegAndShinMeshesRetained": true
+  },
+  "turnSkirt": {
+    "testedVertices": 36512,
+    "maximumOutsideMetres": 0,
+    "minimumZClearanceMetres": 0.002382466359579949,
+    "worst": {
+      "n": 3276,
+      "side": "left",
+      "point": [
+        -0.12163397656932862,
+        0.4709091078910741,
+        -0.18276789857759557
+      ],
+      "range": [
+        -0.18515036493717552,
+        0.17759892529586874
+      ],
+      "root": {
+        "id": "visitor-b",
+        "enabled": true,
+        "x": 3.05,
+        "z": 4.05,
+        "yaw": 3.324925986923127,
+        "speed": 0,
+        "distance": 13.872307755644382,
+        "state": "leaving",
+        "browseProgress": 1,
+        "hasBag": false,
+        "handoverProgress": 0
+      }
+    }
+  }
+}

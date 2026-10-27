@@ -9,20 +9,20 @@ function corners(min:Point,max:Point):Point[]{return [min[0],max[0]].flatMap(x=>
 export const nativeViewContract={
  id:'native.view.v3.1',alpha:-Math.PI/4,alphaRange:[-Math.PI/4-.27,-Math.PI/4+.27] as const,
  beta:50*Math.PI/180,betaRange:[45*Math.PI/180,55*Math.PI/180] as const,
- shopTarget:[.50,1,.30] as Point,staffTarget:[2.55,1.02,-.73] as Point,
+ shopTarget:[.70,1.15,0] as Point,staffTarget:[2.55,1.02,-.73] as Point,
  margin:.965,guard:1.002,
  criticalBoxes:[
-  {id:'display.1',min:[-2.85,.08,-2.05] as Point,max:[-1.15,1.34,-.95] as Point},
-  {id:'display.2',min:[-.75,.08,-.65] as Point,max:[.95,1.34,.45] as Point},
-  {id:'display.3',min:[-2.85,.08,.55] as Point,max:[-1.15,1.34,1.65] as Point},
-  {id:'counter-and-staff',min:[1.62,.08,-2.01] as Point,max:[3.58,1.67,-.35] as Point},
+  {id:'display.1',min:[-3.31,.08,-2.10] as Point,max:[-1,1.70,-.90] as Point},
+  {id:'display.2',min:[-.9,.08,-.70] as Point,max:[1.1,1.70,.50] as Point},
+  {id:'display.3',min:[-3.31,.08,.50] as Point,max:[-1,1.70,1.70] as Point},
+  {id:'counter-and-staff',min:[.46,.08,-2.01] as Point,max:[3.58,1.78,-.35] as Point},
   {id:'doorway',min:[2.21,.08,3.08] as Point,max:[3.89,2.71,3.36] as Point},
   {id:'entry-visitor',min:[2.68,.08,2.55] as Point,max:[4.60,1.67,4.42] as Point},
   {id:'service-visitor',min:[3.00,.08,-1.04] as Point,max:[3.82,1.67,-.25] as Point},
-  {id:'window',min:[-4.58,.82,-1.65] as Point,max:[-4.20,2.84,1.65] as Point},
+  {id:'window',min:[-4.58,.82,-2.22] as Point,max:[-4.20,2.84,2.22] as Point},
   {id:'back-shelves',min:[-3.45,1.20,2.50] as Point,max:[1.85,2.60,3.17] as Point},
  ] as const,
- staffBox:{min:[1.90,.08,-2.01] as Point,max:[3.35,1.72,-.22] as Point},
+ staffBox:{min:[1.90,.08,-2.01] as Point,max:[3.35,1.78,-.22] as Point},
  note:'Fit excludes decorative upper wall/plinth only. Preserve user zoom relative to this fit when the safe viewport changes; ordinary draw must not reset camera.',
 } as const;
 export const nativeShopHull:readonly Point[]=Object.freeze(nativeViewContract.criticalBoxes.flatMap(b=>corners(b.min,b.max)));
@@ -46,12 +46,14 @@ export function nativeCameraFrame(aspect:number,fov=.8,view:NativeView='shop'){
 /** A local face fill preserves the authored linear colour and soft surface
  * shading; restrict it to face skin/ink meshes, not all scene materials. */
 export const nativeLighting={
- id:'native.light.v9',
- key:{color:'#FFE0B7',intensity:2.65,direction:[.78,-.71,.32] as const,position:[-8,8,-2] as const},
- fill:{color:'#DFE9EF',ground:'#B6A38C',intensity:.42},
+ id:'native.light.v11-slice',
+ key:{color:'#FFF0D3',intensity:3.70,direction:[.80,-.62,.18] as const,position:[-8,8,-2] as const},
+ fill:{color:'#DFE9EF',ground:'#B6A38C',intensity:.27,direction:[.15,.75,-.55] as const},
  faceFill:{color:'#FFF0DC',ground:'#B9B6B0',intensity:.43,direction:[.12,.35,-1] as const,parts:['head','eye-left','eye-right','eyelid-left','eyelid-right','brow-left','brow-right','mouth'] as readonly string[],roles:['skin','ink'] as readonly string[]},
- shadow:{size:2048,normalBias:.0035,bias:.0005,darkness:.16},
- exteriorFill:{color:'#C3DCE4',ground:'#839D99',intensity:.42},
+ shadow:{size:2048,normalBias:.010,bias:.0007,darkness:.16,lightSizeUVRatio:.035},
+ exteriorFill:{color:'#C8E1EF',ground:'#9CAF8F',intensity:.68},
+ // Bounded art-directed bounce proxies; point/spot candela are not directional lux.
+ practicals:[{id:'cashier',position:[3.05,2.75,-1.05],direction:[0,-1,0],color:'#FFD5A7',intensity:20.0,angle:1.52},{id:'central',position:[-2.5,3,-.3],direction:[.80,-.62,.18],color:'#FFF0D3',intensity:24.0,angle:1.62}] as const,
  exposure:1,
- note:'V9 analytic original room IBL plus stronger directional window light; exposure stays 1. Standard PBR fallback. No tone-map/exposure boost, bloom or dynamic reflection. Face fill includes only face skin/ink meshes; hair/cloth retain key/fill volume. Warm window key, restrained cool sky and a separate cool exterior fill; assess actual WebGL evidence for visual acceptance.',
+ note:'C27 existing central bounce proxy now follows window direction; unchanged shadow/global exposure/fill. C23 coherent higher window daylight, restrained global fill, retained service-dock warm focal bounce and cool layered exterior, original room IBL, soft contact-hardening shadows and actual floor AO. ACES exposure1/contrast1.06. No bloom or dynamic reflection. Face fill remains restricted to skin/ink. Actual game render, not metadata or tests, determines visual fidelity.',
 } as const;

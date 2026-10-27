@@ -1,0 +1,13 @@
+{
+  "allApprovedGeometryMastersByteIdentical": true,
+  "locks": {
+    "assets/masters/native-v11/display-quality/flower-spray-c33.json": "fa8736d8dc37a7d78cc66ad893d9ffb7cde28d7dde712cfa9bfca99e763b5c06",
+    "assets/masters/native-v11/display-quality/flower-spray-c33.blend": "f5bc44bfe72241daa758ca6321ab7bb536d6f901eaf4c8d70de5201277c31b6b",
+    "assets/masters/native-v11/display-quality/linen-c32.json": "5c5ef77a29f4900985ddf611198adb0ac3e5b309a9148423c95270a455fe9d33",
+    "assets/masters/native-v11/display-quality/linen-c32.blend": "4c4509692892b3f20ca61ddab41b765f7a3f29747f856f91f1bd1087e5720064",
+    "src/art/central-composition-v11.ts": "f3bafaca37ee5b4c0050929b2b772baf01368cf1f53dd4a4a28dd8f91ce745e9",
+    "public/assets/native-v11/soft-window-specular.env": "ab2ddab4e6f5b7e64370f7ba2fb63497326a4f19b669a5ccb459cfef8e2f3258",
+    "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114"
+  },
+  "existingGLBBytesUnchanged": 55
+}

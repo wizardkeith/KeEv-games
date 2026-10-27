@@ -1,0 +1,28 @@
+{
+  "verdict": "NOT ADOPTED as runtime or primary fidelity solution; original target still not met",
+  "runtimeBaseline": "8655ff97595325022453f3cc62cc5f90441dd8ab /applicationfc0ae6df2dd248d669c926d8333efcc5774037b3",
+  "experimentBuild": "79,VITE_SELF_AO=1,actualgame14coloredmeshes/4456vertices/5isolatedparts/21surfaces",
+  "method": "Original Cycles32sample localAO per rigid garment assembly; artist-directed diffuse vertex tint,not fullGI. No moving limb-to-torso shadow,no geometry/UV/pivot/index changes. Prototype did not export COLOR_0 to native GLBs and is not a portable applied release.",
+  "actualVisualAssessment": "Same-facing actualgame normal/closer view,camera/root/yaw match and pre/postcapture remain browsing. Local garment shadow applied but visible improvement too slight;mostly extra darkening,not convincing reference drape/material. Textile gate NOT passed.",
+  "failedCaptures": [
+    "Initial79single frame leaving/turned excluded",
+    "First camera-before-open hit still-turning yaw.88→pi/2;strictguard correctlyfailed,excluded. Finalvalid2 waits naturalcompleted yaw and checks pre/postsamebodyroot. No pose/time injection."
+  ],
+  "delivery": "Editable bake/input/values retained under assets/masters/native-v11/experiments;runtime patch/glue retained here. Default runtime restored to baseline;no newreleasepackage.",
+  "nextMethod": "High-detail garment rest sculpt/cloth authoring and baked detail to bounded playable mesh;actualgame before adoption;retain accepted hair/shoulder/rig/camera/light/grouping.",
+  "wholeSceneRemaining": "Richer materials/focal light,less regularmerchandise,finer botanical/exterior depth,softer contact modelling;not onlytextile.",
+  "limits": "CloudSwiftShader only;no physicalGPU/FPS/audio/native acceptance. PublicV17unchanged,PR8draft/no merge/deploy/userChrome/Normal/Unity/shutdown/content expansion.",
+  "fileSha256": {
+    "results.json": "5f71dc29a1b06c7c9b1dfc346e89b254c972ebcbfed14d2fabf267010c096ac4",
+    "runtime-experiment.patch": "b9329f7d95259001486a6ffae7341462fd2b3c3fb270a19f90b73d7d2f1d4fe7",
+    "before-female-in-game.png": "4bce86b16b447fcd1ffe05625d26fe2900348a0437bc3e7ec90fd542344be98e",
+    "self-ao-v11.ts.txt": "7b44da88d3a9f1969fcaa8a917630089e5278d173bad0faa47d00d296705ea4a",
+    "after-female-in-game.png": "e2bc3a10191a3daf2585ff81fba4d92e614355a397bb76965a9e1f0d161ecb7c",
+    "bake-provenance.json": "2b3210eb4ec2ea8a8c2d931d5e1723ed75839a05a9b599b2e6c7e243102108ef"
+  },
+  "masterSha256": {
+    "assets/masters/native-v11/experiments/c12-cloth-input.json": "a0ee69e780e94d7097b0c024444a9e141077601a6ecae6f6b649d9814c6ea7b5",
+    "assets/masters/native-v11/experiments/c12-self-ao.json": "5403096700be3a6f32b1288da3a1a13ddd3b496edb3cf5be88e628592c528bda",
+    "assets/masters/native-v11/experiments/c12-self-ao.blend": "9ecfc45aeb875b94e73d627f09b000f6c5bd0cbaae183ffe45326b09ee25a719"
+  }
+}

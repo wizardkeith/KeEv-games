@@ -1,0 +1,194 @@
+{
+  "method": "Public CDP Page.startScreencast, everyNthFrame1; installed /usr/bin/ffmpeg encoder",
+  "frames": [
+    {
+      "name": "000000.jpg",
+      "timestamp": 1793058737.867705,
+      "received": 1793058737.881
+    },
+    {
+      "name": "000001.jpg",
+      "timestamp": 1793058740.326808,
+      "received": 1793058740.336
+    },
+    {
+      "name": "000002.jpg",
+      "timestamp": 1793058742.780469,
+      "received": 1793058742.788
+    },
+    {
+      "name": "000003.jpg",
+      "timestamp": 1793058745.187849,
+      "received": 1793058745.207
+    },
+    {
+      "name": "000004.jpg",
+      "timestamp": 1793058747.607802,
+      "received": 1793058747.619
+    },
+    {
+      "name": "000005.jpg",
+      "timestamp": 1793058750.150675,
+      "received": 1793058750.16
+    },
+    {
+      "name": "000006.jpg",
+      "timestamp": 1793058752.524795,
+      "received": 1793058752.537
+    },
+    {
+      "name": "000007.jpg",
+      "timestamp": 1793058755.027563,
+      "received": 1793058755.053
+    },
+    {
+      "name": "000008.jpg",
+      "timestamp": 1793058757.381033,
+      "received": 1793058757.39
+    },
+    {
+      "name": "000009.jpg",
+      "timestamp": 1793058759.631084,
+      "received": 1793058759.655
+    },
+    {
+      "name": "000010.jpg",
+      "timestamp": 1793058761.974765,
+      "received": 1793058761.986
+    },
+    {
+      "name": "000011.jpg",
+      "timestamp": 1793058764.354602,
+      "received": 1793058764.363
+    },
+    {
+      "name": "000012.jpg",
+      "timestamp": 1793058766.704298,
+      "received": 1793058766.713
+    },
+    {
+      "name": "000013.jpg",
+      "timestamp": 1793058768.997068,
+      "received": 1793058769.004
+    },
+    {
+      "name": "000014.jpg",
+      "timestamp": 1793058771.295828,
+      "received": 1793058771.308
+    },
+    {
+      "name": "000015.jpg",
+      "timestamp": 1793058773.612938,
+      "received": 1793058773.621
+    },
+    {
+      "name": "000016.jpg",
+      "timestamp": 1793058780.603704,
+      "received": 1793058780.614
+    },
+    {
+      "name": "000017.jpg",
+      "timestamp": 1793058780.623002,
+      "received": 1793058780.629
+    },
+    {
+      "name": "000018.jpg",
+      "timestamp": 1793058780.679846,
+      "received": 1793058780.687
+    },
+    {
+      "name": "000019.jpg",
+      "timestamp": 1793058782.917983,
+      "received": 1793058782.926
+    },
+    {
+      "name": "000020.jpg",
+      "timestamp": 1793058785.295155,
+      "received": 1793058785.306
+    },
+    {
+      "name": "000021.jpg",
+      "timestamp": 1793058787.809552,
+      "received": 1793058787.817
+    },
+    {
+      "name": "000022.jpg",
+      "timestamp": 1793058792.600009,
+      "received": 1793058792.613
+    },
+    {
+      "name": "000023.jpg",
+      "timestamp": 1793058795.150585,
+      "received": 1793058795.158
+    },
+    {
+      "name": "000024.jpg",
+      "timestamp": 1793058799.593121,
+      "received": 1793058799.601
+    },
+    {
+      "name": "000025.jpg",
+      "timestamp": 1793058799.683388,
+      "received": 1793058799.692
+    },
+    {
+      "name": "000026.jpg",
+      "timestamp": 1793058801.981625,
+      "received": 1793058801.99
+    },
+    {
+      "name": "000027.jpg",
+      "timestamp": 1793058804.294659,
+      "received": 1793058804.301
+    },
+    {
+      "name": "000028.jpg",
+      "timestamp": 1793058806.627688,
+      "received": 1793058806.653
+    },
+    {
+      "name": "000029.jpg",
+      "timestamp": 1793058808.986767,
+      "received": 1793058808.996
+    },
+    {
+      "name": "000030.jpg",
+      "timestamp": 1793058811.478463,
+      "received": 1793058811.486
+    },
+    {
+      "name": "000031.jpg",
+      "timestamp": 1793058814.011939,
+      "received": 1793058814.02
+    },
+    {
+      "name": "000032.jpg",
+      "timestamp": 1793058816.87666,
+      "received": 1793058816.884
+    },
+    {
+      "name": "000033.jpg",
+      "timestamp": 1793058819.925632,
+      "received": 1793058819.951
+    },
+    {
+      "name": "000034.jpg",
+      "timestamp": 1793058822.852322,
+      "received": 1793058822.862
+    },
+    {
+      "name": "000035.jpg",
+      "timestamp": 1793058825.686867,
+      "received": 1793058825.7
+    },
+    {
+      "name": "000036.jpg",
+      "timestamp": 1793058833.519775,
+      "received": 1793058833.573
+    }
+  ],
+  "uncut": true,
+  "timeAcceleration": false,
+  "encodedFrameCountIsNotPhysicalGPUFPS": true,
+  "bundledPlaywrightRecorder": "Unavailable: official FFmpeg helper CDN download returned403; no alternate download attempted"
+}

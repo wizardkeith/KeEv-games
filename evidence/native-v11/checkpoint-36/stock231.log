@@ -1,0 +1,16 @@
+00-empty real stock0; contact target renders1
+01-three real stock3; contact target renders2
+02-eight real stock8; contact target renders3
+03-eight-reload real stock8; contact target renders1
+AssertionError [ERR_ASSERTION]: actual settlement cash matches committed report delta
+
+1650 !== 780
+
+    at /workspace/game-v10-art-life/tools/v11-table-stock-cycle-qa.cjs:10:535 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1650,
+  expected: 780,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

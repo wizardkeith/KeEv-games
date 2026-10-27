@@ -1,0 +1,16 @@
+✔ hand-scale pencil is continuous at shaft, ferrule, wood and graphite; all parts retain the existing axis (5.52951ms)
+✔ every owned pencil is separate and rests on actual table or riser geometry for all three tables and counts (429.760104ms)
+✔ curated eight-vase stock remains eight real separate units on actual support, with deterministic reload geometry (280.91017ms)
+✔ one real unit of each existing product rests above actual wood/cloth instead of inside a guessed riser height (391.115096ms)
+✔ vase buy/sale count changes preserve the surviving actual mesh prefix without rearranging existing units (222.966504ms)
+✔ counter and central vignette relocate existing decoration without inventory grants or new samples; actual bases touch support (34.241597ms)
+✔ reserved central vignette leaves every real SKU sample within tabletop and outside decorative area without inventing units (639.257896ms)
+✔ actual central stock meshes retain separate physical footprints and measured stack/tier support (77.903671ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1227.688851

@@ -1,0 +1,28 @@
+{
+  "sourceBase": "85ff32d64b127b133e6542344e27be225fa4fb0b",
+  "finalApplication": "104845d1af897902297fd759efd699bc8a7eeb38",
+  "sameCameraAndEconomy": true,
+  "changes": {
+    "185": "Same C28 materials/contact; VITE_V11_TABLE_REFLECTION=off retains original room reflection",
+    "186": "Same geometry/camera/diffuse/materials/contact; original C28 aperture reflection ON",
+    "187": "Original room radiance retained plus same aperture; body darkening reduced, normal gain insufficient",
+    "188": "Aperture radiance multiplied4, other187inputs fixed; mainly small highlights, rejected",
+    "190": "188 plus only main vessel coat .70/.58; insufficient normal-scale gain, rejected, .22/.38 restored",
+    "191": "Existing room plus broad window/room-bounce cos^2 radiance[6,6.4,7]; original .22/.38 coat; same actual vertices/indices/camera/diffuseSH; env byte-equal final192"
+  },
+  "radianceDiagnosis": {
+    "originalRoomRGBMean": [
+      0.804,
+      0.696,
+      0.603
+    ],
+    "oldC28RGBMean": [
+      0.386,
+      0.35,
+      0.316
+    ],
+    "scope": "Decoded mip0 cube pixel means, diagnostic of lost background reflected radiance, not a perceptual quality score"
+  },
+  "images": "Actual production game via same real UI exported Sandbox import, no pose/scene/state injection. Crops/comparisons only resize original game pixels with labels; not generated concept or studio render. Character idle phase may vary.",
+  "limits": "191 improved low-frequency vase response observed by implementer, not independently accepted; flowers/cloth/whole original target remain open. No full High flow inferred for diagnostic variants."
+}

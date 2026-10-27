@@ -1,0 +1,48 @@
+{
+  "intent": {
+    "id": "v11.c41.window-bounded-daylight.v2",
+    "mode": "aperture",
+    "defaultAdopted": false,
+    "position": [
+      -6.8,
+      3.1,
+      0
+    ],
+    "target": [
+      -4.47,
+      1.84,
+      0
+    ],
+    "aperture": {
+      "x": -4.47,
+      "minY": 0.925,
+      "maxY": 2.755,
+      "minZ": -2.055,
+      "maxZ": 2.055,
+      "softEdge": 0.1
+    },
+    "angle": 1.9,
+    "intensity": 280,
+    "color": "#FFF2DC",
+    "residualIntensity": 0.7,
+    "shadowSize": 1024,
+    "shadowSoftness": 0.08,
+    "textureSize": 128,
+    "maxLights": 6,
+    "limits": "One authoring candidate; actual3D aperture projection and dynamic shadow casters, not C30 diffuse replacement, screenshot overlay, final-art or public adoption"
+  },
+  "mask": {
+    "path": "assets/masters/native-v11/lighting-c41/window-aperture.rgba",
+    "sha256": "f2c9a4cd89cd63eafb62fd9b21d44f53d146dc7e63d4101c7cd78da139df6988",
+    "encoding": "128x128 RGBA8 linear scalar; RGB equal; alpha255; procedural real-window ray projection, not a scene/reference photo"
+  },
+  "sources": {
+    "src/art/scene-window-light-v11.ts": "4f17d4387bc237870d997ce0b9da10fbaad08fb2d0f9e3878455cd930c942c3d",
+    "src/world.ts": "c7226097f9d7c5103077cb211f80107fba1dbaff72919abefbd2c9d5bcc949a7",
+    "vite.config.ts": "c5c3bb922577283a6ab74f9639d4d8c535b8b9444c187d3699e7cca3334b4397",
+    "tools/export-v11-scene-window.ts": "da4fb6922ff22188f7c354409d2e29f5a363eec716f04421983e91292a221434"
+  },
+  "baseline": "453133277ce3c16a687bcbe5987b2528362cdfcb C40 independently passed development adoption",
+  "native": "Recreate one exterior-only original sun, residual indoor directional, aperture-cookie spotlight with live dynamic shadow casters and six-light PBR limit. Existing scene geometry, camera, albedo, IBL/reflection and exposure unchanged.",
+  "limits": "Explicit authoring-only candidate, no whole-target acceptance, default adoption or publication."
+}

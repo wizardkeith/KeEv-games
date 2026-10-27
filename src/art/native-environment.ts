@@ -1,3 +1,5 @@
+import {buildV11Room,buildV11Counter,buildV11Display,buildV11Exterior} from './fixtures-v11';
+import {buildV11Plant} from './shop-v11';
 /** Native v3 scene authoring. Metres, right-handed Y-up; material colours are sRGB.
  * Recipes feed the actual world adapter and can be rebuilt without Babylon.
  * The historical W1.1A recipe remains intact for its frozen master exports.
@@ -161,7 +163,7 @@ export function legacyV9_nativeDisplayRecipe(variant=0):NativeEnvironmentPart[]{
  ];}
 
 // Active V10 assets, preserving structural contracts and named animation roots.
-export const nativeRoomRecipe=()=>buildV10Room(nativeDoorContract);
-export const nativeCounterRecipe=buildV10Counter,nativeDisplayRecipe=buildV10Display;
+export const nativeRoomRecipe=()=>buildV11Room(nativeDoorContract);
+export const nativeCounterRecipe=buildV11Counter,nativeDisplayRecipe=buildV11Display;
 export const doorLeafRecipe=()=>buildV10Door(nativeDoorContract.leafWidth),doorSignRecipe=buildV10Sign;
-export const plantParts=buildV10Plant,exteriorRecipe=buildV10Exterior;
+export const plantParts=buildV11Plant,exteriorRecipe=buildV11Exterior;

@@ -1,0 +1,36 @@
+{
+  "application": "ba3fa07d849e12af80838b472e1f65f7bc10aac4",
+  "srcTree": "2853661ffbd89baefc7f7835b16574597792e423",
+  "build": 163,
+  "tests": 235,
+  "glbs": 146,
+  "protectedFiles": 305,
+  "nativeRebuildFiles": 39,
+  "runtimePayloadFiles": 174,
+  "stylingAndCanopyTriangles": 15990,
+  "stylingMaterialGroups": 17,
+  "target": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+  "targetSHA256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+  "crop": {
+    "rect": [
+      620,
+      420,
+      340,
+      300
+    ],
+    "exactSourcePixelsVerified": true,
+    "originalCameraUnknown": true
+  },
+  "uncutSeconds": 200.8,
+  "CDPFrames": 150,
+  "excerpt": {
+    "sourceStartSeconds": 139,
+    "actualEncodedSeconds": 27.96,
+    "file": "normal-flow163/continuous-from139-27.960s.webm",
+    "limits": "No cut or speed change inside excerpt. Sparse VFR endpoint yields shorter encoded duration than requested29second source window."
+  },
+  "realFlow": "Fresh Sandbox actual purchases/3placements/greeting/one UI hour settlement/A cashier handoff/readable aggregate18item+8400gross margin/exit/staffreturn/reload; no owner save/state/pose injection",
+  "normal": "Isolated baseline unchanged",
+  "artAccepted": false,
+  "limits": "Cloud software WebGL/SwiftShader with sparse CDP recording; not physicalGPU/FPS/audio/native/continuous smoothness or fresh fullB/hidden-tab/closure certification. No merge,Site save/deploy,release archive,Library retry,owner Chrome/Unity/shutdown."
+}

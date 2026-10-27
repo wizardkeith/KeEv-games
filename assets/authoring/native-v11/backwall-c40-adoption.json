@@ -1,0 +1,42 @@
+{
+  "forms": {
+    "id": "v11.c38.unequal-trailers-window-opening.v2",
+    "mode": "shape",
+    "defaultAdopted": true,
+    "scope": "Only fixed back-wall showroom dressing and right-window exterior; C36 table/cashier/camera/lights/routes unchanged",
+    "grayColor": "#A5A5A5",
+    "limits": "C38 narrow form PASS; development adoption only, no whole-target acceptance, economic authority or public adoption"
+  },
+  "material": {
+    "id": "v11.c39.backwall-window-material",
+    "mode": "values",
+    "active": true,
+    "defaultAdopted": true,
+    "geometry": "Exact passed C38/253 positions, normals, UV, counts and camera",
+    "scope": "Back-wall shelf planes versus preserved original merchandise coatings, trailing plants, near window foliage, existing exterior and geometric sky only",
+    "shelf": {
+      "albedo": "/assets/native-v11/display-oak-albedo.png",
+      "tint": "#E4CFAB",
+      "roughness": 0.66,
+      "tableAO": false
+    },
+    "farCrown": {
+      "roughness": 0.925,
+      "thinTransmission": false
+    },
+    "limits": "C39 narrow material PASS; V11 development adoption, not whole-target or public release acceptance"
+  },
+  "reviewedCandidate": "730166bb1e7e54ae0a6f9e89a6658d899d63c64e",
+  "reviewedApplication": "061f9b0e86982020a21b6ce1b6eec161908f0204",
+  "sources": {
+    "src/art/backwall-material-v11.ts": "599be73e5a7478790b3403c4ba4c8f681ac168f743e9035825dca7ac5f20b9e9",
+    "src/art/backwall-forms-v11.ts": "93ad1fc43d12f23f36790050a9ffc5163b23414482bd298d6038d20e86bce5e4",
+    "vite.config.ts": "30769c7acbe4e63658bfe7c8976f8a0b7c0f26b94fbe537d6be8de42562646ed",
+    "tools/export-v11-backwall-adoption.ts": "b499c6258c15c6b1f860ff5547ec3097c477137cec3e4e9573524c6de39e8ccb"
+  },
+  "originalReceipts": {
+    "assets/masters/native-v11/backwall-c38/provenance.json": "811a091c1a52f85da5bb81441f95b401c72a9d1c614a032235e683f9911f589e",
+    "assets/authoring/native-v11/backwall-c39-materials.json": "134ad859f6a6d26d0b7e96c8381e1f969034f794567f06428d70c17b29e1d1c6"
+  },
+  "limits": "Development default only. Whole original target art and public release are not accepted."
+}

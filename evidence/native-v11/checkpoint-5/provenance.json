@@ -1,0 +1,90 @@
+{
+  "status": "IN PROGRESS, original target art NOT accepted. No merge/publication.",
+  "lightingAB": "Actual same-camera playable game, real Sandbox buy/display, reduced motion static comparison. Build40 before vs43 calibrated warm focal bounce proxies; pendant model move experiment rejected/not present. Spot candela not directional lux; no measured physical-light claim.",
+  "vignette": "Actual build47, five existing fixed showroom samples relocated, total35unchanged. Three books measured stacks, one card/one tray measured counter support. Not player inventory; no grants/catalog/economy changes. Central sellable samples still exactlymin(stock,8), real10SKU bounds and noninterpenetration tested.",
+  "motion": "175.017s original uncut actual High/Minimal=false build46. Greeting/real settlement/cashier contact/bag/margin observed, poll+DOM+screenshot, reload same,0errors, isolatedNormal baseline unchanged. Build47 only adjusts central/window floral base/scale and closes tiny decorative vase bottoms; same transaction/actor/lighting code. Do not call it a fresh build47 motion run.",
+  "checks": "182tests/build/validate/replay/asset-check,139GLBs0errors/warnings,305protectedfiles/history.",
+  "remaining": "Male/female customers still largelyV10. Start male hair/shoulder/collar/hands/bag next. Overall style/material/detail/final target gate remains open; cloudSwiftShader not physicalGPU/FPS/audio/native acceptance. Rejected GI remainsoff.",
+  "files": {
+    "replay.log": {
+      "bytes": 421,
+      "sha256": "67beb9a30e2f137d3025faa962d635b85a8275a326918698204bc5e1becbf447"
+    },
+    "validate.log": {
+      "bytes": 599,
+      "sha256": "d8cf77a1e38e0b04929bd0774b8f25dee39e9ff7717ea0b8ef7fe1e5a477369b"
+    },
+    "locomotion.json": {
+      "bytes": 1642,
+      "sha256": "02316d0a033e40b6d9dc2355c88e3f29c7d7d2b20c35e64c85614ec96ac72a45"
+    },
+    "asset-check.log": {
+      "bytes": 2917,
+      "sha256": "717b75eb52540416db3836d88876931b046498ed5624b653c9d090c8d50571d6"
+    },
+    "physical-vignette.log": {
+      "bytes": 515,
+      "sha256": "1edcd9e3373c733b7293f47bc19917affe850da9cc7af4bbaf0c0538817e1054"
+    },
+    "game-vignette-zen.png": {
+      "bytes": 1008893,
+      "sha256": "2fedef547cedc608c8c9de98e1f4891011c32697de160c1a54cd00f27f646789"
+    },
+    "182-tests.log": {
+      "bytes": 23194,
+      "sha256": "442065f8a9e60c92a944b657d62a69421989c4ad6a8eeefede7a1730e70ecc1a"
+    },
+    "game-before-focal-light.png": {
+      "bytes": 1001852,
+      "sha256": "003ffb784871f5870a7eb32748777bbc7bb82ae9d3ffe279c5af5d15ef2280f7"
+    },
+    "render.json": {
+      "bytes": 11110,
+      "sha256": "3c53e16371247f6d34faa5ace8bf31308545604d348044d76cb11af0598e0d0f"
+    },
+    "margin-dom-build46.json": {
+      "bytes": 400,
+      "sha256": "8e271be22b272aabefec5db48a6d0a65005de3a8f70a0272fbc1280714e854f9"
+    },
+    "game-after-focal-light.png": {
+      "bytes": 1006120,
+      "sha256": "a67f6b879d39a162910a948963f9a622e9c7606aa4b050c307b78523208d43e9"
+    },
+    "139-glbs.json": {
+      "bytes": 14514,
+      "sha256": "642488ffc2e99351a23e1bdaafcf5c7a57ff3a9e6da475f4b03bc35bad840ca9"
+    },
+    "game-vignette-normal.png": {
+      "bytes": 871316,
+      "sha256": "ab586573d6f2c1eb5eee55f5c7529055b3e9e72750f59b558c7dcf1d6180c8f7"
+    },
+    "game-margin-build46.png": {
+      "bytes": 670998,
+      "sha256": "cf5ee930e82735064576391f630bcb71f7210fe7e1ae9c383b1f8bbe636a93ad"
+    },
+    "results-build46.json": {
+      "bytes": 619,
+      "sha256": "3077484240d70c8e2f7f1d75a73618fb407b2b0fcb9c14bc6f53643eb93761d0"
+    },
+    "game-cashier-build46.png": {
+      "bytes": 681764,
+      "sha256": "aa02209e0058f86c0ae21fd3e2b3e562d8a78f5856388ba6249ec72069835c89"
+    },
+    "game-uncut-build46.webm": {
+      "bytes": 960559,
+      "sha256": "7f316e56553112f3f2dbba79c324e10095442e6c8b58d4f307c1735868922d6e"
+    },
+    "recording-build46.json": {
+      "bytes": 15320,
+      "sha256": "1024598cd85faadee57b07f6db0e19ea39be668071a3609a12b62cb24f7521f9"
+    },
+    "preservation.json": {
+      "bytes": 15652,
+      "sha256": "702d6c9b405e6a976f4c13a979118b57732ada3ed4df58e405cf09b3a9b55231"
+    },
+    "timeline-build46.json": {
+      "bytes": 1558270,
+      "sha256": "843aee6fc795ef86d4d893887e9d46ab2bab66496d1c45ef5e948a3abd6a92cf"
+    }
+  }
+}

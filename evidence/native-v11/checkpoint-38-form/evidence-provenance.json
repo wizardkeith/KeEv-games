@@ -1,0 +1,70 @@
+{
+  "application": "fbf6dd6859c70844cd45f0b51c283b178e9ee3a9",
+  "actualRuntime": {
+    "id": "v11.c38.unequal-trailers-window-opening.v2",
+    "mode": "gray",
+    "defaultAdopted": false,
+    "scope": "Only fixed back-wall showroom dressing and right-window exterior; C36 table/cashier/camera/lights/routes unchanged",
+    "grayColor": "#A5A5A5",
+    "limits": "Form gate only; no new material standard, target acceptance, economic authority or public adoption"
+  },
+  "actualHTTP": [
+    {
+      "path": "/assets/index-Ce2GV6MS.js",
+      "sha256": "3f91815fa3709b8497980d065205158076a7d7307c04e586f505318248933cc3",
+      "bytes": 171335,
+      "actualHTTPMatchesFrozen": true
+    },
+    {
+      "path": "/assets/index-CiMc3Tjj.css",
+      "sha256": "b72a538aa1adb953dec6bfd06831209f0ae61aea8aa3e385ac07154c91c96c72",
+      "bytes": 37148,
+      "actualHTTPMatchesFrozen": true
+    }
+  ],
+  "before": {
+    "candidate": "ea4a736cf2aa71a4b1f2c6ed0a8f0183251f035f",
+    "application": "7569e136ebf74a3f08bfd3b83dd6b00748cf677c",
+    "build": 248,
+    "raw": "evidence/native-v11/checkpoint-37-route-clearance/after248",
+    "independentGroupFormVerdict": "FAIL; mixed display and route clearance retained"
+  },
+  "after": {
+    "build": 253,
+    "formGate": "pending independent review; not adopted"
+  },
+  "cameraEqual": true,
+  "twoActualOrbitPosesEqual": true,
+  "initialEconomyEqual": true,
+  "normal": "fresh isolated baseline unchanged",
+  "pageErrors": [],
+  "reference": {
+    "path": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+    "sha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114"
+  },
+  "postprocessing": {
+    "referenceCrop": [
+      0,
+      0,
+      1185,
+      1024
+    ],
+    "roomCrop": [
+      76,
+      118,
+      1390,
+      1096
+    ],
+    "backgroundCrop": [
+      395,
+      160,
+      1270,
+      545
+    ],
+    "only": "crop/uniform resize and labels outside source pixels; raw full game PNG retained"
+  },
+  "exploratoryExcluded": [
+    251
+  ],
+  "coverage": "Actual closed8-stock exported Sandbox imported through ordinary UI; real pointer camera moves, no pose/state/clock injection. No new full transaction/stock-cycle/Low/ReduceMotion/five-locale narrow/physicalGPU/FPS/audio/native/hidden-tab certification; C37 results are historical, not C38 passes."
+}

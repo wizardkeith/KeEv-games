@@ -1,0 +1,32 @@
+✖ curated eight-vase stock remains eight real separate units on actual support, with deterministic reload geometry (184.109645ms)
+✔ counter and central vignette relocate existing decoration without inventory grants or new samples; actual bases touch support (61.125754ms)
+✔ reserved central vignette leaves every real SKU sample within tabletop and outside decorative area without inventing units (795.922511ms)
+✔ actual central stock meshes retain separate physical footprints and measured stack/tier support (91.983426ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1471.068987
+
+✖ failing tests:
+
+test at tests/v11-vase-staging.test.ts:1:460
+✖ curated eight-vase stock remains eight real separate units on actual support, with deterministic reload geometry (184.109645ms)
+  AssertionError [ERR_ASSERTION]: real tabletop/riser with1mm gap
+      at <anonymous> (/workspace/game-v10-art-life/tests/v11-vase-staging.test.ts:2:1182)
+      at Array.map (<anonymous>)
+      at TestContext.<anonymous> (/workspace/game-v10-art-life/tests/v11-vase-staging.test.ts:2:493)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

@@ -1,0 +1,52 @@
+{
+  "roomBaseline": {
+    "path": "assets/masters/native-v11/experiments/c18-room-specular/actual-static-room-specular.env",
+    "sha256": "298a1fcc71ab474f5f0754edca9e1f7b7e4026ef28664f00856e37f112ee5d28",
+    "meaning": "Existing actual-room specular radiance retained outside analytic aperture; same diffuse SH at binding"
+  },
+  "size": 64,
+  "samples": 128,
+  "probeRHMetres": [
+    0.15,
+    1.45,
+    0.25
+  ],
+  "window": {
+    "x": -4.38,
+    "y": [
+      0.85,
+      2.82
+    ],
+    "z": [
+      -2.1,
+      2.1
+    ],
+    "edgeMetres": 0.18
+  },
+  "softBounceRadiance": [
+    6.0,
+    6.4,
+    7.0
+  ],
+  "softBouncePower": 2,
+  "softBounceMeaning": "Art-directed broad window/room-bounce radiance lobe centred on existing aperture; not traced GI or measured photometry",
+  "lodGenerationScale": 0.8,
+  "encoding": "Babylon RGBD PNG mip cube, linear radiance, version2 env",
+  "meaning": "Existing actual-room reflection plus original art-directed broad window-bounce radiance; not traced transport, measured photometry or target pixels",
+  "source": "tools/build-v11-window-radiance.py",
+  "sourceSHA256": "97a8632add1c9e5e43653b3c1f86ee353f2c570d664016ec969cbc4cf3ea8a13",
+  "envSHA256": "ab2ddab4e6f5b7e64370f7ba2fb63497326a4f19b669a5ccb459cfef8e2f3258",
+  "bytes": 41008,
+  "mipFaces": 42,
+  "diffuse": "Original analytic scene spherical polynomial retained at binding; no new diffuse intensity",
+  "backgroundCheck": {
+    "directions": "+X face, opposite aperture",
+    "minimumLinearRGB": [
+      0.05112205073237419,
+      0.044552627950906754,
+      0.017372502014040947
+    ],
+    "meaning": "Opposite-window radiance is resampled actual-room baseline, never replaced by a darker analytic fallback"
+  },
+  "limits": "Single-point hybrid existing-room / soft window-bounce approximation. No new traced GI, parallax, geometric occlusion or realtime reflection; not original-target acceptance."
+}

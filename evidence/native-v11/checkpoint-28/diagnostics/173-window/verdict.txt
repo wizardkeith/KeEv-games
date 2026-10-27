@@ -1,0 +1,2 @@
+Existing geometry + analytic aperture reflection; shoulder/belly band visible, limited full-frame gain.
+Exploratory build, not final-source flow or target acceptance.

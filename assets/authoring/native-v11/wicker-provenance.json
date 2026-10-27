@@ -1,0 +1,16 @@
+{
+  "source": "tools/paint-v11-wicker.py",
+  "method": "Original deterministic8x8 interlaced fibre pigment/normal/ORM, not a photograph or scene image. Broad stakes/bands are actual3D geometry; small fibre crossing is PBR data",
+  "size": [
+    512,
+    512
+  ],
+  "repeat": 4,
+  "normalScale": 0.12,
+  "roughnessFactor": 0.89,
+  "files": {
+    "wicker-albedo.png": "552155653336c5783dff1579ec3126af3b3a454a3d13e136c97cf453dc5570cb",
+    "wicker-normal.png": "9dec25fcce608a7f19bd728976e1d08252c3045c902c511f9fbf5c9732f394cd",
+    "wicker-orm.png": "f3dea69a25d34def9817a64190b931f4c7a37223202ac7498005123faf48c925"
+  }
+}

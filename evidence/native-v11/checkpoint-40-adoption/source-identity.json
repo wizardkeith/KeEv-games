@@ -1,0 +1,20 @@
+{
+  "application": "4b3fc354af6e0379342b19dd01727d37dcf986f7",
+  "ordinaryBuild": 257,
+  "authoringFlags": {},
+  "reviewedBaseline": {
+    "candidate": "730166bb1e7e54ae0a6f9e89a6658d899d63c64e",
+    "build": 256
+  },
+  "adoption": "C38 forms +C39 values, same exact actual geometry/material profile and C36 table; development only",
+  "target": {
+    "path": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+    "sha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+    "accepted": false
+  },
+  "screenshots": "Actual runnable production WebGL; stock1440x1200, completeFlow960x720, Low1280x900. Labelled matrices crop/resize only. Natural actor phases differ.",
+  "uncutHighSeconds": 210.8,
+  "failedAttempt": "First target-B-only selector did not dispatch a settlement within its bounded420s observation. Preserved explicitly NOT PASSED; not counted as a clock/accounting defect. Final ordinary eligible-customer flow ran alone and completed both routes.",
+  "verification": "No source pose/camera/state/clock injection; real UI buy/place/two separate stock-cycle hours and one separate flow hour; fresh isolated Normal baseline unchanged.",
+  "limits": "No new hidden-tab/closure queue/cancellation, five-locale narrow UI or physical GPU/FPS/audio/native acceptance. No merge/publication."
+}

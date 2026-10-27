@@ -1,0 +1,39 @@
+{
+  "baseline": "d837b4dd37964fd6bb5d3f65984f369036c461f4",
+  "geometry": "201 fixed; no positions/normals/indices edits",
+  "reflectionSHA256": "ab2ddab4e6f5b7e64370f7ba2fb63497326a4f19b669a5ccb459cfef8e2f3258",
+  "sourceSHA256": "5cd106c5432eb7a55c126ec2b0cac3369d1a01a07cc241340eb493d37318a192",
+  "limits": "All variants authoring diagnostics, OFF and absent from default payload. No target/transaction/Low/physical-device acceptance. Original bake failure retained, no LTC/network route.",
+  "variants": {
+    "cycles-rejected": {
+      "decodedSHA256": "0c08552e6fbbb4ff7a2b0afafcc62f355f3721ff2af184de0339b373262c2da7",
+      "gzipSHA256": "42a035124667dd84d7ba9fc66532b7be66d3bcc674fc14b616f019e2e87aaced",
+      "decodedBytes": 7614418,
+      "gzipBytes": 2317665
+    },
+    "ray180": {
+      "decodedSHA256": "14d8d4627ff33ba782293f493c164811e3ba6d546e58a9f61977576beca1df9d",
+      "gzipSHA256": "3247d1cc85222c0d3923b03a05c1f0b930c2030e4d3c6675a2ae212cb400af96",
+      "decodedBytes": 7028107,
+      "gzipBytes": 763637
+    },
+    "window1400-rejected": {
+      "decodedSHA256": "55f82f06508923f3618b5399a2041e991086c203ccce5a16eb8a4cd5f3741cf3",
+      "gzipSHA256": "3f358c54c7b90a6e3da088357d1bc4b88c0ac4bae94fe5edfe5828cbed991ea7",
+      "decodedBytes": 7027689,
+      "gzipBytes": 780948
+    },
+    "neutral-control": {
+      "decodedSHA256": "39515f93a2de1f6c2689aabd2812bada0100d9ba51e7b895be8bb8251a143133",
+      "gzipSHA256": "fb6798e05f21a92a56e31adc89912f174168012264595f996862a89cd6f19517",
+      "decodedBytes": 3056771,
+      "gzipBytes": 5021
+    }
+  },
+  "input": {
+    "gzip": "actual-scene-input.json.gz",
+    "decodedSHA256": "5cd106c5432eb7a55c126ec2b0cac3369d1a01a07cc241340eb493d37318a192",
+    "gzipSHA256": "40cbdaf7be727ef5a4d37a67c5ed5cb6f244658f7ccc2e34bd086f7e7e8877dd",
+    "content": "Read-only actual isolated QA scene geometry/materials/camera. No save records, identity form, credentials or canvas image."
+  }
+}

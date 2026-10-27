@@ -1,0 +1,22 @@
+{
+  "request": "Two representative actual normal-game screenshots as native Library deliverables",
+  "files": [
+    {
+      "filename": "KeEv_Draft_Build94_Actual_Normal_Play_2026-10-26.png",
+      "sha256": "422558f757a42ec78f91eec5b9b667b7a5070797bb1404a2f97783edeb47c51a",
+      "provenance": "Actual build94 game Sandbox screenshot, not concept/studio/diagnostic; historical source c00c22002f24c1abd8a6429d6d13a9291f89c1a2"
+    },
+    {
+      "filename": "KeEv_Draft_Build94_Actual_Cashier_Batch_Gross_Margin_2026-10-26.png",
+      "sha256": "9c0beb071572969ad8c80334e2effcdbc0447da9db09dfbaace512936d7cee41",
+      "provenance": "Actual build94 game Sandbox screenshot, not concept/studio/diagnostic; historical source c00c22002f24c1abd8a6429d6d13a9291f89c1a2"
+    }
+  ],
+  "workflow": "Current Library skill prepared multi-file helper, fresh three helpers, closed JSON stdin; one bounded retry after native Library list read succeeded",
+  "failure": "library upload failed: hosted apps tools/list request failed: network",
+  "stage": "read-only helper tool discovery; before prepare/transfer/finalize",
+  "nativeLibraryRead": "succeeded",
+  "mutationStarted": false,
+  "outcome": "known not executed, no Library files or IDs; no access denial or uncertain write",
+  "retry": "One bounded same-route retry exhausted; requires relevant environment/helper network recovery, no direct-create or guessed URL workaround"
+}

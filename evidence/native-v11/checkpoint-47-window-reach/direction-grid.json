@@ -1,0 +1,107 @@
+[
+  {
+    "slope": 0.24,
+    "azimuth": -0.32,
+    "eligible": 248,
+    "leafhits": 18,
+    "allThreeProbes": false
+  },
+  {
+    "slope": 0.24,
+    "azimuth": -0.22,
+    "eligible": 312,
+    "leafhits": 29,
+    "allThreeProbes": true
+  },
+  {
+    "slope": 0.24,
+    "azimuth": -0.08,
+    "eligible": 380,
+    "leafhits": 34,
+    "allThreeProbes": true
+  },
+  {
+    "slope": 0.24,
+    "azimuth": 0.06,
+    "eligible": 380,
+    "leafhits": 27,
+    "allThreeProbes": true
+  },
+  {
+    "slope": 0.24,
+    "azimuth": 0.18,
+    "eligible": 336,
+    "leafhits": 24,
+    "allThreeProbes": true
+  },
+  {
+    "slope": 0.3,
+    "azimuth": -0.32,
+    "eligible": 298,
+    "leafhits": 22,
+    "allThreeProbes": false
+  },
+  {
+    "slope": 0.3,
+    "azimuth": -0.22,
+    "eligible": 366,
+    "leafhits": 18,
+    "allThreeProbes": true
+  },
+  {
+    "slope": 0.3,
+    "azimuth": -0.08,
+    "eligible": 437,
+    "leafhits": 32,
+    "allThreeProbes": true
+  },
+  {
+    "slope": 0.3,
+    "azimuth": 0.06,
+    "eligible": 437,
+    "leafhits": 23,
+    "allThreeProbes": true
+  },
+  {
+    "slope": 0.3,
+    "azimuth": 0.18,
+    "eligible": 393,
+    "leafhits": 14,
+    "allThreeProbes": true
+  },
+  {
+    "slope": 0.36,
+    "azimuth": -0.32,
+    "eligible": 332,
+    "leafhits": 15,
+    "allThreeProbes": false
+  },
+  {
+    "slope": 0.36,
+    "azimuth": -0.22,
+    "eligible": 404,
+    "leafhits": 13,
+    "allThreeProbes": true
+  },
+  {
+    "slope": 0.36,
+    "azimuth": -0.08,
+    "eligible": 475,
+    "leafhits": 17,
+    "allThreeProbes": true
+  },
+  {
+    "slope": 0.36,
+    "azimuth": 0.06,
+    "eligible": 475,
+    "leafhits": 19,
+    "allThreeProbes": true
+  },
+  {
+    "slope": 0.36,
+    "azimuth": 0.18,
+    "eligible": 432,
+    "leafhits": 10,
+    "allThreeProbes": true
+  }
+]

@@ -1,0 +1,12 @@
+Captured actual full game panorama after real purchases/display
+Actual greeting observed
+Saved uncut actual gameplay evidence
+AssertionError [ERR_ASSERTION]: adoption flow incomplete; preserved evidence is not a pass
+    at /workspace/game-v10-art-life/tools/v11-playable-art-qa.cjs:24:1439 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

@@ -1,0 +1,79 @@
+{
+  "source": "tools/paint-v11-display-quality.py",
+  "method": "Original explicit roughness/normal and oak/linen fields, original generated restrained botanical glaze albedo. Physically scaled UVs, white surface tint. No scene rendering or reference pixels copied; generated original bytes and provenance retained.",
+  "size": [
+    512,
+    512
+  ],
+  "finishes": [
+    "stoneware",
+    "display-linen",
+    "display-oak"
+  ],
+  "files": {
+    "stoneware-albedo.png": {
+      "sha256": "d3d9ac939e4d7da7a356eb1ef52168acc50e137886dee0239dd335a7469afb13",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "source": "assets/masters/native-v11/display-quality/stoneware-botanical-source.png"
+    },
+    "stoneware-normal.png": {
+      "sha256": "2f9751817214fd4977bc8c276f44acdd06dda58c66639a7f637146401a9011dc",
+      "dimensions": [
+        512,
+        512
+      ]
+    },
+    "stoneware-orm.png": {
+      "sha256": "ee83c178ae1ab030804268cdf315c0a6e8590462532d25a60b4f170c616bbafb",
+      "dimensions": [
+        512,
+        512
+      ]
+    },
+    "display-linen-albedo.png": {
+      "sha256": "f74ce74936bb16ac287e0f30713f70c48491723e78efa3c43f4c6907e2e94949",
+      "dimensions": [
+        512,
+        512
+      ]
+    },
+    "display-linen-normal.png": {
+      "sha256": "1ddca02ca7781556c9edca20ccedfd9ce186b08fd2b31e838642c4c1ce5b7c82",
+      "dimensions": [
+        512,
+        512
+      ]
+    },
+    "display-linen-orm.png": {
+      "sha256": "acccac2e8a781bea1f12a64f5bdd22a9d16b395cea313f7e464035275e2855d6",
+      "dimensions": [
+        512,
+        512
+      ]
+    },
+    "display-oak-albedo.png": {
+      "sha256": "697422d30122b3af106ea77373820e9584bf0d12baf713439b13055acbf48852",
+      "dimensions": [
+        512,
+        512
+      ]
+    },
+    "display-oak-normal.png": {
+      "sha256": "8eacaecd7703a7ee0413c9365bc0b873cb751613f6106a7753244f32362c9d6e",
+      "dimensions": [
+        512,
+        512
+      ]
+    },
+    "display-oak-orm.png": {
+      "sha256": "36121714f136481966bbdfc042c918cb3868b3c8b7eb9dcdeae10135b77f068f",
+      "dimensions": [
+        512,
+        512
+      ]
+    }
+  }
+}

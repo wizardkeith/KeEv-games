@@ -1,0 +1,46 @@
+{
+  "changedPartIndices": [
+    15
+  ],
+  "partCount": 33,
+  "triangles": 1524,
+  "allBranchesAndOtherLobesByteEquivalent": true,
+  "originalC32MastersRetained": true,
+  "lockHashes": {
+    "assets/masters/native-v11/display-quality/linen-c32.json": "5c5ef77a29f4900985ddf611198adb0ac3e5b309a9148423c95270a455fe9d33",
+    "assets/masters/native-v11/display-quality/linen-c32.blend": "4c4509692892b3f20ca61ddab41b765f7a3f29747f856f91f1bd1087e5720064",
+    "assets/masters/native-v11/display-quality/linen-c32-provenance.json": "8ffe157d18818a4f9c346f18562efe81d258e86e2ff7c65dfa4dd7679d6a66b2",
+    "tools/build-v11-gray-linen.py": "938e3b8ea1c57cbed7a6aa656fd8197706566f634dc461daadbe3709aa73df4b",
+    "src/art/central-composition-v11.ts": "f3bafaca37ee5b4c0050929b2b772baf01368cf1f53dd4a4a28dd8f91ce745e9",
+    "public/assets/native-v11/soft-window-specular.env": "ab2ddab4e6f5b7e64370f7ba2fb63497326a4f19b669a5ccb459cfef8e2f3258"
+  },
+  "worldBeforeBounds": [
+    [
+      -0.008336514889176722,
+      0.30955630014005875
+    ],
+    [
+      1.3918065177431012,
+      2.01373412
+    ],
+    [
+      0.005378139759917355,
+      0.475207707922039
+    ]
+  ],
+  "worldAfterBounds": [
+    [
+      -0.008336514889176722,
+      0.30955630014005875
+    ],
+    [
+      1.3918065177431012,
+      2.01373412
+    ],
+    [
+      0.005378139759917355,
+      0.475207707922039
+    ]
+  ],
+  "C32EnvelopeExact": true
+}

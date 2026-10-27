@@ -1,0 +1,140 @@
+{
+  "application": "5e826991e2125cf2722ecd71590918c73567e0e8",
+  "stage": "Adoption checks passed; independent review pending, overall target still unaccepted",
+  "unitTests": {
+    "total": 259,
+    "pass": 259,
+    "fail": 0
+  },
+  "rootRepair": {
+    "onlyParts": [
+      11,
+      22
+    ],
+    "originalNeckAssertionUnchanged": true,
+    "maxMouthRadiiAfter": [
+      0.050203263441839695,
+      0.05078135692187825
+    ],
+    "allOther31PartsExact": true
+  },
+  "defaultRuntimeFiles": 182,
+  "assetRebuildFiles": 486,
+  "flowVideoSeconds": 349.92,
+  "flowCDPFrames": 140,
+  "flow": {
+    "greeted": true,
+    "contact": true,
+    "realSettlement": true,
+    "actualMargin": true,
+    "servedExitAndStaffReturn": true,
+    "staffReturnObserved": true,
+    "servedExitObserved": true
+  },
+  "actualMarginPayload": {
+    "revision": 9,
+    "units": 18,
+    "revenue": 1710,
+    "cost": 870,
+    "grossMargin": 840,
+    "label": "\u672c\u6b21\u7d50\u7b97\u6bdb\u5229 \u00b7 18\u4ef6",
+    "note": "\u672a\u6263\u4eba\u5de5\u3001\u79df\u91d1\u7b49\u8cbb\u7528",
+    "detail": "\u5df2\u552e\u6536\u5165\u6e1b\u5be6\u969b\u5df2\u552e\u5546\u54c1\u6210\u672c\uff1b\u9019\u662f\u672c\u6b21\u7d50\u7b97\u5408\u8a08\uff0c\u4e0d\u4ee3\u8868\u55ae\u4e00\u9867\u5ba2\u7684\u4ea4\u6613\u3002",
+    "signed": "+\u00a58,400"
+  },
+  "bagReceiptSamples": [
+    {
+      "seconds": 252.47,
+      "guest": "visitor-a",
+      "revision": 9,
+      "carriedBag": "visitor-a"
+    },
+    {
+      "seconds": 253.012,
+      "guest": "visitor-a",
+      "revision": 9,
+      "carriedBag": "visitor-a"
+    },
+    {
+      "seconds": 253.574,
+      "guest": "visitor-a",
+      "revision": 9,
+      "carriedBag": "visitor-a"
+    }
+  ],
+  "returnEvents": [
+    {
+      "name": "actual staff home after checkout",
+      "seconds": 264.967
+    },
+    {
+      "name": "actual served exit and prop clear",
+      "seconds": 287.481
+    }
+  ],
+  "stockPhases": [
+    {
+      "name": "00-empty",
+      "cash": 5000,
+      "purchases": 0,
+      "eventSequence": 0
+    },
+    {
+      "name": "01-three",
+      "cash": 4565,
+      "purchases": 435,
+      "eventSequence": 0
+    },
+    {
+      "name": "02-eight",
+      "cash": 3840,
+      "purchases": 1160,
+      "eventSequence": 0
+    },
+    {
+      "name": "03-eight-reload",
+      "cash": 3840,
+      "purchases": 1160,
+      "eventSequence": 0
+    },
+    {
+      "name": "04-hour1-stock2",
+      "cash": 5490,
+      "purchases": 1160,
+      "eventSequence": 18
+    },
+    {
+      "name": "04-hour2-stock0",
+      "cash": 6000,
+      "purchases": 1160,
+      "eventSequence": 24
+    },
+    {
+      "name": "05-soldout-reload",
+      "cash": 6000,
+      "purchases": 1160,
+      "eventSequence": 24
+    }
+  ],
+  "lowAndReducedCases": [
+    {
+      "name": "low-motion",
+      "actualLoadedAtlasSHA256": {
+        "petal-form-values-c34.png": "8b737bb64fded646291553a5ae02f8239edfc9d8fefd4efdec32e4fc7524cc74",
+        "linen-form-values-c34.png": "956b7673c6a61c4f133c493326e7fa4983c4d98c3e288fb3c5c4cd105b123563"
+      },
+      "normal": "fresh isolated baseline unchanged"
+    },
+    {
+      "name": "low-reduced",
+      "actualLoadedAtlasSHA256": {
+        "petal-form-values-c34.png": "8b737bb64fded646291553a5ae02f8239edfc9d8fefd4efdec32e4fc7524cc74",
+        "linen-form-values-c34.png": "956b7673c6a61c4f133c493326e7fa4983c4d98c3e288fb3c5c4cd105b123563"
+      },
+      "normal": "fresh isolated baseline unchanged"
+    }
+  ],
+  "publicSiteChanged": false,
+  "mergeRequested": false,
+  "limits": "Cloud software rendering, not physical GPU/FPS/audio/native or full original-target acceptance"
+}

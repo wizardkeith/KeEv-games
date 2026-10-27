@@ -1,0 +1,124 @@
+{
+  "application": "4df471263d6bb5c2aaf6d0591f66f5240a875d94",
+  "variants": {
+    "occluded": {
+      "build": 270,
+      "flag": "VITE_V11_SCENE_WINDOW=occluded"
+    },
+    "balanced": {
+      "build": 271,
+      "flag": "VITE_V11_SCENE_WINDOW=balanced"
+    },
+    "base": {
+      "build": 272,
+      "flag": "VITE_V11_SCENE_WINDOW=control"
+    }
+  },
+  "default": "C40 ordinary lighting, C42 visual FAIL, useful independently passed RTT lifecycle fix preserved. C43 authoring only, NOT adopted.",
+  "reference": {
+    "path": "docs/codex-v4/reference/Approved_Visual_Target_Misaki.png",
+    "sha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114"
+  },
+  "cameraAndCoreEqual": true,
+  "obliquePosesEqual": true,
+  "actualOcclusion": {
+    "id": "v11.c43.depth-normal-grounding.v3",
+    "defaultAdopted": false,
+    "engine": "Babylon8.32.0 SSAO2",
+    "radius": 0.7,
+    "strength": 1,
+    "base": 0.12,
+    "samples": 16,
+    "epsilon": 0.025,
+    "geometryRatio": 0.5,
+    "blurRatio": 0.5,
+    "bilateralSamples": 8,
+    "bilateralSoften": 0.35,
+    "bilateralTolerance": 0.1,
+    "maxZ": 50,
+    "minZAspect": 0.1,
+    "low": "No added geometry buffer or SSAO passes; existing Low lighting retained",
+    "limits": "Screen-space depth/normal approximation, not complete indirect-light occlusion or GI. Final color multiplication also affects direct/specular response; hidden geometry and screen-edge limitations require actual normal/oblique review. No baked stock shadows or screen-fixed image.",
+    "supported": true,
+    "enabled": true,
+    "quality": "high",
+    "epoch": 1,
+    "geometry": {
+      "size": {
+        "width": 720,
+        "height": 600
+      },
+      "normalsWorldSpace": false,
+      "transparentOccluders": false,
+      "ignoreCameraViewport": true,
+      "textures": [
+        {
+          "name": "gBuffer_Depth",
+          "size": {
+            "width": 720,
+            "height": 600
+          },
+          "ready": true
+        },
+        {
+          "name": "gBuffer_Normal",
+          "size": {
+            "width": 720,
+            "height": 600
+          },
+          "ready": true
+        },
+        {
+          "name": "gBuffer_DepthBuffer",
+          "size": {
+            "width": 720,
+            "height": 600
+          },
+          "ready": true
+        }
+      ]
+    },
+    "pipeline": {
+      "className": "SSAO2RenderingPipeline",
+      "useViewportInCombineStage": false,
+      "supported": true,
+      "radius": 0.7,
+      "strength": 1,
+      "base": 0.12,
+      "samples": 16,
+      "blurSamples": 8
+    }
+  },
+  "recordings": {
+    "occluded": {
+      "seconds": 73.08,
+      "sourceFrames": 31,
+      "medianIntervalSeconds": 1.9902880191802979,
+      "maxIntervalSeconds": 5.26251220703125,
+      "motionCertification": false
+    },
+    "balanced": {
+      "seconds": 70.12,
+      "sourceFrames": 27,
+      "medianIntervalSeconds": 2.4844805002212524,
+      "maxIntervalSeconds": 7.84469199180603,
+      "motionCertification": false
+    },
+    "base": {
+      "seconds": 70.48,
+      "sourceFrames": 29,
+      "medianIntervalSeconds": 2.3317404985427856,
+      "maxIntervalSeconds": 4.879946947097778,
+      "motionCertification": false
+    }
+  },
+  "media": "Actual runnable1440x1200 Chromium154 / ANGLE SwiftShader. Natural actor phases differ. Matrices only crop/resize/label unretouched pixels, no mockup or painted background. HUD raster omission in some headless captures is not Zen; DOM snapshots retained.",
+  "limits": "SSAO multiplies final scene color (including direct/specular), not indirect-only GI. Screen edges/hidden geometry/transparent surfaces are limitations. Sparse source frames are NOT continuous motion, GPU completion, physical FPS/audio/native or whole-target certification.",
+  "stockUncutSeconds": 300.72,
+  "stockSourceFrames": {
+    "count": 184,
+    "medianIntervalSeconds": 1.8406240940093994,
+    "maxIntervalSeconds": 7.567521095275879,
+    "motionCertification": false
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "application": "cd3538f46c53529398dca9f9866cbb0726d4958f",
+  "records": [
+    {
+      "build": 216,
+      "mode": "old-gray",
+      "durationSeconds": 145.84,
+      "sourceFrames": 33,
+      "cameraEconomyAndTwoOrbitsEqual": true,
+      "actualSharedGrayMaterial": {
+        "name": "mat.warm-wood.v1:#738C54:1:r0.73:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2:v11-oak-neutral-tint",
+        "albedo": [
+          0.3762621229909065,
+          0.3762621229909065,
+          0.3762621229909065
+        ],
+        "roughness": 0.801,
+        "albedoTexture": null,
+        "normalTexture": null,
+        "ormTexture": null,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "errors": []
+    },
+    {
+      "build": 217,
+      "mode": "gray",
+      "durationSeconds": 154.72,
+      "sourceFrames": 36,
+      "cameraEconomyAndTwoOrbitsEqual": true,
+      "actualSharedGrayMaterial": {
+        "name": "mat.warm-wood.v1:#738C54:1:r0.73:m0:ior1.5:OPAQUE:ds0:linear-srgb-v2:v11-oak-neutral-tint",
+        "albedo": [
+          0.3762621229909065,
+          0.3762621229909065,
+          0.3762621229909065
+        ],
+        "roughness": 0.801,
+        "albedoTexture": null,
+        "normalTexture": null,
+        "ormTexture": null,
+        "emissive": [
+          0,
+          0,
+          0
+        ]
+      },
+      "errors": []
+    }
+  ],
+  "modeControlC31AndC30Off": true,
+  "normalStoreUnchanged": true,
+  "limits": "Actual isolated Sandbox import +gray rendering and real pointer orbit, no new checkout/Low/device acceptance"
+}

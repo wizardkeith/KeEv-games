@@ -1,0 +1,17 @@
+/** Experimental original garment self-shading, baked from each rigid assembly.
+ * Not full GI or dynamic contact lighting. This changes only diffuse vertex
+ * tint; every original position/normal/index/UV/contact pivot is retained. */
+import baked from '../../assets/masters/native-v11/visitor-b-self-ao-experiment.json';
+import uv from '../../assets/masters/native-v11/visitor-b-cloth-uv.json';
+import type {NativePart} from './native-characters';
+export function applyExperimentalSelfAO(parts:NativePart[]){
+ const data=baked as {surfaces:Record<string,{signature:string;values:number[]}>},maps=uv as {surfaces:Record<string,{signature:string;vertices:number[]}>};
+ for(const p of parts)for(const [i,s]of p.recipe.entries())if(s.finish&&s.shape==='mesh'){
+  const key=p.id+':'+i,a=data.surfaces[key],u=maps.surfaces[key];
+  if(!a||!u||a.signature!==u.signature||u.vertices.length!==s.geometry.positions.length/3)throw Error('stale self-shading '+key);
+  const strength=s.finish==='linen'?.18:s.finish==='knit'?.38:.25;
+  const ao=u.vertices.map(n=>{const v=a.values[n];if(!Number.isFinite(v)||v<0||v>1)throw Error('invalid self-shading '+key);return 1-strength*(1-v);});
+  p.recipe[i]={...s,bakedSelfAO:ao};
+ }
+ return parts;
+}
