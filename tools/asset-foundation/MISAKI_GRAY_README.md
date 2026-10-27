@@ -1,4 +1,51 @@
-# Misaki R6 — dominant and supporting sweep layout only
+# Misaki R7 — native forehead curtain review candidate
+
+Current source is R7. Read `docs/MISAKI_HAIR_R7_2026-10-28_zh-HK.md`
+and `docs/reviews/evidence/misaki-grayform-v1-r7` for actual same-machine
+R6/R7 comparisons. R7 is unaccepted: the broader sweep wraps the forehead,
+but still reads as an overly solid curtain; roots and the frozen rear bob
+do not yet reproduce the original. Do not proceed to clothes or animation
+on the assumption that the hair passed.
+
+`misaki-hair-r7.py` opens the real pinned R6 `.blend`, edits only cages10/11,
+retains the other42 native/evaluated cages, and exports the same five groups.
+The main is a closed10x11x2 vertex net; support is8x7x2. Native cage vertices,
+side walls and one-level Subsurf remain editable. Guide curves are references,
+not live drivers. This was authored with explicit vertex coordinates using
+background Python and reviewed in an independent headless browser; no GUI
+vertex dragging or exclusive display control was performed or demonstrated.
+
+Rebuild from pinned R6, without overwriting any user project:
+
+```powershell
+# From the repository, use a task-owned temporary directory outside it.
+New-Item -ItemType Directory -Force ../hair-r7/baseline | Out-Null
+node -e "const f=require('fs'),c=require('child_process'),b='cec0c83464291d885ae363ff22d2881ba7d08dda';for(const [p,n]of [['assets/authoring/misaki-grayform-v1/misaki-grayform.blend','misaki-grayform.blend'],['assets/authoring/misaki-grayform-v1/manifest.json','manifest.json'],['public/assets/misaki-grayform-v1/misaki-grayform.glb','misaki-grayform.glb']])f.writeFileSync('../hair-r7/baseline/'+n,c.execFileSync('git',['show',b+':'+p],{maxBuffer:8*1024*1024}));"
+& 'C:/Program Files/Blender Foundation/Blender 5.2/blender.exe' --background --factory-startup --python-exit-code 1 --python tools/asset-foundation/misaki-hair-r7.py -- --baseline ../hair-r7/baseline/misaki-grayform.blend --manifest ../hair-r7/baseline/manifest.json
+& 'C:/Program Files/Blender Foundation/Blender 5.2/blender.exe' --background --factory-startup --python-exit-code 1 --python tools/asset-foundation/inspect-misaki-r7.py
+$env:QA_OUTPUT='docs/reviews/evidence/misaki-grayform-v1-r7'
+node tools/asset-foundation/validate-misaki-gray.mjs
+node tools/asset-foundation/check-misaki-r7-scope.cjs
+# Set CODEX_NODE_MODULES to the existing bundled dependency directory.
+$env:R6_GLB=(Resolve-Path ../hair-r7/baseline/misaki-grayform.glb).Path
+node tools/asset-foundation/capture-misaki-r7.cjs
+# Use an existing Python environment with Pillow; no new package is required here.
+python tools/asset-foundation/compare-misaki-r7.py
+```
+
+The capture script routes the pinned R6 or actual R7 GLB into separate fresh
+contexts executing the same frozen camera/light module. Only the on-screen
+revision label is set for each capture. It checks loaded hashes, camera/light
+equality and fresh Sandbox purchase/display/reload/quality switching. It does
+not attach to an existing Chrome profile, Unity or Blender window.
+The gray fixture remains at [.85,.079,1.35], yaw pi; the ordinary colored staff
+is unchanged. Game-scale differences are small and not an identity PASS.
+
+## Historical R6 record and commands (not the current R7 rebuild)
+
+Running the legacy builder below regenerates R6 and overwrites the current
+canonical sample. Use it only intentionally for R6 reproduction; use the
+pinned baseline procedure above for R7. Historical counts below describe R6.
 
 R5 independent hair identity gate FAILED despite its lower sweep, fuller
 curvature and reduced crown opening. R6 preserves those authoring gains and

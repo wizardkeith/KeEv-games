@@ -153,14 +153,14 @@
       "triangles": 1136
     },
     "10 / primary swept fringe": {
-      "controlVertices": 144,
-      "controlQuads": 142,
-      "triangles": 1136
+      "controlVertices": 220,
+      "controlQuads": 218,
+      "triangles": 1744
     },
     "11 / underlapping temple turn": {
-      "controlVertices": 144,
-      "controlQuads": 142,
-      "triangles": 1136
+      "controlVertices": 112,
+      "controlQuads": 110,
+      "triangles": 880
     },
     "12 / shorter swept own-left ear side": {
       "controlVertices": 144,
@@ -268,13 +268,14 @@
       "triangles": 832
     }
   },
-  "triangles": 49368,
+  "triangles": 49720,
   "limitations": [
     "Grayform only, not final facial topology, skin weights, animation or art acceptance",
     "Side/back volumes inferred from canonical original; PlanB comparison pending readable access",
     "Existing gameplay rig/actions/data/saves untouched",
     "No final materials, textures, fine strands, weave or finger topology",
-    "Back bow omitted rather than claiming an unseen reference"
+    "Back bow omitted rather than claiming an unseen reference",
+    "R7 is a single hair-form review candidate; technical validation is not visual acceptance"
   ],
   "soleNormalization": 0.0006406807224266231,
   "semanticExportGroups": [
@@ -284,8 +285,9 @@
     "own-left-clip",
     "clothed-body"
   ],
-  "hairMethod": "independent internal spine and borders for varying curved cross-sections; six flow clumps plus local crown root join; local subdivision1 only, no global fusion or smoothing",
-  "revision": "R6 tapered dominant and recessed support sweep / rear and all non-hair frozen",
+  "hairMethod": "R7 objects 10/11: native explicit closed two-layer quad control nets, staggered diagonal rim and forehead depth; local Subsurf1; 12-16 frozen R6; guides reference only",
+  "revision": "R7 explicit forehead curtain and separate inner overlap / other 42 source cages frozen",
   "headNeckOffset": 0.045,
-  "bodyFrozenSource": "038740fbd7f6428cc82d5f442646c2d86a4143e3"
+  "bodyFrozenSource": "038740fbd7f6428cc82d5f442646c2d86a4143e3",
+  "sourceBaselineSha256": "e8d5b774c5aba9fecbba3800732592c6b1eb66b34e74e6622c0099d6b60ed7a9"
 }
