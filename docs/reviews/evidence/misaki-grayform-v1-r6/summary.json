@@ -1,0 +1,296 @@
+{
+  "source": "9e62928511d0da45012c05d3197e0bc5d04bc309",
+  "priorHeadSource": "1e9680481bc16273b09bd1db39917dc06ba0f276",
+  "scope": "only primary fringe10 and supporting temple11 control layouts; remaining5hair and every non-hair group frozen",
+  "priorVerdict": "R5 independent hair identity FAIL; lower sweep/curvature/reduced crown opening are real gains",
+  "R6Verdict": "identity/style unaccepted; dominant diagonal taper and shorter recessed inner support differ, but forehead cover too sparse, main leaf-like/regular, support weak in threequarter",
+  "reference": "actual canonical pixels; unchanged R5/R6 model camera/crop; canonical portrait keeps different pose/projection; side/back inferred",
+  "PlanB": "initial and only fresh authorized supported retry failed; remain stopped, no new transfer",
+  "canonicalSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+  "sha256": "29f4ff9e8711f80cef1f5d899d9c5f0fab0facbf1841274678313581998bb823",
+  "bytes": 902132,
+  "triangles": 49368,
+  "deltaFromR5": 0,
+  "runtimeHairTriangles": 7952,
+  "meshes": 5,
+  "primitives": 10,
+  "materials": 7,
+  "images": 0,
+  "skins": 0,
+  "animations": 0,
+  "hairSurfaces": 7,
+  "independentInternalSpines": 6,
+  "nativeBezierGuides": 20,
+  "changedHairObjects": [
+    "10 / primary swept fringe",
+    "11 / underlapping temple turn"
+  ],
+  "frozenHairObjects": [
+    "12 / shorter swept own-left ear side",
+    "13 / rear central flow",
+    "14 / fuller rear own-right flow",
+    "15 / shorter rear own-left flow",
+    "16 / local curved crown root join"
+  ],
+  "frozen5HairEvaluatedPositionsNormalsTrianglesWorldMatrix": true,
+  "frontSweepLayout": {
+    "10 / primary swept fringe": [
+      {
+        "sourceRow": 0,
+        "leftCentreRightBlenderWorld": [
+          [
+            -0.004999999888241291,
+            0.012000000104308128,
+            1.469359278678894
+          ],
+          [
+            0.01996009610593319,
+            0.020005716010928154,
+            1.4743585586547852
+          ],
+          [
+            0.04500000178813934,
+            0.012000000104308128,
+            1.471359372138977
+          ]
+        ],
+        "lateralWidth": 0.050000001676380634,
+        "borderDistance": 0.05003998951582137
+      },
+      {
+        "sourceRow": 4,
+        "leftCentreRightBlenderWorld": [
+          [
+            -0.10452429205179214,
+            -0.12546364963054657,
+            1.4253774881362915
+          ],
+          [
+            -0.050273653119802475,
+            -0.14268913865089417,
+            1.4296470880508423
+          ],
+          [
+            0.022217947989702225,
+            -0.1464345008134842,
+            1.412198543548584
+          ]
+        ],
+        "lateralWidth": 0.12674224004149437,
+        "borderDistance": 0.12913968495046935
+      },
+      {
+        "sourceRow": 7,
+        "leftCentreRightBlenderWorld": [
+          [
+            -0.17364998161792755,
+            -0.16600249707698822,
+            1.3220014572143555
+          ],
+          [
+            -0.1192900612950325,
+            -0.19281649589538574,
+            1.3405622243881226
+          ],
+          [
+            -0.04085212200880051,
+            -0.19277004897594452,
+            1.3298287391662598
+          ]
+        ],
+        "lateralWidth": 0.13279785960912704,
+        "borderDistance": 0.1356946609312994
+      },
+      {
+        "sourceRow": 11,
+        "leftCentreRightBlenderWorld": [
+          [
+            -0.11500000208616257,
+            -0.1720000058412552,
+            1.2538765668869019
+          ],
+          [
+            -0.1101812794804573,
+            -0.18546485900878906,
+            1.2599941492080688
+          ],
+          [
+            -0.0820000022649765,
+            -0.18299999833106995,
+            1.271842122077942
+          ]
+        ],
+        "lateralWidth": 0.032999999821186066,
+        "borderDistance": 0.039150491996327266
+      }
+    ],
+    "11 / underlapping temple turn": [
+      {
+        "sourceRow": 0,
+        "leftCentreRightBlenderWorld": [
+          [
+            -0.014999999664723873,
+            0.012000000104308128,
+            1.4643592834472656
+          ],
+          [
+            0.009995792992413044,
+            0.011894840747117996,
+            1.4703537225723267
+          ],
+          [
+            0.03500000014901161,
+            0.009999999776482582,
+            1.4643592834472656
+          ]
+        ],
+        "lateralWidth": 0.049999999813735485,
+        "borderDistance": 0.05003998579441677
+      },
+      {
+        "sourceRow": 4,
+        "leftCentreRightBlenderWorld": [
+          [
+            -0.0564689002931118,
+            -0.09314579516649246,
+            1.4291861057281494
+          ],
+          [
+            -0.015715962275862694,
+            -0.11399924755096436,
+            1.4321074485778809
+          ],
+          [
+            0.0342855304479599,
+            -0.09716032445430756,
+            1.4272489547729492
+          ]
+        ],
+        "lateralWidth": 0.0907544307410717,
+        "borderDistance": 0.09086383359412002
+      },
+      {
+        "sourceRow": 7,
+        "leftCentreRightBlenderWorld": [
+          [
+            -0.07138101011514664,
+            -0.15466634929180145,
+            1.3580964803695679
+          ],
+          [
+            -0.03890330344438553,
+            -0.1664181649684906,
+            1.3663840293884277
+          ],
+          [
+            0.009304331615567207,
+            -0.1478673219680786,
+            1.3710745573043823
+          ]
+        ],
+        "lateralWidth": 0.08068534173071384,
+        "borderDistance": 0.08200476409894761
+      },
+      {
+        "sourceRow": 11,
+        "leftCentreRightBlenderWorld": [
+          [
+            -0.04399999976158142,
+            -0.1599999964237213,
+            1.3192055225372314
+          ],
+          [
+            -0.0347663052380085,
+            -0.16554979979991913,
+            1.3364224433898926
+          ],
+          [
+            -0.014999999664723873,
+            -0.15000000596046448,
+            1.352513074874878
+          ]
+        ],
+        "lateralWidth": 0.029000000096857548,
+        "borderDistance": 0.045281263583671294
+      }
+    ]
+  },
+  "supportTerminalCentreHigherM": 0.07642829418182373,
+  "supportTerminalCentreBehindM": 0.019915059208869934,
+  "noGlobalHairFusionOrSmoothing": true,
+  "frozenR5NonHairStreams": 27,
+  "allR5NonHairGeometryTRSFrozen": true,
+  "frozenR3FaceFeatureBodyStreams": 24,
+  "R2FaceProfileNeckEarDefinitionsFrozen": true,
+  "frozenBodySource": "038740fbd7f6428cc82d5f442646c2d86a4143e3",
+  "frozenBodyStreams": 12,
+  "all7GrayMaterialDefinitionsFrozen": true,
+  "R4PaperFrozenFiles": 29,
+  "protectedOriginalApplicationFiles": 720,
+  "soleY": 0,
+  "height": 1.477132435888052,
+  "headOffset": 0.045,
+  "headRatioTarget": null,
+  "eyeApertureBoundaryLoops": [
+    40,
+    40
+  ],
+  "neckHeadBoundsOverlap": 0.05838418006896973,
+  "chinToFrozenClothingTop": 0.03517806529998779,
+  "clipGeometryFrozenFromR5": true,
+  "clipAttachment": {
+    "sampledEvaluatedClipVertices": 156,
+    "minDistance": 0.00010347599891247228,
+    "meanDistance": 0.0032665101444320334,
+    "maxDistance": 0.006171149201691151,
+    "limits": "Unsigned sampled vertex-to-hair distance, not collision/attachment certification."
+  },
+  "prototypeTotalTriangles": 121064,
+  "sourceDistStudioGameBytesMatch": true,
+  "R5R6CameraAndLightingMatch": true,
+  "lifecycle": {
+    "buy3": true,
+    "cashBefore": 5000,
+    "cashAfter": 4790,
+    "stock": 3,
+    "shelf": 2,
+    "reloadEqual": true,
+    "lowHighRetained": true,
+    "normalUnchanged": true
+  },
+  "pageErrors": [],
+  "newChecks": [
+    "Blender4.3.2 with python-exit-code1",
+    "strict GLB0errors/warnings",
+    "pinned R5 actual evaluated5frozenhair positions/normals/triangles/worldmatrix",
+    "every non-hair group27streams/TRS frozen incl clip; R3face-feature-body24streams frozen",
+    "7gray materials,29accepted files,720original app files unchanged",
+    "read-only eye/neck/clip/20guides and two-front-sweep layout samples",
+    "strict authoring TS node,vite/client; finalbuild; dist-source identity",
+    "7actual engine captures and freshSandbox UI lifecycle"
+  ],
+  "priorTestsNotRepeated": [
+    "302 app tests",
+    "content validation",
+    "replay",
+    "legacy asset checks"
+  ],
+  "Library": {
+    "library_file_id": "libfile_0224bad58e5881918df7c73f50e81481",
+    "file_id": "file_0000000042108207a2465fc555a6b614",
+    "file_name": "grayform-game-normal.png",
+    "current_version_number": 5,
+    "file_size_bytes": 641678
+  },
+  "limits": [
+    "Control-layout/geometry checks are not identity/style acceptance",
+    "Frozen rear heaviness is not this checkpoint correction",
+    "Local overlap is not full watertight hairstyle weld",
+    "Clip unsigned samples are not signed collision/attachment certification",
+    "Side/back inferred; PlanB stopped after2failures",
+    "Guides document controls, not live cage drivers",
+    "No eyes/clothes/material/rig/animation/finestrand expansion",
+    "Static SwiftShader not physicalGPU/FPS/audio/native/full old actions",
+    "No triangle-budget/engine-bottleneck conclusion"
+  ]
+}

@@ -1,6 +1,15 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T23:45:23+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-28T00:05:55+08:00** (Asia/Hong_Kong).
+
+## Misaki R6只重排兩前髮主次掃形／其餘五髮面凍結 — 2026-10-28T00:05:55+08:00
+
+- 未合併`codex/asset-foundation-v1` source `9e62928511d0da45012c05d3197e0bc5d04bc309`已normalpush/readback同SHA；[原圖-R5-R6正面三分四頭尺度／全身／實際正常480px雙斜角及限制](docs/MISAKI_HAIR_R6_2026-10-27_zh-HK.md)。R5獨立identity仍FAIL，但低主掃／曲率／冠頂缺口改善獲確認；本輪只改10主瀏海及11承托面布局，保留spine與原偏側root，R6仍未身份／畫風接受，不修後髮／眼／衣服／材質／rig。
+- 主掃兩段Bezier肩-斜降-窄不等端點，內部spine與邊界各自變方向深度；肩約127–133mm／末端33mm，承托面改較短內側退後掃形，肩約81–91mm／末端29mm，其terminal centre高約76mm／退後20mm，不共舊長切口。這是候選量測非目標規格。七個兩層12×6cage/subdivision1／六spines／20nativeguides／髮7,952tri與全49,368tri不增，無全頭fusion/smoothing或細髮。自檢主掃仍整塊葉片、額面包覆偏少、短束三分四弱；下一步仍判前髮主次，不進後髮微修。
+- pinned R5 `.blend`實際暫存載入逐面驗12–16五髮面的細分position/normal/triangles/worldmatrix完全同；全部非髮含夾27streams/TRS逐byte同R5，R3face-feature-body24組及R2頰顎鼻額頸耳/45mm offset另保留。7灰材質/studio camera-light TS/29已過資產作者檔/720原application檔同。GLB5meshes/10primitives/902,132bytes，零images/skins/animations；作者總121,064tri，不bulk/無LOD-device接受。
+- 本輪Blender4.3.2/python-exit-code1、GLB0error-warning、scope5髮面/非髮27streams-TRS/材質資產/來源眼孔頸位clip及兩前髮布局取樣/strict作者TS/finalbuild通過；source-dist-studio-game實載SHA同，R5/R6正常camera/全燈/studio條件逐值同。freshSandbox買3杯5000→4790/stock3/原display3槽2/reload逐值同/Low→High/Normal隔離不變/0pageerror。前302tests-content-replay-legacychecks未重跑，SwiftShader非physicalGPU/FPS/audio/native/完整舊動作或美術認證。
+- feetY0、兩真眼孔各40evaluated邊、頸頭縱bounds overlap58.38mm/chin至衣頂35.18mm保留。原位自身左+X夾156頂點unsigned距離0.103–6.171mm/mean3.267mm同R5，非signedcollision/完整attachment/皮膚watertightcert。Library同image `libfile_0224bad58e5881918df7c73f50e81481` version5/file`file_0000000042108207a2465fc555a6b614`/641,678bytes，舊0–4保留。
+- PlanB仍初次＋唯一fresh supported retry兩次官方helper exit1/`library file transfer failed: download failed`，兩目的地無ZIP/新圖/本機SHA，原因未明非denial；無新retry/替代下載，精確原紀錄保留，側背推定。PR建立維持先前拒絕停止，無retry/換route；main/PR8未寫，無merge/Site公開/payments/玩家Normal改動。除PlanB未比對外無其他操作阻塞；證據只推隔離分支。
 
 ## Misaki R5主掃內部截面／非髮全凍結／identity未接受 — 2026-10-27T23:45:23+08:00
 

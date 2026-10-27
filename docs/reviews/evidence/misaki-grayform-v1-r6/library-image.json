@@ -1,0 +1,21 @@
+{
+  "operation": "replace_library_file",
+  "status": "succeeded",
+  "path": "/grayform-game-normal.png",
+  "file_id": "file_0000000042108207a2465fc555a6b614",
+  "library_file_id": "libfile_0224bad58e5881918df7c73f50e81481",
+  "file_name": "grayform-game-normal.png",
+  "current_version_number": 5,
+  "restored_from_version_number": null,
+  "xattrs": [
+    {
+      "name": "user.library-file-version",
+      "value": "5"
+    }
+  ],
+  "directory_id": "libdir_897a3e9fc9a88191ae745f050e1e30e3",
+  "mime_type": "image/png",
+  "library_artifact_type": "image",
+  "file_size_bytes": 641678,
+  "external_connectors_accessed": false
+}

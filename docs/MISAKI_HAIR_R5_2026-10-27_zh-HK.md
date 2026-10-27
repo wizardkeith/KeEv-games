@@ -1,5 +1,7 @@
 # Misaki R5 — 主掃內部截面與局部髮根，身份仍未接受
 
+獨立覆核已判 **R5 hair identity仍FAIL**，確認主掃下降／曲率／冠頂缺口有實際改善，但寬圓lid及共同下切邊仍不符原圖；[R6只重排主掃與較短承托面](MISAKI_HAIR_R6_2026-10-27_zh-HK.md)，其餘髮面及非髮凍結。以下保留原候選紀錄。
+
 Source `1e9680481bc16273b09bd1db39917dc06ba0f276`，只在未合併 `codex/asset-foundation-v1`。R4獨立hair identity **FAIL**後，保留分束曲面方法，優先改主瀏海及髮根，不加細髮或三角面。**R5仍未獲identity／原圖畫風接受**；眼面頸身體、髮夾、材質、camera/light凍結，不轉衣服／rig／動畫。
 
 ![原圖／R4／R5正面近似頭尺度](reviews/evidence/misaki-grayform-v1-r5/original-r4-r5-front-head480.png)

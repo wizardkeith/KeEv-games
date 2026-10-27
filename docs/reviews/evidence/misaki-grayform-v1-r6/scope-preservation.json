@@ -1,0 +1,68 @@
+{
+  "baselineSource": "1e9680481bc16273b09bd1db39917dc06ba0f276",
+  "baselineBlendSha256": "382bbff1ac1e318383b9dade96cdfe54e57fac5dc28be11422a261bbc2a4a5dd",
+  "currentBlendSha256": "e8d5b774c5aba9fecbba3800732592c6b1eb66b34e74e6622c0099d6b60ed7a9",
+  "frozenObjects": [
+    "12 / shorter swept own-left ear side",
+    "13 / rear central flow",
+    "14 / fuller rear own-right flow",
+    "15 / shorter rear own-left flow",
+    "16 / local curved crown root join"
+  ],
+  "evaluatedPositionNormalTrianglesAndWorldMatrixIdentical": true,
+  "baseline": {
+    "12 / shorter swept own-left ear side": {
+      "sha256": "25970beef80c179ef9a2394daae5a7133a270f9a3d3a7132bb62d87939507d98",
+      "evaluatedVertices": 570,
+      "triangles": 1136
+    },
+    "13 / rear central flow": {
+      "sha256": "9497f5e4e838a6187d7a2802cb2644ddf8c4a97dafd5d5f5753663c70665a02e",
+      "evaluatedVertices": 570,
+      "triangles": 1136
+    },
+    "14 / fuller rear own-right flow": {
+      "sha256": "b6ba84943b20e55dcd77348833eb99c2c8861f228363a72f6259d20a1cd4e119",
+      "evaluatedVertices": 570,
+      "triangles": 1136
+    },
+    "15 / shorter rear own-left flow": {
+      "sha256": "76631d20f2b886e7f813f14bc0bced0223054bece0ba5604e1a1c83f1048298e",
+      "evaluatedVertices": 570,
+      "triangles": 1136
+    },
+    "16 / local curved crown root join": {
+      "sha256": "94230e6650b2ddddeae1e8b1f68385d66a75d76085ea4ec3ebbc964c0aa6490a",
+      "evaluatedVertices": 570,
+      "triangles": 1136
+    }
+  },
+  "current": {
+    "12 / shorter swept own-left ear side": {
+      "sha256": "25970beef80c179ef9a2394daae5a7133a270f9a3d3a7132bb62d87939507d98",
+      "evaluatedVertices": 570,
+      "triangles": 1136
+    },
+    "13 / rear central flow": {
+      "sha256": "9497f5e4e838a6187d7a2802cb2644ddf8c4a97dafd5d5f5753663c70665a02e",
+      "evaluatedVertices": 570,
+      "triangles": 1136
+    },
+    "14 / fuller rear own-right flow": {
+      "sha256": "b6ba84943b20e55dcd77348833eb99c2c8861f228363a72f6259d20a1cd4e119",
+      "evaluatedVertices": 570,
+      "triangles": 1136
+    },
+    "15 / shorter rear own-left flow": {
+      "sha256": "76631d20f2b886e7f813f14bc0bced0223054bece0ba5604e1a1c83f1048298e",
+      "evaluatedVertices": 570,
+      "triangles": 1136
+    },
+    "16 / local curved crown root join": {
+      "sha256": "94230e6650b2ddddeae1e8b1f68385d66a75d76085ea4ec3ebbc964c0aa6490a",
+      "evaluatedVertices": 570,
+      "triangles": 1136
+    }
+  },
+  "limits": "Checks five frozen hair surfaces only; non-hair streams/TRS separately validated. Not art/collision/rig certification."
+}

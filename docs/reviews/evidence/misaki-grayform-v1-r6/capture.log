@@ -1,0 +1,8 @@
+four studio grayform views done
+actual normal and two obliques done
+lifecycle stock begin
+lifecycle stock save before buy
+lifecycle stock save after display
+lifecycle reload begin
+lifecycle reload ready
+PASS actual grayform source identity, unchanged camera/lights and fresh Sandbox lifecycle
