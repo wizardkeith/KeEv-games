@@ -1,6 +1,14 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-28T00:25:40+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-28T00:29:50+08:00** (Asia/Hong_Kong).
+
+## 本機診斷checkpoint已讀回／task-only快取清理完成 — 2026-10-28T00:29:50+08:00
+
+- 本機獨立`codex/asset-foundation-v1`已正常fast-forward至診斷checkpoint`96fd480ba0afced2107d14ada60944346ccb5d99`，與實際remote同SHA；smoke及R6 .blend/.glb雜湊匹配。[完整交接／意外與清理記錄](docs/LOCAL_WEB_HANDOFF_2026-10-28_zh-HK.md)。這不是新美術、視覺接受、唯一writer移交或Site發布。
+- 成功同步後只刪本任務可重建node_modules／pnpm store、自動未追蹤yaml、Unity測試cache及已同步的重複smoke輸出；原工程／遊戲tracked來源／資產／reference／存檔均保留。邏輯刪除258,697,689bytes，drive-free採樣觀察增加169,172,992bytes（含hardlink／同期活動限制，不當成精確歸因）。最小source／證據已在本分支，未納入raw license/session logs或cache。
+- 原Node server／Unity batch已結束；未終止user app，Blender測試視窗因GUI/focus hold保留。Web test/build仍未執行通過，pnpm auto-install超界及ignored-builds停止完整記錄；無approve-builds／新增外掛或權限。main／PR8／原Site／玩家Normal／Library身份不變；PR建立拒絕與PlanB retry停止維持。
+
+
 
 ## 本機Web-first交接能力核對／R6資產原檔完整，build與GUI仍有界限 — 2026-10-28T00:25:40+08:00
 

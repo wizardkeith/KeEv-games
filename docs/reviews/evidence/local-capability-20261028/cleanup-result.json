@@ -1,0 +1,67 @@
+{
+  "SynchronizedCheckpoint": "96fd480ba0afced2107d14ada60944346ccb5d99",
+  "Utc": "2026-10-27T16:29:50.2441448Z",
+  "Method": "Removed only task-owned reproducible caches, generated untracked pnpm files, and hash-verified duplicate smoke outputs; authoritative synced source retained",
+  "Targets": [
+    {
+      "RelativePath": "KeEv-games-handoff\\node_modules",
+      "FileCount": 7422,
+      "LogicalBytes": 109785133
+    },
+    {
+      "RelativePath": ".pnpm-store",
+      "FileCount": 7346,
+      "LogicalBytes": 110997482
+    },
+    {
+      "RelativePath": "KeEv-games-handoff\\pnpm-lock.yaml",
+      "FileCount": 1,
+      "LogicalBytes": 23927
+    },
+    {
+      "RelativePath": "KeEv-games-handoff\\pnpm-workspace.yaml",
+      "FileCount": 1,
+      "LogicalBytes": 50
+    },
+    {
+      "RelativePath": "smoke-test\\unity-project\\Library",
+      "FileCount": 19,
+      "LogicalBytes": 37798886
+    },
+    {
+      "RelativePath": "smoke-test\\unity-project\\Temp",
+      "FileCount": 2,
+      "LogicalBytes": 0
+    },
+    {
+      "RelativePath": "smoke-test\\unity-project\\Logs",
+      "FileCount": 2,
+      "LogicalBytes": 929
+    },
+    {
+      "RelativePath": "smoke-test\\unity-project\\UserSettings",
+      "FileCount": 2,
+      "LogicalBytes": 725
+    },
+    {
+      "RelativePath": "smoke-test\\smoke.blend",
+      "FileCount": 1,
+      "LogicalBytes": 88573
+    },
+    {
+      "RelativePath": "smoke-test\\smoke.glb",
+      "FileCount": 1,
+      "LogicalBytes": 1984
+    }
+  ],
+  "DeletedLogicalBytes": 258697689,
+  "DriveFreeBefore": 132274511872,
+  "DriveFreeAfter": 132443684864,
+  "ObservedDriveFreeDelta": 169172992,
+  "DiskDeltaLimitation": "Free-space samples can include unrelated concurrent disk activity; hard links make logical byte totals differ from physical savings",
+  "ProcessesTerminated": [],
+  "GuiHold": "Maintained; task-launched Blender window left open to avoid changing desktop focus",
+  "NodeHttpServer": "Already closed",
+  "UnityBatchEditor": "Already exited198",
+  "Success": true
+}

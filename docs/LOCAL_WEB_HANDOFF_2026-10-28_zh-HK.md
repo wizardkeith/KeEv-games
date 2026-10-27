@@ -51,3 +51,11 @@
 本提交只新增此文件、最小可重現的診斷source／小型smoke .blend/.glb／JSON證據及PROJECT_STATE記錄。原R6資產已在遠端，未重複上傳。未納入raw license/session logs、個人檔案、node_modules、pnpm store、Unity Library/Temp/Logs或自動生成lock/config。新本機Git author未設定，使用既有授權GitHub連接建立文件／證據checkpoint；不更改本機identity/security設定。
 
 遠端checkpoint建立後需以同一Git transport fetch／fast-forward並核對精確remote SHA及檔案hash；這不是Site發布。成功核對後才清理本任務可重建cache／重複測試檔，保留同步的source與最小證據，記錄實際bytes；清理前沒有宣稱釋放空間。沒有PR retry、merge、public deployment、player Normal save更改或Library重建。
+
+## 已完成同步後清理 — 2026-10-28T00:29:50+08:00
+
+- 文件／最小證據checkpoint `96fd480ba0afced2107d14ada60944346ccb5d99` 已由實際Git transport讀回，獨立checkout正常fast-forward；smoke .blend/.glb與R6原檔SHA256逐一匹配。depth1 fetch初次隱藏新提交parent，正常補取同分支兩層祖先後已解決，無reset／force／unrelated merge。
+- 已刪除本任務可重建node_modules／task-local pnpm store、pnpm自動生成的兩個未追蹤yaml、Unity scratch Library／Temp／Logs／UserSettings及已核對同步的重複smoke輸出。原package-lock、所有tracked遊戲來源／資產／references、同步後最小證據及Unity測試source保留；未刪用戶原工程或不確定資料，未清空Recycle Bin。
+- 刪除檔案邏輯總長 **258,697,689 bytes**；drive free採樣132,274,511,872→132,443,684,864，觀察增加 **169,172,992 bytes**。hardlinks及其他程式同期活動令兩數不可當成同一概念，不聲稱全部空間變化均由本清理造成。詳見 `docs/reviews/evidence/local-capability-20261028/cleanup-result.json`。
+- Node HTTP server早已自行關閉、Unity batch早已exit198；沒有終止任何用戶app。task-launched Blender視窗因GUI/focus hold保留，避免自行關閉視窗造成桌面焦點變動。當前沒有本任務background建模／capture／preview server。
+- pnpm auto-install產物已移除；完整Web build/test仍待依賴安裝與build-script範圍明確批准，不能用清理當成測試通過。後續先維持Web-first，GUI與writer交接界限不變。
