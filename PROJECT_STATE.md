@@ -1,10 +1,11 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-27T10:26:55+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-27T10:37:56+08:00** (Asia/Hong_Kong).
 
-## V11 C44局部接觸半徑修正／驗證中 — 2026-10-27T10:26:55+08:00
+## V11 C44局部接觸半徑固定候選／待視覺覆核 — 2026-10-27T10:37:56+08:00
 
-- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)已推送application`35301d7b59b42c1875558665d8daf21298c1d4ca`。C43獨立窄視覺FAIL：接地有改善，但層架後灰帶／植物煙霧感過廣；C44只將AO半徑.70→.20，其餘AO、光量、曝光／相機／已過模型材質／192反射不動。280tests通過，273實際正常及雙斜角已取得，274同來源C43控制及新庫存／Low-High驗證中。**C40仍普通預設、C43與C44均未採用；原圖美術未接受。** 已過RTT修正保留；不把NullEngine切換或CPU紀錄稱為supported WebGL GPU資源釋放／完成畫格／連續動作認證。main僅文件指標，未合併／PR8仍Draft，本輪未改公開V17；無玩家Normal／Chrome／Unity／Site／Library或LTC重試／關機，無使用者動作阻塞。
+- [Draft PR8](https://github.com/wizardkeith/KeEv-games/pull/8)推送`6c7f0a98c70f5c278e8a0f329065a7badb785779`／application`35301d7b59b42c1875558665d8daf21298c1d4ca`；[原圖／同來源C43 .70與C44 .20正常480px、三處介面、雙斜角及來源](https://github.com/wizardkeith/KeEv-games/blob/6c7f0a98c70f5c278e8a0f329065a7badb785779/docs/V11_C44_LOCAL_CONTACT_RADIUS_2026-10-27_zh-HK.md)。C43獨立窄視覺FAIL（架後灰帶／植物煙霧過廣）；C44**只改radius .70→.20**，其餘AO／光量／曝光／camera／已過模型材質／192反射保留。實拍灰帶收窄、家具影縮至接觸附近；是否足夠保留接地改善待覆核，不自稱PASS，沒有用強AO處理方向光或屋頂。**C40仍普通開發預設，C43/C44均未採用，整體原圖未接受。**
+- 280tests/tsc/build/validate/replay/assets、146GLB零錯警告／305保護檔、508資產及三組195／195／182runtime重建byte同。真UI七stock階段／四Low-High、會計、售罄reload、同render caster/draw通過，fresh隔離Normal不變／0pageerror；已過RTT修正保留。Low無新增renderer／High新epoch不等於supported WebGL GPU資源釋放認證；無GPU fence或完成畫格主張。原片293.400秒僅177來源幀，中位1.82秒／最大7.16秒；pointer85.520秒僅27幀，非連續動作／實體GPU-FPS-audio-native認證，無新完整B／ReduceMotion／closure-hidden-tab／五語窄屏驗收。main僅文件指標，功能未合併／PR8仍Draft，本輪未改公開V17；無merge／Site／玩家Normal或Chrome／Unity／Library或LTC重試／關機，無使用者動作阻塞。下一步固定候選獨立視覺覆核，原圖重建目標繼續。
 
 ## V11 C43有遮蔽廣域光固定候選／待視覺覆核 — 2026-10-27T10:03:31+08:00
 
