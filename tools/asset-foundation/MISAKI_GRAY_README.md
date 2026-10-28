@@ -1,3 +1,5 @@
+> Current canonical sample is R10 WIP, saved urgently before the user leaves. See docs/MISAKI_HAIR_R10_2026-10-28_zh-HK.md and R10 WIP_STATUS.json. Do not run the historical R9 builder over it. R10 is unaccepted; no art-phase completion or cleanup claimed.
+
 # Misaki R9 — continuous control-volume checkpoint, unaccepted
 
 Current canonical sample is R9. R8 failed independent review for radial seams,

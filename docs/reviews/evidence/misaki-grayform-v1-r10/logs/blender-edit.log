@@ -1,0 +1,21 @@
+00:01.484  blend            | Read blend: "<USER_HOME>\Documents\Codex\2026-10-28\task\hair-r10\baseline\misaki-grayform.blend"
+Info: Saved as "misaki-grayform.blend"
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+08:02:40 | INFO: Starting glTF 2.0 export
+08:02:40 | INFO: Extracting primitive: 20 / inner shirt torso editable quads.001
+08:02:40 | INFO: Primitives created: 4
+08:02:40 | INFO: Extracting primitive: 01 / cheek to narrowing jaw and real eye apertures editable qua.001
+08:02:40 | INFO: Primitives created: 1
+08:02:40 | INFO: Extracting primitive: 03 / convex eye behind almond aperture -1 editable quads.001
+08:02:40 | INFO: Primitives created: 3
+08:02:40 | INFO: Extracting primitive: R9 broad ear or lower-edge overlap only.002
+08:02:40 | INFO: Primitives created: 1
+08:02:40 | INFO: Extracting primitive: 17 / own LEFT clip leaf 0 editable quads.001
+08:02:40 | INFO: Primitives created: 1
+08:02:40 | INFO: Finished glTF 2.0 export in 0.08564972877502441 s
+
+{"editedVertices": 284, "clipProtectedVertices": 18, "triangles": 47752, "blendSha256": "4ae7d39158a936f36d665f61a65f43c899509b02fb809aa2a3b64d2fbffc41f7", "glbSha256": "0740edb0b7455e5fe19371cc0470b3ade9eecc18823e6c62e89e598e19264b21"}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

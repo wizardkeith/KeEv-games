@@ -1,6 +1,12 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-28T07:47:57+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-28T08:05:25+08:00** (Asia/Hong_Kong).
+
+## R10 WIP緊急保存／停止新雕塑 — 2026-10-28T08:05:25+08:00
+
+- 用戶即將出門返工，按要求立即停止新雕塑／長驗證，先同步現存R10原檔、腳本及可用實拍／logs，未完成美術階段、未獲視覺接受。沿用R9控制網，無新增面／髮片，保留R9 source checkpoint 76d6db3342ed8ab27d51f68a39c9f52f408fbba1可回退。
+- 既有final capture及validation chain已完成exit0，304/304tests、14張實拍；未在緊急要求後啟動新render或長測試。只由現有最終PNG重新排比較圖避免stale來源。所有狀態在R10證據WIP_STATUS.json；視覺仍待獨立覆核，無技術PASS當美術PASS。
+- 現有.blend/.glb已保存，正常commit/push至既有codex/asset-foundation-v1，最終遠端SHA外部讀回；沒有清理，所有task scratch保留。無GUI、Unity、force、PR／merge／Site／玩家Normal。
 
 ## 本機R9：連續主髮網／露眼與可見clip checkpoint，未接受 — 2026-10-28T07:45:25+08:00
 

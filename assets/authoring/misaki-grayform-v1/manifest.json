@@ -255,7 +255,7 @@
     "Existing gameplay rig/actions/data/saves untouched",
     "No final materials, textures, fine strands, weave or finger topology",
     "Back bow omitted rather than claiming an unseen reference",
-    "R9 is an unaccepted whole-hair review candidate; side/back remain inferred"
+    "R10 is an unaccepted flow/identity review candidate; no contact/collision certification"
   ],
   "soleNormalization": 0.0006406807224266231,
   "semanticExportGroups": [
@@ -265,9 +265,9 @@
     "own-left-clip",
     "clothed-body"
   ],
-  "hairMethod": "Single continuous 9x9 quad crown grid joined to eight 32-column side rings; asymmetric non-spherical rows, shared medium surface turns, outward/inward jaw contour; local Subsurf1 and editable Solidify2.8mm; two broad ear/lower overlaps only; actual fixed-clip support plane",
-  "revision": "R9 continuous low-resolution crown-to-bob control volume plus two lower overlaps / unaccepted candidate",
+  "hairMethod": "Retained R9 337-vertex/320-quad continuous mesh, unchanged faces/groups/modifiers and two frozen overlaps; direct root/ridge/valley/support/cheek/return vertex sculpt with local soft crease on existing edges; no new sheets or materials",
+  "revision": "R10 direct connected-region sculpt of retained R9 control mesh / unaccepted candidate",
   "headNeckOffset": 0.045,
   "bodyFrozenSource": "038740fbd7f6428cc82d5f442646c2d86a4143e3",
-  "sourceBaselineSha256": "5cd7463fd7a83f13a13612569ab671e17fc8723b973133eb6ec9a84c47b080e4"
+  "sourceBaselineSha256": "27b69fae409e7b8c589ae1af0c48b23e9b728a3c4d2cd933e0f955c5ced13b53"
 }

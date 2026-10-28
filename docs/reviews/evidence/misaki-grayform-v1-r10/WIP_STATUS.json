@@ -1,0 +1,24 @@
+{
+  "checkpoint": "R10 WIP - urgent save before user leaves for work",
+  "visualAcceptance": false,
+  "artPhaseComplete": false,
+  "baselineCommit": "76d6db3342ed8ab27d51f68a39c9f52f408fbba1",
+  "savedAssetSha256": {
+    "blend": "4ae7d39158a936f36d665f61a65f43c899509b02fb809aa2a3b64d2fbffc41f7",
+    "glb": "0740edb0b7455e5fe19371cc0470b3ade9eecc18823e6c62e89e598e19264b21"
+  },
+  "existingProcessesCompleted": {
+    "finalCaptureExitCode": 0,
+    "finalValidationChainExitCode": 0
+  },
+  "tests": {
+    "pass": 304,
+    "fail": 0,
+    "skip": 0
+  },
+  "captures": 14,
+  "comparisonSheetsRegeneratedFromFinalExistingCaptures": true,
+  "noNewSculptOrLongValidationAfterUrgentRequest": true,
+  "cleanupPerformed": false,
+  "remaining": "Independent visual review and normal art-phase report/cleanup deferred; task scratch retained"
+}
