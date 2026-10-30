@@ -1,0 +1,21 @@
+{
+  "method": "Own generated UV colour paint, no reference pixels read by this generator",
+  "purpose": "Editable albedo/iris/flow maps for Blender head-only lookdev",
+  "files": [
+    {
+      "name": "face-own-blush-uv.png",
+      "bytes": 13625,
+      "sha256": "6240d3fbfb7adb64133dc335acde584b751e33313c36d5e65a457ee28e3c23c1"
+    },
+    {
+      "name": "hair-own-broad-flow-uv.png",
+      "bytes": 15683,
+      "sha256": "d48ffd9f25aa7ca4a717787b8f0848ec25118f18a0b42da0b3f086c76f673ceb"
+    },
+    {
+      "name": "iris-own-detail-uv.png",
+      "bytes": 71424,
+      "sha256": "fd4fa673e76404f9e992b809414da2dd153df7a7eec7909ed9b6dbb67c613060"
+    }
+  ]
+}

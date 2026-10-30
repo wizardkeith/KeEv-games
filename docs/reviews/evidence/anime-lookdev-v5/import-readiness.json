@@ -1,0 +1,21 @@
+{
+  "blender": "5.2.3 LTS",
+  "operators": [
+    {
+      "format": "OBJ",
+      "registeredOperator": "WM_OT_obj_import",
+      "externalAiModelImported": false
+    },
+    {
+      "format": "FBX",
+      "registeredOperator": "IMPORT_SCENE_OT_fbx",
+      "externalAiModelImported": false
+    },
+    {
+      "format": "GLB/glTF",
+      "registeredOperator": "IMPORT_SCENE_OT_gltf",
+      "externalAiModelImported": false
+    }
+  ],
+  "scope": "Read-only operator registration. No external provider/model upload/download, purchase, installation, rigging or topology-quality claim."
+}

@@ -1,0 +1,19 @@
+{
+  "blenderVersion": "5.2.3 LTS",
+  "engine": "BLENDER_EEVEE",
+  "actualImageWritten": true,
+  "nodePath": [
+    "Diffuse BSDF",
+    "Shader to RGB",
+    "ColorRamp with 3 softly transitioned colour bands",
+    "Emission",
+    "Material Output"
+  ],
+  "sourceSha256": "01519587dbf7977ed58c41fef169b7d349081f902654e803caf0a353465a18db",
+  "imageSha256": "53f9609e9ebae88f18bbf9ff2d4e2478ea6b90e77cfb4b72677a896ceef59b74",
+  "limits": [
+    "Renderer/node compatibility only, not target likeness",
+    "Blender lookdev graph, not arbitrary GLB shader portability",
+    "Background API only; no GUI app approval retry or sculpt input"
+  ]
+}

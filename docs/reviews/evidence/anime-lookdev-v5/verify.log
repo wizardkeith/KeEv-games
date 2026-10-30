@@ -1,0 +1,10 @@
+00:01.437  blend            | Read blend: "C:\Users\wizar\Documents\Codex\2026-10-28\task\KeEv-games-handoff\assets\authoring\anime-lookdev-v5\researched-head-lookdev.blend"
+C:\Users\wizar\Documents\Codex\2026-10-28\task\KeEv-games-handoff\tools\anime-lookdev-v5\verify_native.py:22: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  toon_materials=[m for m in bpy.data.materials if m.use_nodes and any(n.bl_idname=='ShaderNodeShaderToRGB'for n in m.node_tree.nodes)]
+00:17.234  render           | Saved: 'C:\Users\wizar\Documents\Codex\2026-10-28\task\KeEv-games-handoff\docs\reviews\evidence\anime-lookdev-v5\fresh-reopen-neutral-matched.png'
+NATIVE_REOPEN_METHOD_CHECKS_PASS {"nativeSha256": "3eadf328c4e8c063a6387c6a704bb9987a5a3fe0d5eadec8b334556226b1daf3", "blender": "5.2.3 LTS", "engine": "BLENDER_EEVEE", "flatBezierLocks": 10, "customProfileWidthDepthRatio": 8.125, "taperMode": "MULTIPLY", "packedOwnUvMaps": [{"name": "face-own-blush-uv.png", "size": [1024, 512], "packed": true, "sha256": "6240d3fbfb7adb64133dc335acde584b751e33313c36d5e65a457ee28e3c23c1"}, {"name": "iris-own-detail-uv.png", "size": [512, 512], "packed": true, "sha256": "fd4fa673e76404f9e992b809414da2dd153df7a7eec7909ed9b6dbb67c613060"}, {"name": "hair-own-broad-flow-uv.png", "size": [256, 1024], "packed": true, "sha256": "d48ffd9f25aa7ca4a717787b8f0848ec25118f18a0b42da0b3f086c76f673ceb"}], "normalEdit": {"mode": "DIRECTIONAL", "mix": 0.6000000238418579, "changedCornerNormals": 13204, "totalCornerNormals": 32704, "maxVectorDelta": 0.4415105389367665}, "lightingToonMaterialCount": 12, "v3UnchangedSha256": "d58bb179624083b30de52e0852bae7025281fd8bc5347a9ed9e95abb4a2583fa", "reopenedAndRendered": true, "portableStatus": "No GLB export. Native EEVEE graph does not automatically transfer to Unity/GLB. Mesh/curve controls, UVs, albedo maps and normals are separately authored data.", "visualAcceptance": false, "guiInputTest": "Not run; original app approval timed out, no retry/bypass."}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+Unable to delete file
+Unable to delete file
+
+Blender quit

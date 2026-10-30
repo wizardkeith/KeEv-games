@@ -1,0 +1,83 @@
+{
+  "source": "assets/authoring/anime-lookdev-v5/researched-head-lookdev.blend",
+  "sourceSha256": "3eadf328c4e8c063a6387c6a704bb9987a5a3fe0d5eadec8b334556226b1daf3",
+  "v3SourceUnchangedSha256": "d58bb179624083b30de52e0852bae7025281fd8bc5347a9ed9e95abb4a2583fa",
+  "renderEngine": "BLENDER_EEVEE",
+  "method": [
+    "actual Shader to RGB with 3 soft colour bands",
+    "own UV blush/iris/hair colour maps",
+    "directional Normal Edit on front cheeks",
+    "custom flat curve profile with taper/radius/point tilt",
+    "face cage edits and surface-fitted eye/lid meshes"
+  ],
+  "hairCurves": 10,
+  "renders": [
+    {
+      "file": "v3-control-neutral-matched.png",
+      "sha256": "1639998e6f656cf71d76d00c282ce0bf63ba6c31d6270ad685cfca2093fdeb57"
+    },
+    {
+      "file": "v3-control-neutral-front.png",
+      "sha256": "0094d0db5bcd109e2ca0c678ae0ec15b1a94a15c6d52edde8ced6524759aea21"
+    },
+    {
+      "file": "v3-control-neutral-three-quarter.png",
+      "sha256": "831c12b5e724b17953704bc916ccac5dd8f33fd3a738a1bf4796bcbcce16be35"
+    },
+    {
+      "file": "v3-control-neutral-profile.png",
+      "sha256": "64dff6c7cafb2e0d7b2bd8b4e4769810581869d7b0620be84bf3796559ce54f6"
+    },
+    {
+      "file": "researched-study-neutral-matched.png",
+      "sha256": "9ae84dc98a9aae72ba933f0346cff821c86a38d9a49c54f8f6fd513a41b6a046"
+    },
+    {
+      "file": "researched-study-neutral-front.png",
+      "sha256": "618c899196bb83d6dbc9073ab68c4d0a3016c7c7574b350ce1a5e52a1251495e"
+    },
+    {
+      "file": "researched-study-neutral-three-quarter.png",
+      "sha256": "5ca48649edaf5b6845ba8adc47475c0abe9c67f9df610a8c93958780cf4d40e9"
+    },
+    {
+      "file": "researched-study-neutral-profile.png",
+      "sha256": "8723d4df7801f5e616aedc45a96778083a502c667016a714970d2a2d6316bd16"
+    },
+    {
+      "file": "v3-control-warm-matched.png",
+      "sha256": "9dd7c48191daebd7332bf20788241db9b1e91df4d0e12412d52b1222ce5b830f"
+    },
+    {
+      "file": "v3-control-warm-front.png",
+      "sha256": "5e1329f474050f5c40d4cf188cdede28ab49778ecaa7d8bd4e40c7bb63a1dd5c"
+    },
+    {
+      "file": "v3-control-warm-three-quarter.png",
+      "sha256": "dc97df401030badae86c59a1e37c9e38c6a2d8d9f32ed27be611c14bfa58e558"
+    },
+    {
+      "file": "v3-control-warm-profile.png",
+      "sha256": "ef2871ad019ecf787fe93cb67116b40fc77b6f8051ac2119bed80004c70d841e"
+    },
+    {
+      "file": "researched-study-warm-matched.png",
+      "sha256": "bedad9a89656297ca893cfe158adcf6ee61d59fe73486d278a039055a5151319"
+    },
+    {
+      "file": "researched-study-warm-front.png",
+      "sha256": "925dd625ebe356ad976301abd176d6384701a2dd904e6b5b311f692c4708c878"
+    },
+    {
+      "file": "researched-study-warm-three-quarter.png",
+      "sha256": "4bbe2c143e7835f221a753a4201130f71880a5f6b3af4640f057038f9af0be49"
+    },
+    {
+      "file": "researched-study-warm-profile.png",
+      "sha256": "aec8ee6702a4735cffcc7d6b0fc5617de8f4765263e5c81f70c3145d612d1ab3"
+    }
+  ],
+  "artStatus": "Unaccepted research candidate; compare actual pixels before judgment",
+  "portability": "Native Blender lighting graph only; no claim arbitrary toon nodes travel through GLB or Unity",
+  "guiStatus": "Background work only. CUA app approval timeout not retried."
+}

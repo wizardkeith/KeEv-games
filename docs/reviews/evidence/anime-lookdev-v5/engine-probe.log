@@ -1,0 +1,16 @@
+C:\Users\wizar\Documents\Codex\2026-10-28\task\KeEv-games-handoff\tools\anime-lookdev-v5\engine_probe.py:11: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  toon=bpy.data.materials.new('Actual EEVEE diffuse to RGB / softly transitioned three bands');toon.use_nodes=True
+C:\Users\wizar\Documents\Codex\2026-10-28\task\KeEv-games-handoff\tools\anime-lookdev-v5\engine_probe.py:20: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  pbr=bpy.data.materials.new('PBR control / same geometry');pbr.use_nodes=True;p=pbr.node_tree.nodes['Principled BSDF'];p.inputs['Base Color'].default_value=(*rgb('#EAB095'),1);p.inputs['Roughness'].default_value=.65;p.inputs['Specular IOR Level'].default_value=.23
+C:\Users\wizar\Documents\Codex\2026-10-28\task\KeEv-games-handoff\tools\anime-lookdev-v5\engine_probe.py:24: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('Probe neutral world');world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.25,.25,.25,1);world.node_tree.nodes['Background'].inputs[1].default_value=.25;scene.world=world
+00:01.578  image.write      | ERROR OpenImageIO write failed: Could not open file "\.thumbnails\large\blender_33708_d624dfe3fea661f4d05f7d8f14d8266b.png.png"
+00:15.890  render           | Saved: 'C:\Users\wizar\Documents\Codex\2026-10-28\task\KeEv-games-handoff\docs\reviews\evidence\anime-lookdev-v5\eevee-toon-compatibility.png'
+Extensions: writing cache failed ([WinError 5] 摮?鋡急??? 'C:\\Users\\wizar\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\extensions').
+Info: Saved as "eevee-shader-compatibility-probe.blend"
+ACTUAL_EEVEE_SHADER_TO_RGB_RENDER_PASS {"blenderVersion": "5.2.3 LTS", "engine": "BLENDER_EEVEE", "actualImageWritten": true, "nodePath": ["Diffuse BSDF", "Shader to RGB", "ColorRamp with 3 softly transitioned colour bands", "Emission", "Material Output"], "sourceSha256": "01519587dbf7977ed58c41fef169b7d349081f902654e803caf0a353465a18db", "imageSha256": "53f9609e9ebae88f18bbf9ff2d4e2478ea6b90e77cfb4b72677a896ceef59b74", "limits": ["Renderer/node compatibility only, not target likeness", "Blender lookdev graph, not arbitrary GLB shader portability", "Background API only; no GUI app approval retry or sculpt input"]}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+Unable to delete file
+Unable to delete file
+
+Blender quit

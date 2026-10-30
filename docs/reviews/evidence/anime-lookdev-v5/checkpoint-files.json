@@ -1,0 +1,238 @@
+{
+  "recordedAtHongKong": "2026-10-30T15:00:23+08:00",
+  "artAccepted": false,
+  "files": [
+    {
+      "path": "assets/authoring/anime-lookdev-v5/eevee-shader-compatibility-probe.blend",
+      "bytes": 170043,
+      "sha256": "01519587dbf7977ed58c41fef169b7d349081f902654e803caf0a353465a18db"
+    },
+    {
+      "path": "assets/authoring/anime-lookdev-v5/first-construction-evidence.zip",
+      "bytes": 8799449,
+      "sha256": "60cf01c820184b82d455b792e73065dabb5dce4b7d908076178d724196cc8aa3"
+    },
+    {
+      "path": "assets/authoring/anime-lookdev-v5/manifest.json",
+      "bytes": 3241,
+      "sha256": "7f3c7c51c1480e79f6846768e796f7adaa446cb8f2c997c276c1539c2a41851d"
+    },
+    {
+      "path": "assets/authoring/anime-lookdev-v5/README.md",
+      "bytes": 3128,
+      "sha256": "013786290888f6af65d128d0612a08f3f2ef6e80a343e4341fa35b210c6fabea"
+    },
+    {
+      "path": "assets/authoring/anime-lookdev-v5/researched-head-lookdev.blend",
+      "bytes": 1564423,
+      "sha256": "3eadf328c4e8c063a6387c6a704bb9987a5a3fe0d5eadec8b334556226b1daf3"
+    },
+    {
+      "path": "assets/authoring/anime-lookdev-v5/textures/face-own-blush-uv.png",
+      "bytes": 13625,
+      "sha256": "6240d3fbfb7adb64133dc335acde584b751e33313c36d5e65a457ee28e3c23c1"
+    },
+    {
+      "path": "assets/authoring/anime-lookdev-v5/textures/hair-own-broad-flow-uv.png",
+      "bytes": 15683,
+      "sha256": "d48ffd9f25aa7ca4a717787b8f0848ec25118f18a0b42da0b3f086c76f673ceb"
+    },
+    {
+      "path": "assets/authoring/anime-lookdev-v5/textures/iris-own-detail-uv.png",
+      "bytes": 71424,
+      "sha256": "fd4fa673e76404f9e992b809414da2dd153df7a7eec7909ed9b6dbb67c613060"
+    },
+    {
+      "path": "assets/authoring/anime-lookdev-v5/textures/paint-provenance.json",
+      "bytes": 663,
+      "sha256": "8061dffe9dc6e01081e45199513e72b843b9b222c249192ec99fc0ce25534321"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/anime-method-reference-comparison.png",
+      "bytes": 955187,
+      "sha256": "529b2e8205dc85bc2c9713a6dd841f0774a1eef89e2e6b744e8d8fd9c6222bd7"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/anime-method-view-comparison.png",
+      "bytes": 1199572,
+      "sha256": "15bb1bf696ca2bc073f0aadfbd92f8c26e019ce49754fe2c0bbc327885ede938"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/build-corrected.log",
+      "bytes": 7293,
+      "sha256": "d64300f01bf0925750ac665ad8fd8762ddc411a77cfca6f6301038847b946b7c"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/build.log",
+      "bytes": 7293,
+      "sha256": "0de05a0e9da12792ccb5e94cadff341466847fcd9cad82fee1347a5822166492"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/comparison-judgment.json",
+      "bytes": 3380,
+      "sha256": "fa817b9639c03c31a88cbe484d2c734e4cd2453e0253c3be4850c1fdd4b18f57"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/construction-inspection.json",
+      "bytes": 110735,
+      "sha256": "d96f31256a2ba7bc687b2ca99bbf457cab60fb4c6000c1c2dfa3609e41d7be42"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/eevee-engine-probe.json",
+      "bytes": 639,
+      "sha256": "094957c0e69a3a83f6a8f18aee98da89fc75b933aebde3d8144390cc3c14752d"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/eevee-toon-compatibility.png",
+      "bytes": 231650,
+      "sha256": "53f9609e9ebae88f18bbf9ff2d4e2478ea6b90e77cfb4b72677a896ceef59b74"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/engine-probe.log",
+      "bytes": 2461,
+      "sha256": "ca5112984af787684b3d7f9222692e3cfa223db2683344cd03fa266e8f6fd1ed"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/fresh-reopen-neutral-matched.png",
+      "bytes": 478205,
+      "sha256": "d0322518e97c361d55afdb48282cf2b80e8a612d6ec1af775a45583f1e66aa07"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/fresh-reopen-verification.json",
+      "bytes": 1532,
+      "sha256": "eab22ff0a54e647c7a2e56a4f78839113d9e7f023f16560c1ae82738de188fa9"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/import-readiness.json",
+      "bytes": 581,
+      "sha256": "fd24375033fc3e27998170a94a18cffa968d3dee3e93ed82f1451d95a4fb11c1"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/inspect.log",
+      "bytes": 271,
+      "sha256": "9ae3b4949e1c8ba9afd7f663e044839a33abeb22aa5cf9e6032c7a3351c5e83c"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/researched-study-neutral-front.png",
+      "bytes": 471863,
+      "sha256": "618c899196bb83d6dbc9073ab68c4d0a3016c7c7574b350ce1a5e52a1251495e"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/researched-study-neutral-matched.png",
+      "bytes": 478210,
+      "sha256": "9ae84dc98a9aae72ba933f0346cff821c86a38d9a49c54f8f6fd513a41b6a046"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/researched-study-neutral-profile.png",
+      "bytes": 417276,
+      "sha256": "8723d4df7801f5e616aedc45a96778083a502c667016a714970d2a2d6316bd16"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/researched-study-neutral-three-quarter.png",
+      "bytes": 473454,
+      "sha256": "5ca48649edaf5b6845ba8adc47475c0abe9c67f9df610a8c93958780cf4d40e9"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/researched-study-warm-front.png",
+      "bytes": 470460,
+      "sha256": "925dd625ebe356ad976301abd176d6384701a2dd904e6b5b311f692c4708c878"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/researched-study-warm-matched.png",
+      "bytes": 476231,
+      "sha256": "bedad9a89656297ca893cfe158adcf6ee61d59fe73486d278a039055a5151319"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/researched-study-warm-profile.png",
+      "bytes": 414780,
+      "sha256": "aec8ee6702a4735cffcc7d6b0fc5617de8f4765263e5c81f70c3145d612d1ab3"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/researched-study-warm-three-quarter.png",
+      "bytes": 471117,
+      "sha256": "4bbe2c143e7835f221a753a4201130f71880a5f6b3af4640f057038f9af0be49"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/v3-control-neutral-front.png",
+      "bytes": 462469,
+      "sha256": "0094d0db5bcd109e2ca0c678ae0ec15b1a94a15c6d52edde8ced6524759aea21"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/v3-control-neutral-matched.png",
+      "bytes": 466598,
+      "sha256": "1639998e6f656cf71d76d00c282ce0bf63ba6c31d6270ad685cfca2093fdeb57"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/v3-control-neutral-profile.png",
+      "bytes": 406532,
+      "sha256": "64dff6c7cafb2e0d7b2bd8b4e4769810581869d7b0620be84bf3796559ce54f6"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/v3-control-neutral-three-quarter.png",
+      "bytes": 463393,
+      "sha256": "831c12b5e724b17953704bc916ccac5dd8f33fd3a738a1bf4796bcbcce16be35"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/v3-control-warm-front.png",
+      "bytes": 462772,
+      "sha256": "5e1329f474050f5c40d4cf188cdede28ab49778ecaa7d8bd4e40c7bb63a1dd5c"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/v3-control-warm-matched.png",
+      "bytes": 466231,
+      "sha256": "9dd7c48191daebd7332bf20788241db9b1e91df4d0e12412d52b1222ce5b830f"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/v3-control-warm-profile.png",
+      "bytes": 405469,
+      "sha256": "ef2871ad019ecf787fe93cb67116b40fc77b6f8051ac2119bed80004c70d841e"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/v3-control-warm-three-quarter.png",
+      "bytes": 462081,
+      "sha256": "dc97df401030badae86c59a1e37c9e38c6a2d8d9f32ed27be611c14bfa58e558"
+    },
+    {
+      "path": "docs/reviews/evidence/anime-lookdev-v5/verify.log",
+      "bytes": 2134,
+      "sha256": "e7edb48ba23001b2ff610c74bf348542ad56e61db25dfb86ab206738c32c7267"
+    },
+    {
+      "path": "tools/anime-lookdev-v5/build_lookdev.py",
+      "bytes": 16907,
+      "sha256": "61cd245ef2ae5a85ddc53f774323132c356fba6d1433b7dfee2517bd29b7fd0e"
+    },
+    {
+      "path": "tools/anime-lookdev-v5/engine_probe.py",
+      "bytes": 4628,
+      "sha256": "cbd81f9cfb23d7da39f41dcf6f802e51c5bc96be891e82ec190104c557a65b36"
+    },
+    {
+      "path": "tools/anime-lookdev-v5/inspect_native.py",
+      "bytes": 1460,
+      "sha256": "6759c088fba696595220f505af3d892db9c8254767dfb606692a366e665e3058"
+    },
+    {
+      "path": "tools/anime-lookdev-v5/make_review.py",
+      "bytes": 3872,
+      "sha256": "25dfe790611d27f9c09b9b13d2a45f0c5e55b930136c4ae64f71235fb7285a6f"
+    },
+    {
+      "path": "tools/anime-lookdev-v5/paint_maps.py",
+      "bytes": 2213,
+      "sha256": "dc393896a2225d52f5ff94f1136f57b3436d6abbdc5957ed60263b3fb8cbf416"
+    },
+    {
+      "path": "tools/anime-lookdev-v5/record_checkpoint.py",
+      "bytes": 4103,
+      "sha256": "48a0de7be8f121127a016a4a2a7aed54dbb1fdf3680b74a856b96f36ba2027a9"
+    },
+    {
+      "path": "tools/anime-lookdev-v5/verify_native.py",
+      "bytes": 3399,
+      "sha256": "12bc4f8280ef3377425dc46c2a1472b61ced423bde9a768373e1cc5e566eb10d"
+    }
+  ],
+  "totalBytes": 20948130,
+  "preservation": "No filesystem deletion; failed construction and previous v3 retained."
+}

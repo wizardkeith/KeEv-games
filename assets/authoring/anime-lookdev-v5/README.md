@@ -1,0 +1,15 @@
+# Researched built-in anime head study — VISUAL FAIL, not adopted
+
+This is an isolated native Blender 5.2.3 EEVEE method study, not accepted game art or a game screenshot. V3 remains unchanged. It contains genuine editable 3D geometry, ten Bezier locks with editable flattened profile/taper/point tilt, face mesh controls, own packed UV colour maps and a directional Normal Edit modifier. No reference-image face projection, addon installation or GUI brush input was used. The colour maps were generated with the accompanying own paint-map script; this is not proof of interactive Texture Paint operation.
+
+Actual `Diffuse BSDF -> Shader to RGB -> ColorRamp -> multiplied own albedo -> Emission` works in EEVEE. A separate sphere probe establishes renderer compatibility. The research head uses three softly transitioned coloured lighting bands; the native graph is **not** a portable GLB/Unity toon shader. No new GLB is claimed or integrated for this failed study. Existing v3 portable exports remain intact.
+
+The first construction is retained in `first-construction-evidence.zip` (native scene, manifest and sixteen actual images). One bounded correction made curve radius multiply taper, increased the designed main/support sweep widths, moved eye curves away from intersecting white surfaces, and seated the study/control heads onto the common torso. The retained candidate still has sparse separated ribbon-like hair, artificial roots/ends, weak facial expression and irregular/intersecting eyelid contours. **Visual FAIL; stop parameter variants and do not adopt.**
+
+The comparison includes the unchanged canonical target pixels, v3 head control and study under shared neutral/warm light, front/three-quarter/profile cameras and a 200px head/shoulders proxy. Reference camera and unseen side/back details are inferred. This is not an actual game-view or target acceptance test.
+
+Fresh-process reopen verifies packed maps, editable curve controls and effective custom-normal deltas. Re-render RGB8 mean differences are about 0.0044–0.0075/channel, max 3–7; not byte-identical. Native source SHA256 is in the manifest and fresh-reopen record. Existing protected v3 SHA256 remains `d58bb179624083b30de52e0852bae7025281fd8bc5347a9ed9e95abb4a2583fa`.
+
+The separate CUA Blender app launch previously timed out awaiting app approval. No retry, alternate GUI launch, sculpt/paint stroke or GUI save occurred. This does not block background Blender, but interactive sculpt/paint capability is still unproven.
+
+User has proposed Meshy/Tripo image-to-3D base meshes. No target was uploaded, service accessed, credits spent or model downloaded. Before adoption, import a separately approved generated file into a disposable asset area, retain source hashes and export options, inspect untextured front/side/three-quarter geometry, separate real structure from painted appearance, check ears/eyes/hair/fingers and intersections, then inspect topology/UVs/normals/materials, scale and eventual deformation suitability. Registered OBJ/FBX/glTF import operators alone do not establish an AI mesh's quality or animation readiness.
