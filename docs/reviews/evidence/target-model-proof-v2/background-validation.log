@@ -1,0 +1,30 @@
+00:01.453  blend            | Read blend: "<REPO>\assets\authoring\target-model-proof-v2\misaki-display-model-proof.blend"
+00:19.875  render           | Saved: '<REPO>\docs\reviews\evidence\target-model-proof-v2\blender-model-assembly-v2.png'
+00:39.813  render           | Saved: '<REPO>\docs\reviews\evidence\target-model-proof-v2\blender-model-character-v2.png'
+00:56.360  render           | Saved: '<REPO>\docs\reviews\evidence\target-model-proof-v2\blender-model-face-v2.png'
+01:12.672  render           | Saved: '<REPO>\docs\reviews\evidence\target-model-proof-v2\blender-model-front-v2.png'
+12:14:41 | INFO: Data are loaded, start creating Blender stuff
+12:14:41 | INFO: Blender create Mesh node Ivory socks / own right editable.001
+12:14:41 | INFO: Blender create Mesh node Sphere.060
+12:14:41 | INFO: Blender create Mesh node Curved almond eye white -1 editable.001
+12:14:41 | INFO: Blender create Mesh node Cocoa bob / small connected under-volume editable.001
+12:14:41 | INFO: Blender create Mesh node Loafer / flat welt sole -1 editable.001
+12:14:41 | INFO: Blender create Mesh node Visible neck editable.001
+12:14:41 | INFO: glTF import finished in 0.25s
+12:14:41 | INFO: Data are loaded, start creating Blender stuff
+12:14:41 | INFO: Blender create Mesh node Cube.080
+12:14:41 | INFO: Blender create Mesh node Linen sheet ??diagonal pull and relaxed unequal hem.001
+12:14:41 | INFO: Blender create Mesh node Ivory cup ??continuous interior and rolled rim.001
+12:14:41 | INFO: Blender create Mesh node Rounded unequal ivory petal.175
+12:14:41 | INFO: Blender create Mesh node Folded cream card ??real panels.001
+12:14:41 | INFO: Blender create Mesh node Cube.089
+12:14:41 | INFO: Blender create Mesh node Cube.067
+12:14:41 | INFO: Blender create Mesh node Cube.047
+12:14:41 | INFO: Blender create Mesh node Cube.072
+12:14:41 | INFO: Blender create Mesh node Celadon vase ??hollow wheel profile.001
+12:14:41 | INFO: glTF import finished in 0.12s
+01:29.016  render           | Saved: '<REPO>\docs\reviews\evidence\target-model-proof-v2\blender-model-glb-roundtrip-v2.png'
+NATIVE_REOPEN_AND_GLB_ROUNDTRIP_PASS {"Misaki": {"triangles": 199816, "min": [-0.27731853723526, -0.2652217447757721, 0.0], "max": [0.2608206570148468, 0.23689544200897217, 1.5546162128448486], "vertexColouredMeshes": 3, "maxBoundsErrorMetres": 5.960464477539063e-08, "fileSha256": "823f226db1a6521c1e55f2ee183af2fc3adf9c562fa0d905e1c594123e1ae033"}, "Display": {"triangles": 65216, "min": [-0.9300000071525574, -0.5767220854759216, 0.0], "max": [0.9300000071525574, 0.5184999704360962, 1.3831403255462646], "vertexColouredMeshes": 0, "maxBoundsErrorMetres": 5.960464477539063e-08, "fileSha256": "9f1799f7addf563cbbdc5d15eeaadd967ec9501a7c4fcfad146a816b5fc73049"}}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

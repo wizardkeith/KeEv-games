@@ -1,0 +1,167 @@
+{
+  "recordedAt": "2026-10-30T12:17:57.112796+08:00",
+  "sourceCheckpoint": "538e6159c1a07bb889a60d7002031644d2792132",
+  "scope": "unaccepted complete character and representative display Blender proof",
+  "sourceSha256": "a943f910bf3de6618d4ee29728760d91b71568deff662716657bf9cf96663afa",
+  "authoringMethod": "Background Blender Python; editable native meshes/curves/modifiers; no interactive GUI control tested",
+  "validation": "Native reopen and independent GLB import passed; zero glTF validator errors/warnings; no new Web/game tests claimed",
+  "blenderLogLimits": [
+    "Optional thumbnail/cache writes were denied by the profile; outputs saved successfully.",
+    "Non-normal-mapped or UV-less meshes can emit tangent calculation warnings. Validator certifies required normal-map tangents.",
+    "Mixed-material export can warn about unused vertex colour. Thirteen actual coloured primitives and render roundtrip verified."
+  ],
+  "artStatus": "NOT ACCEPTED; substantial hair, expression, clothing and material mismatches",
+  "cleanup": "No files deleted; no user process terminated; all task Blender processes exited normally.",
+  "files": [
+    {
+      "path": "assets/authoring/target-model-proof-v2/exports/display-group.glb",
+      "bytes": 3175156,
+      "sha256": "9f1799f7addf563cbbdc5d15eeaadd967ec9501a7c4fcfad146a816b5fc73049"
+    },
+    {
+      "path": "assets/authoring/target-model-proof-v2/exports/misaki-model.glb",
+      "bytes": 6262084,
+      "sha256": "823f226db1a6521c1e55f2ee183af2fc3adf9c562fa0d905e1c594123e1ae033"
+    },
+    {
+      "path": "assets/authoring/target-model-proof-v2/manifest.json",
+      "bytes": 2296,
+      "sha256": "20e19f378c39acd8e46933384dea6de9d8fee2fa98ecf06a174be8a6924e6d57"
+    },
+    {
+      "path": "assets/authoring/target-model-proof-v2/misaki-display-model-proof.blend",
+      "bytes": 1633505,
+      "sha256": "a943f910bf3de6618d4ee29728760d91b71568deff662716657bf9cf96663afa"
+    },
+    {
+      "path": "assets/authoring/target-model-proof-v2/README.md",
+      "bytes": 3199,
+      "sha256": "3ebd1e533ecad6265a181fa0cd39128f3653c64b622cbdaf148335d1dd7e7070"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v2/background-build.log",
+      "bytes": 6363,
+      "sha256": "475a910ba5cf9db54ad0fd25f0663d60596c35d967bbd58045af85e5b1c2ce4a"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v2/background-v1-control.log",
+      "bytes": 827,
+      "sha256": "647bb5a13e2b10ebdf2fe2b8e692814a63e040f5cbd4d568c9592c6d1d72cc4a"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v2/background-validation.log",
+      "bytes": 2825,
+      "sha256": "79b44a4b8c5f4ba6cce2ef4ea6893dfa6600da45825658747b36125aa487ae20"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v2/blender-model-assembly-v2.png",
+      "bytes": 1105893,
+      "sha256": "5c35718ceefd5568630117c4d3c54411b3fe5fcc58193d76c710178c05a7a964"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v2/blender-model-character-v2.png",
+      "bytes": 1385603,
+      "sha256": "ff445ec04dd2a803a8492cb389ecd042cc9d44d5b7cc24a1d28d87923968f7e7"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v2/blender-model-face-v2.png",
+      "bytes": 919176,
+      "sha256": "b54f09b84a52af8344192c7e9e5b3d3c7299c92762cb063cea6542c44adeaebd"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v2/blender-model-front-v2.png",
+      "bytes": 916697,
+      "sha256": "edbe6b0e103a1c7dc4da668da37e63f300a7e25992085c3510ccf6485b22be5d"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v2/blender-model-glb-roundtrip-v2.png",
+      "bytes": 1106236,
+      "sha256": "081cb33f06b46f09942f3b9e99740c74f0afa2f2d74aec63780b1e5b67759996"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v2/blender-v1-control-under-v2-light.png",
+      "bytes": 1370836,
+      "sha256": "f1ede88fd920436a59d8f4fa91e7212524ce4d3bfb068349b9201d737cae82cb"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v2/glb-validator.json",
+      "bytes": 27562,
+      "sha256": "f5adc2b78a68354e53818b386623b8218e80189eb3d9dd4639a53d005ae3ddcf"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v2/internal-first-volume-draft.png",
+      "bytes": 1386809,
+      "sha256": "5af686cd0a8b4b7706bb59551fe28436bf64065097d29432366bbf9cff5de232"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v2/native-roundtrip-verification.json",
+      "bytes": 4862,
+      "sha256": "4288dd50ab3bcc11d037429de2fd56811e6ed4b7a04c0bbebb78507a384c9e84"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v2/reference-face-comparison-v2.png",
+      "bytes": 1026372,
+      "sha256": "a3f358ccf2fa86b2f21202a9257f25f183cdeb632b6f767db8df412ffc79eaac"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v2/reference-model-comparison-v2.png",
+      "bytes": 1606145,
+      "sha256": "83d795163fe8031b744ac7427ccda64b538a671210ca2924c7498a100e075563"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v2/render-comparison-metrics.json",
+      "bytes": 571,
+      "sha256": "02807a4cf6406157b9fcca0e9c216d796f0eb006d0515f9034e80e5acf9a9698"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v2/v1-lighting-control.json",
+      "bytes": 791,
+      "sha256": "0274fe2507c66fb49f4ab766cf74202800effbe9033e16b4926d9ee88c154622"
+    },
+    {
+      "path": "tools/target-model-proof-v2/build_scene.py",
+      "bytes": 20146,
+      "sha256": "c1331539f6df2a74556bf4c95267ab29d99fd821e116a54a97aa31e52aacb4be"
+    },
+    {
+      "path": "tools/target-model-proof-v2/character_body.py",
+      "bytes": 6812,
+      "sha256": "2e69dd5c1fd63c5dea97956fa577d6ff46f92912a5167590c07c70d2d8e2fb23"
+    },
+    {
+      "path": "tools/target-model-proof-v2/character_hair.py",
+      "bytes": 5956,
+      "sha256": "130daaf7ab432413aae39f0f0e29b34c6d0eb816caf93a9fd83ab270d2b4b4a6"
+    },
+    {
+      "path": "tools/target-model-proof-v2/character_head.py",
+      "bytes": 4816,
+      "sha256": "320fe14b83622fd75aa5076d1f7052a970068ea6321c3a872746595e1fc71117"
+    },
+    {
+      "path": "tools/target-model-proof-v2/make_review.py",
+      "bytes": 4101,
+      "sha256": "a9e715c453ba70156a97ad943c1a59274a8d4f12193673ef13f90efb723e51d8"
+    },
+    {
+      "path": "tools/target-model-proof-v2/record_checkpoint.py",
+      "bytes": 3169,
+      "sha256": "597c866db9aef43046155a650236dbcb0ce7b3eb1d466c63753369d3b6aa16ef"
+    },
+    {
+      "path": "tools/target-model-proof-v2/render_v1_control.py",
+      "bytes": 4242,
+      "sha256": "9c516a2f9107445d4e02e9209213a57b9e26dc71c0086bb5f5e46737ae810e8c"
+    },
+    {
+      "path": "tools/target-model-proof-v2/validate_glb.mjs",
+      "bytes": 2023,
+      "sha256": "cc3c18fd90c4cbf193eeedd3e70d95c64e4b9e2ea6ebdbe9dd7b8d98c6037471"
+    },
+    {
+      "path": "tools/target-model-proof-v2/verify_and_render.py",
+      "bytes": 6600,
+      "sha256": "a9ba08c686bb64e74706c035dec3e17b155306b07437c8af34577be1cc1cd1b3"
+    }
+  ]
+}

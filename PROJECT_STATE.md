@@ -1,6 +1,14 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-30T11:50:00+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-30T12:17:11+08:00** (Asia/Hong_Kong).
+
+## Whole-character Blender proof v2 — still visually unaccepted, 2026-10-30
+
+- [Actual target / preserved v1 / new v2 whole-character comparison and front/35-degree face evidence](docs/BLENDER_MODEL_PROOF_V2_2026-10-30.md). New isolated `assets/authoring/target-model-proof-v2/` contains an editable `.blend` and separate portable exports. V2 revises rounder/shorter cheeks, eyelids/iris, head seating, continuous under-hair plus curved clump controls, shoulder/cuff folds, relaxed overlapping hands, flared pleated skirt and shaped loafers. Packed cloth normals use continuous body/sleeve UVs. V1 source `4ec6930ced427de67d1b2c60663a8972d15b92042553dd642acad3499619f71b` and its checkpoint `538e6159c1a07bb889a60d7002031644d2792132` remain intact.
+- V1 is actually rerendered with v2 lights and identical full-character projection. All 324 native display objects match in evaluated geometry, UVs, material input values and packed-image fingerprint; no prop polishing or game integration. Canonical original reference, existing game/assets, deterministic fix, locales, saves and hosting identity are unchanged.
+- Installed Blender 5.2.3 background execution, native reopen, independent GLB import and strict zero-error/zero-warning validator pass. Character 199,816 triangles and one embedded cloth image; display 65,216 triangles and 12 embedded images. Native/portable bounds match within 6e-8m; native/portable render RGB8 mean error below 0.026 per channel. This is an unoptimized model proof, not mobile/device certification. No new Web tests or GUI ability are claimed.
+- **Overall identity/style still FAIL/unaccepted**: hair remains too regular/solid with crown seams and inadequate natural layered flow; forehead framing, expression, garment drape and material softness are still simplified. Full display context is retained, not the full reference shop. Side/back, pose and studio projection/light remain inferred. Technical integrity does not establish art acceptance.
+- Same Library preview item is successfully updated to the v2 comparison with version protection. Current phase starts from branch checkpoint `538e6159c1a07bb889a60d7002031644d2792132`; normal commit/push and exact readback are reported externally. `main` remains separate at `beda04d6852c05bbcbb528f4edce32c027ade2ed`. No deletion, GUI input, user-process termination, Unity/gameplay work, installs/auth/security changes, PR retry, merge or public deployment. Next: independent whole-character review and continued model refinement before integration.
 
 ## Complete-character + display Blender proof v1 — unaccepted, 2026-10-30
 

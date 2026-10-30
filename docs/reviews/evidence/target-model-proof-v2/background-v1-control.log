@@ -1,0 +1,10 @@
+00:01.531  blend            | Read blend: "<REPO>\assets\authoring\target-model-proof-v1\misaki-display-model-proof.blend"
+<REPO>\tools\target-model-proof-v2\render_v1_control.py:20: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  for node in mat.node_tree.nodes if mat and mat.use_nodes else []:
+00:01.906  blend            | Read blend: "<REPO>\assets\authoring\target-model-proof-v2\misaki-display-model-proof.blend"
+00:02.656  blend            | Read blend: "<REPO>\assets\authoring\target-model-proof-v1\misaki-display-model-proof.blend"
+00:21.328  render           | Saved: '<REPO>\docs\reviews\evidence\target-model-proof-v2\blender-v1-control-under-v2-light.png'
+PRESERVED_V1_LIGHTING_CONTROL_RENDER_PASS
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

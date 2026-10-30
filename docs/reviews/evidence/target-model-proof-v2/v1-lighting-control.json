@@ -1,0 +1,30 @@
+{
+  "source": "assets/authoring/target-model-proof-v1/misaki-display-model-proof.blend",
+  "sourceSha256": "4ec6930ced427de67d1b2c60663a8972d15b92042553dd642acad3499619f71b",
+  "sourceUnchanged": true,
+  "displayPreserved": true,
+  "displayGeometryUvMaterialImageFingerprint": "f3dbd3b2b8437f6c7a203373b78106de340cd0aa62ab9108a668e55f7d8da7d9",
+  "displayObjectCount": 324,
+  "camera": "Same full-character orthographic pose/projection as v2",
+  "lights": [
+    [
+      "Warm large window key",
+      650,
+      2.5
+    ],
+    [
+      "Gentle neutral fill",
+      100,
+      3.5
+    ],
+    [
+      "Warm rim and table lift",
+      260,
+      3
+    ]
+  ],
+  "exposure": 0.1,
+  "samples": 64,
+  "seed": 0,
+  "outputSha256": "f1ede88fd920436a59d8f4fa91e7212524ce4d3bfb068349b9201d737cae82cb"
+}

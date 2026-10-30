@@ -1,0 +1,16 @@
+{
+  "scope": "Same saved scene camera/lights, Cycles CPU 64spp seed0, native vs GLB reimport",
+  "nativeSha256": "5c35718ceefd5568630117c4d3c54411b3fe5fcc58193d76c710178c05a7a964",
+  "glbReimportSha256": "081cb33f06b46f09942f3b9e99740c74f0afa2f2d74aec63780b1e5b67759996",
+  "meanAbsoluteErrorRGB8": [
+    0.025273958333333332,
+    0.020903125,
+    0.022811458333333333
+  ],
+  "rmsErrorRGB8": [
+    0.23420299243747222,
+    0.21902958323782049,
+    0.23503324232967557
+  ],
+  "limits": "Not an artistic acceptance score. glTF approximates Blender shading and skin SSS."
+}
