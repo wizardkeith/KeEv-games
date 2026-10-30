@@ -1,6 +1,14 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-30T12:17:11+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-30T12:39:39+08:00** (Asia/Hong_Kong).
+
+## V3 stance/garment checkpoint; hair study rejected — still target FAIL, 2026-10-30
+
+- [Target / v2 pose-only control / retained v3, real front/three-quarter renders and failed hair evidence](docs/BLENDER_MODEL_PROOF_V3_2026-10-30.md). First reopened v2 without saving over it, changed only body yaw/counter-turned head/tilt, then judged proportions under that stance. Retained v3 raises waist and cuffs 50mm, compresses torso/sleeves, keeps pointed folded collars, uses flat apron ribbons and separates skin/knit/linen roughness/specular responses. V2 native/export rollback `fe1025ba2cb1a784df2097780cce97cbb747f019` is preserved.
+- New irregular closed locks, embedded roots and a crown-lift candidate were actually built/rendered/reopened, but the close views became a helmet crown plus separated thick ends. **That hair candidate was rejected, not adopted**; its editable `.blend`, controls and actual full/close renders are retained. The final v3 restores v2 hair geometry. No claim of new hair identity improvement or overall acceptance.
+- A cloth-sheen configuration washed out colours on GLB reimport despite strict validator success. Actual failed render/metrics are archived; sheen was disabled and retested. Retained native/GLB RGB8 mean error returns below 0.025 per channel. Native reopen/import/bounds/colours/textures and strict zero-error/zero-warning GLBs pass: character 202,752tri; display 65,216tri. All 324 display objects match v2 evaluated geometry/UV/material-input/packed-image fingerprint. No new Web/runtime/device certification.
+- **Current procedural sweep/loft method has not produced the required organic hair, expression or cloth identity.** Cycles and CLI editing/export work; this is a demonstrated authoring-quality limitation, not evidence that Blender lacks the capability or needs a plugin. Interactive sculpting/painting has not been exercised under the GUI hold. Do not promise acceptance through more polygons or repeated parameter variants; review the authoring workflow before extending the same hair approach again. Remaining target likeness is still FAIL/unaccepted.
+- Same Library preview item successfully updated with version protection; exact version and normal Git push/readback reported externally. Isolated branch continues from `fe1025ba2cb1a784df2097780cce97cbb747f019`, separate from main `beda04d6852c05bbcbb528f4edce32c027ade2ed`. Existing game/assets/determinism/locales/saves/Site remain unchanged. No deletion, GUI input, user-process termination, Unity/gameplay migration, installs/auth/security changes, PR retry, merge or public release.
 
 ## Whole-character Blender proof v2 — still visually unaccepted, 2026-10-30
 

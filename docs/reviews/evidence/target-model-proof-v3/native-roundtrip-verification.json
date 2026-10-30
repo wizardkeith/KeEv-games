@@ -1,0 +1,192 @@
+{
+  "sourceSha256": "d58bb179624083b30de52e0852bae7025281fd8bc5347a9ed9e95abb4a2583fa",
+  "sourceReopened": true,
+  "noLinkedLibraries": true,
+  "fileImagesPacked": true,
+  "native": {
+    "Misaki": {
+      "triangles": 202752,
+      "min": [
+        -0.2869316339492798,
+        -0.25998082756996155,
+        0.0
+      ],
+      "max": [
+        0.24738919734954834,
+        0.23786470293998718,
+        1.5536876916885376
+      ],
+      "vertexColouredMeshes": 17
+    },
+    "Display": {
+      "triangles": 65216,
+      "min": [
+        -0.9300000071525574,
+        -0.5767220854759216,
+        0.0
+      ],
+      "max": [
+        0.9300000667572021,
+        0.5184999704360962,
+        1.3831403255462646
+      ],
+      "vertexColouredMeshes": 0
+    }
+  },
+  "roundtrip": {
+    "Misaki": {
+      "triangles": 202752,
+      "min": [
+        -0.2869316041469574,
+        -0.25998082756996155,
+        0.0
+      ],
+      "max": [
+        0.24738916754722595,
+        0.23786470293998718,
+        1.5536876916885376
+      ],
+      "vertexColouredMeshes": 3,
+      "maxBoundsErrorMetres": 2.9802322387695312e-08,
+      "fileSha256": "971d761a75f372a59cc908eb701f00f20ddae52d5dc423ebda9454f5b75b5100"
+    },
+    "Display": {
+      "triangles": 65216,
+      "min": [
+        -0.9300000071525574,
+        -0.5767220854759216,
+        0.0
+      ],
+      "max": [
+        0.9300000071525574,
+        0.5184999704360962,
+        1.3831403255462646
+      ],
+      "vertexColouredMeshes": 0,
+      "maxBoundsErrorMetres": 5.960464477539063e-08,
+      "fileSha256": "a6bda65e69bc1c146b5afa4b3f4221a34443195fad7efed935d844ad10940838"
+    }
+  },
+  "renders": {
+    "blender-model-assembly-v3": {
+      "camera": "Blender model proof / person and display",
+      "dimensions": [
+        1200,
+        800
+      ],
+      "cameraLocation": [
+        3.0,
+        -6.5,
+        3.200000047683716
+      ],
+      "cameraRotationRadians": [
+        1.2461369037628174,
+        -1.989625175724541e-08,
+        0.44072723388671875
+      ],
+      "sha256": "ce6742a763f4af268ec2b38e25dbad6db41821489d9f6e54e4fe3a70280033c7",
+      "engine": "Cycles CPU",
+      "samples": 64,
+      "seed": 0,
+      "viewTransform": "AgX",
+      "exposure": 0.10000000149011612
+    },
+    "blender-model-character-v3": {
+      "camera": "Blender model portrait / complete Misaki",
+      "dimensions": [
+        1024,
+        1280
+      ],
+      "cameraLocation": [
+        0.25,
+        -4.199999809265137,
+        1.649999976158142
+      ],
+      "cameraRotationRadians": [
+        1.3777976036071777,
+        3.554923466708715e-08,
+        0.26282399892807007
+      ],
+      "sha256": "d4fe5e632b194f28ae001de80ab7b192f0309398bd41694b04d68ecb099cf176",
+      "engine": "Cycles CPU",
+      "samples": 64,
+      "seed": 0,
+      "viewTransform": "AgX",
+      "exposure": 0.10000000149011612
+    },
+    "blender-model-face-v3": {
+      "camera": "Validation / 35 degree three-quarter face",
+      "dimensions": [
+        900,
+        900
+      ],
+      "cameraLocation": [
+        1.4299999475479126,
+        -3.299999952316284,
+        1.6399999856948853
+      ],
+      "cameraRotationRadians": [
+        1.4925975799560547,
+        -1.4470746378947297e-08,
+        0.6121524572372437
+      ],
+      "sha256": "0aa5974c79192df96c9c5224fdb908da63b364455e6cffb2a27851076b24d618",
+      "engine": "Cycles CPU",
+      "samples": 64,
+      "seed": 0,
+      "viewTransform": "AgX",
+      "exposure": 0.10000000149011612
+    },
+    "blender-model-front-v3": {
+      "camera": "Validation / front face",
+      "dimensions": [
+        900,
+        900
+      ],
+      "cameraLocation": [
+        -0.8799999952316284,
+        -4.5,
+        1.4800000190734863
+      ],
+      "cameraRotationRadians": [
+        1.5441359281539917,
+        -0.0,
+        0.0
+      ],
+      "sha256": "9e029d6a12609197e17145da79532fb4b4f2095bf5a6b9eaac09ab0fcd93ed61",
+      "engine": "Cycles CPU",
+      "samples": 64,
+      "seed": 0,
+      "viewTransform": "AgX",
+      "exposure": 0.10000000149011612
+    },
+    "blender-model-glb-roundtrip-v3": {
+      "camera": "Blender model proof / person and display",
+      "dimensions": [
+        1200,
+        800
+      ],
+      "cameraLocation": [
+        3.0,
+        -6.5,
+        3.200000047683716
+      ],
+      "cameraRotationRadians": [
+        1.2461369037628174,
+        -1.989625175724541e-08,
+        0.44072723388671875
+      ],
+      "sha256": "bb4ad8764c910fa64203acf608a273f59b4faf901cab155ee3aca01a1659ac76",
+      "engine": "Cycles CPU",
+      "samples": 64,
+      "seed": 0,
+      "viewTransform": "AgX",
+      "exposure": 0.10000000149011612
+    }
+  },
+  "placementChecks": {
+    "neckHeadZBoundsOverlapMetres": 0.04120588302612305,
+    "modelLowestPointMetres": 0.0,
+    "limits": "Bounds overlap does not certify signed collision, watertightness or visual acceptance."
+  }
+}

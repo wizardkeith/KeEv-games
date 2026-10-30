@@ -1,0 +1,38 @@
+{
+  "source": "assets/authoring/target-model-proof-v2/misaki-display-model-proof.blend",
+  "sourceSha256": "a943f910bf3de6618d4ee29728760d91b71568deff662716657bf9cf96663afa",
+  "geometryAndMaterialsUnchanged": true,
+  "bodyRotationRadians": [
+    0.0,
+    0.0,
+    -0.25999999046325684
+  ],
+  "headRotationRadians": [
+    0.0,
+    -0.17000000178813934,
+    0.20999999344348907
+  ],
+  "headScale": [
+    1.100000023841858,
+    1.100000023841858,
+    1.100000023841858
+  ],
+  "headLocation": [
+    0.0,
+    0.0,
+    1.0700000524520874
+  ],
+  "camera": "Blender model portrait / complete Misaki",
+  "cameraLocation": [
+    0.25,
+    -4.199999809265137,
+    1.649999976158142
+  ],
+  "cameraRotationRadians": [
+    1.3777976036071777,
+    3.554923466708715e-08,
+    0.26282399892807007
+  ],
+  "inferred": "Reference camera/pose are unknown; body yaw about 30deg relative to camera and counter-turned tilted head are inferred.",
+  "renderSha256": "077696a76bb73b55c634e9499d2675ff4547a23b6c330ac01ab3f80495c6e48c"
+}

@@ -1,0 +1,212 @@
+{
+  "recordedAt": "2026-10-30T12:40:49.680443+08:00",
+  "sourceCheckpoint": "fe1025ba2cb1a784df2097780cce97cbb747f019",
+  "scope": "unaccepted complete character and representative display Blender proof",
+  "sourceSha256": "d58bb179624083b30de52e0852bae7025281fd8bc5347a9ed9e95abb4a2583fa",
+  "authoringMethod": "Background Blender Python; editable native meshes/curves/modifiers; no interactive GUI control tested",
+  "validation": "Native reopen and independent GLB import passed; zero glTF validator errors/warnings; no new Web/game tests claimed",
+  "blenderLogLimits": [
+    "Optional thumbnail/cache writes were denied by the profile; outputs saved successfully.",
+    "Non-normal-mapped or UV-less meshes can emit tangent calculation warnings. Validator certifies required normal-map tangents.",
+    "Mixed-material export can warn about unused vertex colour. Thirteen actual coloured primitives and render roundtrip verified."
+  ],
+  "artStatus": "NOT ACCEPTED; substantial hair, expression, clothing and material mismatches",
+  "cleanup": "No files deleted; no user process terminated; all task Blender processes exited normally.",
+  "files": [
+    {
+      "path": "assets/authoring/target-model-proof-v3/exports/display-group.glb",
+      "bytes": 3175156,
+      "sha256": "a6bda65e69bc1c146b5afa4b3f4221a34443195fad7efed935d844ad10940838"
+    },
+    {
+      "path": "assets/authoring/target-model-proof-v3/exports/misaki-model.glb",
+      "bytes": 6360228,
+      "sha256": "971d761a75f372a59cc908eb701f00f20ddae52d5dc423ebda9454f5b75b5100"
+    },
+    {
+      "path": "assets/authoring/target-model-proof-v3/manifest.json",
+      "bytes": 2300,
+      "sha256": "187bfc02128de63dc6d8609afb2030117637a836da605f98a32e1707af41ce3a"
+    },
+    {
+      "path": "assets/authoring/target-model-proof-v3/misaki-display-model-proof.blend",
+      "bytes": 1629288,
+      "sha256": "d58bb179624083b30de52e0852bae7025281fd8bc5347a9ed9e95abb4a2583fa"
+    },
+    {
+      "path": "assets/authoring/target-model-proof-v3/README.md",
+      "bytes": 3275,
+      "sha256": "79e133856e3cd33715b14e2fe32e60d351beaa9498cc10cf912b52c95eae4aa7"
+    },
+    {
+      "path": "assets/authoring/target-model-proof-v3/rejected-hair-study/failed-irregular-lock-study.blend",
+      "bytes": 1632545,
+      "sha256": "eb3571c48a60b011ddab09d636825fc5d7c054fd350184a24cd094feaddf35ef"
+    },
+    {
+      "path": "assets/authoring/target-model-proof-v3/rejected-hair-study/study-receipt.json",
+      "bytes": 844,
+      "sha256": "219c8eac40ca16fbb6938f267e6f877c4db4cf99f0054cf89f86d37b6c07f32b"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/background-build.log",
+      "bytes": 6369,
+      "sha256": "1f5c68fb6ecfe7a92c365e14efbb8adeb3fc271a79234da83e8cf3ea739ebd77"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/background-pose-study.log",
+      "bytes": 344,
+      "sha256": "60fb269a1a5b090129d83c871a4540d7959c649d4d8a3fb20d6abd37f59b4d6c"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/background-preservation.log",
+      "bytes": 579,
+      "sha256": "3dca2c837e9140325e1c5d0acc667bbfc4b2b20e03ae4f24154b14adbb3a88bc"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/background-validation.log",
+      "bytes": 2830,
+      "sha256": "c2aa3b809264205507d6bc6da1e66bc6b7c65b9f796f8cb4f5e8add5600e6a30"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/blender-model-assembly-v3.png",
+      "bytes": 1107218,
+      "sha256": "ce6742a763f4af268ec2b38e25dbad6db41821489d9f6e54e4fe3a70280033c7"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/blender-model-character-v3.png",
+      "bytes": 1397282,
+      "sha256": "d4fe5e632b194f28ae001de80ab7b192f0309398bd41694b04d68ecb099cf176"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/blender-model-face-v3.png",
+      "bytes": 928236,
+      "sha256": "0aa5974c79192df96c9c5224fdb908da63b364455e6cffb2a27851076b24d618"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/blender-model-front-v3.png",
+      "bytes": 923031,
+      "sha256": "9e029d6a12609197e17145da79532fb4b4f2095bf5a6b9eaac09ab0fcd93ed61"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/blender-model-glb-roundtrip-v3.png",
+      "bytes": 1106166,
+      "sha256": "bb4ad8764c910fa64203acf608a273f59b4faf901cab155ee3aca01a1659ac76"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/glb-validator.json",
+      "bytes": 27561,
+      "sha256": "f824821d6090aab32b8e94f577297940f64601adbc231443efc3e49de2782e40"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/native-roundtrip-verification.json",
+      "bytes": 4869,
+      "sha256": "75b6e98aec74d7e1bd75b047095dcce4314831d5375b0edc7b18cc67d64ca26e"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/pose-study.json",
+      "bytes": 1010,
+      "sha256": "130ac54e2d7c4ed876a2a1f8bf97017b434f2cb8138f4f9f5905bee56a513dfb"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/reference-face-comparison-v3.png",
+      "bytes": 1033260,
+      "sha256": "d5cbd81ada9f09c9128bed7d0241a8d4cdc13e49c88fa3513cdec597e0184483"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/reference-model-comparison-v3.png",
+      "bytes": 1589722,
+      "sha256": "5c7e9cd1fbc6c1b8aae5c897d757f95d2f86494b1dabf81a10eab3af8f5f0ddd"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/rejected-hair-close.png",
+      "bytes": 955226,
+      "sha256": "7bbea3f4c04145cc636c253e2c2d7d1b1929d46955d42a4a5947a0def1b0efa6"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/rejected-hair-full.png",
+      "bytes": 1405077,
+      "sha256": "a512f355fa5a0f02af8bb81b8febeb1f6172e639b4dc02144cd2431af9559a5d"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/rejected-sheen-metrics.json",
+      "bytes": 560,
+      "sha256": "fb467a97a18fa3bcfc364d03c6efbf4bd71a100a4fbc06899420b7132dccefe3"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/rejected-sheen-roundtrip.png",
+      "bytes": 1102185,
+      "sha256": "007eaf82782d13b64155a0aa25da7fa1c18419b12f9b3acb2871b3dbd6d65ce9"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/render-comparison-metrics.json",
+      "bytes": 578,
+      "sha256": "06252616f6925e6da2e9d63ad027483a8063131b90df3501e612d687413bea50"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/v2-pose-only-three-quarter.png",
+      "bytes": 1392887,
+      "sha256": "077696a76bb73b55c634e9499d2675ff4547a23b6c330ac01ab3f80495c6e48c"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/v2-preservation.json",
+      "bytes": 375,
+      "sha256": "1598b2a1bbaa99bd4996775093c74363f8fa2c543465428e4294393eeae256b1"
+    },
+    {
+      "path": "tools/target-model-proof-v3/build_scene.py",
+      "bytes": 21092,
+      "sha256": "59fb6129eb6902a9b766e8f89e71e038192590aca467903bc468efe8e47c78ab"
+    },
+    {
+      "path": "tools/target-model-proof-v3/character_body.py",
+      "bytes": 7270,
+      "sha256": "adb606bfa4bca352864f76197cf506f28f674d5c8880d3c914fe11e9fa4af7ac"
+    },
+    {
+      "path": "tools/target-model-proof-v3/character_hair.py",
+      "bytes": 5956,
+      "sha256": "130daaf7ab432413aae39f0f0e29b34c6d0eb816caf93a9fd83ab270d2b4b4a6"
+    },
+    {
+      "path": "tools/target-model-proof-v3/character_head.py",
+      "bytes": 4816,
+      "sha256": "320fe14b83622fd75aa5076d1f7052a970068ea6321c3a872746595e1fc71117"
+    },
+    {
+      "path": "tools/target-model-proof-v3/make_review.py",
+      "bytes": 4106,
+      "sha256": "677f0e3608a03e5a20620ee6412d0421aec12f88ae9142b4ae8143f63f3c3263"
+    },
+    {
+      "path": "tools/target-model-proof-v3/pose_study.py",
+      "bytes": 2155,
+      "sha256": "4477fb7ea798a6bbbf7c6cfb649a0dd5876bfd6f2ded8047b9a111bd2f358ca3"
+    },
+    {
+      "path": "tools/target-model-proof-v3/record_checkpoint.py",
+      "bytes": 4092,
+      "sha256": "f7174d7ee36bd78e6432276a6311b4f62066d49ebe9a2c914eeef74402e35df1"
+    },
+    {
+      "path": "tools/target-model-proof-v3/rejected_hair_study.py",
+      "bytes": 6577,
+      "sha256": "d5015b43a612355536ace1ceffb963bfa2b822c716d3d2ae346adb863d35d29b"
+    },
+    {
+      "path": "tools/target-model-proof-v3/validate_glb.mjs",
+      "bytes": 2023,
+      "sha256": "9a1d4566acc794002ad6acbd345f076d41c68d29fa4147d3d97f076f1898b7e9"
+    },
+    {
+      "path": "tools/target-model-proof-v3/verify_and_render.py",
+      "bytes": 6600,
+      "sha256": "1cee78d2620b9a48da38e309bbb2bade816346e23fc032a69d7abf57f4dd9852"
+    },
+    {
+      "path": "tools/target-model-proof-v3/verify_v2_preservation.py",
+      "bytes": 3088,
+      "sha256": "7ce58883365216ffecf3bfd2c9b2c10dfd3beffa242ed087f3b7e77c9ae412e4"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "status": "VISUALLY REJECTED; not retained hair",
+  "source": "assets/authoring/target-model-proof-v3/rejected-hair-study/failed-irregular-lock-study.blend",
+  "sourceSha256": "eb3571c48a60b011ddab09d636825fc5d7c054fd350184a24cd094feaddf35ef",
+  "reason": "Helmet crown and separated thick dangling ends were worse than v2",
+  "renderEvidence": [
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/rejected-hair-full.png",
+      "sha256": "a512f355fa5a0f02af8bb81b8febeb1f6172e639b4dc02144cd2431af9559a5d"
+    },
+    {
+      "path": "docs/reviews/evidence/target-model-proof-v3/rejected-hair-close.png",
+      "sha256": "7bbea3f4c04145cc636c253e2c2d7d1b1929d46955d42a4a5947a0def1b0efa6"
+    }
+  ],
+  "portableExports": "Not retained as authoritative outputs; final GLBs correspond to restored v2 hair and v3 garments/pose."
+}
