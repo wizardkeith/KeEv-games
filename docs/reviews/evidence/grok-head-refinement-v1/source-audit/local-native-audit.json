@@ -1,0 +1,1091 @@
+{
+  "blender": "5.2.3 LTS",
+  "autoExecDisabled": true,
+  "onlineAccess": false,
+  "sourceBefore": {
+    "Misaki_trial.blend": "d6ac7d03759a00a60fdab4232e980221e16165c9125afe765bd106d6974f09a0",
+    "Misaki_trial.glb": "22db73dbebf7c2a6ca33e645cdc6f61d89d34eee85436c021de2e6c72d18ac89"
+  },
+  "objects": [
+    {
+      "name": "Misaki",
+      "type": "MESH"
+    },
+    {
+      "name": "Misaki_Rig",
+      "type": "ARMATURE"
+    }
+  ],
+  "nativeMeshes": [
+    {
+      "name": "Misaki",
+      "vertices": 4484,
+      "polygons": 4666,
+      "triangles": 8608,
+      "disconnectedComponents": 80,
+      "componentVertexCounts": [
+        642,
+        550,
+        392,
+        234,
+        200,
+        176,
+        74,
+        74,
+        62,
+        62,
+        54,
+        54,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        48,
+        42,
+        42,
+        42,
+        38,
+        38,
+        34,
+        34,
+        34,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        26,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        18,
+        18,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        6,
+        6
+      ],
+      "boundaryEdges": 48,
+      "edgesWithMoreThanTwoFaces": 0,
+      "zeroFaceEdges": 0,
+      "uvLayers": [
+        {
+          "name": "UVMap",
+          "loopCount": 17940,
+          "summedTriangleUvArea": 35.63095118875317,
+          "exactDuplicateUvTriangles": 7883,
+          "note": "Overlapping primitive UVs can be harmless for flat materials, unsuitable as a unique bake atlas."
+        }
+      ],
+      "shapeKeys": 0,
+      "materials": [
+        {
+          "name": "M_Skin",
+          "baseColour": [
+            0.9046611785888672,
+            0.672443151473999,
+            0.5394794940948486,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Eye",
+          "baseColour": [
+            0.04666508734226227,
+            0.01599629409611225,
+            0.00802319310605526,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Iris",
+          "baseColour": [
+            0.2541520893573761,
+            0.09305896610021591,
+            0.03433980792760849,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_EyeHi",
+          "baseColour": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Brow",
+          "baseColour": [
+            0.10224173218011856,
+            0.03688944876194,
+            0.019382361322641373,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Blush",
+          "baseColour": [
+            0.8879231214523315,
+            0.44520118832588196,
+            0.3613067865371704,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Mouth",
+          "baseColour": [
+            0.4793201684951782,
+            0.11697066575288773,
+            0.10224173218011856,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Hair",
+          "baseColour": [
+            0.14702726900577545,
+            0.05612849071621895,
+            0.02955683507025242,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Clip",
+          "baseColour": [
+            0.9215818643569946,
+            0.8713670969009399,
+            0.7758222222328186,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Shirt",
+          "baseColour": [
+            0.8631572127342224,
+            0.7681511640548706,
+            0.6307571530342102,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Cardigan",
+          "baseColour": [
+            0.21223075687885284,
+            0.2581828534603119,
+            0.14702726900577545,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Button",
+          "baseColour": [
+            0.1441284716129303,
+            0.05780543014407158,
+            0.02955683507025242,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Skirt",
+          "baseColour": [
+            0.18116424977779388,
+            0.09758734703063965,
+            0.1441284716129303,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Apron",
+          "baseColour": [
+            0.7681511640548706,
+            0.6104955673217773,
+            0.43415364623069763,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Socks",
+          "baseColour": [
+            0.8962693810462952,
+            0.8227857351303101,
+            0.6938717365264893,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Shoes",
+          "baseColour": [
+            0.15592646598815918,
+            0.052860647439956665,
+            0.022173885256052017,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Sole",
+          "baseColour": [
+            0.04817182570695877,
+            0.017641954123973846,
+            0.009134058840572834,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        }
+      ],
+      "modifiers": [
+        {
+          "type": "ARMATURE",
+          "target": "Misaki_Rig"
+        }
+      ],
+      "vertexGroups": {
+        "head": 1718,
+        "neck": 366,
+        "spine": 1045,
+        "hips": 1332,
+        "upperarm.R": 88,
+        "lowerarm.R": 65,
+        "hand.R": 94,
+        "upperarm.L": 88,
+        "lowerarm.L": 65,
+        "hand.L": 94,
+        "upperleg.R": 16,
+        "lowerleg.R": 56,
+        "foot.R": 144,
+        "upperleg.L": 16,
+        "lowerleg.L": 56,
+        "foot.L": 144
+      },
+      "influencesPerVertex": {
+        "1": 3581,
+        "2": 903
+      },
+      "unweightedVertices": 0,
+      "nonUnitWeights": 99,
+      "boundsMin": [
+        -0.3650147616863251,
+        -0.21789999306201935,
+        0.0
+      ],
+      "boundsMax": [
+        0.3650147616863251,
+        0.2379000037908554,
+        1.4771095514297485
+      ],
+      "dimensions": [
+        0.7300295233726501,
+        0.45579999685287476,
+        1.4771095514297485
+      ]
+    }
+  ],
+  "rigs": [
+    {
+      "name": "Misaki_Rig",
+      "bones": [
+        {
+          "name": "root",
+          "parent": null,
+          "deform": true
+        },
+        {
+          "name": "hips",
+          "parent": "root",
+          "deform": true
+        },
+        {
+          "name": "spine",
+          "parent": "hips",
+          "deform": true
+        },
+        {
+          "name": "neck",
+          "parent": "spine",
+          "deform": true
+        },
+        {
+          "name": "head",
+          "parent": "neck",
+          "deform": true
+        },
+        {
+          "name": "upperarm.R",
+          "parent": "spine",
+          "deform": true
+        },
+        {
+          "name": "lowerarm.R",
+          "parent": "upperarm.R",
+          "deform": true
+        },
+        {
+          "name": "hand.R",
+          "parent": "lowerarm.R",
+          "deform": true
+        },
+        {
+          "name": "upperarm.L",
+          "parent": "spine",
+          "deform": true
+        },
+        {
+          "name": "lowerarm.L",
+          "parent": "upperarm.L",
+          "deform": true
+        },
+        {
+          "name": "hand.L",
+          "parent": "lowerarm.L",
+          "deform": true
+        },
+        {
+          "name": "upperleg.R",
+          "parent": "hips",
+          "deform": true
+        },
+        {
+          "name": "lowerleg.R",
+          "parent": "upperleg.R",
+          "deform": true
+        },
+        {
+          "name": "foot.R",
+          "parent": "lowerleg.R",
+          "deform": true
+        },
+        {
+          "name": "upperleg.L",
+          "parent": "hips",
+          "deform": true
+        },
+        {
+          "name": "lowerleg.L",
+          "parent": "upperleg.L",
+          "deform": true
+        },
+        {
+          "name": "foot.L",
+          "parent": "lowerleg.L",
+          "deform": true
+        }
+      ]
+    }
+  ],
+  "actionCount": 0,
+  "textBlocks": [],
+  "drivers": [],
+  "externalResourceDatablocks": {
+    "libraries": [],
+    "images": [],
+    "fonts": [],
+    "sounds": []
+  },
+  "glbExternalUris": [],
+  "bundledScriptsExecuted": false,
+  "poseProbe": [
+    {
+      "bone": "lowerarm.L",
+      "localXDeltaDegrees": 30,
+      "movedVertices": 159,
+      "maxLocalVertexDelta": 0.150659289442686,
+      "scope": "In-memory response only; pose restored, no file saved."
+    },
+    {
+      "bone": "lowerleg.L",
+      "localXDeltaDegrees": 30,
+      "movedVertices": 200,
+      "maxLocalVertexDelta": 0.2215814889327719,
+      "scope": "In-memory response only; pose restored, no file saved."
+    }
+  ],
+  "originalsSavedOver": false,
+  "importedGlbMeshes": [
+    {
+      "name": "Icosphere",
+      "vertices": 42,
+      "polygons": 80,
+      "triangles": 80,
+      "disconnectedComponents": 1,
+      "componentVertexCounts": [
+        42
+      ],
+      "boundaryEdges": 0,
+      "edgesWithMoreThanTwoFaces": 0,
+      "zeroFaceEdges": 0,
+      "uvLayers": [
+        {
+          "name": "UVMap",
+          "loopCount": 240,
+          "summedTriangleUvArea": 0.2862916806970879,
+          "exactDuplicateUvTriangles": 0,
+          "note": "Overlapping primitive UVs can be harmless for flat materials, unsuitable as a unique bake atlas."
+        }
+      ],
+      "shapeKeys": 0,
+      "materials": [],
+      "modifiers": [],
+      "vertexGroups": {},
+      "influencesPerVertex": {
+        "0": 42
+      },
+      "unweightedVertices": 42,
+      "nonUnitWeights": 0,
+      "boundsMin": [
+        -0.9510578513145447,
+        -0.9999999403953552,
+        -1.0
+      ],
+      "boundsMax": [
+        0.9510578513145447,
+        0.9999999403953552,
+        1.0
+      ],
+      "dimensions": [
+        1.9021157026290894,
+        1.9999998807907104,
+        2.0
+      ]
+    },
+    {
+      "name": "Misaki",
+      "vertices": 5649,
+      "polygons": 8608,
+      "triangles": 8608,
+      "disconnectedComponents": 212,
+      "componentVertexCounts": [
+        642,
+        550,
+        392,
+        234,
+        200,
+        176,
+        102,
+        102,
+        89,
+        89,
+        75,
+        75,
+        75,
+        75,
+        75,
+        75,
+        64,
+        64,
+        63,
+        63,
+        54,
+        54,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        52,
+        52,
+        52,
+        48,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        42,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        32,
+        32,
+        32,
+        32,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        20,
+        20,
+        20,
+        18,
+        18,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "boundaryEdges": 2210,
+      "edgesWithMoreThanTwoFaces": 0,
+      "zeroFaceEdges": 0,
+      "uvLayers": [
+        {
+          "name": "UVMap",
+          "loopCount": 25824,
+          "summedTriangleUvArea": 35.6309511887531,
+          "exactDuplicateUvTriangles": 7883,
+          "note": "Overlapping primitive UVs can be harmless for flat materials, unsuitable as a unique bake atlas."
+        }
+      ],
+      "shapeKeys": 0,
+      "materials": [
+        {
+          "name": "M_Skin",
+          "baseColour": [
+            0.9046611785888672,
+            0.672443151473999,
+            0.5394794940948486,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Eye",
+          "baseColour": [
+            0.04666508734226227,
+            0.01599629409611225,
+            0.00802319310605526,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Iris",
+          "baseColour": [
+            0.2541520893573761,
+            0.09305896610021591,
+            0.03433980792760849,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_EyeHi",
+          "baseColour": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Brow",
+          "baseColour": [
+            0.10224173218011856,
+            0.03688944876194,
+            0.019382361322641373,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Blush",
+          "baseColour": [
+            0.8879231214523315,
+            0.44520118832588196,
+            0.3613067865371704,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Mouth",
+          "baseColour": [
+            0.4793201684951782,
+            0.11697066575288773,
+            0.10224173218011856,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Hair",
+          "baseColour": [
+            0.14702726900577545,
+            0.05612849071621895,
+            0.02955683507025242,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Clip",
+          "baseColour": [
+            0.9215818643569946,
+            0.8713670969009399,
+            0.7758222222328186,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Shirt",
+          "baseColour": [
+            0.8631572127342224,
+            0.7681511640548706,
+            0.6307571530342102,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Cardigan",
+          "baseColour": [
+            0.21223075687885284,
+            0.2581828534603119,
+            0.14702726900577545,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Button",
+          "baseColour": [
+            0.1441284716129303,
+            0.05780543014407158,
+            0.02955683507025242,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Skirt",
+          "baseColour": [
+            0.18116424977779388,
+            0.09758734703063965,
+            0.1441284716129303,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Apron",
+          "baseColour": [
+            0.7681511640548706,
+            0.6104955673217773,
+            0.43415364623069763,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Socks",
+          "baseColour": [
+            0.8962693810462952,
+            0.8227857351303101,
+            0.6938717365264893,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Shoes",
+          "baseColour": [
+            0.15592646598815918,
+            0.052860647439956665,
+            0.022173885256052017,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        },
+        {
+          "name": "M_Sole",
+          "baseColour": [
+            0.04817182570695877,
+            0.017641954123973846,
+            0.009134058840572834,
+            1.0
+          ],
+          "nodes": [
+            "ShaderNodeBsdfPrincipled",
+            "ShaderNodeOutputMaterial"
+          ]
+        }
+      ],
+      "modifiers": [
+        {
+          "type": "ARMATURE",
+          "target": "Misaki_Rig"
+        }
+      ],
+      "vertexGroups": {
+        "head": 2047,
+        "neck": 366,
+        "spine": 1223,
+        "hand.R": 134,
+        "hand.L": 134,
+        "upperleg.R": 16,
+        "lowerleg.R": 56,
+        "upperleg.L": 16,
+        "lowerleg.L": 56,
+        "hips": 1740,
+        "upperarm.R": 111,
+        "lowerarm.R": 65,
+        "upperarm.L": 111,
+        "lowerarm.L": 65,
+        "foot.R": 218,
+        "foot.L": 218
+      },
+      "influencesPerVertex": {
+        "1": 4722,
+        "2": 927
+      },
+      "unweightedVertices": 0,
+      "nonUnitWeights": 0,
+      "boundsMin": [
+        -0.36501479148864746,
+        -0.21789999306201935,
+        1.0073184952830161e-08
+      ],
+      "boundsMax": [
+        0.36501479148864746,
+        0.23789994418621063,
+        1.4771093130111694
+      ],
+      "dimensions": [
+        0.7300295829772949,
+        0.45579993724823,
+        1.4771093029379845
+      ]
+    }
+  ],
+  "importedGlbBoneCounts": [
+    17
+  ],
+  "sourceUnchanged": {
+    "Misaki_trial.blend": true,
+    "Misaki_trial.glb": true
+  },
+  "renders": [
+    {
+      "file": "local-candidate-clay-three-quarter.png",
+      "sha256": "f873e606f9f1ec23bb3d5ad61ec9fb1767a127b6e858b54c4da5a025a5b9dd82"
+    },
+    {
+      "file": "local-candidate-front.png",
+      "sha256": "2653916705633cc02596a3e01c55cc872bc0233f0922e0a5936e9d11a52445aa"
+    }
+  ],
+  "judgment": "Local reopen/import/structure checks only; art remains unaccepted, cloud owns matched target/v3/v5 comparison.",
+  "actualGlbJsonSummary": {
+    "meshDefinitions": 1,
+    "primitives": 17,
+    "triangles": 8608,
+    "skins": 1,
+    "joints": [
+      17
+    ],
+    "animations": 0,
+    "images": 0
+  },
+  "importerHelperNote": "Blender importer also creates a hidden bone-display Icosphere (42 verts/80 triangles). This is not an extra GLB mesh definition; do not add it to the character triangle count."
+}

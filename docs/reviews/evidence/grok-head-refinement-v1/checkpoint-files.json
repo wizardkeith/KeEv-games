@@ -1,0 +1,264 @@
+{
+  "recordedAtHongKong": "2026-10-30T15:42:37+08:00",
+  "files": [
+    {
+      "path": "assets/authoring/grok-head-refinement-v1/fallback-manifest.json",
+      "bytes": 1087,
+      "sha256": "e7e5e94cdb9cd030bb1cd44b63b7256cb503a04c5874d63236b0d5e045b4477f"
+    },
+    {
+      "path": "assets/authoring/grok-head-refinement-v1/grok-head-material-fallback.blend",
+      "bytes": 2806892,
+      "sha256": "80ecbffdd738b1e65fcd2a46f027ce9c93e6235844ee7f31ffcb6c9deca71535"
+    },
+    {
+      "path": "assets/authoring/grok-head-refinement-v1/iris-provenance.json",
+      "bytes": 242,
+      "sha256": "5afca1fc3e2d60b441a958cf543ff0153221cf30f57978dff3d638e5c6d83e7a"
+    },
+    {
+      "path": "assets/authoring/grok-head-refinement-v1/manifest.json",
+      "bytes": 2646,
+      "sha256": "b69d5dcdcd411cb6500bf6e43cca8e0abf9a50d96dc650bdf0dead74d64e2e9e"
+    },
+    {
+      "path": "assets/authoring/grok-head-refinement-v1/original/Misaki_trial.blend",
+      "bytes": 1514404,
+      "sha256": "d6ac7d03759a00a60fdab4232e980221e16165c9125afe765bd106d6974f09a0"
+    },
+    {
+      "path": "assets/authoring/grok-head-refinement-v1/original/Misaki_trial.glb",
+      "bytes": 372232,
+      "sha256": "22db73dbebf7c2a6ca33e645cdc6f61d89d34eee85436c021de2e6c72d18ac89"
+    },
+    {
+      "path": "assets/authoring/grok-head-refinement-v1/original/README.user-supplied.md",
+      "bytes": 2878,
+      "sha256": "6977a78b378d9dc38eac40c071abd2b1cdd0b6075ebdae88e024e8d9702ae33b"
+    },
+    {
+      "path": "assets/authoring/grok-head-refinement-v1/own-painted-iris.png",
+      "bytes": 75335,
+      "sha256": "3c2424ea9edda892cd38104758721291aec48a6fd7167e246c4c88e1e00d1af5"
+    },
+    {
+      "path": "assets/authoring/grok-head-refinement-v1/README.md",
+      "bytes": 4205,
+      "sha256": "5405bbf68715627d8d48981a44f9a9fad949661a0c2c66d72239ec26bf12b6f6"
+    },
+    {
+      "path": "assets/authoring/grok-head-refinement-v1/rejected-geometry-evidence.zip",
+      "bytes": 3092722,
+      "sha256": "3c06776de5e6b9d6b62f1930d9c22a6839646d9ae8cc24d4c402aedb76b19757"
+    },
+    {
+      "path": "assets/authoring/grok-head-refinement-v1/rejected-head-geometry.blend",
+      "bytes": 2806892,
+      "sha256": "10876a89f75bdc68e980bc4a42eb5b0d75b8ab0a556e9ecffcd9bb977e95bf24"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/after-neutral-front.png",
+      "bytes": 562631,
+      "sha256": "77bfa004f595ccf459f7ae80cad2e730ba0bf76b895f6c85674fa139a2c26ce4"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/after-neutral-full.png",
+      "bytes": 423090,
+      "sha256": "98c48f625c1096f06053e3b6a3bc85491ea873eb399368c5f5902bcede9e9ae8"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/after-neutral-profile.png",
+      "bytes": 501154,
+      "sha256": "8f2ec94c5e2c9e0fbf7cbc03a1684469dbeb1996bc325f2b73e78cf79a7a42d5"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/after-neutral-three-quarter.png",
+      "bytes": 558968,
+      "sha256": "ed2d8fa7280da848b7b4fcd19c0667544787690ad12cffa8bd208bc29445c45d"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/after-warm-three-quarter.png",
+      "bytes": 559194,
+      "sha256": "c3f21412fdee88f2bc0bdc564d533ba03f7d7afc4878609977d4bbf18218d295"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/before-neutral-front.png",
+      "bytes": 585425,
+      "sha256": "8474ef88e9e32ac3966536fc8bfdf3269303430feafd374bed12907dd7ffd4e2"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/before-neutral-full.png",
+      "bytes": 426141,
+      "sha256": "15ccf7b61e38b38e18e6607f1682e065c838df8677ed75271f9fc4084d6f5978"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/before-neutral-profile.png",
+      "bytes": 499259,
+      "sha256": "ab7f64bd993e50e0a4d9455e7e295027e9f4f531320e759a0712c1f886772cbd"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/before-neutral-three-quarter.png",
+      "bytes": 577026,
+      "sha256": "88a0c0365d8f5934083c20e8125c85ccd0b9bd85b9f910a8f7baecf4e7264997"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/before-warm-three-quarter.png",
+      "bytes": 577795,
+      "sha256": "d6a3507a89a9e18097bfa0ef4da0b613f034a5e8aa3b883324cc4c6c1b6e1723"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/build.log",
+      "bytes": 5470,
+      "sha256": "dfb0848e7462dccd7440972af0d2f58c862fa9c3f9fb8c1c85a27c7ee106bf9f"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/fallback-fresh-reopen-three-quarter.png",
+      "bytes": 560626,
+      "sha256": "2fe0651d2a4c828e5432629291e17109ca47b7aae04185eca073871da8b3d328"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/fallback-neutral-front.png",
+      "bytes": 565039,
+      "sha256": "0833627bc53c15fbd186d018572bc14da156c2b3e2c86e968c90004c0f4929d4"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/fallback-neutral-full.png",
+      "bytes": 423622,
+      "sha256": "cf4e8ae897822e2ed7ec2442f8a9ae6fba27a97bd663087d693c388852816b6a"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/fallback-neutral-profile.png",
+      "bytes": 495711,
+      "sha256": "39bef736ecf79a7787719a2459bbb342f0c7df033b9fef2b21f389d84194c303"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/fallback-neutral-three-quarter.png",
+      "bytes": 560626,
+      "sha256": "2fe0651d2a4c828e5432629291e17109ca47b7aae04185eca073871da8b3d328"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/fallback-reopen-verification.json",
+      "bytes": 1058,
+      "sha256": "f806ffda3432ec005a70716f9a11737c35b698765e7c769c3f8451e736289ec9"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/fallback-warm-three-quarter.png",
+      "bytes": 561183,
+      "sha256": "72d05110ecc39c7012a523717fd1874dc7a3c22dacdc4e0b17e7d59da4dd7f53"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/fallback.log",
+      "bytes": 2349,
+      "sha256": "cdf090d77da0277634f94fec7d64d04d1e919884293f871700ee440092b4eae8"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/grok-original-vs-material-fallback.png",
+      "bytes": 1077549,
+      "sha256": "171fa529f98a9619975f5e525db37f0a03f6841ad5606149dc892f0876d37a40"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/material-fallback-view-sheet.png",
+      "bytes": 670457,
+      "sha256": "a1d2cb6ea8025fb6ff4887e45087cee7b3d4016aeca9ef03495cac47a923dbb6"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/rejected-head-geometry-comparison.png",
+      "bytes": 663548,
+      "sha256": "1086b5df36a809939df967408e3d7e5ebbe268560f8538eceb8ad217cd8e79e7"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/source-audit/archive-audit.json",
+      "bytes": 5978,
+      "sha256": "f15fa6db2b2898d1ca4de6521486d90ba3b891a48e4ae3d3e5b8360b8a7b54d0"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/source-audit/component-inspection.log",
+      "bytes": 9729,
+      "sha256": "a9e8aa07cf26b79bfec5577a43b20068c55e6596d3794d12cee658509fec5503"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/source-audit/glb-validator.json",
+      "bytes": 4368,
+      "sha256": "9b8a0a4cb7c99b2961d11dcfc88e271916199294a35a16622581da0e3750c3fe"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/source-audit/head-components.json",
+      "bytes": 43924,
+      "sha256": "1551f71ed59201205746e68656e0e0b803ff2a00c5a5b33a6b6c015a412ab983"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/source-audit/local-audit.log",
+      "bytes": 3490,
+      "sha256": "102771b5f8a3c12d3d908d9794ac3bd5699f756dea4facf6b5ea4ac405d6ef5e"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/source-audit/local-candidate-clay-three-quarter.png",
+      "bytes": 314317,
+      "sha256": "f873e606f9f1ec23bb3d5ad61ec9fb1767a127b6e858b54c4da5a025a5b9dd82"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/source-audit/local-candidate-front.png",
+      "bytes": 384899,
+      "sha256": "2653916705633cc02596a3e01c55cc872bc0233f0922e0a5936e9d11a52445aa"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/source-audit/local-native-audit.json",
+      "bytes": 22457,
+      "sha256": "f79090e20c2f2f74d33b22ba6934db2172b80576c8dc76806c5aba4659310f2a"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/verify.log",
+      "bytes": 1497,
+      "sha256": "a1b94f918a05f68cbca376846ba8803ce61e70d97ad1d3a8ebc6916354f96930"
+    },
+    {
+      "path": "docs/reviews/evidence/grok-head-refinement-v1/visual-judgment.json",
+      "bytes": 3237,
+      "sha256": "cbd12502445028c063a0433f5b23747ccccb972d0a79e7a72346d5d55f1dba04"
+    },
+    {
+      "path": "tools/grok-head-refinement-v1/audit_candidate.py",
+      "bytes": 9842,
+      "sha256": "623aa3618076743ca8598bbc7a9b0b9428f52786b876c12b9a9be0aba51da4c8"
+    },
+    {
+      "path": "tools/grok-head-refinement-v1/build_refinement.py",
+      "bytes": 14990,
+      "sha256": "f89f7f5b3e33697034a542fa022d7af0c6fc2b3e3448d321e0672f45e1dd2fa6"
+    },
+    {
+      "path": "tools/grok-head-refinement-v1/inspect_components.py",
+      "bytes": 1311,
+      "sha256": "de49c00250858d8f41e6fbcca2b3052f9bf2869bf4a8ca33d9a9d4f25a0cf295"
+    },
+    {
+      "path": "tools/grok-head-refinement-v1/make_review.py",
+      "bytes": 4256,
+      "sha256": "b31a307b35ad62200328e695b3033e0e48f1ef40be8f4eaed7f038e8bc5a247c"
+    },
+    {
+      "path": "tools/grok-head-refinement-v1/paint_iris.py",
+      "bytes": 1087,
+      "sha256": "56719524ccff0dbd5758373af2081f472f8e8e3243bde96504e8e5aa155d98dd"
+    },
+    {
+      "path": "tools/grok-head-refinement-v1/record_checkpoint.py",
+      "bytes": 6090,
+      "sha256": "d8c37d721740a7ff24cf85560c3944fa0b26953be2ab520a2ef48e5a2d303f1f"
+    },
+    {
+      "path": "tools/grok-head-refinement-v1/retain_material_fallback.py",
+      "bytes": 4165,
+      "sha256": "7467067da6a0ee38d06a476a6cf6ccb865f4bc1e489b0be36bfe73ea7b8389b0"
+    },
+    {
+      "path": "tools/grok-head-refinement-v1/verify_fallback.py",
+      "bytes": 4006,
+      "sha256": "300e0e02158481738ef8514b09ddf3e7730ef5c2111179cd26ea68e05d3715bb"
+    }
+  ],
+  "totalBytes": 22377099,
+  "artAccepted": false,
+  "originalSourceUnmodified": true,
+  "cleanup": "No filesystem deletion; original and failed source evidence retained."
+}

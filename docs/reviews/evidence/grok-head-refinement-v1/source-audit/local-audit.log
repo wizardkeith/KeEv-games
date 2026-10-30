@@ -1,0 +1,25 @@
+00:01.500  blend            | Read blend: "C:\Users\wizar\Documents\Codex\2026-10-28\task\misaki-user-trial-review\extracted\misaki-3d-trial\Misaki_trial.blend"
+C:\Users\wizar\Documents\Codex\2026-10-28\task\misaki-user-trial-review\audit_candidate.py:48: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  p=mat.node_tree.nodes.get('Principled BSDF')if mat.use_nodes else None
+C:\Users\wizar\Documents\Codex\2026-10-28\task\misaki-user-trial-review\audit_candidate.py:49: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  materials.append({'name':mat.name,'baseColour':list(p.inputs['Base Color'].default_value)if p else list(mat.diffuse_color),'nodes':[n.bl_idname for n in mat.node_tree.nodes]if mat.use_nodes else[]})
+C:\Users\wizar\Documents\Codex\2026-10-28\task\misaki-user-trial-review\audit_candidate.py:75: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w=bpy.data.worlds.new('Audit neutral world');w.use_nodes=True;w.node_tree.nodes['Background'].inputs[0].default_value=(.55,.55,.55,1);w.node_tree.nodes['Background'].inputs[1].default_value=.45;scene.world=w
+00:15.485  render           | Saved: 'C:\Users\wizar\Documents\Codex\2026-10-28\task\misaki-user-trial-review\local-evidence\local-candidate-front.png'
+C:\Users\wizar\Documents\Codex\2026-10-28\task\misaki-user-trial-review\audit_candidate.py:83: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  clay=bpy.data.materials.new('Neutral untextured audit clay');clay.use_nodes=True;p=clay.node_tree.nodes['Principled BSDF'];p.inputs['Base Color'].default_value=(.45,.45,.45,1);p.inputs['Roughness'].default_value=.85
+00:15.969  render           | Saved: 'C:\Users\wizar\Documents\Codex\2026-10-28\task\misaki-user-trial-review\local-evidence\local-candidate-clay-three-quarter.png'
+Extensions: writing cache failed ([WinError 5] 摮?鋡急??? 'C:\\Users\\wizar\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\extensions').
+15:20:46 | INFO: Data are loaded, start creating Blender stuff
+15:20:46 | INFO: Blender create Mesh node Misaki_mesh
+15:20:46 | INFO: glTF import finished in 0.04s
+C:\Users\wizar\Documents\Codex\2026-10-28\task\misaki-user-trial-review\audit_candidate.py:48: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  p=mat.node_tree.nodes.get('Principled BSDF')if mat.use_nodes else None
+C:\Users\wizar\Documents\Codex\2026-10-28\task\misaki-user-trial-review\audit_candidate.py:49: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  materials.append({'name':mat.name,'baseColour':list(p.inputs['Base Color'].default_value)if p else list(mat.diffuse_color),'nodes':[n.bl_idname for n in mat.node_tree.nodes]if mat.use_nodes else[]})
+LOCAL_CANDIDATE_REOPEN_AND_GLB_IMPORT_PASS {"meshes": [[4484, 8608, 17]], "bones": [17], "sourceUnchanged": {"Misaki_trial.blend": true, "Misaki_trial.glb": true}, "poseProbe": [{"bone": "lowerarm.L", "localXDeltaDegrees": 30, "movedVertices": 159, "maxLocalVertexDelta": 0.150659289442686, "scope": "In-memory response only; pose restored, no file saved."}, {"bone": "lowerleg.L", "localXDeltaDegrees": 30, "movedVertices": 200, "maxLocalVertexDelta": 0.2215814889327719, "scope": "In-memory response only; pose restored, no file saved."}]}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+Unable to delete file
+Unable to delete file
+
+Blender quit

@@ -1,0 +1,65 @@
+{
+  "sourceOriginalSha256": "d6ac7d03759a00a60fdab4232e980221e16165c9125afe765bd106d6974f09a0",
+  "newNativeSha256": "10876a89f75bdc68e980bc4a42eb5b0d75b8ab0a556e9ecffcd9bb977e95bf24",
+  "vertices": 4484,
+  "triangles": 8608,
+  "existingBangCagesReshaped": 7,
+  "newFloatingHairSheetsAdded": 0,
+  "bodyUnchanged": {
+    "rawGeometryWeightsMaterialUvFingerprint": "3e2c257d8f8a2a352001d90516d0c15c874399e0a3ef4eb58f917cb1ed503128",
+    "rawAfter": "3e2c257d8f8a2a352001d90516d0c15c874399e0a3ef4eb58f917cb1ed503128",
+    "evaluatedPositionDelta": 0.0,
+    "evaluatedNormalDelta": 0.0
+  },
+  "methods": [
+    "Direct original seven bang-cage sweep/width/tip edits and connected cap/side return adjustment",
+    "Original eye islands use ivory sclera and own iris UV painting; original glints retained, original lash islands thinned",
+    "Face-only own cheek loop colours, actual EEVEE coloured shadow bands and masked normal control"
+  ],
+  "portability": "Native toon material not claimed as GLB/Unity. Export only after visual review, with explicit PBR fallback.",
+  "artAcceptance": "Unaccepted head candidate; inspect comparison, retain original if worse",
+  "scriptsFromUserArchiveExecuted": false,
+  "guiInput": false,
+  "renders": [
+    {
+      "file": "after-neutral-front.png",
+      "sha256": "77bfa004f595ccf459f7ae80cad2e730ba0bf76b895f6c85674fa139a2c26ce4"
+    },
+    {
+      "file": "after-neutral-full.png",
+      "sha256": "98c48f625c1096f06053e3b6a3bc85491ea873eb399368c5f5902bcede9e9ae8"
+    },
+    {
+      "file": "after-neutral-profile.png",
+      "sha256": "8f2ec94c5e2c9e0fbf7cbc03a1684469dbeb1996bc325f2b73e78cf79a7a42d5"
+    },
+    {
+      "file": "after-neutral-three-quarter.png",
+      "sha256": "ed2d8fa7280da848b7b4fcd19c0667544787690ad12cffa8bd208bc29445c45d"
+    },
+    {
+      "file": "after-warm-three-quarter.png",
+      "sha256": "c3f21412fdee88f2bc0bdc564d533ba03f7d7afc4878609977d4bbf18218d295"
+    },
+    {
+      "file": "before-neutral-front.png",
+      "sha256": "8474ef88e9e32ac3966536fc8bfdf3269303430feafd374bed12907dd7ffd4e2"
+    },
+    {
+      "file": "before-neutral-full.png",
+      "sha256": "15ccf7b61e38b38e18e6607f1682e065c838df8677ed75271f9fc4084d6f5978"
+    },
+    {
+      "file": "before-neutral-profile.png",
+      "sha256": "ab7f64bd993e50e0a4d9455e7e295027e9f4f531320e759a0712c1f886772cbd"
+    },
+    {
+      "file": "before-neutral-three-quarter.png",
+      "sha256": "88a0c0365d8f5934083c20e8125c85ccd0b9bd85b9f910a8f7baecf4e7264997"
+    },
+    {
+      "file": "before-warm-three-quarter.png",
+      "sha256": "d6a3507a89a9e18097bfa0ef4da0b613f034a5e8aa3b883324cc4c6c1b6e1723"
+    }
+  ]
+}

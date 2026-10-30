@@ -1,0 +1,112 @@
+{
+  "archiveSha256": "b279ddaadb5aa7d7632286e50eb6c4da9bf41029bafc5c0b3bf6bbdc202252f2",
+  "sourceUnmodified": true,
+  "files": [
+    {
+      "name": "misaki-3d-trial/",
+      "bytes": 0,
+      "compressed": 0,
+      "extracted": false
+    },
+    {
+      "name": "misaki-3d-trial/scripts/",
+      "bytes": 0,
+      "compressed": 0,
+      "extracted": false
+    },
+    {
+      "name": "misaki-3d-trial/README.md",
+      "bytes": 2878,
+      "compressed": 1655,
+      "extracted": true,
+      "sha256": "6977a78b378d9dc38eac40c071abd2b1cdd0b6075ebdae88e024e8d9702ae33b"
+    },
+    {
+      "name": "misaki-3d-trial/Misaki_trial.glb",
+      "bytes": 372232,
+      "compressed": 112579,
+      "extracted": true,
+      "sha256": "22db73dbebf7c2a6ca33e645cdc6f61d89d34eee85436c021de2e6c72d18ac89"
+    },
+    {
+      "name": "misaki-3d-trial/Misaki_trial.blend",
+      "bytes": 1514404,
+      "compressed": 248767,
+      "extracted": true,
+      "sha256": "d6ac7d03759a00a60fdab4232e980221e16165c9125afe765bd106d6974f09a0"
+    },
+    {
+      "name": "misaki-3d-trial/render_34.png",
+      "bytes": 213799,
+      "compressed": 209601,
+      "extracted": true,
+      "sha256": "63d60689f5f49566b02a901e927974bbd475410434ae19918460731293b09c18"
+    },
+    {
+      "name": "misaki-3d-trial/render_back.png",
+      "bytes": 204478,
+      "compressed": 200822,
+      "extracted": true,
+      "sha256": "8fee7f4e2b19ae908872b0b749b8223ac368f0b939fcc5fcea2176914ad4ac8e"
+    },
+    {
+      "name": "misaki-3d-trial/misaki_trial_sheet.png",
+      "bytes": 243729,
+      "compressed": 240511,
+      "extracted": true,
+      "sha256": "4263afc78a937bd2b26a25d470dde249af8903e50bf3902f8c89cd03fde456b6"
+    },
+    {
+      "name": "misaki-3d-trial/render_front.png",
+      "bytes": 227558,
+      "compressed": 223780,
+      "extracted": true,
+      "sha256": "dcee89444d3d8ea3a9537a2b54685d346eb87b82be7e6a1fb569f6194763e30f"
+    },
+    {
+      "name": "misaki-3d-trial/render_side.png",
+      "bytes": 157486,
+      "compressed": 153525,
+      "extracted": true,
+      "sha256": "e1a93798dd87fc8db1bad88ed2f361efee204ca651615f536e524ab3d3efd049"
+    },
+    {
+      "name": "misaki-3d-trial/render_posetest.png",
+      "bytes": 219308,
+      "compressed": 215383,
+      "extracted": true,
+      "sha256": "9c1688b3a0fcdce3234001ff70d017d0d4a4630b091baafedde89c2bbbd70128"
+    },
+    {
+      "name": "misaki-3d-trial/scripts/build_misaki.py",
+      "bytes": 20835,
+      "compressed": 7497,
+      "extracted": false
+    },
+    {
+      "name": "misaki-3d-trial/scripts/render_misaki.py",
+      "bytes": 2235,
+      "compressed": 1066,
+      "extracted": false
+    },
+    {
+      "name": "misaki-3d-trial/scripts/compose.py",
+      "bytes": 940,
+      "compressed": 578,
+      "extracted": false
+    },
+    {
+      "name": "misaki-3d-trial/scripts/validate.py",
+      "bytes": 1359,
+      "compressed": 688,
+      "extracted": false
+    }
+  ],
+  "untrustedReadme": [
+    {
+      "file": "misaki-3d-trial/README.md",
+      "untrustedText": "# Misaki – Procedural Low-Poly TRIAL (blockout / placeholder)\nGame: 下一站・小店物語 (Web 3D) · Built 2026-10-30 with Blender 4.2.3 LTS (headless, Python script only)\n\n## What this is\nA **procedurally generated** stylised low-poly blockout of Misaki, made entirely by script\n(`scripts/build_misaki.py`) without hand sculpting or viewport editing. It is a **trial to judge quality**,\nsuitable as a **blockout / in-engine placeholder / proportion & colour reference**. It is **not** final character art.\n\n## Files\n- `Misaki_trial.blend` – scene with mesh `Misaki` + armature `Misaki_Rig` (Armature modifier)\n- `Misaki_trial.glb` – glTF binary, skinned mesh + armature, +Y up (glTF default)\n- `render_front.png`, `render_34.png`, `render_side.png`, `render_back.png` – 1024² Cycles previews (orthographic)\n- `render_posetest.png` – quick pose test proving skinning deforms (head tilt, arm, leg bend)\n- `misaki_trial_sheet.png` – contact sheet\n- `scripts/` – build_misaki.py (model + rig + export), render_misaki.py, compose.py, validate.py\n\n## Stats\n- ~8.6k triangles, ~4.5k verts, 1 mesh, 17 flat materials (no textures / no UV painting)\n- Size 0.73 (W, hand-to-hand A-pose) × 0.46 (D) × 1.48 m (H). Stylised ~1.48 m, ≈4 heads tall (chibi-leaning)\n- Origin at feet centre, faces −Y in Blender (→ +Z forward / Y-up in glTF), transforms applied\n- 17 bones: root, hips, spine, neck, head, upperarm/lowerarm/hand .L/.R, upperleg/lowerleg/foot .L/.R\n- Weights: scripted (rigid per part, distance-blended top-2 at shoulders/elbows/knees). Not Blender auto-weights.\n\n## Locked design followed\nShort brown bob with bangs, white leaf clip on HER LEFT (+X), large soft brown eyes, blush, small smile,\nsage cardigan (open front, buttons, pockets), cream shirt with collar, beige apron with pockets + back bow,\ndusty purple skirt, white crew socks, brown loafers. Colours are approximate (sampled/eyeballed).\n\n## Limitations (honest)\n- Geometry is primitive-based: hair reads as a \"helmet + bangs\" shape, not the soft messy bob of the Visual Target.\n- Face features are separate small floating shells (not painted textures) — fine at game distance, stiff up close;\n  no blendshapes/expressions, no eye rig.\n- No UVs/textures; flat per-part materials only. No knit/fabric detail, no cloth folds, skirt pleats only hinted.\n- Hands are mittens (no fingers). Apron is a stiff panel; skirt/apron are rigid to hips (legs clip through when walking far).\n- Not watertight; parts intersect (fine for rendering, not for 3D printing).\n- Weights are basic; expect to repaint for animation. Rig is not Mixamo/Humanoid-standard named.\n\n## Recommended next step\nUse as blockout for scale/camera/collision in the Web 3D scene; for final art, hand-model in Blender or use\nan image-to-3D tool (Meshy/Tripo) with the ref pack, then retopo + rig (this rig/scale can be reused).\n"
+    }
+  ],
+  "scriptsExecuted": false
+}

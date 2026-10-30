@@ -1,0 +1,31 @@
+{
+  "nativeSha256": "80ecbffdd738b1e65fcd2a46f027ce9c93e6235844ee7f31ffcb6c9deca71535",
+  "freshProcessReopen": true,
+  "all4484OriginalVertexCoordinatesExact": true,
+  "allPolygonIndicesExact": true,
+  "allDeformBoneWeightsExact": true,
+  "bodyVertexCount": 2766,
+  "bodyMaterialAndUvAssignmentsExact": true,
+  "bodyEvaluatedPositionDelta": 0.0,
+  "bodyEvaluatedNormalDelta": 0.0,
+  "armatureBones": 17,
+  "actions": 0,
+  "ownIrisImages": [
+    {
+      "name": "own-painted-iris.png",
+      "packed": true,
+      "size": [
+        512,
+        512
+      ]
+    }
+  ],
+  "originalUvDegenerateTriangles": 5664,
+  "originalTriangles": 8608,
+  "originalUvDegenerateFraction": 0.6579925650557621,
+  "onlineAccess": false,
+  "autoExecutionDisabled": true,
+  "originalBlendSha256": "d6ac7d03759a00a60fdab4232e980221e16165c9125afe765bd106d6974f09a0",
+  "originalGlbSha256": "22db73dbebf7c2a6ca33e645cdc6f61d89d34eee85436c021de2e6c72d18ac89",
+  "artStatus": "Unaccepted conservative material fallback; head geometry attempt rejected, original foundation retained."
+}

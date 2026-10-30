@@ -1,0 +1,13 @@
+00:01.531  blend            | Read blend: "C:\Users\wizar\Documents\Codex\2026-10-28\task\KeEv-games-handoff\assets\authoring\grok-head-refinement-v1\grok-head-refinement-v1.blend"
+00:16.859  render           | Saved: 'C:\Users\wizar\Documents\Codex\2026-10-28\task\KeEv-games-handoff\docs\reviews\evidence\grok-head-refinement-v1\fallback-neutral-front.png'
+00:17.156  render           | Saved: 'C:\Users\wizar\Documents\Codex\2026-10-28\task\KeEv-games-handoff\docs\reviews\evidence\grok-head-refinement-v1\fallback-neutral-three-quarter.png'
+00:17.406  render           | Saved: 'C:\Users\wizar\Documents\Codex\2026-10-28\task\KeEv-games-handoff\docs\reviews\evidence\grok-head-refinement-v1\fallback-neutral-profile.png'
+00:17.625  render           | Saved: 'C:\Users\wizar\Documents\Codex\2026-10-28\task\KeEv-games-handoff\docs\reviews\evidence\grok-head-refinement-v1\fallback-neutral-full.png'
+00:17.875  render           | Saved: 'C:\Users\wizar\Documents\Codex\2026-10-28\task\KeEv-games-handoff\docs\reviews\evidence\grok-head-refinement-v1\fallback-warm-three-quarter.png'
+Info: Saved as "grok-head-material-fallback.blend"
+ORIGINAL_GEOMETRY_RESTORED_MATERIAL_FALLBACK {"source": "assets/authoring/grok-head-refinement-v1/grok-head-material-fallback.blend", "nativeSha256": "80ecbffdd738b1e65fcd2a46f027ce9c93e6235844ee7f31ffcb6c9deca71535", "allOriginalVertexCoordinatesExact": true, "allOriginalPolygonVertexIndicesExact": true, "failedGeometryStudyRetained": "grok-head-refinement-v1.blend", "failedEvidenceArchiveSha256": "3c06776de5e6b9d6b62f1930d9c22a6839646d9ae8cc24d4c402aedb76b19757", "adoptedHairOrScleraGeometryChanges": false, "changes": ["Only head/face own cheek loop colour and EEVEE coloured shadow response", "Own iris albedo UV detail on original iris islands", "Subtle original-brown hair loop colour, original geometry and sclera/lash materials retained", "Masked head normal control; no body geometry/material/weights/UV changes"], "artStatus": "Unaccepted conservative material fallback. Original candidate is preferred over failed geometric study; compare actual pixels before deciding on this fallback.", "portability": "Native Shader-to-RGB graph only, no new portable toon export claim."}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+Unable to delete file
+Unable to delete file
+
+Blender quit

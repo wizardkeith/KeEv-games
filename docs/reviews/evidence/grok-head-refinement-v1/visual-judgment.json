@@ -1,0 +1,96 @@
+{
+  "geometryAttempt": "FAIL; rejected, original retained",
+  "materialFallback": "Small face colour/iris-detail study only, unaccepted; not a solution to Japanese-anime target likeness",
+  "newHairImprovementClaim": false,
+  "newArtAccepted": false,
+  "freshReopenRgb8MeanDelta": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "freshReopenRgb8MaxDelta": [
+    0,
+    0,
+    0
+  ],
+  "referenceProjection": "Inferred; model before/after share exact cameras and lights for each view",
+  "gameplayCapture": false,
+  "files": [
+    {
+      "file": "after-neutral-front.png",
+      "sha256": "77bfa004f595ccf459f7ae80cad2e730ba0bf76b895f6c85674fa139a2c26ce4"
+    },
+    {
+      "file": "after-neutral-full.png",
+      "sha256": "98c48f625c1096f06053e3b6a3bc85491ea873eb399368c5f5902bcede9e9ae8"
+    },
+    {
+      "file": "after-neutral-profile.png",
+      "sha256": "8f2ec94c5e2c9e0fbf7cbc03a1684469dbeb1996bc325f2b73e78cf79a7a42d5"
+    },
+    {
+      "file": "after-neutral-three-quarter.png",
+      "sha256": "ed2d8fa7280da848b7b4fcd19c0667544787690ad12cffa8bd208bc29445c45d"
+    },
+    {
+      "file": "after-warm-three-quarter.png",
+      "sha256": "c3f21412fdee88f2bc0bdc564d533ba03f7d7afc4878609977d4bbf18218d295"
+    },
+    {
+      "file": "before-neutral-front.png",
+      "sha256": "8474ef88e9e32ac3966536fc8bfdf3269303430feafd374bed12907dd7ffd4e2"
+    },
+    {
+      "file": "before-neutral-full.png",
+      "sha256": "15ccf7b61e38b38e18e6607f1682e065c838df8677ed75271f9fc4084d6f5978"
+    },
+    {
+      "file": "before-neutral-profile.png",
+      "sha256": "ab7f64bd993e50e0a4d9455e7e295027e9f4f531320e759a0712c1f886772cbd"
+    },
+    {
+      "file": "before-neutral-three-quarter.png",
+      "sha256": "88a0c0365d8f5934083c20e8125c85ccd0b9bd85b9f910a8f7baecf4e7264997"
+    },
+    {
+      "file": "before-warm-three-quarter.png",
+      "sha256": "d6a3507a89a9e18097bfa0ef4da0b613f034a5e8aa3b883324cc4c6c1b6e1723"
+    },
+    {
+      "file": "fallback-fresh-reopen-three-quarter.png",
+      "sha256": "2fe0651d2a4c828e5432629291e17109ca47b7aae04185eca073871da8b3d328"
+    },
+    {
+      "file": "fallback-neutral-front.png",
+      "sha256": "0833627bc53c15fbd186d018572bc14da156c2b3e2c86e968c90004c0f4929d4"
+    },
+    {
+      "file": "fallback-neutral-full.png",
+      "sha256": "cf4e8ae897822e2ed7ec2442f8a9ae6fba27a97bd663087d693c388852816b6a"
+    },
+    {
+      "file": "fallback-neutral-profile.png",
+      "sha256": "39bef736ecf79a7787719a2459bbb342f0c7df033b9fef2b21f389d84194c303"
+    },
+    {
+      "file": "fallback-neutral-three-quarter.png",
+      "sha256": "2fe0651d2a4c828e5432629291e17109ca47b7aae04185eca073871da8b3d328"
+    },
+    {
+      "file": "fallback-warm-three-quarter.png",
+      "sha256": "72d05110ecc39c7012a523717fd1874dc7a3c22dacdc4e0b17e7d59da4dd7f53"
+    },
+    {
+      "file": "grok-original-vs-material-fallback.png",
+      "sha256": "171fa529f98a9619975f5e525db37f0a03f6841ad5606149dc892f0876d37a40"
+    },
+    {
+      "file": "material-fallback-view-sheet.png",
+      "sha256": "a1d2cb6ea8025fb6ff4887e45087cee7b3d4016aeca9ef03495cac47a923dbb6"
+    },
+    {
+      "file": "rejected-head-geometry-comparison.png",
+      "sha256": "1086b5df36a809939df967408e3d7e5ebbe268560f8538eceb8ad217cd8e79e7"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "source": "assets/authoring/grok-head-refinement-v1/grok-head-material-fallback.blend",
+  "nativeSha256": "80ecbffdd738b1e65fcd2a46f027ce9c93e6235844ee7f31ffcb6c9deca71535",
+  "allOriginalVertexCoordinatesExact": true,
+  "allOriginalPolygonVertexIndicesExact": true,
+  "failedGeometryStudyRetained": "rejected-head-geometry.blend",
+  "failedEvidenceArchiveSha256": "3c06776de5e6b9d6b62f1930d9c22a6839646d9ae8cc24d4c402aedb76b19757",
+  "adoptedHairOrScleraGeometryChanges": false,
+  "changes": [
+    "Only head/face own cheek loop colour and EEVEE coloured shadow response",
+    "Own iris albedo UV detail on original iris islands",
+    "Subtle original-brown hair loop colour, original geometry and sclera/lash materials retained",
+    "Masked head normal control; no body geometry/material/weights/UV changes"
+  ],
+  "artStatus": "Unaccepted conservative material fallback. Original candidate is preferred over failed geometric study; compare actual pixels before deciding on this fallback.",
+  "portability": "Native Shader-to-RGB graph only, no new portable toon export claim."
+}
