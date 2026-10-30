@@ -1,0 +1,71 @@
+{
+  "createdFromCheckpoint": "5e741db98ec14dcb7576e45bce3b1848fad85874",
+  "reference": "docs\\codex-v4\\reference\\Approved_Visual_Target_Misaki.png",
+  "referenceSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114",
+  "source": "assets\\authoring\\target-model-proof-v1\\misaki-display-model-proof.blend",
+  "blendSha256": "f8782db2b07b31a38e382733b0ac5f4328deaec0ff0fee39bd8e681fc7ab576c",
+  "exports": {
+    "Misaki": {
+      "sourceObjects": 92,
+      "triangles": 102176,
+      "min": [
+        -0.32422199845314026,
+        -0.24853256344795227,
+        0.004999998956918716
+      ],
+      "max": [
+        0.2421780228614807,
+        0.21478216350078583,
+        2.7126829624176025
+      ],
+      "file": "assets\\authoring\\target-model-proof-v1\\exports\\misaki-model.glb",
+      "sha256": "7dd2cc18b01b84e3aeb54ea625a920e9fc05c33f0197b2453339ff8c4a205c60"
+    },
+    "Display": {
+      "sourceObjects": 324,
+      "triangles": 65216,
+      "min": [
+        -0.9300000071525574,
+        -0.5767220854759216,
+        0.0
+      ],
+      "max": [
+        0.9300000071525574,
+        0.5184999704360962,
+        1.3831403255462646
+      ],
+      "file": "assets\\authoring\\target-model-proof-v1\\exports\\display-group.glb",
+      "sha256": "aeb8152da1969f35ea35786bd3c75027303f7165f9807dd9a7c229ceaf981748"
+    }
+  },
+  "nativeCharacterObjects": 92,
+  "nativeDisplayObjects": 324,
+  "assemblyPlacements": {
+    "Misaki": [
+      -0.8799999952316284,
+      -0.019999999552965164,
+      0.0
+    ],
+    "Display": [
+      0.5299999713897705,
+      0.10000000149011612,
+      0.0
+    ]
+  },
+  "inheritedNativeSources": [
+    "assets/authoring/asset-foundation-v1/display-set.blend",
+    "assets/authoring/asset-foundation-paper-v1/paper-display-set.blend"
+  ],
+  "renderEngine": "Cycles CPU, actual Blender scene",
+  "limits": [
+    "Unaccepted whole-image model proof, not game screenshot or production integration",
+    "New character proportions and pose; no R10 geometry reused",
+    "Side/back and standing pose inferred",
+    "Rig, collisions, mobile performance and target likeness not certified"
+  ],
+  "cameras": {
+    "assembly": "Blender model proof / person and display",
+    "character": "Blender model portrait / complete Misaki",
+    "face": "Blender model portrait / face detail"
+  }
+}

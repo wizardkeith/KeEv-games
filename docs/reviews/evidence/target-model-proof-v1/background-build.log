@@ -1,0 +1,64 @@
+<REPO>\tools\target-model-proof\build_scene.py:25: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.use_nodes=True;m.diffuse_color=(*rgb(color),1)
+<REPO>\tools\target-model-proof\build_scene.py:337: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('Warm quiet studio world');world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.63,.60,.54,1);world.node_tree.nodes['Background'].inputs[1].default_value=.30;bpy.context.scene.world=world
+00:01.954  image.write      | ERROR OpenImageIO write failed: Could not open file "\.thumbnails\large\blender_6600_e1c98b5a14b2ccbdc13deb0f70e11acc.png.png"
+Extensions: writing cache failed ([WinError 5] 摮?鋡急??? '<USER_HOME>\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\extensions').
+Info: Saved as "misaki-display-model-proof.blend"
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+11:44:09 | INFO: Starting glTF 2.0 export
+11:44:09 | INFO: Extracting primitive: Ivory socks / own right editable.001
+11:44:09 | WARNING: Ivory socks / own right editable.001: Could not calculate tangents. Please try to triangulate the mesh first.
+11:44:10 | INFO: Primitives created: 5
+11:44:10 | INFO: Extracting primitive: Sphere.068
+11:44:10 | INFO: Primitives created: 3
+11:44:10 | INFO: Extracting primitive: Curved almond eye white -1 editable.001
+11:44:10 | WARNING: Curved almond eye white -1 editable.001: Could not calculate tangents. Please try to triangulate the mesh first.
+11:44:10 | INFO: Primitives created: 8
+11:44:10 | INFO: Extracting primitive: Cocoa bob / connected rounded asymmetric core editable.001
+11:44:10 | WARNING: Cocoa bob / connected rounded asymmetric core editable.001: Could not calculate tangents. Please try to triangulate the mesh first.
+11:44:10 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+11:44:10 | INFO: Primitives created: 2
+11:44:10 | INFO: Extracting primitive: Sphere.062
+11:44:10 | INFO: Primitives created: 2
+11:44:10 | INFO: Extracting primitive: Visible neck editable.001
+11:44:10 | WARNING: Visible neck editable.001: Could not calculate tangents. Please try to triangulate the mesh first.
+11:44:10 | INFO: Primitives created: 4
+11:44:10 | INFO: Finished glTF 2.0 export in 0.1708226203918457 s
+
+Warning: Ivory socks / own right editable.001: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: Curved almond eye white -1 editable.001: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: Cocoa bob / connected rounded asymmetric core editable.001: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: Visible neck editable.001: Could not calculate tangents. Please try to triangulate the mesh first.
+11:44:10 | INFO: Starting glTF 2.0 export
+11:44:10 | INFO: Extracting primitive: Cube.080
+11:44:10 | INFO: Primitives created: 4
+11:44:10 | INFO: Extracting primitive: Linen sheet ??diagonal pull and relaxed unequal hem.001
+11:44:10 | INFO: Primitives created: 1
+11:44:10 | INFO: Extracting primitive: Ivory cup ??continuous interior and rolled rim.001
+11:44:10 | INFO: Primitives created: 1
+11:44:10 | INFO: Extracting primitive: Rounded unequal ivory petal.175
+11:44:10 | WARNING: Rounded unequal ivory petal.175: Could not calculate tangents. Please try to triangulate the mesh first.
+11:44:10 | INFO: Primitives created: 4
+11:44:10 | INFO: Extracting primitive: Folded cream card ??real panels.001
+11:44:10 | INFO: Primitives created: 1
+11:44:10 | INFO: Extracting primitive: Cube.089
+11:44:10 | INFO: Primitives created: 2
+11:44:10 | INFO: Extracting primitive: Cube.067
+11:44:10 | INFO: Primitives created: 4
+11:44:10 | INFO: Extracting primitive: Cube.047
+11:44:10 | INFO: Primitives created: 5
+11:44:10 | INFO: Extracting primitive: Cube.072
+11:44:10 | INFO: Primitives created: 3
+11:44:10 | INFO: Extracting primitive: Celadon vase ??hollow wheel profile.001
+11:44:10 | INFO: Primitives created: 1
+11:44:10 | INFO: Finished glTF 2.0 export in 0.42150282859802246 s
+00:15.563  render           | Saved: '<REPO>\docs\reviews\evidence\target-model-proof-v1\blender-model-assembly-v1.png'
+
+Warning: Rounded unequal ivory petal.175: Could not calculate tangents. Please try to triangulate the mesh first.
+MODEL_BUILD_COMPLETE {"createdFromCheckpoint": "5e741db98ec14dcb7576e45bce3b1848fad85874", "reference": "docs\\codex-v4\\reference\\Approved_Visual_Target_Misaki.png", "referenceSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114", "source": "assets\\authoring\\target-model-proof-v1\\misaki-display-model-proof.blend", "blendSha256": "4ec6930ced427de67d1b2c60663a8972d15b92042553dd642acad3499619f71b", "exports": {"Misaki": {"sourceObjects": 94, "triangles": 95608, "min": [-0.23792411386966705, -0.24853256344795227, 0.0], "max": [0.23792409896850586, 0.22030259668827057, 1.5512962341308594], "file": "assets\\authoring\\target-model-proof-v1\\exports\\misaki-model.glb", "sha256": "dc53475a2a171d73e7ff3744be7f6e2f5606dea3f6e53761a94e9d4fd4657bc8"}, "Display": {"sourceObjects": 324, "triangles": 65216, "min": [-0.9300000071525574, -0.5767220854759216, 0.0], "max": [0.9300000071525574, 0.5184999704360962, 1.3831403255462646], "file": "assets\\authoring\\target-model-proof-v1\\exports\\display-group.glb", "sha256": "8e4a5de602c75215664492228d7fa9f5dc45a379835e58e62b07f6f5641c03be"}}, "nativeCharacterObjects": 94, "nativeDisplayObjects": 324, "assemblyPlacements": {"Misaki": [-0.8799999952316284, -0.019999999552965164, 0.0], "Display": [0.5299999713897705, 0.10000000149011612, 0.0]}, "inheritedNativeSources": ["assets/authoring/asset-foundation-v1/display-set.blend", "assets/authoring/asset-foundation-paper-v1/paper-display-set.blend"], "renderEngine": "Cycles CPU, actual Blender scene", "limits": ["Unaccepted whole-image model proof, not game screenshot or production integration", "New character proportions and pose; no R10 geometry reused", "Side/back and standing pose inferred", "Rig, collisions, mobile performance and target likeness not certified"], "cameras": {"assembly": "Blender model proof / person and display", "character": "Blender model portrait / complete Misaki", "face": "Blender model portrait / face detail"}}
+FIRST_BLENDER_RENDER_COMPLETE
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

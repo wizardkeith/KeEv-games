@@ -1,6 +1,14 @@
 # Next Stop, Little Shop — canonical project state
 
-Last updated: **2026-10-28T08:05:25+08:00** (Asia/Hong_Kong).
+Last updated: **2026-10-30T11:50:00+08:00** (Asia/Hong_Kong).
+
+## Complete-character + display Blender proof v1 — unaccepted, 2026-10-30
+
+- Current user task prioritizes matching the approved target in editable Blender models before gameplay or Unity migration. A fresh complete coloured Misaki and representative wooden-table/books/cloth/vase/white-flowers/cups group are isolated in `assets/authoring/target-model-proof-v1/`. Rejected R10 character geometry is not reused; R10 rollback remains `5e741db98ec14dcb7576e45bce3b1848fad85874`. Existing game/assets/material determinism/locales/saves/hosting identity are unchanged.
+- [Actual native renders and original-pixel comparisons](docs/BLENDER_MODEL_PROOF_V1_2026-10-30.md): whole assembly, complete character, front and 35-degree three-quarter face, and independent GLB reimport. Background Blender 5.2.3 LTS actually executed; new source reopened, textures packed, both GLBs imported with matching triangles/bounds and zero glTF validator errors/warnings. Misaki 95,608 triangles; display 65,216. Native/portable assembly mean RGB8 error is below 0.02 per channel. No historical Web tests are represented as new runs.
+- **Visual identity remains inadequate and unaccepted.** Hair still resembles solid panels, expression and hands are simplified, and garment/shoe forms, folds, material softness and reference lighting need substantial work. Unknown side/back, pose and studio composition are inferred. Technical validation is not art acceptance. These are Blender renders, not gameplay screenshots or production integration.
+- A target/model comparison preview was successfully saved to Library. Background Python produced native editable control meshes/curves/modifiers; interactive GUI sculpting/control was not used or certified. No mouse/focus changes, Unity migration/plugins, activation, security/auth changes, PR retry, merge, public deployment or player Normal changes occurred. No files deleted and no user apps terminated.
+- Based on synchronized branch checkpoint `5e741db98ec14dcb7576e45bce3b1848fad85874`; this phase uses the same isolated `codex/asset-foundation-v1` branch. Normal push/readback is reported externally after commit; this document does not embed its own commit SHA. `main` remains separate at `beda04d6852c05bbcbb528f4edce32c027ade2ed`. Next: independent whole-image model review, then refine models before integration. Do not treat this checkpoint as approved art.
 
 ## R10 WIP緊急保存／停止新雕塑 — 2026-10-28T08:05:25+08:00
 

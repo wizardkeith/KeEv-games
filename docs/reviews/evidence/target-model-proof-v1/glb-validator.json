@@ -1,0 +1,1028 @@
+{
+  "Misaki": {
+    "sha256": "dc53475a2a171d73e7ff3744be7f6e2f5606dea3f6e53761a94e9d4fd4657bc8",
+    "bytes": 2622044,
+    "validatorVersion": "2.0.0-dev.3.10",
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 29,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/2/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/3/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/4/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/1/primitives/0/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/1/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/1/primitives/1/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/1/primitives/1/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/1/primitives/2/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/1/primitives/2/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/2/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/2/primitives/1/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/2/primitives/2/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/2/primitives/3/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/2/primitives/4/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/2/primitives/5/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/2/primitives/6/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/2/primitives/7/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/3/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/3/primitives/1/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/4/primitives/0/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/4/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/4/primitives/1/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/4/primitives/1/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/5/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/5/primitives/1/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/5/primitives/2/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/5/primitives/3/attributes/TEXCOORD_0"
+        }
+      ],
+      "truncated": false
+    },
+    "primitives": 24,
+    "colouredPrimitives": 6,
+    "vertexColourAccessors": [
+      {
+        "bufferView": 70,
+        "componentType": 5126,
+        "count": 14866,
+        "type": "VEC3"
+      },
+      {
+        "bufferView": 75,
+        "componentType": 5126,
+        "count": 275,
+        "type": "VEC3"
+      },
+      {
+        "bufferView": 89,
+        "componentType": 5126,
+        "count": 3503,
+        "type": "VEC3"
+      },
+      {
+        "bufferView": 94,
+        "componentType": 5126,
+        "count": 6242,
+        "type": "VEC3"
+      },
+      {
+        "bufferView": 99,
+        "componentType": 5126,
+        "count": 271,
+        "type": "VEC3"
+      },
+      {
+        "bufferView": 104,
+        "componentType": 5126,
+        "count": 271,
+        "type": "VEC3"
+      }
+    ],
+    "materials": [
+      {
+        "name": "Misaki / warm ivory blouse",
+        "pbr": {
+          "baseColorFactor": [
+            0.8631572127342224,
+            0.7912979125976562,
+            0.6583748459815979,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8399999737739563
+        }
+      },
+      {
+        "name": "Misaki / dusty plum skirt",
+        "pbr": {
+          "baseColorFactor": [
+            0.16513219475746155,
+            0.11697066575288773,
+            0.14995978772640228,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8999999761581421
+        }
+      },
+      {
+        "name": "Misaki / muted sage cardigan",
+        "pbr": {
+          "baseColorFactor": [
+            0.2015562504529953,
+            0.2462013214826584,
+            0.15292614698410034,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8799999952316284
+        }
+      },
+      {
+        "name": "Misaki / knit edge and rolled cuff",
+        "pbr": {
+          "baseColorFactor": [
+            0.14702726900577545,
+            0.18782077729701996,
+            0.11443537473678589,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.9100000262260437
+        }
+      },
+      {
+        "name": "Misaki / unbleached cream apron",
+        "pbr": {
+          "baseColorFactor": [
+            0.6938717365264893,
+            0.5840784311294556,
+            0.3915724754333496,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.9100000262260437
+        }
+      },
+      {
+        "name": "Misaki / warm dark sole",
+        "pbr": {
+          "baseColorFactor": [
+            0.0666259378194809,
+            0.03560131415724754,
+            0.020288562402129173,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7300000190734863
+        }
+      },
+      {
+        "name": "Misaki / quiet linen seam",
+        "pbr": {
+          "baseColorFactor": [
+            0.4793201684951782,
+            0.3967552185058594,
+            0.25015828013420105,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.9300000071525574
+        }
+      },
+      {
+        "name": "Misaki / ivory leaf clip",
+        "pbr": {
+          "baseColorFactor": [
+            0.9130986332893372,
+            0.7835378050804138,
+            0.4969329833984375,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.4300000071525574
+        }
+      },
+      {
+        "name": "Misaki / warm eye whites",
+        "pbr": {
+          "baseColorFactor": [
+            1,
+            0.9301108717918396,
+            0.8227857351303101,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.33000001311302185
+        }
+      },
+      {
+        "name": "Misaki / iris outer ring",
+        "pbr": {
+          "baseColorFactor": [
+            0.07036009430885315,
+            0.028426039963960648,
+            0.014443843625485897,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.36000001430511475
+        }
+      },
+      {
+        "name": "Misaki / warm chestnut iris",
+        "pbr": {
+          "baseColorFactor": [
+            0.2541520893573761,
+            0.08865558356046677,
+            0.026241222396492958,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.30000001192092896
+        }
+      },
+      {
+        "name": "Misaki / amber lower iris",
+        "pbr": {
+          "baseColorFactor": [
+            0.4793201684951782,
+            0.2158605009317398,
+            0.05612849071621895,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.3499999940395355
+        }
+      },
+      {
+        "name": "Misaki / pupil and soft lash",
+        "pbr": {
+          "baseColorFactor": [
+            0.02955683507025242,
+            0.01599629409611225,
+            0.011612244881689548,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.4000000059604645
+        }
+      },
+      {
+        "name": "Misaki / eye catchlight",
+        "pbr": {
+          "baseColorFactor": [
+            1,
+            0.9822505712509155,
+            0.8962693810462952,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.2199999988079071
+        }
+      },
+      {
+        "name": "Misaki / soft brown brows",
+        "pbr": {
+          "baseColorFactor": [
+            0.16202937066555023,
+            0.0802198201417923,
+            0.04373503103852272,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7300000190734863
+        }
+      },
+      {
+        "name": "Misaki / restrained smile",
+        "pbr": {
+          "baseColorFactor": [
+            0.38132601976394653,
+            0.109461709856987,
+            0.07618538290262222,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.699999988079071
+        }
+      },
+      {
+        "name": "Misaki / cocoa bob vertex colour",
+        "pbr": {
+          "metallicFactor": 0,
+          "roughnessFactor": 0.6399999856948853
+        }
+      },
+      {
+        "name": "Misaki / root and quiet accent",
+        "pbr": {
+          "baseColorFactor": [
+            0.0666259378194809,
+            0.02955683507025242,
+            0.017641954123973846,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5600000023841858
+        }
+      },
+      {
+        "name": "Misaki / soft brown leather",
+        "pbr": {
+          "baseColorFactor": [
+            0.13013647496700287,
+            0.05951123684644699,
+            0.027320891618728638,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.49000000953674316
+        }
+      },
+      {
+        "name": "Misaki / warm peach skin",
+        "pbr": {
+          "baseColorFactor": [
+            0.8631572127342224,
+            0.5520114302635193,
+            0.38642942905426025,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.6600000262260437
+        }
+      },
+      {
+        "name": "Misaki / vertex-painted peach and soft blush",
+        "pbr": {
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5899999737739563
+        }
+      },
+      {
+        "name": "Ear inner -1",
+        "pbr": {
+          "baseColorFactor": [
+            0.7758222222328186,
+            0.41788506507873535,
+            0.2917706370353699,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7300000190734863
+        }
+      },
+      {
+        "name": "Ear inner 1",
+        "pbr": {
+          "baseColorFactor": [
+            0.7758222222328186,
+            0.41788506507873535,
+            0.2917706370353699,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7300000190734863
+        }
+      }
+    ],
+    "images": []
+  },
+  "Display": {
+    "sha256": "8e4a5de602c75215664492228d7fa9f5dc45a379835e58e62b07f6f5641c03be",
+    "bytes": 3175156,
+    "validatorVersion": "2.0.0-dev.3.10",
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 28,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/0/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/1/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/1/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/2/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/2/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/3/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/3/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/3/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/3/primitives/1/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/3/primitives/2/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/3/primitives/3/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/5/primitives/0/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/5/primitives/0/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/5/primitives/1/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/5/primitives/1/attributes/TEXCOORD_0"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/6/primitives/0/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/6/primitives/1/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/6/primitives/2/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/6/primitives/3/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/7/primitives/0/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/7/primitives/1/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/7/primitives/2/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/7/primitives/3/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/7/primitives/4/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/8/primitives/0/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/8/primitives/1/attributes/TANGENT"
+        },
+        {
+          "code": "UNUSED_MESH_TANGENT",
+          "message": "Tangents are not used because the material has no normal texture.",
+          "severity": 2,
+          "pointer": "/meshes/8/primitives/2/attributes/TANGENT"
+        }
+      ],
+      "truncated": false
+    },
+    "primitives": 26,
+    "colouredPrimitives": 0,
+    "vertexColourAccessors": [],
+    "materials": [
+      {
+        "name": "Sage cloth book cover",
+        "pbr": {
+          "baseColorFactor": [
+            0.1899999976158142,
+            0.28999999165534973,
+            0.23999999463558197,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7900000214576721
+        }
+      },
+      {
+        "name": "Warm cut page edges",
+        "pbr": {
+          "baseColorFactor": [
+            0.6899999976158142,
+            0.6600000262260437,
+            0.5799999833106995,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8999999761581421
+        }
+      },
+      {
+        "name": "Oat linen book cover",
+        "pbr": {
+          "baseColorFactor": [
+            0.47999998927116394,
+            0.42500001192092896,
+            0.3199999928474426,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8600000143051147
+        }
+      },
+      {
+        "name": "Dusty rose book cover",
+        "pbr": {
+          "baseColorFactor": [
+            0.4300000071525574,
+            0.2549999952316284,
+            0.20000000298023224,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8199999928474426
+        }
+      },
+      {
+        "name": "Warm white woven linen",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 1
+          },
+          "metallicFactor": 0,
+          "metallicRoughnessTexture": {
+            "index": 2
+          }
+        }
+      },
+      {
+        "name": "Warm ivory glaze",
+        "pbr": {
+          "baseColorFactor": [
+            0.8600000143051147,
+            0.8159999847412109,
+            0.6869999766349792,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.27000001072883606
+        }
+      },
+      {
+        "name": "Warm white petals",
+        "pbr": {
+          "baseColorFactor": [
+            0.9399999976158142,
+            0.9100000262260437,
+            0.8100000023841858,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.5899999737739563
+        }
+      },
+      {
+        "name": "Muted pollen",
+        "pbr": {
+          "baseColorFactor": [
+            0.6100000143051147,
+            0.4300000071525574,
+            0.15000000596046448,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7300000190734863
+        }
+      },
+      {
+        "name": "Soft sage leaves",
+        "pbr": {
+          "baseColorFactor": [
+            0.1899999976158142,
+            0.28999999165534973,
+            0.10499999672174454,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.6499999761581421
+        }
+      },
+      {
+        "name": "Fine olive stems",
+        "pbr": {
+          "baseColorFactor": [
+            0.2199999988079071,
+            0.2800000011920929,
+            0.10499999672174454,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7099999785423279
+        }
+      },
+      {
+        "name": "Cream uncoated paper",
+        "pbr": {
+          "baseColorFactor": [
+            0.7400000095367432,
+            0.7099999785423279,
+            0.6399999856948853,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.9200000166893005
+        }
+      },
+      {
+        "name": "Honey oak • board 0.001",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 3
+          },
+          "metallicFactor": 0,
+          "metallicRoughnessTexture": {
+            "index": 4
+          }
+        }
+      },
+      {
+        "name": "Honey oak • end grain.001",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 5
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.47999998927116394
+        }
+      },
+      {
+        "name": "Honey oak • board 1.001",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 6
+          },
+          "metallicFactor": 0,
+          "metallicRoughnessTexture": {
+            "index": 7
+          }
+        }
+      },
+      {
+        "name": "Honey oak • board 2.001",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 8
+          },
+          "metallicFactor": 0,
+          "metallicRoughnessTexture": {
+            "index": 9
+          }
+        }
+      },
+      {
+        "name": "Honey oak • board 2",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 10
+          },
+          "metallicFactor": 0,
+          "metallicRoughnessTexture": {
+            "index": 11
+          }
+        }
+      },
+      {
+        "name": "Honey oak • end grain",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 12
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.47999998927116394
+        }
+      },
+      {
+        "name": "Honey oak • board 1",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 13
+          },
+          "metallicFactor": 0,
+          "metallicRoughnessTexture": {
+            "index": 14
+          }
+        }
+      },
+      {
+        "name": "Honey oak • board 0",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 15
+          },
+          "metallicFactor": 0,
+          "metallicRoughnessTexture": {
+            "index": 16
+          }
+        }
+      },
+      {
+        "name": "Honey oak • board 3",
+        "pbr": {
+          "baseColorTexture": {
+            "index": 17
+          },
+          "metallicFactor": 0,
+          "metallicRoughnessTexture": {
+            "index": 18
+          }
+        }
+      },
+      {
+        "name": "Celadon glaze",
+        "pbr": {
+          "baseColorFactor": [
+            0.24699999392032623,
+            0.4230000078678131,
+            0.35499998927116394,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.28999999165534973
+        }
+      }
+    ],
+    "images": [
+      {
+        "mimeType": "image/png",
+        "embedded": true,
+        "external": false
+      },
+      {
+        "mimeType": "image/png",
+        "embedded": true,
+        "external": false
+      },
+      {
+        "mimeType": "image/png",
+        "embedded": true,
+        "external": false
+      },
+      {
+        "mimeType": "image/png",
+        "embedded": true,
+        "external": false
+      },
+      {
+        "mimeType": "image/png",
+        "embedded": true,
+        "external": false
+      },
+      {
+        "mimeType": "image/png",
+        "embedded": true,
+        "external": false
+      },
+      {
+        "mimeType": "image/png",
+        "embedded": true,
+        "external": false
+      },
+      {
+        "mimeType": "image/png",
+        "embedded": true,
+        "external": false
+      },
+      {
+        "mimeType": "image/png",
+        "embedded": true,
+        "external": false
+      },
+      {
+        "mimeType": "image/png",
+        "embedded": true,
+        "external": false
+      },
+      {
+        "mimeType": "image/png",
+        "embedded": true,
+        "external": false
+      },
+      {
+        "mimeType": "image/png",
+        "embedded": true,
+        "external": false
+      }
+    ]
+  }
+}

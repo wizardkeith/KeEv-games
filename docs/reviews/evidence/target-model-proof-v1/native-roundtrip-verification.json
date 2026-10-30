@@ -1,0 +1,152 @@
+{
+  "sourceSha256": "4ec6930ced427de67d1b2c60663a8972d15b92042553dd642acad3499619f71b",
+  "sourceReopened": true,
+  "noLinkedLibraries": true,
+  "fileImagesPacked": true,
+  "native": {
+    "Misaki": {
+      "triangles": 95608,
+      "min": [
+        -0.23792409896850586,
+        -0.24853257834911346,
+        0.0
+      ],
+      "max": [
+        0.23792409896850586,
+        0.22030258178710938,
+        1.5512962341308594
+      ],
+      "vertexColouredMeshes": 7
+    },
+    "Display": {
+      "triangles": 65216,
+      "min": [
+        -0.9300000071525574,
+        -0.5767220854759216,
+        0.0
+      ],
+      "max": [
+        0.9300000667572021,
+        0.5184999704360962,
+        1.3831403255462646
+      ],
+      "vertexColouredMeshes": 0
+    }
+  },
+  "roundtrip": {
+    "Misaki": {
+      "triangles": 95608,
+      "min": [
+        -0.23792411386966705,
+        -0.24853256344795227,
+        0.0
+      ],
+      "max": [
+        0.23792409896850586,
+        0.22030259668827057,
+        1.5512962341308594
+      ],
+      "vertexColouredMeshes": 2,
+      "maxBoundsErrorMetres": 1.4901161193847656e-08,
+      "fileSha256": "dc53475a2a171d73e7ff3744be7f6e2f5606dea3f6e53761a94e9d4fd4657bc8"
+    },
+    "Display": {
+      "triangles": 65216,
+      "min": [
+        -0.9300000071525574,
+        -0.5767220854759216,
+        0.0
+      ],
+      "max": [
+        0.9300000071525574,
+        0.5184999704360962,
+        1.3831403255462646
+      ],
+      "vertexColouredMeshes": 0,
+      "maxBoundsErrorMetres": 5.960464477539063e-08,
+      "fileSha256": "8e4a5de602c75215664492228d7fa9f5dc45a379835e58e62b07f6f5641c03be"
+    }
+  },
+  "renders": {
+    "blender-model-assembly-v1": {
+      "camera": "Blender model proof / person and display",
+      "dimensions": [
+        1200,
+        800
+      ],
+      "sha256": "ba3fb6b3673b027da2dc7082fd9d46bc9a69b68315a3d2e6d2670301e3cbd8f8",
+      "engine": "Cycles CPU",
+      "samples": 64,
+      "seed": 0,
+      "viewTransform": "AgX",
+      "exposure": 0.15000000596046448
+    },
+    "blender-model-character-v1": {
+      "camera": "Blender model portrait / complete Misaki",
+      "dimensions": [
+        1024,
+        1280
+      ],
+      "sha256": "4e270dc438a4c10a3f1531716dd15ab1ddb2a8ee2c641051e1e137cd0ad7272f",
+      "engine": "Cycles CPU",
+      "samples": 64,
+      "seed": 0,
+      "viewTransform": "AgX",
+      "exposure": 0.15000000596046448
+    },
+    "blender-model-face-v1": {
+      "camera": "Validation / 35 degree three-quarter face",
+      "dimensions": [
+        900,
+        900
+      ],
+      "cameraLocation": [
+        1.4299999475479126,
+        -3.299999952316284,
+        1.6399999856948853
+      ],
+      "cameraRotationRadians": [
+        1.4925975799560547,
+        -1.4470746378947297e-08,
+        0.6121524572372437
+      ],
+      "sha256": "cabb4431ff6c0fc0e34160eab66409c0a314e81da971e1e09ce5fab68fa4541b",
+      "engine": "Cycles CPU",
+      "samples": 64,
+      "seed": 0,
+      "viewTransform": "AgX",
+      "exposure": 0.15000000596046448
+    },
+    "blender-model-front-v1": {
+      "camera": "Validation / front face",
+      "dimensions": [
+        900,
+        900
+      ],
+      "sha256": "e75d394f89e7405f60130b9b49f537a5a9008f9fc0b596d918ffddf774761908",
+      "engine": "Cycles CPU",
+      "samples": 64,
+      "seed": 0,
+      "viewTransform": "AgX",
+      "exposure": 0.15000000596046448
+    },
+    "blender-model-glb-roundtrip-v1": {
+      "camera": "Blender model proof / person and display",
+      "dimensions": [
+        1200,
+        800
+      ],
+      "sha256": "6aa313e8f919c035597243e8a429722d210229fed4029ef6e1d3bbd4bace1520",
+      "engine": "Cycles CPU",
+      "samples": 64,
+      "seed": 0,
+      "viewTransform": "AgX",
+      "exposure": 0.15000000596046448
+    }
+  },
+  "placementChecks": {
+    "neckHeadZBoundsOverlapMetres": 0.03234529495239258,
+    "modelLowestPointMetres": 0.0,
+    "limits": "Bounds overlap does not certify signed collision, watertightness or visual acceptance."
+  }
+}
