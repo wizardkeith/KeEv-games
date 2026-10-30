@@ -1,0 +1,15 @@
+00:01.500  blend            | Read blend: "<REPO>\assets\authoring\target-model-proof-v3\misaki-display-model-proof.blend"
+<REPO>\tools\head-method-study-v4\build_head.py:44: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new('Head study / '+name);m.use_nodes=True;p=m.node_tree.nodes['Principled BSDF'];p.inputs['Base Color'].default_value=(*rgb(h),1);p.inputs['Roughness'].default_value=rough;p.inputs['Specular IOR Level'].default_value=spec;m.diffuse_color=(*rgb(h),1);return m
+<REPO>\tools\head-method-study-v4\build_head.py:250: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('Study quiet ivory');world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.68,.62,.53,1);world.node_tree.nodes['Background'].inputs[1].default_value=.35;scene.world=world
+00:03.046  image.write      | ERROR OpenImageIO write failed: Could not open file "\.thumbnails\large\blender_16296_f647e7c9124f15ec5f2f25e8591cbdfc.png.png"
+00:11.468  render           | Saved: '<REPO>\docs\reviews\evidence\head-method-study-v4\new-head-matched.png'
+00:19.906  render           | Saved: '<REPO>\docs\reviews\evidence\head-method-study-v4\new-head-front.png'
+00:28.250  render           | Saved: '<REPO>\docs\reviews\evidence\head-method-study-v4\new-head-three-quarter.png'
+00:38.000  render           | Saved: '<REPO>\docs\reviews\evidence\head-method-study-v4\v3-head-control.png'
+Info: Saved as "head-method-study.blend"
+LOCAL_HEAD_METHOD_STUDY_RENDERED {"source": "assets/authoring/head-method-study-v4/head-method-study.blend", "sourceSha256": "a43dbce709d3dab6001a8cf2071bb03a5788e5a9fb7d197a53d5525e91a02918", "v3RollbackSha256": "d58bb179624083b30de52e0852bae7025281fd8bc5347a9ed9e95abb4a2583fa", "method": "Direct BMesh sphere sculpt with open eye sockets/inset eyeballs; editable 7x7 NURBS hair patches with 1.5mm thickness and UV procedural paint", "nurbsSurfaces": 10, "referenceSha256": "9f855d2ecfd120bb45c001db3fa9b5a3e3b58b2b3c2a4cf9e7ebfda84f8f7114", "limits": ["UNACCEPTED head-only local method study", "Side/back and camera inferred", "No brush-stroke GUI sculpt, reference-image projection, full-body integration or export acceptance"]}
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

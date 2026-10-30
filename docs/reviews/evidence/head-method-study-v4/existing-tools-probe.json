@@ -1,0 +1,24 @@
+{
+  "blenderVersion": "5.2.3 LTS",
+  "background": true,
+  "guiArea": "None",
+  "bmeshVertexEditExecuted": true,
+  "sculptModeTogglePoll": true,
+  "sculptModeEntered": "SCULPT",
+  "interactiveBrushStrokePoll": false,
+  "nativeNurbsInitial": {
+    "type": "SURFACE",
+    "u": 4,
+    "v": 4,
+    "points": 16
+  },
+  "nativeNurbsAfterSubdivision": {
+    "u": 7,
+    "v": 7,
+    "points": 49
+  },
+  "nurbsControlEditEvaluatedTriangles": 3132,
+  "modelingSkillsFound": [],
+  "dedicatedBlenderMcpFound": false,
+  "scope": "In-memory task probe only, no GUI input, no user file/project modified or external upload"
+}

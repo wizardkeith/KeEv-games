@@ -1,0 +1,18 @@
+{
+  "status": "BLOCKED_BEFORE_GUI_LAUNCH",
+  "preparedFile": "assets/authoring/head-method-study-v4/gui-sculpt-capability-test.blend",
+  "preparedVertexBaseline": "docs/reviews/evidence/head-method-study-v4/gui-test-before.json",
+  "runtimeInventoryExecuted": true,
+  "returnedApp": "Blender 5.2",
+  "actionAttempted": "cua.computer.launch_app with exact returned Blender launcher app identifier",
+  "toolResult": "Computer Use app approval timed out",
+  "readOnlyOutcomeCheck": {"isRunning": false, "windows": []},
+  "approvalStatus": "Timed out; not an explicit denial. No alternate launch route or input retry attempted.",
+  "guiSculptStrokePerformed": false,
+  "guiPaintStrokePerformed": false,
+  "guiFileSaved": false,
+  "beforeAfterGuiDeltaProven": false,
+  "v3SourceModified": false,
+  "neededNextStep": "The local Computer Use Blender app approval must be completed when presented; then re-observe app/window state before a bounded original launch/test. Do not bypass consent or change security settings.",
+  "artStatus": "Failed method evidence only; even future stroke success would not establish target likeness."
+}

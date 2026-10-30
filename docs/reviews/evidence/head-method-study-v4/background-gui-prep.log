@@ -1,0 +1,8 @@
+00:01.468  blend            | Read blend: "<REPO>\assets\authoring\head-method-study-v4\head-method-study.blend"
+00:01.687  image.write      | ERROR OpenImageIO write failed: Could not open file "\.thumbnails\large\blender_33788_19265524f49c14791d29e2d49ad9eb52.png.png"
+Info: Saved as "gui-sculpt-capability-test.blend"
+DISPOSABLE_GUI_TEST_PREPARED <REPO>\assets\authoring\head-method-study-v4\gui-sculpt-capability-test.blend
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
+Error: Not freed memory blocks: 315, total unfreed memory 0.023346 MB

@@ -1,0 +1,15 @@
+{
+  "sourceReopened": true,
+  "sourceSha256": "a43dbce709d3dab6001a8cf2071bb03a5788e5a9fb7d197a53d5525e91a02918",
+  "nativeNurbsSurfaces": 10,
+  "controlGridEach": [
+    7,
+    7
+  ],
+  "faceEyeSocketBoundaryLoops": 2,
+  "v3SourceUnchanged": true,
+  "referenceImageProjected": false,
+  "portableExportTested": false,
+  "artAccepted": false,
+  "externalUploadPerformed": false
+}

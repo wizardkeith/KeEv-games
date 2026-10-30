@@ -1,0 +1,170 @@
+{
+  "recordedAt": "2026-10-30T14:34:54.205647+08:00",
+  "status": "Failed-method evidence preservation only; not accepted art",
+  "v3SourceUnchanged": true,
+  "guiTestFileUnchangedSincePreparation": true,
+  "guiStatus": "App approval timed out before any interactive stroke/save; no bypass",
+  "libraryDelivery": "Distinct failed comparison item created successfully; identity reported separately",
+  "files": [
+    {
+      "path": "assets/authoring/head-method-study-v4/gui-sculpt-capability-test.blend",
+      "bytes": 2627255,
+      "sha256": "9ed6fda482413ccc31be494460326fdb4f6b446cfee6f14f74d9f5bb06e6ade5"
+    },
+    {
+      "path": "assets/authoring/head-method-study-v4/head-method-study.blend",
+      "bytes": 2666085,
+      "sha256": "a43dbce709d3dab6001a8cf2071bb03a5788e5a9fb7d197a53d5525e91a02918"
+    },
+    {
+      "path": "assets/authoring/head-method-study-v4/initial-construction-draft.blend",
+      "bytes": 2658184,
+      "sha256": "83ac73720aa54072c34071d4f940e056a3d7df2969deb57234075dc0bf0d5bda"
+    },
+    {
+      "path": "assets/authoring/head-method-study-v4/manifest.json",
+      "bytes": 733,
+      "sha256": "c45d8d309411276d41cf39bbcaa80d1f772c641e7292627f38eb9de5bd1e4d00"
+    },
+    {
+      "path": "assets/authoring/head-method-study-v4/README.md",
+      "bytes": 3840,
+      "sha256": "e14dab2373620aeaaccb5e150675a0b92cd0a48961e347da40c15a74a2d6deae"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/ANIME_DIRECTION_ASSESSMENT.md",
+      "bytes": 3665,
+      "sha256": "129dae9b30600bf7e44b8f40a579d9c9165e2672a56fda20d1542404cf4843b4"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/background-build.log",
+      "bytes": 2354,
+      "sha256": "3e08a554c2c7a87ec1d2248e5c1ce41ff0ef9e78335c49c8a7f848ffb5ab2d3f"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/background-gui-prep.log",
+      "bytes": 576,
+      "sha256": "94371f2ea3bbb278cc1dcc0049d6937d2b07f1899c21fa4747dcbe68d5bd11f0"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/background-probe.log",
+      "bytes": 768,
+      "sha256": "24245885ab30f358b7d0d6c25206a88cb979f59d76b1799cfb0b61ffceadd4ca"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/background-readiness.log",
+      "bytes": 3500,
+      "sha256": "9d3804999566dd316602103526bcefd3909434a863206c1bd6973f3b07fd14ca"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/background-reopen.log",
+      "bytes": 535,
+      "sha256": "81e3654c1f6cba489f2ca2e087401d1dc3a947f6736da8a44409f873a79ad20e"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/CUA_READONLY_ASSESSMENT.md",
+      "bytes": 4223,
+      "sha256": "17cefaa85fa250d3dd3bbcd56b132f5359b7b27544d1277d6239e9b9d59ad3b1"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/existing-tools-probe.json",
+      "bytes": 610,
+      "sha256": "bb7d43ff0e443da4836b2afd74c596e2d8663c9711d12523d1203269e1ea9130"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/gui-test-before.json",
+      "bytes": 282065,
+      "sha256": "5e309bb5a60688408f0c15f5219d8438e9117e4e6d9c1bbb0be4b85b94a3e8e6"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/GUI_CAPABILITY_TEST.json",
+      "bytes": 1127,
+      "sha256": "6248f2f0f0d5e69323461078a48ee1b1c6b947981d34ff008d078d7f5943e466"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/implementation-readiness.json",
+      "bytes": 3351,
+      "sha256": "9a42d9b8760d1fc8e94f6b879c467fbd59f1cd26cf09daa58bc967acb23cb4d0"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/IMPLEMENTATION_READINESS.md",
+      "bytes": 3430,
+      "sha256": "3e6f2adafef72484ce9f3e33e12fd81e0e769965cbcb1dde0465bcf0170f920f"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/initial-construction-draft.png",
+      "bytes": 977768,
+      "sha256": "4a4ba4b4d9c536a1183d9b41d65e0b21d2386829a47ddb204c1b2404dcca7e84"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/local-head-method-comparison.png",
+      "bytes": 1319679,
+      "sha256": "ff131be454b8addda3182a9d811dd172c6423e30f5d86783a4d782b802562aa2"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/local-reopen-verification.json",
+      "bytes": 378,
+      "sha256": "b0dc5285f4905b5542626ec4750e4849a764774b25d6f707f395fa04c886fef0"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/new-head-front.png",
+      "bytes": 955895,
+      "sha256": "5ddc83b8cb4eacba24b37ad3894142789f188ceccfd093ed767900fa1125608b"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/new-head-matched.png",
+      "bytes": 955312,
+      "sha256": "5acb44b548dd935df6a6c7078f779ef66ae8aabb94ff874b7f7f803a78bbaaec"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/new-head-three-quarter.png",
+      "bytes": 945017,
+      "sha256": "cb81eb8b2f0d2447c8ee56d1a3d021ab37c83a422037a5dfcf820f3c66ab6bf9"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/study-judgment.json",
+      "bytes": 1011,
+      "sha256": "bb7c637b5e587e58ae779e890354b1a8a9e6fcb5c2458e7dbe7abeabbb8ece33"
+    },
+    {
+      "path": "docs/reviews/evidence/head-method-study-v4/v3-head-control.png",
+      "bytes": 953677,
+      "sha256": "47b5413ba7b83248dbb930d2e9fd5e7d642b32956da80cc2d7fe876ed35336b0"
+    },
+    {
+      "path": "tools/head-method-study-v4/build_head.py",
+      "bytes": 21237,
+      "sha256": "c06ccd33f830c52f3dd02bbb48ffc547e1aa81b6aa989030767721b3431a48d4"
+    },
+    {
+      "path": "tools/head-method-study-v4/compare.py",
+      "bytes": 2961,
+      "sha256": "a09f5715bc90eb776c15d5e1fc4887cc979b89282604e53afb86df2498344360"
+    },
+    {
+      "path": "tools/head-method-study-v4/inspect_readiness.py",
+      "bytes": 3198,
+      "sha256": "b329c999de160cc29b9a56141231ccaf778db1ae8af05672fba632c3af1da141"
+    },
+    {
+      "path": "tools/head-method-study-v4/prepare_gui_test.py",
+      "bytes": 2036,
+      "sha256": "5bfafb90e11fead7f86d1017860c78f380ea9bc58247cb059059645246f03816"
+    },
+    {
+      "path": "tools/head-method-study-v4/probe.py",
+      "bytes": 2105,
+      "sha256": "af574ee1524188b4c72394fe6e8677fcc10060d42bffb9947718a0b6dbf95a91"
+    },
+    {
+      "path": "tools/head-method-study-v4/record_evidence.py",
+      "bytes": 2631,
+      "sha256": "e5362d34647d9df719688e45a3a2ee37884447d8de73078d5a5230ce6e244f9a"
+    },
+    {
+      "path": "tools/head-method-study-v4/verify_local.py",
+      "bytes": 1753,
+      "sha256": "984a9703d8c10d9c63cb511fa7472e06315af5cfb4eb8501bff1e202bda952c8"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "judgment": "VISUAL FAIL; not adopted or full-body integrated",
+  "technical": "BMesh vertex sculpt/open sockets and native NURBS controls executed; interactive brush stroke unavailable in background context",
+  "failures": [
+    "Cap/sheet joins and sharp scalp boundary remain artificial",
+    "Eye integration/expression and facial identity do not match reference",
+    "Thin tapered ends alone do not establish target-style hair"
+  ],
+  "studySource": "assets/authoring/head-method-study-v4/head-method-study.blend",
+  "studySourceSha256": "a43dbce709d3dab6001a8cf2071bb03a5788e5a9fb7d197a53d5525e91a02918",
+  "v3SourceUnchangedSha256": "d58bb179624083b30de52e0852bae7025281fd8bc5347a9ed9e95abb4a2583fa",
+  "comparisonSha256": "ff131be454b8addda3182a9d811dd172c6423e30f5d86783a4d782b802562aa2",
+  "externalWrites": "Initially local-only. Later explicitly authorized for a failed-evidence Git checkpoint and a distinct Library image; exact delivery results reported separately, not artistic adoption."
+}
