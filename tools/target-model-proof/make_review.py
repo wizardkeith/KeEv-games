@@ -49,5 +49,5 @@ pixel_report={'scope':'Same saved scene camera/lights, Cycles CPU 64spp seed0, n
   'glbReimportSha256':hashlib.sha256((OUT/'blender-model-glb-roundtrip-v1.png').read_bytes()).hexdigest(),
   'meanAbsoluteErrorRGB8':stats.mean,'rmsErrorRGB8':stats.rms,
   'limits':'Not an artistic acceptance score. glTF approximates Blender shading and skin SSS.'}
-(OUT/'render-comparison-metrics.json').write_text(json.dumps(pixel_report,indent=2)+'\n',encoding='utf8')
+(OUT/'render-comparison-metrics.json').write_text(json.dumps(pixel_report,indent=2)+'\n',encoding='utf8',newline='\n')
 print(json.dumps(pixel_report))

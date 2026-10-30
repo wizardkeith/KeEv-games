@@ -1,5 +1,5 @@
 {
-  "recordedAt": "2026-10-30T11:51:16.947228+08:00",
+  "recordedAt": "2026-10-30T11:52:20.364838+08:00",
   "sourceCheckpoint": "5e741db98ec14dcb7576e45bce3b1848fad85874",
   "scope": "unaccepted complete character and representative display Blender proof",
   "sourceSha256": "4ec6930ced427de67d1b2c60663a8972d15b92042553dd642acad3499619f71b",
@@ -25,8 +25,8 @@
     },
     {
       "path": "assets/authoring/target-model-proof-v1/manifest.json",
-      "bytes": 2369,
-      "sha256": "6c412db270b1c2379dfd3e717bbb9dd385802fc232a051397cd99e1d81639ccd"
+      "bytes": 2298,
+      "sha256": "79c86fee50697305972ebf192f750dfba3349806793b08163563ac07112b8fe9"
     },
     {
       "path": "assets/authoring/target-model-proof-v1/misaki-display-model-proof.blend",
@@ -100,8 +100,8 @@
     },
     {
       "path": "docs/reviews/evidence/target-model-proof-v1/native-roundtrip-verification.json",
-      "bytes": 4151,
-      "sha256": "0767279fd31be41e617b63245b03c8b7939ab7e21d1be438497a1c5dbd7a7650"
+      "bytes": 3999,
+      "sha256": "20ae3af3faa89f05a49c57bc30fe15a813a454ae68e636200ae0118593bea892"
     },
     {
       "path": "docs/reviews/evidence/target-model-proof-v1/reference-face-comparison-v1.png",
@@ -115,8 +115,8 @@
     },
     {
       "path": "docs/reviews/evidence/target-model-proof-v1/render-comparison-metrics.json",
-      "bytes": 585,
-      "sha256": "f80ca294b8a2d842280021e06e76803866d5aacbfb445f43d4549c3e8b2a3e98"
+      "bytes": 569,
+      "sha256": "33f67df696e43ddd83f5fdbbe83ffa1625f1f2eb6316adfe209aafa724c95834"
     },
     {
       "path": "tools/target-model-proof/build_scene.py",
@@ -125,13 +125,13 @@
     },
     {
       "path": "tools/target-model-proof/make_review.py",
-      "bytes": 3915,
-      "sha256": "056fd1dbf618d4a8b25d8fdb60e43b9d6aed589b64ea49a49687ff00a08ee918"
+      "bytes": 3928,
+      "sha256": "31d5195422615263d843994608cb5389113f161c5f6ce0b483c7867d51228ac6"
     },
     {
       "path": "tools/target-model-proof/record_checkpoint.py",
-      "bytes": 2976,
-      "sha256": "a1df1e7fab1e45d72a718cca456c9c14162d0e43344c79733a56cc2b8d746ebf"
+      "bytes": 3147,
+      "sha256": "b95bf0ebef538d642ab708421843dafe65d9beb5e68ad7ed5d3e6a8164c88dce"
     },
     {
       "path": "tools/target-model-proof/validate_glb.mjs",
@@ -140,8 +140,8 @@
     },
     {
       "path": "tools/target-model-proof/verify_and_render.py",
-      "bytes": 6574,
-      "sha256": "b9a176c41ec1a4d7162202a2bbc99c42c97b279b00dd7d733547322008551686"
+      "bytes": 6600,
+      "sha256": "4853c1c7a48c030b0ea1d64ef856e2d3b5d6823ee935b73a214ec4b91988bed5"
     }
   ]
 }

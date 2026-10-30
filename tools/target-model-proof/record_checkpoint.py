@@ -9,7 +9,7 @@ manifest=json.loads((ASSET/'manifest.json').read_text())
 # or export bytes change, and their verified hashes remain authoritative.
 for key in ('reference','source'):manifest[key]=manifest[key].replace('\\','/')
 for entry in manifest['exports'].values():entry['file']=entry['file'].replace('\\','/')
-(ASSET/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf8')
+(ASSET/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf8',newline='\n')
 for log,output in [('target-model-proof-build.log','background-build.log'),
                    ('target-model-proof-validation.log','background-validation.log'),
                    ('target-model-proof-detail.log','background-detail.log')]:
@@ -20,6 +20,9 @@ for log,output in [('target-model-proof-build.log','background-build.log'),
 paths=[]
 for folder in (ASSET,ROOT/'tools/target-model-proof',OUT):
     paths += [p for p in folder.rglob('*') if p.is_file() and p.name!='phase-receipt.json']
+for path in paths:
+    if path.suffix in ('.json','.md','.py','.mjs','.log'):
+        path.write_bytes(path.read_bytes().replace(b'\r\n',b'\n'))
 receipt={'recordedAt':datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8))).isoformat(),
   'sourceCheckpoint':manifest['createdFromCheckpoint'],'scope':'unaccepted complete character and representative display Blender proof',
   'sourceSha256':manifest['blendSha256'],
@@ -31,5 +34,5 @@ receipt={'recordedAt':datetime.datetime.now(datetime.timezone(datetime.timedelta
   'artStatus':'NOT ACCEPTED; substantial hair, expression, clothing and material mismatches',
   'cleanup':'No files deleted; no user process terminated; all task Blender processes exited normally.',
   'files':[{ 'path':p.relative_to(ROOT).as_posix(),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}for p in sorted(paths)]}
-(OUT/'phase-receipt.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf8')
+(OUT/'phase-receipt.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf8',newline='\n')
 print(json.dumps({'recordedAt':receipt['recordedAt'],'files':len(paths),'bytes':sum(p.stat().st_size for p in paths),'sourceSha256':manifest['blendSha256']}))

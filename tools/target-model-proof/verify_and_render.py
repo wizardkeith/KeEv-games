@@ -76,7 +76,7 @@ if '--detail-only' in sys.argv:
     display.hide_render=True
     render('blender-model-face-v1',threequarter,900,900)
     previous['renders'].update(report['renders'])
-    (OUT/'native-roundtrip-verification.json').write_text(json.dumps(previous,indent=2)+'\n',encoding='utf8')
+    (OUT/'native-roundtrip-verification.json').write_text(json.dumps(previous,indent=2)+'\n',encoding='utf8',newline='\n')
     print('THREE_QUARTER_RECAPTURE_PASS')
     sys.exit(0)
 
@@ -109,6 +109,6 @@ for name in ('Misaki','Display'):
         if o.parent not in imported:o.location+=Vector(manifest['assemblyPlacements'][name])
 bpy.context.view_layer.update()
 render('blender-model-glb-roundtrip-v1',assembly,1200,800)
-(OUT/'native-roundtrip-verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
+(OUT/'native-roundtrip-verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8',newline='\n')
 assert hashlib.sha256(source.read_bytes()).hexdigest()==report['sourceSha256']
 print('NATIVE_REOPEN_AND_GLB_ROUNDTRIP_PASS '+json.dumps(report['roundtrip']))
